@@ -1,0 +1,409 @@
+{
+	"sceneLocSorted": [{
+		"name": "North of the Wall#",
+		"max": 26
+	}, {
+		"name": "The Wall#",
+		"max": 26
+	}, {
+		"name": "The North#",
+		"max": 38
+	}, {
+		"name": "The Vale#",
+		"max": 15
+	}, {
+		"name": "The Iron Islands#",
+		"max": 10
+	}, {
+		"name": "The Westerlands#",
+		"max": 12
+	}, {
+		"name": "The Riverlands#",
+		"max": 50
+	}, {
+		"name": "The Crownlands#",
+		"max": 95
+	}, {
+		"name": "The Stormlands#",
+		"max": 10
+	}, {
+		"name": "The Reach#",
+		"max": 8
+	}, {
+		"name": "Dorne#",
+		"max": 11
+	}, {
+		"name": "The Narrow Sea#",
+		"max": 10
+	}, {
+		"name": "Pentos#",
+		"max": 9
+	}, {
+		"name": "Braavos#",
+		"max": 48
+	}, {
+		"name": "Volantis#",
+		"max": 15
+	}, {
+		"name": "Valyria#",
+		"max": 6
+	}, {
+		"name": "The Dothraki Sea#",
+		"max": 12
+	}, {
+		"name": "Meereen#",
+		"max": 34
+	}, {
+		"name": "Yunkai#",
+		"max": 13
+	}, {
+		"name": "Astapor#",
+		"max": 12
+	}, {
+		"name": "Vaes Dothrak#",
+		"max": 19
+	}, {
+		"name": "The Red Waste#",
+		"max": 10
+	}, {
+		"name": "Qarth#",
+		"max": 14
+	}],
+	"scenesubLocSorted": [{
+		"name": "North of the Wall#The Lands of Always Winter",
+		"max": 4
+	}, {
+		"name": "North of the Wall#Cave Outside Wildling Camp",
+		"max": 2
+	}, {
+		"name": "North of the Wall#Wildling Camp",
+		"max": 4
+	}, {
+		"name": "North of the Wall#Frostfang Mountains",
+		"max": 6
+	}, {
+		"name": "North of the Wall#The Three-Eyed Raven",
+		"max": 7
+	}, {
+		"name": "North of the Wall#Outside the Three-Eyed Raven",
+		"max": 14
+	}, {
+		"name": "North of the Wall#Fist of the First Men",
+		"max": 7
+	}, {
+		"name": "North of the Wall#Wildlings March South",
+		"max": 5
+	}, {
+		"name": "North of the Wall#Nightswatch March South",
+		"max": 5
+	}, {
+		"name": "North of the Wall#Hardhome",
+		"max": 11
+	}, {
+		"name": "North of the Wall#Craster's Keep",
+		"max": 18
+	}, {
+		"name": "North of the Wall#The Haunted Forest",
+		"max": 9
+	}, {
+		"name": "North of the Wall#South to the Wall",
+		"max": 3
+	}, {
+		"name": "North of the Wall#Destroyed Cabin",
+		"max": 4
+	}, {
+		"name": "North of the Wall#Near Nightfort",
+		"max": 3
+	}, {
+		"name": "North of the Wall#The Wall",
+		"max": 6
+	}, {
+		"name": "The Wall#Nightfort",
+		"max": 8
+	}, {
+		"name": "The Wall#Top of the Wall",
+		"max": 4
+	}, {
+		"name": "The Wall#Castle Black",
+		"max": 25
+	}, {
+		"name": "The Wall#Outside Castle Black",
+		"max": 6
+	}, {
+		"name": "The Wall#Mole's Town",
+		"max": 10
+	}, {
+		"name": "The Wall#The Gift",
+		"max": 6
+	}, {
+		"name": "The North#The Gift",
+		"max": 14
+	}, {
+		"name": "The North#Bear Island",
+		"max": 5
+	}, {
+		"name": "The North#North to the Wall",
+		"max": 9
+	}, {
+		"name": "The North#Deepwood Motte",
+		"max": 4
+	}, {
+		"name": "The North#Stannis Baratheon's Camp",
+		"max": 11
+	}, {
+		"name": "The North#The Wolfswood",
+		"max": 6
+	}, {
+		"name": "The North#Outside Winterfell",
+		"max": 13
+	}, {
+		"name": "The North#Winterfell",
+		"max": 26
+	}, {
+		"name": "The North#Winter Town",
+		"max": 3
+	}, {
+		"name": "The North#The Dreadfort",
+		"max": 9
+	}, {
+		"name": "The North#The Kingsroad South to King's Landing",
+		"max": 2
+	}, {
+		"name": "The North#Moat Cailin",
+		"max": 4
+	}, {
+		"name": "The North#The Neck",
+		"max": 6
+	}, {
+		"name": "The Vale#Runestone",
+		"max": 6
+	}, {
+		"name": "The Vale#The Eyrie",
+		"max": 10
+	}, {
+		"name": "The Vale#To The Eyrie",
+		"max": 5
+	}, {
+		"name": "The Vale#Eastern Road",
+		"max": 5
+	}, {
+		"name": "The Vale#To the Westerlands",
+		"max": 3
+	}, {
+		"name": "The Vale#Outside the Inn",
+		"max": 3
+	}, {
+		"name": "The Vale#Inn",
+		"max": 6
+	}, {
+		"name": "The Vale#To The Vale",
+		"max": 2
+	}, {
+		"name": "The Vale#Coast of the Vale",
+		"max": 2
+	}, {
+		"name": "The Iron Islands#",
+		"max": 2
+	}, {
+		"name": "The Iron Islands#Pyke",
+		"max": 8
+	}, {
+		"name": "The Iron Islands#Lordsport",
+		"max": 3
+	}, {
+		"name": "The Westerlands#Outside Casterly Rock",
+		"max": 3
+	}, {
+		"name": "The Westerlands#Oxcross",
+		"max": 6
+	}, {
+		"name": "The Westerlands#Lannister Camp",
+		"max": 9
+	}, {
+		"name": "The Westerlands#Camp of the North",
+		"max": 9
+	}, {
+		"name": "The Westerlands#To King's Landing",
+		"max": 2
+	}, {
+		"name": "The Riverlands#The Twins",
+		"max": 20
+	}, {
+		"name": "The Riverlands#Away from the Twins",
+		"max": 4
+	}, {
+		"name": "The Riverlands#To The Twins",
+		"max": 3
+	}, {
+		"name": "The Riverlands#To The Eyrie",
+		"max": 7
+	}, {
+		"name": "The Riverlands#Lannister Camp",
+		"max": 8
+	}, {
+		"name": "The Riverlands#Battlefield",
+		"max": 3
+	}, {
+		"name": "The Riverlands#Camp of the North",
+		"max": 9
+	}, {
+		"name": "The Riverlands#Village",
+		"max": 6
+	}, {
+		"name": "The Riverlands#The Kingsroad",
+		"max": 10
+	}, {
+		"name": "The Riverlands#Forest",
+		"max": 4
+	}, {
+		"name": "The Riverlands#Crossroads Inn",
+		"max": 12
+	}, {
+		"name": "The Riverlands#Hollow Hill",
+		"max": 7
+	}, {
+		"name": "The Riverlands#East to King's Landing",
+		"max": 4
+	}, {
+		"name": "The Riverlands#Riverrun",
+		"max": 11
+	}, {
+		"name": "The Riverlands#Red Fork",
+		"max": 2
+	}, {
+		"name": "The Riverlands#To Riverrun",
+		"max": 5
+	}, {
+		"name": "The Riverlands#North to the Red Fork",
+		"max": 5
+	}, {
+		"name": "The Riverlands#To Harrenhal",
+		"max": 3
+	}, {
+		"name": "The Riverlands#Harrenhal",
+		"max": 14
+	}, {
+		"name": "The Riverlands#Outside Harrenhal",
+		"max": 5
+	}, {
+		"name": "The Riverlands#South to King's Landing",
+		"max": 3
+	}, {
+		"name": "The Crownlands#Dragonstone",
+		"max": 7
+	}, {
+		"name": "The Crownlands#Castle Stokeworth",
+		"max": 3
+	}, {
+		"name": "The Crownlands#Blackwater Bay",
+		"max": 5
+	}, {
+		"name": "The Crownlands#King's Landing",
+		"max": 90
+	}, {
+		"name": "The Crownlands#Outside Kings Landing",
+		"max": 1
+	}, {
+		"name": "The Crownlands#The Kingswood",
+		"max": 4
+	}, {
+		"name": "The Stormlands#Tarth",
+		"max": 3
+	}, {
+		"name": "The Stormlands#The Woods",
+		"max": 2
+	}, {
+		"name": "The Stormlands#Storm's End",
+		"max": 10
+	}, {
+		"name": "The Reach#To Horn Hill",
+		"max": 3
+	}, {
+		"name": "The Reach#Horn Hill",
+		"max": 7
+	}, {
+		"name": "The Reach#Oldtown",
+		"max": 4
+	}, {
+		"name": "Dorne#Tower of Joy",
+		"max": 6
+	}, {
+		"name": "Dorne#",
+		"max": 10
+	}, {
+		"name": "Dorne#The Water Gardens",
+		"max": 10
+	}, {
+		"name": "The Narrow Sea#",
+		"max": 10
+	}, {
+		"name": "Pentos#",
+		"max": 9
+	}, {
+		"name": "Pentos#Pentos to Volantis",
+		"max": 2
+	}, {
+		"name": "Braavos#",
+		"max": 48
+	}, {
+		"name": "Volantis#",
+		"max": 15
+	}, {
+		"name": "Volantis#Volantis to Valyria",
+		"max": 2
+	}, {
+		"name": "Valyria#",
+		"max": 4
+	}, {
+		"name": "Valyria#Slaver's Bay",
+		"max": 4
+	}, {
+		"name": "The Dothraki Sea#",
+		"max": 11
+	}, {
+		"name": "The Dothraki Sea#Dothraki Camp",
+		"max": 10
+	}, {
+		"name": "The Dothraki Sea#Lhazareen Village",
+		"max": 9
+	}, {
+		"name": "Meereen#Outside Meereen",
+		"max": 9
+	}, {
+		"name": "Meereen#",
+		"max": 32
+	}, {
+		"name": "Yunkai#",
+		"max": 9
+	}, {
+		"name": "Yunkai#Outside Yunkai",
+		"max": 13
+	}, {
+		"name": "Astapor#Slaver's Bay",
+		"max": 5
+	}, {
+		"name": "Astapor#",
+		"max": 11
+	}, {
+		"name": "Vaes Dothrak#",
+		"max": 19
+	}, {
+		"name": "The Red Waste#",
+		"max": 10
+	}, {
+		"name": "The Red Waste#The Desert",
+		"max": 4
+	}, {
+		"name": "Qarth#",
+		"max": 14
+	}, {
+		"name": "Qarth#King's Landing",
+		"max": 1
+	}, {
+		"name": "Qarth#The Wall",
+		"max": 1
+	}, {
+		"name": "Qarth#Vaes Dothrak",
+		"max": 3
+	}]
+}

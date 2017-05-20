@@ -1,0 +1,231 @@
+{
+   "regions":[
+		{
+			"location":"North of the Wall",
+         "subLocation":[
+            "The Lands of Always Winter",
+            "Cave Outside Wildling Camp",
+            "Wildling Camp",
+            "Frostfang Mountains",
+            "The Three-Eyed Raven",
+            "Outside the Three-Eyed Raven",
+            "Fist of the First Men",
+            "Wildlings March South",
+            "Nightswatch March South",
+            "Hardhome",
+            "Craster's Keep",
+            "The Haunted Forest",
+            "South to the Wall",
+            "Destroyed Cabin",
+            "Near Nightfort",
+            "The Wall"
+         ]
+		},
+		{
+			"location":"The Wall",
+         "subLocation":[
+            "Nightfort",
+            "Top of the Wall",
+         	"Castle Black",
+            "Outside Castle Black",
+            "Mole's Town",
+            "The Gift"
+         ]
+		},
+		{
+			"location":"The North",
+         "subLocation":[
+            "The Gift",
+            "Bear Island",
+            "North to the Wall",
+            "Deepwood Motte",
+            "Stannis Baratheon's Camp",
+            "The Wolfswood",
+            "Outside Winterfell",
+            "Winterfell",
+            "Winter Town",
+            "The Dreadfort",
+            "The Kingsroad South to King's Landing",
+            "Moat Cailin",
+            "The Neck"
+         ]
+		},
+		{
+			"location":"The Vale",
+         "subLocation":[
+            "Runestone",
+            "The Eyrie",
+            "To The Eyrie",
+            "Eastern Road",
+            "To the Westerlands",
+            "Outside the Inn",
+            "Inn",
+            "To The Vale",
+            "Coast of the Vale"
+         ]
+		},
+      {
+			"location":"The Iron Islands",
+         "subLocation":[
+            "",
+            "Pyke",
+            "Lordsport"
+         ]
+		},
+      {
+         "location":"The Westerlands",
+         "subLocation":[
+            "Outside Casterly Rock",
+            "Oxcross",
+            "Lannister Camp",
+            "Camp of the North",
+            "To King's Landing"
+         ]
+      },
+      {
+			"location":"The Riverlands",
+         "subLocation":[
+            "The Twins",
+            "Away from the Twins",
+            "To The Twins",
+            "To The Eyrie",
+            "Lannister Camp",
+            "Battlefield",
+            "Camp of the North",
+            "Village",
+            "The Kingsroad",
+            "Forest",
+            "Crossroads Inn",
+            "Hollow Hill",
+            "East to King's Landing",
+            "Riverrun",
+            "Red Fork",
+            "To Riverrun",
+            "North to the Red Fork",
+            "To Harrenhal",
+            "Harrenhal",
+            "Outside Harrenhal",
+            "South to King's Landing"
+         ]
+		},
+      {
+			"location":"The Crownlands",
+         "subLocation":[
+            "Dragonstone",
+            "Castle Stokeworth",
+         	"Blackwater Bay",
+            "King's Landing",
+            "Outside Kings Landing",
+            "The Kingswood"
+         ]
+		},
+      {
+			"location":"The Stormlands",
+         "subLocation":[
+            "Tarth",
+            "The Woods",
+         	"Storm's End"
+         ]
+		},
+      {
+         "location":"The Reach",
+         "subLocation":[
+            "To Horn Hill",
+            "Horn Hill",
+            "Oldtown"
+         ]
+      },
+		{
+			"location":"Dorne",
+         "subLocation":[
+         	"Tower of Joy",
+            "",
+            "The Water Gardens"
+         ]
+		},
+		{
+			"location":"The Narrow Sea",
+         "subLocation":[
+            ""
+         ]
+		},
+		{
+			"location":"Pentos",
+         "subLocation":[
+            "",
+            "Pentos to Volantis"
+         ]
+		},
+		{
+			"location":"Braavos",
+         "subLocation":[
+            ""
+         ]
+		},
+		{
+			"location":"Volantis",
+         "subLocation":[
+            "",
+            "Volantis to Valyria"
+         ]
+		},
+		{
+			"location":"Valyria",
+         "subLocation":[
+            "",
+            "Slaver's Bay"
+         ]
+		},
+		{
+			"location":"The Dothraki Sea",
+         "subLocation":[
+            "",
+            "Dothraki Camp",
+            "Lhazareen Village"
+         ]
+		},
+		{
+			"location":"Meereen",
+         "subLocation":[
+            "Outside Meereen",
+            ""
+         ]
+		},
+		{
+			"location":"Yunkai",
+         "subLocation":[
+            "",
+            "Outside Yunkai"
+         ]
+		},
+		{
+			"location":"Astapor",
+         "subLocation":[
+            "Slaver's Bay",
+            ""
+         ]
+		},
+		{
+			"location":"Vaes Dothrak",
+         "subLocation":[
+            ""
+         ]
+		},
+		{
+			"location":"The Red Waste",
+         "subLocation":[
+            "",
+            "The Desert"
+         ]
+		},
+		{
+			"location":"Qarth",
+         "subLocation":[
+            "",
+            "King's Landing",
+            "The Wall",
+            "Vaes Dothrak"
+         ]
+		}
+	]
+}

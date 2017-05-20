@@ -1,0 +1,3386 @@
+{
+   "characters":[
+      {
+         "characterName":"Addam Marbrand",
+         "characterLink":"/character/ch0305333/",
+         "actorName":"B.J. Hogg",
+         "actorLink":"/name/nm0389698/"
+      },
+      {
+         "characterName":"Aegon Targaryen",
+         "houseName":"Targaryen",
+         "royal":true,
+         "parents":[
+            "Elia Martell",
+            "Rhaegar Targaryen"
+         ],
+         "killedBy":"Gregor Clegane"
+      },
+      {
+         "characterName":"Aeron Greyjoy",
+         "houseName":"Greyjoy",
+         "characterLink":"/character/ch0540081/",
+         "actorName":"Michael Feast",
+         "actorLink":"/name/nm0269923/"
+      },
+      {
+         "characterName":"Aerys II Targaryen",
+         "houseName":"Targaryen",
+         "characterLink":"/character/ch0541362/",
+         "actorName":"David Rintoul",
+         "actorLink":"/name/nm0727778/",
+         "nickname":"The Mad King",
+         "royal":true,
+         "killed":[
+            "Brandon Stark",
+            "Rickard Stark"
+         ],
+         "servedBy":[
+            "Arthur Dayne",
+            "Jaime Lannister"
+         ],
+         "parentOf":[
+            "Daenerys Targaryen",
+            "Rhaegar Targaryen",
+            "Viserys Targaryen"
+         ],
+         "siblings":[
+            "Rhaella Targaryen"
+         ],
+         "marriedEngaged":"Rhaella Targaryen",
+         "killedBy":"Jaime Lannister"
+      },
+      {
+         "characterName":"Akho",
+         "characterLink":"/character/ch0544520/",
+         "actorName":"Chuku Modu",
+         "actorLink":"/name/nm6729880/",
+         "killedBy":"Daario Naharis"
+      },
+      {
+         "characterName":"Alliser Thorne",
+         "characterLink":"/character/ch0246938/",
+         "actorName":"Owen Teale",
+         "actorLink":"/name/nm0853583/",
+         "killed":"Jon Snow",
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Alton Lannister",
+         "houseName":"Lannister",
+         "characterLink":"/character/ch0305012/",
+         "actorName":"Karl Davies",
+         "actorLink":"/name/nm0203801/",
+         "killedBy":"Jaime Lannister"
+      },
+      {
+         "characterName":"Amory Lorch",
+         "characterLink":"/character/ch0305002/",
+         "actorName":"Fintan McKeown",
+         "actorLink":"/name/nm0571654/",
+         "killed":"Yoren",
+         "killedBy":"Jaqen H'ghar"
+      },
+      {
+         "characterName":"Anguy",
+         "characterLink":"/character/ch0316930/",
+         "actorName":"Philip McGinley",
+         "actorLink":"/name/nm1528121/"
+      },
+      {
+         "characterName":"Areo Hotah",
+         "characterLink":"/character/ch0507107/",
+         "actorName":"Deobia Oparei",
+         "actorLink":"/name/nm0649046/",
+         "killedBy":"Tyene Sand"
+      },
+      {
+         "characterName":"Armeca",
+         "characterLink":"/character/ch0305014/",
+         "actorName":"Sahara Knite",
+         "actorLink":"/name/nm1783582/"
+      },
+      {
+         "characterName":"Arthur",
+         "characterLink":"/character/ch0305326/",
+         "actorName":"Nathanael Saleh",
+         "actorLink":"/name/nm8127149/"
+      },
+      {
+         "characterName":"Arthur Dayne",
+         "characterLink":"/character/ch0540097/",
+         "actorName":"Luke Roberts",
+         "actorLink":"/name/nm1074361/",
+         "kingsguard":true,
+         "killedBy":[
+            "Howland Reed",
+            "Eddard Stark"
+         ],
+         "serves":"Aerys II Targaryen"
+      },
+      {
+         "characterName":"Arya Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0158604/",
+         "actorName":"Maisie Williams",
+         "actorLink":"/name/nm3586035/",
+         "siblings":[
+            "Robb Stark",
+            "Sansa Stark",
+            "Bran Stark",
+            "Rickon Stark"
+         ],
+         "killed":[
+            "Red Keep Stableboy",
+            "Frey Soldier #1",
+            "Polliver",
+            "Rorge",
+            "Ghita",
+            "Meryn Trant",
+            "The Waif",
+            "Black Walder Rivers",
+            "Lothar Frey",
+            "Walder Frey"
+         ]
+      },
+      {
+         "characterName":"Balon Greyjoy",
+         "houseName":"Greyjoy",
+         "characterLink":"/character/ch0292152/",
+         "actorName":"Patrick Malahide",
+         "actorLink":"/name/nm0538869/",
+         "killedBy":"Euron Greyjoy"
+      },
+      {
+         "characterName":"Baratheon Guard",
+         "houseName":"Baratheon",
+         "characterLink":"/character/ch0350989/",
+         "actorName":"Phil Barnhill",
+         "actorLink":"/name/nm4207240/"
+      },
+      {
+         "characterName":"Barristan Selmy",
+         "characterLink":"/character/ch0241346/",
+         "actorName":"Ian McElhinney",
+         "actorLink":"/name/nm0568400/",
+         "killedBy":"Sons of the Harpy"
+      },
+      {
+         "characterName":"Benjen Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0153996/",
+         "actorName":"Joseph Mawle",
+         "actorLink":"/name/nm1152798/",
+         "parents":[
+            "Rickard Stark"
+         ],
+         "siblings":[
+            "Brandon Stark",
+            "Lyanna Stark",
+            "Eddard Stark"
+         ]
+      },
+      {
+         "characterName":"Beric Dondarrion",
+         "characterLink":"/character/ch0305320/",
+         "actors":[
+            {
+               "actorName":"Richard Dormer",
+               "actorLink":"/name/nm0233807/",
+               "seasonsActive":[
+                  3
+               ]
+            },
+            {
+               "actorName":"David Michael Scott",
+               "actorLink":"/name/nm2364108/",
+               "seasonsActive":[
+                  1
+               ]
+            }
+         ],
+         "killedBy":"Sandor Clegane"
+      },
+      {
+         "characterName":"Bianca",
+         "characterLink":"/character/ch0541364/",
+         "actorName":"Eline Powell",
+         "actorLink":"/name/nm4730958/"
+      },
+      {
+         "characterName":"Biter",
+         "characterLink":"/character/ch0305028/",
+         "actorName":"Gerard Jordan",
+         "actorLink":"/name/nm0429956/",
+         "killedBy":"Sandor Clegane"
+      },
+      {
+         "characterName":"Black Lorren",
+         "characterLink":"/character/ch0266524/",
+         "actorName":"Forbes KB",
+         "actorLink":"/name/nm1978998/"
+      },
+      {
+         "characterName":"Black Walder Rivers",
+         "characterLink":"/character/ch0014591/",
+         "actorName":"Tim Plester",
+         "actorLink":"/name/nm1043031/",
+         "killed":"Catelyn Stark",
+         "killedBy":"Arya Stark"
+      },
+      {
+         "characterName":"Bobono",
+         "characterLink":"/character/ch0541790/",
+         "actorName":"Leigh Gill",
+         "actorLink":"/name/nm5279916/"
+      },
+      {
+         "characterName":"Bowen Marsh",
+         "characterLink":"/character/ch0305036/",
+         "actorName":"Michael Condron",
+         "actorLink":"/name/nm1638006/",
+         "killed":"Jon Snow",
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Brandon Stark",
+         "houseName":"Stark",
+         "killedBy":"Aerys II Targaryen",
+         "parents":[
+            "Rickard Stark"
+         ],
+         "siblings":[
+            "Lyanna Stark",
+            "Benjen Stark",
+            "Eddard Stark"
+         ]
+      },
+      {
+         "characterName":"Bran Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0234897/",
+         "actorName":"Isaac Hempstead Wright",
+         "actorLink":"/name/nm3652842/",
+         "siblings":[
+            "Robb Stark",
+            "Sansa Stark",
+            "Arya Stark",
+            "Rickon Stark"
+         ]
+      },
+      {
+         "characterName":"Brea",
+         "characterLink":"/character/ch0539337/",
+         "actorName":"Gemita Samarra",
+         "actorLink":"/name/nm5106314/"
+      },
+      {
+         "characterName":"Brienne of Tarth",
+         "characterLink":"/character/ch0254503/",
+         "actorName":"Gwendoline Christie",
+         "actorLink":"/name/nm3729225/",
+         "killed":[
+            "Soldier Tom",
+            "Stannis Baratheon",
+            "Bolton Officer"
+         ]
+      },
+      {
+         "characterName":"Bronn",
+         "characterLink":"/character/ch0241345/",
+         "actorName":"Jerome Flynn",
+         "actorLink":"/name/nm0283492/",
+         "killed":[
+            "Vardis Egen",
+            "Matthos Seaworth",
+            "Lead Dornish Guard"
+         ]
+      },
+      {
+         "characterName":"Brother Ray",
+         "characterLink":"/character/ch0541878/",
+         "actorName":"Ian McShane",
+         "actorLink":"/name/nm0574534/",
+         "killedBy":"Lem Lemoncloak"
+      },
+      {
+         "characterName":"Brynden Tully",
+         "houseName":"Tully",
+         "characterLink":"/character/ch0381563/",
+         "actorName":"Clive Russell",
+         "actorLink":"/name/nm0751085/",
+         "nickname":"Blackfish"
+      },
+      {
+         "characterName":"Captain of the Archers",
+         "characterLink":"/character/ch0540864/",
+         "actorName":"Michael Grennell",
+         "actorLink":"/name/nm1214477/"
+      },
+      {
+         "characterName":"Catelyn Stark",
+         "houseName":[
+            "Stark",
+            "Tully"
+         ],
+         "characterLink":"/character/ch0145135/",
+         "actorName":"Michelle Fairley",
+         "actorLink":"/name/nm0265610/",
+         "killed":"Joyeuse Erenford",
+         "killedBy":"Black Walder Rivers"
+      },
+      {
+         "characterName":"Catspaw Assassin",
+         "characterLink":"/character/ch0305046/",
+         "actorName":"Lalor Roddy",
+         "actorLink":"/name/nm0734498/",
+         "killedBy":"Summer"
+      },
+      {
+         "characterName":"Cersei Lannister",
+         "houseName":[
+            "Lannister",
+            "Baratheon"
+         ],
+         "characterLink":"/character/ch0159526/",
+         "actorName":"Lena Headey",
+         "actorLink":"/name/nm0372176/",
+         "parents":[
+            "Tywin Lannister"
+         ],
+         "parentOf":[
+            "Joffrey Baratheon",
+            "Myrcella Baratheon",
+            "Tommen Baratheon"
+         ],
+         "royal":true,
+         "siblings":[
+            "Jaime Lannister",
+            "Tyrion Lannister"
+         ],
+         "marriedEngaged":"Robert Baratheon",
+         "killed":[
+            "Lancel Lannister",
+            "High Sparrow",
+            "Loras Tyrell",
+            "Mace Tyrell",
+            "Margaery Tyrell",
+            "Kevan Lannister"
+         ]
+      },
+      {
+         "characterName":"Child of the Forest",
+         "characterLink":"/character/ch0414315/",
+         "actorName":"Alice Hewkin",
+         "actorLink":"/name/nm2456829/"
+      },
+      {
+         "characterName":"Citadel Maester",
+         "characterLink":"/character/ch0478670/",
+         "actorName":"Frank Hvam",
+         "actorLink":"/name/nm0404809/"
+      },
+      {
+         "characterName":"Colen of Greenpools",
+         "characterLink":"/character/ch0350989/",
+         "actorName":"Darren Killeen",
+         "actorLink":"/name/nm4007028/"
+      },
+      {
+         "characterName":"Craster",
+         "characterLink":"/character/ch0300218/",
+         "actorName":"Robert Pugh",
+         "actorLink":"/name/nm0700059/",
+         "killedBy":"Karl Tanner"
+      },
+      {
+         "characterName":"Daario Naharis",
+         "characterLink":"/character/ch0335040/",
+         "actors":[
+            {
+               "actorName":"Ed Skrein",
+               "actorLink":"/name/nm4534098/",
+               "seasonsActive":[
+                  3
+               ]
+            },
+            {
+               "actorName":"Michiel Huisman",
+               "actorLink":"/name/nm0401264/",
+               "seasonsActive":[
+                  4,
+                  5,
+                  6
+               ]
+            }
+         ],
+         "killed":[
+            "Mero",
+            "Prendahl na Ghezn",
+            "Oznak zo Pahl",
+            "Mossador",
+            "Iggo",
+            "Akho"
+         ]
+      },
+      {
+         "characterName":"Daenerys Targaryen",
+         "houseName":"Targaryen",
+         "characterLink":"/character/ch0158597/",
+         "actorName":"Emilia Clarke",
+         "actorLink":"/name/nm3592338/",
+         "royal":true,
+         "parents":[
+            "Aerys II Targaryen",
+            "Rhaella Targaryen"
+         ],
+         "siblings":[
+            "Rhaegar Targaryen",
+            "Viserys Targaryen"
+         ],
+         "killed":[
+            "Khal Drogo",
+            "Mirri Maz Duur",
+            "Doreah",
+            "Xaro Xhoan Daxos",
+            "Khal Rhalko",
+            "Khal Brozho",
+            "Khal Qorro",
+            "Khal Forzho",
+            "Khal Moro",
+            "Dothraki Bloodrider #1",
+            "Dothraki Bloodrider #2"
+         ]
+      },
+      {
+         "characterName":"Dagmer Cleftjaw",
+         "characterLink":"/character/ch0304762/",
+         "actorName":"Ralph Ineson",
+         "actorLink":"/name/nm0408591/"
+      },
+      {
+         "characterName":"Daisy",
+         "characterLink":"/character/ch0305015/",
+         "actorName":"Maisie Dee",
+         "actorLink":"/name/nm3996678/"
+      },
+      {
+         "characterName":"Davos Seaworth",
+         "characterLink":"/character/ch0255396/",
+         "actorName":"Liam Cunningham",
+         "actorLink":"/name/nm0192377/"
+      },
+      {
+         "characterName":"Dickon Tarly",
+         "characterLink":"/character/ch0541363/",
+         "actorName":"Freddie Stroma",
+         "actorLink":"/name/nm2238815/"
+      },
+      {
+         "characterName":"Dongo the Giant",
+         "characterLink":"/character/ch0510932/",
+         "actorName":"Ian Whyte",
+         "actorLink":"/name/nm1613839/",
+         "killedBy":"Night's Watchman"
+      },
+      {
+         "characterName":"Donnel Waynwood",
+         "characterLink":"/character/ch0544229/",
+         "actorName":"Alisdair Simpson",
+         "actorLink":"/name/nm1368037/"
+      },
+      {
+         "characterName":"Dontos Hollard",
+         "characterLink":"/character/ch0305031/",
+         "actorName":"Tony Way",
+         "actorLink":"/name/nm0915453/",
+         "killedBy":"Petyr Baelish"
+      },
+      {
+         "characterName":"Doran Martell",
+         "houseName":"Martell",
+         "characterLink":"/character/ch0468006/",
+         "actorName":"Alexander Siddig",
+         "actorLink":"/name/nm0796502/",
+         "killedBy":"Ellaria Sand"
+      },
+      {
+         "characterName":"Doreah",
+         "characterLink":"/character/ch0248504/",
+         "actorName":"Roxanne McKee",
+         "actorLink":"/name/nm1861467/",
+         "killed":"Irri",
+         "killedBy":"Daenerys Targaryen"
+      },
+      {
+         "characterName":"Dothraki Bloodrider #1",
+         "characterLink":"/character/ch0542918/",
+         "actorName":"Diogo Sales",
+         "actorLink":"/name/nm6088160/",
+         "killedBy":"Daenerys Targaryen"
+      },
+      {
+         "characterName":"Dothraki Bloodrider #2",
+         "characterLink":"/character/ch0542918/",
+         "actorName":"Junade Khan",
+         "actorLink":"/name/nm2999602/",
+         "killedBy":"Daenerys Targaryen"
+      },
+      {
+         "characterName":"Drennan",
+         "characterLink":"/character/ch0305030/",
+         "actorName":"David Coakley",
+         "actorLink":"/name/nm2231505/",
+         "killedBy":"Osha"
+      },
+      {
+         "characterName":"Drogon",
+         "houseName":"Targaryen",
+         "siblings":[
+            "Rhaegal",
+            "Viserion"
+         ],
+         "guardianOf":"Daenerys Targaryen",
+         "killed":[
+            "Pyat Pree",
+            "Kraznys mo Nakloz",
+            "Zalla"
+         ]
+      },
+      {
+         "characterName":"Drowned Priest",
+         "characterLink":"/character/ch0411375/",
+         "actorName":"Jonathan Ryan",
+         "actorLink":"/name/nm0752638/"
+      },
+      {
+         "characterName":"Eddard Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0154681/",
+         "actorName":"Sean Bean",
+         "actorLink":"/name/nm0000293/",
+         "nickname":"Ned",
+         "guardianOf":"Jon Snow",
+         "siblings":[
+            "Brandon Stark",
+            "Benjen Stark",
+            "Lyanna Stark"
+         ],
+         "parents":[
+            "Rickard Stark"
+         ],
+         "killed":[
+            "Arthur Dayne",
+            "Will",
+            "Lady",
+            "Gerold Hightower"
+         ],
+         "allies":[
+            "Howland Reed",
+            "Robert Baratheon"
+         ],
+         "guardedBy":"Jon Arryn",
+         "killedBy":"Ilyn Payne"
+      },
+      {
+         "characterName":"Eddison Tollett",
+         "characterLink":"/character/ch0305008/",
+         "actorName":"Ben Crompton",
+         "actorLink":"/name/nm0174005/"
+      },
+      {
+         "characterName":"Edmure Tully",
+         "houseName":"Tully",
+         "characterLink":"/character/ch0316931/",
+         "actorName":"Tobias Menzies",
+         "actorLink":"/name/nm0580014/",
+         "marriedEngaged":"Roslin Frey"
+      },
+      {
+         "characterName":"Ellaria Sand",
+         "houseName":"Sand",
+         "characterLink":"/character/ch0309687/",
+         "actorName":"Indira Varma",
+         "actorLink":"/name/nm0890055/",
+         "killed":[
+            "Myrcella Baratheon",
+            "Doran Martell"
+         ]
+      },
+      {
+         "characterName":"Elia Martell",
+         "royal":true,
+         "marriedEngaged":"Rhaegar Targaryen",
+         "parentOf":[
+            "Rhaenys Targaryen",
+            "Aegon Targaryen"
+         ],
+         "killedBy":"Gregor Clegane"
+      },
+      {
+         "characterName":"Eon Hunter",
+         "characterLink":"/character/ch0305321/",
+         "actorName":"Barrington Cullen",
+         "actorLink":"/name/nm4473207/"
+      },
+      {
+         "characterName":"Euron Greyjoy",
+         "houseName":"Greyjoy",
+         "characterLink":"/character/ch0518715/",
+         "actorName":"Pilou Asbæk",
+         "actorLink":"/name/nm1561982/",
+         "killed":"Balon Greyjoy"
+      },
+      {
+         "characterName":"Faceless Man",
+         "characterLink":"/character/ch0259179/",
+         "actorName":"Cedric Henderson",
+         "actorLink":"/name/nm2406775/"
+      },
+      {
+         "characterName":"Farlen",
+         "characterLink":"/character/ch0305027/",
+         "actorName":"Peter Ballance",
+         "actorLink":"/name/nm0050520/"
+      },
+      {
+         "characterName":"Gared",
+         "characterLink":"/character/ch0171395/",
+         "actorName":"Dermot Keaney",
+         "actorLink":"/name/nm0443825/",
+         "killedBy":"White Walker"
+      },
+      {
+         "characterName":"Gatins",
+         "characterLink":"/character/ch0523969/",
+         "actorName":"Ricky Champ",
+         "actorLink":"/name/nm2307468/",
+         "killedBy":"Sandor Clegane"
+      },
+      {
+         "characterName":"Gendry",
+         "characterLink":"/character/ch0300040/",
+         "actorName":"Joe Dempsie",
+         "actorLink":"/name/nm1478079/"
+      },
+      {
+         "characterName":"Gerold Hightower",
+         "characterLink":"/character/ch0540530/",
+         "actorName":"Eddie Eyre",
+         "actorLink":"/name/nm6793798/",
+         "killedBy":"Eddard Stark"
+      },
+      {
+         "characterName":"Ghost",
+         "houseName":"Stark",
+         "siblings":[
+            "Grey Wind",
+            "Lady",
+            "Nymeria",
+            "Summer",
+            "Shaggydog"
+         ],
+         "guardianOf":"Jon Snow",
+         "killed":"Rast"
+      },
+      {
+         "characterName":"Gilly",
+         "characterLink":"/character/ch0306819/",
+         "actorName":"Hannah Murray",
+         "actorLink":"/name/nm2356940/"
+      },
+      {
+         "characterName":"Goldcloak",
+         "characterLink":"/character/ch0305037/",
+         "actorName":"Alan Paris",
+         "actorLink":"/name/nm3354768/"
+      },
+      {
+         "characterName":"Goldcloak",
+         "characterLink":"/character/ch0305037/",
+         "actorName":"Sam Callis",
+         "actorLink":"/name/nm0130538/"
+      },
+      {
+         "characterName":"Goldcloak #1",
+         "characterLink":"/character/ch0305037/",
+         "actorName":"Nikovich Sammut",
+         "actorLink":"/name/nm2089809/"
+      },
+      {
+         "characterName":"Goldcloak #2",
+         "characterLink":"/character/ch0305037/",
+         "actorName":"Seamus Kelly",
+         "actorLink":"/name/nm4440118/"
+      },
+      {
+         "characterName":"Grand Maester Pycelle",
+         "characterLink":"/character/ch0232836/",
+         "actorName":"Julian Glover",
+         "actorLink":"/name/nm0002103/",
+         "killedBy":"Little Birds"
+      },
+      {
+         "characterName":"Great Master #1",
+         "characterLink":"/character/ch0525536/",
+         "actors":[
+            {
+               "actorName":"Emilio Doorgasingh",
+               "actorLink":"/name/nm0233266/",
+               "seasonsActive":[
+                  4
+               ]
+            },
+            {
+               "actorName":"Gianpiero Cognoli",
+               "actorLink":"/name/nm2483357/",
+               "seasonsActive":[
+                  5
+               ]
+            }
+         ],
+         "killedBy":[
+            "Rebel Slaves",
+            "Viserion",
+            "Rhaegal"
+         ]
+      },
+      {
+         "characterName":"Great Master #2",
+         "characterLink":"/character/ch0525536/",
+         "actors":[
+            {
+               "actorName":"Derek Horsham",
+               "actorLink":"/name/nm2471942/",
+               "seasonsActive":[
+                  4
+               ]
+            },
+            {
+               "actorName":"Bobby Asghar",
+               "actorLink":"/name/nm6800489/",
+               "seasonsActive":[
+                  5
+               ]
+            }
+         ]
+      },
+      {
+         "characterName":"Great Master #3",
+         "characterLink":"/character/ch0525536/",
+         "actorName":"Peter Silverleaf",
+         "actorLink":"/name/nm0798872/"
+      },
+      {
+         "characterName":"Great Master #4",
+         "characterLink":"/character/ch0525536/",
+         "actorName":"Davor Jozinovic",
+         "actorLink":"/name/nm7318132/"
+      },
+      {
+         "characterName":"Great Master #5",
+         "characterLink":"/character/ch0525536/",
+         "actorName":"Ivan Peric",
+         "actorLink":"/name/nm3005802/"
+      },
+      {
+         "characterName":"Great Master #6",
+         "characterLink":"/character/ch0525536/",
+         "actorName":"Hadi Kermani",
+         "actorLink":"/name/nm7318134/"
+      },
+      {
+         "characterName":"Great Master #7",
+         "characterLink":"/character/ch0525536/",
+         "actorName":"Tonci Banov",
+         "actorLink":"/name/nm7318135/"
+      },
+      {
+         "characterName":"Greatjon Umber",
+         "characterLink":"/character/ch0305010/",
+         "actorName":"Clive Mantle",
+         "actorLink":"/name/nm0544139/"
+      },
+      {
+         "characterName":"Gregor Clegane",
+         "characterLink":"/character/ch0245401/",
+         "actors":[
+            {
+               "actorName":"Ian Whyte",
+               "actorLink":"/name/nm1613839/",
+               "seasonsActive":[
+                  2
+               ]
+            },
+            {
+               "actorName":"Conan Stevens",
+               "actorLink":"/name/nm1947403/",
+               "seasonsActive":[
+                  1
+               ]
+            },
+            {
+               "actorName":"Hafþór Júlíus Björnsson",
+               "actorLink":"/name/nm5491087/",
+               "seasonsActive":[
+                  4,
+                  5,
+                  6
+               ]
+            }
+         ],
+         "nickname":"The Mountain",
+         "serves":"Tywin Lannister",
+         "killed":[
+            "Elia Martell",
+            "Rhaenys Targaryen",
+            "Aegon Targaryen",
+            "Hugh of the Vale",
+            "Oberyn Martell",
+            "King's Landing Boaster",
+            "Faith Militant"
+         ]
+      },
+      {
+         "characterName":"Greizhen mo Ullhor",
+         "characterLink":"/character/ch0396531/",
+         "actorName":"Cliff Barry",
+         "actorLink":"/name/nm0057965/",
+         "killedBy":"Unsullied"
+      },
+      {
+         "characterName":"Grenn",
+         "characterLink":"/character/ch0251496/",
+         "actorName":"Mark Stanley",
+         "actorLink":"/name/nm4440305/",
+         "killed":"Mag the Mighty",
+         "killedBy":"Mag the Mighty"
+      },
+      {
+         "characterName":"Grey Wind",
+         "houseName":"Stark",
+         "siblings":[
+            "Lady",
+            "Nymeria",
+            "Summer",
+            "Shaggydog",
+            "Ghost"
+         ],
+         "guardianOf":"Robb Stark",
+         "killed":"Rennick",
+         "killedBy":"Frey Crossbowmen"
+      },
+      {
+         "characterName":"Grey Worm",
+         "characterLink":"/character/ch0335038/",
+         "actorName":"Jacob Anderson",
+         "actorLink":"/name/nm2760664/",
+         "killed":[
+            "Belicho Paenymion",
+            "Razdal mo Eraz"
+         ]
+      },
+      {
+         "characterName":"Hallyne",
+         "characterLink":"/character/ch0259178/",
+         "actorName":"Roy Dotrice",
+         "actorLink":"/name/nm0234541/"
+      },
+      {
+         "characterName":"Handmaid",
+         "characterLink":"/character/ch0537855/",
+         "actorName":"Sabrina Bartlett",
+         "actorLink":"/name/nm6301068/"
+      },
+      {
+         "characterName":"Handmaid",
+         "characterLink":"/character/ch0537855/",
+         "actorName":"Sara Dylan",
+         "actorLink":"/name/nm2407387/"
+      },
+      {
+         "characterName":"Harald Karstark",
+         "characterLink":"/character/ch0542917/",
+         "actorName":"Paul Rattray",
+         "actorLink":"/name/nm1051151/"
+      },
+      {
+         "characterName":"High Priestess",
+         "characterLink":"/character/ch0539898/",
+         "actorName":"Souad Faress",
+         "actorLink":"/name/nm0267256/"
+      },
+      {
+         "characterName":"High Septon",
+         "characterLink":"/character/ch0508056/",
+         "actorName":"David Verrey",
+         "actorLink":"/name/nm0894857/",
+         "killedBy":"Kings Landing Rioters"
+      },
+      {
+         "characterName":"High Septon",
+         "characterLink":"/character/ch0508056/",
+         "actorName":"Paul Bentley",
+         "actorLink":"/name/nm0072855/"
+      },
+      {
+         "characterName":"High Sparrow",
+         "characterLink":"/character/ch0476559/",
+         "actorName":"Jonathan Pryce",
+         "actorLink":"/name/nm0000596/",
+         "killedBy":"Cersei Lannister"
+      },
+      {
+         "characterName":"Hizdahr zo Loraq",
+         "characterLink":"/character/ch0414458/",
+         "actorName":"Joel Fry",
+         "actorLink":"/name/nm2181128/",
+         "killedBy":"Sons of the Harpy"
+      },
+      {
+         "characterName":"Hodor",
+         "characterLink":"/character/ch0238584/",
+         "actorName":"Kristian Nairn",
+         "actorLink":"/name/nm3964231/",
+         "killed":"Locke",
+         "killedBy":"Wights"
+      },
+      {
+         "characterName":"Hoster Tully",
+         "houseName":"Tully",
+         "characterLink":"/character/ch0540082/",
+         "actorName":"Christopher Newman",
+         "actorLink":"/name/nm0628040/"
+      },
+      {
+         "characterName":"Hot Pie",
+         "characterLink":"/character/ch0273432/",
+         "actorName":"Ben Hawkey",
+         "actorLink":"/name/nm3444954/"
+      },
+      {
+         "characterName":"Howland Reed",
+         "characterLink":"/character/ch0543132/",
+         "actorName":"Leo Woodruff",
+         "actorLink":"/name/nm4547262/",
+         "allies":[
+            "Eddard Stark"
+         ],
+         "killed":[
+            "Arthur Dayne"
+         ]
+      },
+      {
+         "characterName":"Hugh of the Vale",
+         "characterLink":"/character/ch0305026/",
+         "actorName":"Jefferson Hall",
+         "actorLink":"/name/nm2131630/",
+         "killedBy":"Gregor Clegane"
+      },
+      {
+         "characterName":"Illyrio Mopatis",
+         "characterLink":"/character/ch0172909/",
+         "actorName":"Roger Allam",
+         "actorLink":"/name/nm0019885/"
+      },
+      {
+         "characterName":"Ilyn Payne",
+         "characterLink":"/character/ch0246254/",
+         "actorName":"Wilko Johnson",
+         "actorLink":"/name/nm3330122/",
+         "killed":"Eddard Stark"
+      },
+      {
+         "characterName":"Irri",
+         "characterLink":"/character/ch0249444/",
+         "actorName":"Amrita Acharia",
+         "actorLink":"/name/nm3822505/",
+         "killedBy":"Doreah"
+      },
+      {
+         "characterName":"Izembaro",
+         "characterLink":"/character/ch0540561/",
+         "actorName":"Richard E. Grant",
+         "actorLink":"/name/nm0001290/"
+      },
+      {
+         "characterName":"Jacks",
+         "characterLink":"/character/ch0305034/",
+         "actorName":"Paul Caddell",
+         "actorLink":"/name/nm4781280/"
+      },
+      {
+         "characterName":"Jafer Flowers",
+         "killedBy":"White Walker"
+      },
+      {
+         "characterName":"Jaime Lannister",
+         "houseName":"Lannister",
+         "characterLink":"/character/ch0158527/",
+         "actorName":"Nikolaj Coster-Waldau",
+         "actorLink":"/name/nm0182666/",
+         "nickname":"The Kingslayer",
+         "kingsguard":true,
+         "parents":[
+            "Tywin Lannister"
+         ],
+         "parentOf":[
+            "Joffrey Baratheon",
+            "Myrcella Baratheon",
+            "Tommen Baratheon"
+         ],
+         "guardianOf":[
+            "Aerys II Targaryen",
+            "Robert Baratheon",
+            "Joffrey Baratheon"
+         ],
+         "killed":[
+            "Aerys II Targaryen",
+            "Jory Cassel",
+            "Alton Lannister",
+            "Torrhen Karstark"
+         ],
+         "siblings":[
+            "Cersei Lannister",
+            "Tyrion Lannister"
+         ]
+      },
+      {
+         "characterName":"Janos Slynt",
+         "characterLink":"/character/ch0300651/",
+         "actorName":"Dominic Carter",
+         "actorLink":"/name/nm0141582/",
+         "killed":"Barra",
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Jaqen H'ghar",
+         "characterLink":"/character/ch0259179/",
+         "actorName":"Tom Wlaschiha",
+         "actorLink":"/name/nm0937239/",
+         "killed":[
+            "The Tickler",
+            "Amory Lorch",
+            "Despondent Man"
+         ]
+      },
+      {
+         "characterName":"Jaqen's Disguise",
+         "characterLink":"/character/ch0259179/",
+         "actorName":"Patrick O'Kane",
+         "actorLink":"/name/nm0641433/"
+      },
+      {
+         "characterName":"Jaremy Rykker",
+         "characterLink":"/character/ch0305324/",
+         "actorName":"Jeffrey O'Brien",
+         "actorLink":"/name/nm4475335/"
+      },
+      {
+         "characterName":"Jeor Mormont",
+         "houseName":"Mormont",
+         "characterLink":"/character/ch0251492/",
+         "actorName":"James Cosmo",
+         "actorLink":"/name/nm0181920/",
+         "killedBy":"Rast"
+      },
+      {
+         "characterName":"Jhiqui",
+         "characterLink":"/character/ch0305044/",
+         "actorName":"Sarita Piotrowski",
+         "actorLink":"/name/nm4424689/"
+      },
+      {
+         "characterName":"Joffrey Baratheon",
+         "houseName":"Baratheon",
+         "characterLink":"/character/ch0156278/",
+         "actorName":"Jack Gleeson",
+         "actorLink":"/name/nm0322416/",
+         "parents":[
+            "Robert Baratheon",
+            "Cersei Lannister",
+            "Jaime Lannister"
+         ],
+         "siblings":[
+            "Myrcella Baratheon",
+            "Tommen Baratheon"
+         ],
+         "marriedEngaged":[
+            "Sansa Stark",
+            "Margaery Tyrell"
+         ],
+         "royal":true,
+         "killed":"Ros",
+         "killedBy":"Petyr Baelish"
+      },
+      {
+         "characterName":"Jojen Reed",
+         "characterLink":"/character/ch0316921/",
+         "actorName":"Thomas Brodie-Sangster",
+         "actorLink":"/name/nm1032473/",
+         "killedBy":"Meera Reed"
+      },
+      {
+         "characterName":"Jon Arryn",
+         "characterLink":"/character/ch0251737/",
+         "actorName":"John Standing",
+         "actorLink":"/name/nm0822062/",
+         "guardianOf":[
+            "Eddard Stark",
+            "Robert Baratheon"
+         ],
+         "allies":[
+            "Robert Baratheon"
+         ],
+         "killedBy":"Lysa Arryn"
+      },
+      {
+         "characterName":"Jon Snow",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0155777/",
+         "actorName":"Kit Harington",
+         "actorLink":"/name/nm3229685/",
+         "parents":[
+            "Rhaegar Targaryen",
+            "Lyanna Stark"
+         ],
+         "guardedBy":"Eddard Stark",
+         "killed":[
+            "Othor",
+            "Qhorin Halfhand",
+            "Orell",
+            "Karl Tanner",
+            "Styr",
+            "Mance Rayder",
+            "Janos Slynt",
+            "White Walker",
+            "Alliser Thorne",
+            "Othell Yarwyck",
+            "Bowen Marsh",
+            "Olly",
+            "Lyanna Stark"
+         ],
+         "killedBy":[
+            "Alliser Thorne",
+            "Othell Yarwyck",
+            "Bowen Marsh",
+            "Olly"
+         ]
+      },
+      {
+         "characterName":"Jonos Bracken",
+         "characterLink":"/character/ch0305332/",
+         "actorName":"Gerry O'Brien",
+         "actorLink":"/name/nm0639569/"
+      },
+      {
+         "characterName":"Jorah Mormont",
+         "houseName":"Mormont",
+         "characterLink":"/character/ch0158221/",
+         "actorName":"Iain Glen",
+         "actorLink":"/name/nm0322513/",
+         "killed":[
+            "Qotho",
+            "Norvoshi Pit Fighter",
+            "Meereenese Champion"
+         ]
+      },
+      {
+         "characterName":"Jory Cassel",
+         "characterLink":"/character/ch0245400/",
+         "actorName":"Jamie Sives",
+         "actorLink":"/name/nm0803397/",
+         "killedBy":"Jaime Lannister"
+      },
+      {
+         "characterName":"Joyeuse Erenford",
+         "characterLink":"/character/ch0304494/",
+         "actorName":"Kelly Long",
+         "actorLink":"/name/nm4958677/",
+         "killedBy":"Catelyn Stark"
+      },
+      {
+         "characterName":"Karl Tanner",
+         "characterLink":"/character/ch0396528/",
+         "actorName":"Burn Gorman",
+         "actorLink":"/name/nm1218607/",
+         "killed":"Craster",
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Karsi",
+         "characterLink":"/character/ch0512707/",
+         "actorName":"Birgitte Hjort Sørensen",
+         "actorLink":"/name/nm2171898/",
+         "killedBy":"Pack of Wights"
+      },
+      {
+         "characterName":"Kayla",
+         "characterLink":"/character/ch0431526/",
+         "actorName":"Pixie Le Knot",
+         "actorLink":"/name/nm4768858/"
+      },
+      {
+         "characterName":"Kegs",
+         "characterLink":"/character/ch0305327/",
+         "actorName":"Tim Landers",
+         "actorLink":"/name/nm2461009/",
+         "killedBy":"Wildling"
+      },
+      {
+         "characterName":"Kevan Lannister",
+         "houseName":"Lannister",
+         "characterLink":"/character/ch0305013/",
+         "actorName":"Ian Gelder",
+         "actorLink":"/name/nm0312245/",
+         "killedBy":"Cersei Lannister"
+      },
+      {
+         "characterName":"Khal Drogo",
+         "characterLink":"/character/ch0171388/",
+         "actorName":"Jason Momoa",
+         "actorLink":"/name/nm0597388/",
+         "killedBy":"Daenerys Targaryen",
+         "killed":[
+            "Viserys Targaryen",
+            "Mago"
+         ]
+      },
+      {
+         "characterName":"Khal Moro",
+         "characterLink":"/character/ch0538748/",
+         "actorName":"Joseph Naufahu",
+         "actorLink":"/name/nm0622533/",
+         "killedBy":"Daenerys Targaryen"
+      },
+      {
+         "characterName":"Khal Rhalko",
+         "characterLink":"/character/ch0535371/",
+         "actorName":"Andrei Claude",
+         "actorLink":"/name/nm3040811/",
+         "killedBy":"Daenerys Targaryen"
+      },
+      {
+         "characterName":"King Joffrey Baratheon Dwarf",
+         "characterLink":"/character/ch0156278/",
+         "actorName":"Raymond Griffiths",
+         "actorLink":"/name/nm0341739/"
+      },
+      {
+         "characterName":"King Renly Baratheon Dwarf",
+         "characterLink":"/character/ch0246253/",
+         "actorName":"Dean Whatton",
+         "actorLink":"/name/nm2482781/"
+      },
+      {
+         "characterName":"King Robb Stark Dwarf",
+         "characterLink":"/character/ch0158596/",
+         "actorName":"George Appleby",
+         "actorLink":"/name/nm3338062/"
+      },
+      {
+         "characterName":"King Stannis Baratheon Dwarf",
+         "characterLink":"/character/ch0250897/",
+         "actorName":"Maxwell Laird",
+         "actorLink":"/name/nm3453345/"
+      },
+      {
+         "characterName":"King's Landing Rioter #1",
+         "characterLink":"/character/ch0348391/",
+         "actorName":"Reg Wayment",
+         "actorLink":"/name/nm1168404/",
+         "killedBy":"Sandor Clegane"
+      },
+      {
+         "characterName":"King's Landing Rioter #2",
+         "characterLink":"/character/ch0348391/",
+         "actorName":"Marko Juraga",
+         "actorLink":"/name/nm0432837/",
+         "killedBy":"Sandor Clegane"
+      },
+      {
+         "characterName":"King's Landing Rioter #3",
+         "characterLink":"/character/ch0348391/",
+         "actorName":"Rea Separovic",
+         "actorLink":"/name/nm5037688/",
+         "killedBy":"Sandor Clegane"
+      },
+      {
+         "characterName":"Kinvara",
+         "characterLink":"/character/ch0540065/",
+         "actorName":"Ania Bukstein",
+         "actorLink":"/name/nm0119804/"
+      },
+      {
+         "characterName":"Knight of House Frey",
+         "characterLink":"/character/ch0305317/",
+         "actorName":"Patrick Ryan",
+         "actorLink":"/name/nm3122423/"
+      },
+      {
+         "characterName":"Knight of House Lynderly",
+         "characterLink":"/character/ch0305322/",
+         "actorName":"Paddy Rocks",
+         "actorLink":"/name/nm0734304/"
+      },
+      {
+         "characterName":"Kovarro",
+         "characterLink":"/character/ch0304969/",
+         "actorName":"Steven Cole",
+         "actorLink":"/name/nm0170799/"
+      },
+      {
+         "characterName":"Kraznys mo Nakloz",
+         "characterLink":"/character/ch0339503/",
+         "actorName":"Dan Hildebrand",
+         "actorLink":"/name/nm0383835/",
+         "killedBy":"Drogon"
+      },
+      {
+         "characterName":"Kurleket",
+         "characterLink":"/character/ch0305315/",
+         "actorName":"Kevin Keenan",
+         "actorLink":"/name/nm4450657/",
+         "killedBy":"Mountain Clansman"
+      },
+      {
+         "characterName":"Lady",
+         "houseName":"Stark",
+         "killedBy":"Eddard Stark",
+         "siblings":[
+            "Grey Wind",
+            "Nymeria",
+            "Summer",
+            "Shaggydog",
+            "Ghost"
+         ],
+         "guardianOf":"Sansa Stark"
+      },
+      {
+         "characterName":"Lady Crane",
+         "characterLink":"/character/ch0541190/",
+         "actorName":"Essie Davis",
+         "actorLink":"/name/nm0204583/",
+         "killedBy":"The Waif"
+      },
+      {
+         "characterName":"Lancel Lannister",
+         "houseName":"Lannister",
+         "characterLink":"/character/ch0376927/",
+         "actorName":"Eugene Simon",
+         "actorLink":"/name/nm1638294/",
+         "killedBy":"Cersei Lannister"
+      },
+      {
+         "characterName":"Lannister Captain",
+         "characterLink":"/character/ch0305308/",
+         "actorName":"Aiden Condron",
+         "actorLink":"/name/nm0174449/"
+      },
+      {
+         "characterName":"Lannister Captain",
+         "characterLink":"/character/ch0305308/",
+         "actorName":"Richard Laing",
+         "actorLink":"/name/nm0481924/"
+      },
+      {
+         "characterName":"Lannister Guardsman",
+         "characterLink":"/character/ch0305047/",
+         "actorName":"Conor Delaney",
+         "actorLink":"/name/nm1406364/"
+      },
+      {
+         "characterName":"Lannister Messenger",
+         "characterLink":"/character/ch0379228/",
+         "actorName":"Simon Stewart",
+         "actorLink":"/name/nm4492930/"
+      },
+      {
+         "characterName":"Lannister Scout",
+         "characterLink":"/character/ch0379230/",
+         "actorName":"Chris Gallagher",
+         "actorLink":"/name/nm3292422/"
+      },
+      {
+         "characterName":"Lead Dornish Guard",
+         "characterLink":"/character/ch0539716/",
+         "actorName":"Christian Vit",
+         "actorLink":"/name/nm5908524/",
+         "killedBy":"Bronn"
+      },
+      {
+         "characterName":"Leaf",
+         "characterLink":"/character/ch0467999/",
+         "actors":[
+            {
+               "actorName":"Kae Alexander",
+               "actorLink":"/name/nm5221696/",
+               "seasonsActive":[
+                  6
+               ]
+            },
+            {
+               "actorName":"Octavia Selena Alexandru",
+               "actorLink":"/name/nm3238466/",
+               "seasonsActive":[
+                  4
+               ]
+            }
+         ],
+         "killedBy":"Wights"
+      },
+      {
+         "characterName":"Lem Lemoncloak",
+         "characterLink":"/character/ch0542106/",
+         "actorName":"Jóhannes Haukur Jóhannesson",
+         "actorLink":"/name/nm1778512/",
+         "killed":"Brother Ray",
+         "killedBy":"Sandor Clegane"
+      },
+      {
+         "characterName":"Leo Lefford",
+         "characterLink":"/character/ch0305040/",
+         "actorName":"Vinnie McCabe",
+         "actorLink":"/name/nm0564516/"
+      },
+      {
+         "characterName":"Lhara",
+         "characterLink":"/character/ch0476558/",
+         "actorName":"Sarine Sofair",
+         "actorLink":"/name/nm3330066/"
+      },
+      {
+         "characterName":"Little Bird",
+         "characterLink":"/character/ch0305326/",
+         "actorName":"Samuel Paul Small",
+         "actorLink":"/name/nm6537691/"
+      },
+      {
+         "characterName":"Little Bird",
+         "characterLink":"/character/ch0305326/",
+         "actorName":"Tristan Mercieca",
+         "actorLink":"/name/nm4475204/"
+      },
+      {
+         "characterName":"Little Bird #3",
+         "characterLink":"/character/ch0305326/",
+         "actorName":"Michael Nevin",
+         "actorLink":"/name/nm8127150/"
+      },
+      {
+         "characterName":"Little Bird #4",
+         "characterLink":"/character/ch0305326/",
+         "actorName":"Jesse Magee",
+         "actorLink":"/name/nm8127151/"
+      },
+      {
+         "characterName":"Little Bird #5",
+         "characterLink":"/character/ch0305326/",
+         "actorName":"Iona Clarke",
+         "actorLink":"/name/nm8133415/"
+      },
+      {
+         "characterName":"Little Bird #6",
+         "characterLink":"/character/ch0305326/",
+         "actorName":"Lucy Gallagher",
+         "actorLink":"/name/nm8127152/"
+      },
+      {
+         "characterName":"Little Bird #7",
+         "characterLink":"/character/ch0305326/",
+         "actorName":"Fionn Kernan",
+         "actorLink":"/name/nm6462692/"
+      },
+      {
+         "characterName":"Loboda",
+         "characterLink":"/character/ch0511931/",
+         "actorName":"Zachary Baharov",
+         "actorLink":"/name/nm1707712/",
+         "killedBy":"White Walker"
+      },
+      {
+         "characterName":"Locke",
+         "characterLink":"/character/ch0045904/",
+         "actorName":"Noah Taylor",
+         "actorLink":"/name/nm0852965/",
+         "killedBy":"Hodor"
+      },
+      {
+         "characterName":"Lollys Stokeworth",
+         "characterLink":"/character/ch0511247/",
+         "actorName":"Elizabeth Cadwallader",
+         "actorLink":"/name/nm5502252/"
+      },
+      {
+         "characterName":"Lommy Greenhands",
+         "characterLink":"/character/ch0257030/",
+         "actorName":"Eros Vlahos",
+         "actorLink":"/name/nm2869309/",
+         "killedBy":"Polliver"
+      },
+      {
+         "characterName":"Loras Tyrell",
+         "houseName":"Tyrell",
+         "characterLink":"/character/ch0231428/",
+         "actorName":"Finn Jones",
+         "actorLink":"/name/nm3645691/",
+         "killedBy":"Cersei Lannister"
+      },
+      {
+         "characterName":"Lord Galbart Glover",
+         "characterLink":"/character/ch0305041/",
+         "actorName":"Mark Coney",
+         "actorLink":"/name/nm5651524/"
+      },
+      {
+         "characterName":"Lord Portan",
+         "characterLink":"/character/ch0305334/",
+         "actorName":"Gordon Fulton",
+         "actorLink":"/name/nm1101680/"
+      },
+      {
+         "characterName":"Lord Varys",
+         "characterLink":"/character/ch0249636/",
+         "actorName":"Conleth Hill",
+         "actorLink":"/name/nm0384152/"
+      },
+      {
+         "characterName":"Lordsport Dockhand",
+         "characterLink":"/character/ch0379224/",
+         "actorName":"Jer O'Leary",
+         "actorLink":"/name/nm0641596/"
+      },
+      {
+         "characterName":"Lothar Frey",
+         "houseName":"Frey",
+         "characterLink":"/character/ch0384471/",
+         "actors":[
+            {
+               "actorName":"Daniel Tuite",
+               "actorLink":"/name/nm1264590/",
+               "seasonsActive":[
+                  6
+               ]
+            },
+            {
+               "actorName":"Tom Brooke",
+               "actorLink":"/name/nm1623508/",
+               "seasonsActive":[
+                  3
+               ]
+            }
+         ],
+         "killed":"Talisa Maegyr",
+         "killedBy":"Arya Stark"
+      },
+      {
+         "characterName":"Loyal Night's Watchman #1",
+         "characterLink":"/character/ch0509452/",
+         "actorName":"Steve Cash",
+         "actorLink":"/name/nm3524836/"
+      },
+      {
+         "characterName":"Loyal Night's Watchman #2",
+         "characterLink":"/character/ch0509452/",
+         "actorName":"Robert Fawsitt",
+         "actorLink":"/name/nm6342915/"
+      },
+      {
+         "characterName":"Lyanna Mormont",
+         "houseName":"Mormont",
+         "characterLink":"/character/ch0541884/",
+         "actorName":"Bella Ramsey",
+         "actorLink":"/name/nm8165602/"
+      },
+      {
+         "characterName":"Lyanna Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0543804/",
+         "actorName":"Aisling Franciosi",
+         "actorLink":"/name/nm4957233/",
+         "parents":[
+            "Rickard Stark"
+         ],
+         "siblings":[
+            "Brandon Stark",
+            "Benjen Stark",
+            "Eddard Stark"
+         ],
+         "marriedEngaged":"Robert Baratheon",
+         "abductedBy":"Rhaegar Targaryen",
+         "parentOf":[
+            "Jon Snow"
+         ],
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Lysa Arryn",
+         "characterLink":"/character/ch0251736/",
+         "actorName":"Kate Dickie",
+         "actorLink":"/name/nm0225483/",
+         "houseName":[
+            "Arryn",
+            "Tully"
+         ],
+         "killed":"Jon Arryn",
+         "killedBy":"Petyr Baelish"
+      },
+      {
+         "characterName":"Mace Tyrell",
+         "houseName":"Tyrell",
+         "characterLink":"/character/ch0384328/",
+         "actorName":"Roger Ashton-Griffiths",
+         "actorLink":"/name/nm0004355/",
+         "killedBy":"Cersei Lannister"
+      },
+      {
+         "characterName":"Maester Aemon",
+         "houseName":"Targaryen",
+         "characterLink":"/character/ch0246936/",
+         "actorName":"Peter Vaughan",
+         "actorLink":"/name/nm0891092/",
+         "killedBy":"Natural Causes"
+      },
+      {
+         "characterName":"Maester Cressen",
+         "characterLink":"/character/ch0255280/",
+         "actorName":"Oliver Ford Davies",
+         "actorLink":"/name/nm0203882/",
+         "killedBy":"Maester Cressen",
+         "killed":"Maester Cressen"
+      },
+      {
+         "characterName":"Maester Luwin",
+         "characterLink":"/character/ch0171393/",
+         "actorName":"Donald Sumpter",
+         "actorLink":"/name/nm0838910/",
+         "killedBy":"Osha"
+      },
+      {
+         "characterName":"Mag the Mighty",
+         "characterLink":"/character/ch0510933/",
+         "actorName":"Neil Fingleton",
+         "actorLink":"/name/nm2807170/",
+         "killedBy":[
+            "Grenn",
+            "Donnel Hill",
+            "Cooper"
+         ],
+         "killed":[
+            "Grenn",
+            "Donnel Hill",
+            "Cooper"
+         ]
+      },
+      {
+         "characterName":"Maggy",
+         "characterLink":"/character/ch0334882/",
+         "actorName":"Jodhi May",
+         "actorLink":"/name/nm0562003/"
+      },
+      {
+         "characterName":"Mago",
+         "characterLink":"/character/ch0379227/",
+         "actorName":"Ivailo Dimitrov",
+         "actorLink":"/name/nm2162079/",
+         "killedBy":"Khal Drogo"
+      },
+      {
+         "characterName":"Male Prostitute",
+         "characterLink":"/character/ch0441614/",
+         "actorName":"Dennis Stokes",
+         "actorLink":"/name/nm4982614/"
+      },
+      {
+         "characterName":"Malko",
+         "characterLink":"/character/ch0519184/",
+         "actorName":"Adewale Akinnuoye-Agbaje",
+         "actorLink":"/name/nm0015382/"
+      },
+      {
+         "characterName":"Mance Rayder",
+         "characterLink":"/character/ch0335039/",
+         "actorName":"Ciarán Hinds",
+         "actorLink":"/name/nm0001354/",
+         "killedBy":[
+            "Melisandre",
+            "Jon Snow"
+         ]
+      },
+      {
+         "characterName":"Mandon Moore",
+         "characterLink":"/character/ch0306220/",
+         "actorName":"James Doran",
+         "actorLink":"/name/nm0243696/",
+         "killedBy":"Podrick Payne"
+      },
+      {
+         "characterName":"Manservant",
+         "characterLink":"/character/ch0525536/",
+         "actorName":"Conor Watters",
+         "actorLink":"/name/nm6442298/"
+      },
+      {
+         "characterName":"Marei",
+         "characterLink":"/character/ch0431527/",
+         "actorName":"Josephine Gillan",
+         "actorLink":"/name/nm4982706/"
+      },
+      {
+         "characterName":"Margaery Tyrell",
+         "houseName":"Tyrell",
+         "characterLink":"/character/ch0251974/",
+         "actorName":"Natalie Dormer",
+         "actorLink":"/name/nm1754059/",
+         "marriedEngaged":[
+            "Renly Baratheon",
+            "Joffrey Baratheon",
+            "Tommen Baratheon"
+         ],
+         "killedBy":"Cersei Lannister"
+      },
+      {
+         "characterName":"Margaery's Handmaiden",
+         "characterLink":"/character/ch0270368/",
+         "actorName":"Aisling Jarrett-Gavin",
+         "actorLink":"/name/nm2983094/"
+      },
+      {
+         "characterName":"Marillion",
+         "characterLink":"/character/ch0305001/",
+         "actorName":"Emun Elliott",
+         "actorLink":"/name/nm2047170/"
+      },
+      {
+         "characterName":"Martyn Lannister",
+         "houseName":"Lannister",
+         "characterLink":"/character/ch0395355/",
+         "actorName":"Dean-Charles Chapman",
+         "actorLink":"/name/nm2835616/",
+         "killedBy":"Rickard Karstark"
+      },
+      {
+         "characterName":"Masha Heddle",
+         "characterLink":"/character/ch0305314/",
+         "actorName":"Susie Kelly",
+         "actorLink":"/name/nm3126053/"
+      },
+      {
+         "characterName":"Matthos Seaworth",
+         "characterLink":"/character/ch0305029/",
+         "actorName":"Kerr Logan",
+         "actorLink":"/name/nm4523680/",
+         "killedBy":"Bronn"
+      },
+      {
+         "characterName":"Meera Reed",
+         "characterLink":"/character/ch0316928/",
+         "actorName":"Ellie Kendrick",
+         "actorLink":"/name/nm1697771/",
+         "killed":[
+            "Jojen Reed",
+            "White Walker"
+         ]
+      },
+      {
+         "characterName":"Meereen Slave Master",
+         "characterLink":"/character/ch0525536/",
+         "actorName":"Laurence Doherty",
+         "actorLink":"/name/nm2911170/"
+      },
+      {
+         "characterName":"Melessa Tarly",
+         "characterLink":"/character/ch0541191/",
+         "actorName":"Samantha Spiro",
+         "actorLink":"/name/nm0819087/"
+      },
+      {
+         "characterName":"Melisandre",
+         "characterLink":"/character/ch0287523/",
+         "actorName":"Carice van Houten",
+         "actorLink":"/name/nm0396924/",
+         "killed":[
+            "Renly Baratheon",
+            "Axell Florent",
+            "Mance Rayder",
+            "Shireen Baratheon"
+         ]
+      },
+      {
+         "characterName":"Merchant Captain",
+         "characterLink":"/character/ch0531846/",
+         "actorName":"Gary Pillai",
+         "actorLink":"/name/nm0997747/",
+         "killedBy":"Obara Sand"
+      },
+      {
+         "characterName":"Mero",
+         "characterLink":"/character/ch0123670/",
+         "actorName":"Mark Killeen",
+         "actorLink":"/name/nm2075330/",
+         "killedBy":"Daario Naharis"
+      },
+      {
+         "characterName":"Meryn Trant",
+         "characterLink":"/character/ch0246933/",
+         "actorName":"Ian Beattie",
+         "actorLink":"/name/nm0064155/",
+         "killed":"Syrio Forel",
+         "killedBy":"Arya Stark"
+      },
+      {
+         "characterName":"Mhaegen",
+         "characterLink":"/character/ch0305038/",
+         "actorName":"Antonia Christophers",
+         "actorLink":"/name/nm4460936/"
+      },
+      {
+         "characterName":"Mikken",
+         "characterLink":"/character/ch0348528/",
+         "actorName":"Boyd Rankin",
+         "actorLink":"/name/nm4595425/"
+      },
+      {
+         "characterName":"Mirelle",
+         "characterLink":"/character/ch0323607/",
+         "actorName":"Elisa Lasowski",
+         "actorLink":"/name/nm2489799/"
+      },
+      {
+         "characterName":"Mirri Maz Duur",
+         "characterLink":"/character/ch0305011/",
+         "actorName":"Mia Soteriou",
+         "actorLink":"/name/nm0815420/",
+         "killedBy":"Daenerys Targaryen",
+         "killed":"Rhaego"
+      },
+      {
+         "characterName":"Missandei",
+         "characterLink":"/character/ch0316923/",
+         "actorName":"Nathalie Emmanuel",
+         "actorLink":"/name/nm2812026/"
+      },
+      {
+         "characterName":"Mord",
+         "characterLink":"/character/ch0229099/",
+         "actorName":"Ciaran Bermingham",
+         "actorLink":"/name/nm2197118/"
+      },
+      {
+         "characterName":"Mossador",
+         "characterLink":"/character/ch0508053/",
+         "actorName":"Reece Noi",
+         "actorLink":"/name/nm0634139/",
+         "killedBy":"Daario Naharis",
+         "killed":"Son of the Harpy"
+      },
+      {
+         "characterName":"Musician #1",
+         "characterLink":"/character/ch0542919/",
+         "actorName":"Nanna Bryndís Hilmarsdóttir",
+         "actorLink":"/name/nm5652293/"
+      },
+      {
+         "characterName":"Musician #1",
+         "characterLink":"/character/ch0542919/",
+         "actorName":"Jon Thor Birgisson",
+         "actorLink":"/name/nm1743706/"
+      },
+      {
+         "characterName":"Musician #2",
+         "characterLink":"/character/ch0542919/",
+         "actorName":"Ragnar Þórhallsson",
+         "actorLink":"/name/nm5652121/"
+      },
+      {
+         "characterName":"Musician #2",
+         "characterLink":"/character/ch0542919/",
+         "actorName":"Orri P. Dyrason",
+         "actorLink":"/name/nm1743714/"
+      },
+      {
+         "characterName":"Musician #3",
+         "characterLink":"/character/ch0542919/",
+         "actorName":"Georg Holm",
+         "actorLink":"/name/nm1743730/"
+      },
+      {
+         "characterName":"Musician #3",
+         "characterLink":"/character/ch0542919/",
+         "actorName":"Arnar Rosenkranz Hilmarsson",
+         "actorLink":"/name/nm8158202/"
+      },
+      {
+         "characterName":"Musician #4",
+         "characterLink":"/character/ch0542919/",
+         "actorName":"Brynjar Leifsson",
+         "actorLink":"/name/nm8158203/"
+      },
+      {
+         "characterName":"Musician #5",
+         "characterLink":"/character/ch0542919/",
+         "actorName":"Kristján Kristjánsson",
+         "actorLink":"/name/nm1944894/"
+      },
+      {
+         "characterName":"Mycah",
+         "characterLink":"/character/ch0305045/",
+         "actorName":"Rhodri Hosking",
+         "actorLink":"/name/nm4430905/",
+         "killedBy":"Sandor Clegane"
+      },
+      {
+         "characterName":"Myranda",
+         "characterLink":"/character/ch0316926/",
+         "actorName":"Charlotte Hope",
+         "actorLink":"/name/nm3745225/",
+         "killedBy":"Theon Greyjoy"
+      },
+      {
+         "characterName":"Myrcella Baratheon",
+         "houseName":"Baratheon",
+         "characterLink":"/character/ch0238585/",
+         "actors":[
+            {
+               "actorName":"Aimee Richardson",
+               "actorLink":"/name/nm4048461/",
+               "seasonsActive":[
+                  1,
+                  2
+               ]
+            },
+            {
+               "actorName":"Nell Tiger Free",
+               "actorLink":"/name/nm4836100/",
+               "seasonsActive":[
+                  5,
+                  6
+               ]
+            }
+         ],
+         "parents":[
+            "Robert Baratheon",
+            "Cersei Lannister",
+            "Jaime Lannister"
+         ],
+         "siblings":[
+            "Joffrey Baratheon",
+            "Tommen Baratheon"
+         ],
+         "royal":true,
+         "killedBy":"Ellaria Sand",
+         "marriedEngaged":"Trystane Martell"
+      },
+      {
+         "characterName":"Night's Watch Deserter",
+         "characterLink":"/character/ch0305319/",
+         "actorName":"Barry John O'Connor",
+         "actorLink":"/name/nm3226454/"
+      },
+      {
+         "characterName":"Night's Watch Messenger",
+         "characterLink":"/character/ch0305327/",
+         "actorName":"Frank O'Sullivan",
+         "actorLink":"/name/nm0642751/"
+      },
+      {
+         "characterName":"Night's Watch Officer",
+         "characterLink":"/character/ch0305036/",
+         "actorName":"Dennis McKeever",
+         "actorLink":"/name/nm4475182/"
+      },
+      {
+         "characterName":"Night's Watch Officer",
+         "characterLink":"/character/ch0305036/",
+         "actorName":"Michael Stuart",
+         "actorLink":"/name/nm5792452/"
+      },
+      {
+         "characterName":"Night's Watchman",
+         "characterLink":"/character/ch0509452/",
+         "actorName":"Marcus Lamb",
+         "actorLink":"/name/nm2228622/"
+      },
+      {
+         "characterName":"Night's Watchman",
+         "characterLink":"/character/ch0509452/",
+         "actorName":"Michael Hooley",
+         "actorLink":"/name/nm6706699/"
+      },
+      {
+         "characterName":"Night's Watchman",
+         "characterLink":"/character/ch0509452/",
+         "actorName":"Patrick J Molloy",
+         "actorLink":"/name/nm3561455/"
+      },
+      {
+         "characterName":"Night's Watchman #1",
+         "characterLink":"/character/ch0509452/",
+         "actorName":"Michael Hayes",
+         "actorLink":"/name/nm0371160/"
+      },
+      {
+         "characterName":"Night's Watchman #2",
+         "characterLink":"/character/ch0509452/",
+         "actorName":"Ruairí Heading",
+         "actorLink":"/name/nm6316115/"
+      },
+      {
+         "characterName":"Night's Watchman #2",
+         "characterLink":"/character/ch0509452/",
+         "actorName":"Tony Flynn",
+         "actorLink":"/name/nm0283642/"
+      },
+      {
+         "characterName":"Northman Rioter",
+         "characterLink":"/character/ch0348391/",
+         "actorName":"Jed Murray",
+         "actorLink":"/name/nm5697839/"
+      },
+      {
+         "characterName":"Nymeria",
+         "houseName":"Stark",
+         "siblings":[
+            "Grey Wind",
+            "Lady",
+            "Summer",
+            "Shaggydog",
+            "Ghost"
+         ],
+         "guardianOf":"Arya Stark"
+      },
+      {
+         "characterName":"Nymeria Sand",
+         "houseName":"Sand",
+         "characterLink":"/character/ch0468074/",
+         "actorName":"Jessica Henwick",
+         "actorLink":"/name/nm3725055/"
+      },
+      {
+         "characterName":"Obara Sand",
+         "houseName":"Sand",
+         "characterLink":"/character/ch0468001/",
+         "actorName":"Keisha Castle-Hughes",
+         "actorLink":"/name/nm1095720/",
+         "killed":[
+            "Merchant Captain",
+            "Trystane Martell"
+         ]
+      },
+      {
+         "characterName":"Oberyn Martell",
+         "houseName":"Martell",
+         "characterLink":"/character/ch0392307/",
+         "actorName":"Pedro Pascal",
+         "actorLink":"/name/nm0050959/",
+         "killedBy":"Gregor Clegane"
+      },
+      {
+         "characterName":"Old Nan",
+         "characterLink":"/character/ch0305018/",
+         "actorName":"Margaret John",
+         "actorLink":"/name/nm0424191/"
+      },
+      {
+         "characterName":"Old Woman Prisoner",
+         "characterLink":"/character/ch0327535/",
+         "actorName":"Gina Moxley",
+         "actorLink":"/name/nm0610312/"
+      },
+      {
+         "characterName":"Olenna Tyrell",
+         "houseName":"Tyrell",
+         "characterLink":"/character/ch0010188/",
+         "actorName":"Diana Rigg",
+         "actorLink":"/name/nm0001671/"
+      },
+      {
+         "characterName":"Olly",
+         "characterLink":"/character/ch0508055/",
+         "actorName":"Brenock O'Connor",
+         "actorLink":"/name/nm5282143/",
+         "killed":[
+            "Ygritte",
+            "Jon Snow"
+         ],
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Olyvar",
+         "characterLink":"/character/ch0403194/",
+         "actorName":"Will Tudor",
+         "actorLink":"/name/nm4831584/"
+      },
+      {
+         "characterName":"Orell",
+         "characterLink":"/character/ch0316922/",
+         "actorName":"Mackenzie Crook",
+         "actorLink":"/name/nm0188871/",
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Ornela",
+         "characterLink":"/character/ch0540537/",
+         "actorName":"Hannah John-Kamen",
+         "actorLink":"/name/nm4789912/"
+      },
+      {
+         "characterName":"Osha",
+         "characterLink":"/character/ch0295802/",
+         "actorName":"Natalia Tena",
+         "actorLink":"/name/nm1164730/",
+         "killed":[
+            "Drennan",
+            "Maester Luwin"
+         ],
+         "killedBy":"Ramsay Snow"
+      },
+      {
+         "characterName":"Othell Yarwyck",
+         "characterLink":"/character/ch0305003/",
+         "actorName":"Brian Fortune",
+         "actorLink":"/name/nm1987270/",
+         "killed":"Jon Snow",
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Othor",
+         "killedBy":[
+            "White Walker",
+            "Jon Snow"
+         ]
+      },
+      {
+         "characterName":"Pentoshi Servant",
+         "characterLink":"/character/ch0305042/",
+         "actorName":"Rania Zouari",
+         "actorLink":"/name/nm4422639/"
+      },
+      {
+         "characterName":"Petyr Baelish",
+         "characterLink":"/character/ch0245982/",
+         "actorName":"Aidan Gillen",
+         "actorLink":"/name/nm0318821/",
+         "nickname":"Littlefinger",
+         "killed":[
+            "Joffrey Baratheon",
+            "Dontos Hollard",
+            "Lysa Arryn"
+         ]
+      },
+      {
+         "characterName":"Podrick Payne",
+         "characterLink":"/character/ch0306046/",
+         "actorName":"Daniel Portman",
+         "actorLink":"/name/nm4535552/",
+         "killed":[
+            "Mandon Moore",
+            "Bolton Soldier"
+         ]
+      },
+      {
+         "characterName":"Polliver",
+         "characterLink":"/character/ch0305023/",
+         "actorName":"Andy Kellegher",
+         "actorLink":"/name/nm3464945/",
+         "killed":"Lommy Greenhands",
+         "killedBy":"Arya Stark"
+      },
+      {
+         "characterName":"Prendahl na Ghezn",
+         "characterLink":"/character/ch0339504/",
+         "actorName":"Ramon Tikaram",
+         "actorLink":"/name/nm0863130/",
+         "killedBy":"Daario Naharis"
+      },
+      {
+         "characterName":"Pyat Pree",
+         "characterLink":"/character/ch0303952/",
+         "actorName":"Ian Hanmore",
+         "actorLink":"/name/nm0360171/",
+         "killed":[
+            "Spice King",
+            "Silk King"
+         ],
+         "killedBy":[
+            "Drogon",
+            "Viserion",
+            "Rhaegal"
+         ]
+      },
+      {
+         "characterName":"Pypar",
+         "characterLink":"/character/ch0273477/",
+         "actorName":"Josef Altin",
+         "actorLink":"/name/nm1086981/",
+         "killedBy":"Ygritte"
+      },
+      {
+         "characterName":"Qhono",
+         "characterLink":"/character/ch0540066/",
+         "actorName":"Staz Nair",
+         "actorLink":"/name/nm7047874/"
+      },
+      {
+         "characterName":"Qhorin Halfhand",
+         "characterLink":"/character/ch0303951/",
+         "actorName":"Simon Armstrong",
+         "actorLink":"/name/nm1409802/",
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Qotho",
+         "characterLink":"/character/ch0246162/",
+         "actorName":"Dar Salim",
+         "actorLink":"/name/nm1502469/",
+         "killedBy":"Jorah Mormont"
+      },
+      {
+         "characterName":"Quaithe",
+         "characterLink":"/character/ch0305022/",
+         "actorName":"Laura Pradelska",
+         "actorLink":"/name/nm3671418/"
+      },
+      {
+         "characterName":"Qyburn",
+         "characterLink":"/character/ch0316929/",
+         "actorName":"Anton Lesser",
+         "actorLink":"/name/nm0504320/"
+      },
+      {
+         "characterName":"Rakharo",
+         "characterLink":"/character/ch0251495/",
+         "actorName":"Elyes Gabel",
+         "actorLink":"/name/nm1175468/",
+         "killedBy":"Khal Jhaqo's Khalasar"
+      },
+      {
+         "characterName":"Ramsay Snow",
+         "houseName":"Bolton",
+         "characterLink":"/character/ch0321004/",
+         "actorName":"Iwan Rheon",
+         "actorLink":"/name/nm3701064/",
+         "killed":[
+            "Master Torturer",
+            "Medger Cerwyn",
+            "Lady Cerwyn",
+            "Unidentified Cerwyn",
+            "Old Woman",
+            "Roose Bolton",
+            "Osha",
+            "Rickon Stark",
+            "Wun Wun"
+         ],
+         "marriedEngaged":"Sansa Stark",
+         "killedBy":"Ramsay Snow's Hounds"
+      },
+      {
+         "characterName":"Randyll Tarly",
+         "characterLink":"/character/ch0524408/",
+         "actorName":"James Faulkner",
+         "actorLink":"/name/nm0269077/"
+      },
+      {
+         "characterName":"Rast",
+         "characterLink":"/character/ch0251498/",
+         "actorName":"Luke Barnes",
+         "actorLink":"/name/nm4430828/",
+         "killed":"Jeor Mormont",
+         "killedBy":"Ghost"
+      },
+      {
+         "characterName":"Rattleshirt",
+         "characterLink":"/character/ch0305888/",
+         "nickname":"Lord of Bones",
+         "actors":[
+            {
+               "actorName":"Edward Dogliani",
+               "actorLink":"/name/nm2589085/",
+               "seasonsActive":[
+                  2,
+                  3
+               ]
+            },
+            {
+               "actorName":"Ross O'Hennessy",
+               "actorLink":"/name/nm1090815/",
+               "seasonsActive":[
+                  5
+               ]
+            }
+         ],
+         "killedBy":"Tormund Giantsbane"
+      },
+      {
+         "characterName":"Razdal mo Eraz",
+         "characterLink":"/character/ch0413591/",
+         "actorName":"George Georgiou",
+         "actorLink":"/name/nm1745190/",
+         "killedBy":"Grey Worm"
+      },
+      {
+         "characterName":"Red Keep Stableboy",
+         "characterLink":"/character/ch0379229/",
+         "actorName":"Hugo Culverhouse",
+         "actorLink":"/name/nm4164318/",
+         "killedBy":"Arya Stark"
+      },
+      {
+         "characterName":"Red Priestess",
+         "characterLink":"/character/ch0540866/",
+         "actorName":"Melanie Liburd",
+         "actorLink":"/name/nm4927489/"
+      },
+      {
+         "characterName":"Red Priestess",
+         "characterLink":"/character/ch0540866/",
+         "actorName":"Rila Fukushima",
+         "actorLink":"/name/nm3822462/"
+      },
+      {
+         "characterName":"Renly Baratheon",
+         "houseName":"Baratheon",
+         "characterLink":"/character/ch0246253/",
+         "actorName":"Gethin Anthony",
+         "actorLink":"/name/nm2167445/",
+         "killedBy":"Melisandre",
+         "siblings":[
+            "Robert Baratheon",
+            "Stannis Baratheon"
+         ],
+         "marriedEngaged":"Margaery Tyrell"
+      },
+      {
+         "characterName":"Rhaegal",
+         "houseName":"Targaryen",
+         "siblings":[
+            "Drogon",
+            "Viserion"
+         ],
+         "guardianOf":"Daenerys Targaryen",
+         "killed":[
+            "Pyat Pree",
+            "Great Master #1"
+         ]
+      },
+      {
+         "characterName":"Rhaegar Targaryen",
+         "houseName":"Targaryen",
+         "royal":true,
+         "parents":[
+            "Rhaella Targaryen",
+            "Aerys II Targaryen"
+         ],
+         "siblings":[
+            "Daenerys Targaryen",
+            "Viserys Targaryen"
+         ],
+         "abducted":"Lyanna Stark",
+         "marriedEngaged":"Elia Martell",
+         "killedBy":"Robert Baratheon",
+         "parentOf":[
+            "Jon Snow",
+            "Rhaenys Targaryen",
+            "Aegon Targaryen"
+         ]
+      },
+      {
+         "characterName":"Rhaego",
+         "killedBy":"Mirri Maz Duur",
+         "parents":[
+            "Khal Drogo",
+            "Daenerys Targaryen"
+         ]
+      },
+      {
+         "characterName":"Rhaella Targaryen",
+         "houseName":"Targaryen",
+         "royal":true,
+         "parentOf":[
+            "Daenerys Targaryen",
+            "Rhaegar Targaryen",
+            "Viserys Targaryen"
+         ],
+         "siblings":[
+            "Aerys II Targaryen"
+         ],
+         "marriedEngaged":"Aerys II Targaryen"
+      },
+      {
+         "characterName":"Rhaenys Targaryen",
+         "houseName":"Targaryen",
+         "royal":true,
+         "parents":[
+            "Elia Martell",
+            "Rhaegar Targaryen"
+         ],
+         "killedBy":"Gregor Clegane"
+      },
+      {
+         "characterName":"Rickard Karstark",
+         "characterLink":"/character/ch0305331/",
+         "actors":[
+            {
+               "actorName":"John Stahl",
+               "actorLink":"/name/nm0821471/",
+               "seasonsActive":[
+                  2,
+                  3
+               ]
+            },
+            {
+               "actorName":"Steve Blount",
+               "actorLink":"/name/nm0089416/",
+               "seasonsActive":[
+                  1
+               ]
+            }
+         ],
+         "killed":[
+            "Martyn Lannister",
+            "Willem Lannister"
+         ],
+         "killedBy":"Robb Stark"
+      },
+      {
+         "characterName":"Rickard Stark",
+         "houseName":"Stark",
+         "parentOf":[
+            "Brandon Stark",
+            "Benjen Stark",
+            "Eddard Stark",
+            "Lyanna Stark"
+         ],
+         "killedBy":"Aerys II Targaryen"
+      },
+      {
+         "characterName":"Rickon Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0233141/",
+         "actorName":"Art Parkinson",
+         "actorLink":"/name/nm3280686/",
+         "siblings":[
+            "Robb Stark",
+            "Sansa Stark",
+            "Arya Stark",
+            "Bran Stark"
+         ],
+         "killedBy":"Ramsay Snow"
+      },
+      {
+         "characterName":"Robb Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0158596/",
+         "actorName":"Richard Madden",
+         "actorLink":"/name/nm0534635/",
+         "siblings":[
+            "Sansa Stark",
+            "Arya Stark",
+            "Bran Stark",
+            "Rickon Stark"
+         ],
+         "killed":[
+            "Wallen",
+            "Rickard Karstark"
+         ],
+         "marriedEngaged":[
+            "Roslin Frey",
+            "Talisa Maegyr"
+         ],
+         "killedBy":"Roose Bolton"
+      },
+      {
+         "characterName":"Robert Baratheon",
+         "houseName":"Baratheon",
+         "characterLink":"/character/ch0155776/",
+         "actorName":"Mark Addy",
+         "actorLink":"/name/nm0004692/",
+         "royal":true,
+         "guardedBy":"Jon Arryn",
+         "marriedEngaged":[
+            "Lyanna Stark",
+            "Cersei Lannister"
+         ],
+         "allies":[
+            "Jon Arryn",
+            "Eddard Stark",
+            "Tywin Lannister"
+         ],
+         "killed":[
+            "Rhaegar Targaryen"
+         ],
+         "parentOf":[
+            "Joffrey Baratheon",
+            "Myrcella Baratheon",
+            "Tommen Baratheon"
+         ],
+         "killedBy":"Boar",
+         "siblings":[
+            "Stannis Baratheon",
+            "Renly Baratheon"
+         ]
+      },
+      {
+         "characterName":"Robett Glover",
+         "characterLink":"/character/ch0541747/",
+         "actorName":"Tim McInnerny",
+         "actorLink":"/name/nm0570570/"
+      },
+      {
+         "characterName":"Robin Arryn",
+         "characterLink":"/character/ch0300949/",
+         "actorName":"Lino Facioli",
+         "actorLink":"/name/nm2996220/"
+      },
+      {
+         "characterName":"Rodrik Cassel",
+         "characterLink":"/character/ch0171391/",
+         "actorName":"Ron Donachie",
+         "actorLink":"/name/nm0231871/",
+         "killedBy":"Theon Greyjoy"
+      },
+      {
+         "characterName":"Roose Bolton",
+         "houseName":"Bolton",
+         "characterLink":"/character/ch0305006/",
+         "actorName":"Michael McElhatton",
+         "actorLink":"/name/nm0568385/",
+         "killed":"Robb Stark",
+         "killedBy":"Ramsay Snow"
+      },
+      {
+         "characterName":"Rorge",
+         "characterLink":"/character/ch0305019/",
+         "actorName":"Andy Beckwith",
+         "actorLink":"/name/nm0065874/",
+         "killedBy":"Arya Stark"
+      },
+      {
+         "characterName":"Ros",
+         "characterLink":"/character/ch0010187/",
+         "actorName":"Esmé Bianco",
+         "actorLink":"/name/nm2657974/",
+         "killedBy":"Joffrey Baratheon"
+      },
+      {
+         "characterName":"Roslin Frey",
+         "houseName":"Frey",
+         "characterLink":"/character/ch0391563/",
+         "actorName":"Alexandra Dowling",
+         "actorLink":"/name/nm5093301/",
+         "marriedEngaged":[
+            "Robb Stark",
+            "Edmure Tully"
+         ]
+      },
+      {
+         "characterName":"Royal Steward",
+         "characterLink":"/character/ch0305048/",
+         "actorName":"Robert Sterne",
+         "actorLink":"/name/nm1414435/"
+      },
+      {
+         "characterName":"Ryger Rivers",
+         "characterLink":"/character/ch0014591/",
+         "actorName":"Bryan McCaugherty",
+         "actorLink":"/name/nm0565472/"
+      },
+      {
+         "characterName":"Salladhor Saan",
+         "characterLink":"/character/ch0381104/",
+         "actorName":"Lucian Msamati",
+         "actorLink":"/name/nm1748634/"
+      },
+      {
+         "characterName":"Samwell Tarly",
+         "characterLink":"/character/ch0244961/",
+         "actorName":"John Bradley",
+         "actorLink":"/name/nm4263213/",
+         "killed":[
+            "White Walker",
+            "Thenn Warg"
+         ]
+      },
+      {
+         "characterName":"Sandor Clegane",
+         "characterLink":"/character/ch0162882/",
+         "actorName":"Rory McCann",
+         "actorLink":"/name/nm0564920/",
+         "nickname":"The Hound",
+         "killed":[
+            "Mycah",
+            "Kings Landing Rioter #1",
+            "Kings Landing Rioter #2",
+            "Kings Landing Rioter #3",
+            "Beric Dondarrion",
+            "Frey Soldier #2",
+            "Lowell",
+            "Dying Man",
+            "Biter",
+            "Steve",
+            "Riddell",
+            "Gatins",
+            "Morgan",
+            "Lem Lemoncloak"
+         ]
+      },
+      {
+         "characterName":"Sansa Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0158137/",
+         "actorName":"Sophie Turner",
+         "actorLink":"/name/nm3849842/",
+         "siblings":[
+            "Robb Stark",
+            "Arya Stark",
+            "Bran Stark",
+            "Rickon Stark"
+         ],
+         "marriedEngaged":[
+            "Joffrey Baratheon",
+            "Tyrion Lannister",
+            "Ramsay Snow"
+         ]
+      },
+      {
+         "characterName":"Selyse Baratheon",
+         "houseName":"Baratheon",
+         "characterLink":"/character/ch0316924/",
+         "actors":[
+            {
+               "actorName":"Tara Fitzgerald",
+               "actorLink":"/name/nm0001216/",
+               "seasonsActive":[
+                  3,
+                  4,
+                  5
+               ]
+            },
+            {
+               "actorName":"Sarah MacKeever",
+               "actorLink":"/name/nm5223922/",
+               "seasonsActive":[
+                  2
+               ]
+            }
+         ],
+         "killedBy":"Selyse Baratheon",
+         "killed":"Selyse Baratheon"
+      },
+      {
+         "characterName":"Septa Moelle",
+         "characterLink":"/character/ch0540869/",
+         "actorName":"Maggie Hayes",
+         "actorLink":"/name/nm1378629/"
+      },
+      {
+         "characterName":"Septa Mordane",
+         "characterLink":"/character/ch0248505/",
+         "actorName":"Susan Brown",
+         "actorLink":"/name/nm0114742/",
+         "killedBy":"Lannister Guardsman"
+      },
+      {
+         "characterName":"Septa Scolera",
+         "characterLink":"/character/ch0540869/",
+         "actorName":"Mary Jordan",
+         "actorLink":"/name/nm1103771/"
+      },
+      {
+         "characterName":"Septa Unella",
+         "characterLink":"/character/ch0512215/",
+         "actorName":"Hannah Waddingham",
+         "actorLink":"/name/nm1821446/"
+      },
+      {
+         "characterName":"Septon",
+         "characterLink":"/character/ch0540865/",
+         "actorName":"Kenneth Hadley",
+         "actorLink":"/name/nm0352901/"
+      },
+      {
+         "characterName":"Septon",
+         "characterLink":"/character/ch0540865/",
+         "actorName":"Terry Byrne",
+         "actorLink":"/name/nm0126298/"
+      },
+      {
+         "characterName":"Ser Endrew Tarth",
+         "characterLink":"/character/ch0540153/",
+         "actorName":"Dez McMahon",
+         "actorLink":"/name/nm4757478/"
+      },
+      {
+         "characterName":"Shae",
+         "characterLink":"/character/ch0250564/",
+         "actorName":"Sibel Kekilli",
+         "actorLink":"/name/nm1402546/",
+         "killedBy":"Tyrion Lannister"
+      },
+      {
+         "characterName":"Shagga",
+         "characterLink":"/character/ch0305021/",
+         "actorName":"Mark Lewis Jones",
+         "actorLink":"/name/nm0428765/"
+      },
+      {
+         "characterName":"Shaggydog",
+         "houseName":"Stark",
+         "siblings":[
+            "Grey Wind",
+            "Lady",
+            "Nymeria",
+            "Summer",
+            "Ghost"
+         ],
+         "guardianOf":"Rickon Stark",
+         "killedBy":"Smalljon Umber"
+      },
+      {
+         "characterName":"Shireen Baratheon",
+         "houseName":"Baratheon",
+         "characterLink":"/character/ch0306346/",
+         "actorName":"Kerry Ingram",
+         "actorLink":"/name/nm5081192/",
+         "killedBy":"Melisandre"
+      },
+      {
+         "characterName":"Silk King",
+         "characterLink":"/character/ch0345051/",
+         "actorName":"Slavko Juraga",
+         "actorLink":"/name/nm0432838/",
+         "killedBy":"Pyat Pree"
+      },
+      {
+         "characterName":"Smalljon Umber",
+         "characterLink":"/character/ch0540067/",
+         "actorName":"Dean S. Jagger",
+         "actorLink":"/name/nm2746504/",
+         "killed":"Shaggydog",
+         "killedBy":"Tormund Giantsbane"
+      },
+      {
+         "characterName":"Spice King",
+         "characterLink":"/character/ch0305005/",
+         "actorName":"Nicholas Blane",
+         "actorLink":"/name/nm0087432/",
+         "killedBy":"Pyat Pree"
+      },
+      {
+         "characterName":"Stannis Baratheon",
+         "houseName":"Baratheon",
+         "characterLink":"/character/ch0250897/",
+         "actorName":"Stephen Dillane",
+         "actorLink":"/name/nm0226820/",
+         "siblings":[
+            "Robert Baratheon",
+            "Renly Baratheon"
+         ],
+         "killed":[
+            "Gordy",
+            "Simpson"
+         ],
+         "killedBy":"Brienne of Tarth"
+      },
+      {
+         "characterName":"Stark Bannerman",
+         "characterLink":"/character/ch0517008/",
+         "actorName":"Michael Stuart",
+         "actorLink":"/name/nm5792452/"
+      },
+      {
+         "characterName":"Stark Guard",
+         "characterLink":"/character/ch0305311/",
+         "actorName":"Faolan Morgan",
+         "actorLink":"/name/nm4335246/"
+      },
+      {
+         "characterName":"Stark Guard",
+         "characterLink":"/character/ch0305311/",
+         "actorName":"Rick Burn",
+         "actorLink":"/name/nm4492916/"
+      },
+      {
+         "characterName":"Stark Guard",
+         "characterLink":"/character/ch0305311/",
+         "actorName":"David Sheehan",
+         "actorLink":"/name/nm1423916/"
+      },
+      {
+         "characterName":"Stark Guard",
+         "characterLink":"/character/ch0305311/",
+         "actorName":"Paul Monahan",
+         "actorLink":"/name/nm5981376/"
+      },
+      {
+         "characterName":"Steelshanks Walton",
+         "characterLink":"/character/ch0396530/",
+         "actorName":"Jamie Michie",
+         "actorLink":"/name/nm1652341/"
+      },
+      {
+         "characterName":"Stevron Frey",
+         "houseName":"Frey",
+         "characterLink":"/character/ch0305329/",
+         "actorName":"Colin Carnegie",
+         "actorLink":"/name/nm1794801/"
+      },
+      {
+         "characterName":"Stiv",
+         "characterLink":"/character/ch0304972/",
+         "actorName":"Stephen Don",
+         "actorLink":"/name/nm1651043/",
+         "killedBy":"Theon Greyjoy"
+      },
+      {
+         "characterName":"Styr",
+         "characterLink":"/character/ch0400416/",
+         "actorName":"Yuri Kolokolnikov",
+         "actorLink":"/name/nm0464305/",
+         "killed":"Olly's Mother",
+         "killedBy":"Jon Snow"
+      },
+      {
+         "characterName":"Summer",
+         "houseName":"Stark",
+         "siblings":[
+            "Grey Wind",
+            "Lady",
+            "Nymeria",
+            "Shaggydog",
+            "Ghost"
+         ],
+         "guardianOf":"Bran Stark",
+         "killed":"Catspaw Assassin",
+         "killedBy":"Wights"
+      },
+      {
+         "characterName":"Syrio Forel",
+         "characterLink":"/character/ch0246934/",
+         "actorName":"Miltos Yerolemou",
+         "actorLink":"/name/nm1115654/",
+         "killedBy":"Meryn Trant"
+      },
+      {
+         "characterName":"Talisa Maegyr",
+         "characterLink":"/character/ch0305007/",
+         "actorName":"Oona Chaplin",
+         "actorLink":"/name/nm2772105/",
+         "marriedEngaged":"Robb Stark",
+         "killedBy":"Lothar Frey"
+      },
+      {
+         "characterName":"Talla Tarly",
+         "houseName":"Tarly",
+         "characterLink":"/character/ch0523897/",
+         "actorName":"Rebecca Benson",
+         "actorLink":"/name/nm5039410/"
+      },
+      {
+         "characterName":"Ternesio Terys",
+         "characterLink":"/character/ch0473552/",
+         "actorName":"Gary Oliver",
+         "actorLink":"/name/nm1146807/"
+      },
+      {
+         "characterName":"The Bear",
+         "characterLink":"/character/ch0085768/",
+         "actorName":"Bart the Bear",
+         "actorLink":"/name/nm1212069/"
+      },
+      {
+         "characterName":"The Night King",
+         "characterLink":"/character/ch0512154/",
+         "actors":[
+            {
+               "actorName":"Richard Brake",
+               "actorLink":"/name/nm0104114/",
+               "seasonsActive":[
+                  4,
+                  5
+               ]
+            },
+            {
+               "actorName":"Vladimir 'Furdo' Furdik",
+               "actorLink":"/name/nm0298842/",
+               "seasonsActive":[
+                  6
+               ]
+            }
+         ],
+         "killed":"Three-Eyed Raven"
+      },
+      {
+         "characterName":"The Tickler",
+         "characterLink":"/character/ch0305033/",
+         "actorName":"Anthony Morris",
+         "actorLink":"/name/nm1677757/",
+         "killed":"Tortured Prisoner",
+         "killedBy":"Jaqen H'ghar"
+      },
+      {
+         "characterName":"The Waif",
+         "characterLink":"/character/ch0508054/",
+         "actorName":"Faye Marsay",
+         "actorLink":"/name/nm3849670/",
+         "killed":"Lady Crane",
+         "killedBy":"Arya Stark"
+      },
+      {
+         "characterName":"Thenn Warg",
+         "characterLink":"/character/ch0400416/",
+         "actorName":"Joseph Gatt",
+         "actorLink":"/name/nm1395532/",
+         "killedBy":"Samwell Tarly"
+      },
+      {
+         "characterName":"Theon Greyjoy",
+         "houseName":"Greyjoy",
+         "characterLink":"/character/ch0158526/",
+         "actorName":"Alfie Allen",
+         "actorLink":"/name/nm0654295/",
+         "killed":[
+            "Stiv",
+            "Rodrik Cassel",
+            "Myranda",
+            "Bolton Soldier"
+         ]
+      },
+      {
+         "characterName":"Thin Man",
+         "characterLink":"/character/ch0540863/",
+         "actorName":"Oengus MacNamara",
+         "actorLink":"/name/nm0534062/"
+      },
+      {
+         "characterName":"Thoros of Myr",
+         "characterLink":"/character/ch0316927/",
+         "actorName":"Paul Kaye",
+         "actorLink":"/name/nm0443373/"
+      },
+      {
+         "characterName":"Three-Eyed Raven",
+         "characterLink":"/character/ch0414457/",
+         "actors":[
+            {
+               "actorName":"Struan Rodger",
+               "actorLink":"/name/nm0734654/",
+               "seasonsActive":[
+                  4
+               ]
+            },
+            {
+               "actorName":"Max von Sydow",
+               "actorLink":"/name/nm0001884/",
+               "seasonsActive":[
+                  6
+               ]
+            }
+         ],
+         "killedBy":"The Night King"
+      },
+      {
+         "characterName":"Timett",
+         "characterLink":"/character/ch0305004/",
+         "actorName":"Tobias Winter",
+         "actorLink":"/name/nm4385245/"
+      },
+      {
+         "characterName":"Tobho Mott",
+         "characterLink":"/character/ch0305039/",
+         "actorName":"Andrew Wilde",
+         "actorLink":"/name/nm0928408/"
+      },
+      {
+         "characterName":"Todder",
+         "characterLink":"/character/ch0509452/",
+         "actorName":"Will O'Connell",
+         "actorLink":"/name/nm3727276/"
+      },
+      {
+         "characterName":"Tomard",
+         "characterLink":"/character/ch0305325/",
+         "actorName":"Phil Dixon",
+         "actorLink":"/name/nm4475303/"
+      },
+      {
+         "characterName":"Tommen Baratheon",
+         "houseName":"Baratheon",
+         "characterLink":"/character/ch0256424/",
+         "actors":[
+            {
+               "actorName":"Callum Wharry",
+               "actorLink":"/name/nm4422626/",
+               "seasonsActive":[
+                  1,
+                  2
+               ]
+            },
+            {
+               "actorName":"Dean-Charles Chapman",
+               "actorLink":"/name/nm2835616/",
+               "seasonsActive":[
+                  4,
+                  5,
+                  6
+               ]
+            }
+         ],
+         "parents":[
+            "Robert Baratheon",
+            "Cersei Lannister",
+            "Jaime Lannister"
+         ],
+         "siblings":[
+            "Joffrey Baratheon",
+            "Myrcella Baratheon"
+         ],
+         "royal":true,
+         "marriedEngaged":"Margaery Tyrell",
+         "killed":"Tommen Baratheon",
+         "killedBy":"Tommen Baratheon"
+      },
+      {
+         "characterName":"Tormund Giantsbane",
+         "characterLink":"/character/ch0316925/",
+         "actorName":"Kristofer Hivju",
+         "actorLink":"/name/nm1970465/",
+         "killed":[
+            "Rattleshirt",
+            "Smalljon Umber"
+         ]
+      },
+      {
+         "characterName":"Trystane Martell",
+         "houseName":"Martell",
+         "characterLink":"/character/ch0506400/",
+         "actorName":"Toby Sebastian",
+         "actorLink":"/name/nm4514519/",
+         "marriedEngaged":"Myrcella Baratheon",
+         "killedBy":"Obara Sand"
+      },
+      {
+         "characterName":"Tycho Nestoris",
+         "characterLink":"/character/ch0468190/",
+         "actorName":"Mark Gatiss",
+         "actorLink":"/name/nm0309693/"
+      },
+      {
+         "characterName":"Tyene Sand",
+         "houseName":"Sand",
+         "characterLink":"/character/ch0468075/",
+         "actorName":"Rosabell Laurenti Sellers",
+         "actorLink":"/name/nm3065809/",
+         "killed":[
+            "Areo Hotah",
+            "Maester Caleotte"
+         ]
+      },
+      {
+         "characterName":"Tyrion Lannister",
+         "houseName":"Lannister",
+         "characterLink":"/character/ch0146096/",
+         "actorName":"Peter Dinklage",
+         "actorLink":"/name/nm0227759/",
+         "marriedEngaged":"Sansa Stark",
+         "killed":[
+            "Shae",
+            "Tywin Lannister"
+         ]
+      },
+      {
+         "characterName":"Tywin Lannister",
+         "houseName":"Lannister",
+         "characterLink":"/character/ch0242185/",
+         "actorName":"Charles Dance",
+         "actorLink":"/name/nm0001097/",
+         "parentOf":[
+            "Jaime Lannister",
+            "Cersei Lannister",
+            "Tyrion Lannister"
+         ],
+         "allies":[
+            "Robert Baratheon"
+         ],
+         "servedBy":[
+            "Gregor Clegane"
+         ],
+         "killedBy":"Tyrion Lannister"
+      },
+      {
+         "characterName":"Vala",
+         "characterLink":"/character/ch0539344/",
+         "actorName":"Meena Rayann",
+         "actorLink":"/name/nm5159884/"
+      },
+      {
+         "characterName":"Vardis Egen",
+         "characterLink":"/character/ch0294458/",
+         "actorName":"Brendan McCormack",
+         "actorLink":"/name/nm1788152/",
+         "killedBy":"Bronn"
+      },
+      {
+         "characterName":"Varly",
+         "characterLink":"/character/ch0379226/",
+         "actorName":"Graham Charles",
+         "actorLink":"/name/nm1378721/",
+         "killedBy":"Goldcloak"
+      },
+      {
+         "characterName":"Viserion",
+         "houseName":"Targaryen",
+         "siblings":[
+            "Drogon",
+            "Rhaegal"
+         ],
+         "guardianOf":"Daenerys Targaryen",
+         "killed":[
+            "Pyat Pree",
+            "Great Master #1"
+         ]
+      },
+      {
+         "characterName":"Viserys Targaryen",
+         "houseName":"Targaryen",
+         "characterLink":"/character/ch0155775/",
+         "actorName":"Harry Lloyd",
+         "actorLink":"/name/nm0516003/",
+         "royal":true,
+         "parents":[
+            "Rhaella Targaryen",
+            "Aerys II Targaryen"
+         ],
+         "siblings":[
+            "Daenerys Targaryen",
+            "Rhaegar Targaryen"
+         ],
+         "killedBy":"Khal Drogo"
+      },
+      {
+         "characterName":"Walda Bolton",
+         "houseName":"Bolton",
+         "characterLink":"/character/ch0506401/",
+         "actorName":"Elizabeth Webster",
+         "actorLink":"/name/nm3531913/",
+         "killedBy":"Ramsay Snow's Hounds"
+      },
+      {
+         "characterName":"Walder Frey",
+         "houseName":"Frey",
+         "characterLink":"/character/ch0305328/",
+         "actorName":"David Bradley",
+         "actorLink":"/name/nm0103195/",
+         "killedBy":"Arya Stark"
+      },
+      {
+         "characterName":"Wallen",
+         "actorName":"Barry O'Connor",
+         "killedBy":"Robb Stark"
+      },
+      {
+         "characterName":"Warlock",
+         "characterLink":"/character/ch0539881/",
+         "actorName":"Lottie Steer",
+         "actorLink":"/name/nm5390029/"
+      },
+      {
+         "characterName":"Waymar Royce",
+         "characterLink":"/character/ch0171390/",
+         "actorName":"Rob Ostlere",
+         "actorLink":"/name/nm3209935/",
+         "killedBy":"White Walker"
+      },
+      {
+         "characterName":"Wedding Band",
+         "characterLink":"/character/ch0506962/",
+         "actorName":"Sigur Rós",
+         "actorLink":"/name/nm1460176/"
+      },
+      {
+         "characterName":"White Walker",
+         "characterLink":"/character/ch0304921/",
+         "actorName":"Ian Whyte",
+         "actorLink":"/name/nm1613839/"
+      },
+      {
+         "characterName":"White Walker",
+         "characterLink":"/character/ch0304921/",
+         "actorName":"Ross Mullan",
+         "actorLink":"/name/nm1368643/",
+         "killedBy":"Samwell Tarly"
+      },
+      {
+         "characterName":"White Walker",
+         "characterLink":"/character/ch0304921/",
+         "actorName":"Tim Loane",
+         "actorLink":"/name/nm0516385/",
+         "killedBy":"Jon Snow",
+         "killed":"Loboda"
+      },
+      {
+         "characterName":"White Walker #2",
+         "characterLink":"/character/ch0304921/",
+         "actorName":"Spencer Wilding",
+         "actorLink":"/name/nm1872855/"
+      },
+      {
+         "characterName":"Wight Wildling Girl",
+         "characterLink":"/character/ch0305043/",
+         "actorName":"Claire Wright",
+         "actorLink":"/name/nm4422708/"
+      },
+      {
+         "characterName":"Wildling Rioter",
+         "characterLink":"/character/ch0348391/",
+         "actorName":"Michael Patrick",
+         "actorLink":"/name/nm8199963/"
+      },
+      {
+         "characterName":"Will",
+         "characterLink":"/character/ch0171394/",
+         "actorName":"Bronson Webb",
+         "actorLink":"/name/nm0916037/",
+         "killedBy":"Eddard Stark"
+      },
+      {
+         "characterName":"Willem Lannister",
+         "houseName":"Lannister",
+         "characterLink":"/character/ch0395356/",
+         "actorName":"Timothy Gibbons",
+         "actorLink":"/name/nm5624523/",
+         "killedBy":"Rickard Karstark"
+      },
+      {
+         "characterName":"Willis Wode",
+         "characterLink":"/character/ch0305315/",
+         "actorName":"Ryan McKenna",
+         "actorLink":"/name/nm4416560/",
+         "killedBy":"Mountain Clansman"
+      },
+      {
+         "characterName":"Wine Merchant",
+         "characterLink":"/character/ch0305323/",
+         "actorName":"Simon Lowe",
+         "actorLink":"/name/nm0523047/"
+      },
+      {
+         "characterName":"Winterfell Shepherd",
+         "characterLink":"/character/ch0306456/",
+         "actorName":"Donagh Deeney",
+         "actorLink":"/name/nm0214343/"
+      },
+      {
+         "characterName":"Wun Wun",
+         "characterLink":"/character/ch0524621/",
+         "actorName":"Ian Whyte",
+         "actorLink":"/name/nm1613839/",
+         "killedBy":"Ramsay Snow"
+      },
+      {
+         "characterName":"Wyllis",
+         "characterLink":"/character/ch0238584/",
+         "actorName":"Sam Coleman",
+         "actorLink":"/name/nm4744043/"
+      },
+      {
+         "characterName":"Xaro Xhoan Daxos",
+         "characterLink":"/character/ch0303950/",
+         "actorName":"Nonso Anozie",
+         "actorLink":"/name/nm1996829/",
+         "killedBy":"Daenerys Targaryen"
+      },
+      {
+         "characterName":"Yara Greyjoy",
+         "houseName":"Greyjoy",
+         "characterLink":"/character/ch0300217/",
+         "actorName":"Gemma Whelan",
+         "actorLink":"/name/nm2247629/",
+         "killed":"Bolton Guard"
+      },
+      {
+         "characterName":"Yezzan zo Qaggaz",
+         "characterLink":"/character/ch0470706/",
+         "actorName":"Enzo Cilenti",
+         "actorLink":"/name/nm0162281/"
+      },
+      {
+         "characterName":"Ygritte",
+         "characterLink":"/character/ch0304492/",
+         "actorName":"Rose Leslie",
+         "actorLink":"/name/nm3310211/",
+         "killed":[
+            "Old Man",
+            "Guymon",
+            "Mole's Town Whore",
+            "Pypar"
+         ],
+         "killedBy":"Olly"
+      },
+      {
+         "characterName":"Yohn Royce",
+         "characterLink":"/character/ch0524546/",
+         "actorName":"Rupert Vansittart",
+         "actorLink":"/name/nm0889338/"
+      },
+      {
+         "characterName":"Yoren",
+         "characterLink":"/character/ch0251493/",
+         "actorName":"Francis Magee",
+         "actorLink":"/name/nm0535837/",
+         "killedBy":"Amory Lorch"
+      },
+      {
+         "characterName":"Young Benjen Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0153996/",
+         "actorName":"Matteo Elezi",
+         "actorLink":"/name/nm5502295/"
+      },
+      {
+         "characterName":"Young Cersei Lannister",
+         "houseName":"Lannister",
+         "characterLink":"/character/ch0159526/",
+         "actorName":"Nell Williams",
+         "actorLink":"/name/nm5309709/"
+      },
+      {
+         "characterName":"Young Lyanna Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0543804/",
+         "actorName":"Cordelia Hill",
+         "actorLink":"/name/nm8108764/"
+      },
+      {
+         "characterName":"Young Nan",
+         "characterLink":"/character/ch0305018/",
+         "actorName":"Annette Tierney",
+         "actorLink":"/name/nm1519719/"
+      },
+      {
+         "characterName":"Young Ned",
+         "characterLink":"/character/ch0154681/",
+         "actorName":"Robert Aramayo",
+         "actorLink":"/name/nm7075019/"
+      },
+      {
+         "characterName":"Young Ned Stark",
+         "houseName":"Stark",
+         "characterLink":"/character/ch0154681/",
+         "actorName":"Sebastian Croft",
+         "actorLink":"/name/nm7509185/"
+      },
+      {
+         "characterName":"Young Rodrik Cassel",
+         "characterLink":"/character/ch0171391/",
+         "actorName":"Fergus Leathem",
+         "actorLink":"/name/nm7509186/"
+      },
+      {
+         "characterName":"Zanrush",
+         "characterLink":"/character/ch0540870/",
+         "actorName":"Gerald Lepkowski",
+         "actorLink":"/name/nm0503319/"
+      }
+   ]
+}
