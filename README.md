@@ -1,2 +1,3 @@
-# game-of-thrones
-Game of Thrones Datasets and Narrative Chart Visualization
+# Game of Thrones Datasets and Narrative Chart Visualization
+
+Coming soon!
