@@ -22,9 +22,9 @@ Outputs the data for `keyValues.json`.
 
 Outputs the _Game of Thrones_ narrative chart.
 
-### Data
+## Data
 
-## data/episodes.json
+### data/episodes.json
 ```javascript
 {
   "episodes": [
@@ -68,7 +68,7 @@ Outputs the _Game of Thrones_ narrative chart.
 }
 ```
 
-## data/characters.json
+### data/characters.json
 ```javascript
 {
   "characters":[
@@ -150,7 +150,7 @@ Outputs the _Game of Thrones_ narrative chart.
 
 ```
 
-## data/characters-houses.json
+### data/characters-houses.json
 ```javascript
 {
   "house": [
@@ -167,7 +167,7 @@ Outputs the _Game of Thrones_ narrative chart.
 
 ```
 
-## data/characters-include.json
+### data/characters-include.json
 ```javascript
 {
   "include":[
@@ -181,7 +181,7 @@ Outputs the _Game of Thrones_ narrative chart.
 
 ```
 
-## data/locations.json
+### data/locations.json
 ```javascript
 {
   "regions":[
