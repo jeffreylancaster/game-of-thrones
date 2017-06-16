@@ -1,0 +1,135 @@
+{
+	"colors": [
+		{
+			"hexadecimal": "#CCCCCC",
+			"basic": "lightgray",
+			"rgb": "rgb(204,204,204)",
+			"class": ["characters"]
+		},
+		{
+			"name": "Bakerloo",
+			"hexadecimal": "#B36305",
+			"webSafe": "#996633",
+			"basic": "brown",
+			"rgb": "rgb(178,99,0)",
+			"class": ["baratheon"]
+		},
+		{
+			"name": "Central",
+			"hexadecimal": "#E32017",
+			"webSafe": "#CC3333",
+			"basic": "red",
+			"rgb": "rgb(220,36,31)",
+			"class": ["tyrell"]
+		},
+		{
+			"name": "Circle",
+			"hexadecimal": "#FFD300",
+			"webSafe": "#FFCC00",
+			"basic": "yellow",
+			"rgb": "rgb(255,211,41)",
+			"class": ["lannister"]
+		},
+		{
+			"name": "District",
+			"hexadecimal": "#00782A",
+			"webSafe": "#006633",
+			"basic": "green",
+			"rgb": "rgb(0,125,50)",
+			"class": ["dothraki"]
+		},
+		{
+			"name": "Hammersmith and City",
+			"hexadecimal": "#F3A9BB",
+			"webSafe": "#CC9999",
+			"basic": "pink",
+			"rgb": "rgb(244,169,190)",
+			"class": ["include"]
+		},
+		{
+			"name": "Jubilee",
+			"hexadecimal": "#A0A5A9",
+			"webSafe": "#868F98",
+			"basic": "gray",
+			"rgb": "rgb(161,165,167)",
+			"class": ["stark"]
+		},
+		{
+			"name": "Metropolitan",
+			"hexadecimal": "#9B0056",
+			"webSafe": "#660066",
+			"basic": "purple",
+			"rgb": "rgb(155,0,88)",
+			"class": ["targaryen"]
+		},
+		{
+			"name": "Northern",
+			"hexadecimal": "#000000",
+			"webSafe": "#000000",
+			"basic": "black",
+			"rgb": "rgb(0,0,0)",
+			"class": ["nightswatch"]
+		},
+		{
+			"name": "Piccadilly",
+			"hexadecimal": "#003688",
+			"webSafe": "#000099",
+			"basic": "blue",
+			"rgb": "rgb(0,25,168)",
+			"class": ["greyjoy"]
+		},
+		{
+			"name": "Victoria",
+			"hexadecimal": "#0098D4",
+			"webSafe": "#0099CC",
+			"basic": "lightblue",
+			"rgb": "rgb(0,152,216)",
+			"class": ["tully"]
+		},
+		{
+			"name": "Waterloo and City",
+			"hexadecimal": "#95CDBA",
+			"webSafe": "#66CCCC",
+			"basic": "beige",
+			"rgb": "rgb(147,206,186)",
+			"class": ["wildling"]
+		},
+		{
+			"name": "DLR",
+			"hexadecimal": "#00A4A7",
+			"webSafe": "#009999",
+			"basic": "aquamarine",
+			"rgb": "rgb(0,175,173)",
+			"class": ["frey"]
+		},
+		{
+			"name": "Overground",
+			"hexadecimal": "#EE7C0E",
+			"webSafe": "#FF6600",
+			"basic": "orange",
+			"rgb": "rgb(239,123,16)",
+			"class": ["martell"]
+		},
+		{
+			"name": "Tramlink",
+			"hexadecimal": "#84B817",
+			"webSafe": "#66CC00",
+			"basic": "neongreen",
+			"rgb": "rgb(0,189,25)",
+			"class": ["hand"]
+		},
+		{
+			"name": "Cable Car",
+			"hexadecimal": "#E21836",
+			"basic": "salmon",
+			"rgb": "rgb(220,36,31)",
+			"class": ["king", "khal", "khaleesi"]
+		},
+		{
+			"name": "Crossrail",
+			"hexadecimal": "#7156A5",
+			"basic": "mediumblue",
+			"rgb": "rgb(0,25,168)"
+		}
+	]
+}
