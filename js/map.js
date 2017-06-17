@@ -449,11 +449,21 @@ $.getJSON("data/keyValues.json", function( data ) {
 		$(".frey .keyLabel").html("Frey + Dead");
 		$(".include .keyLabel").html("Other");
 
-		// add .include to all ines
+		// add .include to all lines
 		for(i=0; i<house.length; i++){
 			var houseName = house[i].name.toLowerCase().replace(/([^A-Z0-9])/gi,"");
 			if(houseName !== "include"){
 				$("."+houseName).addClass("include");
+			}
+		}
+	});
+// add gender as class to lines
+}).done(function(){
+	$.getJSON("data/characters-gender.json", function( data ) {
+		for(i in data.gender){
+			for(j=0; j<data.gender[i].characters.length; j++){
+				var className = data.gender[i].characters[j].toLowerCase().replace(/([^A-Z0-9])/gi,"");
+				$("."+className).addClass(data.gender[i].gender);
 			}
 		}
 	});
