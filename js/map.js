@@ -14,6 +14,9 @@ $.getJSON("data/keyValues.json", function( data ) {
 	var titlePoints = [];
 	var points = [];
 
+	// an array to keep titles
+	var titles = [];
+
 	// from: http://bl.ocks.org/eesur/4e0a69d57d3bfc8a82c2
 	d3.selection.prototype.moveToFront = function() {  
       return this.each(function(){
@@ -28,6 +31,11 @@ $.getJSON("data/keyValues.json", function( data ) {
             } 
         });
     };
+
+    // to dedpulicate an array
+	function onlyUnique(value, index, self) { 
+	    return self.indexOf(value) === index;
+	}
 
     // build the array of points from keyValues
 	keyValues.forEach(function(d,i){
@@ -68,6 +76,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 				if(keyValues[i].values[j].t){
 					titlePoints[i].push(objStart);
 					titlePoints[i].push(objEnd);
+					titles.push(keyValues[i].values[j].t);
 				} else {
 					titlePoints[i].push(null);
 				}
@@ -77,6 +86,12 @@ $.getJSON("data/keyValues.json", function( data ) {
 	
 	// modify titlePoints
 	var titlePointsAdj = [];
+	
+	// dedpulicate the titles array and add values to select
+	titles = titles.filter(onlyUnique).sort();
+	for(i=0; i<titles.length; i++){
+		$("#title-select > select").append("<option>"+titles[i]+"</option>");
+	}
 
 	// remove objects that only have null values
 	for(i=0; i<titlePoints.length; i++){
@@ -155,22 +170,14 @@ $.getJSON("data/keyValues.json", function( data ) {
             .attr("text-anchor", "end");
 	});
 
-	// add rectangles representing each episode or season
+	// add rectangles representing each episode
 	episodeLengths.forEach(function(d,i){
-		// add rectangles for each season
-		/* svg.append("rect")
-			.attr("class", "season")
-			.attr("height", height+10)
-			.attr("width", d.length/100)
-			.attr("x", d.shift/100)
-			.attr("y", -5)
-			.attr("fill", "none"); */
 		// add rectangles for each episode
 		episodeLengths[i].episodes.forEach(function(e,j){
 			episodeTitle = e.episodeTitle.toLowerCase().replace(/([^A-Z0-9])/gi,"");
 			svg.append("g")
-				.attr("class", episodeTitle);
-			svg.select("."+episodeTitle)
+				.attr("class", episodeTitle+"-episode");
+			svg.select("."+episodeTitle+"-episode")
 				.append("rect")
 				.attr("class", "episode season"+episodeLengths[i].seasonNum)
 				.attr("height", height+10)
@@ -181,7 +188,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 		episodeLengths[i].episodes.forEach(function(e,j){
 			episodeTitle = e.episodeTitle.toLowerCase().replace(/([^A-Z0-9])/gi,"");
 			// add episode title to top
-			svg.select("."+episodeTitle)
+			svg.select("."+episodeTitle+"-episode")
 				.append("text")
 				.attr("class", "episodeTitle")
 	            .text("\"" + e.episodeTitle + "\" (S"+ d.seasonNum + ":E" + e.episodeNum + ")")
@@ -210,7 +217,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 	            	}
 	            });
 	        // add episode title to bottom
-	        svg.select("."+episodeTitle)
+	        svg.select("."+episodeTitle+"-episode")
 				.append("text")
 				.attr("class", "episodeTitle")
 	            .text("\"" + e.episodeTitle + "\" (S"+ d.seasonNum + ":E" + e.episodeNum + ")")
@@ -248,6 +255,8 @@ $.getJSON("data/keyValues.json", function( data ) {
 			// make the group
 			svg.append("g")
 				.attr("class", className + " characters");
+			// include all characters in select
+			//$("#character-select > select").append("<option>"+d.key+"</option>");
 		}
 	});
 
@@ -318,7 +327,13 @@ $.getJSON("data/keyValues.json", function( data ) {
             d3.select(this).moveToFront();
             d3.selectAll(".character")
             	.attr("x", function(){
-            		return d3.mouse(this)[0];
+            		// distinguish between old browser and new?
+            		//return d3.mouse(this)[0];
+            		if(d3.mouse(this)[0] < 200){
+            			return d3.mouse(this)[0]+10+$(window).scrollLeft();
+            		} else {
+            			return d3.mouse(this)[0]-10+$(window).scrollLeft();
+            		}
             	})
             	.attr("y", d3.mouse(this)[1]+10)
             	.attr("text-anchor", function(){
@@ -344,7 +359,10 @@ $.getJSON("data/keyValues.json", function( data ) {
 				if(houseName !== "include"){
 					$("."+className).addClass("include");
 				}
+				// only include characters from characters-houses in select
+				$("#character-select > select").append("<option>"+house[i].characters[j]+"</option>");
 			}
+			$("#house-select > select").append("<option>"+house[i].name+"</option>");
 		}
 
 		// build the key - include: houses, hand/khal/khaleesi/king, dead, in scene
@@ -465,6 +483,32 @@ $.getJSON("data/keyValues.json", function( data ) {
 				var className = data.gender[i].characters[j].toLowerCase().replace(/([^A-Z0-9])/gi,"");
 				$("."+className).addClass(data.gender[i].gender);
 			}
+			$("#gender-select").append("<input type='radio' label='"+data.gender[i].gender+"'>"+data.gender[i].gender.toUpperCase());
+		}
+	});
+// add color data to styles
+}).done(function(){
+	$.getJSON("data/colors.json", function( data ) {
+		for(i in data.colors){
+			if(data.colors[i].class){
+				for(j=0; j<data.colors[i].class.length; j++){
+					$("."+data.colors[i].class[j]+" .line, ."+data.colors[i].class[j]+" .rect").css({
+						"stroke": data.colors[i].hexadecimal
+					});
+					$("."+data.colors[i].class[j]+" .rect").css({
+						"fill": data.colors[i].hexadecimal
+					});
+				}
+			}
+			// doesn't work yet
+			/*if(data.colors[i].css){
+				for(j=0; j<data.colors[i].class.length; j++){
+					for(k in data.colors[i].css){
+						$("."+data.colors[i].class[j]).css({k: data.colors[i].css[k]});
+						console.log(k, data.colors[i].css[k]);
+					}
+				}
+			}*/
 		}
 	});
 });

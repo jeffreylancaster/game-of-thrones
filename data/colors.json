@@ -2,9 +2,18 @@
 	"colors": [
 		{
 			"hexadecimal": "#CCCCCC",
+			"webSafe": "#CCCCCC",
 			"basic": "lightgray",
 			"rgb": "rgb(204,204,204)",
 			"class": ["characters"]
+		},
+		{
+			"name": "Hammersmith and City",
+			"hexadecimal": "#F3A9BB",
+			"webSafe": "#CC9999",
+			"basic": "pink",
+			"rgb": "rgb(244,169,190)",
+			"class": ["include"]
 		},
 		{
 			"name": "Bakerloo",
@@ -39,19 +48,16 @@
 			"class": ["dothraki"]
 		},
 		{
-			"name": "Hammersmith and City",
-			"hexadecimal": "#F3A9BB",
-			"webSafe": "#CC9999",
-			"basic": "pink",
-			"rgb": "rgb(244,169,190)",
-			"class": ["include"]
-		},
-		{
 			"name": "Jubilee",
 			"hexadecimal": "#A0A5A9",
 			"webSafe": "#868F98",
 			"basic": "gray",
-			"rgb": "rgb(161,165,167)",
+			"rgb": "rgb(161,165,167)"
+		},
+		{
+			"hexadecimal": "#666",
+			"webSafe": "#666",
+			"basic": "darkgray",
 			"class": ["stark"]
 		},
 		{
@@ -116,14 +122,22 @@
 			"webSafe": "#66CC00",
 			"basic": "neongreen",
 			"rgb": "rgb(0,189,25)",
-			"class": ["hand"]
+			"class": ["hand"],
+			"css": {
+				"stroke-width": "3px",
+				"stroke-dasharray": "1, 8",
+				"stroke-linecap": "round"
+			}
 		},
 		{
 			"name": "Cable Car",
 			"hexadecimal": "#E21836",
 			"basic": "salmon",
 			"rgb": "rgb(220,36,31)",
-			"class": ["king", "khal", "khaleesi"]
+			"class": ["king", "khal", "khaleesi"],
+			"css": {
+				"stroke-width": "3px"
+			}
 		},
 		{
 			"name": "Crossrail",
