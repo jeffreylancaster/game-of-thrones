@@ -1,3 +1,9 @@
+function isolate(className){
+	className = className.toLowerCase().replace(/([^A-Z0-9])/gi,"");
+	$(".characters").addClass("hide");
+	$("."+className).removeClass("hide");
+}
+
 $.getJSON("data/keyValues.json", function( data ) {
 
 	var keyValues = data.keyValues;
@@ -500,7 +506,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 					});
 				}
 			}
-			// doesn't work yet
+			// add additional css via jquery - doesn't work yet
 			/*if(data.colors[i].css){
 				for(j=0; j<data.colors[i].class.length; j++){
 					for(k in data.colors[i].css){
@@ -511,4 +517,8 @@ $.getJSON("data/keyValues.json", function( data ) {
 			}*/
 		}
 	});
+}).done(function(){
+	isolate("Tully");
 });
+
+
