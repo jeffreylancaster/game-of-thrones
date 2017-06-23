@@ -16,6 +16,9 @@ function toTitleCase(str){
     });
 }
 
+// hide the UI box until everything is loaded
+$("#ui").toggle();
+
 $.getJSON("data/keyValues.json", function( data ) {
 
 	var keyValues = data.keyValues;
@@ -273,8 +276,6 @@ $.getJSON("data/keyValues.json", function( data ) {
 			// make the group
 			svg.append("g")
 				.attr("class", className + " characters");
-			// include all characters in select
-			//$("#character-select > select").append("<option>"+d.key+"</option>");
 		}
 	});
 
@@ -369,6 +370,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 	$("#loading").hide();
 	$.getJSON( "data/characters-houses.json", function( data ) {
 		var house = data.house;
+		var charactersArray = [];
 		for(i=0; i<house.length; i++){
 			for(j=0; j<house[i].characters.length; j++){
 				var className = house[i].characters[j].toLowerCase().replace(/([^A-Z0-9])/gi,"");
@@ -378,10 +380,20 @@ $.getJSON("data/keyValues.json", function( data ) {
 					$("."+className).addClass("include");
 				}
 				// only include characters from characters-houses in select
-				$("#character-select > select").append("<option>"+house[i].characters[j]+"</option>");
+				charactersArray.push(house[i].characters[j]);
 			}
-			$("#house-select > select").append("<option>"+house[i].name+"</option>");
+			if(house[i].name == "Include"){
+				$("#house-select > select").append("<option disabled></option><option value='include'>All Main Characters</option><option value='characters'>All Characters</option>");
+			} else {
+				$("#house-select > select").append("<option>"+house[i].name+"</option>");
+			}
 		}
+		// sort charactersArray and add to character-select
+		charactersArray = charactersArray.sort();
+		for(i=0; i<charactersArray.length; i++){
+			$("#character-select > select").append("<option>"+charactersArray[i]+"</option>");
+		}
+		$("#character-select > select").append("<option disabled></option><option value='characters'>All Characters</option>");
 
 		// build the key - include: houses, hand/khal/khaleesi/king, dead, in scene
 
@@ -493,7 +505,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 			}
 		}
 	});
-// add gender as class to lines
+// add gender as class to lines, add UI select behavior
 }).done(function(){
 	$.getJSON("data/characters-gender.json", function( data ) {
 		for(i in data.gender){
@@ -504,6 +516,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 			// add gender select
 			$("#gender-select").append("<input type='radio' name='gender' value='"+data.gender[i].gender+"'>"+toTitleCase(data.gender[i].gender));
 		}
+
 		// on change in gender select, show only that gender
 		$("#gender-select input").change(function(){
 			// reset other selects
@@ -579,10 +592,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 				}
 			}*/
 		}
-		
 	});
-}).done(function(){
-	//isolate("Edmure Tully");
+	// show the UI box
+	$("#ui").toggle();
 });
-
-
