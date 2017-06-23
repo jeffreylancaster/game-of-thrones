@@ -19,6 +19,12 @@ function toTitleCase(str){
 // hide the UI box until everything is loaded
 $("#ui").toggle();
 
+$(window).mousemove(function(){
+	var body = document.body; // For Chrome, Safari and Opera
+	var html = document.documentElement; // Firefox and IE
+	console.log(body.scrollLeft, html.scrollLeft, $(window).scrollLeft());
+});
+
 $.getJSON("data/keyValues.json", function( data ) {
 
 	var keyValues = data.keyValues;
