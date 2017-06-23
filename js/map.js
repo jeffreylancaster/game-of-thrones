@@ -1,7 +1,19 @@
 function isolate(className){
 	className = className.toLowerCase().replace(/([^A-Z0-9])/gi,"");
 	$(".characters").addClass("hide");
-	$("."+className).removeClass("hide");
+	if(className == "king" || className == "khal" || className == "khaleesi" || className == "hand" || className == "dead"){
+		$("."+className).parent().removeClass("hide");
+	} else if(className == "alive"){
+		$(".characters").not($(".dead").parent()).removeClass("hide");
+	} else {
+		$("."+className).removeClass("hide");
+	}
+}
+
+function toTitleCase(str){
+    return str.replace(/\w\S*/g, function(txt){
+    	return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
 }
 
 $.getJSON("data/keyValues.json", function( data ) {
@@ -489,8 +501,59 @@ $.getJSON("data/keyValues.json", function( data ) {
 				var className = data.gender[i].characters[j].toLowerCase().replace(/([^A-Z0-9])/gi,"");
 				$("."+className).addClass(data.gender[i].gender);
 			}
-			$("#gender-select").append("<input type='radio' label='"+data.gender[i].gender+"'>"+data.gender[i].gender.toUpperCase());
+			// add gender select
+			$("#gender-select").append("<input type='radio' name='gender' value='"+data.gender[i].gender+"'>"+toTitleCase(data.gender[i].gender));
 		}
+		// on change in gender select, show only that gender
+		$("#gender-select input").change(function(){
+			// reset other selects
+			$("#life-select input").prop("checked", false);
+			$('#character-select option, #house-select option, #title-select option').prop('selected', function() {
+		        return this.defaultSelected;
+		    });
+			// show only that gender
+			isolate($("#gender-select input[type='radio']:checked").val());
+		});
+		// on change in house select, show only that house
+		$("#house-select select").change(function(){
+			// reset other selects
+			$("#gender-select input, #life-select input").prop("checked", false);
+			$('#character-select option, #title-select option').prop('selected', function() {
+		        return this.defaultSelected;
+		    });
+			// show only that house
+			isolate($("#house-select select option:selected").val());
+		});
+		// on change in character select, show only that character
+		$("#character-select select").change(function(){
+			// reset other selects
+			$("#gender-select input, #life-select input").prop("checked", false);
+			$('#house-select option, #title-select option').prop('selected', function() {
+		        return this.defaultSelected;
+		    });
+			// show only that house
+			isolate($("#character-select select option:selected").val());
+		});
+		// on change in title select, show only that title
+		$("#title-select select").change(function(){
+			// reset other selects
+			$("#gender-select input, #life-select input").prop("checked", false);
+			$('#house-select option, #character-select option').prop('selected', function() {
+		        return this.defaultSelected;
+		    });
+			// show only that title
+			isolate($("#title-select select option:selected").val());
+		});
+		// on change in alive select, show only that life
+		$("#life-select input").change(function(){
+			// reset other selects
+			$("#gender-select input").prop("checked", false);
+			$('#character-select option, #house-select option, #title-select option').prop('selected', function() {
+		        return this.defaultSelected;
+		    });
+			// show only that life
+			isolate($("#life-select input[type='radio']:checked").val());
+		});
 	});
 // add color data to styles
 }).done(function(){
@@ -516,9 +579,10 @@ $.getJSON("data/keyValues.json", function( data ) {
 				}
 			}*/
 		}
+		
 	});
 }).done(function(){
-	isolate("Tully");
+	//isolate("Edmure Tully");
 });
 
 
