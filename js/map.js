@@ -19,11 +19,14 @@ function toTitleCase(str){
 // hide the UI box until everything is loaded
 $("#ui").toggle();
 
-$(window).mousemove(function(){
-	var body = document.body; // For Chrome, Safari and Opera
-	var html = document.documentElement; // Firefox and IE
-	console.log(body.scrollLeft, html.scrollLeft, $(window).scrollLeft());
-});
+// $(window).mousemove(function(evt){
+// 	var body = document.body; // For Chrome, Safari and Opera
+// 	var html = document.documentElement; // Firefox and IE
+// 	console.log(body.scrollLeft, html.scrollLeft, $(window).scrollLeft());
+// 	var mousex = evt.clientX + $(window).scrollLeft();
+// 	var mousey = evt.clientY;
+// 	console.log(mousex, mousey);
+// });
 
 $.getJSON("data/keyValues.json", function( data ) {
 
@@ -355,8 +358,11 @@ $.getJSON("data/keyValues.json", function( data ) {
             		// distinguish between old browser and new?
             		//return d3.mouse(this)[0];
             		if(d3.mouse(this)[0] < 200){
+            			//console.log(d3.mouse(this)[0]+10+$(window).scrollLeft());
             			return d3.mouse(this)[0]+10+$(window).scrollLeft();
             		} else {
+            			console.log(d3.mouse(this)[0], $(window).scrollLeft())
+            			//console.log(d3.mouse(this)[0]-10+$(window).scrollLeft());
             			return d3.mouse(this)[0]-10+$(window).scrollLeft();
             		}
             	})
