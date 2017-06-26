@@ -357,14 +357,16 @@ $.getJSON("data/keyValues.json", function( data ) {
             	.attr("x", function(){
             		// distinguish between old browser and new?
             		//return d3.mouse(this)[0];
-            		if(d3.mouse(this)[0] < 200){
-            			//console.log(d3.mouse(this)[0]+10+$(window).scrollLeft());
-            			return d3.mouse(this)[0]+10+$(window).scrollLeft();
-            		} else {
-            			console.log(d3.mouse(this)[0], $(window).scrollLeft())
+            		// if(d3.mouse(this)[0] < 200){
+            		// 	//console.log(d3.mouse(this)[0]+10+$(window).scrollLeft());
+            		// 	//return d3.mouse(this)[0]+10+$(window).scrollLeft();
+            		// 	return d3.event.pageX - 300;
+            		// } else {
+            			//console.log(d3.mouse(this)[0], $(window).scrollLeft())
             			//console.log(d3.mouse(this)[0]-10+$(window).scrollLeft());
-            			return d3.mouse(this)[0]-10+$(window).scrollLeft();
-            		}
+            			//return d3.mouse(this)[0]-10+$(window).scrollLeft();
+            			return d3.event.pageX;
+            		//}
             	})
             	.attr("y", d3.mouse(this)[1]+10)
             	.attr("text-anchor", function(){
