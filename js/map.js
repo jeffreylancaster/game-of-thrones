@@ -355,22 +355,11 @@ $.getJSON("data/keyValues.json", function( data ) {
             d3.select(this).moveToFront();
             d3.selectAll(".character")
             	.attr("x", function(){
-            		// distinguish between old browser and new?
-            		//return d3.mouse(this)[0];
-            		// if(d3.mouse(this)[0] < 200){
-            		// 	//console.log(d3.mouse(this)[0]+10+$(window).scrollLeft());
-            		// 	//return d3.mouse(this)[0]+10+$(window).scrollLeft();
-            		// 	return d3.event.pageX - 300;
-            		// } else {
-            			//console.log(d3.mouse(this)[0], $(window).scrollLeft())
-            			//console.log(d3.mouse(this)[0]-10+$(window).scrollLeft());
-            			//return d3.mouse(this)[0]-10+$(window).scrollLeft();
-            			return d3.event.pageX;
-            		//}
+            		return d3.event.pageX - 40;
             	})
             	.attr("y", d3.mouse(this)[1]+10)
             	.attr("text-anchor", function(){
-            		if(d3.mouse(this)[0] < 200){
+            		if(d3.event.pageX < 200){
             			return "start";
             		} else {
             			return "end";
