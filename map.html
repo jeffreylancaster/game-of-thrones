@@ -206,7 +206,10 @@
 			stroke: none;
 			fill: none;
 		}
-		input[type=radio]:nth-child(odd){
+		input[type=radio]{
+			margin-right: 5px;
+		}
+		input[type=radio]:nth-child(3n), input[type=radio]:nth-child(3n+1){
 			margin-left: 10px;
 		}
 	</style>
@@ -469,6 +472,7 @@
 				<h2>Alive</h2>
 				<input type="radio" value="alive" name="alive">Alive
 				<input type="radio" value="dead" name="alive">Dead
+				<input type="radio" value="characters" name="alive">Both
 			</div>
 		</form>	
 	</div>
