@@ -28,6 +28,9 @@ $("#ui").toggle();
 // 	console.log(mousex, mousey);
 // });
 
+// var charactersArrayForIMDBImages = []; // remove
+// var IMDBhtml = ""; // remove
+
 $.getJSON("data/keyValues.json", function( data ) {
 
 	var keyValues = data.keyValues;
@@ -384,6 +387,8 @@ $.getJSON("data/keyValues.json", function( data ) {
 				}
 				// only include characters from characters-houses in select
 				charactersArray.push(house[i].characters[j]);
+				
+				// charactersArrayForIMDBImages.push({"name":house[i].characters[j]}); // remove
 			}
 			if(house[i].name == "Include"){
 				$("#house-select > select").append("<option disabled></option><option value='include'>All Main Characters</option><option value='characters'>All Characters</option>");
@@ -391,6 +396,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 				$("#house-select > select").append("<option>"+house[i].name+"</option>");
 			}
 		}
+		
 		// sort charactersArray and add to character-select
 		charactersArray = charactersArray.sort();
 		for(i=0; i<charactersArray.length; i++){
@@ -598,4 +604,19 @@ $.getJSON("data/keyValues.json", function( data ) {
 	});
 	// show the UI box
 	$("#ui").toggle();
+/*}).done(function(){
+	$.getJSON("data/characters.json", function( data ) {
+		//console.log(data);
+		for(i=0; i<charactersArrayForIMDBImages.length; i++){
+			for(j=0; j<data.characters.length; j++){
+				if(charactersArrayForIMDBImages[i].name == data.characters[j].characterName){
+					charactersArrayForIMDBImages[i].characterLink = "http://imdb.com"+data.characters[j].characterLink;
+
+				}
+			}
+			$("body").append("<a href='"+charactersArrayForIMDBImages[i].characterLink+"' target='_blank'>"+charactersArrayForIMDBImages[i].name+"</a><br>");
+			
+		}
+
+	});*/
 });
