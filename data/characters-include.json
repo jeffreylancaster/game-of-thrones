@@ -469,7 +469,7 @@
 		{"name":"Tomard", "include":false},
 		{"name":"Tommen Baratheon", "include":true},
 		{"name":"Tommen's Manservant", "include":false},
-		{"name":"Tormund Giantsbane", "include":false},
+		{"name":"Tormund Giantsbane", "include":true},
 		{"name":"Torrhen Karstark", "include":false},
 		{"name":"Tortured Prisoner", "include":false},
 		{"name":"Tortured Slave", "include":false},

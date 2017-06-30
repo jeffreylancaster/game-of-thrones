@@ -2,8 +2,6 @@
    "characters":[
       {
          "characterName":"Addam Marbrand",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305333/",
          "actorName":"B.J. Hogg",
          "actorLink":"/name/nm0389698/"
@@ -21,8 +19,8 @@
       {
          "characterName":"Aeron Greyjoy",
          "houseName":"Greyjoy",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzI5MDg0ZDAtN2Y2ZC00MzU1LTgyYjQtNTBjYjEzODczZDVhXkEyXkFqcGdeQXVyNTg0Nzg4NTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzI5MDg0ZDAtN2Y2ZC00MzU1LTgyYjQtNTBjYjEzODczZDVhXkEyXkFqcGdeQXVyNTg0Nzg4NTE@._V1_.jpg",
          "characterLink":"/character/ch0540081/",
          "actorName":"Michael Feast",
          "actorLink":"/name/nm0269923/"
@@ -30,8 +28,8 @@
       {
          "characterName":"Aerys II Targaryen",
          "houseName":"Targaryen",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMWQzOWViN2ItNDZhOS00MmZlLTkxZTYtZDg5NGUwMGRmYWZjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMWQzOWViN2ItNDZhOS00MmZlLTkxZTYtZDg5NGUwMGRmYWZjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541362/",
          "actorName":"David Rintoul",
          "actorLink":"/name/nm0727778/",
@@ -58,8 +56,8 @@
       },
       {
          "characterName":"Akho",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGE4ZDZmOGUtNGE4Ny00Y2VmLThiOGItMjk3Y2U0ZDY3OWQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGE4ZDZmOGUtNGE4Ny00Y2VmLThiOGItMjk3Y2U0ZDY3OWQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0544520/",
          "actorName":"Chuku Modu",
          "actorLink":"/name/nm6729880/",
@@ -78,8 +76,8 @@
       {
          "characterName":"Alton Lannister",
          "houseName":"Lannister",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NTU1NTAzOF5BMl5BanBnXkFtZTcwNzA2NDk4OA@@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NTU1NTAzOF5BMl5BanBnXkFtZTcwNzA2NDk4OA@@._V1_.jpg",
          "characterLink":"/character/ch0305012/",
          "actorName":"Karl Davies",
          "actorLink":"/name/nm0203801/",
@@ -87,8 +85,8 @@
       },
       {
          "characterName":"Amory Lorch",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTVmY2M2YmUtY2JkYS00NjIyLWFhYTAtNTNlZmI4ODdiNmE5XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTVmY2M2YmUtY2JkYS00NjIyLWFhYTAtNTNlZmI4ODdiNmE5XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_.jpg",
          "characterLink":"/character/ch0305002/",
          "actorName":"Fintan McKeown",
          "actorLink":"/name/nm0571654/",
@@ -97,16 +95,16 @@
       },
       {
          "characterName":"Anguy",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNmRhY2M4YmItNjc2Yi00ZDc0LWE5NmUtNGE5OWE0YTQ2YjY3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNmRhY2M4YmItNjc2Yi00ZDc0LWE5NmUtNGE5OWE0YTQ2YjY3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0316930/",
          "actorName":"Philip McGinley",
          "actorLink":"/name/nm1528121/"
       },
       {
          "characterName":"Areo Hotah",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNWFkNTAwNzctOGQ2ZS00OTMyLWE3NDYtOGUwM2E1MzVlYjI0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNWFkNTAwNzctOGQ2ZS00OTMyLWE3NDYtOGUwM2E1MzVlYjI0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0507107/",
          "actorName":"Deobia Oparei",
          "actorLink":"/name/nm0649046/",
@@ -114,24 +112,22 @@
       },
       {
          "characterName":"Armeca",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmQyMGVlMDctYWFhMi00YzMyLTlkZDgtOWNmZTY3NmZkYzZlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmQyMGVlMDctYWFhMi00YzMyLTlkZDgtOWNmZTY3NmZkYzZlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305014/",
          "actorName":"Sahara Knite",
          "actorLink":"/name/nm1783582/"
       },
       {
          "characterName":"Arthur",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305326/",
          "actorName":"Nathanael Saleh",
          "actorLink":"/name/nm8127149/"
       },
       {
          "characterName":"Arthur Dayne",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODczZDUxYmQtMzk1MC00ZTUwLTk1MjAtZDJlODViMWFhOGU5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODczZDUxYmQtMzk1MC00ZTUwLTk1MjAtZDJlODViMWFhOGU5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0540097/",
          "actorName":"Luke Roberts",
          "actorLink":"/name/nm1074361/",
@@ -182,8 +178,6 @@
       {
          "characterName":"Baratheon Guard",
          "houseName":"Baratheon",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0350989/",
          "actorName":"Phil Barnhill",
          "actorLink":"/name/nm4207240/"
@@ -239,16 +233,16 @@
       },
       {
          "characterName":"Bianca",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYWJhYjcxYzgtMDlhZi00OGNhLWE0NzAtMWFhMDJlYTZmYzY2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYWJhYjcxYzgtMDlhZi00OGNhLWE0NzAtMWFhMDJlYTZmYzY2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541364/",
          "actorName":"Eline Powell",
          "actorLink":"/name/nm4730958/"
       },
       {
          "characterName":"Biter",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNWVjOWFjNGEtYzc0MC00YjkzLTkxM2QtN2Y1MmU4NzIzOTEyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNWVjOWFjNGEtYzc0MC00YjkzLTkxM2QtN2Y1MmU4NzIzOTEyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305028/",
          "actorName":"Gerard Jordan",
          "actorLink":"/name/nm0429956/",
@@ -256,8 +250,8 @@
       },
       {
          "characterName":"Black Lorren",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjg5ZGZjZDUtZmJmNC00MjQ5LWJhZDAtOTc0MzYzNTNkMTZiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjg5ZGZjZDUtZmJmNC00MjQ5LWJhZDAtOTc0MzYzNTNkMTZiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0266524/",
          "actorName":"Forbes KB",
          "actorLink":"/name/nm1978998/"
@@ -265,8 +259,6 @@
       {
          "characterName":"Black Walder Rivers",
          "houseName":"Frey",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0014591/",
          "actorName":"Tim Plester",
          "actorLink":"/name/nm1043031/",
@@ -275,16 +267,16 @@
       },
       {
          "characterName":"Bobono",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZWRmNWVhNTctOGJlZC00ZjVlLThkY2MtODU3Y2I2Njc1YzZjL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZWRmNWVhNTctOGJlZC00ZjVlLThkY2MtODU3Y2I2Njc1YzZjL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541790/",
          "actorName":"Leigh Gill",
          "actorLink":"/name/nm5279916/"
       },
       {
          "characterName":"Bowen Marsh",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNmRkMDYxYjQtYTBjZi00NDZlLThmNGMtYzlhNGI1ZDE5NTJmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNmRkMDYxYjQtYTBjZi00NDZlLThmNGMtYzlhNGI1ZDE5NTJmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305036/",
          "actorName":"Michael Condron",
          "actorLink":"/name/nm1638006/",
@@ -321,8 +313,8 @@
       },
       {
          "characterName":"Brea",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxMzc4MjE3N15BMl5BanBnXkFtZTgwMDg0Njc5NTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxMzc4MjE3N15BMl5BanBnXkFtZTgwMDg0Njc5NTE@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
          "characterLink":"/character/ch0539337/",
          "actorName":"Gemita Samarra",
          "actorLink":"/name/nm5106314/"
@@ -355,8 +347,8 @@
       },
       {
          "characterName":"Brother Ray",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTAwNjU5MTY3NzleQTJeQWpwZ15BbWU4MDIwODkwMTkx._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTAwNjU5MTY3NzleQTJeQWpwZ15BbWU4MDIwODkwMTkx._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0541878/",
          "actorName":"Ian McShane",
          "actorLink":"/name/nm0574534/",
@@ -374,8 +366,6 @@
       },
       {
          "characterName":"Captain of the Archers",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0540864/",
          "actorName":"Michael Grennell",
          "actorLink":"/name/nm1214477/"
@@ -396,8 +386,6 @@
       },
       {
          "characterName":"Catspaw Assassin",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305046/",
          "actorName":"Lalor Roddy",
          "actorLink":"/name/nm0734498/",
@@ -439,24 +427,22 @@
       },
       {
          "characterName":"Child of the Forest",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTdjYmYxNjctODU1OC00NzIwLTk0ODktNDc3NzA2MzRhYzIwXkEyXkFqcGdeQXVyNTcxMzMwNTA@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTdjYmYxNjctODU1OC00NzIwLTk0ODktNDc3NzA2MzRhYzIwXkEyXkFqcGdeQXVyNTcxMzMwNTA@._V1_.jpg",
          "characterLink":"/character/ch0414315/",
          "actorName":"Alice Hewkin",
          "actorLink":"/name/nm2456829/"
       },
       {
          "characterName":"Citadel Maester",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTg3NDA1Nzc5Nl5BMl5BanBnXkFtZTgwMjIwNTgyOTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTg3NDA1Nzc5Nl5BMl5BanBnXkFtZTgwMjIwNTgyOTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0478670/",
          "actorName":"Frank Hvam",
          "actorLink":"/name/nm0404809/"
       },
       {
          "characterName":"Colen of Greenpools",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0350989/",
          "actorName":"Darren Killeen",
          "actorLink":"/name/nm4007028/"
@@ -535,16 +521,16 @@
       },
       {
          "characterName":"Dagmer Cleftjaw",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYWRlYzI5ZTQtODU0My00MWUyLWExNTMtNGQ4OTIwYzE2YzFiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYWRlYzI5ZTQtODU0My00MWUyLWExNTMtNGQ4OTIwYzE2YzFiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0304762/",
          "actorName":"Ralph Ineson",
          "actorLink":"/name/nm0408591/"
       },
       {
          "characterName":"Daisy",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDk2ODRhNzItOGZhNi00YTUyLThkMzctMDQ2Zjg5MzY1NTI2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDk2ODRhNzItOGZhNi00YTUyLThkMzctMDQ2Zjg5MzY1NTI2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305015/",
          "actorName":"Maisie Dee",
          "actorLink":"/name/nm3996678/"
@@ -559,16 +545,16 @@
       },
       {
          "characterName":"Dickon Tarly",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzk1YjNlZGQtNTU0MC00OGZmLThhYTQtZDM1ZjI2OGNlZGQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzk1YjNlZGQtNTU0MC00OGZmLThhYTQtZDM1ZjI2OGNlZGQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541363/",
          "actorName":"Freddie Stroma",
          "actorLink":"/name/nm2238815/"
       },
       {
          "characterName":"Dongo the Giant",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTRjNGYxNWItYmRhNS00MDY3LWFmZTItMzYzNTEwMjg3YTA1XkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTRjNGYxNWItYmRhNS00MDY3LWFmZTItMzYzNTEwMjg3YTA1XkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
          "characterLink":"/character/ch0510932/",
          "actorName":"Ian Whyte",
          "actorLink":"/name/nm1613839/",
@@ -576,16 +562,14 @@
       },
       {
          "characterName":"Donnel Waynwood",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0544229/",
          "actorName":"Alisdair Simpson",
          "actorLink":"/name/nm1368037/"
       },
       {
          "characterName":"Dontos Hollard",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzUzYzg5NGUtOWE5Zi00Y2MwLTg2YzQtMDZlOWE1NDZjZmFkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzUzYzg5NGUtOWE5Zi00Y2MwLTg2YzQtMDZlOWE1NDZjZmFkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305031/",
          "actorName":"Tony Way",
          "actorLink":"/name/nm0915453/",
@@ -613,8 +597,8 @@
       },
       {
          "characterName":"Dothraki Bloodrider #1",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2Mzk1MzczMl5BMl5BanBnXkFtZTgwNDQyODAxODE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2Mzk1MzczMl5BMl5BanBnXkFtZTgwNDQyODAxODE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542918/",
          "actorName":"Diogo Sales",
          "actorLink":"/name/nm6088160/",
@@ -622,8 +606,8 @@
       },
       {
          "characterName":"Dothraki Bloodrider #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2Mzk1MzczMl5BMl5BanBnXkFtZTgwNDQyODAxODE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2Mzk1MzczMl5BMl5BanBnXkFtZTgwNDQyODAxODE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542918/",
          "actorName":"Junade Khan",
          "actorLink":"/name/nm2999602/",
@@ -631,8 +615,6 @@
       },
       {
          "characterName":"Drennan",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305030/",
          "actorName":"David Coakley",
          "actorLink":"/name/nm2231505/",
@@ -654,8 +636,8 @@
       },
       {
          "characterName":"Drowned Priest",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGEwMjRhYzgtYjY1YS00MjhlLTllYjYtNWQzOGQxOTE3ZDczXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGEwMjRhYzgtYjY1YS00MjhlLTllYjYtNWQzOGQxOTE3ZDczXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0411375/",
          "actorName":"Jonathan Ryan",
          "actorLink":"/name/nm0752638/"
@@ -734,8 +716,6 @@
       },
       {
          "characterName":"Eon Hunter",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305321/",
          "actorName":"Barrington Cullen",
          "actorLink":"/name/nm4473207/"
@@ -752,24 +732,22 @@
       },
       {
          "characterName":"Faceless Man",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI4ODYxODI0MF5BMl5BanBnXkFtZTgwMDk4NDY0NTE@._V1_UX214_CR0,0,214,317_AL_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjI4ODYxODI0MF5BMl5BanBnXkFtZTgwMDk4NDY0NTE@._V1_SY1000_CR0,0,665,1000_AL_.jpg",
          "characterLink":"/character/ch0259179/",
          "actorName":"Cedric Henderson",
          "actorLink":"/name/nm2406775/"
       },
       {
          "characterName":"Farlen",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305027/",
          "actorName":"Peter Ballance",
          "actorLink":"/name/nm0050520/"
       },
       {
          "characterName":"Gared",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNGYxZjljZTctZjIxYy00YmUwLTk3MDgtZWIyZjhkNDgwYTZiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNGYxZjljZTctZjIxYy00YmUwLTk3MDgtZWIyZjhkNDgwYTZiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0171395/",
          "actorName":"Dermot Keaney",
          "actorLink":"/name/nm0443825/",
@@ -777,8 +755,8 @@
       },
       {
          "characterName":"Gatins",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzIwZmJkNDktZWMwMC00ZGNlLWJkNWYtN2ZmOWEzNDFiNWMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzIwZmJkNDktZWMwMC00ZGNlLWJkNWYtN2ZmOWEzNDFiNWMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
          "characterLink":"/character/ch0523969/",
          "actorName":"Ricky Champ",
          "actorLink":"/name/nm2307468/",
@@ -786,16 +764,16 @@
       },
       {
          "characterName":"Gendry",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxNzYwMTk4MV5BMl5BanBnXkFtZTcwNDg1ODg4OQ@@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxNzYwMTk4MV5BMl5BanBnXkFtZTcwNDg1ODg4OQ@@._V1_SY1000_CR0,0,846,1000_AL_.jpg",
          "characterLink":"/character/ch0300040/",
          "actorName":"Joe Dempsie",
          "actorLink":"/name/nm1478079/"
       },
       {
          "characterName":"Gerold Hightower",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODc3OTIzYmEtYjk2Yy00NTgwLTk4OWMtMjlmMmJmNDE5OGU2XkEyXkFqcGdeQXVyNjU5MTM2ODI@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODc3OTIzYmEtYjk2Yy00NTgwLTk4OWMtMjlmMmJmNDE5OGU2XkEyXkFqcGdeQXVyNjU5MTM2ODI@._V1_.jpg",
          "characterLink":"/character/ch0540530/",
          "actorName":"Eddie Eyre",
          "actorLink":"/name/nm6793798/",
@@ -824,32 +802,24 @@
       },
       {
          "characterName":"Goldcloak",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305037/",
          "actorName":"Alan Paris",
          "actorLink":"/name/nm3354768/"
       },
       {
          "characterName":"Goldcloak",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305037/",
          "actorName":"Sam Callis",
          "actorLink":"/name/nm0130538/"
       },
       {
          "characterName":"Goldcloak #1",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305037/",
          "actorName":"Nikovich Sammut",
          "actorLink":"/name/nm2089809/"
       },
       {
          "characterName":"Goldcloak #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305037/",
          "actorName":"Seamus Kelly",
          "actorLink":"/name/nm4440118/"
@@ -865,8 +835,6 @@
       },
       {
          "characterName":"Great Master #1",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0525536/",
          "actors":[
             {
@@ -892,8 +860,6 @@
       },
       {
          "characterName":"Great Master #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0525536/",
          "actors":[
             {
@@ -914,40 +880,30 @@
       },
       {
          "characterName":"Great Master #3",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0525536/",
          "actorName":"Peter Silverleaf",
          "actorLink":"/name/nm0798872/"
       },
       {
          "characterName":"Great Master #4",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0525536/",
          "actorName":"Davor Jozinovic",
          "actorLink":"/name/nm7318132/"
       },
       {
          "characterName":"Great Master #5",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0525536/",
          "actorName":"Ivan Peric",
          "actorLink":"/name/nm3005802/"
       },
       {
          "characterName":"Great Master #6",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0525536/",
          "actorName":"Hadi Kermani",
          "actorLink":"/name/nm7318134/"
       },
       {
          "characterName":"Great Master #7",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0525536/",
          "actorName":"Tonci Banov",
          "actorLink":"/name/nm7318135/"
@@ -1057,40 +1013,38 @@
       },
       {
          "characterName":"Handmaid",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGUwMjczOGQtZjRmOC00NmIyLWE1YmMtZmE2OGEzNzY2Mjg4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGUwMjczOGQtZjRmOC00NmIyLWE1YmMtZmE2OGEzNzY2Mjg4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0537855/",
          "actorName":"Sabrina Bartlett",
          "actorLink":"/name/nm6301068/"
       },
       {
          "characterName":"Handmaid",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGUwMjczOGQtZjRmOC00NmIyLWE1YmMtZmE2OGEzNzY2Mjg4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGUwMjczOGQtZjRmOC00NmIyLWE1YmMtZmE2OGEzNzY2Mjg4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0537855/",
          "actorName":"Sara Dylan",
          "actorLink":"/name/nm2407387/"
       },
       {
          "characterName":"Harald Karstark",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTE4OTIwNWQtZjNkOC00MzhhLThhYzQtMmU1OTFiZGU3YzMzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTE4OTIwNWQtZjNkOC00MzhhLThhYzQtMmU1OTFiZGU3YzMzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0542917/",
          "actorName":"Paul Rattray",
          "actorLink":"/name/nm1051151/"
       },
       {
          "characterName":"High Priestess",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA1MzQxOTMwM15BMl5BanBnXkFtZTgwMzkwMzg4ODE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA1MzQxOTMwM15BMl5BanBnXkFtZTgwMzkwMzg4ODE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0539898/",
          "actorName":"Souad Faress",
          "actorLink":"/name/nm0267256/"
       },
       {
          "characterName":"High Septon",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0508056/",
          "actorName":"David Verrey",
          "actorLink":"/name/nm0894857/",
@@ -1098,8 +1052,8 @@
       },
       {
          "characterName":"High Septon",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDYyYTc3OTgtMmE1Mi00NDVmLWIyNjYtOTIwNDAyYmVmN2E5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDYyYTc3OTgtMmE1Mi00NDVmLWIyNjYtOTIwNDAyYmVmN2E5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0508056/",
          "actorName":"Paul Bentley",
          "actorLink":"/name/nm0072855/"
@@ -1135,8 +1089,8 @@
       {
          "characterName":"Hoster Tully",
          "houseName":"Tully",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTY3YzMzOWUtNzNjYi00ODYzLThjNjUtNzc4NzFlNmE2NjgyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTY3YzMzOWUtNzNjYi00ODYzLThjNjUtNzc4NzFlNmE2NjgyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0540082/",
          "actorName":"Christopher Newman",
          "actorLink":"/name/nm0628040/"
@@ -1151,8 +1105,8 @@
       },
       {
          "characterName":"Howland Reed",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTdkNjRkMTAtZGMwOS00OTA4LWE5NzktNDIyOTNiOTM0ZjkxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTdkNjRkMTAtZGMwOS00OTA4LWE5NzktNDIyOTNiOTM0ZjkxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0543132/",
          "actorName":"Leo Woodruff",
          "actorLink":"/name/nm4547262/",
@@ -1165,8 +1119,8 @@
       },
       {
          "characterName":"Hugh of the Vale",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODRhNGQwNDgtNDEwNS00MWRlLWJmZTQtMTJlNjNmZTI1ZDk5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODRhNGQwNDgtNDEwNS00MWRlLWJmZTQtMTJlNjNmZTI1ZDk5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305026/",
          "actorName":"Jefferson Hall",
          "actorLink":"/name/nm2131630/",
@@ -1174,16 +1128,16 @@
       },
       {
          "characterName":"Illyrio Mopatis",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzM1OWY0ZmUtNWM5Ny00NzgzLWFhMmUtOWY1Njc3NmNkZmM1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzM1OWY0ZmUtNWM5Ny00NzgzLWFhMmUtOWY1Njc3NmNkZmM1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0172909/",
          "actorName":"Roger Allam",
          "actorLink":"/name/nm0019885/"
       },
       {
          "characterName":"Ilyn Payne",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGY5ZGE1OGUtODYwNS00OTVlLWE1MWItMzI5NDBmYWIwZTI4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGY5ZGE1OGUtODYwNS00OTVlLWE1MWItMzI5NDBmYWIwZTI4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0246254/",
          "actorName":"Wilko Johnson",
          "actorLink":"/name/nm3330122/",
@@ -1200,16 +1154,14 @@
       },
       {
          "characterName":"Izembaro",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2NkZmFkMmItNzhiMy00ZTJkLThjM2YtNzBhMzU0ZmJkZjI4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2NkZmFkMmItNzhiMy00ZTJkLThjM2YtNzBhMzU0ZmJkZjI4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0540561/",
          "actorName":"Richard E. Grant",
          "actorLink":"/name/nm0001290/"
       },
       {
          "characterName":"Jacks",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305034/",
          "actorName":"Paul Caddell",
          "actorLink":"/name/nm4781280/"
@@ -1277,16 +1229,14 @@
       },
       {
          "characterName":"Jaqen's Disguise",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0259179/",
          "actorName":"Patrick O'Kane",
          "actorLink":"/name/nm0641433/"
       },
       {
          "characterName":"Jaremy Rykker",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjg4YjRmMDYtZjcyMS00YjM3LTg4OWQtZTg2MDFiZTJkZDIwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjg4YjRmMDYtZjcyMS00YjM3LTg4OWQtZTg2MDFiZTJkZDIwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305324/",
          "actorName":"Jeffrey O'Brien",
          "actorLink":"/name/nm4475335/"
@@ -1303,8 +1253,6 @@
       },
       {
          "characterName":"Jhiqui",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305044/",
          "actorName":"Sarita Piotrowski",
          "actorLink":"/name/nm4424689/"
@@ -1345,8 +1293,8 @@
       },
       {
          "characterName":"Jon Arryn",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYmJiMzVjYzEtODA2ZC00NTkwLWI1ZDEtNDUxM2Y1NzcxZjU0XkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYmJiMzVjYzEtODA2ZC00NTkwLWI1ZDEtNDUxM2Y1NzcxZjU0XkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
          "characterLink":"/character/ch0251737/",
          "actorName":"John Standing",
          "actorLink":"/name/nm0822062/",
@@ -1361,7 +1309,10 @@
       },
       {
          "characterName":"Jon Snow",
-         "houseName":"Stark",
+         "houseName":[
+            "Stark",
+            "Targaryen"
+         ],
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkwMjUxMDk2OV5BMl5BanBnXkFtZTcwMzg3MTg4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkwMjUxMDk2OV5BMl5BanBnXkFtZTcwMzg3MTg4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0155777/",
@@ -1396,8 +1347,6 @@
       },
       {
          "characterName":"Jonos Bracken",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305332/",
          "actorName":"Gerry O'Brien",
          "actorLink":"/name/nm0639569/"
@@ -1427,8 +1376,8 @@
       },
       {
          "characterName":"Joyeuse Erenford",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4MTU5NDQzM15BMl5BanBnXkFtZTcwNjQxNDM2OQ@@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4MTU5NDQzM15BMl5BanBnXkFtZTcwNjQxNDM2OQ@@._V1_SY1000_CR0,0,1503,1000_AL_.jpg",
          "characterLink":"/character/ch0304494/",
          "actorName":"Kelly Long",
          "actorLink":"/name/nm4958677/",
@@ -1446,8 +1395,8 @@
       },
       {
          "characterName":"Karsi",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjcxZWVjZTMtZTBhOS00ZjM5LTkxOTctNzdkMmU2ZTIzYzU5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjcxZWVjZTMtZTBhOS00ZjM5LTkxOTctNzdkMmU2ZTIzYzU5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0512707/",
          "actorName":"Birgitte Hjort Sørensen",
          "actorLink":"/name/nm2171898/",
@@ -1455,16 +1404,14 @@
       },
       {
          "characterName":"Kayla",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmJhNmU5NGItMmUwNC00NDgxLThlYWMtMzc0NTQ4YmZiMDIxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmJhNmU5NGItMmUwNC00NDgxLThlYWMtMzc0NTQ4YmZiMDIxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SY1000_CR0,0,1718,1000_AL_.jpg",
          "characterLink":"/character/ch0431526/",
          "actorName":"Pixie Le Knot",
          "actorLink":"/name/nm4768858/"
       },
       {
          "characterName":"Kegs",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305327/",
          "actorName":"Tim Landers",
          "actorLink":"/name/nm2461009/",
@@ -1495,8 +1442,8 @@
       },
       {
          "characterName":"Khal Moro",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2ZkODIwY2MtNzViYS00NDEwLWE2ZjItZDFiMzg1MWVjMzQwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2ZkODIwY2MtNzViYS00NDEwLWE2ZjItZDFiMzg1MWVjMzQwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0538748/",
          "actorName":"Joseph Naufahu",
          "actorLink":"/name/nm0622533/",
@@ -1504,8 +1451,8 @@
       },
       {
          "characterName":"Khal Rhalko",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYTFkMWRiMDItN2Q2Ny00N2VlLWIxMzYtZDMwODkwNDE4ZTYyXkEyXkFqcGdeQXVyMTk0NzA0Njg@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYTFkMWRiMDItN2Q2Ny00N2VlLWIxMzYtZDMwODkwNDE4ZTYyXkEyXkFqcGdeQXVyMTk0NzA0Njg@._V1_.jpg",
          "characterLink":"/character/ch0535371/",
          "actorName":"Andrei Claude",
          "actorLink":"/name/nm3040811/",
@@ -1513,40 +1460,30 @@
       },
       {
          "characterName":"King Joffrey Baratheon Dwarf",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0156278/",
          "actorName":"Raymond Griffiths",
          "actorLink":"/name/nm0341739/"
       },
       {
          "characterName":"King Renly Baratheon Dwarf",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0246253/",
          "actorName":"Dean Whatton",
          "actorLink":"/name/nm2482781/"
       },
       {
          "characterName":"King Robb Stark Dwarf",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0158596/",
          "actorName":"George Appleby",
          "actorLink":"/name/nm3338062/"
       },
       {
          "characterName":"King Stannis Baratheon Dwarf",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0250897/",
          "actorName":"Maxwell Laird",
          "actorLink":"/name/nm3453345/"
       },
       {
          "characterName":"King's Landing Rioter #1",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0348391/",
          "actorName":"Reg Wayment",
          "actorLink":"/name/nm1168404/",
@@ -1554,8 +1491,6 @@
       },
       {
          "characterName":"King's Landing Rioter #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0348391/",
          "actorName":"Marko Juraga",
          "actorLink":"/name/nm0432837/",
@@ -1563,8 +1498,6 @@
       },
       {
          "characterName":"King's Landing Rioter #3",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0348391/",
          "actorName":"Rea Separovic",
          "actorLink":"/name/nm5037688/",
@@ -1572,32 +1505,28 @@
       },
       {
          "characterName":"Kinvara",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGNkYWZlZmYtM2Y4Yi00YmJjLTk1OTktNDc0YmMxODY5ZTI2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGNkYWZlZmYtM2Y4Yi00YmJjLTk1OTktNDc0YmMxODY5ZTI2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0540065/",
          "actorName":"Ania Bukstein",
          "actorLink":"/name/nm0119804/"
       },
       {
          "characterName":"Knight of House Frey",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305317/",
          "actorName":"Patrick Ryan",
          "actorLink":"/name/nm3122423/"
       },
       {
          "characterName":"Knight of House Lynderly",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305322/",
          "actorName":"Paddy Rocks",
          "actorLink":"/name/nm0734304/"
       },
       {
          "characterName":"Kovarro",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZjRmMzgyY2QtMzNmYy00NmRhLWIxNzItOGEwOWU2MzA5YjUwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZjRmMzgyY2QtMzNmYy00NmRhLWIxNzItOGEwOWU2MzA5YjUwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0304969/",
          "actorName":"Steven Cole",
          "actorLink":"/name/nm0170799/"
@@ -1613,8 +1542,8 @@
       },
       {
          "characterName":"Kurleket",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMmY3NWI0YTItNWFkZi00MTVlLWIyNDQtN2MwYjY0ZjhhOTdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMmY3NWI0YTItNWFkZi00MTVlLWIyNDQtN2MwYjY0ZjhhOTdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305315/",
          "actorName":"Kevin Keenan",
          "actorLink":"/name/nm4450657/",
@@ -1654,48 +1583,38 @@
       },
       {
          "characterName":"Lannister Captain",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305308/",
          "actorName":"Aiden Condron",
          "actorLink":"/name/nm0174449/"
       },
       {
          "characterName":"Lannister Captain",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305308/",
          "actorName":"Richard Laing",
          "actorLink":"/name/nm0481924/"
       },
       {
          "characterName":"Lannister Guardsman",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305047/",
          "actorName":"Conor Delaney",
          "actorLink":"/name/nm1406364/"
       },
       {
          "characterName":"Lannister Messenger",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0379228/",
          "actorName":"Simon Stewart",
          "actorLink":"/name/nm4492930/"
       },
       {
          "characterName":"Lannister Scout",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0379230/",
          "actorName":"Chris Gallagher",
          "actorLink":"/name/nm3292422/"
       },
       {
          "characterName":"Lead Dornish Guard",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwMzM5ODM3OV5BMl5BanBnXkFtZTgwMjU1ODg2NTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTYwMzM5ODM3OV5BMl5BanBnXkFtZTgwMjU1ODg2NTE@._V1_SX865_CR0,0,865,999_AL_.jpg",
          "characterLink":"/character/ch0539716/",
          "actorName":"Christian Vit",
          "actorLink":"/name/nm5908524/",
@@ -1726,8 +1645,8 @@
       },
       {
          "characterName":"Lem Lemoncloak",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZWYxOGUwODAtZmY0MS00OTFkLWI0YTUtZTkxNjI1ZjE1YmJhXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZWYxOGUwODAtZmY0MS00OTFkLWI0YTUtZTkxNjI1ZjE1YmJhXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0542106/",
          "actorName":"Jóhannes Haukur Jóhannesson",
          "actorLink":"/name/nm1778512/",
@@ -1736,80 +1655,64 @@
       },
       {
          "characterName":"Leo Lefford",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305040/",
          "actorName":"Vinnie McCabe",
          "actorLink":"/name/nm0564516/"
       },
       {
          "characterName":"Lhara",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTBjZDY4M2YtOWU1ZC00NTA2LWI4ODItYWZjYjlhMWY5NDhmL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTBjZDY4M2YtOWU1ZC00NTA2LWI4ODItYWZjYjlhMWY5NDhmL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0476558/",
          "actorName":"Sarine Sofair",
          "actorLink":"/name/nm3330066/"
       },
       {
          "characterName":"Little Bird",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305326/",
          "actorName":"Samuel Paul Small",
          "actorLink":"/name/nm6537691/"
       },
       {
          "characterName":"Little Bird",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305326/",
          "actorName":"Tristan Mercieca",
          "actorLink":"/name/nm4475204/"
       },
       {
          "characterName":"Little Bird #3",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305326/",
          "actorName":"Michael Nevin",
          "actorLink":"/name/nm8127150/"
       },
       {
          "characterName":"Little Bird #4",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305326/",
          "actorName":"Jesse Magee",
          "actorLink":"/name/nm8127151/"
       },
       {
          "characterName":"Little Bird #5",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305326/",
          "actorName":"Iona Clarke",
          "actorLink":"/name/nm8133415/"
       },
       {
          "characterName":"Little Bird #6",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305326/",
          "actorName":"Lucy Gallagher",
          "actorLink":"/name/nm8127152/"
       },
       {
          "characterName":"Little Bird #7",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305326/",
          "actorName":"Fionn Kernan",
          "actorLink":"/name/nm6462692/"
       },
       {
          "characterName":"Loboda",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDU5NzIxYzQtNDExMi00YTljLThiNjItMWIxNDEwZTJhNjZkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDU5NzIxYzQtNDExMi00YTljLThiNjItMWIxNDEwZTJhNjZkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0511931/",
          "actorName":"Zachary Baharov",
          "actorLink":"/name/nm1707712/",
@@ -1826,8 +1729,8 @@
       },
       {
          "characterName":"Lollys Stokeworth",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODQ5MTY2MjAtZmM4NC00OGZmLWIyYjEtYTNlOGQxMzg2NzgxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODQ5MTY2MjAtZmM4NC00OGZmLWIyYjEtYTNlOGQxMzg2NzgxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0511247/",
          "actorName":"Elizabeth Cadwallader",
          "actorLink":"/name/nm5502252/"
@@ -1853,16 +1756,12 @@
       },
       {
          "characterName":"Lord Galbart Glover",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305041/",
          "actorName":"Mark Coney",
          "actorLink":"/name/nm5651524/"
       },
       {
          "characterName":"Lord Portan",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305334/",
          "actorName":"Gordon Fulton",
          "actorLink":"/name/nm1101680/"
@@ -1877,8 +1776,6 @@
       },
       {
          "characterName":"Lordsport Dockhand",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0379224/",
          "actorName":"Jer O'Leary",
          "actorLink":"/name/nm0641596/"
@@ -1910,16 +1807,12 @@
       },
       {
          "characterName":"Loyal Night's Watchman #1",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0509452/",
          "actorName":"Steve Cash",
          "actorLink":"/name/nm3524836/"
       },
       {
          "characterName":"Loyal Night's Watchman #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0509452/",
          "actorName":"Robert Fawsitt",
          "actorLink":"/name/nm6342915/"
@@ -1936,8 +1829,8 @@
       {
          "characterName":"Lyanna Stark",
          "houseName":"Stark",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTE5NTczY2QtNmQxYS00NTAwLWE2ZTAtYzc1MTkyZGU5MzRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTE5NTczY2QtNmQxYS00NTAwLWE2ZTAtYzc1MTkyZGU5MzRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0543804/",
          "actorName":"Aisling Franciosi",
          "actorLink":"/name/nm4957233/",
@@ -1992,8 +1885,8 @@
       },
       {
          "characterName":"Maester Cressen",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYjFmNDZjM2YtMGRkMy00NWM2LThjNWUtYzFkZGRjMjk0YWZlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYjFmNDZjM2YtMGRkMy00NWM2LThjNWUtYzFkZGRjMjk0YWZlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0255280/",
          "actorName":"Oliver Ford Davies",
          "actorLink":"/name/nm0203882/",
@@ -2029,16 +1922,16 @@
       },
       {
          "characterName":"Maggy",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmQ4ZTIyNjYtZWZlZS00MTVjLTgxZTEtMWYyM2RhMzcwYzc4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmQ4ZTIyNjYtZWZlZS00MTVjLTgxZTEtMWYyM2RhMzcwYzc4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0334882/",
          "actorName":"Jodhi May",
          "actorLink":"/name/nm0562003/"
       },
       {
          "characterName":"Mago",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjdmM2ZlMTQtOGRlMy00NzAyLWE0MWYtM2JiMjNlNjA3MDU2XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjdmM2ZlMTQtOGRlMy00NzAyLWE0MWYtM2JiMjNlNjA3MDU2XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_SY1000_CR0,0,674,1000_AL_.jpg",
          "characterLink":"/character/ch0379227/",
          "actorName":"Ivailo Dimitrov",
          "actorLink":"/name/nm2162079/",
@@ -2046,16 +1939,14 @@
       },
       {
          "characterName":"Male Prostitute",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0441614/",
          "actorName":"Dennis Stokes",
          "actorLink":"/name/nm4982614/"
       },
       {
          "characterName":"Malko",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmUwYTA2YjUtZWU5Zi00OTY1LTlhYjMtOGRhMDZlNTEyOTEzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmUwYTA2YjUtZWU5Zi00OTY1LTlhYjMtOGRhMDZlNTEyOTEzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0519184/",
          "actorName":"Adewale Akinnuoye-Agbaje",
          "actorLink":"/name/nm0015382/"
@@ -2074,8 +1965,6 @@
       },
       {
          "characterName":"Mandon Moore",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0306220/",
          "actorName":"James Doran",
          "actorLink":"/name/nm0243696/",
@@ -2083,16 +1972,14 @@
       },
       {
          "characterName":"Manservant",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0525536/",
          "actorName":"Conor Watters",
          "actorLink":"/name/nm6442298/"
       },
       {
          "characterName":"Marei",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYTZkM2M5OWItNjQ1NC00MDcyLWIwYjItODBhZmI5NWYxMDVlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYTZkM2M5OWItNjQ1NC00MDcyLWIwYjItODBhZmI5NWYxMDVlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0431527/",
          "actorName":"Josephine Gillan",
          "actorLink":"/name/nm4982706/"
@@ -2114,16 +2001,16 @@
       },
       {
          "characterName":"Margaery's Handmaiden",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4NjcwMzAzN15BMl5BanBnXkFtZTcwNzgxNTcyOQ@@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4NjcwMzAzN15BMl5BanBnXkFtZTcwNzgxNTcyOQ@@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
          "characterLink":"/character/ch0270368/",
          "actorName":"Aisling Jarrett-Gavin",
          "actorLink":"/name/nm2983094/"
       },
       {
          "characterName":"Marillion",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDVlZmU0NmYtOGM1MS00N2E0LTgxYTYtNTBhZDk1ZTM4M2ViXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDVlZmU0NmYtOGM1MS00N2E0LTgxYTYtNTBhZDk1ZTM4M2ViXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305001/",
          "actorName":"Emun Elliott",
          "actorLink":"/name/nm2047170/"
@@ -2131,8 +2018,6 @@
       {
          "characterName":"Martyn Lannister",
          "houseName":"Lannister",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0395355/",
          "actorName":"Dean-Charles Chapman",
          "actorLink":"/name/nm2835616/",
@@ -2140,8 +2025,6 @@
       },
       {
          "characterName":"Masha Heddle",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305314/",
          "actorName":"Susie Kelly",
          "actorLink":"/name/nm3126053/"
@@ -2169,16 +2052,14 @@
       },
       {
          "characterName":"Meereen Slave Master",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0525536/",
          "actorName":"Laurence Doherty",
          "actorLink":"/name/nm2911170/"
       },
       {
          "characterName":"Melessa Tarly",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2U0YmU1Y2EtNTNkOS00MzIxLWI3OTgtNjUwNGY4YTNiNWJlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2U0YmU1Y2EtNTNkOS00MzIxLWI3OTgtNjUwNGY4YTNiNWJlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541191/",
          "actorName":"Samantha Spiro",
          "actorLink":"/name/nm0819087/"
@@ -2199,8 +2080,6 @@
       },
       {
          "characterName":"Merchant Captain",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0531846/",
          "actorName":"Gary Pillai",
          "actorLink":"/name/nm0997747/",
@@ -2208,8 +2087,8 @@
       },
       {
          "characterName":"Mero",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmUzODdkZTQtOTAxZC00MjI5LWFmZjctZDYyYTVlNzMxMjdiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZmUzODdkZTQtOTAxZC00MjI5LWFmZjctZDYyYTVlNzMxMjdiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0123670/",
          "actorName":"Mark Killeen",
          "actorLink":"/name/nm2075330/",
@@ -2217,8 +2096,8 @@
       },
       {
          "characterName":"Meryn Trant",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTVjYTRhZWMtM2QwOC00MmYyLTk3ZjAtYmI1ZTlhNmQ3NzE0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTVjYTRhZWMtM2QwOC00MmYyLTk3ZjAtYmI1ZTlhNmQ3NzE0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0246933/",
          "actorName":"Ian Beattie",
          "actorLink":"/name/nm0064155/",
@@ -2227,24 +2106,20 @@
       },
       {
          "characterName":"Mhaegen",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305038/",
          "actorName":"Antonia Christophers",
          "actorLink":"/name/nm4460936/"
       },
       {
          "characterName":"Mikken",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0348528/",
          "actorName":"Boyd Rankin",
          "actorLink":"/name/nm4595425/"
       },
       {
          "characterName":"Mirelle",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDFlYzUxNTktYjRiOC00NmM1LTg1OTYtOWMzZTlmOGI0MWE4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDFlYzUxNTktYjRiOC00NmM1LTg1OTYtOWMzZTlmOGI0MWE4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0323607/",
          "actorName":"Elisa Lasowski",
          "actorLink":"/name/nm2489799/"
@@ -2269,16 +2144,16 @@
       },
       {
          "characterName":"Mord",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGIzMmRlOWEtMjUwYy00OGM1LTkwNDEtZTlmODNkMWY4MWU3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOGIzMmRlOWEtMjUwYy00OGM1LTkwNDEtZTlmODNkMWY4MWU3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0229099/",
          "actorName":"Ciaran Bermingham",
          "actorLink":"/name/nm2197118/"
       },
       {
          "characterName":"Mossador",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGYxZjVkOGEtMWI0NS00ODc3LTlkMzUtMGFkNzJlMDc1MGY4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGYxZjVkOGEtMWI0NS00ODc3LTlkMzUtMGFkNzJlMDc1MGY4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0508053/",
          "actorName":"Reece Noi",
          "actorLink":"/name/nm0634139/",
@@ -2287,72 +2162,72 @@
       },
       {
          "characterName":"Musician #1",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542919/",
          "actorName":"Nanna Bryndís Hilmarsdóttir",
          "actorLink":"/name/nm5652293/"
       },
       {
          "characterName":"Musician #1",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542919/",
          "actorName":"Jon Thor Birgisson",
          "actorLink":"/name/nm1743706/"
       },
       {
          "characterName":"Musician #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542919/",
          "actorName":"Ragnar Þórhallsson",
          "actorLink":"/name/nm5652121/"
       },
       {
          "characterName":"Musician #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542919/",
          "actorName":"Orri P. Dyrason",
          "actorLink":"/name/nm1743714/"
       },
       {
          "characterName":"Musician #3",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542919/",
          "actorName":"Georg Holm",
          "actorLink":"/name/nm1743730/"
       },
       {
          "characterName":"Musician #3",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542919/",
          "actorName":"Arnar Rosenkranz Hilmarsson",
          "actorLink":"/name/nm8158202/"
       },
       {
          "characterName":"Musician #4",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542919/",
          "actorName":"Brynjar Leifsson",
          "actorLink":"/name/nm8158203/"
       },
       {
          "characterName":"Musician #5",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODA5NjA3ODY1NF5BMl5BanBnXkFtZTgwNzA5ODY2MTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0542919/",
          "actorName":"Kristján Kristjánsson",
          "actorLink":"/name/nm1944894/"
       },
       {
          "characterName":"Mycah",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMmE5NjdjMzktZTYwNy00MzdhLWI2MjktNTUwNjA4OTA4MTAxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMmE5NjdjMzktZTYwNy00MzdhLWI2MjktNTUwNjA4OTA4MTAxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305045/",
          "actorName":"Rhodri Hosking",
          "actorLink":"/name/nm4430905/",
@@ -2360,8 +2235,8 @@
       },
       {
          "characterName":"Myranda",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYmJjYTdiNjgtM2JmMC00ZmUxLWE1MzMtZWRiMzcwODZmNDE2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYmJjYTdiNjgtM2JmMC00ZmUxLWE1MzMtZWRiMzcwODZmNDE2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0316926/",
          "actorName":"Charlotte Hope",
          "actorLink":"/name/nm3745225/",
@@ -2406,88 +2281,66 @@
       },
       {
          "characterName":"Night's Watch Deserter",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305319/",
          "actorName":"Barry John O'Connor",
          "actorLink":"/name/nm3226454/"
       },
       {
          "characterName":"Night's Watch Messenger",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305327/",
          "actorName":"Frank O'Sullivan",
          "actorLink":"/name/nm0642751/"
       },
       {
          "characterName":"Night's Watch Officer",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305036/",
          "actorName":"Dennis McKeever",
          "actorLink":"/name/nm4475182/"
       },
       {
          "characterName":"Night's Watch Officer",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305036/",
          "actorName":"Michael Stuart",
          "actorLink":"/name/nm5792452/"
       },
       {
          "characterName":"Night's Watchman",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0509452/",
          "actorName":"Marcus Lamb",
          "actorLink":"/name/nm2228622/"
       },
       {
          "characterName":"Night's Watchman",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0509452/",
          "actorName":"Michael Hooley",
          "actorLink":"/name/nm6706699/"
       },
       {
          "characterName":"Night's Watchman",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0509452/",
          "actorName":"Patrick J Molloy",
          "actorLink":"/name/nm3561455/"
       },
       {
          "characterName":"Night's Watchman #1",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0509452/",
          "actorName":"Michael Hayes",
          "actorLink":"/name/nm0371160/"
       },
       {
          "characterName":"Night's Watchman #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0509452/",
          "actorName":"Ruairí Heading",
          "actorLink":"/name/nm6316115/"
       },
       {
          "characterName":"Night's Watchman #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0509452/",
          "actorName":"Tony Flynn",
          "actorLink":"/name/nm0283642/"
       },
       {
          "characterName":"Northman Rioter",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0348391/",
          "actorName":"Jed Murray",
          "actorLink":"/name/nm5697839/"
@@ -2538,16 +2391,14 @@
       },
       {
          "characterName":"Old Nan",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZTEzZmMxMzQtYzA4OC00YjI3LTg3Y2QtNjNhMjE2MDMxZDZlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZTEzZmMxMzQtYzA4OC00YjI3LTg3Y2QtNjNhMjE2MDMxZDZlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305018/",
          "actorName":"Margaret John",
          "actorLink":"/name/nm0424191/"
       },
       {
          "characterName":"Old Woman Prisoner",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0327535/",
          "actorName":"Gina Moxley",
          "actorLink":"/name/nm0610312/"
@@ -2584,8 +2435,8 @@
       },
       {
          "characterName":"Orell",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTQ1NDAzODQtNzAzMy00MDRhLTkwMWItZTNmMWJmN2I5MTlmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTQ1NDAzODQtNzAzMy00MDRhLTkwMWItZTNmMWJmN2I5MTlmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0316922/",
          "actorName":"Mackenzie Crook",
          "actorLink":"/name/nm0188871/",
@@ -2593,8 +2444,8 @@
       },
       {
          "characterName":"Ornela",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BODdmZDIwMTEtYWI1OS00YTVmLWIzZGUtOWI4YTk3MWU3NTNhXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODdmZDIwMTEtYWI1OS00YTVmLWIzZGUtOWI4YTk3MWU3NTNhXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_.jpg",
          "characterLink":"/character/ch0540537/",
          "actorName":"Hannah John-Kamen",
          "actorLink":"/name/nm4789912/"
@@ -2631,8 +2482,6 @@
       },
       {
          "characterName":"Pentoshi Servant",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305042/",
          "actorName":"Rania Zouari",
          "actorLink":"/name/nm4422639/"
@@ -2665,8 +2514,8 @@
       },
       {
          "characterName":"Polliver",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BY2EwODU4ZGMtZGVkZi00ZjE4LTlhZTItNzNjNGZiM2UxZTc1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BY2EwODU4ZGMtZGVkZi00ZjE4LTlhZTItNzNjNGZiM2UxZTc1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305023/",
          "actorName":"Andy Kellegher",
          "actorLink":"/name/nm3464945/",
@@ -2710,8 +2559,8 @@
       },
       {
          "characterName":"Qhono",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGMwYjgwMGQtOGRlNC00NDg0LTliM2ItN2I1NzIxZmQ5YTU1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMGMwYjgwMGQtOGRlNC00NDg0LTliM2ItN2I1NzIxZmQ5YTU1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0540066/",
          "actorName":"Staz Nair",
          "actorLink":"/name/nm7047874/"
@@ -2727,8 +2576,8 @@
       },
       {
          "characterName":"Qotho",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOWFjY2Y4NTgtZjQ5OS00YjM0LWI3OTItMWYyM2QzYjQyODk1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOWFjY2Y4NTgtZjQ5OS00YjM0LWI3OTItMWYyM2QzYjQyODk1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0246162/",
          "actorName":"Dar Salim",
          "actorLink":"/name/nm1502469/",
@@ -2736,8 +2585,8 @@
       },
       {
          "characterName":"Quaithe",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMWU1YzE1MmUtMDk3ZS00ZTQxLTg5ZjEtYzgxZDk5MzFkOWUyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMWU1YzE1MmUtMDk3ZS00ZTQxLTg5ZjEtYzgxZDk5MzFkOWUyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305022/",
          "actorName":"Laura Pradelska",
          "actorLink":"/name/nm3671418/"
@@ -2783,8 +2632,8 @@
       },
       {
          "characterName":"Randyll Tarly",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIwMTY0NTc4N15BMl5BanBnXkFtZTgwNTMyNzYwOTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIwMTY0NTc4N15BMl5BanBnXkFtZTgwNTMyNzYwOTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0524408/",
          "actorName":"James Faulkner",
          "actorLink":"/name/nm0269077/"
@@ -2835,8 +2684,8 @@
       },
       {
          "characterName":"Red Keep Stableboy",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZjA0NGQzMmQtZTdlMi00Y2Q5LWE1N2ItNGNhODdmZDAxZTg3XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZjA0NGQzMmQtZTdlMi00Y2Q5LWE1N2ItNGNhODdmZDAxZTg3XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_.jpg",
          "characterLink":"/character/ch0379229/",
          "actorName":"Hugo Culverhouse",
          "actorLink":"/name/nm4164318/",
@@ -2844,16 +2693,14 @@
       },
       {
          "characterName":"Red Priestess",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0540866/",
          "actorName":"Melanie Liburd",
          "actorLink":"/name/nm4927489/"
       },
       {
          "characterName":"Red Priestess",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTM5MjlkYjItM2YzOC00NGQwLTllZDktYmY3YmMxYjNjMzVjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTM5MjlkYjItM2YzOC00NGQwLTllZDktYmY3YmMxYjNjMzVjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0540866/",
          "actorName":"Rila Fukushima",
          "actorLink":"/name/nm3822462/"
@@ -3053,8 +2900,8 @@
       },
       {
          "characterName":"Robett Glover",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDYwNzhkZjctMzdlOS00MTAxLWE3ODktOTc2ODczMmJmNjkwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDYwNzhkZjctMzdlOS00MTAxLWE3ODktOTc2ODczMmJmNjkwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541747/",
          "actorName":"Tim McInnerny",
          "actorLink":"/name/nm0570570/"
@@ -3089,8 +2936,8 @@
       },
       {
          "characterName":"Rorge",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZjE4Mjc3MTktMDYyOC00ZDVlLWJlNjMtYzFiMDFlYzg3MjJjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZjE4Mjc3MTktMDYyOC00ZDVlLWJlNjMtYzFiMDFlYzg3MjJjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305019/",
          "actorName":"Andy Beckwith",
          "actorLink":"/name/nm0065874/",
@@ -3108,8 +2955,8 @@
       {
          "characterName":"Roslin Frey",
          "houseName":"Frey",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzhhZGIxYjctMjBkNC00YTJhLTlmMDAtOWUyYjlhNWE3Yzg3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzhhZGIxYjctMjBkNC00YTJhLTlmMDAtOWUyYjlhNWE3Yzg3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0391563/",
          "actorName":"Alexandra Dowling",
          "actorLink":"/name/nm5093301/",
@@ -3120,16 +2967,12 @@
       },
       {
          "characterName":"Royal Steward",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305048/",
          "actorName":"Robert Sterne",
          "actorLink":"/name/nm1414435/"
       },
       {
          "characterName":"Ryger Rivers",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0014591/",
          "actorName":"Bryan McCaugherty",
          "actorLink":"/name/nm0565472/"
@@ -3228,8 +3071,8 @@
       },
       {
          "characterName":"Septa Moelle",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3ODQ3NzIzMV5BMl5BanBnXkFtZTgwODczMjk5NTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3ODQ3NzIzMV5BMl5BanBnXkFtZTgwODczMjk5NTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0540869/",
          "actorName":"Maggie Hayes",
          "actorLink":"/name/nm1378629/"
@@ -3245,8 +3088,8 @@
       },
       {
          "characterName":"Septa Scolera",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3ODQ3NzIzMV5BMl5BanBnXkFtZTgwODczMjk5NTE@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ3ODQ3NzIzMV5BMl5BanBnXkFtZTgwODczMjk5NTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0540869/",
          "actorName":"Mary Jordan",
          "actorLink":"/name/nm1103771/"
@@ -3261,24 +3104,20 @@
       },
       {
          "characterName":"Septon",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0540865/",
          "actorName":"Kenneth Hadley",
          "actorLink":"/name/nm0352901/"
       },
       {
          "characterName":"Septon",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0540865/",
          "actorName":"Terry Byrne",
          "actorLink":"/name/nm0126298/"
       },
       {
          "characterName":"Ser Endrew Tarth",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjJmYzRlZTUtODkwNS00OTE4LTllYWUtOTdiMGQ1MTE2MTU4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjJmYzRlZTUtODkwNS00OTE4LTllYWUtOTdiMGQ1MTE2MTU4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0540153/",
          "actorName":"Dez McMahon",
          "actorLink":"/name/nm4757478/"
@@ -3294,8 +3133,8 @@
       },
       {
          "characterName":"Shagga",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BY2Y1YTI2YTMtY2E3Ny00OTliLTg2MWYtMTFlYWU3ZjAyYzFiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BY2Y1YTI2YTMtY2E3Ny00OTliLTg2MWYtMTFlYWU3ZjAyYzFiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305021/",
          "actorName":"Mark Lewis Jones",
          "actorLink":"/name/nm0428765/"
@@ -3344,8 +3183,8 @@
       },
       {
          "characterName":"Spice King",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYTA4NWE5ZDgtNjQ0Ni00YmUxLWJhZTgtOTRmY2U0YzI3YmE2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYTA4NWE5ZDgtNjQ0Ni00YmUxLWJhZTgtOTRmY2U0YzI3YmE2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305005/",
          "actorName":"Nicholas Blane",
          "actorLink":"/name/nm0087432/",
@@ -3371,48 +3210,38 @@
       },
       {
          "characterName":"Stark Bannerman",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0517008/",
          "actorName":"Michael Stuart",
          "actorLink":"/name/nm5792452/"
       },
       {
          "characterName":"Stark Guard",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305311/",
          "actorName":"Faolan Morgan",
          "actorLink":"/name/nm4335246/"
       },
       {
          "characterName":"Stark Guard",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305311/",
          "actorName":"Rick Burn",
          "actorLink":"/name/nm4492916/"
       },
       {
          "characterName":"Stark Guard",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305311/",
          "actorName":"David Sheehan",
          "actorLink":"/name/nm1423916/"
       },
       {
          "characterName":"Stark Guard",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305311/",
          "actorName":"Paul Monahan",
          "actorLink":"/name/nm5981376/"
       },
       {
          "characterName":"Steelshanks Walton",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxOWYwYTctNjFlMy00MmUyLWI4MWYtZjhkMzNhYjI5YzQ1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxOWYwYTctNjFlMy00MmUyLWI4MWYtZjhkMzNhYjI5YzQ1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0396530/",
          "actorName":"Jamie Michie",
          "actorLink":"/name/nm1652341/"
@@ -3420,16 +3249,14 @@
       {
          "characterName":"Stevron Frey",
          "houseName":"Frey",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305329/",
          "actorName":"Colin Carnegie",
          "actorLink":"/name/nm1794801/"
       },
       {
          "characterName":"Stiv",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYjFhYzE5NGYtMWM5Zi00YjAyLWI4YTktNDhhYTE1NGFhZjgwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYjFhYzE5NGYtMWM5Zi00YjAyLWI4YTktNDhhYTE1NGFhZjgwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0304972/",
          "actorName":"Stephen Don",
          "actorLink":"/name/nm1651043/",
@@ -3481,32 +3308,30 @@
       {
          "characterName":"Talla Tarly",
          "houseName":"Tarly",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZTYwYTA2MWEtM2FjNS00MDNhLWIyMzMtODI0Mjg2Y2ZlODBiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZTYwYTA2MWEtM2FjNS00MDNhLWIyMzMtODI0Mjg2Y2ZlODBiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0523897/",
          "actorName":"Rebecca Benson",
          "actorLink":"/name/nm5039410/"
       },
       {
          "characterName":"Ternesio Terys",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0473552/",
          "actorName":"Gary Oliver",
          "actorLink":"/name/nm1146807/"
       },
       {
          "characterName":"The Bear",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzE0ODQyNzYtZjc4NC00ZmM5LWI5NTgtOTk2OWQ5NjY3ZmVkXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzE0ODQyNzYtZjc4NC00ZmM5LWI5NTgtOTk2OWQ5NjY3ZmVkXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
          "characterLink":"/character/ch0085768/",
          "actorName":"Bart the Bear",
          "actorLink":"/name/nm1212069/"
       },
       {
          "characterName":"The Night King",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BY2ZjNmYyMjAtNGUwYi00N2JmLWEyMTYtMDM5YmM2MWFhMWFiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BY2ZjNmYyMjAtNGUwYi00N2JmLWEyMTYtMDM5YmM2MWFhMWFiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
          "characterLink":"/character/ch0512154/",
          "actors":[
             {
@@ -3529,8 +3354,8 @@
       },
       {
          "characterName":"The Tickler",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTRiZjdkNTctMzM3ZC00NDJjLWI1MjctNTdjZjFlYjNiOTMxXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTRiZjdkNTctMzM3ZC00NDJjLWI1MjctNTdjZjFlYjNiOTMxXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_.jpg",
          "characterLink":"/character/ch0305033/",
          "actorName":"Anthony Morris",
          "actorLink":"/name/nm1677757/",
@@ -3549,8 +3374,6 @@
       },
       {
          "characterName":"Thenn Warg",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0400416/",
          "actorName":"Joseph Gatt",
          "actorLink":"/name/nm1395532/",
@@ -3573,8 +3396,6 @@
       },
       {
          "characterName":"Thin Man",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0540863/",
          "actorName":"Oengus MacNamara",
          "actorLink":"/name/nm0534062/"
@@ -3612,32 +3433,26 @@
       },
       {
          "characterName":"Timett",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTM5MjU1NzA1NF5BMl5BanBnXkFtZTcwOTA2Nzk1NQ@@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTM5MjU1NzA1NF5BMl5BanBnXkFtZTcwOTA2Nzk1NQ@@._V1_.jpg",
          "characterLink":"/character/ch0305004/",
          "actorName":"Tobias Winter",
          "actorLink":"/name/nm4385245/"
       },
       {
          "characterName":"Tobho Mott",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305039/",
          "actorName":"Andrew Wilde",
          "actorLink":"/name/nm0928408/"
       },
       {
          "characterName":"Todder",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0509452/",
          "actorName":"Will O'Connell",
          "actorLink":"/name/nm3727276/"
       },
       {
          "characterName":"Tomard",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305325/",
          "actorName":"Phil Dixon",
          "actorLink":"/name/nm4475303/"
@@ -3683,8 +3498,8 @@
       },
       {
          "characterName":"Tormund Giantsbane",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTc1OTU3NjUzNF5BMl5BanBnXkFtZTcwNDE0NzE5OQ@@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTc1OTU3NjUzNF5BMl5BanBnXkFtZTcwNDE0NzE5OQ@@._V1_SY1000_CR0,0,717,1000_AL_.jpg",
          "characterLink":"/character/ch0316925/",
          "actorName":"Kristofer Hivju",
          "actorLink":"/name/nm1970465/",
@@ -3706,8 +3521,8 @@
       },
       {
          "characterName":"Tycho Nestoris",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTFjYWJjZTEtM2Y1Zi00YzE0LTkzOTItZGZkNzM2YjBiNjg5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTFjYWJjZTEtM2Y1Zi00YzE0LTkzOTItZGZkNzM2YjBiNjg5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0468190/",
          "actorName":"Mark Gatiss",
          "actorLink":"/name/nm0309693/"
@@ -3762,16 +3577,16 @@
       },
       {
          "characterName":"Vala",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYzdiYzllYjMtMGJmNC00NWIwLWIwMzEtOTM1Mjk4ZTkxZDM1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYzdiYzllYjMtMGJmNC00NWIwLWIwMzEtOTM1Mjk4ZTkxZDM1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0539344/",
          "actorName":"Meena Rayann",
          "actorLink":"/name/nm5159884/"
       },
       {
          "characterName":"Vardis Egen",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzg1Y2NiYTYtNDY0Yi00OGMwLWJjZjktZDVlNDE1Y2M3MTMzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzg1Y2NiYTYtNDY0Yi00OGMwLWJjZjktZDVlNDE1Y2M3MTMzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0294458/",
          "actorName":"Brendan McCormack",
          "actorLink":"/name/nm1788152/",
@@ -3779,8 +3594,6 @@
       },
       {
          "characterName":"Varly",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0379226/",
          "actorName":"Graham Charles",
          "actorLink":"/name/nm1378721/",
@@ -3820,9 +3633,12 @@
       },
       {
          "characterName":"Walda Bolton",
-         "houseName":"Bolton",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "houseName":[
+            "Bolton",
+            "Frey"
+         ],
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTZiNWE2YTYtZDA2Ny00ZmUwLTk4ZWUtZjFkM2JkYjFiNjE3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTZiNWE2YTYtZDA2Ny00ZmUwLTk4ZWUtZjFkM2JkYjFiNjE3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0506401/",
          "actorName":"Elizabeth Webster",
          "actorLink":"/name/nm3531913/",
@@ -3845,16 +3661,16 @@
       },
       {
          "characterName":"Warlock",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzE0NjExMGMtYjJlOC00MWI4LTg5MTgtYTIzZTgxZjc2NDAyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMzE0NjExMGMtYjJlOC00MWI4LTg5MTgtYTIzZTgxZjc2NDAyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0539881/",
          "actorName":"Lottie Steer",
          "actorLink":"/name/nm5390029/"
       },
       {
          "characterName":"Waymar Royce",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BYzE1Y2EwN2QtMzMzZS00MDZkLTg4ZjItN2NkNGNkYjAzZGVlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BYzE1Y2EwN2QtMzMzZS00MDZkLTg4ZjItN2NkNGNkYjAzZGVlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0171390/",
          "actorName":"Rob Ostlere",
          "actorLink":"/name/nm3209935/",
@@ -3862,24 +3678,22 @@
       },
       {
          "characterName":"Wedding Band",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0506962/",
          "actorName":"Sigur Rós",
          "actorLink":"/name/nm1460176/"
       },
       {
          "characterName":"White Walker",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjYzNDMyZWUtMDVlMy00OGQxLWFkZTctOWMxZDk1MDA5MmQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjYzNDMyZWUtMDVlMy00OGQxLWFkZTctOWMxZDk1MDA5MmQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0304921/",
          "actorName":"Ian Whyte",
          "actorLink":"/name/nm1613839/"
       },
       {
          "characterName":"White Walker",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjYzNDMyZWUtMDVlMy00OGQxLWFkZTctOWMxZDk1MDA5MmQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjYzNDMyZWUtMDVlMy00OGQxLWFkZTctOWMxZDk1MDA5MmQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0304921/",
          "actorName":"Ross Mullan",
          "actorLink":"/name/nm1368643/",
@@ -3887,8 +3701,8 @@
       },
       {
          "characterName":"White Walker",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjYzNDMyZWUtMDVlMy00OGQxLWFkZTctOWMxZDk1MDA5MmQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjYzNDMyZWUtMDVlMy00OGQxLWFkZTctOWMxZDk1MDA5MmQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0304921/",
          "actorName":"Tim Loane",
          "actorLink":"/name/nm0516385/",
@@ -3897,32 +3711,30 @@
       },
       {
          "characterName":"White Walker #2",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjYzNDMyZWUtMDVlMy00OGQxLWFkZTctOWMxZDk1MDA5MmQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjYzNDMyZWUtMDVlMy00OGQxLWFkZTctOWMxZDk1MDA5MmQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0304921/",
          "actorName":"Spencer Wilding",
          "actorLink":"/name/nm1872855/"
       },
       {
          "characterName":"Wight Wildling Girl",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTg0OTdiOTYtNjBlYS00ZjI1LWEzMTAtODExOWRhNDZhMWNhXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTg0OTdiOTYtNjBlYS00ZjI1LWEzMTAtODExOWRhNDZhMWNhXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305043/",
          "actorName":"Claire Wright",
          "actorLink":"/name/nm4422708/"
       },
       {
          "characterName":"Wildling Rioter",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0348391/",
          "actorName":"Michael Patrick",
          "actorLink":"/name/nm8199963/"
       },
       {
          "characterName":"Will",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjZlMDJhMmUtNzFlYS00ZTI1LWI5MjUtYmZkNTRlNmZmYzJlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjZlMDJhMmUtNzFlYS00ZTI1LWI5MjUtYmZkNTRlNmZmYzJlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0171394/",
          "actorName":"Bronson Webb",
          "actorLink":"/name/nm0916037/",
@@ -3931,8 +3743,6 @@
       {
          "characterName":"Willem Lannister",
          "houseName":"Lannister",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0395356/",
          "actorName":"Timothy Gibbons",
          "actorLink":"/name/nm5624523/",
@@ -3940,8 +3750,8 @@
       },
       {
          "characterName":"Willis Wode",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMmY3NWI0YTItNWFkZi00MTVlLWIyNDQtN2MwYjY0ZjhhOTdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMmY3NWI0YTItNWFkZi00MTVlLWIyNDQtN2MwYjY0ZjhhOTdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305315/",
          "actorName":"Ryan McKenna",
          "actorLink":"/name/nm4416560/",
@@ -3949,16 +3759,12 @@
       },
       {
          "characterName":"Wine Merchant",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305323/",
          "actorName":"Simon Lowe",
          "actorLink":"/name/nm0523047/"
       },
       {
          "characterName":"Winterfell Shepherd",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0306456/",
          "actorName":"Donagh Deeney",
          "actorLink":"/name/nm0214343/"
@@ -3974,8 +3780,6 @@
       },
       {
          "characterName":"Wyllis",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0238584/",
          "actorName":"Sam Coleman",
          "actorLink":"/name/nm4744043/"
@@ -4042,8 +3846,6 @@
       {
          "characterName":"Young Benjen Stark",
          "houseName":"Stark",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0153996/",
          "actorName":"Matteo Elezi",
          "actorLink":"/name/nm5502295/"
@@ -4051,8 +3853,6 @@
       {
          "characterName":"Young Cersei Lannister",
          "houseName":"Lannister",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0159526/",
          "actorName":"Nell Williams",
          "actorLink":"/name/nm5309709/"
@@ -4060,24 +3860,19 @@
       {
          "characterName":"Young Lyanna Stark",
          "houseName":"Stark",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0543804/",
          "actorName":"Cordelia Hill",
          "actorLink":"/name/nm8108764/"
       },
       {
          "characterName":"Young Nan",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0305018/",
          "actorName":"Annette Tierney",
          "actorLink":"/name/nm1519719/"
       },
       {
          "characterName":"Young Ned",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "houseName":"Stark",
          "characterLink":"/character/ch0154681/",
          "actorName":"Robert Aramayo",
          "actorLink":"/name/nm7075019/"
@@ -4085,24 +3880,20 @@
       {
          "characterName":"Young Ned Stark",
          "houseName":"Stark",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0154681/",
          "actorName":"Sebastian Croft",
          "actorLink":"/name/nm7509185/"
       },
       {
          "characterName":"Young Rodrik Cassel",
-         "characterImageThumb":"",
-         "characterImageFull":"",
          "characterLink":"/character/ch0171391/",
          "actorName":"Fergus Leathem",
          "actorLink":"/name/nm7509186/"
       },
       {
          "characterName":"Zanrush",
-         "characterImageThumb":"",
-         "characterImageFull":"",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTJjYzk1MGMtNjE3Mi00NjE2LTkzMWUtNGRjODVlY2JmMmI5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTJjYzk1MGMtNjE3Mi00NjE2LTkzMWUtNGRjODVlY2JmMmI5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0540870/",
          "actorName":"Gerald Lepkowski",
          "actorLink":"/name/nm0503319/"

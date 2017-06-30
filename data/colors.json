@@ -117,6 +117,13 @@
 			"class": ["martell"]
 		},
 		{
+			"hexadecimal": "#87cefa",
+			"webSafe": "#87CEFA",
+			"basic": "lightskyblue",
+			"rgb": "rgb(135,206,250)",
+			"class": ["whitewalkers"]
+		},
+		{
 			"name": "Tramlink",
 			"hexadecimal": "#84B817",
 			"webSafe": "#66CC00",

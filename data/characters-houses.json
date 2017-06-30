@@ -110,6 +110,7 @@
 				"Osha",
 				"Rattleshirt",
 				"Thenn Warg",
+				"Tormund Giantsbane",
 				"Wun Wun",
 				"Ygritte"
 			]
@@ -139,6 +140,14 @@
 			"characters":[
 				"Brynden Tully",
 				"Edmure Tully"
+			]
+		},
+		{
+			"name":"White Walkers",
+			"characters":[
+				"The Night King",
+				"White Walker",
+				"Wight Wildling Girl"
 			]
 		},
 		{
