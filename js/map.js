@@ -525,7 +525,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 			// add gender select
 			$("#gender-select").append("<input type='radio' name='gender' value='"+data.gender[i].gender+"'>"+toTitleCase(data.gender[i].gender));
 		}
-		$("#gender-select").append("<input type='radio' name='gender' value='characters'>All");
+		$("#gender-select").append("<input type='radio' name='gender' value='characters'>All Characters");
 
 		// on change in gender select, show only that gender
 		$("#gender-select input").change(function(){
