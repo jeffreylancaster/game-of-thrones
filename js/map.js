@@ -368,6 +368,18 @@ $.getJSON("data/keyValues.json", function( data ) {
             			return "end";
             		}
             	});
+            // hide/show the character thumbnail
+            $(".characterThumb").hide();
+            var thumbClass = $(this).attr("class").split(" ")[0]+"-image";
+            $("."+thumbClass).show();
+            if(d3.event.pageX < 200){
+    			$("."+thumbClass).css({top: d3.event.pageY-22.5, left: d3.event.pageX-80-10});
+    		} else {
+    			$("."+thumbClass).css({top: d3.event.pageY-22.5, left: d3.event.pageX+10});
+    		}
+        })
+        .on('mouseout', function(d) {
+        	$(".characterThumb").hide();
         });
 })
 
@@ -605,19 +617,23 @@ $.getJSON("data/keyValues.json", function( data ) {
 	});
 	// show the UI box
 	$("#ui").toggle();
-/*}).done(function(){
+}).done(function(){
 	$.getJSON("data/characters.json", function( data ) {
-		//console.log(data);
-		for(i=0; i<charactersArrayForIMDBImages.length; i++){
-			for(j=0; j<data.characters.length; j++){
-				if(charactersArrayForIMDBImages[i].name == data.characters[j].characterName){
-					charactersArrayForIMDBImages[i].characterLink = "http://imdb.com"+data.characters[j].characterLink;
-
-				}
+		// append the character thumbnail to the body
+		for(i=0; i<data.characters.length; i++){
+			if(data.characters[i].characterImageThumb){
+				$("body").append("<div class='characterThumb "+data.characters[i].characterName.toLowerCase().replace(/([^A-Z0-9])/gi,"")+"-image' style='background-image: url("+data.characters[i].characterImageThumb+");'></div>")
 			}
-			$("body").append("<a href='"+charactersArrayForIMDBImages[i].characterLink+"' target='_blank'>"+charactersArrayForIMDBImages[i].name+"</a><br>");
-			
 		}
+		// for(i=0; i<charactersArrayForIMDBImages.length; i++){
+		// 	for(j=0; j<data.characters.length; j++){
+		// 		if(charactersArrayForIMDBImages[i].name == data.characters[j].characterName){
+		// 			charactersArrayForIMDBImages[i].characterLink = "http://imdb.com"+data.characters[j].characterLink;
 
-	});*/
+		// 		}
+		// 	}
+		// 	$("body").append("<a href='"+charactersArrayForIMDBImages[i].characterLink+"' target='_blank'>"+charactersArrayForIMDBImages[i].name+"</a><br>");
+		// }
+
+	});
 });
