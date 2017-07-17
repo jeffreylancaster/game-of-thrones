@@ -84,6 +84,12 @@
          "killedBy":"Jaime Lannister"
       },
       {
+         "characterName":"Alys Karstark",
+         "characterLink":"/character/ch0576836/",
+         "actorName":"Megan Parkinson",
+         "actorLink":"/name/nm8257864/"
+      },
+      {
          "characterName":"Amory Lorch",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTVmY2M2YmUtY2JkYS00NjIyLWFhYTAtNTNlZmI4ODdiNmE5XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTVmY2M2YmUtY2JkYS00NjIyLWFhYTAtNTNlZmI4ODdiNmE5XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1_.jpg",
@@ -100,6 +106,12 @@
          "characterLink":"/character/ch0316930/",
          "actorName":"Philip McGinley",
          "actorLink":"/name/nm1528121/"
+      },
+      {
+         "characterName":"Archmaester Marwyn",
+         "characterLink":"/character/ch0578265/",
+         "actorName":"Jim Broadbent",
+         "actorLink":"/name/nm0000980/"
       },
       {
          "characterName":"Areo Hotah",
@@ -163,6 +175,26 @@
             "Black Walder Rivers",
             "Lothar Frey",
             "Walder Frey"
+         ]
+      },
+      {
+         "characterName":"Baby Sam",
+         "characterLink":"/character/ch0547881/",
+         "actors":[
+            {
+               "actorName":"William Wilson",
+               "actorLink":"/name/nm8251159/",
+               "seasonsActive":[
+                  7
+               ]
+            },
+            {
+               "actorName":"James Wilson",
+               "actorLink":"/name/nm8251160/",
+               "seasonsActive":[
+                  7
+               ]
+            }
          ]
       },
       {
@@ -1512,6 +1544,12 @@
          "actorLink":"/name/nm0119804/"
       },
       {
+         "characterName":"Kitty Frey",
+         "characterLink":"/character/ch0576869/",
+         "actorName":"Lucy Hayes",
+         "actorLink":"/name/nm8314450/"
+      },
+      {
          "characterName":"Knight of House Frey",
          "characterLink":"/character/ch0305317/",
          "actorName":"Patrick Ryan",
@@ -1901,6 +1939,12 @@
          "actorName":"Donald Sumpter",
          "actorLink":"/name/nm0838910/",
          "killedBy":"Osha"
+      },
+      {
+         "characterName":"Maester Wolkan",
+         "characterLink":"/character/ch0550545/",
+         "actorName":"Richard Rycroft",
+         "actorLink":"/name/nm1483416/"
       },
       {
          "characterName":"Mag the Mighty",

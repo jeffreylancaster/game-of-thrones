@@ -145,14 +145,17 @@
 		{
 			"name":"White Walkers",
 			"characters":[
+				"Mag the Mighty Wight",
 				"The Night King",
 				"White Walker",
-				"Wight Wildling Girl"
+				"Wight Wildling Girl",
+				"Wun Wun Wight"
 			]
 		},
 		{
 			"name":"Include",
 			"characters":[
+				"Archmaester Marwyn",
 				"Barristan Selmy",
 				"Beric Dondarrion",
 				"Brienne of Tarth",

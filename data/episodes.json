@@ -27797,7 +27797,7 @@
                "subLocation":"Pyke",
                "characters":[
                   {"name":"Aeron Greyjoy"},
-                  {"name":"Euron Greyjoy", "title":"King"}
+                  {"name":"Euron Greyjoy"}
                ]
             },
             {
@@ -27807,7 +27807,7 @@
                "subLocation":"Pyke",
                "characters":[
                   {"name":"Aeron Greyjoy"},
-                  {"name":"Euron Greyjoy", "title":"King"}
+                  {"name":"Euron Greyjoy"}
                ]
             },
             {
@@ -31814,11 +31814,29 @@
             },
             {
                "sceneStart":"1:00:51",
-               "sceneEnd":"1:05:30",
+               "sceneEnd":"1:04:57",
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
                   {"name":"Jon Snow"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Tormund Giantsbane"},
+                  {"name":"Petyr Baelish"},
+                  {"name":"Wyman Manderly"},
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Cley Cerwyn"},
+                  {"name":"Robett Glover"},
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"1:04:57",
+               "sceneEnd":"1:05:30",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Jon Snow", "title":"King"},
                   {"name":"Yohn Royce"},
                   {"name":"Sansa Stark"},
                   {"name":"Tormund Giantsbane"},
@@ -31891,24 +31909,466 @@
       {
          "seasonNum":7,
          "episodeNum":1,
-         "episodeTitle":"Episode #7.1",
+         "episodeTitle":"Dragonstone",
          "episodeLink":"/title/tt5654088/",
-         "episodeAirDate":"2017-06-",
-         "episodeDescription":"Plot is unknown at this time",
+         "episodeAirDate":"2017-07-16",
+         "episodeDescription":"Jon organizes the defense of the North. Cersei tries to even the odds. Daenerys comes home.",
          "openingSequenceLocations":[
-
+            "King's Landing",
+            "Dragonstone",
+            "The Twins",
+            "Winterfell",
+            "The Wall",
+            "Oldtown"
          ],
          "scenes":[
-
+            {
+               "sceneStart":"0:03:54",
+               "sceneEnd":"0:04:20",
+               "location":"The Riverlands",
+               "subLocation":"The Twins",
+               "characters":[
+                  {"name":"Walder Frey"}
+               ]
+            },
+            {
+               "sceneStart":"0:04:20",
+               "sceneEnd":"0:07:04",
+               "location":"The Riverlands",
+               "subLocation":"The Twins",
+               "characters":[
+                  {"name":"Walder Frey"},
+                  {"name":"Kitty Frey"}
+               ]
+            },
+            {
+               "sceneStart":"0:07:04",
+               "sceneEnd":"0:07:46",
+               "location":"The Riverlands",
+               "subLocation":"The Twins",
+               "characters":[
+                  {"name":"Arya Stark"},
+                  {"name":"Kitty Frey"}
+               ]
+            },
+            {
+               "sceneStart":"0:09:33",
+               "sceneEnd":"0:11:19",
+               "location":"North of the Wall",
+               "greensight":true,
+               "subLocation":"South to the Wall",
+               "characters":[
+                  {"name":"The Night King", "title":"King"},
+                  {"name":"Wight Walker"},
+                  {"name":"Wun Wun Wight"},
+                  {"name":"Mag the Mighty Wight"}
+               ]
+            },
+            {
+               "sceneStart":"0:11:19",
+               "sceneEnd":"0:11:33",
+               "location":"North of the Wall",
+               "subLocation":"The Wall",
+               "characters":[
+                  {"name":"Bran Stark"},
+                  {"name":"Meera Reed"}
+               ]
+            },
+            {
+               "sceneStart":"0:11:33",
+               "sceneEnd":"0:12:48",
+               "location":"North of the Wall",
+               "subLocation":"The Wall",
+               "characters":[
+                  {"name":"Bran Stark"},
+                  {"name":"Meera Reed"},
+                  {"name":"Eddison Tollett"}
+               ]
+            },
+            {
+               "sceneStart":"0:12:48",
+               "sceneEnd":"0:13:00",
+               "location":"North of the Wall",
+               "subLocation":"The Wall",
+               "characters":[
+                  {"name":"Eddison Tollett"}
+               ]
+            },
+            {
+               "sceneStart":"0:13:00",
+               "sceneEnd":"0:16:37",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Davos Seaworth"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Brienne of Tarth"},
+                  {"name":"Podrick Payne"},
+                  {"name":"Tormund Giantsbane"},
+                  {"name":"Robett Glover"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Petyr Baelish"},
+                  {"name":"Alys Karstark"}
+               ]
+            },
+            {
+               "sceneStart":"0:16:37",
+               "sceneEnd":"0:18:00",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Davos Seaworth"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Brienne of Tarth"},
+                  {"name":"Podrick Payne"},
+                  {"name":"Tormund Giantsbane"},
+                  {"name":"Robett Glover"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Petyr Baelish"},
+                  {"name":"Alys Karstark"},
+                  {"name":"Ned Umber"}
+               ]
+            },
+            {
+               "sceneStart":"0:18:00",
+               "sceneEnd":"0:18:08",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:18:08",
+               "sceneEnd":"0:19:37",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Sansa Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:19:37",
+               "sceneEnd":"0:19:49",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Maester Wolkan"}
+               ]
+            },
+            {
+               "sceneStart":"0:19:49",
+               "sceneEnd":"0:20:50",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Sansa Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:20:50",
+               "sceneEnd":"0:21:03",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:21:03",
+               "sceneEnd":"0:24:59",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:24:59",
+               "sceneEnd":"0:25:35",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:25:35",
+               "sceneEnd":"0:26:28",
+               "location":"The Crownlands",
+               "subLocation":"Kings Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Jaime Lannister"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"0:26:28",
+               "sceneEnd":"0:30:25",
+               "location":"The Crownlands",
+               "subLocation":"Kings Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Jaime Lannister"},
+                  {"name":"Gregor Clegane"},
+                  {"name":"Qyburn"},
+                  {"name":"Euron Greyjoy"}
+               ]
+            },
+            {
+               "sceneStart":"0:30:25",
+               "sceneEnd":"0:33:19",
+               "location":"The Reach",
+               "subLocation":"Oldtown",
+               "characters":[
+                  {"name":"Samwell Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:33:19",
+               "sceneEnd":"0:36:38",
+               "location":"The Reach",
+               "subLocation":"Oldtown",
+               "characters":[
+                  {"name":"Samwell Tarly"},
+                  {"name":"Archmaester Marwyn"}
+               ]
+            },
+            {
+               "sceneStart":"0:36:38",
+               "sceneEnd":"0:37:18",
+               "location":"The Reach",
+               "subLocation":"Oldtown",
+               "characters":[
+                  {"name":"Samwell Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:37:18",
+               "sceneEnd":"0:37:54",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Brienne of Tarth"},
+                  {"name":"Podrick Payne"},
+                  {"name":"Tormund Giantsbane"}
+               ]
+            },
+            {
+               "sceneStart":"0:37:54",
+               "sceneEnd":"0:38:18",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Petyr Baelish"}
+               ]
+            },
+            {
+               "sceneStart":"0:38:18",
+               "sceneEnd":"0:38:23",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Petyr Baelish"},
+                  {"name":"Brienne of Tarth"},
+                  {"name":"Podrick Payne"},
+                  {"name":"Tormund Giantsbane"}
+               ]
+            },
+            {
+               "sceneStart":"0:38:23",
+               "sceneEnd":"0:38:38",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Petyr Baelish"}
+               ]
+            },
+            {
+               "sceneStart":"0:38:38",
+               "sceneEnd":"0:39:27",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Petyr Baelish"},
+                  {"name":"Brienne of Tarth"}
+               ]
+            },
+            {
+               "sceneStart":"0:39:27",
+               "sceneEnd":"0:43:36",
+               "location":"The Riverlands",
+               "subLocation":"South to King's Landing",
+               "characters":[
+                  {"name":"Arya Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:36",
+               "sceneEnd":"0:44:41",
+               "location":"The Riverlands",
+               "subLocation":"To The Eyrie",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Thoros of Myr"},
+                  {"name":"Beric Dondarrion"}
+               ]
+            },
+            {
+               "sceneStart":"0:44:41",
+               "sceneEnd":"0:45:09",
+               "location":"The Riverlands",
+               "subLocation":"To The Eyrie",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Thoros of Myr"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:09",
+               "sceneEnd":"0:46:26",
+               "location":"The Riverlands",
+               "subLocation":"To The Eyrie",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Beric Dondarrion"},
+                  {"name":"Farmer Hamlet", "alive":false},
+                  {"name":"Farmer's Daughter", "alive":false}
+               ]
+            },
+            {
+               "sceneStart":"0:46:26",
+               "sceneEnd":"0:50:26",
+               "location":"The Riverlands",
+               "subLocation":"To The Eyrie",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Thoros of Myr"},
+                  {"name":"Beric Dondarrion"}
+               ]
+            },
+            {
+               "sceneStart":"0:50:26",
+               "sceneEnd":"0:52:51",
+               "location":"The Riverlands",
+               "subLocation":"To The Eyrie",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Thoros of Myr"}
+               ]
+            },
+            {
+               "sceneStart":"0:52:51",
+               "sceneEnd":"0:53:04",
+               "location":"The Reach",
+               "subLocation":"Oldtown",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:53:04",
+               "sceneEnd":"0:54:24",
+               "location":"The Reach",
+               "subLocation":"Oldtown",
+               "characters":[
+                  {"name":"Samwell Tarly"},
+                  {"name":"Gilly"},
+                  {"name":"Baby Sam"}
+               ]
+            },
+            {
+               "sceneStart":"0:54:24",
+               "sceneEnd":"0:55:30",
+               "location":"The Reach",
+               "subLocation":"Oldtown",
+               "characters":[
+                  {"name":"Samwell Tarly"},
+                  {"name":"Jorah Mormont"}
+               ]
+            },
+            {
+               "sceneStart":"0:55:30",
+               "sceneEnd":"0:56:20",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Lord Varys"},
+                  {"name":"Grey Worm"},
+                  {"name":"Rhaegal"},
+                  {"name":"Viserion"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:56:20",
+               "sceneEnd":"0:58:36",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Lord Varys"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:58:36",
+               "sceneEnd":"0:59:25",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:59:25",
+               "sceneEnd":"1:00:04",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Lord Varys"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"1:00:04",
+               "sceneEnd":"1:01:04",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            }
          ]
       },
       {
          "seasonNum":7,
          "episodeNum":2,
-         "episodeTitle":"Episode #7.2",
+         "episodeTitle":"Stormborn",
          "episodeLink":"/title/tt5655178/",
-         "episodeAirDate":"2017--",
-         "episodeDescription":"",
+         "episodeAirDate":"2017-07-23",
+         "episodeDescription":"Daenerys receives an unexpected visitor. Jon faces a revolt. Tyrion plans the conquest of Westeros.",
          "openingSequenceLocations":[
 
          ],
@@ -31919,10 +32379,10 @@
       {
          "seasonNum":7,
          "episodeNum":3,
-         "episodeTitle":"Episode #7.3",
+         "episodeTitle":"The Queen's Justice",
          "episodeLink":"/title/tt5775840/",
-         "episodeAirDate":"2017--",
-         "episodeDescription":"",
+         "episodeAirDate":"2017-07-30",
+         "episodeDescription":"Daenerys holds court. Cersei returns a gift. Jaime learns from his mistakes.",
          "openingSequenceLocations":[
 
          ],
