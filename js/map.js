@@ -258,7 +258,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 	            	if(d.seasonNum == 1 && e.episodeNum < 5){
 	            		return e.shift/100;
 	            	}
-	            	else if(d.seasonNum == 6 && e.episodeNum >= 8){
+	            	else if(d.seasonNum == 6 && e.episodeNum >= 9 || d.seasonNum == 7){
 	            		return (e.shift + e.length)/100;
 	            	}
 	            	else {
@@ -271,7 +271,7 @@ $.getJSON("data/keyValues.json", function( data ) {
 	            	if(d.seasonNum == 1 && e.episodeNum < 5){
 	            		return "start";
 	            	}
-	            	else if(d.seasonNum == 6 && e.episodeNum >= 8){
+	            	else if(d.seasonNum == 6 && e.episodeNum >= 9 || d.seasonNum == 7){
 	            		return "end";
 	            	}
 	            	else {
