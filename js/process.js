@@ -64,6 +64,8 @@ var arraySceLocCharReduce = false;
 
 var keyValues = [];
 
+var maxCharLoc = [];
+
 // import episodes JSON file
 $.getJSON( "data/episodes.json", function( data ) {
   console.log("episodes.json loaded.");
@@ -273,7 +275,7 @@ $.getJSON( "data/episodes.json", function( data ) {
     /* ANALYZE 3D ARRAY */
 
     // make an empty array
-    var maxCharLoc = [];
+    //var maxCharLoc = [];
     for (i=0; i<sceneLocations.length; i++){
       var maxChar = 0;
       var whosThere = [];
@@ -368,6 +370,7 @@ $.getJSON( "data/episodes.json", function( data ) {
           }
         }
       }
+      console.log(sceneLocSorted);
     }).done(function(){
       buildCharactersScene();
     }); // END import locations.json file

@@ -580,8 +580,22 @@
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzk1YjNlZGQtNTU0MC00OGZmLThhYTQtZDM1ZjI2OGNlZGQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzk1YjNlZGQtNTU0MC00OGZmLThhYTQtZDM1ZjI2OGNlZGQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541363/",
-         "actorName":"Freddie Stroma",
-         "actorLink":"/name/nm2238815/"
+         "actors":[
+            {
+               "actorName":"Freddie Stroma",
+               "actorLink":"/name/nm2238815/",
+               "seasonsActive":[
+                  6
+               ]
+            },
+            {
+               "actorName":"Tom Hopper",
+               "actorLink":"/name/nm2584392/",
+               "seasonsActive":[
+                  7
+               ]
+            }
+         ]
       },
       {
          "characterName":"Dongo the Giant",
@@ -760,7 +774,11 @@
          "characterLink":"/character/ch0518715/",
          "actorName":"Pilou Asbæk",
          "actorLink":"/name/nm1561982/",
-         "killed":"Balon Greyjoy"
+         "killed":[
+            "Balon Greyjoy",
+            "Obara Sand",
+            "Nymeria Sand"
+         ]
       },
       {
          "characterName":"Faceless Man",
@@ -2408,7 +2426,8 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNDZmN2FkMTEtMmMyYy00ZTcwLWE3MGQtNGU1NzY4MjAxNjQ0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0468074/",
          "actorName":"Jessica Henwick",
-         "actorLink":"/name/nm3725055/"
+         "actorLink":"/name/nm3725055/",
+         "killedBy":"Euron Greyjoy"
       },
       {
          "characterName":"Obara Sand",
@@ -2421,7 +2440,8 @@
          "killed":[
             "Merchant Captain",
             "Trystane Martell"
-         ]
+         ],
+         "killedBy":"Euron Greyjoy"
       },
       {
          "characterName":"Oberyn Martell",
