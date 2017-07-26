@@ -43,7 +43,7 @@
                "subLocation":"The Haunted Forest",
                "characters":[
                   {"name":"Will"},
-                  {"name":"Wight Wildling Girl"}
+                  {"name":"Wight Wildling Girl", "alive":false}
                ]
             },
             {
@@ -109,7 +109,12 @@
                "subLocation":"The Haunted Forest",
                "characters":[
                   {"name":"Gared"},
-                  {"name":"Waymar Royce", "alive":false},
+                  {
+                     "name":"Waymar Royce",
+                     "alive":false,
+                     "mannerOfDeath":"Back stab",
+                     "killedBy":"White Walker"
+                  },
                   {"name":"White Walker"}
                ]
             },
@@ -139,7 +144,12 @@
                "subLocation":"The Haunted Forest",
                "characters":[
                   {"name":"Will"},
-                  {"name":"Gared", "alive":false},
+                  {
+                     "name":"Gared",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"White Walker"
+                  },
                   {"name":"White Walker"}
                ]
             },
@@ -169,8 +179,19 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Will", "alive":false},
-                  {"name":"Eddard Stark"},
+                  {
+                     "name":"Will",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"Eddard Stark"
+                  },
+                  {
+                     "name":"Eddard Stark",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Ice"
+                     }
+                  },
                   {"name":"Robb Stark"},
                   {"name":"Theon Greyjoy"},
                   {"name":"Bran Stark"},
@@ -186,7 +207,13 @@
                "subLocation":"Outside Winterfell",
                "characters":[
                   {"name":"Jon Snow"},
-                  {"name":"Eddard Stark"},
+                  {
+                     "name":"Eddard Stark",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Ice"
+                     }
+                  },
                   {"name":"Theon Greyjoy"},
                   {"name":"Bran Stark"},
                   {"name":"Robb Stark"},
@@ -206,7 +233,13 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Jon Arryn", "alive":false, "title":"Hand"},
+                  {
+                     "name":"Jon Arryn",
+                     "alive":false,
+                     "title":"Hand",
+                     "mannerOfDeath":"Poison",
+                     "killedBy":"Lysa Arryn"
+                  },
                   {"name":"Cersei Lannister"},
                   {"name":"Jaime Lannister"}
                ]
@@ -218,7 +251,13 @@
                "subLocation":"Winterfell",
                "characters":[
                   {"name":"Catelyn Stark"},
-                  {"name":"Eddard Stark"}
+                  {
+                     "name":"Eddard Stark",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Ice"
+                     }
+                  }
                ]
             },
             {
@@ -253,7 +292,13 @@
                   {"name":"Maester Luwin"},
                   {"name":"Summer"},
                   {"name":"Arya Stark"},
-                  {"name":"Joffrey Baratheon"},
+                  {
+                     "name":"Joffrey Baratheon",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Lion's Tooth"
+                     }
+                  },
                   {"name":"Sandor Clegane"},
                   {"name":"Rickon Stark"},
                   {"name":"Eddard Stark"},
@@ -287,8 +332,22 @@
                "subLocation":"Winterfell",
                "characters":[
                   {"name":"Jaime Lannister"},
-                  {"name":"Tyrion Lannister"},
-                  {"name":"Ros"}
+                  {
+                     "name":"Tyrion Lannister",
+                     "sex":{
+                        "with":["Ros"],
+                        "type":"paid",
+                        "when":"present"
+                     }
+                  },
+                  {
+                     "name":"Ros",
+                     "sex":{
+                        "with":["Tyrion Lannister"],
+                        "type":"paid",
+                        "when":"present"
+                     }
+                  }
                ]
             },
             {
@@ -417,8 +476,24 @@
                "sceneEnd":"0:57:48",
                "location":"Pentos",
                "characters":[
-                  {"name":"Khal Drogo", "title":"Khal"},
-                  {"name":"Daenerys Targaryen", "title":"Khaleesi"}
+                  {
+                     "name":"Khal Drogo",
+                     "title":"Khal",
+                     "sex":{
+                        "with":["Daenerys Targaryen"],
+                        "when":"present",
+                        "type":"rape"
+                     }
+                  },
+                  {
+                     "name":"Daenerys Targaryen",
+                     "title":"Khaleesi",
+                     "sex":{
+                        "with":["Khal Drogo"],
+                        "when":"present",
+                        "type":"rape"
+                     }
+                  }
                ]
             },
             {
@@ -446,8 +521,22 @@
                "characters":[
                   {"name":"Bran Stark"},
                   {"name":"Summer"},
-                  {"name":"Jaime Lannister"},
-                  {"name":"Cersei Lannister"}
+                  {
+                     "name":"Jaime Lannister",
+                     "sex":{
+                        "with":["Cersei Lannister"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Cersei Lannister",
+                     "sex":{
+                        "with":["Jaime Lannister"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  }
                ]
             }
          ]
@@ -487,7 +576,13 @@
                "subLocation":"Winterfell",
                "characters":[
                   {"name":"Tyrion Lannister"},
-                  {"name":"Joffrey Baratheon"},
+                  {
+                     "name":"Joffrey Baratheon",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Lion's Tooth"
+                     }
+                  },
                   {"name":"Sandor Clegane"}
                ]
             },
@@ -531,9 +626,21 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{
+                        "action":"receives",
+                        "name":"Needle"
+                     }
+                  },
                   {"name":"Nymeria"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{
+                        "action":"gives",
+                        "name":"Needle"
+                     }
+                  }
                ]
             },
             {
@@ -586,8 +693,24 @@
                "location":"The Dothraki Sea",
                "subLocation":"Dothraki Camp",
                "characters":[
-                  {"name":"Khal Drogo", "title":"Khal"},
-                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {
+                     "name":"Khal Drogo",
+                     "title":"Khal",
+                     "sex":{
+                        "with":["Daenerys Targaryen"],
+                        "when":"present",
+                        "type":"rape"
+                     }
+                  },
+                  {
+                     "name":"Daenerys Targaryen",
+                     "title":"Khaleesi",
+                     "sex":{
+                        "with":["Khal Drogo"],
+                        "when":"present",
+                        "type":"rape"
+                     }
+                  },
                   {"name":"Drogon", "born":false},
                   {"name":"Rhaegal", "born":false},
                   {"name":"Viserion", "born":false}
@@ -616,7 +739,16 @@
                   {"name":"Bran Stark"},
                   {"name":"Maester Luwin"},
                   {"name":"Robb Stark"},
-                  {"name":"Catspaw Assassin", "alive":false},
+                  {
+                     "name":"Catspaw Assassin",
+                     "alive":false,
+                     "mannerOfDeath":"Mauling",
+                     "killedBy":["Summer"],
+                     "weapon":{
+                        "action":"has",
+                        "name":"Valyrian Steel Dagger"
+                     }
+                  },
                   {"name":"Summer"}
                ]
             },
@@ -697,8 +829,24 @@
                   {"name":"Drogon", "born":false},
                   {"name":"Rhaegal", "born":false},
                   {"name":"Viserion", "born":false},
-                  {"name":"Khal Drogo", "title":"Khal"},
-                  {"name":"Daenerys Targaryen", "title":"Khaleesi"}
+                  {
+                     "name":"Khal Drogo",
+                     "title":"Khal",
+                     "sex":{
+                        "with":["Daenerys Targaryen"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Daenerys Targaryen",
+                     "title":"Khaleesi",
+                     "sex":{
+                        "with":["Khal Drogo"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -709,7 +857,13 @@
                "characters":[
                   {"name":"Sansa Stark"},
                   {"name":"Lady"},
-                  {"name":"Joffrey Baratheon"},
+                  {
+                     "name":"Joffrey Baratheon",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Lion's Tooth"
+                     }
+                  },
                   {"name":"Sandor Clegane"},
                   {"name":"Ilyn Payne"}
                ]
@@ -722,7 +876,13 @@
                "characters":[
                   {"name":"Arya Stark"},
                   {"name":"Mycah"},
-                  {"name":"Joffrey Baratheon"},
+                  {
+                     "name":"Joffrey Baratheon",
+                     "weapon":{
+                        "action":"loses",
+                        "name":"Lion's Tooth"
+                     }
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Nymeria"}
                ]
@@ -770,7 +930,12 @@
                "subLocation":"Crossroads Inn",
                "characters":[
                   {"name":"Sandor Clegane"},
-                  {"name":"Mycah", "alive":false},
+                  {
+                     "name":"Mycah",
+                     "alive":false,
+                     "mannerOfDeath":"Horse",
+                     "killedBy":["Sandor Clegane"]
+                  },
                   {"name":"Eddard Stark"}
                ]
             },
@@ -811,7 +976,12 @@
                "subLocation":"Crossroads Inn",
                "characters":[
                   {"name":"Eddard Stark"},
-                  {"name":"Lady", "alive":false}
+                  {
+                     "name":"Lady",
+                     "alive":false,
+                     "mannerOfDeath":"Stab",
+                     "killedBy":["Eddard Stark"]
+                  }
                ]
             },
             {
@@ -904,7 +1074,13 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Needle"
+                     }
+                  },
                   {"name":"Eddard Stark", "title":"Hand"}
                ]
             },
@@ -925,10 +1101,22 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Rodrik Cassel"},
+                  {
+                     "name":"Rodrik Cassel",
+                     "weapon":{
+                        "action":"gives",
+                        "name":"Valyrian Steel Dagger"
+                     }
+                  },
                   {"name":"Catelyn Stark"},
                   {"name":"Petyr Baelish"},
-                  {"name":"Lord Varys"}
+                  {
+                     "name":"Lord Varys",
+                     "weapon":{
+                        "action":"receives",
+                        "name":"Valyrian Steel Dagger"
+                     }
+                  }
                ]
             },
             {
@@ -1105,8 +1293,24 @@
                   {"name":"Drogon", "born":false},
                   {"name":"Rhaegal", "born":false},
                   {"name":"Viserion", "born":false},
-                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
-                  {"name":"Khal Drogo", "title":"Khal"}
+                  {
+                     "name":"Daenerys Targaryen",
+                     "title":"Khaleesi",
+                     "sex":{
+                        "with":["Khal Drogo"],
+                        "when":"past",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Khal Drogo",
+                     "title":"Khal",
+                     "sex":{
+                        "with":["Daenerys Targaryen"],
+                        "when":"past",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -1235,8 +1439,22 @@
                "sceneEnd":"0:17:10",
                "location":"Vaes Dothrak",
                "characters":[
-                  {"name":"Viserys Targaryen"},
-                  {"name":"Doreah"}
+                  {
+                     "name":"Viserys Targaryen",
+                     "sex":{
+                        "with":["Doreah"],
+                        "when":"present",
+                        "type":"paid"
+                     }
+                  },
+                  {
+                     "name":"Doreah",
+                     "sex":{
+                        "with":["Viserys Targaryen"],
+                        "when":"present",
+                        "type":"paid"
+                     }
+                  }
                ]
             },
             {
@@ -1442,7 +1660,12 @@
                   {"name":"Arya Stark"},
                   {"name":"Sandor Clegane"},
                   {"name":"Gregor Clegane"},
-                  {"name":"Hugh of the Vale", "alive":false},
+                  {
+                     "name":"Hugh of the Vale",
+                     "alive":false,
+                     "mannerOfDeath":"Throat stab",
+                     "killedBy":["Gregor Clegane"]
+                  },
                   {"name":"Renly Baratheon"}
                ]
             },
@@ -1454,7 +1677,14 @@
                "characters":[
                   {"name":"Jory Cassel"},
                   {"name":"Cersei Lannister"},
-                  {"name":"Eddard Stark", "title":"Hand"}
+                  {
+                     "name":"Eddard Stark",
+                     "title":"Hand",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Valyrian Steel Dagger"
+                     }
+                  }
                ]
             },
             {
@@ -1557,6 +1787,7 @@
                "location":"The Vale",
                "subLocation":"Eastern Road",
                "characters":[
+                  {"name":"Marillion"},
                   {"name":"Tyrion Lannister"},
                   {"name":"Catelyn Stark"},
                   {"name":"Rodrik Cassel"},
@@ -1580,8 +1811,22 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Ros"},
-                  {"name":"Theon Greyjoy"}
+                  {
+                     "name":"Ros",
+                     "sex":{
+                        "with":["Theon Greyjoy"],
+                        "when":"present",
+                        "type":"paid"
+                     }
+                  },
+                  {
+                     "name":"Theon Greyjoy",
+                     "sex":{
+                        "with":["Ros"],
+                        "when":"present",
+                        "type":"paid"
+                     }
+                  }
                ]
             },
             {
@@ -1709,7 +1954,9 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Eddard Stark"}
+                  {
+                     "name":"Eddard Stark"
+                  }
                ]
             },
             {
@@ -1718,7 +1965,13 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Eddard Stark"},
+                  {
+                     "name":"Eddard Stark",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Valyrian Steel Dagger"
+                     }
+                  },
                   {"name":"Jory Cassel"},
                   {"name":"Petyr Baelish"}
                ]
@@ -1752,8 +2005,22 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Renly Baratheon"},
-                  {"name":"Loras Tyrell"}
+                  {
+                     "name":"Renly Baratheon",
+                     "sex":{
+                        "with":["Loras Tyrell"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Loras Tyrell",
+                     "sex":{
+                        "with":["Renly Baratheon"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -1794,7 +2061,12 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Eddard Stark"},
-                  {"name":"Jory Cassel", "alive":false},
+                  {
+                     "name":"Jory Cassel",
+                     "alive":false,
+                     "mannerOfDeath":"Eye stab",
+                     "killedBy":["Jaime Lannister"]
+                  },
                   {"name":"Jaime Lannister"},
                   {"name":"Petyr Baelish"}
                ]
@@ -1879,8 +2151,18 @@
                "characters":[
                   {"name":"Bran Stark"},
                   {"name":"Osha"},
-                  {"name":"Stiv", "alive":false},
-                  {"name":"Wallen", "alive":false},
+                  {
+                     "name":"Stiv",
+                     "alive":false,
+                     "mannerOfDeath":"Arrow",
+                     "killedBy":["Theon Greyjoy"]
+                  },
+                  {
+                     "name":"Wallen",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":["Robb Stark"]
+                  },
                   {"name":"Robb Stark"},
                   {"name":"Theon Greyjoy"}
                ]
@@ -1989,7 +2271,12 @@
                "subLocation":"The Eyrie",
                "characters":[
                   {"name":"Bronn"},
-                  {"name":"Vardis Egen", "alive":false},
+                  {
+                     "name":"Vardis Egen",
+                     "alive":false,
+                     "mannerOfDeath":"Neck stab",
+                     "killedBy":["Bronn"]
+                  },
                   {"name":"Tyrion Lannister"},
                   {"name":"Lysa Arryn"},
                   {"name":"Robin Arryn"},
@@ -2039,7 +2326,12 @@
                   {"name":"Khal Drogo", "title":"Khal"},
                   {"name":"Doreah"},
                   {"name":"Jorah Mormont"},
-                  {"name":"Viserys Targaryen", "alive":false},
+                  {
+                     "name":"Viserys Targaryen",
+                     "alive":false,
+                     "mannerOfDeath":"Molten gold",
+                     "killedBy":["Khal Drogo"]
+                  },
                   {"name":"Irri"},
                   {"name":"Qotho"}
                ]
@@ -2088,8 +2380,22 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Petyr Baelish"},
-                  {"name":"Ros"},
-                  {"name":"Armeca"}
+                  {
+                     "name":"Ros",
+                     "sex":{
+                        "with":["Armeca"],
+                        "when":"present",
+                        "type":"paid"
+                     }
+                  },
+                  {
+                     "name":"Armeca",
+                     "sex":{
+                        "with":["Ros"],
+                        "when":"present",
+                        "type":"paid"
+                     }
+                  }
                ]
             },
             {
@@ -2211,7 +2517,13 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jeor Mormont"},
+                  {
+                     "name":"Jeor Mormont",
+                     "weapon":{
+                        "name":"Longclaw",
+                        "action":"has"
+                     }
+                  },
                   {"name":"Jon Snow"},
                   {"name":"Pypar"},
                   {"name":"Samwell Tarly"},
@@ -2309,7 +2621,12 @@
                "characters":[
                   {"name":"Eddard Stark", "title":"Hand"},
                   {"name":"Royal Steward"},
-                  {"name":"Robert Baratheon", "alive":false}
+                  {
+                     "name":"Robert Baratheon",
+                     "alive":false,
+                     "mannerOfDeath":"Boar",
+                     "killedBy":["Boar"]
+                  }
                ]
             },
             {
@@ -2400,7 +2717,12 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Vayon Poole", "alive":false}
+                  {
+                     "name":"Vayon Poole",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":["Lannister Guard"]
+                  }
                ]
             },
             {
@@ -2419,7 +2741,11 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Syrio Forel", "alive":false},
+                  {
+                     "name":"Syrio Forel",
+                     "alive":false,
+                     "killedBy":["Meryn Trant"]
+                  },
                   {"name":"Arya Stark"},
                   {"name":"Meryn Trant"}
                ]
@@ -2450,7 +2776,12 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Arya Stark"},
-                  {"name":"Red Keep Stableboy", "alive":false}
+                  {
+                     "name":"Red Keep Stableboy",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":["Arya Stark"]
+                  }
                ]
             },
             {
@@ -2583,7 +2914,12 @@
                "characters":[
                   {"name":"Jon Snow"},
                   {"name":"Ghost"},
-                  {"name":"Othor", "alive":false},
+                  {
+                     "name":"Othor",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":["Jon Snow"]
+                  },
                   {"name":"Jeor Mormont"}
                ]
             },
@@ -2614,7 +2950,12 @@
                   {"name":"Irri"},
                   {"name":"Rakharo"},
                   {"name":"Khal Drogo", "title":"Khal"},
-                  {"name":"Mago", "alive":false},
+                  {
+                     "name":"Mago",
+                     "alive":false,
+                     "mannerOfDeath":"Tongue removal",
+                     "killedBy":["Khal Drogo"]
+                  },
                   {"name":"Qotho"},
                   {"name":"Mirri Maz Duur"}
                ]
@@ -2794,7 +3135,8 @@
                   {"name":"Lord Varys"},
                   {"name":"Petyr Baelish"},
                   {"name":"Barristan Selmy"},
-                  {"name":"Royal Steward"}
+                  {"name":"Royal Steward"},
+                  {"name":"Meryn Trant"}
                ]
             }
          ]
@@ -2866,8 +3208,20 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
-                  {"name":"Jeor Mormont"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{
+                        "name":"Longclaw",
+                        "action":"receives"
+                     }
+                  },
+                  {
+                     "name":"Jeor Mormont",
+                     "weapon":{
+                        "name":"Longclaw",
+                        "action":"gives"
+                     }
+                  }
                ]
             },
             {
@@ -2876,7 +3230,13 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{
+                        "name":"Longclaw",
+                        "action":"has"
+                     }
+                  }
                ]
             },
             {
@@ -2885,7 +3245,13 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{
+                        "name":"Longclaw",
+                        "action":"has"
+                     }
+                  },
                   {"name":"Pypar"},
                   {"name":"Samwell Tarly"},
                   {"name":"Grenn"},
@@ -2961,9 +3327,23 @@
                "location":"The Riverlands",
                "subLocation":"Lannister Camp",
                "characters":[
-                  {"name":"Tyrion Lannister"},
+                  {
+                     "name":"Tyrion Lannister",
+                     "sex":{
+                        "with":["Shae"],
+                        "when":"present",
+                        "type":"paid"
+                     }
+                  },
                   {"name":"Bronn"},
-                  {"name":"Shae"}
+                  {
+                     "name":"Shae",
+                     "sex":{
+                        "with":["Tyrion Lannister"],
+                        "when":"present",
+                        "type":"paid"
+                     }
+                  }
                ]
             },
             {
@@ -2976,7 +3356,12 @@
                   {"name":"Jorah Mormont"},
                   {"name":"Doreah"},
                   {"name":"Mirri Maz Duur"},
-                  {"name":"Qotho", "alive":false},
+                  {
+                     "name":"Qotho",
+                     "alive":false,
+                     "mannerOfDeath":"Face stab",
+                     "killedBy":["Jorah Mormont"]
+                  },
                   {"name":"Irri"},
                   {"name":"Rakharo"}
                ]
@@ -2987,8 +3372,22 @@
                "location":"The Riverlands",
                "subLocation":"Lannister Camp",
                "characters":[
-                  {"name":"Tyrion Lannister"},
-                  {"name":"Shae"},
+                  {
+                     "name":"Tyrion Lannister",
+                     "sex":{
+                        "with":["Shae"],
+                        "when":"future",
+                        "type":"paid"
+                     }
+                  },
+                  {
+                     "name":"Shae",
+                     "sex":{
+                        "with":["Tyrion Lannister"],
+                        "when":"future",
+                        "type":"paid"
+                     }
+                  },
                   {"name":"Bronn"}
                ]
             },
@@ -3078,7 +3477,13 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{
+                        "name":"Needle",
+                        "action":"has"
+                     }
+                  },
                   {"name":"King's Landing Baker"}
                ]
             },
@@ -3088,8 +3493,20 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Arya Stark"},
-                  {"name":"Eddard Stark", "title":"Hand", "alive":false},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{
+                        "name":"Needle",
+                        "action":"has"
+                     }
+                  },
+                  {
+                     "name":"Eddard Stark",
+                     "title":"Hand",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":["Ilyn Payne"]
+                  },
                   {"name":"Yoren"},
                   {"name":"Sansa Stark"},
                   {"name":"Petyr Baelish"},
@@ -3098,7 +3515,13 @@
                   {"name":"Grand Maester Pycelle"},
                   {"name":"Lord Varys"},
                   {"name":"Sandor Clegane"},
-                  {"name":"Ilyn Payne"}
+                  {
+                     "name":"Ilyn Payne",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Ice"
+                     }
+                  }
                ]
             }
          ]
@@ -3124,7 +3547,13 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Sandor Clegane"},
-                  {"name":"Ilyn Payne"},
+                  {
+                     "name":"Ilyn Payne",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Ice"
+                     }
+                  },
                   {"name":"Eddard Stark", "alive":false},
                   {"name":"Arya Stark"},
                   {"name":"Yoren"},
@@ -3208,7 +3637,13 @@
                   {"name":"Cersei Lannister"},
                   {"name":"Joffrey Baratheon", "title":"King"},
                   {"name":"Sandor Clegane"},
-                  {"name":"Ilyn Payne"},
+                  {
+                     "name":"Ilyn Payne",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Ice"
+                     }
+                  },
                   {"name":"Meryn Trant"}
                ]
             },
@@ -3223,7 +3658,11 @@
                   {"name":"Sansa Stark"},
                   {"name":"Meryn Trant"},
                   {"name":"Eddard Stark", "alive":false},
-                  {"name":"Septa Mordane", "alive":false}
+                  {
+                     "name":"Septa Mordane",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation"
+                  }
                ]
             },
             {
@@ -3232,7 +3671,7 @@
                "location":"The Riverlands",
                "subLocation":"Camp of the North",
                "characters":[
-                  {"name":"Robb Stark"},
+                  {"name":"Robb Stark", "title":"King"},
                   {"name":"Catelyn Stark"},
                   {"name":"Rodrik Cassel"},
                   {"name":"Theon Greyjoy"},
@@ -3256,8 +3695,22 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Cersei Lannister"},
-                  {"name":"Lancel Lannister"}
+                  {
+                     "name":"Cersei Lannister",
+                     "sex":{
+                        "with":["Lancel Lannister"],
+                        "when":"past",
+                        "type":"incest"
+                     }
+                  },
+                  {
+                     "name":"Lancel Lannister",
+                     "sex":{
+                        "with":["Cersei Lannister"],
+                        "when":"past",
+                        "type":"incest"
+                     }
+                  }
                ]
             },
             {
@@ -3289,7 +3742,11 @@
                "characters":[
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
                   {"name":"Jorah Mormont"},
-                  {"name":"Rhaego", "alive":false},
+                  {
+                     "name":"Rhaego",
+                     "alive":false,
+                     "mannerOfDeath":"Malformed Birth"
+                  },
                   {"name":"Mirri Maz Duur"}
                ]
             },
@@ -3332,8 +3789,22 @@
                "location":"The Riverlands",
                "subLocation":"Lannister Camp",
                "characters":[
-                  {"name":"Shae"},
-                  {"name":"Tyrion Lannister"}
+                  {
+                     "name":"Shae",
+                     "sex":{
+                        "with":["Tyrion Lannister"],
+                        "when":"future",
+                        "type":"paid"
+                     }
+                  },
+                  {
+                     "name":"Tyrion Lannister",
+                     "sex":{
+                        "with":["Shae"],
+                        "when":"future",
+                        "type":"paid"
+                     }
+                  }
                ]
             },
             {
@@ -3342,7 +3813,13 @@
                "location":"The North",
                "subLocation":"The Gift",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Longclaw"
+                     }
+                  },
                   {"name":"Ghost"},
                   {"name":"Pypar"},
                   {"name":"Samwell Tarly"},
@@ -3364,7 +3841,13 @@
                "location":"The Red Waste",
                "characters":[
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
-                  {"name":"Khal Drogo", "title":"Khal", "alive":false}
+                  {
+                     "name":"Khal Drogo",
+                     "title":"Khal",
+                     "alive":false,
+                     "mannerOfDeath":"Suffocation",
+                     "killedBy":["Daenerys Targaryen"]
+                  }
                ]
             },
             {
@@ -3373,8 +3856,22 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Grand Maester Pycelle"},
-                  {"name":"Ros"}
+                  {
+                     "name":"Grand Maester Pycelle",
+                     "sex":{
+                        "with":["Ros"],
+                        "when":"past",
+                        "type":"paid"
+                     }
+                  },
+                  {
+                     "name":"Ros",
+                     "sex":{
+                        "with":["Grand Maester Pycelle"],
+                        "when":"past",
+                        "type":"paid"
+                     }
+                  }
                ]
             },
             {
@@ -3404,7 +3901,13 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Yoren"},
-                  {"name":"Arya Stark"}
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Needle"
+                     }
+                  }
                ]
             },
             {
@@ -3414,7 +3917,13 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Yoren"},
-                  {"name":"Arya Stark"}
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Needle"
+                     }
+                  }
                ]
             },
             {
@@ -3423,7 +3932,13 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Needle"
+                     }
+                  },
                   {"name":"Hot Pie"},
                   {"name":"Lommy Greenhands"},
                   {"name":"Gendry"},
@@ -3447,7 +3962,13 @@
                "subLocation":"Castle Black",
                "characters":[
                   {"name":"Jeor Mormont"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{
+                        "action":"has",
+                        "name":"Longclaw"
+                     }
+                  }
                ]
             },
             {
@@ -3462,7 +3983,12 @@
                   {"name":"Rhaegal", "born":false},
                   {"name":"Viserion", "born":false},
                   {"name":"Jorah Mormont"},
-                  {"name":"Mirri Maz Duur", "alive":false}
+                  {
+                     "name":"Mirri Maz Duur",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":["Daenerys Targaryen"]
+                  }
                ]
             },
             {
