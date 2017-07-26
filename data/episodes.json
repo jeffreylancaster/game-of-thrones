@@ -187,10 +187,7 @@
                   },
                   {
                      "name":"Eddard Stark",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Ice"
-                     }
+                     "weapon":{"action":"has", "name":"Ice"}
                   },
                   {"name":"Robb Stark"},
                   {"name":"Theon Greyjoy"},
@@ -209,10 +206,7 @@
                   {"name":"Jon Snow"},
                   {
                      "name":"Eddard Stark",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Ice"
-                     }
+                     "weapon":{"action":"has", "name":"Ice"}
                   },
                   {"name":"Theon Greyjoy"},
                   {"name":"Bran Stark"},
@@ -253,10 +247,7 @@
                   {"name":"Catelyn Stark"},
                   {
                      "name":"Eddard Stark",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Ice"
-                     }
+                     "weapon":{"action":"has", "name":"Ice"}
                   }
                ]
             },
@@ -294,10 +285,7 @@
                   {"name":"Arya Stark"},
                   {
                      "name":"Joffrey Baratheon",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Lion's Tooth"
-                     }
+                     "weapon":{"action":"has", "name":"Lion's Tooth"}
                   },
                   {"name":"Sandor Clegane"},
                   {"name":"Rickon Stark"},
@@ -578,10 +566,7 @@
                   {"name":"Tyrion Lannister"},
                   {
                      "name":"Joffrey Baratheon",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Lion's Tooth"
-                     }
+                     "weapon":{"action":"has", "name":"Lion's Tooth"}
                   },
                   {"name":"Sandor Clegane"}
                ]
@@ -628,18 +613,12 @@
                "characters":[
                   {
                      "name":"Arya Stark",
-                     "weapon":{
-                        "action":"receives",
-                        "name":"Needle"
-                     }
+                     "weapon":{"action":"receives", "name":"Needle"}
                   },
                   {"name":"Nymeria"},
                   {
                      "name":"Jon Snow",
-                     "weapon":{
-                        "action":"gives",
-                        "name":"Needle"
-                     }
+                     "weapon":{"action":"gives", "name":"Needle"}
                   }
                ]
             },
@@ -744,10 +723,7 @@
                      "alive":false,
                      "mannerOfDeath":"Mauling",
                      "killedBy":["Summer"],
-                     "weapon":{
-                        "action":"has",
-                        "name":"Valyrian Steel Dagger"
-                     }
+                     "weapon":{"action":"has", "name":"Valyrian Steel Dagger"}
                   },
                   {"name":"Summer"}
                ]
@@ -859,10 +835,7 @@
                   {"name":"Lady"},
                   {
                      "name":"Joffrey Baratheon",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Lion's Tooth"
-                     }
+                     "weapon":{"action":"has", "name":"Lion's Tooth"}
                   },
                   {"name":"Sandor Clegane"},
                   {"name":"Ilyn Payne"}
@@ -878,10 +851,7 @@
                   {"name":"Mycah"},
                   {
                      "name":"Joffrey Baratheon",
-                     "weapon":{
-                        "action":"loses",
-                        "name":"Lion's Tooth"
-                     }
+                     "weapon":{"action":"loses", "name":"Lion's Tooth"}
                   },
                   {"name":"Sansa Stark"},
                   {"name":"Nymeria"}
@@ -1076,10 +1046,7 @@
                "characters":[
                   {
                      "name":"Arya Stark",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Needle"
-                     }
+                     "weapon":{"action":"has", "name":"Needle"}
                   },
                   {"name":"Eddard Stark", "title":"Hand"}
                ]
@@ -1103,19 +1070,13 @@
                "characters":[
                   {
                      "name":"Rodrik Cassel",
-                     "weapon":{
-                        "action":"gives",
-                        "name":"Valyrian Steel Dagger"
-                     }
+                     "weapon":{"action":"gives", "name":"Valyrian Steel Dagger"}
                   },
                   {"name":"Catelyn Stark"},
                   {"name":"Petyr Baelish"},
                   {
                      "name":"Lord Varys",
-                     "weapon":{
-                        "action":"receives",
-                        "name":"Valyrian Steel Dagger"
-                     }
+                     "weapon":{"action":"receives", "name":"Valyrian Steel Dagger"}
                   }
                ]
             },
@@ -1680,10 +1641,7 @@
                   {
                      "name":"Eddard Stark",
                      "title":"Hand",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Valyrian Steel Dagger"
-                     }
+                     "weapon":{"action":"has", "name":"Valyrian Steel Dagger"}
                   }
                ]
             },
@@ -1967,10 +1925,7 @@
                "characters":[
                   {
                      "name":"Eddard Stark",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Valyrian Steel Dagger"
-                     }
+                     "weapon":{"action":"has", "name":"Valyrian Steel Dagger"}
                   },
                   {"name":"Jory Cassel"},
                   {"name":"Petyr Baelish"}
@@ -2519,10 +2474,7 @@
                "characters":[
                   {
                      "name":"Jeor Mormont",
-                     "weapon":{
-                        "name":"Longclaw",
-                        "action":"has"
-                     }
+                     "weapon":{"action":"has", "name":"Longclaw"}
                   },
                   {"name":"Jon Snow"},
                   {"name":"Pypar"},
@@ -3210,17 +3162,11 @@
                "characters":[
                   {
                      "name":"Jon Snow",
-                     "weapon":{
-                        "name":"Longclaw",
-                        "action":"receives"
-                     }
+                     "weapon":{"action":"receives", "name":"Longclaw"}
                   },
                   {
                      "name":"Jeor Mormont",
-                     "weapon":{
-                        "name":"Longclaw",
-                        "action":"gives"
-                     }
+                     "weapon":{"action":"gives", "name":"Longclaw"}
                   }
                ]
             },
@@ -3232,10 +3178,7 @@
                "characters":[
                   {
                      "name":"Jon Snow",
-                     "weapon":{
-                        "name":"Longclaw",
-                        "action":"has"
-                     }
+                     "weapon":{"action":"has", "name":"Longclaw"}
                   }
                ]
             },
@@ -3247,10 +3190,7 @@
                "characters":[
                   {
                      "name":"Jon Snow",
-                     "weapon":{
-                        "name":"Longclaw",
-                        "action":"has"
-                     }
+                     "weapon":{"action":"has", "name":"Longclaw"}
                   },
                   {"name":"Pypar"},
                   {"name":"Samwell Tarly"},
@@ -3479,10 +3419,7 @@
                "characters":[
                   {
                      "name":"Arya Stark",
-                     "weapon":{
-                        "name":"Needle",
-                        "action":"has"
-                     }
+                     "weapon":{"action":"has", "name":"Needle"}
                   },
                   {"name":"King's Landing Baker"}
                ]
@@ -3495,10 +3432,7 @@
                "characters":[
                   {
                      "name":"Arya Stark",
-                     "weapon":{
-                        "name":"Needle",
-                        "action":"has"
-                     }
+                     "weapon":{"action":"has", "name":"Needle"}
                   },
                   {
                      "name":"Eddard Stark",
@@ -3517,10 +3451,7 @@
                   {"name":"Sandor Clegane"},
                   {
                      "name":"Ilyn Payne",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Ice"
-                     }
+                     "weapon":{"action":"has", "name":"Ice"}
                   }
                ]
             }
@@ -3549,10 +3480,7 @@
                   {"name":"Sandor Clegane"},
                   {
                      "name":"Ilyn Payne",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Ice"
-                     }
+                     "weapon":{"action":"has", "name":"Ice"}
                   },
                   {"name":"Eddard Stark", "alive":false},
                   {"name":"Arya Stark"},
@@ -3639,10 +3567,7 @@
                   {"name":"Sandor Clegane"},
                   {
                      "name":"Ilyn Payne",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Ice"
-                     }
+                     "weapon":{"action":"has", "name":"Ice"}
                   },
                   {"name":"Meryn Trant"}
                ]
@@ -3815,10 +3740,7 @@
                "characters":[
                   {
                      "name":"Jon Snow",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Longclaw"
-                     }
+                     "weapon":{"action":"has", "name":"Longclaw"}
                   },
                   {"name":"Ghost"},
                   {"name":"Pypar"},
@@ -3903,10 +3825,7 @@
                   {"name":"Yoren"},
                   {
                      "name":"Arya Stark",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Needle"
-                     }
+                     "weapon":{"action":"has", "name":"Needle"}
                   }
                ]
             },
@@ -3919,10 +3838,7 @@
                   {"name":"Yoren"},
                   {
                      "name":"Arya Stark",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Needle"
-                     }
+                     "weapon":{"action":"has", "name":"Needle"}
                   }
                ]
             },
@@ -3934,10 +3850,7 @@
                "characters":[
                   {
                      "name":"Arya Stark",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Needle"
-                     }
+                     "weapon":{"action":"has", "name":"Needle"}
                   },
                   {"name":"Hot Pie"},
                   {"name":"Lommy Greenhands"},
@@ -3964,10 +3877,7 @@
                   {"name":"Jeor Mormont"},
                   {
                      "name":"Jon Snow",
-                     "weapon":{
-                        "action":"has",
-                        "name":"Longclaw"
-                     }
+                     "weapon":{"action":"has", "name":"Longclaw"}
                   }
                ]
             },
@@ -33270,10 +33180,7 @@
                "characters":[
                   {
                      "name":"Arya Stark",
-                     "weapon": {
-                        "action": "has",
-                        "name": "Needle"
-                     }
+                     "weapon":{"action":"has", "name":"Needle"}
                   }
                ]
             },
@@ -33285,10 +33192,7 @@
                "characters":[
                   {
                      "name":"Arya Stark",
-                     "weapon": {
-                        "action": "has",
-                        "name": "Needle"
-                     }
+                     "weapon":{"action":"has", "name":"Needle"}
                   },
                   {"name":"Nymeria"}
                ]
