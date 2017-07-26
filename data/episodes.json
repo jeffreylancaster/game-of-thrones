@@ -722,7 +722,7 @@
                      "name":"Catspaw Assassin",
                      "alive":false,
                      "mannerOfDeath":"Mauling",
-                     "killedBy":["Summer"],
+                     "killedBy":"Summer",
                      "weapon":{"action":"has", "name":"Valyrian Steel Dagger"}
                   },
                   {"name":"Summer"}
@@ -904,7 +904,7 @@
                      "name":"Mycah",
                      "alive":false,
                      "mannerOfDeath":"Horse",
-                     "killedBy":["Sandor Clegane"]
+                     "killedBy":"Sandor Clegane"
                   },
                   {"name":"Eddard Stark"}
                ]
@@ -950,7 +950,7 @@
                      "name":"Lady",
                      "alive":false,
                      "mannerOfDeath":"Stab",
-                     "killedBy":["Eddard Stark"]
+                     "killedBy":"Eddard Stark"
                   }
                ]
             },
@@ -1625,7 +1625,7 @@
                      "name":"Hugh of the Vale",
                      "alive":false,
                      "mannerOfDeath":"Throat stab",
-                     "killedBy":["Gregor Clegane"]
+                     "killedBy":"Gregor Clegane"
                   },
                   {"name":"Renly Baratheon"}
                ]
@@ -2020,7 +2020,7 @@
                      "name":"Jory Cassel",
                      "alive":false,
                      "mannerOfDeath":"Eye stab",
-                     "killedBy":["Jaime Lannister"]
+                     "killedBy":"Jaime Lannister"
                   },
                   {"name":"Jaime Lannister"},
                   {"name":"Petyr Baelish"}
@@ -2110,13 +2110,13 @@
                      "name":"Stiv",
                      "alive":false,
                      "mannerOfDeath":"Arrow",
-                     "killedBy":["Theon Greyjoy"]
+                     "killedBy":"Theon Greyjoy"
                   },
                   {
                      "name":"Wallen",
                      "alive":false,
                      "mannerOfDeath":"Throat slash",
-                     "killedBy":["Robb Stark"]
+                     "killedBy":"Robb Stark"
                   },
                   {"name":"Robb Stark"},
                   {"name":"Theon Greyjoy"}
@@ -2230,7 +2230,7 @@
                      "name":"Vardis Egen",
                      "alive":false,
                      "mannerOfDeath":"Neck stab",
-                     "killedBy":["Bronn"]
+                     "killedBy":"Bronn"
                   },
                   {"name":"Tyrion Lannister"},
                   {"name":"Lysa Arryn"},
@@ -2285,7 +2285,7 @@
                      "name":"Viserys Targaryen",
                      "alive":false,
                      "mannerOfDeath":"Molten gold",
-                     "killedBy":["Khal Drogo"]
+                     "killedBy":"Khal Drogo"
                   },
                   {"name":"Irri"},
                   {"name":"Qotho"}
@@ -2577,7 +2577,7 @@
                      "name":"Robert Baratheon",
                      "alive":false,
                      "mannerOfDeath":"Boar",
-                     "killedBy":["Boar"]
+                     "killedBy":"Boar"
                   }
                ]
             },
@@ -2673,7 +2673,7 @@
                      "name":"Vayon Poole",
                      "alive":false,
                      "mannerOfDeath":"Chest stab",
-                     "killedBy":["Lannister Guard"]
+                     "killedBy":"Lannister Guard"
                   }
                ]
             },
@@ -2696,7 +2696,7 @@
                   {
                      "name":"Syrio Forel",
                      "alive":false,
-                     "killedBy":["Meryn Trant"]
+                     "killedBy":"Meryn Trant"
                   },
                   {"name":"Arya Stark"},
                   {"name":"Meryn Trant"}
@@ -2732,7 +2732,7 @@
                      "name":"Red Keep Stableboy",
                      "alive":false,
                      "mannerOfDeath":"Chest stab",
-                     "killedBy":["Arya Stark"]
+                     "killedBy":"Arya Stark"
                   }
                ]
             },
@@ -2870,7 +2870,7 @@
                      "name":"Othor",
                      "alive":false,
                      "mannerOfDeath":"Burning",
-                     "killedBy":["Jon Snow"]
+                     "killedBy":"Jon Snow"
                   },
                   {"name":"Jeor Mormont"}
                ]
@@ -2906,7 +2906,7 @@
                      "name":"Mago",
                      "alive":false,
                      "mannerOfDeath":"Tongue removal",
-                     "killedBy":["Khal Drogo"]
+                     "killedBy":"Khal Drogo"
                   },
                   {"name":"Qotho"},
                   {"name":"Mirri Maz Duur"}
@@ -3300,7 +3300,7 @@
                      "name":"Qotho",
                      "alive":false,
                      "mannerOfDeath":"Face stab",
-                     "killedBy":["Jorah Mormont"]
+                     "killedBy":"Jorah Mormont"
                   },
                   {"name":"Irri"},
                   {"name":"Rakharo"}
@@ -3439,7 +3439,7 @@
                      "title":"Hand",
                      "alive":false,
                      "mannerOfDeath":"Decapitation",
-                     "killedBy":["Ilyn Payne"]
+                     "killedBy":"Ilyn Payne"
                   },
                   {"name":"Yoren"},
                   {"name":"Sansa Stark"},
@@ -3768,7 +3768,7 @@
                      "title":"Khal",
                      "alive":false,
                      "mannerOfDeath":"Suffocation",
-                     "killedBy":["Daenerys Targaryen"]
+                     "killedBy":"Daenerys Targaryen"
                   }
                ]
             },
@@ -3897,7 +3897,7 @@
                      "name":"Mirri Maz Duur",
                      "alive":false,
                      "mannerOfDeath":"Burning",
-                     "killedBy":["Daenerys Targaryen"]
+                     "killedBy":"Daenerys Targaryen"
                   }
                ]
             },
@@ -32991,22 +32991,18 @@
                "characters":[
                   {
                      "name":"Grey Worm",
-                     "sex": {
-                        "with":[
-                           "Missandei"
-                        ],
-                        "when": "present",
-                        "type": "love"
+                     "sex":{
+                        "with":["Missandei"],
+                        "when":"present",
+                        "type":"love"
                      }
                   },
                   {
                      "name":"Missandei",
-                     "sex": {
-                        "with":[
-                           "Grey Worm"
-                        ],
-                        "when": "present",
-                        "type": "love"
+                     "sex":{
+                        "with":["Grey Worm"],
+                        "when":"present",
+                        "type":"love"
                      }
                   }
                ]
