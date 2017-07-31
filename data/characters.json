@@ -454,7 +454,8 @@
             "Loras Tyrell",
             "Mace Tyrell",
             "Margaery Tyrell",
-            "Kevan Lannister"
+            "Kevan Lannister",
+            "Tyene Sand"
          ]
       },
       {
@@ -1247,7 +1248,8 @@
             "Aerys II Targaryen",
             "Jory Cassel",
             "Alton Lannister",
-            "Torrhen Karstark"
+            "Torrhen Karstark",
+            "Olenna Tyrell"
          ],
          "siblings":[
             "Cersei Lannister",
@@ -1330,7 +1332,10 @@
          ],
          "royal":true,
          "killed":"Ros",
-         "killedBy":"Petyr Baelish"
+         "killedBy":[
+            "Petyr Baelish",
+            "Olenna Tyrell"
+         ]
       },
       {
          "characterName":"Jojen Reed",
@@ -2474,7 +2479,11 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxMjgwOTQ3Nl5BMl5BanBnXkFtZTcwMjE2NzE5OQ@@._V1_SY1000_CR0,0,662,1000_AL_.jpg",
          "characterLink":"/character/ch0010188/",
          "actorName":"Diana Rigg",
-         "actorLink":"/name/nm0001671/"
+         "actorLink":"/name/nm0001671/",
+         "killedBy":"Jaime Lannister",
+         "killed":[
+            "Joffrey Baratheon"
+         ]
       },
       {
          "characterName":"Olly",
@@ -3602,7 +3611,8 @@
          "killed":[
             "Areo Hotah",
             "Maester Caleotte"
-         ]
+         ],
+         "killedBy":"Cersei Lannister"
       },
       {
          "characterName":"Tyrion Lannister",

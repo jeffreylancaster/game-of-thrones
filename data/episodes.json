@@ -33804,7 +33804,6 @@
                "sceneStart":"0:50:17",
                "sceneEnd":"0:50:31",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                ]
             },
@@ -33812,7 +33811,6 @@
                "sceneStart":"0:50:31",
                "sceneEnd":"0:51:03",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Obara Sand"},
                   {"name":"Tyene Sand"},
@@ -33823,7 +33821,6 @@
                "sceneStart":"0:51:03",
                "sceneEnd":"0:52:37",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Ellaria Sand"},
                   {"name":"Yara Greyjoy"},
@@ -33834,7 +33831,6 @@
                "sceneStart":"0:52:37",
                "sceneEnd":"0:53:04",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Yara Greyjoy"},
                   {"name":"Theon Greyjoy"}
@@ -33844,7 +33840,6 @@
                "sceneStart":"0:53:04",
                "sceneEnd":"0:53:15",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                ]
             },
@@ -33852,7 +33847,6 @@
                "sceneStart":"0:53:15",
                "sceneEnd":"0:54:05",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Yara Greyjoy"},
                   {"name":"Theon Greyjoy"},
@@ -33863,7 +33857,6 @@
                "sceneStart":"0:54:05",
                "sceneEnd":"0:54:16",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Yara Greyjoy"},
                   {"name":"Theon Greyjoy"},
@@ -33875,7 +33868,6 @@
                "sceneStart":"0:54:16",
                "sceneEnd":"0:54:30",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Ellaria Sand"},
                   {"name":"Tyene Sand"}
@@ -33885,7 +33877,6 @@
                "sceneStart":"0:54:30",
                "sceneEnd":"0:55:00",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Yara Greyjoy"},
                   {"name":"Theon Greyjoy"}
@@ -33895,7 +33886,6 @@
                "sceneStart":"0:55:00",
                "sceneEnd":"0:55:07",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Euron Greyjoy", "title":"King"}
                ]
@@ -33904,7 +33894,6 @@
                "sceneStart":"0:55:07",
                "sceneEnd":"0:55:25",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Euron Greyjoy", "title":"King"},
                   {"name":"Obara Sand"},
@@ -33915,7 +33904,6 @@
                "sceneStart":"0:55:25",
                "sceneEnd":"0:55:29",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Tyene Sand"}
                ]
@@ -33924,7 +33912,6 @@
                "sceneStart":"0:55:29",
                "sceneEnd":"0:55:48",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Euron Greyjoy", "title":"King"},
                   {
@@ -33940,7 +33927,6 @@
                "sceneStart":"0:55:48",
                "sceneEnd":"0:56:03",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Euron Greyjoy", "title":"King"},
                   {
@@ -33955,7 +33941,6 @@
                "sceneStart":"0:56:03",
                "sceneEnd":"0:56:17",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Ellaria Sand"},
                   {"name":"Tyene Sand"}
@@ -33965,7 +33950,6 @@
                "sceneStart":"0:56:17",
                "sceneEnd":"0:56:28",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                ]
             },
@@ -33973,7 +33957,6 @@
                "sceneStart":"0:56:28",
                "sceneEnd":"0:57:12",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Euron Greyjoy", "title":"King"},
                   {"name":"Yara Greyjoy"}
@@ -33983,7 +33966,6 @@
                "sceneStart":"0:57:12",
                "sceneEnd":"0:57:19",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Theon Greyjoy"}
                ]
@@ -33992,7 +33974,6 @@
                "sceneStart":"0:57:19",
                "sceneEnd":"0:58:13",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Euron Greyjoy", "title":"King"},
                   {"name":"Yara Greyjoy"},
@@ -34003,7 +33984,6 @@
                "sceneStart":"0:58:13",
                "sceneEnd":"0:58:20",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Euron Greyjoy", "title":"King"},
                   {"name":"Yara Greyjoy"}
@@ -34013,7 +33993,6 @@
                "sceneStart":"0:58:20",
                "sceneEnd":"0:58:28",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Obara Sand", "alive":false},
                   {"name":"Nymeria Sand", "alive":false}
@@ -34023,7 +34002,6 @@
                "sceneStart":"0:58:28",
                "sceneEnd":"0:58:35",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Theon Greyjoy"}
                ]
@@ -34032,7 +34010,6 @@
                "sceneStart":"0:58:35",
                "sceneEnd":"0:58:41",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Obara Sand", "alive":false},
                   {"name":"Nymeria Sand", "alive":false}
@@ -34042,7 +34019,6 @@
                "sceneStart":"0:58:41",
                "sceneEnd":"0:59:13",
                "location":"The Narrow Sea",
-               "subLocation":"",
                "characters":[
                   {"name":"Theon Greyjoy"}
                ]
@@ -34057,18 +34033,604 @@
          "episodeAirDate":"2017-07-30",
          "episodeDescription":"Daenerys holds court. Cersei returns a gift. Jaime learns from his mistakes.",
          "openingSequenceLocations":[
-
+            "King's Landing",
+            "Dragonstone",
+            "Pyke",
+            "Winterfell",
+            "The Wall",
+            "Oldtown"
          ],
          "scenes":[
-
+            {
+               "sceneStart":"0:03:59",
+               "sceneEnd":"0:04:06",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:04:06",
+               "sceneEnd":"0:05:40",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Qhono"}
+               ]
+            },
+            {
+               "sceneStart":"0:05:40",
+               "sceneEnd":"0:06:25",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "title":"King",
+                     "weapon":{"action":"gives", "name":"Longclaw"}
+                  },
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {
+                     "name":"Qhono",
+                     "weapon":{"action":"receives", "name":"Longclaw"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:06:25",
+               "sceneEnd":"0:07:27",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Qhono"}
+               ]
+            },
+            {
+               "sceneStart":"0:07:27",
+               "sceneEnd":"0:08:03",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Qhono"},
+                  {"name":"Drogon"},
+                  {"name":"Viserion"},
+                  {"name":"Rhaegal"}
+               ]
+            },
+            {
+               "sceneStart":"0:08:03",
+               "sceneEnd":"0:09:48",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Melisandre"},
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:09:48",
+               "sceneEnd":"0:09:54",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Melisandre"},
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:09:54",
+               "sceneEnd":"0:19:15",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Qhono"}
+               ]
+            },
+            {
+               "sceneStart":"0:19:15",
+               "sceneEnd":"0:20:05",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Qhono"},
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:20:05",
+               "sceneEnd":"0:20:25",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:20:25",
+               "sceneEnd":"0:21:11",
+               "location":"The Narrow Sea",
+               "characters":[
+                  {"name":"Theon Greyjoy"},
+                  {"name":"Harrag"}
+               ]
+            },
+            {
+               "sceneStart":"0:21:11",
+               "sceneEnd":"0:21:19",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:21:19",
+               "sceneEnd":"0:22:34",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Euron Greyjoy", "title":"King"},
+                  {"name":"Yara Greyjoy"},
+                  {"name":"Ellaria Sand"},
+                  {"name":"Tyene Sand"}
+               ]
+            },
+            {
+               "sceneStart":"0:22:34",
+               "sceneEnd":"0:22:41",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Euron Greyjoy", "title":"King"},
+                  {"name":"Yara Greyjoy"},
+                  {"name":"Ellaria Sand"},
+                  {"name":"Tyene Sand"}
+               ]
+            },
+            {
+               "sceneStart":"0:22:41",
+               "sceneEnd":"0:25:17",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Euron Greyjoy", "title":"King"},
+                  {"name":"Yara Greyjoy"},
+                  {"name":"Ellaria Sand"},
+                  {"name":"Tyene Sand"},
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Gregor Clegane"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Qyburn"}
+               ]
+            },
+            {
+               "sceneStart":"0:25:17",
+               "sceneEnd":"0:29:54",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Ellaria Sand"},
+                  {"name":"Tyene Sand"},
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Gregor Clegane"},
+                  {"name":"Qyburn"}
+               ]
+            },
+            {
+               "sceneStart":"0:29:54",
+               "sceneEnd":"0:30:03",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Ellaria Sand"},
+                  {
+                     "name":"Tyene Sand",
+                     "alive":false,
+                     "mannerOfDeath":"Poison",
+                     "killedBy":"Cersei Lannister"
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:30:03",
+               "sceneEnd":"0:30:09",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:30:09",
+               "sceneEnd":"0:30:49",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "sex":{
+                        "with":["Cersei Lannister"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Cersei Lannister",
+                     "title":"King",
+                     "sex":{
+                        "with":["Jaime Lannister"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:30:49",
+               "sceneEnd":"0:31:23",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"},
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:31:23",
+               "sceneEnd":"0:31:41",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"},
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Bernadette"}
+               ]
+            },
+            {
+               "sceneStart":"0:31:41",
+               "sceneEnd":"0:34:24",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Tycho Nestoris"}
+               ]
+            },
+            {
+               "sceneStart":"0:34:24",
+               "sceneEnd":"0:38:15",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:38:15",
+               "sceneEnd":"0:40:09",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:40:09",
+               "sceneEnd":"0:40:46",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Viserion"},
+                  {"name":"Rhaegal"}
+               ]
+            },
+            {
+               "sceneStart":"0:40:46",
+               "sceneEnd":"0:42:03",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Jon Snow", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:42:03",
+               "sceneEnd":"0:42:11",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:42:11",
+               "sceneEnd":"0:43:13",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Petyr Baelish"},
+                  {"name":"Maester Wolkan"},
+                  {"name":"Yohn Royce"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:13",
+               "sceneEnd":"0:43:29",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Petyr Baelish"},
+                  {"name":"Yohn Royce"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:29",
+               "sceneEnd":"0:44:48",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Petyr Baelish"}
+               ]
+            },
+            {
+               "sceneStart":"0:44:48",
+               "sceneEnd":"0:44:58",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:44:58",
+               "sceneEnd":"0:45:32",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Bran Stark"},
+                  {"name":"Meera Reed"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:32",
+               "sceneEnd":"0:47:32",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:47:32",
+               "sceneEnd":"0:48:43",
+               "location":"The Reach",
+               "subLocation":"Oldtown",
+               "characters":[
+                  {"name":"Archmaester Ebrose"},
+                  {"name":"Samwell Tarly"},
+                  {"name":"Jorah Mormont"}
+               ]
+            },
+            {
+               "sceneStart":"0:48:43",
+               "sceneEnd":"0:50:01",
+               "location":"The Reach",
+               "subLocation":"Oldtown",
+               "characters":[
+                  {"name":"Samwell Tarly"},
+                  {"name":"Jorah Mormont"}
+               ]
+            },
+            {
+               "sceneStart":"0:50:01",
+               "sceneEnd":"0:51:47",
+               "location":"The Reach",
+               "subLocation":"Oldtown",
+               "characters":[
+                  {"name":"Archmaester Ebrose"},
+                  {"name":"Samwell Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:51:47",
+               "sceneEnd":"0:52:47",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:52:47",
+               "sceneEnd":"0:52:59",
+               "location":"The Westerlands",
+               "subLocation":"Casterly Rock",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:52:59",
+               "sceneEnd":"0:53:05",
+               "location":"The Westerlands",
+               "subLocation":"Casterly Rock",
+               "characters":[
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:53:05",
+               "sceneEnd":"0:53:37",
+               "location":"The Westerlands",
+               "subLocation":"Casterly Rock",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:53:37",
+               "sceneEnd":"0:54:12",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Missandei"},
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:54:12",
+               "sceneEnd":"0:54:47",
+               "location":"The Westerlands",
+               "subLocation":"Casterly Rock",
+               "characters":[
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:54:47",
+               "sceneEnd":"0:55:00",
+               "location":"The Westerlands",
+               "subLocation":"Casterly Rock",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:55:00",
+               "sceneEnd":"0:55:25",
+               "location":"The Westerlands",
+               "subLocation":"Casterly Rock",
+               "characters":[
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:55:25",
+               "sceneEnd":"0:56:12",
+               "location":"The Westerlands",
+               "subLocation":"Casterly Rock",
+               "characters":[
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:56:12",
+               "sceneEnd":"0:56:26",
+               "location":"The Reach",
+               "subLocation":"Highgarden",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:56:26",
+               "sceneEnd":"0:56:45",
+               "location":"The Reach",
+               "subLocation":"Highgarden",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Bronn"},
+                  {"name":"Randyll Tarly"},
+                  {"name":"Dickon Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:56:45",
+               "sceneEnd":"0:57:05",
+               "location":"The Reach",
+               "subLocation":"Highgarden",
+               "characters":[
+                  {"name":"Olenna Tyrell"}
+               ]
+            },
+            {
+               "sceneStart":"0:57:05",
+               "sceneEnd":"0:57:30",
+               "location":"The Reach",
+               "subLocation":"Highgarden",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:57:30",
+               "sceneEnd":"1:03:04",
+               "location":"The Reach",
+               "subLocation":"Highgarden",
+               "characters":[
+                  {
+                     "name":"Olenna Tyrell",
+                     "alive":false,
+                     "mannerOfDeath":"Poison",
+                     "killedBy":"Jaime Lannister"
+                  },
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            }
          ]
       },
       {
          "seasonNum":7,
          "episodeNum":4,
-         "episodeTitle":"Episode #7.4",
+         "episodeTitle":"The Spoils of War",
          "episodeLink":"/title/tt5775846/",
-         "episodeAirDate":"2017--",
+         "episodeAirDate":"2017-08-06",
          "episodeDescription":"",
          "openingSequenceLocations":[
 
