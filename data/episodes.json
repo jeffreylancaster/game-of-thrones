@@ -9702,7 +9702,12 @@
                "subLocation":"Fist of the First Men",
                "characters":[
                   {"name":"Samwell Tarly"},
-                  {"name":"Man of the Nightswatch", "alive":false}
+                  {
+                     "name":"Man of the Nightswatch",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"White Walker"
+                  }
                ]
             },
             {
@@ -9722,7 +9727,7 @@
                "subLocation":"Fist of the First Men",
                "characters":[
                   {"name":"Samwell Tarly"},
-                  {"name":"White Walker", "alive":false},
+                  {"name":"White Walker"},
                   {"name":"Ghost"}
                ]
             },
@@ -9733,7 +9738,12 @@
                "subLocation":"Fist of the First Men",
                "characters":[
                   {"name":"Samwell Tarly"},
-                  {"name":"White Walker", "alive":false},
+                  {
+                     "name":"White Walker",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":"Jeor Mormont"
+                  },
                   {"name":"Ghost"},
                   {"name":"Jeor Mormont"}
                ]
@@ -9759,7 +9769,10 @@
                "location":"North of the Wall",
                "subLocation":"Frostfang Mountains",
                "characters":[
-                  {"name":"Rattleshirt"},
+                  {
+                     "name":"Rattleshirt",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Jon Snow"},
                   {"name":"Ygritte"}
                ]
@@ -9790,7 +9803,10 @@
                "subLocation":"Frostfang Mountains",
                "characters":[
                   {"name":"Jon Snow"},
-                  {"name":"Rattleshirt"},
+                  {
+                     "name":"Rattleshirt",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ygritte"}
                ]
             },
@@ -9801,8 +9817,14 @@
                "subLocation":"Frostfang Mountains",
                "characters":[
                   {"name":"Jon Snow"},
-                  {"name":"Rattleshirt"},
-                  {"name":"Ygritte"},
+                  {
+                     "name":"Rattleshirt",
+                     "weapon":{"action":"gives", "name":"Longclaw"}
+                  },
+                  {
+                     "name":"Ygritte",
+                     "weapon":{"action":"receives", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Mance Rayder", "title":"King"}
                ]
@@ -10086,7 +10108,11 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Joffrey Baratheon", "title":"King"}
+                  {
+                     "name":"Joffrey Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Hearteater"}
+                  }
                ]
             },
             {
@@ -10103,7 +10129,11 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Joffrey Baratheon", "title":"King"},
+                  {
+                     "name":"Joffrey Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Hearteater"}
+                  },
                   {"name":"Margaery Tyrell"},
                   {"name":"Margaery's Handmaiden"}
                ]
@@ -10124,7 +10154,11 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Joffrey Baratheon", "title":"King"},
+                  {
+                     "name":"Joffrey Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Hearteater"}
+                  },
                   {"name":"Meryn Trant"}
                ]
             },
@@ -10146,7 +10180,11 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Margaery Tyrell"},
-                  {"name":"Joffrey Baratheon", "title":"King"}
+                  {
+                     "name":"Joffrey Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Hearteater"}
+                  }
                ]
             },
             {
@@ -10501,7 +10539,10 @@
                "location":"North of the Wall",
                "subLocation":"Wildlings March South",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Mance Rayder", "title":"King"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Ygritte"},
@@ -10619,8 +10660,22 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Tyrion Lannister"},
-                  {"name":"Shae"}
+                  {
+                     "name":"Tyrion Lannister",
+                     "sex":{
+                        "with":["Shae"],
+                        "when":"future",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Shae",
+                     "sex":{
+                        "with":["Tyrion Lannister"],
+                        "when":"future",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -10796,7 +10851,11 @@
                "location":"The Riverlands",
                "subLocation":"Riverrun",
                "characters":[
-                  {"name":"Hoster Tully", "alive":false},
+                  {
+                     "name":"Hoster Tully",
+                     "alive":false,
+                     "mannerOfDeath":"Old age"
+                  },
                   {"name":"Robb Stark", "title":"King"},
                   {"name":"Brynden Tully"},
                   {"name":"Catelyn Stark"},
@@ -10921,7 +10980,10 @@
                "subLocation":"Fist of the First Men",
                "characters":[
                   {"name":"Mance Rayder", "title":"King"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Ygritte"},
                   {"name":"Orell"}
@@ -10935,7 +10997,8 @@
                "characters":[
                   {"name":"Jeor Mormont"},
                   {"name":"Ghost"},
-                  {"name":"Samwell Tarly"}
+                  {"name":"Samwell Tarly"},
+                  {"name":"Karl Tanner"}
                ]
             },
             {
@@ -11144,10 +11207,42 @@
                "characters":[
                   {"name":"Tyrion Lannister"},
                   {"name":"Bronn"},
-                  {"name":"Podrick Payne"},
-                  {"name":"Genna"},
-                  {"name":"Marei"},
-                  {"name":"Kayla"}
+                  {
+                     "name":"Podrick Payne",
+                     "sex":{
+                        "with":[
+                           "Genna",
+                           "Marei",
+                           "Kayla"
+                        ],
+                        "when":"present",
+                        "type":"fun"
+                     }
+                  },
+                  {
+                     "name":"Genna",
+                     "sex":{
+                        "with":["Podrick Payne"],
+                        "when":"present",
+                        "type":"fun"
+                     }
+                  },
+                  {
+                     "name":"Marei",
+                     "sex":{
+                        "with":["Podrick Payne"],
+                        "when":"present",
+                        "type":"fun"
+                     }
+                  },
+                  {
+                     "name":"Kayla",
+                     "sex":{
+                        "with":["Podrick Payne"],
+                        "when":"present",
+                        "type":"fun"
+                     }
+                  }
                ]
             },
             {
@@ -11190,7 +11285,12 @@
                "altLocation":"Outside the Dreadfort",
                "characters":[
                   {"name":"Theon Greyjoy"},
-                  {"name":"Master Torturer", "alive":false},
+                  {
+                     "name":"Master Torturer",
+                     "alive":false,
+                     "mannerOfDeath":"Arrow",
+                     "killedBy":"Ramsay Snow"
+                  },
                   {"name":"Ramsay Snow"}
                ]
             },
@@ -11565,7 +11665,11 @@
                "location":"North of the Wall",
                "subLocation":"Craster's Keep",
                "characters":[
-                  {"name":"Bannen", "alive":false},
+                  {
+                     "name":"Bannen",
+                     "alive":false,
+                     "mannerOfDeath":"Broken foot"
+                  },
                   {"name":"Jeor Mormont"},
                   {"name":"Eddison Tollett"},
                   {"name":"Samwell Tarly"},
@@ -11629,7 +11733,12 @@
                "characters":[
                   {"name":"Jeor Mormont"},
                   {"name":"Karl Tanner"},
-                  {"name":"Craster", "alive":false},
+                  {
+                     "name":"Craster",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Karl Tanner"
+                  },
                   {"name":"Samwell Tarly"},
                   {"name":"Rast"}
                ]
@@ -11664,7 +11773,12 @@
                "subLocation":"Craster's Keep",
                "characters":[
                   {"name":"Craster", "alive":false},
-                  {"name":"Jeor Mormont", "alive":false},
+                  {
+                     "name":"Jeor Mormont",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Rast"
+                  },
                   {"name":"Rast"}
                ]
             },
@@ -11674,7 +11788,10 @@
                "location":"North of the Wall",
                "subLocation":"Craster's Keep",
                "characters":[
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"}
                ]
@@ -11763,7 +11880,12 @@
                   {"name":"Jorah Mormont"},
                   {"name":"Missandei"},
                   {"name":"Barristan Selmy"},
-                  {"name":"Kraznys mo Nakloz", "alive":false}
+                  {
+                     "name":"Kraznys mo Nakloz",
+                     "alive":false,
+                     "mannerOfDeath":"Dragon",
+                     "killedBy":"Daenerys Targaryen"
+                  }
                ]
             },
             {
@@ -11843,6 +11965,25 @@
          "scenes":[
             {
                "sceneStart":"0:01:54",
+               "sceneEnd":"0:04:53",
+               "location":"The Riverlands",
+               "subLocation":"Hollow Hill",
+               "characters":[
+                  {"name":"Thoros of Myr"},
+                  {"name":"Sandor Clegane"},
+                  {"name":"Arya Stark"},
+                  {"name":"Anguy"},
+                  {
+                     "name":"Beric Dondarrion",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Sandor Clegane"
+                  },
+                  {"name":"Gendry"}
+               ]
+            },
+            {
+               "sceneStart":"0:04:53",
                "sceneEnd":"0:05:31",
                "location":"The Riverlands",
                "subLocation":"Hollow Hill",
@@ -11861,7 +12002,10 @@
                "location":"North of the Wall",
                "subLocation":"Wildling Camp",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ygritte"},
                   {"name":"Orell"},
                   {"name":"Tormund Giantsbane"}
@@ -11873,8 +12017,14 @@
                "location":"North of the Wall",
                "subLocation":"Wildling Camp",
                "characters":[
-                  {"name":"Jon Snow"},
-                  {"name":"Ygritte"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"loses", "name":"Longclaw"}
+                  },
+                  {
+                     "name":"Ygritte",
+                     "weapon":{"action":"takes", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -11883,8 +12033,24 @@
                "location":"North of the Wall",
                "subLocation":"Cave Outside Wildling Camp",
                "characters":[
-                  {"name":"Jon Snow"},
-                  {"name":"Ygritte"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"receives", "name":"Longclaw"},
+                     "sex":{
+                        "with":["Ygritte"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Ygritte",
+                     "weapon":{"action":"gives", "name":"Longclaw"},
+                     "sex":{
+                        "with":["Jon Snow"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -11981,8 +12147,18 @@
                "location":"The Riverlands",
                "subLocation":"Riverrun",
                "characters":[
-                  {"name":"Martyn Lannister", "alive":false},
-                  {"name":"Willem Lannister", "alive":false},
+                  {
+                     "name":"Martyn Lannister",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Rickard Karstark"
+                  },
+                  {
+                     "name":"Willem Lannister",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Rickard Karstark"
+                  },
                   {"name":"Rickard Karstark"}
                ]
             },
@@ -12032,7 +12208,12 @@
                "location":"The Riverlands",
                "subLocation":"Riverrun",
                "characters":[
-                  {"name":"Rickard Karstark", "alive":false},
+                  {
+                     "name":"Rickard Karstark",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"Robb Stark"
+                  },
                   {"name":"Robb Stark", "title":"King"},
                   {"name":"Talisa Maegyr"},
                   {"name":"Edmure Tully"},
@@ -12196,8 +12377,22 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Loras Tyrell"},
-                  {"name":"Olyvar"}
+                  {
+                     "name":"Loras Tyrell",
+                     "sex":{
+                        "with":["Olyvar"],
+                        "when":"present",
+                        "type":"fun"
+                     }
+                  },
+                  {
+                     "name":"Olyvar",
+                     "sex":{
+                        "with":["Loras Tyrell"],
+                        "when":"present",
+                        "type":"fun"
+                     }
+                  }
                ]
             },
             {
@@ -12255,7 +12450,10 @@
                "location":"North of the Wall",
                "subLocation":"South to the Wall",
                "characters":[
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"}
                ]
@@ -12281,7 +12479,10 @@
                "subLocation":"The Wall",
                "characters":[
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Orell"},
                   {"name":"Ygritte"}
                ]
@@ -12292,7 +12493,10 @@
                "location":"North of the Wall",
                "subLocation":"The Wall",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ygritte"}
                ]
             },
@@ -12303,7 +12507,10 @@
                "subLocation":"The Wall",
                "characters":[
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ygritte"}
                ]
             },
@@ -12505,7 +12712,12 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Joffrey Baratheon", "title":"King"},
-                  {"name":"Ros", "alive":false}
+                  {
+                     "name":"Ros",
+                     "alive":false,
+                     "mannerOfDeath":"Arrow",
+                     "killedBy":"Joffrey Baratheon"
+                  }
                ]
             },
             {
@@ -12573,7 +12785,10 @@
                "location":"The Wall",
                "subLocation":"The Gift",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ygritte"}
                ]
             },
@@ -12583,7 +12798,10 @@
                "location":"The Wall",
                "subLocation":"The Gift",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Orell"}
                ]
             },
@@ -12617,8 +12835,23 @@
                "location":"The Riverlands",
                "subLocation":"Camp of the North",
                "characters":[
-                  {"name":"Talisa Maegyr"},
-                  {"name":"Robb Stark", "title":"King"}
+                  {
+                     "name":"Talisa Maegyr",
+                     "sex":{
+                        "with":["Robb Stark"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Robb Stark",
+                     "title":"King",
+                     "sex":{
+                        "with":["Talisa Maegyr"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -12637,7 +12870,10 @@
                "characters":[
                   {"name":"Ygritte"},
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -12648,7 +12884,10 @@
                "characters":[
                   {"name":"Ygritte"},
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Orell"}
                ]
             },
@@ -12904,9 +13143,33 @@
                "location":"The North",
                "subLocation":"The Dreadfort",
                "characters":[
-                  {"name":"Theon Greyjoy"},
-                  {"name":"Myranda"},
-                  {"name":"Violet"}
+                  {
+                     "name":"Theon Greyjoy",
+                     "sex":{
+                        "with":[
+                           "Myranda",
+                           "Violet"
+                        ],
+                        "when":"present",
+                        "type":"torture"
+                     }
+                  },
+                  {
+                     "name":"Myranda",
+                     "sex":{
+                        "with":["Theon Greyjoy"],
+                        "when":"present",
+                        "type":"torture"
+                     }
+                  },
+                  {
+                     "name":"Violet",
+                     "sex":{
+                        "with":["Theon Greyjoy"],
+                        "when":"present",
+                        "type":"torture"
+                     }
+                  }
                ]
             },
             {
@@ -12927,7 +13190,10 @@
                "location":"The North",
                "subLocation":"The Gift",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ygritte"}
                ]
             },
@@ -12946,7 +13212,10 @@
                "location":"The North",
                "subLocation":"The Gift",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ygritte"}
                ]
             },
@@ -13298,8 +13567,22 @@
                "location":"The Crownlands",
                "subLocation":"Dragonstone",
                "characters":[
-                  {"name":"Gendry"},
-                  {"name":"Melisandre"}
+                  {
+                     "name":"Gendry",
+                     "sex":{
+                        "with":["Melisandre"],
+                        "when":"present",
+                        "type":"magic"
+                     }
+                  },
+                  {
+                     "name":"Melisandre",
+                     "sex":{
+                        "with":["Gendry"],
+                        "when":"present",
+                        "type":"magic"
+                     }
+                  }
                ]
             },
             {
@@ -13491,7 +13774,8 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Sansa Stark"},
-                  {"name":"Tyrion Lannister"}
+                  {"name":"Tyrion Lannister"},
+                  {"name":"Grand Maester Pycelle"}
                ]
             },
             {
@@ -13551,8 +13835,18 @@
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
                   {"name":"Missandei"},
                   {"name":"Daario Naharis"},
-                  {"name":"Mero", "alive":false},
-                  {"name":"Prendahl na Ghezn", "alive":false}
+                  {
+                     "name":"Mero",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"Daario Naharis"
+                  },
+                  {
+                     "name":"Prendahl na Ghezn",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"Daario Naharis"
+                  }
                ]
             },
             {
@@ -13583,7 +13877,10 @@
                "location":"North of the Wall",
                "subLocation":"Destroyed Cabin",
                "characters":[
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"}
                ]
@@ -13594,7 +13891,10 @@
                "location":"North of the Wall",
                "subLocation":"Destroyed Cabin",
                "characters":[
-                  {"name":"Samwell Tarly"}
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  }
                ]
             },
             {
@@ -13603,7 +13903,10 @@
                "location":"North of the Wall",
                "subLocation":"Destroyed Cabin",
                "characters":[
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"}
                ]
@@ -13614,10 +13917,18 @@
                "location":"North of the Wall",
                "subLocation":"Destroyed Cabin",
                "characters":[
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"loses", "name":"Dragonglass"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"},
-                  {"name":"White Walker", "alive":false}
+                  {
+                     "name":"White Walker",
+                     "alive":false,
+                     "mannerOfDeath":"Back stab",
+                     "killedBy":"Samwell Tarly"
+                  }
                ]
             },
             {
@@ -13626,7 +13937,10 @@
                "location":"North of the Wall",
                "subLocation":"Destroyed Cabin",
                "characters":[
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"}
                ]
@@ -13724,7 +14038,10 @@
                "location":"North of the Wall",
                "subLocation":"Near Nightfort",
                "characters":[
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"}
                ]
@@ -13772,7 +14089,10 @@
                   {"name":"Tormund Giantsbane"},
                   {"name":"Ygritte"},
                   {"name":"Orell"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -13793,7 +14113,10 @@
                   {"name":"Tormund Giantsbane"},
                   {"name":"Ygritte"},
                   {"name":"Orell"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Old Man"}
                ]
             },
@@ -13804,7 +14127,10 @@
                "subLocation":"The Gift",
                "characters":[
                   {"name":"Ygritte"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -13884,7 +14210,10 @@
                "subLocation":"The Gift",
                "characters":[
                   {"name":"Ygritte"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Old Man"},
                   {"name":"Orell"},
                   {"name":"Tormund Giantsbane"}
@@ -13907,7 +14236,10 @@
                "subLocation":"The Gift",
                "characters":[
                   {"name":"Ygritte"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Old Man"},
                   {"name":"Orell"},
                   {"name":"Tormund Giantsbane"}
@@ -13930,8 +14262,16 @@
                "subLocation":"The Gift",
                "characters":[
                   {"name":"Ygritte"},
-                  {"name":"Jon Snow"},
-                  {"name":"Old Man", "alive":false},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
+                  {
+                     "name":"Old Man",
+                     "alive":false,
+                     "mannerOfDeath":"Arrow",
+                     "killedBy":"Ygritte"
+                  },
                   {"name":"Orell"},
                   {"name":"Tormund Giantsbane"}
                ]
@@ -13943,7 +14283,10 @@
                "subLocation":"The Gift",
                "characters":[
                   {"name":"Ygritte"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Orell"},
                   {"name":"Tormund Giantsbane"}
                ]
@@ -13978,8 +14321,16 @@
                "subLocation":"The Gift",
                "characters":[
                   {"name":"Summer"},
-                  {"name":"Jon Snow"},
-                  {"name":"Orell", "alive":false},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
+                  {
+                     "name":"Orell",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Jon Snow"
+                  },
                   {"name":"Shaggydog"}
                ]
             },
@@ -13989,7 +14340,10 @@
                "location":"The North",
                "subLocation":"The Gift",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Ygritte"}
                ]
@@ -14343,7 +14697,12 @@
                   {"name":"Lothar Frey"},
                   {"name":"Robb Stark", "title":"King"},
                   {"name":"Walder Frey"},
-                  {"name":"Wendel Manderly", "alive":false}
+                  {
+                     "name":"Wendel Manderly",
+                     "alive":false,
+                     "mannerOfDeath":"Arrow",
+                     "killedBy":"Walder Frey"
+                  }
                ]
             },
             {
@@ -14390,7 +14749,12 @@
                "subLocation":"The Twins",
                "characters":[
                   {"name":"Arya Stark"},
-                  {"name":"Grey Wind", "alive":false}
+                  {
+                     "name":"Grey Wind",
+                     "alive":false,
+                     "mannerOfDeath":"Arrow",
+                     "killedBy":"Frey Soldiers"
+                  }
                ]
             },
             {
@@ -14421,7 +14785,12 @@
                "subLocation":"The Twins",
                "characters":[
                   {"name":"Robb Stark", "title":"King"},
-                  {"name":"Talisa Maegyr", "alive":false},
+                  {
+                     "name":"Talisa Maegyr",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Lothar Frey"
+                  },
                   {"name":"Walder Frey"}
                ]
             },
@@ -14446,7 +14815,13 @@
                "characters":[
                   {"name":"Catelyn Stark"},
                   {"name":"Joyeuse Erenford"},
-                  {"name":"Robb Stark", "title":"King", "alive":false},
+                  {
+                     "name":"Robb Stark",
+                     "title":"King",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Roose Bolton"
+                  },
                   {"name":"Roose Bolton"}
                ]
             },
@@ -14456,9 +14831,19 @@
                "location":"The Riverlands",
                "subLocation":"The Twins",
                "characters":[
-                  {"name":"Catelyn Stark", "alive":false},
+                  {
+                     "name":"Catelyn Stark",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Black Walder Rivers"
+                  },
                   {"name":"Walder Frey"},
-                  {"name":"Joyeuse Erenford", "alive":false},
+                  {
+                     "name":"Joyeuse Erenford",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Catelyn Stark"
+                  },
                   {"name":"Black Walder Rivers"}
                ]
             }
@@ -14679,7 +15064,10 @@
                   {"name":"Hodor"},
                   {"name":"Meera Reed"},
                   {"name":"Jojen Reed"},
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"}
                ]
@@ -14717,13 +15105,29 @@
                "location":"The Wall",
                "subLocation":"Nightfort",
                "characters":[
-                  {"name":"Bran Stark"},
-                  {"name":"Hodor"},
-                  {"name":"Meera Reed"},
-                  {"name":"Jojen Reed"},
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Bran Stark",
+                     "weapon":{"action":"receives", "name":"Dragonglass"}
+                  },
+                  {
+                     "name":"Hodor",
+                     "weapon":{"action":"receives", "name":"Dragonglass"}
+                  },
+                  {
+                     "name":"Meera Reed",
+                     "weapon":{"action":"receives", "name":"Dragonglass"}
+                  },
+                  {
+                     "name":"Jojen Reed",
+                     "weapon":{"action":"receives", "name":"Dragonglass"}
+                  },
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"gives", "name":"Dragonglass"}
+                  },
                   {"name":"Gilly"},
-                  {"name":"Baby Sam"}
+                  {"name":"Baby Sam"},
+                  {"name":"Summer"}
                ]
             },
             {
@@ -14785,8 +15189,18 @@
                "characters":[
                   {"name":"Sandor Clegane"},
                   {"name":"Arya Stark"},
-                  {"name":"Frey Soldier #1", "alive":false},
-                  {"name":"Frey Soldier #2", "alive":false}
+                  {
+                     "name":"Frey Soldier #1",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Arya Stark"
+                  },
+                  {
+                     "name":"Frey Soldier #2",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Sandor Clegane"
+                  }
                ]
             },
             {
@@ -14795,7 +15209,10 @@
                "location":"The North",
                "subLocation":"The Gift",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ygritte"}
                ]
             },
@@ -14866,7 +15283,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Todder"}
                ]
             },
@@ -14876,7 +15296,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Samwell Tarly"},
                   {"name":"Pypar"}
                ]
