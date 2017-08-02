@@ -1922,7 +1922,8 @@
             "Tully"
          ],
          "killed":"Jon Arryn",
-         "killedBy":"Petyr Baelish"
+         "killedBy":"Petyr Baelish",
+         "marriedEngaged":"Petyr Baelish"
       },
       {
          "characterName":"Mace Tyrell",
@@ -2571,7 +2572,8 @@
             "Joffrey Baratheon",
             "Dontos Hollard",
             "Lysa Arryn"
-         ]
+         ],
+         "marriedEngaged":"Lysa Arryn"
       },
       {
          "characterName":"Podrick Payne",
@@ -3874,8 +3876,7 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NzU5ODk0MV5BMl5BanBnXkFtZTcwMzEyNDY2OQ@@._V1_SY1000_CR0,0,1503,1000_AL_.jpg",
          "characterLink":"/character/ch0300217/",
          "actorName":"Gemma Whelan",
-         "actorLink":"/name/nm2247629/",
-         "killed":"Bolton Guard"
+         "actorLink":"/name/nm2247629/"
       },
       {
          "characterName":"Yezzan zo Qaggaz",
