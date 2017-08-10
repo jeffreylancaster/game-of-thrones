@@ -22266,7 +22266,12 @@
                "sceneEnd":"0:19:19",
                "location":"Meereen",
                "characters":[
-                  {"name":"White Rat", "alive":false},
+                  {
+                     "name":"White Rat",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Son of the Harpy"
+                  },
                   {"name":"Vala"}
                ]
             },
@@ -22300,7 +22305,8 @@
                   {"name":"Jon Snow"},
                   {"name":"Olly"},
                   {"name":"Samwell Tarly"},
-                  {"name":"Gilly"}
+                  {"name":"Gilly"},
+                  {"name":"Ghost"}
                ]
             },
             {
@@ -22345,7 +22351,11 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Davos Seaworth", "title":"Hand"},
                   {"name":"Jon Snow"},
                   {"name":"Melisandre"}
@@ -22385,7 +22395,10 @@
                "subLocation":"To The Eyrie",
                "characters":[
                   {"name":"Podrick Payne"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -22467,8 +22480,22 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Loras Tyrell"},
-                  {"name":"Olyvar"}
+                  {
+                     "name":"Loras Tyrell",
+                     "sex":{
+                        "with":["Olyvar"],
+                        "when":"past",
+                        "type":"fun"
+                     }
+                  },
+                  {
+                     "name":"Olyvar",
+                     "sex":{
+                        "with":["Loras Tyrell"],
+                        "when":"past",
+                        "type":"fun"
+                     }
+                  }
                ]
             },
             {
@@ -22535,8 +22562,23 @@
                "sceneEnd":"0:43:13",
                "location":"Meereen",
                "characters":[
-                  {"name":"Daario Naharis"},
-                  {"name":"Daenerys Targaryen", "title":"Khaleesi"}
+                  {
+                     "name":"Daario Naharis",
+                     "sex":{
+                        "with":["Daenerys Targaryen"],
+                        "when":"past",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Daenerys Targaryen",
+                     "title":"Khaleesi",
+                     "sex":{
+                        "with":["Daario Naharis"],
+                        "when":"past",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -22571,7 +22613,7 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Mance Rayder"},
+                  {"name":"Mance Rayder", "title":"King"},
                   {"name":"Jon Snow"}
                ]
             },
@@ -22581,14 +22623,21 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Mance Rayder"},
+                  {"name":"Mance Rayder", "title":"King"},
                   {"name":"Melisandre"},
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Davos Seaworth", "title":"Hand"},
                   {"name":"Eddison Tollett"},
                   {"name":"Samwell Tarly"},
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -22607,16 +22656,23 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Mance Rayder"},
+                  {"name":"Mance Rayder", "title":"King"},
                   {"name":"Melisandre"},
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Davos Seaworth", "title":"Hand"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Selyse Baratheon"},
                   {"name":"Shireen Baratheon"},
                   {"name":"Eddison Tollett"},
                   {"name":"Samwell Tarly"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Gilly"}
                ]
             },
@@ -22626,7 +22682,7 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Mance Rayder"}
+                  {"name":"Mance Rayder", "title":"King"}
                ]
             },
             {
@@ -22635,14 +22691,21 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Mance Rayder"},
+                  {"name":"Mance Rayder", "title":"King"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Samwell Tarly"},
                   {"name":"Gilly"},
                   {"name":"Melisandre"},
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Eddison Tollett"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Olly"}
                ]
             },
@@ -22654,7 +22717,7 @@
                "characters":[
                   {"name":"Alliser Thorne"},
                   {"name":"Janos Slynt"},
-                  {"name":"Mance Rayder"},
+                  {"name":"Mance Rayder", "title":"King"},
                   {"name":"Samwell Tarly"},
                   {"name":"Gilly"}
                ]
@@ -22667,7 +22730,7 @@
                "characters":[
                   {"name":"Selyse Baratheon"},
                   {"name":"Shireen Baratheon"},
-                  {"name":"Mance Rayder"},
+                  {"name":"Mance Rayder", "title":"King"},
                   {"name":"Tormund Giantsbane"}
                ]
             },
@@ -22678,9 +22741,22 @@
                "subLocation":"Castle Black",
                "characters":[
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Stannis Baratheon", "title":"King"},
-                  {"name":"Mance Rayder", "alive":false},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
+                  {
+                     "name":"Mance Rayder",
+                     "title":"King",
+                     "alive":false,
+                     "mannerOfDeath":"Arrow",
+                     "killedBy":"Jon Snow"
+                  },
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -22689,7 +22765,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             }
          ]
@@ -22715,7 +22794,10 @@
                "sceneEnd":"0:04:20",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
                   {"name":"Ternesio Terys"}
                ]
             },
@@ -22724,7 +22806,10 @@
                "sceneEnd":"0:05:44",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
                   {"name":"Ternesio Terys"}
                ]
             },
@@ -22733,7 +22818,10 @@
                "sceneEnd":"0:06:53",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
                   {"name":"Faceless Man"}
                ]
             },
@@ -22742,7 +22830,10 @@
                "sceneEnd":"0:08:27",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"}
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  }
                ]
             },
             {
@@ -22752,7 +22843,10 @@
                "subLocation":"Inn",
                "characters":[
                   {"name":"Podrick Payne"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -22762,7 +22856,10 @@
                "subLocation":"Inn",
                "characters":[
                   {"name":"Podrick Payne"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Inn Waitress"},
                   {"name":"Petyr Baelish"},
                   {"name":"Sansa Stark"}
@@ -22774,7 +22871,10 @@
                "location":"The Vale",
                "subLocation":"Inn",
                "characters":[
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Petyr Baelish"},
                   {"name":"Sansa Stark"},
                   {"name":"Eyrie Guard"}
@@ -22786,7 +22886,10 @@
                "location":"The Vale",
                "subLocation":"Inn",
                "characters":[
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"},
                   {"name":"Eyrie Guard"}
                ]
@@ -22797,9 +22900,17 @@
                "location":"The Vale",
                "subLocation":"Outside the Inn",
                "characters":[
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"},
-                  {"name":"Eyrie Guard", "alive":false}
+                  {
+                     "name":"Eyrie Guard",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Brienne of Tarth"
+                  }
                ]
             },
             {
@@ -23079,7 +23190,10 @@
                "sceneEnd":"0:46:22",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
                   {"name":"Street Tough #1"},
                   {"name":"Street Tough #2"}
                ]
@@ -23089,7 +23203,10 @@
                "sceneEnd":"0:46:29",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
                   {"name":"Street Tough #1"},
                   {"name":"Street Tough #2"},
                   {"name":"Faceless Man"}
@@ -23100,7 +23217,10 @@
                "sceneEnd":"0:46:33",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
                   {"name":"Faceless Man"}
                ]
             },
@@ -23109,7 +23229,10 @@
                "sceneEnd":"0:47:40",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
                   {"name":"Faceless Man"},
                   {"name":"Jaqen H'ghar"}
                ]
@@ -23128,7 +23251,12 @@
                "sceneEnd":"0:48:26",
                "location":"Meereen",
                "characters":[
-                  {"name":"Son of the Harpy", "alive":false}
+                  {
+                     "name":"Son of the Harpy",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Mossador"
+                  }
                ]
             },
             {
@@ -23168,7 +23296,12 @@
                   {"name":"Missandei"},
                   {"name":"Daario Naharis"},
                   {"name":"Hizdahr zo Loraq"},
-                  {"name":"Mossador", "alive":false}
+                  {
+                     "name":"Mossador",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"Daario Naharis"
+                  }
                ]
             },
             {
@@ -23257,7 +23390,12 @@
                "location":"Braavos",
                "characters":[
                   {"name":"Arya Stark"},
-                  {"name":"Despondent Man", "alive":false},
+                  {
+                     "name":"Despondent Man",
+                     "alive":false,
+                     "mannerOfDeath":"Poison",
+                     "killedBy":"Jaqen H'ghar"
+                  },
                   {"name":"The Waif"}
                ]
             },
@@ -23299,8 +23437,23 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Tommen Baratheon", "title":"King"},
-                  {"name":"Margaery Tyrell"}
+                  {
+                     "name":"Tommen Baratheon",
+                     "title":"King",
+                     "sex":{
+                        "with":["Margaery Tyrell"],
+                        "when":"present",
+                        "type":"marriage"
+                     }
+                  },
+                  {
+                     "name":"Margaery Tyrell",
+                     "sex":{
+                        "with":["Tommen Baratheon"],
+                        "when":"present",
+                        "type":"marriage"
+                     }
+                  }
                ]
             },
             {
@@ -23367,7 +23520,10 @@
                "location":"The North",
                "subLocation":"Moat Cailin",
                "characters":[
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"}
                ]
             },
@@ -23377,7 +23533,10 @@
                "location":"The North",
                "subLocation":"Moat Cailin",
                "characters":[
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"}
                ]
             },
@@ -23389,7 +23548,10 @@
                "characters":[
                   {"name":"Stannis Baratheon", "title":"King"},
                   {"name":"Olly"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Davos Seaworth", "title":"Hand"}
                ]
             },
@@ -23400,7 +23562,10 @@
                "subLocation":"Castle Black",
                "characters":[
                   {"name":"Olly"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Davos Seaworth", "title":"Hand"}
                ]
             },
@@ -23418,7 +23583,10 @@
                "sceneEnd":"0:31:17",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
                   {"name":"The Waif"},
                   {"name":"Jaqen H'ghar"}
                ]
@@ -23428,7 +23596,10 @@
                "sceneEnd":"0:33:12",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"}
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  }
                ]
             },
             {
@@ -23436,7 +23607,10 @@
                "sceneEnd":"0:33:43",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"}
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"hides", "name":"Needle"}
+                  }
                ]
             },
             {
@@ -23513,9 +23687,17 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Janos Slynt", "alive":false},
+                  {
+                     "name":"Janos Slynt",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"Jon Snow"
+                  },
                   {"name":"Eddison Tollett"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Olly"},
                   {"name":"Stannis Baratheon", "title":"King"},
                   {"name":"Samwell Tarly"},
@@ -24051,7 +24233,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Samwell Tarly"}
                ]
             },
@@ -24061,7 +24246,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Samwell Tarly"},
                   {"name":"Melisandre"}
                ]
@@ -24072,7 +24260,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Melisandre"}
                ]
             },
@@ -24082,7 +24273,11 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Shireen Baratheon"}
                ]
             },
@@ -24139,7 +24334,12 @@
                "characters":[
                   {"name":"Jaime Lannister"},
                   {"name":"Bronn"},
-                  {"name":"Lead Dornish Guard", "alive":false}
+                  {
+                     "name":"Lead Dornish Guard",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Bronn"
+                  }
                ]
             },
             {
@@ -24171,7 +24371,12 @@
                   {"name":"Obara Sand"},
                   {"name":"Tyene Sand"},
                   {"name":"Nymeria Sand"},
-                  {"name":"Merchant Captain", "alive":false}
+                  {
+                     "name":"Merchant Captain",
+                     "alive":false,
+                     "mannerOfDeath":"Obara Sand",
+                     "killedBy":"Face stab"
+                  }
                ]
             },
             {
@@ -24274,7 +24479,12 @@
                "location":"Meereen",
                "characters":[
                   {"name":"Vala"},
-                  {"name":"Second Son", "alive":false}
+                  {
+                     "name":"Second Son",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Son of the Harpy"
+                  }
                ]
             },
             {
@@ -24283,7 +24493,12 @@
                "location":"Meereen",
                "characters":[
                   {"name":"Vala"},
-                  {"name":"Second Son", "alive":false}
+                  {
+                     "name":"Second Son",
+                     "alive":false,
+                     "mannerOfDeath":"",
+                     "killedBy":""
+                  }
                ]
             },
             {
@@ -24331,7 +24546,12 @@
                "location":"Meereen",
                "characters":[
                   {"name":"Grey Worm"},
-                  {"name":"Barristan Selmy", "alive":false}
+                  {
+                     "name":"Barristan Selmy",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Sons of the Harpy"
+                  }
                ]
             }
          ]
@@ -24397,7 +24617,12 @@
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
                   {"name":"Daario Naharis"},
                   {"name":"Hizdahr zo Loraq"},
-                  {"name":"Great Master #1", "alive":false},
+                  {
+                     "name":"Great Master #1",
+                     "alive":false,
+                     "mannerOfDeath":"Dragon",
+                     "killedBy":"Daenerys Targaryen"
+                  },
                   {"name":"Great Master #2"},
                   {"name":"Great Master #3"},
                   {"name":"Great Master #4"},
@@ -24529,7 +24754,10 @@
                "subLocation":"Winter Town",
                "characters":[
                   {"name":"Podrick Payne"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -24539,7 +24767,10 @@
                "subLocation":"Winter Town",
                "characters":[
                   {"name":"Podrick Payne"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Winter Town Man"}
                ]
             },
@@ -24549,8 +24780,22 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Myranda"},
-                  {"name":"Ramsay Snow"}
+                  {
+                     "name":"Myranda",
+                     "sex":{
+                        "with":["Ramsay Snow"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Ramsay Snow",
+                     "sex":{
+                        "with":["Myranda"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -24747,7 +24992,11 @@
                "subLocation":"Castle Black",
                "characters":[
                   {"name":"Jon Snow"},
-                  {"name":"Stannis Baratheon", "title":"King"}
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  }
                ]
             },
             {
@@ -24757,7 +25006,11 @@
                "subLocation":"Castle Black",
                "characters":[
                   {"name":"Jon Snow"},
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Melisandre"}
                ]
             },
@@ -24949,7 +25202,12 @@
                "location":"Braavos",
                "characters":[
                   {"name":"Arya Stark"},
-                  {"name":"Ghita", "alive":false},
+                  {
+                     "name":"Ghita",
+                     "alive":false,
+                     "mannerOfDeath":"Poison",
+                     "killedBy":"Arya Stark"
+                  },
                   {"name":"Jaqen H'ghar"}
                ]
             },
@@ -25286,9 +25544,23 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Sansa Stark"},
+                  {
+                     "name":"Sansa Stark",
+                     "sex":{
+                        "with":["Ramsay Snow"],
+                        "when":"present",
+                        "type":"rape"
+                     }
+                  },
                   {"name":"Theon Greyjoy"},
-                  {"name":"Ramsay Snow"}
+                  {
+                     "name":"Ramsay Snow",
+                     "sex":{
+                        "with":["Sansa Stark"],
+                        "when":"present",
+                        "type":"rape"
+                     }
+                  }
                ]
             }
          ]
@@ -25315,7 +25587,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Alliser Thorne"},
                   {"name":"Othell Yarwyck"},
                   {"name":"Bowen Marsh"},
@@ -25330,9 +25605,18 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"},
+                        {"action":"receives", "name":"Dragonglass"}
+                     ]
+                  },
                   {"name":"Alliser Thorne"},
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"gives", "name":"Dragonglass"}
+                  },
                   {"name":"Olly"},
                   {"name":"Othell Yarwyck"},
                   {"name":"Bowen Marsh"},
@@ -25405,7 +25689,10 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -25426,7 +25713,11 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Maester Aemon", "alive":false},
+                  {
+                     "name":"Maester Aemon",
+                     "alive":false,
+                     "mannerOfDeath":"Old age"
+                  },
                   {"name":"Samwell Tarly"},
                   {"name":"Alliser Thorne"},
                   {"name":"Gilly"},
@@ -25452,7 +25743,12 @@
                "characters":[
                   {"name":"Sansa Stark"},
                   {"name":"Ramsay Snow"},
-                  {"name":"Old Woman", "alive":false},
+                  {
+                     "name":"Old Woman",
+                     "alive":false,
+                     "mannerOfDeath":"Flayed",
+                     "killedBy":"Ramsay Snow"
+                  },
                   {"name":"Theon Greyjoy"}
                ]
             },
@@ -25538,8 +25834,22 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Gilly"},
-                  {"name":"Samwell Tarly"}
+                  {
+                     "name":"Gilly",
+                     "sex":{
+                        "with":["Samwell Tarly"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Samwell Tarly",
+                     "sex":{
+                        "with":["Gilly"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -25569,8 +25879,23 @@
                "sceneEnd":"0:31:52",
                "location":"Meereen",
                "characters":[
-                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
-                  {"name":"Daario Naharis"}
+                  {
+                     "name":"Daenerys Targaryen",
+                     "title":"Khaleesi",
+                     "sex":{
+                        "with":["Daario Naharis"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Daario Naharis",
+                     "sex":{
+                        "with":["Daenerys Targaryen"],
+                        "when":"present",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -26021,7 +26346,13 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"},
+                        {"action":"has", "name":"Dragonglass"}
+                     ]
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Eddison Tollett"}
                ]
@@ -26032,7 +26363,13 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"},
+                        {"action":"has", "name":"Dragonglass"}
+                     ]
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Eddison Tollett"},
                   {"name":"Todder"}
@@ -26044,10 +26381,21 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"},
+                        {"action":"has", "name":"Dragonglass"}
+                     ]
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Eddison Tollett"},
-                  {"name":"Rattleshirt", "alive":false},
+                  {
+                     "name":"Rattleshirt",
+                     "alive":false,
+                     "mannerOfDeath":"Beaten",
+                     "killedBy":"Tormund Giantsbane"
+                  },
                   {"name":"Todder"}
                ]
             },
@@ -26057,7 +26405,13 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"},
+                        {"action":"has", "name":"Dragonglass"}
+                     ]
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Eddison Tollett"},
                   {"name":"Todder"}
@@ -26069,9 +26423,18 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"},
+                        {"action":"gives", "name":"Dragonglass"}
+                     ]
+                  },
                   {"name":"Eddison Tollett"},
-                  {"name":"Karsi"},
+                  {
+                     "name":"Karsi",
+                     "weapon":{"action":"receives", "name":"Dragonglass"}
+                  },
                   {"name":"Loboda"},
                   {"name":"Wun Wun"},
                   {"name":"Tormund Giantsbane"},
@@ -26085,7 +26448,10 @@
                "subLocation":"Hardhome",
                "characters":[
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Karsi"},
                   {"name":"Johnna"},
                   {"name":"Willa"}
@@ -26097,8 +26463,14 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Wun Wun"},
-                  {"name":"Eddison Tollett"}
+                  {
+                     "name":"Wun Wun",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
+                  {
+                     "name":"Eddison Tollett",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  }
                ]
             },
             {
@@ -26108,7 +26480,10 @@
                "subLocation":"Hardhome",
                "characters":[
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Karsi"},
                   {"name":"Loboda"}
                ]
@@ -26129,7 +26504,10 @@
                "characters":[
                   {"name":"Karsi"},
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -26155,7 +26533,10 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"}
                ]
             },
@@ -26212,7 +26593,10 @@
                   {"name":"Tormund Giantsbane"},
                   {"name":"Karsi"},
                   {"name":"Todder"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -26229,7 +26613,10 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"}
                ]
             },
@@ -26241,8 +26628,12 @@
                "characters":[
                   {"name":"Loboda"},
                   {"name":"Karsi"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"},
+                  {"name":"The Night King", "title":"King"}
                   {"name":"Wun Wun"}
                ]
             },
@@ -26252,8 +26643,16 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
-                  {"name":"Loboda", "alive":false},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"loses", "name":"Longclaw"}
+                  },
+                  {
+                     "name":"Loboda",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"White Walker"
+                  },
                   {"name":"White Walker"}
                ]
             },
@@ -26263,8 +26662,16 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
-                  {"name":"White Walker", "alive":false}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"retrieves", "name":"Longclaw"}
+                  },
+                  {
+                     "name":"White Walker",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Jon Snow"
+                  }
                ]
             },
             {
@@ -26273,7 +26680,10 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"The Night King", "title":"King"}
                ]
             },
@@ -26283,9 +26693,17 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Karsi", "alive":false}
+                  {
+                     "name":"Karsi",
+                     "alive":false,
+                     "mannerOfDeath":"Wight children",
+                     "killedBy":"Wight children"
+                  }
                ]
             },
             {
@@ -26294,7 +26712,13 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"},
+                        {"action":"loses", "name":"Dragonglass"}
+                     ]
+                  },
                   {"name":"Eddison Tollett"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Wun Wun"}
@@ -26314,7 +26738,10 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Wun Wun"}
@@ -26335,7 +26762,10 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Wun Wun"}
@@ -26347,7 +26777,10 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"},
                   {"name":"Tormund Giantsbane"}
                ]
@@ -26366,7 +26799,10 @@
                "location":"North of the Wall",
                "subLocation":"Hardhome",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"White Walker"}
@@ -26379,7 +26815,10 @@
                "subLocation":"Hardhome",
                "characters":[
                   {"name":"The Night King", "title":"King"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"}
                ]
             },
@@ -26390,7 +26829,10 @@
                "subLocation":"Hardhome",
                "characters":[
                   {"name":"The Night King", "title":"King"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -26409,7 +26851,10 @@
                "subLocation":"Hardhome",
                "characters":[
                   {"name":"The Night King", "title":"King"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             }
          ]
@@ -26492,7 +26937,10 @@
                "location":"North of the Wall",
                "subLocation":"The Wall",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Wun Wun"},
                   {"name":"Eddison Tollett"},
@@ -26515,7 +26963,10 @@
                "location":"North of the Wall",
                "subLocation":"The Wall",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Wun Wun"},
                   {"name":"Eddison Tollett"},
@@ -26538,7 +26989,10 @@
                "location":"North of the Wall",
                "subLocation":"The Wall",
                "characters":[
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -26556,7 +27010,10 @@
                "location":"North of the Wall",
                "subLocation":"The Wall",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"}
                ]
             },
@@ -26566,7 +27023,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Samwell Tarly"},
                   {"name":"Eddison Tollett"},
                   {"name":"Othell Yarwyck"},
@@ -26581,7 +27041,10 @@
                "characters":[
                   {"name":"Wun Wun"},
                   {"name":"Othell Yarwyck"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Samwell Tarly"},
                   {"name":"Eddison Tollett"},
                   {"name":"Olly"}
@@ -26593,7 +27056,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Samwell Tarly"},
                   {"name":"Alliser Thorne"}
                ]
@@ -26604,7 +27070,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Alliser Thorne"},
                   {"name":"Eddison Tollett"},
                   {"name":"Tormund Giantsbane"}
@@ -26796,14 +27265,28 @@
                "location":"Braavos",
                "characters":[
                   {"name":"Arya Stark"},
-                  {"name":"Meryn Trant"},
+                  {
+                     "name":"Meryn Trant",
+                     "sex":{
+                        "with":["Aya"],
+                        "when":"future",
+                        "type":"paid"
+                     }
+                  },
                   {"name":"Braavosi Madam"},
                   {"name":"Whore"},
                   {"name":"Brea"},
                   {"name":"Anara"},
                   {"name":"Lannister Guard #1"},
                   {"name":"Lannister Guard #2"},
-                  {"name":"Aya"}
+                  {
+                     "name":"Aya",
+                     "sex":{
+                        "with":["Meryn Trant"],
+                        "when":"future",
+                        "type":"paid"
+                     }
+                  }
                ]
             },
             {
@@ -26855,7 +27338,12 @@
                "location":"The North",
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
-                  {"name":"Shireen Baratheon", "alive":false},
+                  {
+                     "name":"Shireen Baratheon",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":"Melisandre"
+                  },
                   {"name":"Melisandre"},
                   {"name":"Stannis Baratheon", "title":"King"},
                   {"name":"Selyse Baratheon"}
@@ -26945,7 +27433,12 @@
                "characters":[
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
                   {"name":"Daario Naharis"},
-                  {"name":"Hizdahr zo Loraq", "alive":false},
+                  {
+                     "name":"Hizdahr zo Loraq",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Sons of the Harpy"
+                  },
                   {"name":"Jorah Mormont"},
                   {"name":"Tyrion Lannister"},
                   {"name":"Missandei"}
@@ -27054,7 +27547,11 @@
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
                   {"name":"Melisandre"},
-                  {"name":"Stannis Baratheon", "title":"King"}
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  }
                ]
             },
             {
@@ -27064,7 +27561,11 @@
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
                   {"name":"Melisandre"},
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Baratheon General"}
                ]
             },
@@ -27075,7 +27576,11 @@
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
                   {"name":"Melisandre"},
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Baratheon General"},
                   {"name":"Baratheon Soldier #1"}
                ]
@@ -27086,10 +27591,19 @@
                "location":"The North",
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Baratheon Soldier #1"},
                   {"name":"Baratheon Soldier #2"},
-                  {"name":"Selyse Baratheon", "alive":false},
+                  {
+                     "name":"Selyse Baratheon",
+                     "alive":false,
+                     "mannerOfDeath":"Hanging",
+                     "killedBy":"Selyse Baratheon"
+                  },
                   {"name":"Baratheon General"}
                ]
             },
@@ -27099,7 +27613,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Samwell Tarly"}
                ]
             },
@@ -27121,7 +27638,11 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Baratheon General"}
                ]
             },
@@ -27158,7 +27679,10 @@
                "subLocation":"Outside Winterfell",
                "characters":[
                   {"name":"Podrick Payne"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -27177,7 +27701,10 @@
                "subLocation":"Outside Winterfell",
                "characters":[
                   {"name":"Podrick Payne"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -27186,7 +27713,11 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Baratheon General"}
                ]
             },
@@ -27196,7 +27727,11 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"}
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  }
                ]
             },
             {
@@ -27214,7 +27749,11 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"},
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
                   {"name":"Baratheon General"}
                ]
             },
@@ -27258,8 +27797,16 @@
                "location":"The North",
                "subLocation":"The Wolfswood",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"},
-                  {"name":"Baratheon General", "alive":false}
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
+                  {
+                     "name":"Baratheon General",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs"
+                  }
                ]
             },
             {
@@ -27268,9 +27815,23 @@
                "location":"The North",
                "subLocation":"The Wolfswood",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"},
-                  {"name":"Gordy", "alive":false},
-                  {"name":"Simpson", "alive":false}
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
+                  {
+                     "name":"Gordy",
+                     "alive":false,
+                     "mannerOfDeath":"Neck stab",
+                     "killedBy":"Stannis Baratheon"
+                  },
+                  {
+                     "name":"Simpson",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Stannis Baratheon"
+                  }
                ]
             },
             {
@@ -27279,7 +27840,11 @@
                "location":"The North",
                "subLocation":"The Wolfswood",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King"}
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  }
                ]
             },
             {
@@ -27288,8 +27853,18 @@
                "location":"The North",
                "subLocation":"The Wolfswood",
                "characters":[
-                  {"name":"Stannis Baratheon", "title":"King", "alive":false},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Stannis Baratheon",
+                     "title":"King",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Lightbringer"}
+                  },
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -27325,7 +27900,12 @@
                "subLocation":"Winterfell",
                "characters":[
                   {"name":"Sansa Stark"},
-                  {"name":"Myranda", "alive":false},
+                  {
+                     "name":"Myranda",
+                     "alive":false,
+                     "mannerOfDeath":"Falling",
+                     "killedBy":"Theon Greyjoy"
+                  },
                   {"name":"Theon Greyjoy"}
                ]
             },
@@ -27372,7 +27952,12 @@
                "sceneEnd":"0:26:05",
                "location":"Braavos",
                "characters":[
-                  {"name":"Meryn Trant", "alive":false},
+                  {
+                     "name":"Meryn Trant",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Arya Stark"
+                  },
                   {"name":"Arya Stark"}
                ]
             },
@@ -27391,7 +27976,12 @@
                "characters":[
                   {"name":"Arya Stark"},
                   {"name":"The Waif"},
-                  {"name":"Jaqen H'ghar", "alive":false}
+                  {
+                     "name":"Jaqen H'ghar",
+                     "alive":false,
+                     "mannerOfDeath":"Poison",
+                     "killedBy":"Jaqen H'ghar"
+                  }
                ]
             },
             {
@@ -27425,7 +28015,12 @@
                "sceneEnd":"0:33:07",
                "location":"Dorne",
                "characters":[
-                  {"name":"Myrcella Baratheon", "alive":false},
+                  {
+                     "name":"Myrcella Baratheon",
+                     "alive":false,
+                     "mannerOfDeath":"Poison",
+                     "killedBy":"Ellaria Sand"
+                  },
                   {"name":"Jaime Lannister"}
                ]
             },
@@ -27614,7 +28209,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Davos Seaworth"}
                ]
             },
@@ -27624,7 +28222,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Davos Seaworth"},
                   {"name":"Melisandre"}
                ]
@@ -27635,7 +28236,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -27678,7 +28282,17 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow", "alive":false}
+                  {
+                     "name":"Jon Snow",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":[
+                        "Olly",
+                        "Alliser Thorne",
+                        "Othell Yarwyck",
+                        "Bowen Marsh"
+                     ]
+                  }
                ]
             }
          ]
