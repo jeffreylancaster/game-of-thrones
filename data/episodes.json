@@ -28375,7 +28375,9 @@
                "characters":[
                   {"name":"Davos Seaworth"},
                   {"name":"Jon Snow", "alive":false},
-                  {"name":"Melisandre"}
+                  {"name":"Melisandre"},
+                  {"name":"Loyal Night's Watchman #1"},
+                  {"name":"Loyal Night's Watchman #2"}
                ]
             },
             {
@@ -28464,10 +28466,23 @@
                "subLocation":"The Wolfswood",
                "characters":[
                   {"name":"Theon Greyjoy"},
-                  {"name":"Bolton Officer", "alive":false},
-                  {"name":"Bolton Soldier", "alive":false},
+                  {
+                     "name":"Bolton Officer",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Brienne of Tarth"
+                  },
+                  {
+                     "name":"Bolton Soldier",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Podrick Payne"
+                  },
                   {"name":"Sansa Stark"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"}
                ]
             },
@@ -28479,7 +28494,10 @@
                "characters":[
                   {"name":"Theon Greyjoy"},
                   {"name":"Sansa Stark"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"}
                ]
             },
@@ -28580,11 +28598,21 @@
                "location":"Dorne",
                "subLocation":"The Water Gardens",
                "characters":[
-                  {"name":"Areo Hotah", "alive":false},
+                  {
+                     "name":"Areo Hotah",
+                     "alive":false,
+                     "mannerOfDeath":"Back stab",
+                     "killedBy":"Tyene Sand"
+                  },
                   {"name":"Ellaria Sand"},
                   {"name":"Doran Martell"},
                   {"name":"Tyene Sand"},
-                  {"name":"Maester Caleotte", "alive":false}
+                  {
+                     "name":"Maester Caleotte",
+                     "alive":false,
+                     "mannerOfDeath":"Back stab",
+                     "killedBy":"Tyene Sand"
+                  }
                ]
             },
             {
@@ -28594,7 +28622,12 @@
                "subLocation":"The Water Gardens",
                "characters":[
                   {"name":"Ellaria Sand"},
-                  {"name":"Doran Martell", "alive":false},
+                  {
+                     "name":"Doran Martell",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Ellaria Sand"
+                  },
                   {"name":"Tyene Sand"}
                ]
             },
@@ -28604,7 +28637,12 @@
                "location":"The Crownlands",
                "subLocation":"Blackwater Bay",
                "characters":[
-                  {"name":"Trystane Martell", "alive":false},
+                  {
+                     "name":"Trystane Martell",
+                     "alive":false,
+                     "mannerOfDeath":"Face stab",
+                     "killedBy":"Obara Sand"
+                  },
                   {"name":"Obara Sand"},
                   {"name":"Nymeria Sand"}
                ]
@@ -28922,7 +28960,10 @@
                "characters":[
                   {"name":"Alliser Thorne"},
                   {"name":"Jon Snow", "alive":false},
-                  {"name":"Davos Seaworth"},
+                  {
+                     "name":"Davos Seaworth",
+                     "weapon":{"action":"takes", "name":"Longclaw"}
+                  },
                   {"name":"Olly"},
                   {"name":"Othell Yarwyck"},
                   {"name":"Bowen Marsh"},
@@ -28950,7 +28991,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Davos Seaworth"},
+                  {
+                     "name":"Davos Seaworth",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Alliser Thorne"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Eddison Tollett"},
@@ -28966,7 +29010,10 @@
                   {"name":"Jon Snow", "alive":false},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Eddison Tollett"},
-                  {"name":"Davos Seaworth"}
+                  {
+                     "name":"Davos Seaworth",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -28977,7 +29024,10 @@
                "characters":[
                   {"name":"Jon Snow", "alive":false},
                   {"name":"Eddison Tollett"},
-                  {"name":"Davos Seaworth"}
+                  {
+                     "name":"Davos Seaworth",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -28995,7 +29045,12 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"King's Landing Boaster", "alive":false},
+                  {
+                     "name":"King's Landing Boaster",
+                     "alive":false,
+                     "mannerOfDeath":"Head crush",
+                     "killedBy":"Gregor Clegane"
+                  },
                   {"name":"Gregor Clegane"}
                ]
             },
@@ -29155,7 +29210,12 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Roose Bolton", "alive":false},
+                  {
+                     "name":"Roose Bolton",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Ramsay Snow"
+                  },
                   {"name":"Ramsay Snow"},
                   {"name":"Harald Karstark"},
                   {"name":"Maester Wolkan"}
@@ -29167,9 +29227,19 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Walda Bolton", "alive":false},
+                  {
+                     "name":"Walda Bolton",
+                     "alive":false,
+                     "mannerOfDeath":"Mauling",
+                     "killedBy":"Ramsay Snow"
+                  },
                   {"name":"Ramsay Snow"},
-                  {"name":"Newborn Bolton", "alive":false}
+                  {
+                     "name":"Newborn Bolton",
+                     "alive":false,
+                     "mannerOfDeath":"Mauling",
+                     "killedBy":"Ramsay Snow"
+                  }
                ]
             },
             {
@@ -29181,7 +29251,10 @@
                   {"name":"Sansa Stark"},
                   {"name":"Theon Greyjoy"},
                   {"name":"Podrick Payne"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -29191,7 +29264,10 @@
                "subLocation":"The Wolfswood",
                "characters":[
                   {"name":"Sansa Stark"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -29203,7 +29279,10 @@
                   {"name":"Sansa Stark"},
                   {"name":"Theon Greyjoy"},
                   {"name":"Podrick Payne"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -29222,7 +29301,13 @@
                "location":"The Iron Islands",
                "subLocation":"Pyke",
                "characters":[
-                  {"name":"Balon Greyjoy", "title":"King", "alive":false},
+                  {
+                     "name":"Balon Greyjoy",
+                     "title":"King",
+                     "alive":false,
+                     "mannerOfDeath":"Falling",
+                     "killedBy":"Euron Greyjoy"
+                  },
                   {"name":"Yara Greyjoy"},
                   {"name":"Euron Greyjoy"}
                ]
@@ -29376,8 +29461,17 @@
                "subLocation":"Tower of Joy",
                "flashback":true,
                "characters":[
-                  {"name":"Arthur Dayne"},
-                  {"name":"Gerold Hightower", "alive":false},
+                  {
+                     "name":"Arthur Dayne",
+                     "weapon":{"action":"has", "name":"Dawn"}
+                  },
+                  {
+                     "name":"Gerold Hightower",
+                     "alive":false,
+                     "mannerOfDeath":"Neck stab",
+                     "killedBy":"Young Ned Stark",
+                     "weapon":{"action":"has", "name":"Vigilance"}
+                  },
                   {"name":"Three-Eyed Raven"},
                   {"name":"Bran Stark"},
                   {"name":"Young Ned Stark"},
@@ -29391,7 +29485,16 @@
                "subLocation":"Tower of Joy",
                "flashback":true,
                "characters":[
-                  {"name":"Arthur Dayne", "alive":false},
+                  {
+                     "name":"Arthur Dayne",
+                     "alive":false,
+                     "mannerOfDeath":"Back stab",
+                     "killedBy":[
+                        "Howland Reed",
+                        "Young Ned Stark"
+                     ],
+                     "weapon":{"action":"has", "name":"Dawn"}
+                  },
                   {"name":"Three-Eyed Raven"},
                   {"name":"Bran Stark"},
                   {"name":"Young Ned Stark"},
@@ -29683,7 +29786,12 @@
                   {"name":"Smalljon Umber"},
                   {"name":"Osha"},
                   {"name":"Rickon Stark"},
-                  {"name":"Shaggydog", "alive":false}
+                  {
+                     "name":"Shaggydog",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"Smalljon Umber"
+                  }
                ]
             },
             {
@@ -29692,7 +29800,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"}
                ]
             },
@@ -29704,7 +29815,10 @@
                "characters":[
                   {"name":"Melisandre"},
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Davos Seaworth"},
                   {"name":"Eddison Tollett"}
                ]
@@ -29715,12 +29829,35 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"},
-                  {"name":"Alliser Thorne", "alive":false},
-                  {"name":"Othell Yarwyck", "alive":false},
-                  {"name":"Bowen Marsh", "alive":false},
-                  {"name":"Olly", "alive":false},
+                  {
+                     "name":"Alliser Thorne",
+                     "alive":false,
+                     "mannerOfDeath":"Hanging",
+                     "killedBy":"Jon Snow"
+                  },
+                  {
+                     "name":"Othell Yarwyck",
+                     "alive":false,
+                     "mannerOfDeath":"Hanging",
+                     "killedBy":"Jon Snow"
+                  },
+                  {
+                     "name":"Bowen Marsh",
+                     "alive":false,
+                     "mannerOfDeath":"Hanging",
+                     "killedBy":"Jon Snow"
+                  },
+                  {
+                     "name":"Olly",
+                     "alive":false,
+                     "mannerOfDeath":"Hanging",
+                     "killedBy":"Jon Snow"
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Davos Seaworth"},
                   {"name":"Melisandre"}
@@ -29734,7 +29871,10 @@
                "characters":[
                   {"name":"Tormund Giantsbane"},
                   {"name":"Olly", "alive":false},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"},
                   {"name":"Alliser Thorne", "alive":false},
                   {"name":"Othell Yarwyck", "alive":false},
@@ -29747,7 +29887,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"}
                ]
             }
@@ -29775,8 +29918,14 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Eddison Tollett"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Eddison Tollett",
+                     "weapon":{"action":"gives", "name":"Longclaw"}
+                  },
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"receives", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -29786,7 +29935,10 @@
                "subLocation":"Castle Black",
                "characters":[
                   {"name":"Sansa Stark"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"},
                   {"name":"Tormund Giantsbane"}
                ]
@@ -29800,7 +29952,10 @@
                   {"name":"Sansa Stark"},
                   {"name":"Eddison Tollett"},
                   {"name":"Jon Snow"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"},
                   {"name":"Tormund Giantsbane"}
                ]
@@ -29833,7 +29988,10 @@
                "characters":[
                   {"name":"Melisandre"},
                   {"name":"Davos Seaworth"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -29949,8 +30107,22 @@
                "characters":[
                   {"name":"Daario Naharis"},
                   {"name":"Jorah Mormont"},
-                  {"name":"Dothraki Woman Having Sex"},
-                  {"name":"Dothraki Man Having Sex"}
+                  {
+                     "name":"Dothraki Woman Having Sex",
+                     "sex":{
+                        "with":["Dothraki Man Having Sex"],
+                        "when":"present",
+                        "type":"fun"
+                     }
+                  },
+                  {
+                     "name":"Dothraki Man Having Sex",
+                     "sex":{
+                        "with":["Dothraki Woman Having Sex"],
+                        "when":"present",
+                        "type":"fun"
+                     }
+                  }
                ]
             },
             {
@@ -29960,8 +30132,18 @@
                "characters":[
                   {"name":"Daario Naharis"},
                   {"name":"Jorah Mormont"},
-                  {"name":"Akho", "alive":false},
-                  {"name":"Iggo", "alive":false}
+                  {
+                     "name":"Akho",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Daario Naharis"
+                  },
+                  {
+                     "name":"Iggo",
+                     "alive":false,
+                     "mannerOfDeath":"Neck snap",
+                     "killedBy":"Daario Naharis"
+                  }
                ]
             },
             {
@@ -30087,7 +30269,12 @@
                "subLocation":"Winterfell",
                "characters":[
                   {"name":"Ramsay Snow"},
-                  {"name":"Osha", "alive":false}
+                  {
+                     "name":"Osha",
+                     "alive":false,
+                     "mannerOfDeath":"Throat stab",
+                     "killedBy":"Ramsay Snow"
+                  }
                ]
             },
             {
@@ -30201,13 +30388,48 @@
                "sceneEnd":"0:58:39",
                "location":"Vaes Dothrak",
                "characters":[
-                  {"name":"Khal Moro", "alive":false},
-                  {"name":"Dothraki Bloodrider #1", "alive":false},
-                  {"name":"Dothraki Bloodrider #2", "alive":false},
-                  {"name":"Khal Forzho", "alive":false},
-                  {"name":"Khal Brozho", "alive":false},
-                  {"name":"Khal Rhalko", "alive":false},
-                  {"name":"Khal Qorro", "alive":false},
+                  {
+                     "name":"Khal Moro",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":"Daenerys Targaryen"
+                  },
+                  {
+                     "name":"Dothraki Bloodrider #1",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":"Daenerys Targaryen"
+                  },
+                  {
+                     "name":"Dothraki Bloodrider #2",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":"Daenerys Targaryen"
+                  },
+                  {
+                     "name":"Khal Forzho",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":"Daenerys Targaryen"
+                  },
+                  {
+                     "name":"Khal Brozho",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":"Daenerys Targaryen"
+                  },
+                  {
+                     "name":"Khal Rhalko",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":"Daenerys Targaryen"
+                  },
+                  {
+                     "name":"Khal Qorro",
+                     "alive":false,
+                     "mannerOfDeath":"Burning",
+                     "killedBy":"Daenerys Targaryen"
+                  },
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"}
                ]
             },
@@ -30310,7 +30532,10 @@
                "characters":[
                   {"name":"Sansa Stark"},
                   {"name":"Petyr Baelish"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -30471,7 +30696,10 @@
                "characters":[
                   {"name":"Bran Stark"},
                   {"name":"Three-Eyed Raven"},
-                  {"name":"Leaf"},
+                  {
+                     "name":"Leaf",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"The Night King", "title":"King"}
                ]
             },
@@ -30493,7 +30721,10 @@
                "characters":[
                   {"name":"Bran Stark"},
                   {"name":"Three-Eyed Raven"},
-                  {"name":"Leaf"},
+                  {
+                     "name":"Leaf",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"The Night King", "title":"King"}
                ]
             },
@@ -30604,7 +30835,12 @@
                "subLocation":"Pyke",
                "characters":[
                   {"name":"Aeron Greyjoy"},
-                  {"name":"Euron Greyjoy", "alive":false}
+                  {
+                     "name":"Euron Greyjoy",
+                     "alive":false,
+                     "mannerOfDeath":"Drowning",
+                     "killedBy":"Aeron Greyjoy"
+                  }
                ]
             },
             {
@@ -30687,7 +30923,9 @@
                "characters":[
                   {"name":"Bran Stark"},
                   {"name":"Hodor"},
-                  {"name":"Three-Eyed Raven"}
+                  {"name":"Three-Eyed Raven"},
+                  {"name":"Meera Reed"},
+                  {"name":"Summer"}
                ]
             },
             {
@@ -30708,7 +30946,8 @@
                "greensight":true,
                "characters":[
                   {"name":"Bran Stark"},
-                  {"name":"The Night King", "title":"King"}
+                  {"name":"The Night King", "title":"King"},
+                  {"name":"White Walker"}
                ]
             },
             {
@@ -30732,7 +30971,10 @@
                "subLocation":"Castle Black",
                "characters":[
                   {"name":"Sansa Stark"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Eddison Tollett"},
                   {"name":"Brienne of Tarth"},
                   {"name":"Davos Seaworth"},
@@ -30747,7 +30989,10 @@
                "subLocation":"Castle Black",
                "characters":[
                   {"name":"Sansa Stark"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -30756,7 +31001,10 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Melisandre"},
                   {"name":"Sansa Stark"},
                   {"name":"Tormund Giantsbane"}
@@ -30769,9 +31017,15 @@
                "subLocation":"Castle Black",
                "characters":[
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Eddison Tollett"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -30780,12 +31034,18 @@
                "location":"The Wall",
                "subLocation":"Castle Black",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Melisandre"},
                   {"name":"Podrick Payne"},
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -30917,7 +31177,10 @@
                   {"name":"Three-Eyed Raven"},
                   {"name":"Summer"},
                   {"name":"Hodor"},
-                  {"name":"Leaf"}
+                  {
+                     "name":"Leaf",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  }
                ]
             },
             {
@@ -30962,11 +31225,23 @@
                "subLocation":"The Three-Eyed Raven",
                "characters":[
                   {"name":"Hodor"},
-                  {"name":"Meera Reed"},
+                  {
+                     "name":"Meera Reed",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"Bran Stark"},
-                  {"name":"Leaf"},
+                  {
+                     "name":"Leaf",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  },
                   {"name":"Three-Eyed Raven"},
-                  {"name":"Summer"}
+                  {"name":"Summer"},
+                  {
+                     "name":"White Walker",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Meera Reed"
+                  }
                ]
             },
             {
@@ -30975,7 +31250,12 @@
                "location":"North of the Wall",
                "subLocation":"The Three-Eyed Raven",
                "characters":[
-                  {"name":"Summer", "alive":false}
+                  {
+                     "name":"Summer",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Wights"
+                  }
                ]
             },
             {
@@ -30987,7 +31267,10 @@
                   {"name":"Hodor"},
                   {"name":"Meera Reed"},
                   {"name":"Bran Stark"},
-                  {"name":"Leaf"}
+                  {
+                     "name":"Leaf",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  }
                ]
             },
             {
@@ -31049,7 +31332,12 @@
                "subLocation":"Winterfell",
                "flashback":true,
                "characters":[
-                  {"name":"Three-Eyed Raven", "alive":false},
+                  {
+                     "name":"Three-Eyed Raven",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"The Night King"
+                  },
                   {"name":"Bran Stark"}
                ]
             },
@@ -31062,7 +31350,10 @@
                   {"name":"Hodor"},
                   {"name":"Meera Reed"},
                   {"name":"Bran Stark"},
-                  {"name":"Leaf"}
+                  {
+                     "name":"Leaf",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  }
                ]
             },
             {
@@ -31071,7 +31362,13 @@
                "location":"North of the Wall",
                "subLocation":"The Three-Eyed Raven",
                "characters":[
-                  {"name":"Leaf", "alive":false}
+                  {
+                     "name":"Leaf",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Wights",
+                     "weapon":{"action":"has", "name":"Dragonglass"}
+                  }
                ]
             },
             {
@@ -31225,7 +31522,12 @@
                "location":"North of the Wall",
                "subLocation":"The Three-Eyed Raven",
                "characters":[
-                  {"name":"Hodor", "alive":false}
+                  {
+                     "name":"Hodor",
+                     "alive":false,
+                     "mannerOfDeath":"Door",
+                     "killedBy":"Wights"
+                  }
                ]
             },
             {
@@ -31275,6 +31577,7 @@
                "characters":[
                   {"name":"The Night King", "title":"King"},
                   {"name":"Bran Stark"},
+                  {"name":"Catelyn Stark"},
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
                   {"name":"Eddard Stark"},
                   {"name":"Drogon"},
@@ -31533,7 +31836,10 @@
                "location":"The Reach",
                "subLocation":"Horn Hill",
                "characters":[
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"takes", "name":"Heartsbane"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"}
                ]
@@ -31745,7 +32051,10 @@
                "sceneEnd":"0:34:27",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"}
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"retrieves", "name":"Needle"}
+                  }
                ]
             },
             {
@@ -31762,7 +32071,10 @@
                "sceneEnd":"0:35:30",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"}
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  }
                ]
             },
             {
@@ -31883,8 +32195,22 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Jaime Lannister"},
-                  {"name":"Cersei Lannister"}
+                  {
+                     "name":"Jaime Lannister",
+                     "sex":{
+                        "with":["Cersei Lannister"],
+                        "when":"future",
+                        "type":"love"
+                     }
+                  },
+                  {
+                     "name":"Cersei Lannister",
+                     "sex":{
+                        "with":["Jaime Lannister"],
+                        "when":"future",
+                        "type":"love"
+                     }
+                  }
                ]
             },
             {
@@ -32051,7 +32377,10 @@
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
                   {"name":"Dim Dalba"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Davos Seaworth"},
                   {"name":"Tormund Giantsbane"},
@@ -32065,7 +32394,10 @@
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
                   {"name":"Dim Dalba"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Davos Seaworth"},
                   {"name":"Tormund Giantsbane"}
@@ -32077,7 +32409,10 @@
                "location":"The North",
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Davos Seaworth"},
                   {"name":"Tormund Giantsbane"}
@@ -32195,7 +32530,10 @@
                "location":"The North",
                "subLocation":"Bear Island",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Davos Seaworth"},
                   {"name":"Lyanna Mormont"},
@@ -32228,7 +32566,10 @@
                "subLocation":"Deepwood Motte",
                "characters":[
                   {"name":"Robett Glover"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Davos Seaworth"}
                ]
@@ -32271,7 +32612,10 @@
                "location":"The North",
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Davos Seaworth"}
                ]
@@ -32296,7 +32640,8 @@
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
                   {"name":"Lyanna Mormont"},
-                  {"name":"Sansa Stark"}
+                  {"name":"Sansa Stark"},
+                  {"name":"Bear Island Maester"}
                ]
             },
             {
@@ -32410,7 +32755,12 @@
                "subLocation":"Village",
                "characters":[
                   {"name":"Sandor Clegane"},
-                  {"name":"Brother Ray", "alive":false}
+                  {
+                     "name":"Brother Ray",
+                     "alive":false,
+                     "mannerOfDeath":"Hanging",
+                     "killedBy":"Lem Lemoncloak"
+                  }
                ]
             },
             {
@@ -32487,7 +32837,12 @@
                   {"name":"Gatins"},
                   {"name":"Morgan"},
                   {"name":"Riddell"},
-                  {"name":"Steve", "alive":false},
+                  {
+                     "name":"Steve",
+                     "alive":false,
+                     "mannerOfDeath":"Decapitation",
+                     "killedBy":"Sandor Clegane"
+                  },
                   {"name":"Sandor Clegane"}
                ]
             },
@@ -32498,8 +32853,18 @@
                "subLocation":"Village",
                "characters":[
                   {"name":"Gatins"},
-                  {"name":"Morgan", "alive":false},
-                  {"name":"Riddell", "alive":false},
+                  {
+                     "name":"Morgan",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Sandor Clegane"
+                  },
+                  {
+                     "name":"Riddell",
+                     "alive":false,
+                     "mannerOfDeath":"Chest stab",
+                     "killedBy":"Sandor Clegane"
+                  },
                   {"name":"Sandor Clegane"}
                ]
             },
@@ -32509,7 +32874,12 @@
                "location":"The Riverlands",
                "subLocation":"Village",
                "characters":[
-                  {"name":"Gatins", "alive":false},
+                  {
+                     "name":"Gatins",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Sandor Clegane"
+                  },
                   {"name":"Sandor Clegane"}
                ]
             },
@@ -32568,7 +32938,10 @@
                "location":"The Riverlands",
                "subLocation":"Riverrun",
                "characters":[
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"}
                ]
             },
@@ -32579,7 +32952,10 @@
                "subLocation":"Riverrun",
                "characters":[
                   {"name":"Jaime Lannister"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"},
                   {"name":"Lannister Soldier"}
                ]
@@ -32601,7 +32977,10 @@
                "subLocation":"Riverrun",
                "characters":[
                   {"name":"Jaime Lannister"},
-                  {"name":"Brienne of Tarth"}
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  }
                ]
             },
             {
@@ -32611,7 +32990,10 @@
                "subLocation":"Riverrun",
                "characters":[
                   {"name":"Brynden Tully"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"}
                ]
             },
@@ -32836,7 +33218,10 @@
                "subLocation":"Riverrun",
                "characters":[
                   {"name":"Brynden Tully"},
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"}
                ]
             },
@@ -32846,7 +33231,11 @@
                "location":"The Riverlands",
                "subLocation":"Riverrun",
                "characters":[
-                  {"name":"Brynden Tully", "alive":false}
+                  {
+                     "name":"Brynden Tully",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs"
+                  }
                ]
             },
             {
@@ -32866,7 +33255,10 @@
                "subLocation":"Riverrun",
                "characters":[
                   {"name":"Jaime Lannister"},      
-                  {"name":"Brienne of Tarth"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
                   {"name":"Podrick Payne"}
                ]
             },
@@ -32907,7 +33299,12 @@
                "subLocation":"Forest",
                "characters":[
                   {"name":"Sandor Clegane"},
-                  {"name":"Lem Lemoncloak", "alive":false},
+                  {
+                     "name":"Lem Lemoncloak",
+                     "alive":false,
+                     "mannerOfDeath":"Hanging",
+                     "killedBy":"Sandor Clegane"
+                  },
                   {"name":"Beric Dondarrion"},
                   {"name":"Thoros of Myr"}
                ]
@@ -32947,7 +33344,12 @@
                "location":"Braavos",
                "characters":[
                   {"name":"Arya Stark"},
-                  {"name":"Lady Crane", "alive":false}
+                  {
+                     "name":"Lady Crane",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"The Waif"
+                  }
                ]
             },
             {
@@ -32955,8 +33357,16 @@
                "sceneEnd":"0:59:00",
                "location":"Braavos",
                "characters":[
-                  {"name":"Arya Stark"},
-                  {"name":"The Waif", "alive":false}
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
+                  {
+                     "name":"The Waif",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Arya Stark"
+                  }
                ]
             },
             {
@@ -33115,8 +33525,18 @@
                   {"name":"Grey Worm"},
                   {"name":"Missandei"},
                   {"name":"Yezzan zo Qaggaz"},
-                  {"name":"Razdal mo Eraz", "alive":false},
-                  {"name":"Belicho Paenymion", "alive":false}
+                  {
+                     "name":"Razdal mo Eraz",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Grey Worm"
+                  },
+                  {
+                     "name":"Belicho Paenymion",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Grey Worm"
+                  }
                ]
             },
             {
@@ -33144,7 +33564,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Lyanna Mormont"},
                   {"name":"Ramsay Snow"},
@@ -33160,7 +33583,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Lyanna Mormont"},
                   {"name":"Ramsay Snow"},
@@ -33177,7 +33603,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Lyanna Mormont"},
                   {"name":"Ramsay Snow"},
@@ -33193,7 +33622,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Lyanna Mormont"},
                   {"name":"Ramsay Snow"},
                   {"name":"Tormund Giantsbane"},
@@ -33258,7 +33690,10 @@
                "subLocation":"Stannis Baratheon's Camp",
                "characters":[
                   {"name":"Melisandre"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -33295,7 +33730,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -33304,7 +33742,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Wun Wun"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Davos Seaworth"}
@@ -33336,7 +33777,10 @@
                "characters":[
                   {"name":"Ramsay Snow"},
                   {"name":"Rickon Stark"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Davos Seaworth"},
                   {"name":"Wun Wun"}
@@ -33350,7 +33794,10 @@
                "characters":[
                   {"name":"Ramsay Snow"},
                   {"name":"Rickon Stark"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Davos Seaworth"}
                ]
             },
@@ -33362,7 +33809,10 @@
                "characters":[
                   {"name":"Ramsay Snow"},
                   {"name":"Rickon Stark"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -33373,7 +33823,10 @@
                "characters":[
                   {"name":"Ramsay Snow"},
                   {"name":"Rickon Stark"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Wun Wun"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Davos Seaworth"}
@@ -33386,8 +33839,16 @@
                "subLocation":"Outside Winterfell",
                "characters":[
                   {"name":"Ramsay Snow"},
-                  {"name":"Rickon Stark", "alive":false},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Rickon Stark",
+                     "alive":false,
+                     "mannerOfDeath":"Arrow",
+                     "killedBy":"Ramsay Snow"
+                  },
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -33399,7 +33860,10 @@
                   {"name":"Tormund Giantsbane"},
                   {"name":"Davos Seaworth"},
                   {"name":"Ramsay Snow"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Rickon Stark", "alive":false}
                ]
             },
@@ -33412,7 +33876,10 @@
                   {"name":"Tormund Giantsbane"},
                   {"name":"Davos Seaworth"},
                   {"name":"Ramsay Snow"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Wun Wun"}
                ]
             },
@@ -33422,7 +33889,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -33449,7 +33919,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -33475,7 +33948,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ramsay Snow"}
                ]
             },
@@ -33513,7 +33989,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Wun Wun"},
                   {"name":"Smalljon Umber"},
@@ -33536,7 +34015,10 @@
                "subLocation":"Outside Winterfell",
                "characters":[
                   {"name":"Ramsay Snow"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Wun Wun"},
                   {"name":"Tormund Giantsbane"}
                ]
@@ -33557,7 +34039,10 @@
                "characters":[
                   {"name":"Tormund Giantsbane"},
                   {"name":"Smalljon Umber"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -33567,7 +34052,10 @@
                "subLocation":"Outside Winterfell",
                "characters":[
                   {"name":"Ramsay Snow"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Wun Wun"},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Smalljon Umber"},
@@ -33581,7 +34069,10 @@
                "subLocation":"Outside Winterfell",
                "characters":[
                   {"name":"Ramsay Snow"},
-                  {"name":"Jon Snow"}
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  }
                ]
             },
             {
@@ -33600,11 +34091,19 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"},
                   {"name":"Ramsay Snow"},
                   {"name":"Tormund Giantsbane"},
-                  {"name":"Smalljon Umber", "alive":false}
+                  {
+                     "name":"Smalljon Umber",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":"Tormund Giantsbane"
+                  }
                ]
             },
             {
@@ -33616,7 +34115,10 @@
                   {"name":"Wun Wun"},
                   {"name":"Sansa Stark"},
                   {"name":"Petyr Baelish"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ramsay Snow"},
                   {"name":"Tormund Giantsbane"}
                ]
@@ -33627,7 +34129,10 @@
                "location":"The North",
                "subLocation":"Outside Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Ramsay Snow"},
                   {"name":"Sansa Stark"},
                   {"name":"Wun Wun"},
@@ -33668,8 +34173,16 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
-                  {"name":"Wun Wun", "alive":false},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
+                  {
+                     "name":"Wun Wun",
+                     "alive":false,
+                     "mannerOfDeath":"Arrow",
+                     "killedBy":"Ramsay Snow"
+                  },
                   {"name":"Tormund Giantsbane"},
                   {"name":"Ramsay Snow"}
                ]
@@ -33681,7 +34194,10 @@
                "subLocation":"Winterfell",
                "characters":[
                   {"name":"Ramsay Snow"},
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"drops", "name":"Longclaw"}
+                  },
                   {"name":"Tormund Giantsbane"}
                ]
             },
@@ -33733,7 +34249,10 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Rickon Stark", "alive":false},
                   {"name":"Tormund Giantsbane"},
                   {"name":"Sansa Stark"}
@@ -33745,7 +34264,10 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Jon Snow"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":{"action":"has", "name":"Longclaw"}
+                  },
                   {"name":"Sansa Stark"}
                ]
             },
@@ -33755,7 +34277,12 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Ramsay Snow", "alive":false},
+                  {
+                     "name":"Ramsay Snow",
+                     "alive":false,
+                     "mannerOfDeath":"Mauling",
+                     "killedBy":"Sansa Stark"
+                  },
                   {"name":"Sansa Stark"}
                ]
             }
@@ -33862,8 +34389,22 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Grand Maester Pycelle"},
-                  {"name":"Marei"}
+                  {
+                     "name":"Grand Maester Pycelle",
+                     "sex":{
+                        "with":["Marei"],
+                        "when":"past",
+                        "type":"paid"
+                     }
+                  },
+                  {
+                     "name":"Marei",
+                     "sex":{
+                        "with":["Grand Maester Pycelle"],
+                        "when":"past",
+                        "type":"paid"
+                     }
+                  }
                ]
             },
             {
@@ -34089,7 +34630,19 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Grand Maester Pycelle", "alive":false},
+                  {
+                     "name":"Grand Maester Pycelle",
+                     "alive":false,
+                     "mannerOfDeath":"Multiple stabs",
+                     "killedBy":[
+                        "Frances",
+                        "Little Bird #3",
+                        "Little Bird #4",
+                        "Little Bird #5",
+                        "Little Bird #6",
+                        "Little Bird #7"
+                     ]
+                  },
                   {"name":"Qyburn"},
                   {"name":"Frances"},
                   {"name":"Little Bird #3"},
@@ -34278,7 +34831,12 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Lancel Lannister", "alive":false}
+                  {
+                     "name":"Lancel Lannister",
+                     "alive":false,
+                     "mannerOfDeath":"Wildfire",
+                     "killedBy":"Cersei Lannister"
+                  }
                ]
             },
             {
@@ -34287,11 +34845,37 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Margaery Tyrell", "alive":false},
-                  {"name":"High Sparrow", "alive":false},
-                  {"name":"Loras Tyrell", "alive":false},
-                  {"name":"Mace Tyrell", "alive":false},
-                  {"name":"Kevan Lannister", "title":"Hand", "alive":false}
+                  {
+                     "name":"Margaery Tyrell",
+                     "alive":false,
+                     "mannerOfDeath":"Wildfire",
+                     "killedBy":"Cersei Lannister"
+                  },
+                  {
+                     "name":"High Sparrow",
+                     "alive":false,
+                     "mannerOfDeath":"Wildfire",
+                     "killedBy":"Cersei Lannister"
+                  },
+                  {
+                     "name":"Loras Tyrell",
+                     "alive":false,
+                     "mannerOfDeath":"Wildfire",
+                     "killedBy":"Cersei Lannister"
+                  },
+                  {
+                     "name":"Mace Tyrell",
+                     "alive":false,
+                     "mannerOfDeath":"Wildfire",
+                     "killedBy":"Cersei Lannister"
+                  },
+                  {
+                     "name":"Kevan Lannister",
+                     "title":"Hand",
+                     "alive":false,
+                     "mannerOfDeath":"Wildfire",
+                     "killedBy":"Cersei Lannister"
+                  }
                ]
             },
             {
@@ -34348,7 +34932,13 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Tommen Baratheon", "title":"King", "alive":false},
+                  {
+                     "name":"Tommen Baratheon",
+                     "title":"King",
+                     "alive":false,
+                     "mannerOfDeath":"Falling",
+                     "killedBy":"Tommen Baratheon"
+                  },
                   {"name":"Tommen's Manservant"}
                ]
             },
@@ -34420,7 +35010,10 @@
                "location":"The Reach",
                "subLocation":"Oldtown",
                "characters":[
-                  {"name":"Samwell Tarly"},
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":{"action":"has", "name":"Heartsbane"}
+                  },
                   {"name":"Gilly"},
                   {"name":"Baby Sam"}
                ]
@@ -34558,8 +35151,16 @@
                "characters":[
                   {"name":"Walder Frey"},
                   {"name":"Handmaid"},
-                  {"name":"Lothar Frey", "alive":false},
-                  {"name":"Black Walder Rivers", "alive":false}
+                  {
+                     "name":"Lothar Frey",
+                     "alive":false,
+                     "killedBy":"Arya Stark"
+                  },
+                  {
+                     "name":"Black Walder Rivers",
+                     "alive":false,
+                     "killedBy":"Arya Stark"
+                  }
                ]
             },
             {
@@ -34568,7 +35169,12 @@
                "location":"The Riverlands",
                "subLocation":"The Twins",
                "characters":[
-                  {"name":"Walder Frey", "alive":false},
+                  {
+                     "name":"Walder Frey",
+                     "alive":false,
+                     "mannerOfDeath":"Throat slash",
+                     "killedBy":"Arya Stark"
+                  },
                   {"name":"Arya Stark"}
                ]
             },
@@ -34694,7 +35300,7 @@
                   {"name":"Cersei Lannister", "title":"King"},
                   {"name":"Gregor Clegane"},
                   {"name":"Jaime Lannister"},
-                  {"name":"Qyburn"}
+                  {"name":"Qyburn", "title":"Hand"}
                ]
             },
             {
@@ -34946,7 +35552,7 @@
                   {"name":"Cersei Lannister", "title":"King"},
                   {"name":"Jaime Lannister"},
                   {"name":"Gregor Clegane"},
-                  {"name":"Qyburn"},
+                  {"name":"Qyburn", "title":"Hand"},
                   {"name":"Euron Greyjoy", "title":"King"}
                ]
             },
@@ -35071,8 +35677,14 @@
                "characters":[
                   {"name":"Sandor Clegane"},
                   {"name":"Beric Dondarrion"},
-                  {"name":"Farmer Hamlet", "alive":false},
-                  {"name":"Farmer's Daughter", "alive":false}
+                  {
+                     "name":"Farmer Hamlet",
+                     "alive":false
+                  },
+                  {
+                     "name":"Farmer's Daughter",
+                     "alive":false
+                  }
                ]
             },
             {
@@ -35270,7 +35882,8 @@
                   {"name":"Cersei Lannister", "title":"King"},
                   {"name":"Jaime Lannister"},
                   {"name":"Gregor Clegane"},
-                  {"name":"Qyburn"}               ]
+                  {"name":"Qyburn", "title":"Hand"}
+               ]
             },
             {
                "sceneStart":"0:14:35",
@@ -35281,7 +35894,7 @@
                   {"name":"Cersei Lannister", "title":"King"},
                   {"name":"Jaime Lannister"},
                   {"name":"Gregor Clegane"},
-                  {"name":"Qyburn"},
+                  {"name":"Qyburn", "title":"Hand"},
                   {"name":"Randyll Tarly"},
                   {"name":"Dickon Tarly"}
                ]
@@ -35335,7 +35948,7 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Cersei Lannister", "title":"King"},
-                  {"name":"Qyburn"}
+                  {"name":"Qyburn", "title":"Hand"}
                ]
             },
             {
@@ -36026,7 +36639,7 @@
                      "name":"Jaime Lannister",
                      "weapon":{"action":"has", "name":"Widow's Wail"}
                   },
-                  {"name":"Qyburn"}
+                  {"name":"Qyburn", "title":"Hand"}
                ]
             },
             {
@@ -36039,7 +36652,7 @@
                   {"name":"Tyene Sand"},
                   {"name":"Cersei Lannister", "title":"King"},
                   {"name":"Gregor Clegane"},
-                  {"name":"Qyburn"}
+                  {"name":"Qyburn", "title":"Hand"}
                ]
             },
             {
