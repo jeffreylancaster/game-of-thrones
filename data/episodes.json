@@ -26633,7 +26633,7 @@
                      "weapon":{"action":"has", "name":"Longclaw"}
                   },
                   {"name":"Tormund Giantsbane"},
-                  {"name":"The Night King", "title":"King"}
+                  {"name":"The Night King", "title":"King"},
                   {"name":"Wun Wun"}
                ]
             },
