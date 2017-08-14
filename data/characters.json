@@ -549,7 +549,9 @@
             "Khal Forzho",
             "Khal Moro",
             "Dothraki Bloodrider #1",
-            "Dothraki Bloodrider #2"
+            "Dothraki Bloodrider #2",
+            "Randyll Tarly",
+            "Dickon Tarly"
          ]
       },
       {
@@ -596,7 +598,8 @@
                   7
                ]
             }
-         ]
+         ],
+         "killedBy":"Daenerys Targaryen"
       },
       {
          "characterName":"Dongo the Giant",
@@ -819,7 +822,14 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxNzYwMTk4MV5BMl5BanBnXkFtZTcwNDg1ODg4OQ@@._V1_SY1000_CR0,0,846,1000_AL_.jpg",
          "characterLink":"/character/ch0300040/",
          "actorName":"Joe Dempsie",
-         "actorLink":"/name/nm1478079/"
+         "actorLink":"/name/nm1478079/",
+         "parents":[
+            "Robert Baratheon"
+         ],
+         "killed":[
+            "Kevin Eldon",
+            "Laurence Spellman"
+         ]
       },
       {
          "characterName":"Gerold Hightower",
@@ -2711,7 +2721,8 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIwMTY0NTc4N15BMl5BanBnXkFtZTgwNTMyNzYwOTE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
          "characterLink":"/character/ch0524408/",
          "actorName":"James Faulkner",
-         "actorLink":"/name/nm0269077/"
+         "actorLink":"/name/nm0269077/",
+         "killedBy":"Daenerys Targaryen"
       },
       {
          "characterName":"Rast",
