@@ -35345,7 +35345,7 @@
          "episodeTitle":"Dragonstone",
          "episodeLink":"/title/tt5654088/",
          "episodeAirDate":"2017-07-16",
-         "episodeDescription":"Jon organizes the defense of the North. Cersei tries to even the odds. Daenerys comes home.",
+         "episodeDescription":"Jon organizes the North's defenses. Cersei tries to even the odds. Daenerys comes home. Arya reminds the Freys \"The North remembers\". Sam adapts to life in Oldtown. Night King makes his way south.",
          "openingSequenceLocations":[
             "King's Landing",
             "Dragonstone",
@@ -35807,7 +35807,7 @@
          "episodeTitle":"Stormborn",
          "episodeLink":"/title/tt5655178/",
          "episodeAirDate":"2017-07-23",
-         "episodeDescription":"Daenerys receives an unexpected visitor. Jon faces a revolt. Tyrion plans the conquest of Westeros.",
+         "episodeDescription":"Daenerys receives an unexpected visitor. Jon faces resistance. Tyrion plans the conquest of Westeros. Cersei gathers her allies. Arya has a reunion with old friends. Sam risks his career and life.",
          "openingSequenceLocations":[
             "King's Landing",
             "Dragonstone",
@@ -36437,7 +36437,7 @@
          "episodeTitle":"The Queen's Justice",
          "episodeLink":"/title/tt5775840/",
          "episodeAirDate":"2017-07-30",
-         "episodeDescription":"Daenerys holds court. Cersei returns a gift. Jaime learns from his mistakes.",
+         "episodeDescription":"Daenerys and Jon meet. Cersei gains a new ally. Sansa receives an unexpected visitor. Sam is confronted for his actions.",
          "openingSequenceLocations":[
             "King's Landing",
             "Dragonstone",
@@ -37037,21 +37037,1093 @@
          "episodeTitle":"The Spoils of War",
          "episodeLink":"/title/tt5775846/",
          "episodeAirDate":"2017-08-06",
-         "episodeDescription":"",
+         "episodeDescription":"Daenerys takes matters into her own hands. Arya reaches her destination. Jaime and Bronn collect the spoils from the war with the Tyrells.",
          "openingSequenceLocations":[
-
+            "King's Landing",
+            "Dragonstone",
+            "Pyke",
+            "Winterfell",
+            "The Wall",
+            "Oldtown"
          ],
          "scenes":[
-
+            {
+               "sceneStart":"0:03:55",
+               "sceneEnd":"0:04:17",
+               "location":"The Reach",
+               "subLocation":"Highgarden",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:04:17",
+               "sceneEnd":"0:04:23",
+               "location":"The Reach",
+               "subLocation":"Highgarden",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:04:23",
+               "sceneEnd":"0:05:45",
+               "location":"The Reach",
+               "subLocation":"Highgarden",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Bronn"}
+               ]
+            },
+            {
+               "sceneStart":"0:04:45",
+               "sceneEnd":"0:06:42",
+               "location":"The Reach",
+               "subLocation":"Highgarden",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Bronn"},
+                  {"name":"Randyll Tarly"},
+                  {"name":"Dickon Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:06:42",
+               "sceneEnd":"0:08:12",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tycho Nestoris"},
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:08:12",
+               "sceneEnd":"0:09:57",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Petyr Baelish",
+                     "weapon":{"action":"gives", "name":"Valyrian Steel Dagger"}
+                  },
+                  {
+                     "name":"Bran Stark",
+                     "weapon":{"action":"receives", "name":"Valyrian Steel Dagger"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:09:57",
+               "sceneEnd":"0:10:19",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Petyr Baelish"},
+                  {
+                     "name":"Bran Stark",
+                     "weapon":{"action":"has", "name":"Valyrian Steel Dagger"}
+                  },
+                  {"name":"Meera Reed"}
+               ]
+            },
+            {
+               "sceneStart":"0:10:19",
+               "sceneEnd":"0:12:03",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Bran Stark",
+                     "weapon":{"action":"has", "name":"Valyrian Steel Dagger"}
+                  },
+                  {"name":"Meera Reed"}
+               ]
+            },
+            {
+               "sceneStart":"0:12:03",
+               "sceneEnd":"0:12:19",
+               "location":"The North",
+               "subLocation":"The Kingsroad South to King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:12:19",
+               "sceneEnd":"0:14:02",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
+                  {"name":"Koner"},
+                  {"name":"Henk"}
+               ]
+            },
+            {
+               "sceneStart":"0:14:02",
+               "sceneEnd":"0:14:33",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:14:33",
+               "sceneEnd":"0:14:48",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Koner"},
+                  {"name":"Henk"}
+               ]
+            },
+            {
+               "sceneStart":"0:14:48",
+               "sceneEnd":"0:15:07",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Koner"},
+                  {"name":"Henk"},
+                  {"name":"Sansa Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:15:07",
+               "sceneEnd":"0:17:55",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":{"action":"has", "name":"Needle"}
+                  },
+                  {"name":"Sansa Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:17:55",
+               "sceneEnd":"0:20:30",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"receives", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Sansa Stark"},
+                  {
+                     "name":"Bran Stark",
+                     "weapon":{"action":"gives", "name":"Valyrian Steel Dagger"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:20:30",
+               "sceneEnd":"0:20:53",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Sansa Stark"},
+                  {"name":"Bran Stark"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
+                  {"name":"Podrick Payne"}
+               ]
+            },
+            {
+               "sceneStart":"0:20:53",
+               "sceneEnd":"0:21:13",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
+                  {"name":"Podrick Payne"}
+               ]
+            },
+            {
+               "sceneStart":"0:21:13",
+               "sceneEnd":"0:21:20",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Sansa Stark"},
+                  {"name":"Bran Stark"},
+                  {"name":"Petyr Baelish"}
+               ]
+            },
+            {
+               "sceneStart":"0:21:20",
+               "sceneEnd":"0:21:50",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Qhono"}
+               ]
+            },
+            {
+               "sceneStart":"0:21:50",
+               "sceneEnd":"0:22:01",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Qhono"},
+                  {"name":"Jon Snow", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:22:01",
+               "sceneEnd":"0:22:10",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Jon Snow", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:22:10",
+               "sceneEnd":"0:23:12",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:23:12",
+               "sceneEnd":"0:26:16",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Jon Snow", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:26:16",
+               "sceneEnd":"0:27:32",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:27:32",
+               "sceneEnd":"0:27:36",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"},
+                  {"name":"Drogon"},
+                  {"name":"Viserion"},
+                  {"name":"Rhaegal"}
+               ]
+            },
+            {
+               "sceneStart":"0:27:36",
+               "sceneEnd":"0:28:13",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:28:13",
+               "sceneEnd":"0:28:18",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"},
+                  {"name":"Drogon"},
+                  {"name":"Viserion"},
+                  {"name":"Rhaegal"}
+               ]
+            },
+            {
+               "sceneStart":"0:28:18",
+               "sceneEnd":"0:28:55",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:28:55",
+               "sceneEnd":"0:28:58",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Missandei"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"},
+                  {"name":"Drogon"},
+                  {"name":"Viserion"},
+                  {"name":"Rhaegal"}
+               ]
+            },
+            {
+               "sceneStart":"0:28:58",
+               "sceneEnd":"0:29:17",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
+                  {"name":"Podrick Payne"}
+               ]
+            },
+            {
+               "sceneStart":"0:29:17",
+               "sceneEnd":"0:29:48",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":[
+                        {"action":"has", "name":"Oathkeeper"},
+                        {"action":"inspects", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Podrick Payne"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"shows", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:29:48",
+               "sceneEnd":"0:29:56",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Petyr Baelish"}
+               ]
+            },
+            {
+               "sceneStart":"0:29:56",
+               "sceneEnd":"0:32:26",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Petyr Baelish"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":{"action":"has", "name":"Oathkeeper"}
+                  },
+                  {"name":"Podrick Payne"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:32:26",
+               "sceneEnd":"0:33:01",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:33:01",
+               "sceneEnd":"0:34:44",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Missandei"}
+               ]
+            },
+            {
+               "sceneStart":"0:34:44",
+               "sceneEnd":"0:34:54",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Theon Greyjoy"},
+                  {"name":"Harrag"}
+               ]
+            },
+            {
+               "sceneStart":"0:34:54",
+               "sceneEnd":"0:36:22",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Theon Greyjoy"},
+                  {"name":"Harrag"},
+                  {"name":"Jon Snow", "title":"King"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Missandei"}
+               ]
+            },
+            {
+               "sceneStart":"0:36:22",
+               "sceneEnd":"0:36:37",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Bronn"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:36:37",
+               "sceneEnd":"0:37:10",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Bronn"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Randyll Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:37:10",
+               "sceneEnd":"0:37:17",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Bronn"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:37:17",
+               "sceneEnd":"0:38:48",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Bronn"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Dickon Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:38:48",
+               "sceneEnd":"0:39:29",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Bronn"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Dickon Tarly"},
+                  {"name":"Randyll Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:39:29",
+               "sceneEnd":"0:39:47",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:39:47",
+               "sceneEnd":"0:40:24",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Bronn"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Dickon Tarly"},
+                  {"name":"Randyll Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:40:24",
+               "sceneEnd":"0:40:45",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Bronn"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Dickon Tarly"},
+                  {"name":"Randyll Tarly"},
+                  {"name":"Drogon"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"}
+               ]
+            },
+            {
+               "sceneStart":"0:40:45",
+               "sceneEnd":"0:40:58",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:40:58",
+               "sceneEnd":"0:41:02",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Dickon Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:41:02",
+               "sceneEnd":"0:42:14",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:41:24",
+               "sceneEnd":"0:41:27",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:41:27",
+               "sceneEnd":"0:41:49",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:41:49",
+               "sceneEnd":"0:41:51",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:41:51",
+               "sceneEnd":"0:42:11",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:42:11",
+               "sceneEnd":"0:42:13",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:42:13",
+               "sceneEnd":"0:42:17",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:42:17",
+               "sceneEnd":"0:42:29",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:42:29",
+               "sceneEnd":"0:43:09",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {"name":"Bronn"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:43:09",
+               "sceneEnd":"0:43:19",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:19",
+               "sceneEnd":"0:43:34",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Bronn"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:34",
+               "sceneEnd":"0:43:36",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:43:36",
+               "sceneEnd":"0:43:44",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:44",
+               "sceneEnd":"0:43:54",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:43:54",
+               "sceneEnd":"0:43:59",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Dickon Tarly"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:59",
+               "sceneEnd":"0:45:11",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Bronn"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:11",
+               "sceneEnd":"0:45:52",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Bronn"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:52",
+               "sceneEnd":"0:45:57",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:57",
+               "sceneEnd":"0:46:08",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Qhono"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:08",
+               "sceneEnd":"0:46:14",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:46:14",
+               "sceneEnd":"0:46:21",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Qhono"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:21",
+               "sceneEnd":"0:46:28",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:46:28",
+               "sceneEnd":"0:46:29",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:29",
+               "sceneEnd":"0:46:46",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:46:46",
+               "sceneEnd":"0:47:13",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:47:13",
+               "sceneEnd":"0:47:27",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {"name":"Bronn"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Qhono"}
+               ]
+            },
+            {
+               "sceneStart":"0:47:27",
+               "sceneEnd":"0:47:48",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {"name":"Bronn"},
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:47:48",
+               "sceneEnd":"0:48:09",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {"name":"Bronn"}
+               ]
+            },
+            {
+               "sceneStart":"0:48:09",
+               "sceneEnd":"0:48:12",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Qhono"}
+               ]
+            },
+            {
+               "sceneStart":"0:48:12",
+               "sceneEnd":"0:48:20",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {"name":"Bronn"},
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:48:20",
+               "sceneEnd":"0:48:45",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {"name":"Bronn"}
+               ]
+            },
+            {
+               "sceneStart":"0:48:45",
+               "sceneEnd":"0:48:59",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:48:59",
+               "sceneEnd":"0:49:12",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:49:12",
+               "sceneEnd":"0:49:20",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:49:20",
+               "sceneEnd":"0:49:33",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Drogon"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Qhono"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:33",
+               "sceneEnd":"0:49:40",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Drogon"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:40",
+               "sceneEnd":"0:49:43",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Drogon"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Bronn"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:43",
+               "sceneEnd":"0:49:46",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  },
+                  {"name":"Bronn"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:46",
+               "sceneEnd":"0:50:05",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Rush",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":{"action":"has", "name":"Widow's Wail"}
+                  }
+               ]
+            }
          ]
       },
       {
          "seasonNum":7,
          "episodeNum":5,
-         "episodeTitle":"Episode #7.5",
+         "episodeTitle":"Eastwatch",
          "episodeLink":"/title/tt5775854/",
-         "episodeAirDate":"2017--",
-         "episodeDescription":"",
+         "episodeAirDate":"2017-08-13",
+         "episodeDescription":"Daenerys demands loyalty from the surviving Lannister soldiers; Jon heeds Bran's warning about White Walkers on the move; Cersei vows to vanquish anyone or anything that stands in her way.",
          "openingSequenceLocations":[
 
          ],
@@ -37091,6 +38163,76 @@
          "seasonNum":8,
          "episodeNum":1,
          "episodeTitle":"Episode #8.1",
+         "episodeLink":"/title/tt5924366/",
+         "episodeAirDate":"2018--",
+         "episodeDescription":"",
+         "openingSequenceLocations":[
+
+         ],
+         "scenes":[
+
+         ]
+      },
+      {
+         "seasonNum":8,
+         "episodeNum":2,
+         "episodeTitle":"Episode #8.2",
+         "episodeLink":"/title/tt5924366/",
+         "episodeAirDate":"2018--",
+         "episodeDescription":"",
+         "openingSequenceLocations":[
+
+         ],
+         "scenes":[
+
+         ]
+      }
+      {
+         "seasonNum":8,
+         "episodeNum":3,
+         "episodeTitle":"Episode #8.3",
+         "episodeLink":"/title/tt5924366/",
+         "episodeAirDate":"2018--",
+         "episodeDescription":"",
+         "openingSequenceLocations":[
+
+         ],
+         "scenes":[
+
+         ]
+      }
+      {
+         "seasonNum":8,
+         "episodeNum":4,
+         "episodeTitle":"Episode #8.4",
+         "episodeLink":"/title/tt5924366/",
+         "episodeAirDate":"2018--",
+         "episodeDescription":"",
+         "openingSequenceLocations":[
+
+         ],
+         "scenes":[
+
+         ]
+      }
+      {
+         "seasonNum":8,
+         "episodeNum":5,
+         "episodeTitle":"Episode #8.5",
+         "episodeLink":"/title/tt5924366/",
+         "episodeAirDate":"2018--",
+         "episodeDescription":"",
+         "openingSequenceLocations":[
+
+         ],
+         "scenes":[
+
+         ]
+      }
+      {
+         "seasonNum":8,
+         "episodeNum":6,
+         "episodeTitle":"Episode #8.6",
          "episodeLink":"/title/tt5924366/",
          "episodeAirDate":"2018--",
          "episodeDescription":"",
