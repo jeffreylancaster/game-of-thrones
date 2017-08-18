@@ -133,7 +133,7 @@
 		{"name":"Fruit Vendor", "include":false},
 		{"name":"Gared", "include":false},
 		{"name":"Gatins", "include":false},
-		{"name":"Gendry", "include":false},
+		{"name":"Gendry", "include":true},
 		{"name":"Genna", "include":false},
 		{"name":"Gerald", "include":false},
 		{"name":"Gerold Hightower", "include":false},
