@@ -38607,7 +38607,7 @@
                "sceneStart":"0:47:21",
                "sceneEnd":"0:49:09",
                "location":"The Reach",
-               "subLocation":"Old Town",
+               "subLocation":"Oldtown",
                "characters":[
                   {"name":"Samwell Tarly"},
                   {"name":"Gilly"},
@@ -38618,7 +38618,7 @@
                "sceneStart":"0:49:09",
                "sceneEnd":"0:50:01",
                "location":"The Reach",
-               "subLocation":"Old Town",
+               "subLocation":"Oldtown",
                "characters":[
                   {"name":"Samwell Tarly"}
                ]
@@ -38627,7 +38627,7 @@
                "sceneStart":"0:50:01",
                "sceneEnd":"0:50:43",
                "location":"The Reach",
-               "subLocation":"Old Town",
+               "subLocation":"Oldtown",
                "characters":[
                   {"name":"Samwell Tarly"},
                   {"name":"Gilly"},

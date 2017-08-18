@@ -54,11 +54,13 @@ var sceneSubLocations = [];
 // variable to calculate (or not) maximum number of characters in a location
 var countMax = true;
 // variable to include subLocations in sceneLocations
-var useSubLocation = false;
+var useSubLocation = true;
+// variable to show subLocations on map
+var showSubLocation = false;
 // variable to include who is in which location
 var includeWhosThere = false; // can delete
 // variable to import locations or not, whether or not to get arraySceLocChar
-var importLocations = false;
+var importLocations = true;
 // variable to reduce arraySceLocChar or not
 var arraySceLocCharReduce = false;
 
@@ -417,7 +419,9 @@ function buildCharactersScene(){
     // ... and determine the location of each scene
     var location = arraySceLocCharObj[a].location+sep;
     if(useSubLocation){
-      location += arraySceLocCharObj[a].subLocation;
+      if(arraySceLocCharObj[a].subLocation){
+        location += arraySceLocCharObj[a].subLocation;
+      }
     }
     // find the index of that location in sceneLocations - same index as in arraySceLocChar
     for(i=0; i<sceneLocations.length; i++){
@@ -439,6 +443,8 @@ function buildCharactersScene(){
         loc = k;
       }
     }
+
+    //console.log(arraySceLocCharObj);
 
     // determine which characters from allCharacters are actually in the scene
     for(i=0; i<arraySceLocCharObj[a].allCharacters.length; i++){
@@ -522,6 +528,40 @@ function buildCharactersScene(){
   for(i in charactersScene){
     keyValues.push({"key":charactersScene[i].name, "values":charactersScene[i].inScene});
   }
+
+  // make the sceneLocSorted data if showSubLocation is false
+  if(showSubLocation == false){
+    var compiledLocations = [];
+    // split location names into location and subLocation
+    for(i=0; i<sceneLocSorted.length; i++){
+      sceneLocSorted[i].location = sceneLocSorted[i].name.split("#")[0];
+      sceneLocSorted[i].subLocation = sceneLocSorted[i].name.split("#")[1];
+    }
+    // build the array of objects with location names and max numbers
+    for(i=0; i<sceneLocSorted.length; i++){
+      if(i == 0){
+        compiledLocations.push({"name":sceneLocSorted[i].location, "max":sceneLocSorted[i].max});
+      } else if(sceneLocSorted[i].location == sceneLocSorted[i-1].location){
+        for(j=0; j<compiledLocations.length; j++){
+          if(compiledLocations[j].name == sceneLocSorted[i].location){
+            compiledLocations[j].max += sceneLocSorted[i].max;
+          }
+        }
+      } else {
+        compiledLocations.push({"name":sceneLocSorted[i].location, "max":sceneLocSorted[i].max});
+      }
+    }
+    // add the middle value for each location
+    var baseline = 0;
+    for(i=0; i<compiledLocations.length; i++){
+      var mid = baseline + Math.ceil(compiledLocations[i].max/2);
+      compiledLocations[i].middle = mid;
+      baseline += compiledLocations[i].max;
+    }
+    // replace sceneLocSorted with compiledLocations
+    sceneLocSorted = compiledLocations;
+  }
+
   // make the keyValues.json file which goes into map.js
   $("#loading").hide();
   $("body").append('{"keyValues":'+JSON.stringify(keyValues)+',"episodeLengths":'+JSON.stringify(episodeLengths)+',"sceneLocSorted":'+JSON.stringify(sceneLocSorted)+'}');

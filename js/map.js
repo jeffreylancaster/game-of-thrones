@@ -1,3 +1,12 @@
+var subLocations = true;
+var keyValues;
+
+if(subLocations){
+	keyValues = "keyValues.json";
+} else {
+	keyValues = "keyValues-locations.json";
+}
+
 function isolate(className){
 	className = className.toLowerCase().replace(/([^A-Z0-9])/gi,"");
 	$(".characters").addClass("hide");
@@ -19,19 +28,7 @@ function toTitleCase(str){
 // hide the UI box until everything is loaded
 $("#ui").toggle();
 
-// $(window).mousemove(function(evt){
-// 	var body = document.body; // For Chrome, Safari and Opera
-// 	var html = document.documentElement; // Firefox and IE
-// 	console.log(body.scrollLeft, html.scrollLeft, $(window).scrollLeft());
-// 	var mousex = evt.clientX + $(window).scrollLeft();
-// 	var mousey = evt.clientY;
-// 	console.log(mousex, mousey);
-// });
-
-// var charactersArrayForIMDBImages = []; // remove
-// var IMDBhtml = ""; // remove
-
-$.getJSON("data/keyValues.json", function( data ) {
+$.getJSON("data/"+keyValues, function( data ) {
 
 	var keyValues = data.keyValues;
 	var episodeLengths = data.episodeLengths;

@@ -24,6 +24,7 @@
 			"location": "The Wall",
 			"subLocation": [
 				"Nightfort",
+				"Eastwatch",
 				"Top of the Wall",
 				"Castle Black",
 				"Outside Castle Black",
@@ -74,6 +75,7 @@
 		{
 			"location": "The Westerlands",
 			"subLocation": [
+				"Casterly Rock",
 				"Outside Casterly Rock",
 				"Oxcross",
 				"Lannister Camp",
