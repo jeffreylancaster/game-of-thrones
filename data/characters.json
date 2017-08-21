@@ -238,7 +238,8 @@
             "Brandon Stark",
             "Lyanna Stark",
             "Eddard Stark"
-         ]
+         ],
+         "killedBy":"Wights"
       },
       {
          "characterName":"Beric Dondarrion",
@@ -3436,7 +3437,10 @@
                ]
             }
          ],
-         "killed":"Three-Eyed Raven"
+         "killed":[
+            "Three-Eyed Raven",
+            "Viserion"
+         ]
       },
       {
          "characterName":"The Tickler",
@@ -3697,7 +3701,8 @@
          "killed":[
             "Pyat Pree",
             "Great Master #1"
-         ]
+         ],
+         "killedBy":"The Night King"
       },
       {
          "characterName":"Viserys Targaryen",
