@@ -456,8 +456,8 @@ function buildCharactersScene(){
           if(arraySceLocCharObj[a].characters[j].title){
             arraySceLocCharObj[a].allCharacters[i].title = arraySceLocCharObj[a].characters[j].title;
           }
-          // add "alive":false if present
-          if(arraySceLocCharObj[a].characters[j].alive == false){
+          // add "alive":false if present and has mannerOfDeath or killedBy
+          if(arraySceLocCharObj[a].characters[j].alive == false && (arraySceLocCharObj[a].characters[j].mannerOfDeath || arraySceLocCharObj[a].characters[j].killedBy)){
             arraySceLocCharObj[a].allCharacters[i].alive = false;
           }
           // add "born":false if present
