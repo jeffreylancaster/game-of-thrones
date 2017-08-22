@@ -448,8 +448,26 @@
                "sceneEnd":"0:56:05",
                "location":"Pentos",
                "characters":[
-                  {"name":"Khal Drogo", "title":"Khal"},
-                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {
+                     "name":"Khal Drogo",
+                     "title":"Khal",
+                     "married":{
+                        "to":"Daenerys Targaryen",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  },
+                  {
+                     "name":"Daenerys Targaryen",
+                     "title":"Khaleesi",
+                     "married":{
+                        "to":"Khal Drogo",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  },
                   {"name":"Viserys Targaryen"},
                   {"name":"Illyrio Mopatis"},
                   {"name":"Qotho"},
@@ -4449,7 +4467,7 @@
             {
                "sceneStart":"0:17:31",
                "sceneEnd":"0:17:54",
-               "location":"The Iron Islands",
+               "location":"The Sunset Sea",
                "characters":[
                   {"name":"Theon Greyjoy"}
                ]
@@ -4457,7 +4475,7 @@
             {
                "sceneStart":"0:17:54",
                "sceneEnd":"0:19:53",
-               "location":"The Iron Islands",
+               "location":"The Sunset Sea",
                "characters":[
                   {
                      "name":"Theon Greyjoy",
@@ -4819,8 +4837,25 @@
                "subLocation":"Storm's End",
                "altLocation":"Renly Baratheon's Camp",
                "characters":[
-                  {"name":"Renly Baratheon", "title":"King"},
-                  {"name":"Margaery Tyrell"},
+                  {
+                     "name":"Renly Baratheon",
+                     "title":"King",
+                     "married":{
+                        "to":"Margaery Tyrell",
+                        "when":"past",
+                        "type":"arranged",
+                        "consummated":false
+                     }
+                  },
+                  {
+                     "name":"Margaery Tyrell",
+                     "married":{
+                        "to":"Renly Baratheon",
+                        "when":"past",
+                        "type":"arranged",
+                        "consummated":false
+                     }
+                  },
                   {"name":"Brienne of Tarth"},
                   {"name":"Catelyn Stark"},
                   {"name":"Loras Tyrell"}
@@ -9307,8 +9342,25 @@
                "subLocation":"Camp of the North",
                "characters":[
                   {"name":"Septon"},
-                  {"name":"Robb Stark", "title":"King"},
-                  {"name":"Talisa Maegyr"}
+                  {
+                     "name":"Robb Stark",
+                     "title":"King",
+                     "married":{
+                        "to":"Talisa Maegyr",
+                        "when":"present",
+                        "type":"love",
+                        "consummated":true
+                     }
+                  },
+                  {
+                     "name":"Talisa Maegyr",
+                     "married":{
+                        "to":"Robb Stark",
+                        "when":"present",
+                        "type":"love",
+                        "consummated":true
+                     }
+                  }
                ]
             },
             {
@@ -13547,8 +13599,24 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Sansa Stark"},
-                  {"name":"Tyrion Lannister"},
+                  {
+                     "name":"Sansa Stark",
+                     "married":{
+                        "to":"Tyrion Lannister",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":false
+                     }
+                  },
+                  {
+                     "name":"Tyrion Lannister",
+                     "married":{
+                        "to":"Sansa Stark",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":false
+                     }
+                  },
                   {"name":"Joffrey Baratheon", "title":"King"},
                   {"name":"Bronn"},
                   {"name":"Margaery Tyrell"},
@@ -14414,8 +14482,24 @@
                   {"name":"Brynden Tully"},
                   {"name":"Catelyn Stark"},
                   {"name":"Roose Bolton"},
-                  {"name":"Edmure Tully"},
-                  {"name":"Roslin Frey"}
+                  {
+                     "name":"Edmure Tully",
+                     "married":{
+                        "to":"Roslin Frey",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  },
+                  {
+                     "name":"Roslin Frey",
+                     "married":{
+                        "to":"Edmure Tully",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  }
                ]
             },
             {
@@ -16168,10 +16252,26 @@
                "location":"The North",
                "subLocation":"The Dreadfort",
                "characters":[
-                  {"name":"Roose Bolton"},
+                  {
+                     "name":"Roose Bolton",
+                     "married":{
+                        "to":"Walda Bolton",
+                        "when":"past",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  },
                   {"name":"Locke"},
                   {"name":"Ramsay Snow"},
-                  {"name":"Walda Bolton"}
+                  {
+                     "name":"Walda Bolton",
+                     "married":{
+                        "to":"Ramsay Snow",
+                        "when":"past",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  }
                ]
             },
             {
@@ -16689,8 +16789,25 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Joffrey Baratheon", "title":"King"},
-                  {"name":"Margaery Tyrell"}
+                  {
+                     "name":"Joffrey Baratheon",
+                     "title":"King",
+                     "married":{
+                        "to":"Margaery Tyrell",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":false
+                     }
+                  },
+                  {
+                     "name":"Margaery Tyrell",
+                     "married":{
+                        "to":"Joffrey Baratheon",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":false
+                     }
+                  }
                ]
             },
             {
@@ -18780,6 +18897,12 @@
                         "with":["Petyr Baelish"],
                         "when":"future",
                         "type":"married"
+                     },
+                     "married":{
+                        "to":"Petyr Baelish",
+                        "when":"future",
+                        "type":"scheme",
+                        "consummated":true
                      }
                   },
                   {
@@ -18788,6 +18911,12 @@
                         "with":["Lysa Arryn"],
                         "when":"future",
                         "type":"married"
+                     },
+                     "married":{
+                        "to":"Lysa Arryn",
+                        "when":"future",
+                        "type":"scheme",
+                        "consummated":true
                      }
                   }
                ]
@@ -23422,8 +23551,25 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Tommen Baratheon", "title":"King"},
-                  {"name":"Margaery Tyrell"},
+                  {
+                     "name":"Tommen Baratheon",
+                     "title":"King",
+                     "married":{
+                        "to":"Margaery Tyrell",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  },
+                  {
+                     "name":"Margaery Tyrell",
+                     "married":{
+                        "to":"Tommen Baratheon",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  },
                   {"name":"Cersei Lannister"},
                   {"name":"Loras Tyrell"},
                   {"name":"Mace Tyrell"},
@@ -25530,10 +25676,26 @@
                "location":"The North",
                "subLocation":"Winterfell",
                "characters":[
-                  {"name":"Sansa Stark"},
+                  {
+                     "name":"Sansa Stark",
+                     "married":{
+                        "to":"Ramsay Snow",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  },
                   {"name":"Theon Greyjoy"},
                   {"name":"Roose Bolton"},
-                  {"name":"Ramsay Snow"},
+                  {
+                     "name":"Ramsay Snow",
+                     "married":{
+                        "to":"Sansa Stark",
+                        "when":"present",
+                        "type":"arranged",
+                        "consummated":true
+                     }
+                  },
                   {"name":"Walda Bolton"},
                   {"name":"Myranda"}
                ]
@@ -35306,7 +35468,7 @@
             {
                "sceneStart":"1:08:03",
                "sceneEnd":"1:09:36",
-               "location":"The Narrow Sea",
+               "location":"The Summer Sea",
                "characters":[
                   {"name":"Theon Greyjoy"},
                   {"name":"Yara Greyjoy"},
@@ -35319,7 +35481,7 @@
             {
                "sceneStart":"1:09:36",
                "sceneEnd":"1:09:56",
-               "location":"The Narrow Sea",
+               "location":"The Summer Sea",
                "characters":[
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
                   {"name":"Tyrion Lannister", "title":"Hand"},
@@ -35330,7 +35492,7 @@
             {
                "sceneStart":"1:09:56",
                "sceneEnd":"1:10:14",
-               "location":"The Narrow Sea",
+               "location":"The Summer Sea",
                "characters":[
                   {"name":"Drogon"},
                   {"name":"Viserion"},
@@ -39933,14 +40095,14 @@
             {
                "sceneStart":"1:05:46",
                "sceneEnd":"1:05:52",
-               "location":"The Narrow Sea",
+               "location":"The Shivering Sea",
                "characters":[
                ]
             },
             {
                "sceneStart":"1:05:52",
                "sceneEnd":"1:09:22",
-               "location":"The Narrow Sea",
+               "location":"The Shivering Sea",
                "characters":[
                   {
                      "name":"Jon Snow",

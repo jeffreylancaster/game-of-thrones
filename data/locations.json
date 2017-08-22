@@ -51,6 +51,12 @@
 			]
 		},
 		{
+			"location": "The Shivering Sea",
+			"subLocation": [
+				""
+			]
+		},
+		{
 			"location": "The Vale",
 			"subLocation": [
 				"Runestone",
@@ -70,6 +76,12 @@
 				"",
 				"Pyke",
 				"Lordsport"
+			]
+		},
+		{
+			"location": "The Sunset Sea",
+			"subLocation": [
+				""
 			]
 		},
 		{
@@ -110,6 +122,12 @@
 			]
 		},
 		{
+			"location": "The Narrow Sea",
+			"subLocation": [
+				""
+			]
+		},
+		{
 			"location": "The Crownlands",
 			"subLocation": [
 				"Dragonstone",
@@ -147,12 +165,6 @@
 			]
 		},
 		{
-			"location": "The Narrow Sea",
-			"subLocation": [
-				""
-			]
-		},
-		{
 			"location": "Pentos",
 			"subLocation": [
 				"",
@@ -161,6 +173,12 @@
 		},
 		{
 			"location": "Braavos",
+			"subLocation": [
+				""
+			]
+		},
+		{
+			"location": "The Summer Sea",
 			"subLocation": [
 				""
 			]
