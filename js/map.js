@@ -1,7 +1,7 @@
-var subLocations = true;
+var subLocation = true;
 var keyValues;
 
-if(subLocations){
+if(subLocation){
 	keyValues = "keyValues.json";
 } else {
 	keyValues = "keyValues-locations.json";
@@ -33,6 +33,9 @@ $.getJSON("data/"+keyValues, function( data ) {
 	var keyValues = data.keyValues;
 	var episodeLengths = data.episodeLengths;
 	var locations = data.sceneLocSorted;
+	if(subLocation){
+		var subLocations = data.sceneSubLocSorted;
+	}
 
 	const width = episodeLengths[episodeLengths.length-1].episodes[episodeLengths[episodeLengths.length-1].episodes.length-1].shift/100;
 	const height = 2*locations[locations.length-1].middle + locations[locations.length-1].max;
@@ -349,6 +352,16 @@ $.getJSON("data/"+keyValues, function( data ) {
             .attr("text-anchor", "end");
 	});
 
+	if(subLocation){
+		// add a single text box for all subLocation
+		svg.append("text")
+			.attr("x", 0)
+            .attr("y", 0)
+			.attr("class", "subLocation")
+            .attr("dominant-baseline", "middle")
+            .attr("text-anchor", "start");
+	}
+
 	// bring the group (includes the path and rectangles) to the front when rolled over and show the text label
 	svg.selectAll("g.characters")
 		.on('mouseover', function(d) {
@@ -374,9 +387,25 @@ $.getJSON("data/"+keyValues, function( data ) {
     		} else {
     			$("."+thumbClass).css({top: d3.event.pageY-22.5, left: d3.event.pageX+10});
     		}
+    		$(".subLocation").show();
+	            for(i=0; i<subLocations.length; i++){
+	            	if(d3.mouse(this)[1]/2 > subLocations[i].middle - subLocations[i].max/2 && d3.mouse(this)[1]/2 < subLocations[i].middle + subLocations[i].max/2){
+	            		d3.selectAll(".subLocation")
+			            	.attr("x", function(){
+			            		return window.pageXOffset + 20;
+			            	})
+			            	.attr("y", function(){
+			            		return 2*subLocations[i].middle;
+			            	})
+			            	.text(function(){
+			            		return subLocations[i].name;
+			            	});
+	            	}
+	            }
         })
         .on('mouseout', function(d) {
         	$(".characterThumb").hide();
+        	$(".subLocation").hide();
         });
 })
 
@@ -626,7 +655,6 @@ $.getJSON("data/"+keyValues, function( data ) {
 		// 	for(j=0; j<data.characters.length; j++){
 		// 		if(charactersArrayForIMDBImages[i].name == data.characters[j].characterName){
 		// 			charactersArrayForIMDBImages[i].characterLink = "http://imdb.com"+data.characters[j].characterLink;
-
 		// 		}
 		// 	}
 		// 	$("body").append("<a href='"+charactersArrayForIMDBImages[i].characterLink+"' target='_blank'>"+charactersArrayForIMDBImages[i].name+"</a><br>");

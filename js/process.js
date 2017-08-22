@@ -55,7 +55,7 @@ var sceneSubLocations = [];
 var countMax = true;
 // variable to include subLocations in sceneLocations
 var useSubLocation = true;
-// variable to show subLocations on map
+// variable to show subLocations as their own regions on map
 var showSubLocation = false;
 // variable to include who is in which location
 var includeWhosThere = false; // can delete
@@ -532,6 +532,7 @@ function buildCharactersScene(){
   // make the sceneLocSorted data if showSubLocation is false
   if(showSubLocation == false){
     var compiledLocations = [];
+    var compiledSubLocations = [];
     // split location names into location and subLocation
     for(i=0; i<sceneLocSorted.length; i++){
       sceneLocSorted[i].location = sceneLocSorted[i].name.split("#")[0];
@@ -558,11 +559,18 @@ function buildCharactersScene(){
       compiledLocations[i].middle = mid;
       baseline += compiledLocations[i].max;
     }
-    // replace sceneLocSorted with compiledLocations
-    sceneLocSorted = compiledLocations;
-  }
-
+    // make the sceneSubLocSorted array
+    for(i=0; i<sceneLocSorted.length; i++){
+      compiledSubLocations.push({"name":sceneLocSorted[i].subLocation, "max":sceneLocSorted[i].max, "middle":sceneLocSorted[i].middle});
+      if(sceneLocSorted[i].subLocation == ""){
+        compiledSubLocations[i].name = sceneLocSorted[i].location;
+      }
+    }
+    // make the keyValues.json file which goes into map.js
+    $("body").append('{"keyValues":'+JSON.stringify(keyValues)+',"episodeLengths":'+JSON.stringify(episodeLengths)+',"sceneLocSorted":'+JSON.stringify(compiledLocations)+',"sceneSubLocSorted":'+JSON.stringify(compiledSubLocations)+'}');
+  } else {
   // make the keyValues.json file which goes into map.js
-  $("#loading").hide();
   $("body").append('{"keyValues":'+JSON.stringify(keyValues)+',"episodeLengths":'+JSON.stringify(episodeLengths)+',"sceneLocSorted":'+JSON.stringify(sceneLocSorted)+'}');
+  }
+  $("#loading").hide();
 };
