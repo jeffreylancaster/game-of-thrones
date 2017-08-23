@@ -26,7 +26,7 @@ function toTitleCase(str){
 }
 
 // hide the UI box until everything is loaded
-$("#ui").toggle();
+$("#ui, footer").toggle();
 
 $.getJSON("data/"+keyValues, function( data ) {
 
@@ -642,7 +642,7 @@ $.getJSON("data/"+keyValues, function( data ) {
 		}
 	});
 	// show the UI box
-	$("#ui").toggle();
+	$("#ui, footer").toggle();
 }).done(function(){
 	$.getJSON("data/characters.json", function( data ) {
 		// append the character thumbnail to the body
