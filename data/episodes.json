@@ -16028,7 +16028,6 @@
                "sceneEnd":"0:44:22",
                "location":"The Crownlands",
                "subLocation":"King's Landing",
-               "modified":"blind",
                "characters":[
                   {"name":"Jaime Lannister"},
                   {"name":"Brienne of Tarth"}
@@ -16039,7 +16038,6 @@
                "sceneEnd":"0:45:04",
                "location":"The Crownlands",
                "subLocation":"King's Landing",
-               "modified":"blind",
                "characters":[
                   {"name":"Sansa Stark"}
                ]
@@ -21003,7 +21001,6 @@
                "sceneEnd":"0:24:34",
                "location":"The Wall",
                "subLocation":"Castle Black",
-               "modified":"blind",
                "characters":[
                   {"name":"Ygritte"},
                   {"name":"Styr"},
@@ -21018,7 +21015,6 @@
                "sceneEnd":"0:25:10",
                "location":"The Wall",
                "subLocation":"Castle Black",
-               "modified":"blind",
                "characters":[
                   {"name":"Olly"},
                   {"name":"Alliser Thorne"}
