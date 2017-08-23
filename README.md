@@ -46,16 +46,38 @@ Outputs the _Game of Thrones_ narrative chart.
           "location": "string",
           "subLocation": "string",
           "altLocation": "string",
-          "modified": "string",
           "flashback": true,
           "greensight": true,
-          "warg":true,
+          "warg": true,
           "characters": [
             {
               "name": "string",
               "title": "Hand | Khal | Khaleesi | King",
               "alive": false,
-              "born": false
+              "born": false,
+              "weapon": [ // just object if single value
+                {
+                  "action": "string",
+                  "name": "string"
+                }
+              ],
+              "sex": [
+                "with": [ // just string if single value
+                  "string"
+                ],
+                "when": "string",
+                "type": "string"
+              ],
+              "married": {
+                "to": "string",
+                "when": "string",
+                "type": "string",
+                "consummated": true
+              },
+              "mannerOfDeath": "string",
+              "killedBy": [ // just string if single value
+                "string"
+              ]
             },
             ...
           ]
@@ -75,6 +97,8 @@ Outputs the _Game of Thrones_ narrative chart.
     {
       "characterName": "string",
       "characterLink": "string", // endpoint: www.imdb.com
+      "characterImageThumb": "string",
+      "characterImageFull": "string",
       "actorName": "string", // OR actors: []
       "actors": [
         {
