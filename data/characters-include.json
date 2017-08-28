@@ -381,6 +381,7 @@
 		{"name":"Renly Baratheon", "include":true},
 		{"name":"Rennick", "include":false},
 		{"name":"Rhaegal", "include":true},
+		{"name":"Rhaegar Targaryen", "include":true},
 		{"name":"Rhaego", "include":false},
 		{"name":"Rickard Karstark", "include":true},
 		{"name":"Rickard Stark", "include":false},

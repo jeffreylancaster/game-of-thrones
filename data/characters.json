@@ -174,7 +174,8 @@
             "The Waif",
             "Black Walder Rivers",
             "Lothar Frey",
-            "Walder Frey"
+            "Walder Frey",
+            "Petyr Baelish"
          ]
       },
       {
@@ -1914,7 +1915,10 @@
             "Benjen Stark",
             "Eddard Stark"
          ],
-         "marriedEngaged":"Robert Baratheon",
+         "marriedEngaged":[
+            "Robert Baratheon",
+            "Rhaegar Targaryen"
+         ],
          "abductedBy":"Rhaegar Targaryen",
          "parentOf":[
             "Jon Snow"
@@ -2584,7 +2588,8 @@
             "Dontos Hollard",
             "Lysa Arryn"
          ],
-         "marriedEngaged":"Lysa Arryn"
+         "marriedEngaged":"Lysa Arryn",
+         "killedBy":"Arya Stark"
       },
       {
          "characterName":"Podrick Payne",
@@ -2833,7 +2838,10 @@
             "Viserys Targaryen"
          ],
          "abducted":"Lyanna Stark",
-         "marriedEngaged":"Elia Martell",
+         "marriedEngaged":[
+            "Elia Martell",
+            "Lyanna Stark"
+         ],
          "killedBy":"Robert Baratheon",
          "parentOf":[
             "Jon Snow",
@@ -3481,7 +3489,8 @@
             "Stiv",
             "Rodrik Cassel",
             "Myranda",
-            "Bolton Soldier"
+            "Bolton Soldier",
+            "Harrag"
          ]
       },
       {
