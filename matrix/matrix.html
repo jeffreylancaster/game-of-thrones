@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
+  <head>
+    <title>Game of Thrones: Make a Matrix</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Time Per Character">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // for episodes data
+      var episodes;
+      // array for all characters
+      var allCharacters = [];
+      // array for uniqueCharacters
+      var uniqueCharacters = [];
+      // n x n array
+      var characterMatrix = [[]];
+      // object for nodes & links
+      var matrixObject = {
+        "nodes": [],
+        "links": []
+      }
+      var charactersHouses = {};
+      var charactersKeepArray = [];
+
+      // to use reduced character list
+      var reduced = true;
+
+      // to convert scene start/end times into seconds
+      function sec(timeString){
+        var sec = 0;
+        if (timeString.length == 0) return sec;
+        var splitArray = timeString.split(":");
+        sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+        return sec;
+      }
+
+      // to convert seconds into hh:mm:ss
+      function secondsToHMS(d) {
+        var date = new Date(null);
+        date.setSeconds(d); // specify value for SECONDS here
+        return date.toISOString().substr(11, 8);
+      }
+
+      // to dedpulicate an array
+      function onlyUnique(value, index, self) { 
+        return self.indexOf(value) === index;
+      }
+
+      // import episodes JSON file
+      $.getJSON( "../data/episodes.json", function( data ) {
+        console.log("episodes.json loaded.");
+        episodes = data.episodes;
+
+        $.getJSON( "../data/characters-houses.json", function(houses){
+          console.log("characters-houses.json loaded.");
+          charactersHouses = houses;
+
+          // build a single array of all characters to keep based on characters-houses.json
+          for(i=0; i<charactersHouses.house.length; i++){
+            for(j=0; j<charactersHouses.house[i].characters.length; j++){
+              charactersKeepArray.push(charactersHouses.house[i].characters[j]);
+            }
+          }
+
+          for (var i in episodes) {
+            // act on scenes
+            var scenes = episodes[i].scenes;
+            for (var j in scenes){
+              // calculate length of scene in seconds
+              var sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
+              scenes[j].length = sceneLength;
+
+              // add characters in scene to allCharacters array
+              for (var k in scenes[j].characters){
+                if(scenes[j].characters[k].name.length > 0){
+                  allCharacters.push(scenes[j].characters[k].name);
+                }
+              }
+            }
+          }
+
+          // deduplicate the list of characters from scenes
+          if(reduced){
+            uniqueCharacters = charactersKeepArray;
+          } else {
+            uniqueCharacters = allCharacters.filter(onlyUnique).sort();
+          }
+        })
+
+        .done(function(){        
+          // build a n x n array where n = uniqueCharacters.length
+           for(i=0; i<uniqueCharacters.length; i++){
+            characterMatrix[i] = [];
+            for(j=0; j<uniqueCharacters.length; j++){
+              characterMatrix[i][j] = 0;
+            }
+          }
+          
+          // sum scene lengths for characters in scenes
+          for(var i in episodes) {
+            for(var j in episodes[i].scenes){
+              console.log(i, j);
+              for(var k in episodes[i].scenes[j].characters){
+                for(var l in episodes[i].scenes[j].characters){
+                  // k and l are the indices of the characters in the scene
+                  if(uniqueCharacters.indexOf(episodes[i].scenes[j].characters[k].name) > -1 && uniqueCharacters.indexOf(episodes[i].scenes[j].characters[l].name) > -1){
+                    characterMatrix
+                      [uniqueCharacters.indexOf(episodes[i].scenes[j].characters[k].name)]
+                      [uniqueCharacters.indexOf(episodes[i].scenes[j].characters[l].name)] += episodes[i].scenes[j].length;
+                  }
+                }
+              }
+            }
+          }
+        }) 
+      
+        .done(function(){
+          for(i=0; i < characterMatrix.length; i++){
+            for(j=0; j < i; j++){
+              if(characterMatrix[i][j] != 0){
+                matrixObject.links.push({"source": i, "target": j, "value": characterMatrix[i][j]});
+              }
+            }
+          }
+        })
+      
+        .done(function(){
+        
+          for(i=0; i<uniqueCharacters.length; i++){
+            matrixObject.nodes[i] = {"name":uniqueCharacters[i],"group": 0};
+            for(j=0; j<charactersHouses.house.length; j++){
+              for(k=0; k<charactersHouses.house[j].characters.length; k++){
+                if(uniqueCharacters[i] == charactersHouses.house[j].characters[k]){
+                  matrixObject.nodes[i].group = j+1;
+                }
+              }
+            }
+          }
+          
+          console.log(matrixObject);
+          $("body").append(JSON.stringify(matrixObject));
+        });
+      });
+    </script>
+  </body>
+</html>
