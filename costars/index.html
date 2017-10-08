@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
+  <head>
+    <title>Game of Thrones: Co-stars</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Co-stars">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <style>
+      body{
+        font-family: "Helvetica Neue";
+      }
+      header{
+        margin: 15px;
+      }
+      header img{
+        height: 60px;
+        vertical-align: middle;
+        margin-top: -25px;
+      }
+      header span{
+        font-weight: 300;
+        font-size: 50px;
+      }
+      #cta{
+        color: #999;
+        font-style: italic;
+        font-size: 0.8em;
+      }
+      #description{
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 15px;
+        color: #999;
+        font-size: 0.8em;
+      }
+      #description a{
+        text-decoration: none;
+      }
+      #list{
+        margin: 0 30px 30px;
+        color: #999;
+        font-weight: 400;
+        line-height: 1.4em;
+        font-size: 0.9em;
+      }
+      #list a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="../img/GoT_logo.png">
+        <span> - Co-stars</span>
+      </h1>
+    </header>
+    <div id="description">
+      <p>Code for this list is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
+    </div>
+    <div id="list"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script>
+      var characters = {};
+      var films = {};
+      var filmsArray = [];
+      var getAPI = false;
+      var cutoff = 3;
+
+      // import episodes JSON file
+      $.getJSON( "../data/characters.json", function( data ) {
+        //console.log("characters.json loaded.");
+        
+        // parse actorLink to just nm####### into array of objects with characterName and actorName.
+        for(var i in data.characters){
+          if(data.characters[i].actors){
+            $.each(data.characters[i].actors, function(j, val){
+              characters[val.actorLink.split("/")[2]] = {
+                "actorLink": val.actorLink.split("/")[2],
+                "characterName": data.characters[i].characterName,
+                "actorName": val.actorName
+              };
+            });
+          }
+          if(data.characters[i].actorLink){
+            characters[data.characters[i].actorLink.split("/")[2]] = {
+              "actorLink": data.characters[i].actorLink.split("/")[2],
+              "characterName": data.characters[i].characterName,
+              "actorName": data.characters[i].actorName
+            };
+          }
+        }
+
+        if(getAPI){
+          // lookup in theimdbapi based on actorLink, if type = "Film" or "Short Film", in new object, if imdb_id exists, then add nm#####,  title, characterName to imdb_id.actors - if it doesn't exist, then create a new object
+          
+          for(var i in characters){
+            $.ajax({
+              url: "https://theimdbapi.org/api/person?",
+              data: {person_id: i},
+              error: function(jqXHR, textStatus){
+                console.log("Could not do look up: "+textStatus);
+              },
+              complete: function(jqXHR, textStatus){
+                console.log(textStatus);
+              },
+              success: function(json){
+                $.each(json.filmography.actor, function(j, val){
+                  if(val.type == "Film" || val.type == "Short Film"){
+                    if(films[val.imdb_id]){
+                      // add to actors
+                      films[val.imdb_id].actors.push(
+                        {
+                          "personID": json.person_id,
+                          "actorName": json.title,
+                          "characterName": characters[json.person_id].characterName
+                        }
+                      );
+                    } else {
+                      // create new entry in films
+                      films[val.imdb_id] = {
+                        "imdb_id":val.imdb_id,
+                        "title":val.title,
+                        "year":val.year,
+                        "actors":[
+                          {
+                            "personID": json.person_id,
+                            "actorName": json.title,
+                            "characterName": characters[json.person_id].characterName
+                          }
+                        ]
+                      };
+                      // check title
+                      $.ajax({
+                        url: "https://theimdbapi.org/api/movie",
+                        data: {movie_id: val.imdb_id},
+                        error: function(jqXHR, textStatus){
+                          console.log("Could not do look up: "+textStatus);
+                        },
+                        complete: function(jqXHR, textStatus){
+                          console.log(textStatus);
+                        },
+                        success: function(json){
+                          console.log(json.title);
+                          films[val.imdb_id].title = json.title;
+                        }
+                      });
+                    }
+                  }
+                });
+                $.each(json.filmography.actress, function(j, val){
+                  if(val.type == "Film" || val.type == "Short Film"){
+                    if(films[val.imdb_id]){
+                      // add to actors
+                      films[val.imdb_id].actors.push(
+                        {
+                          "personID": json.person_id,
+                          "actorName": json.title,
+                          "characterName": characters[json.person_id].characterName
+                        }
+                      );
+                    } else {
+                      // create new entry in films
+                      films[val.imdb_id] = {
+                        "imdb_id":val.imdb_id,
+                        "title":val.title,
+                        "actors":[
+                          {
+                            "personID": json.person_id,
+                            "actorName": json.title,
+                            "characterName": characters[json.person_id].characterName
+                          }
+                        ]
+                      };
+                      // check title
+                      $.ajax({
+                        url: "https://theimdbapi.org/api/movie",
+                        data: {movie_id: val.imdb_id},
+                        error: function(jqXHR, textStatus){
+                          console.log("Could not do look up: "+textStatus);
+                        },
+                        complete: function(jqXHR, textStatus){
+                          console.log(textStatus);
+                        },
+                        success: function(json){
+                          console.log(json.title);
+                          films[val.imdb_id].title = json.title;
+                        }
+                      });
+                    }
+                  }
+                });
+              }
+            })
+            .done(function(){
+              console.log(Object.keys(films).length);
+              $("#list").html(JSON.stringify(films));
+            });
+          }
+        } else {
+          $.getJSON( "../data/costars.json", function( data ) {
+            // console.log("costars.json loaded.");
+            // console.log(data);
+            // console.log(characters);
+            films = data;
+          })
+          .done(function(){
+            // match names from characters.json back to films
+            $.each(films, function(i, val){
+              $.each(val.actors, function(j, value){
+                value.actorName = characters[value.personID].actorName;
+              });
+            });
+          })
+          .done(function(){
+            for(var i in films){
+              filmsArray.push(films[i]);
+            }
+
+            filmsArray = filmsArray.sort(function(a, b) {
+              return b.actors.length - a.actors.length;
+            });
+
+            //$("#list").html(JSON.stringify(filmsArray));
+
+            $("#list").html("");
+            for(i=0; i<filmsArray.length; i++){
+              if(filmsArray[i].actors.length >= cutoff){
+                var yearToAdd = "";
+                if(filmsArray[i].year){
+                  yearToAdd = " ("+filmsArray[i].year+")";
+                }
+                $("#list").append("<h2><a href='http://www.imdb.com/title/"+filmsArray[i].imdb_id+"' target='_blank'>"+filmsArray[i].title+"</a>"+yearToAdd+"</h2>");
+                $.each(filmsArray[i].actors, function(j, value){
+                  $("#list").append("<li><a href='http://www.imdb.com/name/"+value.personID+"' target='_blank'>"+value.actorName+"</a> ("+value.characterName+")</li>");
+                });
+              }
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
