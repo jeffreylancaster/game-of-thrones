@@ -28,7 +28,7 @@ function toTitleCase(str){
 // hide the UI box until everything is loaded
 $("#ui, footer").toggle();
 
-$.getJSON("data/"+keyValues, function( data ) {
+$.getJSON("../data/"+keyValues, function( data ) {
 
 	var keyValues = data.keyValues;
 	var episodeLengths = data.episodeLengths;
@@ -412,7 +412,7 @@ $.getJSON("data/"+keyValues, function( data ) {
 // add house-specific styling to lines
 .done(function(){
 	$("#loading").hide();
-	$.getJSON( "data/characters-houses.json", function( data ) {
+	$.getJSON( "../data/characters-houses.json", function( data ) {
 		var house = data.house;
 		var charactersArray = [];
 		for(i=0; i<house.length; i++){
@@ -554,7 +554,7 @@ $.getJSON("data/"+keyValues, function( data ) {
 	});
 // add gender as class to lines, add UI select behavior
 }).done(function(){
-	$.getJSON("data/characters-gender.json", function( data ) {
+	$.getJSON("../data/characters-gender.json", function( data ) {
 		for(i in data.gender){
 			for(j=0; j<data.gender[i].characters.length; j++){
 				var className = data.gender[i].characters[j].toLowerCase().replace(/([^A-Z0-9])/gi,"");
@@ -618,7 +618,7 @@ $.getJSON("data/"+keyValues, function( data ) {
 	});
 // add color data to styles
 }).done(function(){
-	$.getJSON("data/colors.json", function( data ) {
+	$.getJSON("../data/colors.json", function( data ) {
 		for(i in data.colors){
 			if(data.colors[i].class){
 				for(j=0; j<data.colors[i].class.length; j++){
@@ -644,7 +644,7 @@ $.getJSON("data/"+keyValues, function( data ) {
 	// show the UI box
 	$("#ui, footer").toggle();
 }).done(function(){
-	$.getJSON("data/characters.json", function( data ) {
+	$.getJSON("../data/characters.json", function( data ) {
 		// append the character thumbnail to the body
 		for(i=0; i<data.characters.length; i++){
 			if(data.characters[i].characterImageThumb){

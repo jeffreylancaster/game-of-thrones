@@ -29,7 +29,7 @@ var force = d3.layout.force()
     .charge(-5000)
     .size([width, height]);
 
-d3.json("../matrix/matrixObjectReduced.json", function(error, json) {
+d3.json("../data/matrixObject-main.json", function(error, json) {
   if (error) throw error;
 
   force

@@ -86,10 +86,10 @@
     <script>
 
     var margin = {top: 120, right: 60, bottom: 60, left: 120},
-      // width = 5600, // for all characters matrixObject.json
-      // height = 5600; // for all characters matrixObject.json
-      width = 1500, // for main characters matrixObjectReduced.json
-      height = 1500; // for main characters matrixObjectReduced.json
+      // width = 5600, // for all characters matrixObject-all.json
+      // height = 5600; // for all characters matrixObject-all.json
+      width = 1500, // for main characters matrixObject-main.json
+      height = 1500; // for main characters matrixObject-main.json
 
     var x = d3.scale.ordinal().rangeBands([0, width]),
       z = d3.scale.linear().domain([0, 100]).clamp(true),
@@ -118,7 +118,7 @@
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.json("matrixObjectReduced.json", function(GoTmatrix) {
+    d3.json("../data/matrixObject-main.json", function(GoTmatrix) {
       var matrix = [],
         nodes = GoTmatrix.nodes,
         n = nodes.length;
