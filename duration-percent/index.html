@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
+  <head>
+    <title>Game of Thrones: % Time Per Season</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: % Time Per Season">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <style>
+      .axis .domain {
+        display: none;
+      }
+      .timestamp{
+        fill: black;
+      }
+      body{
+        font-family: "Helvetica Neue";
+      }
+      header{
+        margin: 15px;
+      }
+      header img{
+        height: 60px;
+        vertical-align: middle;
+        margin-top: -25px;
+      }
+      header span{
+        font-weight: 300;
+        font-size: 50px;
+      }
+      #cta{
+        color: #999;
+        font-style: italic;
+        font-size: 0.8em;
+      }
+      #description{
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 15px;
+        color: #999;
+        font-size: 0.8em;
+      }
+      #description a{
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="../img/GoT_logo.png">
+        <span> - % Time Per Season</span>
+      </h1>
+    </header>
+    <div id="description">
+      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
+    </div>
+    <svg width="960" height="11130"></svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+      // for episodes data
+      var episodes;
+      // array for all characters
+      var allCharacters = [];
+      // array for uniqueCharacters
+      var uniqueCharacters = [];
+
+      // to convert scene start/end times into seconds
+      function sec(timeString){
+        var sec = 0;
+        if (timeString.length == 0) return sec;
+        var splitArray = timeString.split(":");
+        sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+        return sec;
+      }
+
+      // to convert seconds into hh:mm:ss
+      function secondsToHMS(d) {
+        var date = new Date(null);
+        date.setSeconds(d); // specify value for SECONDS here
+        return date.toISOString().substr(11, 8);
+      }
+
+      // to dedpulicate an array
+      function onlyUnique(value, index, self) { 
+        return self.indexOf(value) === index;
+      }
+
+      // import episodes JSON file
+      $.getJSON( "../data/episodes.json", function( data ) {
+        console.log("episodes.json loaded.");
+
+        episodes = data.episodes;
+        
+        for (var i in episodes) {
+          // act on scenes
+          var scenes = episodes[i].scenes;
+          for (var j in scenes){
+            // calculate length of scene in seconds
+            var sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
+            scenes[j].length = sceneLength;
+
+            // add characters in scene to allCharacters array
+            for (var k in scenes[j].characters){
+              if(scenes[j].characters[k].name.length > 0){
+                allCharacters.push(scenes[j].characters[k].name);
+              }
+            }
+          }
+        }
+
+        // deduplicate the list of characters from scenes
+        uniqueCharacters = allCharacters.filter(onlyUnique).sort();
+      })
+
+      .done(function(){
+        // rebuild uniqueCharacters array
+        for(i=0; i<uniqueCharacters.length; i++){
+          uniqueCharacters[i] = {"name":uniqueCharacters[i], "1":0, "2":0, "3":0, "4":0, "5":0, "6":0, "7":0, "8":0};
+        }
+        // sum scene lengths for characters in scenes
+        for(var i in episodes) {
+          for(var j in episodes[i].scenes){
+            for(var k in episodes[i].scenes[j].characters){
+              for(var l in uniqueCharacters){
+                if(episodes[i].scenes[j].characters[k].name == uniqueCharacters[l].name){
+                  uniqueCharacters[l][episodes[i].seasonNum] += episodes[i].scenes[j].length;
+                }
+              } 
+            }
+          }
+        }
+      })
+      
+      // build the visualization
+      .done(function(){
+        
+        var data = uniqueCharacters;
+
+        var barHeight = 20;
+
+        var svg = d3.select("svg"),
+            margin = {top: 20, right: 90, bottom: 30, left: 180},
+            width = +svg.attr("width") - margin.left - margin.right,
+            height = barHeight*data.length + margin.top + margin.bottom,
+            g = svg.append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var y = d3.scaleBand() 
+            .rangeRound([0, height])
+            .paddingInner(0.15)
+            .align(0.1);
+
+        var x = d3.scaleLinear()
+            .rangeRound([0, width]);
+
+        var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+            .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+        var stack = d3.stack()
+          .offset(d3.stackOffsetExpand);
+
+        var keys = d3.keys(data[0]).slice(0,7);
+
+        for (i=0; i<data.length; i++){
+          var t=0;
+          for(j=0; j<keys.length; j++){
+            t += data[i][keys[j]];
+          }
+          data[i].total = t;
+        } 
+
+        data.sort(function(a, b) { return a.total - b.total; }).reverse();
+
+        y.domain(data.map(function(d) { return d.name; }));
+        //x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+        z.domain(keys);
+
+        g.append("g")
+          .selectAll("g")
+          //.data(d3.stack().keys(keys)(data))
+          .data(stack.keys(keys)(data))
+          .enter().append("g")
+            .attr("fill", function(d) { return z(d.key); })
+          .selectAll("rect")
+          .data(function(d) { return d; })
+          .enter().append("rect")
+            .attr("y", function(d) { return y(d.data.name); })
+            .attr("x", function(d) { return x(d[0]); })
+            .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+            .attr("height", y.bandwidth());
+
+        g.append("g")
+          .attr("class", "axis")
+          .attr("transform", "translate(0,0)")
+          .call(d3.axisLeft(y));
+
+        g.append("g")
+          .attr("class", "axis")
+          .call(d3.axisTop(x).ticks(10, "%"));
+
+        // g.selectAll(".axis")
+        //   .selectAll(".tick")
+        //   .data(data)
+        //   .append("text")
+        //   .attr("class", "timestamp")
+        //   .attr("dy", "0.35em")
+        //   .attr("dx", function(d){ return x(d.total) + 5; })
+        //   .attr("text-anchor", "start")
+        //   .text(function(d){ return secondsToHMS(d.total); });
+
+        var legend = g.append("g")
+          .attr("font-family", "sans-serif")
+          .attr("font-size", 10)
+          .attr("text-anchor", "end")
+          .attr("transform", function(d, i) { return "translate(20, 90)" })
+          .selectAll("g")
+          .data(keys.slice())
+          .enter().append("g")
+          .attr("transform", function(d, i) { return "translate(60," + i * 20 + ")"; });
+
+        legend.append("rect")
+          .attr("x", width - 19)
+          .attr("width", 19)
+          .attr("height", 19)
+          .attr("fill", z);
+
+        legend.append("text")
+          .attr("x", width - 24)
+          .attr("y", 9.5)
+          .attr("dy", "0.32em")
+          .text(function(d) { return "Season " + d; });
+      });
+
+    </script>
+  </body>
+</html>
