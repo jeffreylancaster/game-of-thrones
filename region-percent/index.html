@@ -164,7 +164,6 @@
         .done(function(){
           
           var data = uniqueCharacters;
-          console.log(uniqueCharacters.length);
 
           var barHeight = 20;
 
@@ -186,32 +185,32 @@
           //var z = d3.scaleOrdinal(d3.schemeCategory20c);
           var z = d3.scaleOrdinal()
               .range([
-                "lightblue", // North of the Wall
-                "#8a89a6", // The Wall
-                "gray", // The North
-                "#6b486b", // The Shivering Sea
-                "#a05d56", // The Vale
-                "#d0743c", // The Iron Islands
-                "#ff8c00", // The Sunset Sea
-                "#FEC574", // The Westerlands
-                "green", // The Riverlands
-                "#8a89a6", // The Narrow Sea
-                "goldenrod", // The Crownlands
-                "#6b486b", // The Stormlands
-                "rose", // The Reach
-                "sand", // Dorne
-                "#ff8c00", // Pentos
-                "#FEC574", // Braavos
-                "#FEC574", // The Summer Sea
-                "#8a89a6", // Volantis
-                "#7b6888", // Valyria
-                "#6b486b", // The Dothraki Sea
-                "#a05d56", // Meereen
-                "#d0743c", // Yunkai
-                "#ff8c00", // Astapor
-                "#FEC574", // Vaes Dothrak
-                "lightblue", // The Red Waste
-                "#8a89a6" // Qarth
+                "#f7fbff", // North of the Wall
+                "#deebf7", // The Wall
+                "#c6dbef", // The North
+                "#9ecae1", // The Shivering Sea
+                "#6baed6", // The Vale
+                "#4292c6", // The Iron Islands
+                "#2171b5", // The Sunset Sea
+                "#084594", // The Westerlands
+                "#00441b", // The Riverlands
+                "#006d2c", // The Narrow Sea
+                "#238b45", // The Crownlands
+                "#41ae76", // The Stormlands
+                "#66c2a4", // The Reach
+                "#99d8c9", // Dorne
+                "#ccece6", // Pentos
+                "#e5f5f9", // Braavos
+                "#f7fcfd", // The Summer Sea
+                "#ffffe5", // Volantis
+                "#fff7bc", // Valyria
+                "#fee391", // The Dothraki Sea
+                "#fec44f", // Meereen
+                "#fe9929", // Yunkai
+                "#ec7014", // Astapor
+                "#cc4c02", // Vaes Dothrak
+                "#993404", // The Red Waste
+                "#662506" // Qarth
               ]);
 
           var stack = d3.stack()
@@ -246,6 +245,18 @@
               .attr("x", function(d) { return x(d[0]); })
               .attr("width", function(d) { return x(d[1]) - x(d[0]); })
               .attr("height", y.bandwidth());
+
+          g.selectAll("g")
+            .data(stack.keys(keys)(data))
+            .append("svg:title")
+              .text(function(d,i) {
+                // not sure why this shift needs to happen...
+                if(i == 0){
+                  return keys[keys.length-1]
+                } else {
+                  return keys[i-1]
+                };
+              });
 
           g.append("g")
             .attr("class", "axis")
