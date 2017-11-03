@@ -190,6 +190,18 @@
             .attr("width", function(d) { return x(d[1]) - x(d[0]); })
             .attr("height", y.bandwidth());
 
+        g.selectAll("g")
+          .data(d3.stack().keys(keys)(data))
+          .append("svg:title")
+            .text(function(d,i) {
+              // not sure why this shift needs to happen...
+              if(i == 0){
+                return "Season "+keys[keys.length-1]
+              } else {
+                return "Season "+keys[i-1]
+              };
+            });
+
         g.append("g")
           .attr("class", "axis")
           .attr("transform", "translate(0,0)")
