@@ -1,6 +1,6 @@
 # Game of Thrones Datasets and Visualizations
 
-I've written a bit about this project on [Medium](https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb) and the visualization is here: https://jeffreylancaster.github.io/game-of-thrones/.
+I've written a bit about this project on [Medium](https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb) and the narrative chart visualization that kicked this off is here: https://jeffreylancaster.github.io/game-of-thrones/map/.
 
 ## Visualizations
 
@@ -12,13 +12,13 @@ I've written a bit about this project on [Medium](https://medium.com/@jeffrey.la
 
 ### Costars List
 
-   A list of other films in which Game of Thrones costars, well, costar
+   A list of other films in which _Game of Thrones_ costars, well, costar
    
    [View](https://jeffreylancaster.github.io/game-of-thrones/costars-list/) | [<>](https://github.com/jeffreylancaster/game-of-thrones/blob/master/costars-list/index.html)
 
 ### Costars Matrix
 
-   A matrix visualization of frequency of other films in which Game of Thrones costars, well, costar
+   A matrix visualization of frequency of other films in which _Game of Thrones_ costars, well, costar
    
    [View](https://jeffreylancaster.github.io/game-of-thrones/costars-matrix/) | [<>](https://github.com/jeffreylancaster/game-of-thrones/blob/master/costars-matrix/index.html)
 
@@ -46,7 +46,7 @@ I've written a bit about this project on [Medium](https://medium.com/@jeffrey.la
    
    [View](https://jeffreylancaster.github.io/game-of-thrones/matrix/) | [<>](https://github.com/jeffreylancaster/game-of-thrones/blob/master/matrix/index.html)
 
-### Travelling Characters (work in progress)
+### Travelling Characters
 
    A visualization of the various locations characters visit and how much of their time they spend there
    
