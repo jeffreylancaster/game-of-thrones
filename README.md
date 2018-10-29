@@ -1,6 +1,6 @@
 # _Game of Thrones_ Datasets and Visualizations
 
-I've written a bit about this project on [Medium](https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb) and the narrative chart visualization that kicked this off is here: https://jeffreylancaster.github.io/game-of-thrones/map/.
+I've written a bit about this project on [Medium](https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb) and the narrative chart visualization that kicked this off is here: [https://jeffreylancaster.github.io/game-of-thrones/map/].
 
 ## Visualizations
 
