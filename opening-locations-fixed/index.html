@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
+  <head>
+    <title>Game of Thrones: Opening Locations</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Opening Locations">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <style>
+      .axis .domain {
+        display: none;
+      }
+      .timestamp{
+        fill: black;
+      }
+      body{
+        font-family: "Helvetica Neue";
+      }
+      header{
+        margin: 15px;
+      }
+      header img{
+        height: 60px;
+        vertical-align: middle;
+        margin-top: -25px;
+      }
+      header span{
+        font-weight: 300;
+        font-size: 50px;
+      }
+      #cta{
+        color: #999;
+        font-style: italic;
+        font-size: 0.8em;
+      }
+      #description{
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 15px;
+        color: #999;
+        font-size: 0.8em;
+      }
+      #description a{
+        text-decoration: none;
+      }
+      .links line {
+        stroke: #999;
+        stroke-opacity: 0.6;
+      }
+      .links path {
+        stroke: #999;
+        stroke-opacity: 0.6;
+        fill: none;
+      }
+
+      .nodes circle {
+        stroke: #fff;
+        stroke-width: 1.5px;
+      }
+
+      text {
+        font-family: sans-serif;
+        font-size: 10px;
+      }
+      .selected {
+        stroke-width: 10px;
+        stroke: #00F!important;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="../img/GoT_logo.png">
+        <span> - Opening Locations</span>
+      </h1>
+    </header>
+    <div id="description">
+      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
+      <p>
+        <select id="episodesTitles" style="display: none;">
+        </select>
+      </p>
+    </div>
+    <svg width="1000" height="1000"></svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <script>
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+
+/* VARIABLES AND CONFIGURATION */
+
+// variable containers for imported data
+var charactersData,
+  locationsData,
+  locationsAltData,
+  episodesData,
+  charactersIncludeData,
+  charactersGenderData,
+  keyValue,
+  keyValuesFile,
+  episodeLengths,
+  locations,
+  subLocations,
+  group,
+  colors,
+  openingLocations;
+
+
+/* IMPORT DATA */
+$.when(
+  // $.getJSON("../data/characters.json", function(data) {
+  //   charactersData = data.characters;
+  //   console.log("characters.json loaded");
+  // })
+  // .fail(function() {console.error("characters.json not loaded");}),
+      
+  // $.getJSON("../data/locations.json", function(data) {
+  //   locationsData = data.regions;
+  //   console.log("locations.json loaded");
+  // })
+  // .fail(function() {console.error("locations.json not loaded");}),
+
+  // $.getJSON("../data/locations-alt.json", function(data) {
+  //   locationsAltData = data.sceneLocSorted;
+  //   console.log("locations-alt.json loaded");
+  // })
+  // .fail(function() {console.error("locations-alt.json not loaded");}),
+
+  $.getJSON("../data/episodes.json", function(data) {
+    episodesData = data.episodes;
+    console.log("episodes.json loaded");
+  })
+  .fail(function() {console.error("episodes.json not loaded");}),
+
+  // $.getJSON("../data/characters-include.json", function(data) {
+  //   charactersIncludeData = data.include;
+  //   console.log("characters-include.json loaded");
+  // })
+  // .fail(function() {console.error("characters-include.json not loaded");}),
+
+  // $.getJSON("../data/characters-gender.json", function(data) {
+  //   charactersGenderData = data.gender;
+  //   console.log("characters-gender.json loaded");
+  // })
+  // .fail(function() {console.error("characters-gender.json not loaded");}),
+
+  // $.getJSON("../data/keyValues.json", function(data) {
+  //   keyValues = data.keyValues;
+  // episodeLengths = data.episodeLengths;
+  //   locations = data.sceneLocSorted;
+  //   subLocations = data.sceneSubLocSorted;
+  //   console.log("keyValues.json loaded");
+  // })
+  // .fail(function() {console.error("keyValues.json not loaded");}),
+
+  // $.getJSON("../data/characters-groups.json", function(data) {
+  //   group = data.groups;
+  //   console.log("characters-groups.json loaded");
+  // })
+  // .fail(function() {console.error("characters-groups.json not loaded");}),
+
+  // $.getJSON("../data/colors.json", function(data) {
+  //   colors = data.colors;
+  //   console.log("colors.json loaded");
+  // })
+  // .fail(function() {console.error("colors.json not loaded");}),
+
+  $.getJSON("../data/opening-locations.json", function(data) {
+    openingLocations = data.locations;
+    console.log("opening-locations.json loaded");
+  })
+  .fail(function() {console.error("opening-locations.json not loaded");}),
+
+  $.getJSON("../data/config.json", function(data) {
+    config = data.config;
+    console.log("config.json loaded");
+  })
+  .fail(function() {console.error("config.json not loaded");})
+
+
+/* DO STUFF WITH THE DATA */
+
+).then(function() {
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  $("h1 > img").css({"height": config.logo.height, "vertical-align": "middle", "margin-top": config.logo.marginTop}).attr("src", "../img/"+config.logo.src);
+  $("h1 > span").html(" - "+config.openingLocationsFixed.title);
+  $("svg").attr({width: config.openingLocationsFixed.svg.width, height: config.openingLocationsFixed.svg.height-250});
+  /* END CONFIG SETUP */
+
+  var sequences = [];
+  var allLocations = []; // array for all locations
+  var uniqueLocations = []; // array for all locations
+  var matrix = {"nodes": [], "links": []};
+  var scale = 30;
+
+  // build the select
+  for(var i in episodesData){
+    $('#episodesTitles').append($('<option>', {text:episodesData[i].episodeTitle + " (S"+episodesData[i].seasonNum+"E"+episodesData[i].episodeNum+")"}));
+  }
+  $("#episodesTitles").show();
+
+  // select behavior
+  $('#episodesTitles').change(function(){
+    var episodeClass = $(this).val().split("(")[0].trim().toLowerCase().replace(/([^A-Z0-9])/gi,"");
+    $(".selected").removeClass("selected");
+    $("."+episodeClass).addClass("selected");
+  });
+        
+  for(var i in episodesData) {
+    for(var j in episodesData[i].openingSequenceLocations){
+      allLocations.push(episodesData[i].openingSequenceLocations[j]);
+    }
+  }
+  uniqueLocations = allLocations.filter(onlyUnique).sort();
+
+  for(var i in openingLocations){
+    openingLocations[openingLocations[i].name] = openingLocations[i];
+  }
+  console.log(openingLocations);
+
+  for(var i in uniqueLocations){
+    matrix.nodes.push({
+      "name": uniqueLocations[i],
+      "group": 1,
+      "x": openingLocations[uniqueLocations[i]].fx * config.openingLocationsFixed.svg.width/scale,
+      "y": openingLocations[uniqueLocations[i]].fy * config.openingLocationsFixed.svg.height/scale
+    })
+  }
+
+  for(var i in episodesData){
+    for(j=0; j<episodesData[i].openingSequenceLocations.length-1; j++){
+      matrix.links.push({
+        "source": episodesData[i].openingSequenceLocations[j],
+        "target": episodesData[i].openingSequenceLocations[j+1],
+        "value": 1,
+        "class": episodesData[i].episodeTitle.toLowerCase().replace(/([^A-Z0-9])/gi,"")
+      })
+    }
+  }
+
+  // do what the simulation does, but manually
+  // create new properties
+  for(var i in matrix.nodes){
+    matrix.nodes[matrix.nodes[i].name] = matrix.nodes[i];
+  }
+  // update links with node data
+  for(var i in matrix.links){
+    matrix.links[i].source = matrix.nodes[matrix.links[i].source];
+    matrix.links[i].target = matrix.nodes[matrix.links[i].target];
+  }
+
+  // build the visualization
+  var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+  var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+  var link = svg.append("g")
+      .attr("class", "links")
+    .selectAll("line")
+    .data(matrix.links)
+    .enter().append("path")
+      .attr("stroke-width", function(d) { return Math.sqrt(d.value); })
+      .attr("class", function(d){return d.class})
+      // .attr("x1", function(d) { return d.source.x; })
+      // .attr("y1", function(d) { return d.source.y; })
+      // .attr("x2", function(d) { return d.target.x; })
+      // .attr("y2", function(d) { return d.target.y; });
+      .attr("d", function(d) {
+        var dx = d.target.x - d.source.x,
+            dy = d.target.y - d.source.y,
+            dr = Math.sqrt(dx * dx + dy * dy);
+        return "M" + 
+            d.source.x + "," + 
+            d.source.y + "A" + 
+            dr + "," + dr + " 0 0,1 " + 
+            d.target.x + "," + 
+            d.target.y;
+      })
+
+  var node = svg.append("g")
+    .attr("class", "nodes")
+    .selectAll("g")
+    .data(matrix.nodes)
+    .enter().append("g")
+      .attr("transform", function(d){
+        return "translate("+d.x+", "+d.y+")";
+      })
+
+  var circles = node.append("circle")
+    .attr("r", 5)
+
+  var lables = node.append("text")
+    .text(function(d) {
+      return d.name;
+    })
+    .attr('x', 6)
+    .attr('y', 3);
+
+  node.append("title")
+      .text(function(d) { return d.id; });
+  
+  console.log(matrix)
+});
+
+
+    </script>
+  </body>
+</html>

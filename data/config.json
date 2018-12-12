@@ -1,0 +1,345 @@
+{
+	"config": {
+		"countUp": true,
+  		"barHeight": 20,
+  		"logo":{
+  			"src": "GoT_logo.png",
+  			"height": "60px",
+  			"marginTop": "-25px"
+  		},
+  		"bubbleCharacter": {
+			"title": "Scenes by Character (Bubbles)",
+			"totalCutoff":300,
+			"minBubbleSize":10,
+			"buffer":2,
+			"fuzzyScene":10,
+			"svg":{
+				"width":4000,
+				"height":300,
+				"margin":{
+					"top": 20,
+					"right": 20,
+					"bottom": 30,
+					"left": 20
+				},
+				"legendOffset": {
+					"x":20,
+					"y":20
+				}
+			}
+		},
+		"charactersPerScene": {
+			"title": "Characters Per Scene",
+			"svg":{
+				"width":2000,
+				"height":500,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 40
+				}
+			}
+		},
+  		"costarsList": {
+  			"title":"Co-stars",
+  			"getAPI": false,
+  			"cutoff": 2
+  		},
+  		"costarsMatrix": {
+  			"title":"Co-stars Co-Occurrence",
+  			"cutoff": 2,
+  			"width": 800,
+  			"svg":{
+  				"margin":{
+					"top": 120,
+					"right": 60,
+					"bottom": 60,
+					"left": 120
+				}
+  			}
+  		},
+		"duration": {
+			"title":"Supercut Duration",
+			"svg":{
+				"width":960,
+				"height":3080,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 180
+				},
+				"legendOffset": {
+					"x":20,
+					"y":90
+				}
+			}
+		},
+		"durationPerLocation": {
+			"title":"Time Per Location",
+			"svg":{
+				"width":960,
+				"height":500,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 180
+				},
+				"legendOffset": {
+					"x":20,
+					"y":90
+				}
+			},
+			"useSubLocation": false
+		},
+		"durationBySeason": {
+			"title":"Duration by Season",
+			"svg":{
+				"width":960,
+				"height":500,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 180
+				}
+			}
+		},
+		"durationPerSublocation": {
+			"title":"Time Per Sublocation",
+			"svg":{
+				"width":960,
+				"height":1600,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 220
+				},
+				"legendOffset": {
+					"x":20,
+					"y":90
+				}
+			},
+			"useSubLocation": true
+		},
+		"durationPercent": {
+			"title":"% Time Per Season",
+			"svg":{
+				"width":960,
+				"height":3080,
+				"margin":{
+					"top": 20,
+					"right": 90,
+					"bottom": 30,
+					"left": 180
+				},
+				"legendOffset": {
+					"x":20,
+					"y":90
+				}
+			}
+		},
+		"durationTreemap": {
+			"title":"Time Per Character Treemap",
+			"name": "Stranger Things",
+  			"includeOthers": true
+		},
+		"forceDirected": {
+			"scopeMain": false,
+			"all": {
+				"size": 1600,
+				"file": "matrixObject-all.json"
+			},
+			"main": {
+				"size": 800,
+				"file": "matrixObject-main.json"
+			}
+		},
+		"locationPerEpisode": {
+			"title":"Locations Per Episode",
+			"svg":{
+				"width":960,
+				"height":500,
+				"margin":{
+					"top": 20,
+					"right": 160,
+					"bottom": 30,
+					"left": 280
+				},
+				"legendOffset": {
+					"x":160,
+					"y":20
+				}
+			},
+			"useSubLocation": false
+		},
+		"map": {
+			"title":"A Narrative Chart"
+		},
+		"matrix": {
+			"title":"Co-Occurrence",
+			"scopeMain": true,
+			"all": {
+				"size": 2000,
+				"file": "matrixObject-all.json"
+			},
+			"main": {
+				"size": 400,
+				"file": "matrixObject-main.json"
+			},
+			"margin": {
+				"top": 120,
+				"right": 60,
+				"bottom": 60,
+				"left": 120
+			}
+		},
+		"openingLocationsFixed": {
+			"title": "Opening Locations",
+			"svg":{
+				"width":1000,
+				"height":800,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 40
+				}
+			}
+		},
+		"openingLocationsForce": {
+			"title": "Opening Locations",
+			"svg":{
+				"width":500,
+				"height":500,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 40
+				}
+			}
+		},
+		"regionPercent": {
+			"title":"% Time Per Region",
+			"svg":{
+				"width":960,
+				"height":550,
+				"margin":{
+					"top": 20,
+					"right": 150,
+					"bottom": 30,
+					"left": 180
+				},
+				"legendOffset": {
+					"x":50,
+					"y":40
+				}
+			}
+		},
+		"relations": {
+			"title":"Relations",
+			"directed":[
+				{
+					"type":"killedBy",
+					"style":{
+						"stroke": "#000",
+						"stroke-width": 2,
+						"stroke-opacity": 1
+					},
+					"textStyle":{
+						"font-size": "1em",
+						"dominant-baseline": "central"
+					}
+				}
+			],
+			"undirected":[
+				{
+					"type":"parentOf",
+					"style":{
+						"stroke": "#999",
+						"stroke-width": 1,
+						"stroke-opacity": 0.6
+					},
+						"textStyle":{
+						"font-size": "1em",
+						"dominant-baseline": "central"
+					}
+				},
+				{
+					"type":"marriedEngaged",
+					"style":{
+						"stroke": "blue",
+						"stroke-width": 1,
+						"stroke-opacity": 0.6,
+						"stroke-dasharray": "5,5"
+					},
+					"textStyle":{
+						"font-size": "1em",
+						"dominant-baseline": "central"
+					}
+				}
+			]
+		},
+		"scenesCharacter": {
+			"title": "Scenes by Character",
+			"svg":{
+				"width":2000,
+				"height":3080,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 180
+				},
+				"legendOffset": {
+					"x":20,
+					"y":20
+				}
+			}
+		},
+		"scenesLocation": {
+			"title": "Scenes by Location",
+			"svg":{
+				"width":2000,
+				"height":500,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 180
+				},
+				"legendOffset": {
+					"x":20,
+					"y":20
+				}
+			},
+			"useSubLocation": false
+		},
+		"scenesSublocation": {
+			"title": "Scenes by Sublocation",
+			"svg":{
+				"width":2000,
+				"height":1600,
+				"margin":{
+					"top": 20,
+					"right": 40,
+					"bottom": 30,
+					"left": 220
+				},
+				"legendOffset": {
+					"x":20,
+					"y":90
+				}
+			},
+			"useSubLocation": true
+		},
+		"toCSV": {
+			"title": "Data to CSV",
+			"useSubLocation": true
+		}
+	}
+}
