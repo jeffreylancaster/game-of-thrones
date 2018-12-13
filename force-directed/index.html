@@ -1,73 +1,159 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
+<html>
+  <head>
+    <title>Game of Thrones: Force-Directed</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Force-Directed">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
 
-.link {
-  stroke: #ccc;
+    <svg class="force"></svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
 }
 
-.node text {
-  pointer-events: none;
-  font: 10px sans-serif;
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
 }
 
-</style>
-<body>
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script>
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
 
-var width = 1600,
-    height = 1600
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/config.json')
+  .await(ready);
 
-var svg = d3.select("body").append("svg")
+function ready(error, e, c) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  episodesData = e.episodes;
+  config = c.config;
+
+  var file, width, height;
+
+  if(config.forceDirected.scopeMain){
+    width = config.forceDirected.main.size;
+    height = config.forceDirected.main.size;
+    file = config.forceDirected.main.file;
+  } else {
+    width = config.forceDirected.all.size;
+    height = config.forceDirected.all.size;
+    file = config.forceDirected.all.file;
+  }
+
+  var svg = d3.select("svg")
     .attr("width", width)
     .attr("height", height);
 
-var force = d3.layout.force()
-    .gravity(0.5)
-    .distance(30)
-    .charge(-5000)
-    .size([width, height]);
+  var radius = 5;
 
-d3.json("../data/matrixObject-main.json", function(error, json) {
-  if (error) throw error;
+  var color = d3.scaleOrdinal(d3.schemeCategory20);
 
-  force
-      .nodes(json.nodes)
-      .links(json.links)
-      .start();
+  var simulation = d3.forceSimulation()
+      .force("link", d3.forceLink())
+      .force("charge", d3.forceManyBody())
+      .force("center", d3.forceCenter(width / 2, height / 2));
 
-  var link = svg.selectAll(".link")
-      .data(json.links)
-    .enter().append("line")
-      .attr("class", "link");
+  d3.json("../data/"+file, function(error, graph) {
+    console.log(graph);
+    if (error) throw error;
 
-  var node = svg.selectAll(".node")
-      .data(json.nodes)
-    .enter().append("g")
-      .attr("class", "node")
-      .call(force.drag);
+    var link = svg.append("g")
+        .attr("class", "links")
+      .selectAll("line")
+      .data(graph.links)
+      .enter().append("line")
+        // .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+        .attr("stroke-width", "1px");
 
-  node.append("image")
-      .attr("xlink:href", "https://github.com/favicon.ico")
-      .attr("x", -8)
-      .attr("y", -8)
-      .attr("width", 16)
-      .attr("height", 16);
+    var node = svg.append("g")
+        .attr("class", "nodes")
+      .selectAll("g")
+      .data(graph.nodes)
+      .enter().append("g")
+      
+    var circles = node.append("circle")
+        .attr("r", radius)
+        .attr("fill", function(d) { return color(d.group); })
+        .call(d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended));
 
-  node.append("text")
-      .attr("dx", 12)
-      .attr("dy", ".35em")
-      .text(function(d) { return d.name });
+    var lables = node.append("text")
+        .text(function(d) {
+          return d.name;
+        })
+        .attr('x', 6)
+        .attr('y', 3);
 
-  force.on("tick", function() {
-    link.attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
+    node.append("title")
+        .text(function(d) { return d.name; });
 
-    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    simulation
+        .nodes(graph.nodes)
+        .on("tick", ticked);
+
+    simulation.force("link")
+        .links(graph.links);
+
+    function ticked() {
+      link
+          .attr("x1", function(d) { return d.source.x; })
+          .attr("y1", function(d) { return d.source.y; })
+          .attr("x2", function(d) { return d.target.x; })
+          .attr("y2", function(d) { return d.target.y; });
+
+      node
+          .attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
+          .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); })
+          .attr("transform", function(d) {
+            return "translate(" + d.x + "," + d.y + ")";
+          });
+    }
   });
-});
+
+  function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+
+  function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+};
 
 </script>

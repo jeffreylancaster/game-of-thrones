@@ -9,42 +9,13 @@
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../style.css">
     <style>
       .axis .domain {
         display: none;
       }
       .timestamp{
         fill: black;
-      }
-      body{
-        font-family: "Helvetica Neue";
-      }
-      header{
-        margin: 15px;
-      }
-      header img{
-        height: 60px;
-        vertical-align: middle;
-        margin-top: -25px;
-      }
-      header span{
-        font-weight: 300;
-        font-size: 50px;
-      }
-      #cta{
-        color: #999;
-        font-style: italic;
-        font-size: 0.8em;
-      }
-      #description{
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 15px;
-        color: #999;
-        font-size: 0.8em;
-      }
-      #description a{
-        text-decoration: none;
       }
       .links line {
         stroke: #999;
@@ -67,19 +38,13 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1>
-        <img src="../img/GoT_logo.png">
-        <span> - Opening Locations</span>
-      </h1>
-    </header>
-    <div id="description">
+    <!--
       <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-      <p>
-        <select id="episodesTitles" style="display: none;">
-        </select>
-      </p>
-    </div>
+    -->
+    <p>
+      <select id="episodesTitles" style="display: none;">
+      </select>
+    </p>
     <svg width="1000" height="1000"></svg>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -207,8 +172,6 @@ $.when(
   console.log("now that the files are loaded... do magic.");
 
   /* CONFIG SETUP */
-  $("h1 > img").css({"height": config.logo.height, "vertical-align": "middle", "margin-top": config.logo.marginTop}).attr("src", "../img/"+config.logo.src);
-  $("h1 > span").html(" - "+config.openingLocationsForce.title);
   $("svg").attr({width: config.openingLocationsForce.svg.width, height: config.openingLocationsForce.svg.height});
   /* END CONFIG SETUP */
 

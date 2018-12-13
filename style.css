@@ -1,0 +1,208 @@
+.axis .domain {
+  display: none;
+}
+.timestamp{
+  fill: black;
+}
+body{
+  font-family: "Helvetica Neue";
+  font-family: Georgia, serif;
+  /*overflow: hidden;*/
+  margin: 0;
+  text-align: center;
+  background: #fff;
+}
+.breadcrumbs {
+  font-size: small;
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+  margin: 0;
+  font-style: italic;
+  border-bottom: solid #eee 1px;
+  color: #000;
+}
+
+.breadcrumbs a {
+  color: #669;
+}
+
+.breadcrumbs a:hover {
+  color: #000;
+}
+
+.logo {
+  width: calc(100% - 2em);
+  max-width: calc(500px - 2em);
+  margin: 1em auto;
+  padding: 1em;
+}
+
+iframe{
+  width: calc(100% - 2em);
+  max-width: calc(800px - 2em);
+  margin: 0 auto;
+  height: 500px;
+  border: 1px solid #EEE;
+}
+
+
+p.caption {
+  text-align: center;
+  font-size: small;
+  font-style: italic;
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+
+p, li {
+  line-height: 1.5em;
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+canvas {
+  cursor: move;
+}
+
+.wrapper {
+  width: calc(100% - 2em);
+  max-width: calc(600px - 2em);
+  margin: 1em auto;
+  text-align: left;
+}
+
+blockquote {
+  border-left: solid #eee 5px;
+  padding: 0 15px;
+  margin: 0;
+}
+
+
+#list{
+  margin: 0 30px 30px;
+  color: #999;
+  font-weight: 400;
+  line-height: 1.4em;
+  font-size: 0.9em;
+}
+#list a{
+  text-decoration: none;
+}
+@import url(https://bost.ocks.org/mike/style.css);
+      
+.matrix .background {
+  fill: #eee;
+}
+.matrix line {
+  stroke: #fff;
+}
+.matrix text{
+  font-size: 0.7em;
+}
+.matrix text.active {
+  fill: red;
+}
+.matrix {
+  padding-left: 120px;
+  font-family: "Helvetica Neue";
+}
+.matrix .cell{
+  fill: #ccc;
+}
+
+/* treemap */
+.treemap rect {
+  fill: none;
+  pointer-events: all;
+}
+.treemap pre {
+  font-size: 18px;
+}
+.treemap line {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+.treemap .string, .treemap .regexp {
+  color: #f39;
+}
+.treemap .keyword {
+  color: #00c;
+}
+.treemap .comment {
+  color: #777;
+  font-style: oblique;
+}
+.treemap .number {
+  color: #369;
+}
+.treemap .class, .treemap .special {
+  color: #1181B8;
+}
+.treemap .hint {
+  position: absolute;
+  right: 0;
+  width: 1280px;
+  font-size: 12px;
+  color: #999;
+}
+.treemap .chart {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+.treemap text {
+  font-size: 11px;
+}
+.treemap rect {
+  fill: none;
+}
+
+/* force-directed */
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+.force text {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+/* force-directed circle */
+.link {
+  fill: none;
+}
+.link path {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+.node text {
+  font: 10px sans-serif;
+}
+.node circle {
+}
+
+.mobile{
+  display: none;
+}
+
+@media(max-width: 760px){
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
+  <head>
+    <title>Game of Thrones: Duration by Season</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Duration by Season">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!--
+      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+
+/* VARIABLES AND CONFIGURATION */
+
+var range = ["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"];
+
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/config.json')
+  .await(ready);
+
+function ready(error, e, c) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  episodesData = e.episodes;
+  config = c.config;
+
+  var bySeason = {};
+        
+  for (var i in episodesData) {
+    // act on scenes
+    var scenes = episodesData[i].scenes;
+    for (var j in scenes){
+      // calculate length of scene in seconds
+      var sceneLength;
+      if(config.countUp == true){
+        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
+      } else if(config.countUp == false){
+        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
+      }
+      
+      scenes[j].length = sceneLength;
+    }
+  }
+
+  // sum scene lengths for characters in scenes
+  for(var i in episodesData) {
+    // if no season yet, create it
+    if(!bySeason[episodesData[i].seasonNum]){
+      bySeason[episodesData[i].seasonNum] = {};
+    }
+    for(var j in episodesData[i].scenes){
+      for(var k in episodesData[i].scenes[j].characters){
+        // if no entry yet, create it
+        if(!bySeason[episodesData[i].seasonNum][episodesData[i].scenes[j].characters[k].name]){
+          bySeason[episodesData[i].seasonNum][episodesData[i].scenes[j].characters[k].name] = {"total":0};
+        }
+        // add scene length to entry
+        bySeason[episodesData[i].seasonNum][episodesData[i].scenes[j].characters[k].name].total += episodesData[i].scenes[j].length;
+      }
+    }
+  }
+
+  // create new svg's for each season
+  for(var i in bySeason){
+    if(Object.keys(bySeason[i]).length > 0){
+      $("body").append("<h1>Season "+i+"</h1>");
+      $("body").append("<svg width='"+config.durationBySeason.svg.width+"' height='"+(Object.keys(bySeason[i]).length+2)*config.barHeight+"' id='s"+i+"'></svg>");
+
+      // rebuild bySeason[i] as an array
+      var seasonArray = [];
+      for(var j in bySeason[i]){
+        seasonArray.push({
+          name: j,
+          total: bySeason[i][j].total
+        });
+      }
+
+      // build the visualization
+      var data = seasonArray;
+      var barHeight = config.barHeight;
+
+      var svg = d3.select("#s"+i),
+          margin = config.durationBySeason.svg.margin,
+          width = +svg.attr("width") - margin.left - margin.right,
+          height = barHeight*data.length + margin.top + margin.bottom,
+          g = svg.append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      var y = d3.scaleBand() 
+          .rangeRound([0, height])
+          .paddingInner(0.15)
+          .align(0.1);
+
+      var x = d3.scaleLinear()
+          .rangeRound([0, width]);
+
+      var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+          .range(range);
+
+      range.shift();
+
+      var keys = d3.keys(data[0]).slice(1,2);
+
+      data.sort(function(a, b) { return a.total - b.total; }).reverse();
+      
+      y.domain(data.map(function(d) { return d.name; }));
+      x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+      z.domain(keys);
+
+      g.append("g")
+        .selectAll("g")
+        .data(d3.stack().keys(keys)(data))
+        .enter().append("g")
+          .attr("fill", function(d) { return z(d.key); })
+        .selectAll("rect")
+        .data(function(d) { return d; })
+        .enter().append("rect")
+          .attr("y", function(d) { return y(d.data.name); })
+          .attr("x", function(d) { return x(d[0]); })
+          .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+          .attr("height", y.bandwidth());
+
+      g.selectAll("g")
+        .data(d3.stack().keys(keys)(data))
+        .append("svg:title")
+          .text(function(d,i) {
+            // not sure why this shift needs to happen...
+            if(i == 0){
+              return "Season "+keys[keys.length-1]
+            } else {
+              return "Season "+keys[i-1]
+            };
+          });
+
+      g.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0,0)")
+        .call(d3.axisLeft(y));
+
+      g.selectAll(".axis")
+        .selectAll(".tick")
+        .data(data)
+        .append("text")
+        .attr("class", "timestamp")
+        .attr("dy", "0.35em")
+        .attr("dx", function(d){ return x(d.total) + 5; })
+        .attr("text-anchor", "start")
+        .text(function(d){ return secondsToHMS(d.total); });
+    }
+  }
+};
+
+    </script>
+  </body>
+</html>

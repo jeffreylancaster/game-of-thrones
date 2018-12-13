@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
+  <head>
+    <title>Game of Thrones: Time Per Character Treemap</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Time Per Character Treemap">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: auto;
+      position: relative;
+    }
+    .node {
+      border: solid 1px white;
+      font: 10px sans-serif;
+      line-height: 12px;
+      overflow: hidden;
+      position: absolute;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content:center;
+      align-content:center;
+      flex-direction:column;
+    }
+    </style>
+  </head>
+  <body>
+    <!--
+      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
+      <p>This visualization is based on Mike Bostock's <a href="http://mbostock.github.io/d3/talk/20111018/treemap.html" target="_blank">Zoomable Treemap</a>.
+    -->
+    <div class="treemap">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/characters-houses.json')
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/config.json')
+  .await(ready);
+
+function ready(error, e, cg, l, c) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  episodesData = e.episodes;
+  group = cg.house;
+  colors = l.colors;
+  config = c.config;
+
+  var allCharacters = {}; // an object with total times for each character
+  var flare = {"name":config.name, "children":[]};
+  var charactersIncluded = [];
+        
+  for (var i in episodesData) {
+    // act on scenes
+    var scenes = episodesData[i].scenes;
+    for (var j in scenes){
+      // calculate length of scene in seconds
+      var sceneLength;
+      if(config.countUp == true){
+        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
+      } else if(config.countUp == false){
+        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
+      }
+
+      scenes[j].length = sceneLength;
+
+      // add characters in scene to allCharacters array
+      for (var k in scenes[j].characters){
+        if(!allCharacters.hasOwnProperty(scenes[j].characters[k].name)){
+          allCharacters[scenes[j].characters[k].name] = 0;
+        }
+        allCharacters[scenes[j].characters[k].name] += scenes[j].length;
+      }
+    }
+  }
+
+  // rearrange group data and bring in length from allCharacters
+  for(var i in group){
+    var childrenArray = [];
+    for(j=0; j<group[i].characters.length; j++){
+      childrenArray.push({"name":group[i].characters[j], "size":allCharacters[group[i].characters[j]]});
+      charactersIncluded.push(group[i].characters[j]);
+    }
+    flare.children.push({"name":group[i].name, "children":childrenArray});
+  }
+  if(config.durationTreemap.includeOthers){
+    var otherChildren = [];
+    for(var i in allCharacters){
+      if(charactersIncluded.indexOf(i) < 0){
+        otherChildren.push({"name":i, "size":allCharacters[i]});
+      }
+    }
+    flare.children.push({"name":"Other", "children": otherChildren});
+  }
+  
+  console.log(flare);
+
+
+  // build the visualization
+
+  // adapted from https://bl.ocks.org/ganezasan/52fced34d2182483995f0ca3960fe228
+  'use strict';
+
+  const margin = {top: 20, right: 30, bottom: 20, left: 20},
+    width = window.innerWidth - margin.right - margin.left - 20,
+    height = window.innerHeight - margin.top - margin.bottom - 40,
+    color = d3.scaleOrdinal().range(d3.schemeCategory20c);
+
+  const treemap = d3.treemap().size([width, height]);
+
+  const div = d3.select(".treemap")
+      .style("position", "relative")
+      .style("width", (width + margin.left + margin.right) + "px")
+      .style("height", (height + margin.top + margin.bottom) + "px")
+      .style("left", margin.left + "px")
+      .style("top", margin.top + "px");
+
+  const root = d3.hierarchy(flare, (d) => d.children)
+    .sum((d) => d.size);
+
+  const tree = treemap(root);
+
+  const node = div.datum(root).selectAll(".node")
+      .data(tree.leaves())
+    .enter().append("div")
+      .attr("class", "node")
+      .attr("title", (d) => d.data.name)
+      .style("left", (d) => d.x0 + "px")
+      .style("top", (d) => d.y0 + "px")
+      .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
+      .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
+      .style("background", (d) => color(d.parent.data.name))
+      .text((d) => d.data.name);
+
+  d3.selectAll("input").on("change", function change() {
+    const value = this.value === "count"
+        ? (d) => { return d.size ? 1 : 0;}
+        : (d) => { return d.size; };
+
+    const newRoot = d3.hierarchy(data, (d) => d.children)
+      .sum(value);
+
+    node.data(treemap(newRoot).leaves())
+      .transition()
+        .duration(1500)
+        .style("left", (d) => d.x0 + "px")
+        .style("top", (d) => d.y0 + "px")
+        .style("width", (d) => Math.max(0, d.x1 - d.x0 - 1) + "px")
+        .style("height", (d) => Math.max(0, d.y1 - d.y0  - 1) + "px")
+  });
+  
+};
+
+    </script>
+  </body>
+</html>

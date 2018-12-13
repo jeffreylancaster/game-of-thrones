@@ -1,0 +1,308 @@
+<html>
+<head>
+  <title>jeffreylancaster.github.io: Game of Thrones</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="http://www.jeffreylancaster.com/jeffreylancaster.png"/>
+
+  <!-- h/t https://codepen.io/mcraiganthony/pen/NxGxqm -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+  <style>
+/*@gray-darker:               #444444;
+@gray-dark:                 #696969;
+@gray:                      #999999;
+@gray-light:                #cccccc;
+@gray-lighter:              #ececec;
+@gray-lightest:             lighten(@gray-lighter,4%);*/
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  color: #999999;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+header{
+  margin: 15px;
+}
+header img {
+  max-height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+header span{
+  font-weight: 300;
+  font-size: 50px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media(min-width: 40rem) {
+  .cards-item{width: 50%};
+}
+@media(min-width: 56rem) {
+  .cards-item{width: 33.3333%};
+}
+
+.card {
+  background-color: white;
+  /*border-radius: 0.25rem;*/
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card:hover .card-image{
+  -webkit-filter: contrast(100%);
+  filter: contrast(100%);
+}
+
+.card-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;*/
+  -webkit-filter: contrast(70%);
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+}
+
+.card-image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+@media(min-width: 40rem) {
+  .card-image::before {
+    padding-top: 66.6%; /* 3:2 aspect ratio */
+  }
+}
+
+.card-image-duration-1 {
+  background-image: url("/img/vis-thumbnails/duration-1.png");
+}
+
+.card-image-narrative {
+  background-image: url("/img/vis-thumbnails/narrative-1.png");
+}
+
+.card-image-matrix {
+  background-image: url("/img/vis-thumbnails/matrix-1.png");
+}
+
+.card-image-duration-2 {
+  background-image: url("/img/vis-thumbnails/duration-2.png");
+}
+
+.card-image-force {
+  background-image: url("/img/vis-thumbnails/force-1.png");
+}
+
+.card-image-duration-3 {
+  background-image: url("/img/vis-thumbnails/duration-3.png");
+}
+
+.card-image-list {
+  background-image: url("/img/vis-thumbnails/list-1.png");
+}
+
+.card-title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card-text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 0;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <h1>
+    <img src="/game-of-thrones/img/GoT_logo.png">
+  </h1>
+</header>
+
+<ul class="cards">
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/map/">
+        <div class="card-image card-image-narrative"></div>
+        <div class="card-content">
+          <div class="card-title">Narrative Chart</div>
+        </a>
+        <p class="card-text">A visualization of when each character is on-screen throughout the show, where they are, with whom they are, when they die, and more.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/costars-list/">
+        <div class="card-image card-image-list"></div>
+        <div class="card-content">
+          <div class="card-title">Costars List</div>
+        </a>
+        <p class="card-text">A list of other films in which <i>Game of Thrones</i> costars, well, costar.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/costars-matrix/">
+        <div class="card-image card-image-matrix"></div>
+        <div class="card-content">
+          <div class="card-title">Costars Matrix</div>
+        </a>
+        <p class="card-text">A matrix visualization of frequency of other films in which <i>Game of Thrones</i> costars, well, costar.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/duration-character/">
+        <div class="card-image card-image-duration-1"></div>
+        <div class="card-content">
+          <div class="card-title">Supercut Duration</div>
+        </a>
+        <p class="card-text">A visualization of how long each character has been on-screen throughout the show.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/duration-percent/">
+        <div class="card-image card-image-duration-2"></div>
+        <div class="card-content">
+          <div class="card-title">Character Time Percentage Per Season</div>
+        </a>
+        <p class="card-text">A visualization of how much of a character’s time on screen is spent in each season.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/force-directed/">
+        <div class="card-image card-image-force"></div>
+        <div class="card-content">
+          <div class="card-title">Force-Directed On-Screen Co-Occurrence (work in progress)</div>
+        </a>
+        <p class="card-text">A force-directed visualization of characters on-screen together throughout the show.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/costars-list/">
+        <div class="card-image card-image-matrix"></div>
+        <div class="card-content">
+          <div class="card-title">Character Co-Occurrence Matrix</div>
+        </a>
+        <p class="card-text">A matrix visualization of how often characters are on screen together.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/region-percent/">
+        <div class="card-image card-image-duration-3"></div>
+        <div class="card-content">
+          <div class="card-title">Travelling Characters</div>
+        </a>
+        <p class="card-text">A visualization of the various locations characters visit and how much of their time they spend there.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+</ul>
+
+</div>
+
+</body>
+</html>

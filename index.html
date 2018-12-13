@@ -1,308 +1,225 @@
+
+<!DOCTYPE html>
 <html>
-<head>
-  <title>jeffreylancaster.github.io: Game of Thrones</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="http://www.jeffreylancaster.com/jeffreylancaster.png"/>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Game of Thrones">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <meta property="og:title" content="Game of Thrones">
+    <meta property="og:description" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <title>Game of Thrones</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <p class="breadcrumbs">
+      <a href="https://jeffreylancaster.github.io/">jeffreylancaster.github.io</a> → Game of Thrones
+    </p>
 
-  <!-- h/t https://codepen.io/mcraiganthony/pen/NxGxqm -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
-  <style>
-/*@gray-darker:               #444444;
-@gray-dark:                 #696969;
-@gray:                      #999999;
-@gray-light:                #cccccc;
-@gray-lighter:              #ececec;
-@gray-lightest:             lighten(@gray-lighter,4%);*/
+    <img src="img/GoT_logo.png" class="logo">
 
-*,
-*::before,
-*::after { 
-  box-sizing: border-box;
-}
+    <h1>The Lands of Ice and Fire</h1>
 
-html {
-  background-color: #f0f0f0;
-}
-
-body {
-  color: #999999;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "liga" on;
-}
-
-header{
-  margin: 15px;
-}
-header img {
-  max-height: 100px;
-  margin: 0 auto;
-  display: block;
-}
-header span{
-  font-weight: 300;
-  font-size: 50px;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.btn {
-  background-color: white;
-  border: 1px solid #cccccc;
-  color: #696969;
-  padding: 0.5rem;
-  text-transform: lowercase;
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
- 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards-item {
-  display: flex;
-  padding: 1rem;
-}
-
-@media(min-width: 40rem) {
-  .cards-item{width: 50%};
-}
-@media(min-width: 56rem) {
-  .cards-item{width: 33.3333%};
-}
-
-.card {
-  background-color: white;
-  /*border-radius: 0.25rem;*/
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card:hover .card-image{
-  -webkit-filter: contrast(100%);
-  filter: contrast(100%);
-}
-
-.card-content {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.card-image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /*border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;*/
-  -webkit-filter: contrast(70%);
-  filter: contrast(70%);
-  overflow: hidden;
-  position: relative;
-  -webkit-transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
-  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
-}
-
-.card-image::before {
-  content: "";
-  display: block;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
-}
-
-@media(min-width: 40rem) {
-  .card-image::before {
-    padding-top: 66.6%; /* 3:2 aspect ratio */
-  }
-}
-
-.card-image-duration-1 {
-  background-image: url("/img/vis-thumbnails/duration-1.png");
-}
-
-.card-image-narrative {
-  background-image: url("/img/vis-thumbnails/narrative-1.png");
-}
-
-.card-image-matrix {
-  background-image: url("/img/vis-thumbnails/matrix-1.png");
-}
-
-.card-image-duration-2 {
-  background-image: url("/img/vis-thumbnails/duration-2.png");
-}
-
-.card-image-force {
-  background-image: url("/img/vis-thumbnails/force-1.png");
-}
-
-.card-image-duration-3 {
-  background-image: url("/img/vis-thumbnails/duration-3.png");
-}
-
-.card-image-list {
-  background-image: url("/img/vis-thumbnails/list-1.png");
-}
-
-.card-title {
-  color: #696969;
-  font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-a {
-  text-decoration: none;
-}
-
-.card-text {
-  flex: 1 1 auto;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  border: 0;
-}
-
-  </style>
-</head>
-<body>
-
-<div class="container">
-
-<header>
-  <h1>
-    <img src="/game-of-thrones/img/GoT_logo.png">
-  </h1>
-</header>
-
-<ul class="cards">
-  <li class="cards-item">
-    <div class="card">
-      <a href="/game-of-thrones/map/">
-        <div class="card-image card-image-narrative"></div>
-        <div class="card-content">
-          <div class="card-title">Narrative Chart</div>
-        </a>
-        <p class="card-text">A visualization of when each character is on-screen throughout the show, where they are, with whom they are, when they die, and more.</p>
-        <!-- <button class="btn btn-block card-btn">Button</button> -->
-      </div>
+    <div class="mobile">
+      <a href="https://jeffreylancaster.github.io/game-of-thrones/m/">On a mobile device? Click here.</a>
     </div>
-  </li>
-  <li class="cards-item">
-    <div class="card">
-      <a href="/game-of-thrones/costars-list/">
-        <div class="card-image card-image-list"></div>
-        <div class="card-content">
-          <div class="card-title">Costars List</div>
-        </a>
-        <p class="card-text">A list of other films in which <i>Game of Thrones</i> costars, well, costar.</p>
-        <!-- <button class="btn btn-block card-btn">Button</button> -->
-      </div>
-    </div>
-  </li>
-  <li class="cards-item">
-    <div class="card">
-      <a href="/game-of-thrones/costars-matrix/">
-        <div class="card-image card-image-matrix"></div>
-        <div class="card-content">
-          <div class="card-title">Costars Matrix</div>
-        </a>
-        <p class="card-text">A matrix visualization of frequency of other films in which <i>Game of Thrones</i> costars, well, costar.</p>
-        <!-- <button class="btn btn-block card-btn">Button</button> -->
-      </div>
-    </div>
-  </li>
-  <li class="cards-item">
-    <div class="card">
-      <a href="/game-of-thrones/duration-character/">
-        <div class="card-image card-image-duration-1"></div>
-        <div class="card-content">
-          <div class="card-title">Supercut Duration</div>
-        </a>
-        <p class="card-text">A visualization of how long each character has been on-screen throughout the show.</p>
-        <!-- <button class="btn btn-block card-btn">Button</button> -->
-      </div>
-    </div>
-  </li>
-  <li class="cards-item">
-    <div class="card">
-      <a href="/game-of-thrones/duration-percent/">
-        <div class="card-image card-image-duration-2"></div>
-        <div class="card-content">
-          <div class="card-title">Character Time Percentage Per Season</div>
-        </a>
-        <p class="card-text">A visualization of how much of a character’s time on screen is spent in each season.</p>
-        <!-- <button class="btn btn-block card-btn">Button</button> -->
-      </div>
-    </div>
-  </li>
-  <li class="cards-item">
-    <div class="card">
-      <a href="/game-of-thrones/force-directed/">
-        <div class="card-image card-image-force"></div>
-        <div class="card-content">
-          <div class="card-title">Force-Directed On-Screen Co-Occurrence (work in progress)</div>
-        </a>
-        <p class="card-text">A force-directed visualization of characters on-screen together throughout the show.</p>
-        <!-- <button class="btn btn-block card-btn">Button</button> -->
-      </div>
-    </div>
-  </li>
-  <li class="cards-item">
-    <div class="card">
-      <a href="/game-of-thrones/costars-list/">
-        <div class="card-image card-image-matrix"></div>
-        <div class="card-content">
-          <div class="card-title">Character Co-Occurrence Matrix</div>
-        </a>
-        <p class="card-text">A matrix visualization of how often characters are on screen together.</p>
-        <!-- <button class="btn btn-block card-btn">Button</button> -->
-      </div>
-    </div>
-  </li>
-  <li class="cards-item">
-    <div class="card">
-      <a href="/game-of-thrones/region-percent/">
-        <div class="card-image card-image-duration-3"></div>
-        <div class="card-content">
-          <div class="card-title">Travelling Characters</div>
-        </a>
-        <p class="card-text">A visualization of the various locations characters visit and how much of their time they spend there.</p>
-        <!-- <button class="btn btn-block card-btn">Button</button> -->
-      </div>
-    </div>
-  </li>
-</ul>
 
-</div>
+    <div class="desktop">
 
-</body>
+      <div class="wrapper">
+        <p>This work on HBO's <a href="https://jeffreylancaster.github.io/game-of-thrones/"><i>Game of Thrones</i></a>...</p>
+        <p>This is a playground for those ideas. Note: the page may take a moment to load since it's loading each visualization.</p>
+      </div>
+
+      <h1>What about that map?</h1>
+
+      <div class="wrapper">
+        <p>The narrative chart started this project for <i>Game of Thrones</i>.
+      </div>
+
+      <h2>Narrative chart</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/map/"></iframe>
+      <p class="caption">
+        Scroll down and right. Hover over the map to view character journeys, episode names, and more. <i>Note: map contains spoilers.</i> <a href="https://jeffreylancaster.github.io/game-of-thrones/map/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h1>Screen Time</h1>
+
+      <div class="wrapper">
+        <p>Some of the easiest things to visualize are representations of when characters are on screen and where those characters are.</p>
+      </div>
+
+      <h2>When are characters are on screen?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/scenes-character/"></iframe>
+      <p class="caption">
+        Scroll down and right and hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/scenes-character/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>Where do scenes take place?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/scenes-location/"></iframe>
+      <p class="caption">
+        Scroll right and hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/scenes-location/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>More specifically, where do scenes take place?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/scenes-sublocation/"></iframe>
+      <p class="caption">
+        Scroll down and right and hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/scenes-sublocation/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>How many characters are on screen?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/characters-per-scene/"></iframe>
+      <p class="caption">
+        Scroll right or hover over a bar. <a href="https://jeffreylancaster.github.io/game-of-thrones/characters-per-scene/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>What about continuous on screen time?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/bubble-character/"></iframe>
+      <p class="caption">
+        Scroll right or hover over a circle. Circles are color-coded by house. <a href="https://jeffreylancaster.github.io/game-of-thrones/bubble-character/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h1>Cumulative Time</h1>
+
+      <div class="wrapper">
+        <p>It's also fairly trivial to count how long characters are on screen (in total or by season), how long they spend in certain locations, or the number of locations and time spent in each per episode.</p>
+      </div>
+
+      <h2>How long are characters on screen?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/duration-character/"></iframe>
+      <p class="caption">
+        Scroll down and right or hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/duration-character/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>How long are characters in each season?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/duration-per-season/"></iframe>
+      <p class="caption">
+        Scroll down and right or hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/duration-per-season/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>How long is spent in each location?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/duration-per-location/"></iframe>
+      <p class="caption">
+        Scroll down and right or hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/duration-per-location/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>How long is spent in each more-specific location?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/duration-per-sublocation/"></iframe>
+      <p class="caption">
+        Scroll down and right or hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/duration-per-sublocation/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>What percentage of characters' time is in each season?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/duration-percent/"></iframe>
+      <p class="caption">
+        Scroll down and right or hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/duration-percent/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>How long are characters on screen relative to all time?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/duration-treemap/"></iframe>
+      <p class="caption">
+        Hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/duration-treemap/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>How many locations are in each episode?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/location-per-episode/"></iframe>
+      <p class="caption">
+        Scroll down and right or hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/location-per-episode/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>What percentage of time do characters spend in various locations?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/region-percent/"></iframe>
+      <p class="caption">
+        Scroll down and right or hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/region-percent/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h1>Co-Occurrence</h1>
+
+      <h2>Which characters are on screen together?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/matrix/"></iframe>
+      <p class="caption">
+        Hover. <a href="https://jeffreylancaster.github.io/game-of-thrones/matrix/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>... or as a force-directed network?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/force-directed/"></iframe>
+      <p class="caption">
+        Hover and drag. <a href="https://jeffreylancaster.github.io/game-of-thrones/force-directed/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h1>Relationships</h1>
+
+      <h2>Which characters are connected?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/relations-force/"></iframe>
+      <p class="caption">
+        Hover and drag. Parent-child (solid gray), spouse (dashed blue), and killed by (solid black arrow) relationships shown. <a href="https://jeffreylancaster.github.io/game-of-thrones/relations-force/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>Which characters are connected?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/relations-circle/"></iframe>
+      <p class="caption">
+        Hover and drag. Parent-child (solid gray), spouse (dashed blue), and killed by (solid black arrow) relationships shown. Based on an <a href="http://i.imgur.com/PG0963W.png" target="_blank">HBO infographic</a>. <a href="https://jeffreylancaster.github.io/game-of-thrones/relations-circle/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h1>Actor Relationships</h1>
+
+      <h2>Which actors have been in movies with other <i>Game of Thrones</i> actors?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/costars-list/"></iframe>
+      <p class="caption">
+        Scroll down. Data last pulled following Season 7. <a href="https://jeffreylancaster.github.io/game-of-thrones/costars-list/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>... or as a matrix?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/costars-matrix/"></iframe>
+      <p class="caption">
+        Scroll down and right. Data last pulled following Season 7. <a href="https://jeffreylancaster.github.io/game-of-thrones/costars-matrix/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h1>Lands of Ice and Fire Geography</h1>
+
+      <div class="wrapper">
+        <p>I hadn't yet done much with the list of locations shown during the opening sequence of <i>Game of Thrones</i>. For this, I really wanted to be able to show the places on a map of Westeros, Essos, Sothyros, and Ulthos. To do that, I built upon what others had done, but converted a .png to .svg to .geojson. More on that below.</p>
+      </div>
+
+      <h2>Is there a pattern in the opening locations?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/opening-locations-force/"></iframe>
+      <p class="caption">
+        Drag and select. <a href="https://jeffreylancaster.github.io/game-of-thrones/opening-locations-force/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>Could I show them in geographic space?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/opening-locations-fixed/"></iframe>
+      <p class="caption">
+        Select. <a href="https://jeffreylancaster.github.io/game-of-thrones/opening-locations-fixed/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>What about on a globe?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/geography-locations/"></iframe>
+      <p class="caption">
+        Drag and zoom. <a href="https://jeffreylancaster.github.io/game-of-thrones/geography-locations/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>The opening sequences could look like this?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/opening-seq-arcs/"></iframe>
+      <p class="caption">
+        Choose the episode you'd like to show. <a href="https://jeffreylancaster.github.io/game-of-thrones/opening-sec-arcs/" target="_blank">View in a new tab.</a>
+      </p>
+
+      <h2>... or this?</h2>
+      <iframe src="https://jeffreylancaster.github.io/game-of-thrones/opening-seq-matrix/"></iframe>
+      <p class="caption">
+        Choose the episode you'd like to show. <a href="https://jeffreylancaster.github.io/game-of-thrones/opening-sec-matrix/" target="_blank">View in a new tab.</a>
+      </p>
+
+    </div>
+
+    <div class="wrapper">
+      <h2>Notes</h2>
+      <p>The <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">GitHub repository for this project</a> has the data files used to make these visualizations. Code for each is also on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">GitHub</a>, and a <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">description of the project</a> is on Medium. Comments and suggestions are welcome on GitHub, Medium, or <a href="mailto:jeffrey@jeffreylancaster.com">here</a>.</p>
+
+      <p class="caption">h/t to <a href="https://www.jasondavies.com/maps/" target="_blank">Jason Davies</a> for the clean style of this page.</p>
+    </div>
+  </body>
 </html>

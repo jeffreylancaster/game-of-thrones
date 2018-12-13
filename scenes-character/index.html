@@ -2,9 +2,9 @@
 <html>
 <!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
   <head>
-    <title>Game of Thrones: % Time Per Region</title>
+    <title>Game of Thrones: Scenes by Characters</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Game of Thrones: % Time Per Region">
+    <meta name="description" content="Game of Thrones: Scenes">
     <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
     <!--
       <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
     -->
-    <svg id="region-percent"></svg>
+    <svg></svg>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -62,13 +62,17 @@ function ready(error, l, e, c) {
 
   /* CONFIG SETUP */
   $("svg").attr({
-    width: config.regionPercent.svg.width,
-    height: config.regionPercent.svg.height
+    width: config.scenesCharacter.svg.width,
+    height: config.scenesCharacter.svg.height
   });
   /* END CONFIG SETUP */
 
   var allCharacters = []; // array for all characters
   var uniqueCharacters = []; // array for uniqueCharacters
+  var totalTime = 0;
+  var charactersArray = [];
+  var seasons = [];
+  var end = 0;
         
   for (var i in episodesData) {
     // act on scenes
@@ -81,7 +85,15 @@ function ready(error, l, e, c) {
       } else if(config.countUp == false){
         sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
       }
-      scenes[j].length = sceneLength;
+      
+      // append absolute value of scene start in seconds
+      scenes[j].absStartSec = totalTime;
+      // append absolute value of scene end in seconds
+      scenes[j].absEndSec = totalTime + sceneLength;
+      // store the last absEndSec as end
+      end = scenes[j].absEndSec;
+      // add scene length to total time
+      totalTime += sceneLength;
 
       // add characters in scene to allCharacters array
       for (var k in scenes[j].characters){
@@ -95,49 +107,69 @@ function ready(error, l, e, c) {
   // deduplicate the list of characters from scenes
   uniqueCharacters = allCharacters.filter(onlyUnique).sort();
 
-  // rebuild uniqueCharacters array
+  // modify uniqueCharacters
+  var uniqueCharactersObject = {};
   for(i=0; i<uniqueCharacters.length; i++){
-    uniqueCharacters[i] = {"name":uniqueCharacters[i], "num":0};
-    for(j=0; j<locationsData.length; j++){
-      uniqueCharacters[i][locationsData[j].location] = 0;
-    }
+    uniqueCharactersObject[uniqueCharacters[i]] = {"name":uniqueCharacters[i], "scenes":[], "total":0}
   }
 
   // sum scene lengths for characters in scenes
-  for(var i in episodesData) {
-    for(var j in episodesData[i].scenes){
-      for(var k in episodesData[i].scenes[j].characters){
-        for(var l in uniqueCharacters){
-          if(episodesData[i].scenes[j].characters[k].name == uniqueCharacters[l].name){
-            // counter for the number of different regions
-            if(uniqueCharacters[l][episodesData[i].scenes[j].location] == 0){
-              uniqueCharacters[l].num += 1;
-            }
-            uniqueCharacters[l][episodesData[i].scenes[j].location] += episodesData[i].scenes[j].length;
+  for(var i in episodesData){
+    if(episodesData[i].scenes){
+      for(var j in episodesData[i].scenes){
+        if(episodesData[i].scenes[j].characters.length > 0){
+          for(var k in episodesData[i].scenes[j].characters){
+            var location = (episodesData[i].scenes[j].location) ? episodesData[i].scenes[j].location + " - " + episodesData[i].scenes[j].subLocation : episodesData[i].scenes[j].location
+            uniqueCharactersObject[episodesData[i].scenes[j].characters[k].name].scenes.push({
+              "absStartSec":episodesData[i].scenes[j].absStartSec,
+              "absEndSec":episodesData[i].scenes[j].absEndSec,
+              "season":episodesData[i].seasonNum,
+              "location":location
+            });
+            uniqueCharactersObject[episodesData[i].scenes[j].characters[k].name].total += episodesData[i].scenes[j].absEndSec - episodesData[i].scenes[j].absStartSec
           }
-        } 
+        }
       }
     }
-  }
-
-  for(var i = uniqueCharacters.length; i--; ) {
-    if(uniqueCharacters[i].num < 2) {
-      uniqueCharacters.splice(i, 1);
+    if(episodesData[i].scenes.length > 0){
+      seasons.push(episodesData[i].seasonNum);
     }
   }
 
-  // build the visualization
+  seasons = seasons.filter(onlyUnique).sort();
 
-  var data = uniqueCharacters;
+  // calculate midpoint of start/end values
+  for(var i in uniqueCharactersObject){
+    var mid = 0;
+    for(j=0; j<uniqueCharactersObject[i].scenes.length; j++){
+      mid += uniqueCharactersObject[i].scenes[j].absStartSec;
+      mid += uniqueCharactersObject[i].scenes[j].absEndSec
+    }
+    mid = mid/(2 * uniqueCharactersObject[i].scenes.length);
+    uniqueCharactersObject[i].mid = Math.round(mid);
+  }
+
+  for(var i in uniqueCharactersObject){
+    charactersArray.push(uniqueCharactersObject[i]);
+  }
+
+  charactersArray.sort(function(a, b) { return a.total - b.total; }).reverse();
+
+
+  console.log(charactersArray);
+  
+
+  // build the visualization
+  var data = charactersArray;
   var barHeight = config.barHeight;
 
   var svg = d3.select("svg"),
-      margin = config.regionPercent.svg.margin,
+      margin = config.scenesCharacter.svg.margin,
       width = +svg.attr("width") - margin.left - margin.right,
       height = barHeight*data.length + margin.top + margin.bottom,
       g = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+  
   d3.select("svg")
     .attr("height", height);
 
@@ -149,95 +181,41 @@ function ready(error, l, e, c) {
   var x = d3.scaleLinear()
       .rangeRound([0, width]);
 
-  //var z = d3.scaleOrdinal(d3.schemeCategory20c);
-  
-  /* CUSTOM FOR STRANGER THINGS */
-  var z = d3.scaleOrdinal().range([
-    "#393b79", // Big City
-    "#5254a3", // Chicago, Illinois
-    "#6b6ecf", // outside Chicago, Illinois
-    "#9c9ede", // Pittsburgh, Pennsylvania
-    "#CCCCCC", // Sesser, Illinois
-    "#cedb9c", // to Sesser, Illinois
-    "#b5cf6b", // Indianapolis, Indiana
-    "#8ca252", // 515 Larrabee Road, Indiana
-    "#637939", // Hawkins, Indiana
-    "#141e30" // Upside Down
-  ]); // based on d3.schemeCategory20b
-
-  var stack = d3.stack()
-    .offset(d3.stackOffsetExpand);
-
-  var keys = d3.keys(data[0]).slice(2,);
-
-  for (i=0; i<data.length; i++){
-    var t=0;
-    for(j=0; j<keys.length; j++){
-      t += data[i][keys[j]];
-    }
-    data[i].total = t;
-  } 
-
-  data.sort(function(a, b) { return a.num - b.num; }).reverse();
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
 
   y.domain(data.map(function(d) { return d.name; }));
-  //x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-  z.domain(keys);
+  x.domain([0, end]).nice();
+  // z.domain(["1", "2"]);
 
-  g.append("g")
+  for(i=0; i<data.length; i++){
+    g.append("g")
     .selectAll("g")
-    //.data(d3.stack().keys(keys)(data))
-    .data(stack.keys(keys)(data))
-    .enter().append("g")
-      .attr("fill", function(d) { return z(d.key); })
-    .selectAll("rect")
-    .data(function(d) { return d; })
+    .data(data[i].scenes)
     .enter().append("rect")
-      .attr("y", function(d) { return y(d.data.name); })
-      .attr("x", function(d) { return x(d[0]); })
-      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-      .attr("height", y.bandwidth());
-
-  g.selectAll("g")
-    .data(stack.keys(keys)(data))
-    .append("svg:title")
-      .text(function(d,i) {
-        // not sure why this shift needs to happen...
-        if(i == 0){
-          return keys[keys.length-1]
-        } else {
-          return keys[i-1]
-        };
-      });
+      .attr("y", function(d){return y(data[i].name)})
+      .attr("x", function(d){return x(d.absStartSec)})
+      .attr("width", function(d){return x(d.absEndSec) - x(d.absStartSec)})
+      .attr("height", y.bandwidth())
+      .attr("fill", function(d){return z(d.season)})
+      .append("svg:title")
+        .text(function(d) {return d.location});
+  }
 
   g.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(0,0)")
     .call(d3.axisLeft(y));
 
-  g.append("g")
-    .attr("class", "top-axis")
-    .call(d3.axisTop(x).ticks(10, "%"));
-
-  g.selectAll(".axis")
-    .selectAll(".tick")
-    .data(data)
-    .append("text")
-    .attr("class", "timestamp")
-    .attr("dy", "0.35em")
-    .attr("dx", function(d){ return width + 6; })
-    .attr("text-anchor", "start")
-    .text(function(d){ return "[" + d.num + "]"; });
-
   var legend = g.append("g")
     .attr("font-family", "sans-serif")
     .attr("font-size", 10)
     .attr("text-anchor", "end")
-    .attr("transform", function(d, i) { return `translate(${config.regionPercent.svg.legendOffset.x}, ${config.regionPercent.svg.legendOffset.y})` })
+    .attr("transform", function(d, i) { return `translate(${config.scenesCharacter.svg.legendOffset.x}, ${config.scenesCharacter.svg.legendOffset.y})` })
     .selectAll("g")
-    .data(keys.slice())
+    .data(seasons)
     .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(100," + i * 20 + ")"; });
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
   legend.append("rect")
     .attr("x", width - 19)
@@ -249,9 +227,8 @@ function ready(error, l, e, c) {
     .attr("x", width - 24)
     .attr("y", 9.5)
     .attr("dy", "0.32em")
-    .text(function(d) {
-      return d.replace("Pennsylvania","PA").replace("Illinois","IL").replace(", Indiana",", IN"); // CUSTOM FOR STRANGER THINGS: was return d - added .replace() to update labels in keys
-    });
+    .text(function(d) { return "Season " + d; });
+  
 };
 
     </script>

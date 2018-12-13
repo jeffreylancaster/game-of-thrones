@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Characters Per Scene</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Characters Per Scene">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+   <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!--
+      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
+      -->
+    <p style="margin-left: 20px;">
+      <button class="center">Center</button>
+      <button class="baseline">Baseline</button>
+    </p>
+    
+    <svg></svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- for d3.queue() using d3.v5 -->
+    <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+    <script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-request.v1.min.js"></script>
+    <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/config.json')
+  .await(ready);
+
+function ready(error, e, c) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  episodesData = e.episodes;
+  config = c.config;
+
+  /* CONFIG SETUP */
+  $("svg").attr({
+    width: config.charactersPerScene.svg.width,
+    height: config.charactersPerScene.svg.height
+  });
+  /* END CONFIG SETUP */
+
+  var allCharacters = []; // array for all characters
+  var uniqueCharacters = []; // array for uniqueCharacters
+  var totalTime = 0;
+  var charactersArray = [];
+  var seasons = [];
+  var end = 0;
+  var allScenes = [];
+        
+  for (var i in episodesData) {
+    // act on scenes
+    var scenes = episodesData[i].scenes;
+    for (var j in scenes){
+      // calculate length of scene in seconds
+      var sceneLength;
+      if(config.countUp == true){
+        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
+      } else if(config.countUp == false){
+        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
+      }
+      
+      // append absolute value of scene start in seconds
+      scenes[j].absStartSec = totalTime;
+      // append absolute value of scene end in seconds
+      scenes[j].absEndSec = totalTime + sceneLength;
+      // store the last absEndSec as end
+      end = scenes[j].absEndSec;
+      // add scene length to total time
+      totalTime += sceneLength;
+
+      allScenes.push(episodesData[i].scenes[j]);
+      allScenes[allScenes.length - 1].season = episodesData[i].seasonNum;
+
+      // add characters in scene to allCharacters array
+      for (var k in scenes[j].characters){
+        if(scenes[j].characters[k].name.length > 0){
+          allCharacters.push(scenes[j].characters[k].name);
+        }
+      }
+    }
+  }
+
+  for(var i in allScenes){
+    allScenes[i].characters.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+    for(var j in allScenes[i].characters){
+      allScenes[i].characters[j].index = parseInt(j);
+      allScenes[i].characters[j].total = allScenes[i].characters.length-1;
+    }
+  }
+
+  // deduplicate the list of characters from scenes
+  uniqueCharacters = allCharacters.filter(onlyUnique).sort();
+
+  // calculate the maximum number of characters in a scene
+  var maxCharacters = 0;
+  for(var i in allScenes){
+    maxCharacters = (allScenes[i].characters.length > maxCharacters) ? allScenes[i].characters.length : maxCharacters;
+  }  
+
+  // build the visualization
+  var data = allScenes;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("svg"),
+      margin = config.charactersPerScene.svg.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      // height = barHeight*data.length + margin.top + margin.bottom,
+      height = barHeight * maxCharacters,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // var y = d3.scaleBand() 
+  //     .rangeRound([0, height])
+  //     .paddingInner(0.15)
+  //     .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  // var z = d3.schemeCategory20c;
+  // var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      // .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  // y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, end]).nice();
+  // z.domain(["1", "2"]);
+
+  for(i=0; i<data.length; i++){
+    g.append("g")
+    .selectAll("g")
+    .data(data[i].characters)
+    .enter().append("rect")
+      //.attr("y", function(d){return height/2 + (barHeight * d.index) - (barHeight * d.total)/2}) // center baseline
+      .attr("y", function(d){return height - (barHeight * d.index)}) // bottom baseline
+      .attr("x", function(d){return x(data[i].absStartSec)})
+      .attr("width", function(d){return x(data[i].absEndSec) - x(data[i].absStartSec)})
+      .attr("height", barHeight)
+      .attr("fill", function(d){
+        return d3.interpolateSinebow(uniqueCharacters.indexOf(d.name)/uniqueCharacters.length);
+      })
+      .attr("class", function(d){return d.name.toLowerCase().replace(/([^A-Z0-9])/gi,"")})
+      .append("svg:title")
+        .text(function(d) {return d.name});
+  }
+
+  var t = d3.transition()
+    .duration(2000)
+    .ease(d3.easeCubic);
+
+  // transition to center baseline
+  $("button.center").click(function(){
+    $(".center").attr("disabled", "disabled");
+    $(".baseline").removeAttr("disabled");
+    d3.selectAll("rect")
+      .interrupt()
+      .transition(t)
+      .delay(function(d, i) { return i * 5; })
+      .attr("y", function(d){return height/2 - (barHeight * d.index) + (barHeight * d.total)/2}) // center baseline
+  })
+
+  $("button.baseline").click(function(){
+    $(".baseline").attr("disabled", "disabled");
+    $(".center").removeAttr("disabled");
+    d3.selectAll("rect")
+      .interrupt()
+      .transition(t)
+      .attr("y", function(d){return height - (barHeight * d.index)}) // bottom baseline
+  })
+
+  // add hover behavior
+  $("rect").hover(function() {
+    $("rect:not(." + $(this).attr("class") + ")").css({ opacity: 0.3 });
+  }, function() {
+    $("rect").css({ opacity: 1 });
+  });
+  
+};
+
+    </script>
+  </body>
+</html>

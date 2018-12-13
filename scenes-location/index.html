@@ -2,14 +2,14 @@
 <html>
 <!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
   <head>
-    <title>Game of Thrones: Time Per Character</title>
+    <title>Game of Thrones: Scenes by Location</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Game of Thrones: Time Per Character">
+    <meta name="description" content="Game of Thrones: Scenes">
     <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <!--
@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
+
 /* HELPFUL FUNCTIONS */
 
 // to convert scene start/end times into seconds
@@ -43,6 +44,7 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
@@ -58,13 +60,21 @@ function ready(error, e, c) {
 
   /* CONFIG SETUP */
   $("svg").attr({
-    width: config.duration.svg.width,
-    height: config.duration.svg.height
+    width: config.scenesLocation.svg.width,
+    height: config.scenesLocation.svg.height
   });
   /* END CONFIG SETUP */
 
-  var allCharacters = []; // array for all characters
-  var uniqueCharacters = []; // array for uniqueCharacters
+  // var allCharacters = []; // array for all characters
+  // var uniqueCharacters = []; // array for uniqueCharacters
+  var totalTime = 0;
+  // var charactersArray = [];
+  var seasons = [];
+  var allLocations = [];
+  var uniqueLocations = [];
+  var locationsArray = [];
+  var location;
+  var end = 0;
         
   for (var i in episodesData) {
     // act on scenes
@@ -78,48 +88,85 @@ function ready(error, e, c) {
         sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
       }
       
-      scenes[j].length = sceneLength;
+      // append absolute value of scene start in seconds
+      scenes[j].absStartSec = totalTime;
+      // append absolute value of scene end in seconds
+      scenes[j].absEndSec = totalTime + sceneLength;
+      // store the last absEndSec as end
+      end = scenes[j].absEndSec;
+      // add scene length to total time
+      totalTime += sceneLength;
 
-      // add characters in scene to allCharacters array
-      for (var k in scenes[j].characters){
-        if(scenes[j].characters[k].name.length > 0){
-          allCharacters.push(scenes[j].characters[k].name);
-        }
-      }
+      // add location of scene to allLocations array
+      location = (scenes[j].subLocation && config.scenesLocation.useSubLocation) ? scenes[j].location + " - " + scenes[j].subLocation : scenes[j].location;
+      allLocations.push(location);
     }
   }
 
-  // deduplicate the list of characters from scenes
-  uniqueCharacters = allCharacters.filter(onlyUnique).sort();
+  // deduplicate the list of locations from scenes
+  allLocations = allLocations.filter(onlyUnique).sort();
 
-  // rebuild uniqueCharacters array
-  for(i=0; i<uniqueCharacters.length; i++){
-    uniqueCharacters[i] = {"name":uniqueCharacters[i], "1":0, "2":0, "3":0, "4":0, "5":0, "6":0, "7":0, "8":0};
+  // modify uniqueLocations
+  var uniqueLocationsObject = {};
+  for(i=0; i<allLocations.length; i++){
+    uniqueLocationsObject[allLocations[i]] = {"name":allLocations[i], "scenes":[], "total":0}
   }
 
   // sum scene lengths for characters in scenes
-  for(var i in episodesData) {
-    for(var j in episodesData[i].scenes){
-      for(var k in episodesData[i].scenes[j].characters){
-        for(var l in uniqueCharacters){
-          if(episodesData[i].scenes[j].characters[k].name == uniqueCharacters[l].name){
-            uniqueCharacters[l][episodesData[i].seasonNum] += episodesData[i].scenes[j].length;
-          }
-        } 
+  for(var i in episodesData){
+    if(episodesData[i].scenes){
+      for(var j in episodesData[i].scenes){
+        location = (episodesData[i].scenes[j].subLocation && config.scenesLocation.useSubLocation) ? episodesData[i].scenes[j].location + " - " + episodesData[i].scenes[j].subLocation : episodesData[i].scenes[j].location;
+        uniqueLocationsObject[location].scenes.push({
+          "absStartSec":episodesData[i].scenes[j].absStartSec,
+          "absEndSec":episodesData[i].scenes[j].absEndSec,
+          "season":episodesData[i].seasonNum,
+          "location":location
+        });
+        uniqueLocationsObject[location].total += episodesData[i].scenes[j].absEndSec - episodesData[i].scenes[j].absStartSec;
       }
+    }
+    if(episodesData[i].scenes.length > 0){
+      seasons.push(episodesData[i].seasonNum);
     }
   }
 
+  seasons = seasons.filter(onlyUnique).sort();
+
+  // calculate midpoint of start/end values
+  for(var i in uniqueLocationsObject){
+    var mid = 0;
+    for(j=0; j<uniqueLocationsObject[i].scenes.length; j++){
+      mid += uniqueLocationsObject[i].scenes[j].absStartSec;
+      mid += uniqueLocationsObject[i].scenes[j].absEndSec
+    }
+    mid = mid/(2 * uniqueLocationsObject[i].scenes.length);
+    uniqueLocationsObject[i].mid = Math.round(mid);
+  }
+
+  for(var i in uniqueLocationsObject){
+    locationsArray.push(uniqueLocationsObject[i]);
+  }
+
+  locationsArray.sort(function(a, b) { return a.total - b.total; }).reverse();
+
+
+  console.log(locationsArray);
+  
+
   // build the visualization
-  var data = uniqueCharacters;
+  var data = locationsArray;
   var barHeight = config.barHeight;
 
   var svg = d3.select("svg"),
-      margin = config.duration.svg.margin,
+      margin = config.scenesLocation.svg.margin,
       width = +svg.attr("width") - margin.left - margin.right,
       height = barHeight*data.length + margin.top + margin.bottom,
       g = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  d3.select("svg")
+    .attr("height", height);
 
   var y = d3.scaleBand() 
       .rangeRound([0, height])
@@ -132,68 +179,36 @@ function ready(error, e, c) {
   var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
 
-  var keys = d3.keys(data[0]).slice(0,8);
-
-  for (i=0; i<data.length; i++){
-    var t=0;
-    for(j=0; j<keys.length; j++){
-      t += data[i][keys[j]];
-    }
-    data[i].total = t;
-  } 
-
-  data.sort(function(a, b) { return a.total - b.total; }).reverse();
   y.domain(data.map(function(d) { return d.name; }));
-  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-  z.domain(keys);
+  x.domain([0, end]).nice();
+  // z.domain(["1", "2"]);
 
-  g.append("g")
+  for(i=0; i<data.length; i++){
+    g.append("g")
     .selectAll("g")
-    .data(d3.stack().keys(keys)(data))
-    .enter().append("g")
-      .attr("fill", function(d) { return z(d.key); })
-    .selectAll("rect")
-    .data(function(d) { return d; })
+    .data(data[i].scenes)
     .enter().append("rect")
-      .attr("y", function(d) { return y(d.data.name); })
-      .attr("x", function(d) { return x(d[0]); })
-      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-      .attr("height", y.bandwidth());
-
-  g.selectAll("g")
-    .data(d3.stack().keys(keys)(data))
-    .append("svg:title")
-      .text(function(d,i) {
-        // not sure why this shift needs to happen...
-        if(i == 0){
-          return "Season "+keys[keys.length-1]
-        } else {
-          return "Season "+keys[i-1]
-        };
-      });
+      .attr("y", function(d){return y(data[i].name)})
+      .attr("x", function(d){return x(d.absStartSec)})
+      .attr("width", function(d){return x(d.absEndSec) - x(d.absStartSec)})
+      .attr("height", y.bandwidth())
+      .attr("fill", function(d){return z(d.season)})
+      .append("svg:title")
+        .text(function(d) {return d.location});
+  }
 
   g.append("g")
     .attr("class", "axis")
     .attr("transform", "translate(0,0)")
     .call(d3.axisLeft(y));
 
-  g.selectAll(".axis")
-    .selectAll(".tick")
-    .data(data)
-    .append("text")
-    .attr("class", "timestamp")
-    .attr("dy", "0.35em")
-    .attr("dx", function(d){ return x(d.total) + 5; })
-    .attr("text-anchor", "start")
-    .text(function(d){ return secondsToHMS(d.total); });
-
   var legend = g.append("g")
     .attr("font-family", "sans-serif")
     .attr("font-size", 10)
     .attr("text-anchor", "end")
-    .attr("transform", function(d, i) { return `translate(${config.duration.svg.legendOffset.x}, ${config.duration.svg.legendOffset.y})`})
+    .attr("transform", function(d, i) { return `translate(${config.scenesLocation.svg.legendOffset.x}, ${config.scenesLocation.svg.legendOffset.y})` })
     .selectAll("g")
-    .data(keys.slice())
+    .data(seasons)
     .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
@@ -208,6 +223,7 @@ function ready(error, e, c) {
     .attr("y", 9.5)
     .attr("dy", "0.32em")
     .text(function(d) { return "Season " + d; });
+  
 };
 
     </script>

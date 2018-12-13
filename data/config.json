@@ -150,7 +150,7 @@
 		"forceDirected": {
 			"scopeMain": false,
 			"all": {
-				"size": 1600,
+				"size": 1200,
 				"file": "matrixObject-all.json"
 			},
 			"main": {
@@ -162,7 +162,7 @@
 			"title":"Locations Per Episode",
 			"svg":{
 				"width":960,
-				"height":500,
+				"height":1300,
 				"margin":{
 					"top": 20,
 					"right": 160,
@@ -187,7 +187,7 @@
 				"file": "matrixObject-all.json"
 			},
 			"main": {
-				"size": 400,
+				"size": 1600,
 				"file": "matrixObject-main.json"
 			},
 			"margin": {

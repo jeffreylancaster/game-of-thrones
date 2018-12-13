@@ -1,95 +1,87 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Game of Thrones: Co-occurrence</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Game of Thrones: Co-Occurrence">
-    <meta name="keywords" content="Game of Thrones, data visualization, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+    <meta name="description" content="Game of Thrones: Co-occurrence">
+    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-    <style>
-      body{
-        font-family: "Helvetica Neue";
-      }
-      header{
-        margin: 15px;
-      }
-      header img{
-        height: 60px;
-        vertical-align: middle;
-        margin-top: -25px;
-      }
-      header span{
-        font-weight: 300;
-        font-size: 50px;
-      }
-      #cta{
-        color: #999;
-        font-style: italic;
-        font-size: 0.8em;
-      }
-      #description{
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 15px;
-        color: #999;
-        font-size: 0.8em;
-      }
-      #description a{
-        text-decoration: none;
-      }
-      @import url(https://bost.ocks.org/mike/style.css);
-      /*body{margin-left: 100px;}*/
-      .background {
-        fill: #eee;
-      }
-      line {
-        stroke: #fff;
-      }
-      text{
-        font-size: 0.7em;
-      }
-      text.active {
-        fill: red;
-      }
-      svg{
-        padding-left: 120px;
-      }
-      .cell{
-        fill: #CCC;
-      }
-    </style>
+    <link rel="stylesheet" href="../style.css" />
     <script src="//d3js.org/d3.v2.min.js" charset="utf-8"></script>
+    <!-- for d3.queue() -->
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
   </head>
   <body>
-    <header>
-      <h1>
-        <img src="../img/GoT_logo.png">
-        <span> - Co-Occurrence</span>
-      </h1>
-    </header>
-    <div id="description">
+    <!--
       <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
       <p>This visualization is based on Mike Bostock's <a href="https://bost.ocks.org/mike/miserables/" target="_blank"><i>Les Mis&eacute;rables</i> co-occurrence matrix diagram</a>.
-      <p>Order: <select id="order">
-        <option value="name">by Name</option>
-        <option value="count">by Frequency</option>
-        <option value="group">by Cluster</option>
-      </select></p>
-    </div>
+    -->
+      <p style="margin-left: 20px;">Order: 
+        <select id="order">
+          <option value="name">by Name</option>
+          <option value="count">by Frequency</option>
+          <option value="group">by Cluster</option>
+        </select>
+      </p>
     
-    <svg></svg>
+    <svg class="matrix"></svg>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
+/* HELPFUL FUNCTIONS */
 
-    var margin = {top: 120, right: 60, bottom: 60, left: 120},
-      // width = 5600, // for all characters matrixObject-all.json
-      // height = 5600; // for all characters matrixObject-all.json
-      width = 1500, // for main characters matrixObject-main.json
-      height = 1500; // for main characters matrixObject-main.json
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/config.json')
+  .await(ready);
+
+function ready(error, c) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  config = c.config;
+
+    /* CONFIG SETUP */
+    $("h1 > img").css({"height": config.logo.height, "vertical-align": "middle", "margin-top": config.logo.marginTop}).attr("src", "../img/"+config.logo.src);
+    $("h1 > span").html(" - "+config.matrix.title);
+    /* END CONFIG SETUP */
+
+    var file, width, height;
+    
+    if(config.matrix.scopeMain){
+      width = config.matrix.main.size;
+      height = config.matrix.main.size;
+      file = config.matrix.main.file;
+    } else {
+      width = config.matrix.all.size;
+      height = config.matrix.all.size;
+      file = config.matrix.all.file;
+    }
 
     var x = d3.scale.ordinal().rangeBands([0, width]),
       z = d3.scale.linear().domain([0, 100]).clamp(true),
@@ -112,15 +104,15 @@
           ]);
 
     var svg = d3.select("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .style("margin-left", -margin.left + "px")
+        .attr("width", width + config.matrix.margin.left + config.matrix.margin.right)
+        .attr("height", height + config.matrix.margin.top + config.matrix.margin.bottom)
+        .style("margin-left", -config.matrix.margin.left + "px")
       .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + config.matrix.margin.left + "," + config.matrix.margin.top + ")");
 
-    d3.json("../data/matrixObject-main.json", function(GoTmatrix) {
+    d3.json("../data/"+file, function(dataMatrix) {
       var matrix = [],
-        nodes = GoTmatrix.nodes,
+        nodes = dataMatrix.nodes,
         n = nodes.length;
 
     // Compute index per node.
@@ -131,7 +123,7 @@
     });
 
     // Convert links to matrix; count character occurrences.
-    GoTmatrix.links.forEach(function(link) {
+    dataMatrix.links.forEach(function(link) {
       matrix[link.source][link.target].z += link.value;
       matrix[link.target][link.source].z += link.value;
       matrix[link.source][link.source].z += link.value;
@@ -238,6 +230,7 @@
       d3.select("#order").property("selectedIndex", 2).node().focus();
       }, 5000);
     });
+};
 
     </script>
   </body>
