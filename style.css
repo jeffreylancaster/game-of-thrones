@@ -45,6 +45,15 @@ iframe{
   height: 500px;
   border: 1px solid #EEE;
 }
+.image{
+  height: 50vh;
+  margin: 0 auto;
+  border: 1px solid #EEE;
+}
+.wide{
+  width: calc(100% - 2em);
+  max-width: calc(800px - 2em);
+}
 
 
 p.caption {
