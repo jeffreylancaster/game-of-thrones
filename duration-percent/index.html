@@ -121,6 +121,8 @@ function ready(error, e, c) {
       g = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+  svg.attr("height", height);
+
   var y = d3.scaleBand() 
       .rangeRound([0, height])
       .paddingInner(0.15)

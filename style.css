@@ -39,11 +39,6 @@ body{
 }
 
 iframe{
-  /*width: calc(100% - 2em);
-  max-width: calc(800px - 2em);
-  margin: 0 auto;
-  height: 500px;
-  border: 1px solid #EEE;*/
   border: none;
   overflow: hidden;
 }
