@@ -53,6 +53,8 @@ iframe{
   background-position: top left;
   background-repeat: no-repeat;
   width: calc(100% - 2em);
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 .wide-11{
   max-width: calc(1100px);
