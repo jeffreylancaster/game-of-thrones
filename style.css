@@ -45,6 +45,7 @@ iframe{
   height: 500px;
   border: 1px solid #EEE;*/
   border: none;
+  overflow: hidden;
 }
 .image{
   margin: 0 auto;
