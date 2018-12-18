@@ -413,7 +413,7 @@ $.getJSON("../data/"+keyValues, function( data ) {
 .done(function(){
 	$("#loading").hide();
 	$.getJSON( "../data/characters-groups.json", function( data ) {
-		var house = data.group;
+		var house = data.groups;
 		var charactersArray = [];
 		for(i=0; i<house.length; i++){
 			for(j=0; j<house[i].characters.length; j++){
