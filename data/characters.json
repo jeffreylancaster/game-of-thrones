@@ -14,6 +14,10 @@
             "Elia Martell",
             "Rhaegar Targaryen"
          ],
+         "siblings":[
+            "Rhaenys Targaryen",
+            "Jon Snow"
+         ],
          "killedBy":[
             "Gregor Clegane"
          ]
@@ -3522,6 +3526,10 @@
          "parents":[
             "Elia Martell",
             "Rhaegar Targaryen"
+         ],
+         "sibling":[
+            "Aegon Targaryen",
+            "Jon Snow"
          ],
          "killedBy":[
             "Gregor Clegane"
