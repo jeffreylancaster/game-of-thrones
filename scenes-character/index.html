@@ -120,7 +120,7 @@ function ready(error, l, e) {
       for(var j in episodesData[i].scenes){
         if(episodesData[i].scenes[j].characters.length > 0){
           for(var k in episodesData[i].scenes[j].characters){
-            var location = (episodesData[i].scenes[j].location) ? episodesData[i].scenes[j].location + " - " + episodesData[i].scenes[j].subLocation : episodesData[i].scenes[j].location
+            var location = (episodesData[i].scenes[j].subLocation) ? episodesData[i].scenes[j].location + " - " + episodesData[i].scenes[j].subLocation : episodesData[i].scenes[j].location
             uniqueCharactersObject[episodesData[i].scenes[j].characters[k].name].scenes.push({
               "absStartSec":episodesData[i].scenes[j].absStartSec,
               "absEndSec":episodesData[i].scenes[j].absEndSec,
