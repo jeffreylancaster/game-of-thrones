@@ -87,13 +87,7 @@ function ready(error, e, cg, l, c) {
     var scenes = episodesData[i].scenes;
     for (var j in scenes){
       // calculate length of scene in seconds
-      var sceneLength;
-      if(config.countUp == true){
-        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
-      } else if(config.countUp == false){
-        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
-      }
-      
+      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
       // append absolute value of scene start in seconds
       scenes[j].absStartSec = totalTime;
       // append absolute value of scene end in seconds

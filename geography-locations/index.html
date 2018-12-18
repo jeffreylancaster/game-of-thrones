@@ -1,110 +1,21 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<!-- <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@jasondavies">
-<meta property="og:title" content="Rotate the World">
-<meta property="og:description" content="Interactive geographic projections.">
-<meta property="og:image" content="https://www.jasondavies.com/maps/rotate/full.png"> -->
-<title>Rotate the World</title>
-<style>
-@import url(maps.css);
+<html>
+  <head>
+    <title>Game of Thrones: Rotate the World</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Rotate the World">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="maps.css" />
+  </head>
+  <body>
+    <div id="geoMap">
+    </div>
+    <p class="caption">Drag to rotate the world.  Scroll or pinch to zoom.
 
-#map {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-#map h1 {
-  position: absolute;
-  width: 1000px;
-}
-
-.foreground {
-  fill: none;
-  stroke: #000;
-  stroke-width: 1px;
-  pointer-events: all;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-}
-
-.foreground.zooming {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-}
-
-.graticule {
-  fill: none;
-  stroke: #636B62;
-  stroke-width: .5px;
-  stroke-dasharray: 2,2;
-}
-
-.land {
-  fill: #69D2E7;
-  stroke: none;
-}
-
-.mesh {
-  stroke: #50576A;
-  stroke-width: .5px;
-  fill: none;
-}
-
-.point {
-  fill: #f00;
-}
-
-</style>
-
-<!-- <p class="breadcrumbs"><a href="http://www.jasondavies.com/">Jason Davies</a> → <a href="../">Maps</a> -->
-
-<div id="map">
-  <!-- <h1>Rotate the World</h1> -->
-</div>
-<p class="caption">Drag to rotate the world.  Scroll or pinch to zoom.
-
-<!-- <div class="wrapper">
-  <p><a href="http://d3js.org">D3</a>’s geographic projections allow features to be rotated about <a href="http://bl.ocks.org/mbostock/4282586">three axes</a>.
-  The three angles used are called <a href="http://en.wikipedia.org/wiki/Euler_angles">Euler angles</a>, and in D3 they specify the following sequence of rotations:
-</div>
-
-<div id="rotations"></div>
-
-<div class="wrapper">
-  <p>This sequence is convenient, since if we approximate the globe as a sphere, the first two angles can be used to specify a central meridian λ<sub>0</sub> and central meridian φ<sub>0</sub> by simple negation: <code>[-λ<sub>0</sub>, -φ<sub>0</sub>]</code>, and the third angle allows <a href="http://www.progonos.com/furuti/MapProj/Normal/ProjObl/projObl.html">oblique projections</a>.
-</div>
-
-<div class="wrapper">
-  <h2>Interactive Rotations</h2>
-  <p>A naïve implementation simply takes the x- and y-coordinates in 2D screen space and uses them directly as the first two Euler angles mentioned above.
-  <p>However, the geographic start point of the gesture often moves at a different speed to the cursor, making it difficult to control.
-  Moreover, since only two angles of rotation are being controlled, it is impossible to interactively specify the third angle using this method.
-</div>
-
-<div id="comparison"></div>
-<p class="caption">Naïve implementation (left) and improved version (right).
-
-<div class="wrapper">
-  <p>An improved implementation ensures the geographic start point remains under the cursor where possible.
-  If the gesture goes outside the projection range, it adjusts the third Euler angle (the oblique projection angle).
-  <p>It also incrementally rotates the world about an axis perpendicular to the incremental direction in spherical coordinates.
-  This allows all three angles of rotation to be adjusted by dragging, and it works for arbitrary map projections, such as Eisenlohr’s projection below.
-</div>
-
-<p class="caption">Drag to rotate Eisenlohr’s projection.
-<div id="eisenlohr"></div>
-
-<div class="wrapper">
-  <h2>Animated Zooming</h2>
-  <p>See <a href="../zoom/">Animated World Zoom</a>.
-
-  <h2>Notes</h2>
-  <p>I used <a href="http://en.wikipedia.org/wiki/Versor">versors</a> (unit quaternions) to accumulate the 3D rotation during a gesture, as they can be easily converted to and from <a href="http://en.wikipedia.org/wiki/Axis%E2%80%93angle_representation">axis-angle representations</a>.
-  <p class="caption">Data: Natural Earth <a href="http://www.naturalearthdata.com/downloads/110m-cultural-vectors/">1:110m Cultural Vectors</a>
-</div> -->
-
-<script src="https://www.jasondavies.com/d3.min.js"></script>
-<script src="https://www.jasondavies.com/maps/d3.geo.projection.min.js"></script>
-<script src="https://www.jasondavies.com/maps/topojson.min.js"></script>
-<script src="app.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <script src="app.min.js"></script>
+  </body>
+</html>

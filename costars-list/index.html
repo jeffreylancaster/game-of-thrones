@@ -4,26 +4,26 @@
     <title>Game of Thrones: Co-stars</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Co-stars">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <!--
-      <p>Code for this list is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-    -->
     <div id="list" class="wrapper"></div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     
     <script>
+      var config = {
+        "title":"Co-stars",
+        "getAPI": false,
+        "cutoff": 3
+      }
       var characters = {};
       var films = {};
       var filmsArray = [];
-      var getAPI = false;
-      var cutoff = 3;
+      var getAPI = config.getAPI;
+      var cutoff = config.cutoff;
 
       // import characters JSON file
       $.getJSON( "../data/characters.json", function( data ) {

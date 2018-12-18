@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html>
-<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
   <head>
     <title>Game of Thrones: Time Per Character</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Time Per Character">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css">
   </head>
   <body>
-    <!--
-      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-    -->
     <svg></svg>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
 /* HELPFUL FUNCTIONS */
@@ -43,24 +36,38 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+var config = {
+  "title":"Supercut Duration",
+  "width":960,
+  "height":1000,
+  "margin":{
+    "top": 10,
+    "right": 40,
+    "bottom": 10,
+    "left": 180
+  },
+  "legendOffset": {
+    "x":20,
+    "y":90
+  },
+  "barHeight": 20
+}
+
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
-  .defer(d3.json, '../data/config.json')
   .await(ready);
 
-function ready(error, e, c) {
+function ready(error, e) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
   episodesData = e.episodes;
-  config = c.config;
 
   /* CONFIG SETUP */
-  $("svg").attr({
-    width: config.duration.svg.width,
-    height: config.duration.svg.height
-  });
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
   /* END CONFIG SETUP */
 
   var allCharacters = []; // array for all characters
@@ -71,13 +78,7 @@ function ready(error, e, c) {
     var scenes = episodesData[i].scenes;
     for (var j in scenes){
       // calculate length of scene in seconds
-      var sceneLength;
-      if(config.countUp == true){
-        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
-      } else if(config.countUp == false){
-        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
-      }
-      
+      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
       scenes[j].length = sceneLength;
 
       // add characters in scene to allCharacters array
@@ -117,7 +118,7 @@ function ready(error, e, c) {
   console.log(data);
 
   var svg = d3.select("svg"),
-      margin = config.duration.svg.margin,
+      margin = config.margin,
       width = +svg.attr("width") - margin.left - margin.right,
       height = barHeight*data.length + margin.top + margin.bottom,
       g = svg.append("g")
@@ -195,7 +196,7 @@ function ready(error, e, c) {
     .attr("font-family", "sans-serif")
     .attr("font-size", 10)
     .attr("text-anchor", "end")
-    .attr("transform", function(d, i) { return `translate(${config.duration.svg.legendOffset.x}, ${config.duration.svg.legendOffset.y})`})
+    .attr("transform", function(d, i) { return `translate(${config.legendOffset.x}, ${config.legendOffset.y})`})
     .selectAll("g")
     .data(keys.slice())
     .enter().append("g")

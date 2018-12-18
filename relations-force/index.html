@@ -4,19 +4,13 @@
     <title>Game of Thrones: Relations</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Relations">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <!--
-      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-    -->
-    <svg width="1500" height="1000"></svg>
+    <svg></svg>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <!-- for using style objects to apply multiple styles at once -->
     <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
@@ -45,12 +39,6 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
-
-/* VARIABLES AND CONFIGURATION */
-
-var relationships = [];
-
-// var relationships = [
 //   // "characterName",
 //   // "credited",
 //   // "actors",
@@ -67,28 +55,77 @@ var relationships = [];
 //   "parentOf",
 //   "marriedEngaged", // need to deduplicate?
 //   // "killed" // covered by killedBy
-//   ]; 
 
+var config = {
+  "title":"Relations",
+  "width":1500,
+  "height":1500,
+  "directed":[
+    {
+      "type":"killedBy",
+      "style":{
+        "stroke": "#000",
+        "stroke-width": 2,
+        "stroke-opacity": 1
+      },
+      "textStyle":{
+        "font-size": "1em",
+        "dominant-baseline": "central"
+      }
+    }
+  ],
+  "undirected":[
+    {
+      "type":"parentOf",
+      "style":{
+        "stroke": "#999",
+        "stroke-width": 1,
+        "stroke-opacity": 0.6
+      },
+        "textStyle":{
+        "font-size": "1em",
+        "dominant-baseline": "central"
+      }
+    },
+    {
+      "type":"marriedEngaged",
+      "style":{
+        "stroke": "blue",
+        "stroke-width": 1,
+        "stroke-opacity": 0.6,
+        "stroke-dasharray": "5,5"
+      },
+      "textStyle":{
+        "font-size": "1em",
+        "dominant-baseline": "central"
+      }
+    }
+  ]
+}
 
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/characters.json')
-  .defer(d3.json, '../data/config.json')
   .await(ready);
 
-function ready(error, h, c) {
+function ready(error, h) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
   charactersData = h.characters;
-  config = c.config;
+
+  var relationships = [];
 
   /* CONFIG SETUP */
-  for(var i in config.relations.directed){
-    relationships.push(config.relations.directed[i].type);
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height);
+
+  for(var i in config.directed){
+    relationships.push(config.directed[i].type);
   }
-  for(var i in config.relations.undirected){
-    relationships.push(config.relations.undirected[i].type);
+  for(var i in config.undirected){
+    relationships.push(config.undirected[i].type);
   }
   /* END CONFIG SETUP */
 
@@ -103,13 +140,9 @@ function ready(error, h, c) {
     charactersData.forEach(function(value, j){
       if(charactersData[j].hasOwnProperty(val)){
         charactersArray.push(value.characterName);
-        if(Array.isArray(charactersData[j][val])){
-          charactersData[j][val].forEach(function(valu, k){
-            charactersArray.push(valu);
-          });
-        } else {
-          charactersArray.push(charactersData[j][val]);
-        }
+        charactersData[j][val].forEach(function(valu, k){
+          charactersArray.push(valu);
+        });
       }
     })
   });
@@ -253,12 +286,12 @@ function ready(error, h, c) {
     .attr("id", "arrows"); 
 
   // for directed arrays, add arrows and set styles
-  for(var i in config.relations.directed){
+  for(var i in config.directed){
     links.forEach(function(value, index){
-      if(links[index].type == config.relations.directed[i].type){
+      if(links[index].type == config.directed[i].type){
         svg.selectAll("#arrows")
           .append("textPath")
-          .styles(config.relations.directed[i].textStyle)
+          .styles(config.directed[i].textStyle)
           .attr("xlink:xlink:href", function(d){ return "#"+links[index].id; })
           .attr("text-anchor", "middle")
           .attr("startOffset", "50%")
@@ -268,11 +301,11 @@ function ready(error, h, c) {
   }
 
   // check to see if the property is an array, and if so, apply the styles therein
-  for(var i in config.relations){
-    if(Array.isArray(config.relations[i])){
-      for(var j in config.relations[i]){
-        svg.selectAll("."+config.relations[i][j].type)
-        .styles(config.relations[i][j].style)
+  for(var i in config){
+    if(Array.isArray(config[i])){
+      for(var j in config[i]){
+        svg.selectAll("."+config[i][j].type)
+        .styles(config[i][j].style)
       }
     }
   }

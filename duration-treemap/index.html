@@ -1,42 +1,14 @@
 <!DOCTYPE html>
 <html>
-<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
   <head>
     <title>Game of Thrones: Time Per Character Treemap</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Time Per Character Treemap">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css" />
-    <style>
-    body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      margin: auto;
-      position: relative;
-    }
-    .node {
-      border: solid 1px white;
-      font: 10px sans-serif;
-      line-height: 12px;
-      overflow: hidden;
-      position: absolute;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content:center;
-      align-content:center;
-      flex-direction:column;
-    }
-    </style>
   </head>
-  <body>
-    <!--
-      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-      <p>This visualization is based on Mike Bostock's <a href="http://mbostock.github.io/d3/talk/20111018/treemap.html" target="_blank">Zoomable Treemap</a>.
-    -->
+  <body id="treemap">
     <div class="treemap">
     </div>
 
@@ -68,23 +40,32 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+var config = {
+  "title":"Time Per Character Treemap",
+  "name": "Game of Thrones",
+  "includeOthers": true,
+  "margin":{
+    "top": 10,
+    "right": 10,
+    "bottom": 10,
+    "left": 10
+  }
+}
 
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
   .defer(d3.json, '../data/characters-houses.json')
   .defer(d3.json, '../data/episodes.json')
-  .defer(d3.json, '../data/config.json')
   .await(ready);
 
-function ready(error, e, cg, l, c) {
+function ready(error, e, cg, l) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
   episodesData = e.episodes;
   group = cg.house;
   colors = l.colors;
-  config = c.config;
 
   var allCharacters = {}; // an object with total times for each character
   var flare = {"name":config.name, "children":[]};
@@ -95,13 +76,7 @@ function ready(error, e, cg, l, c) {
     var scenes = episodesData[i].scenes;
     for (var j in scenes){
       // calculate length of scene in seconds
-      var sceneLength;
-      if(config.countUp == true){
-        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
-      } else if(config.countUp == false){
-        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
-      }
-
+      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
       scenes[j].length = sceneLength;
 
       // add characters in scene to allCharacters array
@@ -123,7 +98,7 @@ function ready(error, e, cg, l, c) {
     }
     flare.children.push({"name":group[i].name, "children":childrenArray});
   }
-  if(config.durationTreemap.includeOthers){
+  if(config.includeOthers){
     var otherChildren = [];
     for(var i in allCharacters){
       if(charactersIncluded.indexOf(i) < 0){
@@ -133,17 +108,15 @@ function ready(error, e, cg, l, c) {
     flare.children.push({"name":"Other", "children": otherChildren});
   }
   
-  console.log(flare);
+  // console.log(flare);
 
 
   // build the visualization
-
-  // adapted from https://bl.ocks.org/ganezasan/52fced34d2182483995f0ca3960fe228
   'use strict';
 
-  const margin = {top: 20, right: 30, bottom: 20, left: 20},
-    width = window.innerWidth - margin.right - margin.left - 20,
-    height = window.innerHeight - margin.top - margin.bottom - 40,
+  const margin = config.margin,
+    width = window.innerWidth - margin.right - margin.left - 10,
+    height = window.innerHeight - margin.top - margin.bottom - 10,
     color = d3.scaleOrdinal().range(d3.schemeCategory20c);
 
   const treemap = d3.treemap().size([width, height]);

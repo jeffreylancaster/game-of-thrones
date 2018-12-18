@@ -1,60 +1,22 @@
 <!DOCTYPE html>
 <html>
-<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
   <head>
     <title>Game of Thrones: Opening Locations</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Opening Locations">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css">
-    <style>
-      .axis .domain {
-        display: none;
-      }
-      .timestamp{
-        fill: black;
-      }
-      .links line {
-        stroke: #999;
-        stroke-opacity: 0.6;
-      }
-      .links path {
-        stroke: #999;
-        stroke-opacity: 0.6;
-        fill: none;
-      }
-
-      .nodes circle {
-        stroke: #fff;
-        stroke-width: 1.5px;
-      }
-
-      text {
-        font-family: sans-serif;
-        font-size: 10px;
-      }
-      .selected {
-        stroke-width: 10px;
-        stroke: #00F!important;
-      }
-    </style>
   </head>
   <body>
-    <!--
-      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-    -->
     <p>
       <select id="episodesTitles" style="display: none;">
       </select>
     </p>
-    <svg width="1000" height="1000"></svg>
+    <svg></svg>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
     <script>
 /* HELPFUL FUNCTIONS */
 
@@ -79,105 +41,34 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+var config = {
+  "title": "Opening Locations",
+  "width":1000,
+  "height":800,
+  "margin":{
+    "top": 20,
+    "right": 40,
+    "bottom": 30,
+    "left": 40
+  }
+}
 
-/* VARIABLES AND CONFIGURATION */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/opening-locations.json')
+  .await(ready);
 
-// variable containers for imported data
-var charactersData,
-  locationsData,
-  locationsAltData,
-  episodesData,
-  charactersIncludeData,
-  charactersGenderData,
-  keyValue,
-  keyValuesFile,
-  episodeLengths,
-  locations,
-  subLocations,
-  group,
-  colors,
-  openingLocations;
-
-
-/* IMPORT DATA */
-$.when(
-  // $.getJSON("../data/characters.json", function(data) {
-  //   charactersData = data.characters;
-  //   console.log("characters.json loaded");
-  // })
-  // .fail(function() {console.error("characters.json not loaded");}),
-      
-  // $.getJSON("../data/locations.json", function(data) {
-  //   locationsData = data.regions;
-  //   console.log("locations.json loaded");
-  // })
-  // .fail(function() {console.error("locations.json not loaded");}),
-
-  // $.getJSON("../data/locations-alt.json", function(data) {
-  //   locationsAltData = data.sceneLocSorted;
-  //   console.log("locations-alt.json loaded");
-  // })
-  // .fail(function() {console.error("locations-alt.json not loaded");}),
-
-  $.getJSON("../data/episodes.json", function(data) {
-    episodesData = data.episodes;
-    console.log("episodes.json loaded");
-  })
-  .fail(function() {console.error("episodes.json not loaded");}),
-
-  // $.getJSON("../data/characters-include.json", function(data) {
-  //   charactersIncludeData = data.include;
-  //   console.log("characters-include.json loaded");
-  // })
-  // .fail(function() {console.error("characters-include.json not loaded");}),
-
-  // $.getJSON("../data/characters-gender.json", function(data) {
-  //   charactersGenderData = data.gender;
-  //   console.log("characters-gender.json loaded");
-  // })
-  // .fail(function() {console.error("characters-gender.json not loaded");}),
-
-  // $.getJSON("../data/keyValues.json", function(data) {
-  //   keyValues = data.keyValues;
-  // episodeLengths = data.episodeLengths;
-  //   locations = data.sceneLocSorted;
-  //   subLocations = data.sceneSubLocSorted;
-  //   console.log("keyValues.json loaded");
-  // })
-  // .fail(function() {console.error("keyValues.json not loaded");}),
-
-  // $.getJSON("../data/characters-groups.json", function(data) {
-  //   group = data.groups;
-  //   console.log("characters-groups.json loaded");
-  // })
-  // .fail(function() {console.error("characters-groups.json not loaded");}),
-
-  // $.getJSON("../data/colors.json", function(data) {
-  //   colors = data.colors;
-  //   console.log("colors.json loaded");
-  // })
-  // .fail(function() {console.error("colors.json not loaded");}),
-
-  $.getJSON("../data/opening-locations.json", function(data) {
-    openingLocations = data.locations;
-    console.log("opening-locations.json loaded");
-  })
-  .fail(function() {console.error("opening-locations.json not loaded");}),
-
-  $.getJSON("../data/config.json", function(data) {
-    config = data.config;
-    console.log("config.json loaded");
-  })
-  .fail(function() {console.error("config.json not loaded");})
-
-
-/* DO STUFF WITH THE DATA */
-
-).then(function() {
+function ready(error, e, ol) {
+  if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
+  episodesData = e.episodes;
+  openingLocations = ol.locations;
+
   /* CONFIG SETUP */
-  $("svg").attr({width: config.openingLocationsFixed.svg.width, height: config.openingLocationsFixed.svg.height-250});
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
   /* END CONFIG SETUP */
 
   var sequences = [];
@@ -209,14 +100,13 @@ $.when(
   for(var i in openingLocations){
     openingLocations[openingLocations[i].name] = openingLocations[i];
   }
-  console.log(openingLocations);
 
   for(var i in uniqueLocations){
     matrix.nodes.push({
       "name": uniqueLocations[i],
       "group": 1,
-      "x": openingLocations[uniqueLocations[i]].fx * config.openingLocationsFixed.svg.width/scale,
-      "y": openingLocations[uniqueLocations[i]].fy * config.openingLocationsFixed.svg.height/scale
+      "x": openingLocations[uniqueLocations[i]].fx * config.width/scale,
+      "y": openingLocations[uniqueLocations[i]].fy * config.height/scale
     })
   }
 
@@ -292,10 +182,8 @@ $.when(
     .attr('y', 3);
 
   node.append("title")
-      .text(function(d) { return d.id; });
-  
-  console.log(matrix)
-});
+    .text(function(d) { return d.id; });
+};
 
 
     </script>

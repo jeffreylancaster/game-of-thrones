@@ -1,18 +1,37 @@
 <html>
 <head>
-		<!-- from: https://bl.ocks.org/armollica/88ef1c807c4bb4cff6f7e033e25172ee -->
+	<title>Game of Thrones: Opening Sequence (Arcs)</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Game of Thrones: Opening Sequence (Arcs)">
+  <meta name="author" content="Jeffrey Lancaster">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
-		<p>
-				<select id="episodesTitles" style="display: none;">
-				</select>
-		</p>
+	<p>
+		<select id="episodesTitles" style="display: none;"></select>
+	</p>
+
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <script>
+
+var config = {
+	"width": 700,
+	"height": 600,
+	"margin":{
+    "top": 20,
+    "right": 40,
+    "bottom": 30,
+    "left": 40
+  }
+}
+
+var width = config.width,
+		height = config.height;
 
 var oceanColor = '#f9f9f9',
 		landColor = '#ddd',
@@ -41,12 +60,9 @@ var link,
 		focalPoint,
 		flyingArcLength;
 
-var width = 960,
-		height = 600;
-
 var canvas = d3.select('body').append('canvas')
-		.attr('width', width)
-		.attr('height', height);
+		.attr('width', width + config.margin.left + config.margin.right)
+		.attr('height', height + config.margin.top + config.margin.bottom);
 
 var context = canvas.node().getContext('2d');
 
@@ -98,7 +114,7 @@ function ready(error, world, e) {
 		for(var i in episodesData){
 			$('#episodesTitles').append($('<option>', {text:episodesData[i].episodeTitle + " (S"+episodesData[i].seasonNum+"E"+episodesData[i].episodeNum+")"}));
 		}
-		$("#episodesTitles").show();
+		$("#episodesTitles").show().css("margin-top", config.margin.top);
 
 		// select behavior
 	  $('#episodesTitles').change(function(){
@@ -303,7 +319,7 @@ function centerCoordinates(episode){
 
 
 
-</script>
+	</script>
 </body>
 
 </html>

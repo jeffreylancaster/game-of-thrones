@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>Game of Thrones: Co-occurrence</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Co-occurrence">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css" />
     <script src="//d3js.org/d3.v2.min.js" charset="utf-8"></script>
     <!-- for d3.queue() -->
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
   </head>
   <body>
-    <!--
-      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-      <p>This visualization is based on Mike Bostock's <a href="https://bost.ocks.org/mike/miserables/" target="_blank"><i>Les Mis&eacute;rables</i> co-occurrence matrix diagram</a>.
-    -->
-      <p style="margin-left: 20px;">Order: 
-        <select id="order">
-          <option value="name">by Name</option>
-          <option value="count">by Frequency</option>
-          <option value="group">by Cluster</option>
-        </select>
-      </p>
+    <p style="margin-left: 20px;">Order: 
+      <select id="order">
+        <option value="name">by Name</option>
+        <option value="count">by Frequency</option>
+        <option value="group">by Cluster</option>
+      </select>
+    </p>
     
     <svg class="matrix"></svg>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
 /* HELPFUL FUNCTIONS */
 
@@ -54,66 +46,77 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+var config = {
+  "title":"Co-Occurrence",
+  "scopeMain": true,
+  "all": {
+    "size": 2000,
+    "file": "matrixObject-all.json"
+  },
+  "main": {
+    "size": 1600,
+    "file": "matrixObject-main.json"
+  },
+  "margin": {
+    "top": 120,
+    "right": 60,
+    "bottom": 60,
+    "left": 120
+  }
+}
+
 
 /* IMPORT DATA */
 d3.queue()
-  .defer(d3.json, '../data/config.json')
   .await(ready);
 
-function ready(error, c) {
+function ready(error) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  config = c.config;
+  var file, width, height;
+  
+  if(config.scopeMain){
+    width = config.main.size;
+    height = config.main.size;
+    file = config.main.file;
+  } else {
+    width = config.all.size;
+    height = config.all.size;
+    file = config.all.file;
+  }
 
-    /* CONFIG SETUP */
-    $("h1 > img").css({"height": config.logo.height, "vertical-align": "middle", "margin-top": config.logo.marginTop}).attr("src", "../img/"+config.logo.src);
-    $("h1 > span").html(" - "+config.matrix.title);
-    /* END CONFIG SETUP */
+  var x = d3.scale.ordinal().rangeBands([0, width]),
+    z = d3.scale.linear().domain([0, 100]).clamp(true),
+    //c = d3.scale.category20c().domain(d3.range(20));
+    c = d3.scale.ordinal().range([
+        "#666666",// Stark
+        "#9B0056",// Targaryen
+        "#B36305",// Baratheon
+        "#FFD300",// Lannister
+        "#000000",// Night's Watch
+        "#00782A",// Dothraki
+        "#003688",// Greyjoy
+        "#E32017",// Tyrell
+        "#95CDBA",// Wildling
+        "#EE7C0E",// Martell
+        "#00A4A7",// Frey
+        "#0098D4",// Tully
+        "#87CEFA",// White Walkers
+        "#F3A9BB" // Include
+        ]);
 
-    var file, width, height;
-    
-    if(config.matrix.scopeMain){
-      width = config.matrix.main.size;
-      height = config.matrix.main.size;
-      file = config.matrix.main.file;
-    } else {
-      width = config.matrix.all.size;
-      height = config.matrix.all.size;
-      file = config.matrix.all.file;
-    }
+  var svg = d3.select("svg")
+      .attr("width", width + config.margin.left + config.margin.right)
+      .attr("height", height + config.margin.top + config.margin.bottom)
+      .style("margin-left", -config.margin.left + "px")
+    .append("g")
+      .attr("transform", "translate(" + config.margin.left + "," + config.margin.top + ")");
 
-    var x = d3.scale.ordinal().rangeBands([0, width]),
-      z = d3.scale.linear().domain([0, 100]).clamp(true),
-      //c = d3.scale.category20c().domain(d3.range(20));
-      c = d3.scale.ordinal().range([
-          "#666666",// Stark
-          "#9B0056",// Targaryen
-          "#B36305",// Baratheon
-          "#FFD300",// Lannister
-          "#000000",// Night's Watch
-          "#00782A",// Dothraki
-          "#003688",// Greyjoy
-          "#E32017",// Tyrell
-          "#95CDBA",// Wildling
-          "#EE7C0E",// Martell
-          "#00A4A7",// Frey
-          "#0098D4",// Tully
-          "#87CEFA",// White Walkers
-          "#F3A9BB" // Include
-          ]);
-
-    var svg = d3.select("svg")
-        .attr("width", width + config.matrix.margin.left + config.matrix.margin.right)
-        .attr("height", height + config.matrix.margin.top + config.matrix.margin.bottom)
-        .style("margin-left", -config.matrix.margin.left + "px")
-      .append("g")
-        .attr("transform", "translate(" + config.matrix.margin.left + "," + config.matrix.margin.top + ")");
-
-    d3.json("../data/"+file, function(dataMatrix) {
-      var matrix = [],
-        nodes = dataMatrix.nodes,
-        n = nodes.length;
+  d3.json("../data/"+file, function(dataMatrix) {
+    var matrix = [],
+      nodes = dataMatrix.nodes,
+      n = nodes.length;
 
     // Compute index per node.
     nodes.forEach(function(node, i) {

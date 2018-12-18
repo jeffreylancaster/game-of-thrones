@@ -4,19 +4,14 @@
     <title>Game of Thrones: Locations Per Episode</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Locations Per Episode">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <!--
-      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-    -->
+
     <svg></svg>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
 
@@ -43,25 +38,41 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+var config = {  
+  "title":"Locations Per Episode",
+  "width":960,
+  "height":1300,
+  "margin":{
+    "top": 20,
+    "right": 0,
+    "bottom": 30,
+    "left": 220
+  },
+  "legendOffset": {
+    "x":-20,
+    "y":40
+  },
+  "barHeight": 20,
+  "useSubLocation": false
+}
 
 /* IMPORT DATA */
 d3.queue()
+  .defer(d3.json, '../data/locations.json')
   .defer(d3.json, '../data/episodes.json')
-  .defer(d3.json, '../data/config.json')
   .await(ready);
 
-function ready(error, e, c) {
+function ready(error, l, e) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
+  locationsData = l.regions;
   episodesData = e.episodes;
-  config = c.config;
 
   /* CONFIG SETUP */
-  $("svg").attr({
-    width: config.locationPerEpisode.svg.width,
-    height: config.locationPerEpisode.svg.height
-  });
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height);
   /* END CONFIG SETUP */
 
   var totalTime = 0;
@@ -80,23 +91,18 @@ function ready(error, e, c) {
 
     for (var j in scenes){
       // calculate length of scene in seconds
-      var sceneLength;
-      if(config.countUp == true){
-        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
-      } else if(config.countUp == false){
-        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
-      }
-      
+      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
       scenes[j].length = sceneLength;
 
       // add location of scene to allLocations array
-      location = (scenes[j].subLocation && config.locationPerEpisode.useSubLocation) ? scenes[j].location + " - " + scenes[j].subLocation : scenes[j].location;
-      allLocations.push(location);
+      // location = (scenes[j].subLocation && config.useSubLocation) ? scenes[j].location + " - " + scenes[j].subLocation : scenes[j].location;
+      // allLocations.push(location);
     }
   }
 
   // deduplicate the list of locations from scenes
-  allLocations = allLocations.filter(onlyUnique).sort();
+  // allLocations = allLocations.filter(onlyUnique).sort();
+  allLocations = locationsData.map(function(i){return i.location});
 
   for(var i in episodesData){
     // make episodesLocations array with all 0's
@@ -109,7 +115,7 @@ function ready(error, e, c) {
 
     // add sceneLength to location
     for (var j in scenes){
-      location = (scenes[j].subLocation && config.locationPerEpisode.useSubLocation) ? scenes[j].location + " - " + scenes[j].subLocation : scenes[j].location;
+      location = (scenes[j].subLocation && config.useSubLocation) ? scenes[j].location + " - " + scenes[j].subLocation : scenes[j].location;
       episodesLocations[location] += scenes[j].length;
     }
 
@@ -134,14 +140,13 @@ function ready(error, e, c) {
   var barHeight = config.barHeight;
 
   var svg = d3.select("svg"),
-      margin = config.locationPerEpisode.svg.margin,
+      margin = config.margin,
       width = +svg.attr("width") - margin.left - margin.right,
       height = barHeight*data.length + margin.top + margin.bottom,
       g = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.select("svg")
-    .attr("height", height);
+  svg.attr("height", height);
 
   var y = d3.scaleBand() 
       .rangeRound([0, height])
@@ -151,8 +156,53 @@ function ready(error, e, c) {
   var x = d3.scaleLinear()
       .rangeRound([0, width]);
 
-  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+  // var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      // .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  /* CUSTOM FOR GAME OF THRONES */
+  var z = d3.scaleOrdinal()
+    .range([
+      "#f7fbff", // North of the Wall
+      "#deebf7", // The Wall
+      "#c6dbef", // The North
+      "#9ecae1", // The Shivering Sea
+      "#6baed6", // The Vale
+      "#4292c6", // The Iron Islands
+      "#2171b5", // The Sunset Sea
+      "#084594", // The Westerlands
+      "#00441b", // The Riverlands
+      "#006d2c", // The Narrow Sea
+      "#238b45", // The Crownlands
+      "#41ae76", // The Stormlands
+      "#66c2a4", // The Reach
+      "#99d8c9", // Dorne
+      "#ccece6", // Pentos
+      "#e5f5f9", // Braavos
+      "#f7fcfd", // The Summer Sea
+      "#ffffe5", // Volantis
+      "#fff7bc", // Valyria
+      "#fee391", // The Dothraki Sea
+      "#fec44f", // Meereen
+      "#fe9929", // Yunkai
+      "#ec7014", // Astapor
+      "#cc4c02", // Vaes Dothrak
+      "#993404", // The Red Waste
+      "#662506" // Qarth
+    ]);
+  
+  // /* CUSTOM FOR STRANGER THINGS */
+  // var z = d3.scaleOrdinal().range([
+  //   "#393b79", // Big City
+  //   "#5254a3", // Chicago, Illinois
+  //   "#6b6ecf", // outside Chicago, Illinois
+  //   "#9c9ede", // Pittsburgh, Pennsylvania
+  //   "#CCCCCC", // Sesser, Illinois
+  //   "#cedb9c", // to Sesser, Illinois
+  //   "#b5cf6b", // Indianapolis, Indiana
+  //   "#8ca252", // 515 Larrabee Road, Indiana
+  //   "#637939", // Hawkins, Indiana
+  //   "#141e30" // Upside Down
+  // ]); // based on d3.schemeCategory20b
 
   var keys = allLocations;
 
@@ -223,7 +273,7 @@ function ready(error, e, c) {
     .attr("font-family", "sans-serif")
     .attr("font-size", 10)
     .attr("text-anchor", "end")
-    .attr("transform", function(d, i) { return `translate(${config.locationPerEpisode.svg.legendOffset.x}, ${config.locationPerEpisode.svg.legendOffset.y})` })
+    .attr("transform", function(d, i) { return `translate(${config.legendOffset.x}, ${config.legendOffset.y})` })
     .selectAll("g")
     .data(keys.slice())
     .enter().append("g")
@@ -240,7 +290,6 @@ function ready(error, e, c) {
     .attr("y", 9.5)
     .attr("dy", "0.32em")
     .text(function(d) { return d; });
-
 };
 
     </script>

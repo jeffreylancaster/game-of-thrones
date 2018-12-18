@@ -4,17 +4,14 @@
     <title>Game of Thrones: Force-Directed</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Force-Directed">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
 
     <svg class="force"></svg>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
 
@@ -41,29 +38,39 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+var config = {
+  "scopeMain": false,
+  "all": {
+    "size": 1200,
+    "file": "matrixObject-all.json"
+  },
+  "main": {
+    "size": 800,
+    "file": "matrixObject-main.json"
+  }
+}
+
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
-  .defer(d3.json, '../data/config.json')
   .await(ready);
 
-function ready(error, e, c) {
+function ready(error, e) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
   episodesData = e.episodes;
-  config = c.config;
 
   var file, width, height;
 
-  if(config.forceDirected.scopeMain){
-    width = config.forceDirected.main.size;
-    height = config.forceDirected.main.size;
-    file = config.forceDirected.main.file;
+  if(config.scopeMain){
+    width = config.main.size;
+    height = config.main.size;
+    file = config.main.file;
   } else {
-    width = config.forceDirected.all.size;
-    height = config.forceDirected.all.size;
-    file = config.forceDirected.all.file;
+    width = config.all.size;
+    height = config.all.size;
+    file = config.all.file;
   }
 
   var svg = d3.select("svg")

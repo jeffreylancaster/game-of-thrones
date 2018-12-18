@@ -4,16 +4,11 @@
     <title>Game of Thrones: Characters Per Scene</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Characters Per Scene">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <!--
-      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-      -->
     <p style="margin-left: 20px;">
       <button class="center">Center</button>
       <button class="baseline">Baseline</button>
@@ -55,25 +50,35 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+var config = {
+  "title": "Characters Per Scene",
+  "width":2000,
+  "height":500,
+  "margin":{
+    "top": 20,
+    "right": 40,
+    "bottom": 30,
+    "left": 40
+  },
+  "barHeight": 20
+}
+
 
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
-  .defer(d3.json, '../data/config.json')
   .await(ready);
 
-function ready(error, e, c) {
+function ready(error, e) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
   episodesData = e.episodes;
-  config = c.config;
 
   /* CONFIG SETUP */
-  $("svg").attr({
-    width: config.charactersPerScene.svg.width,
-    height: config.charactersPerScene.svg.height
-  });
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height);
   /* END CONFIG SETUP */
 
   var allCharacters = []; // array for all characters
@@ -89,13 +94,7 @@ function ready(error, e, c) {
     var scenes = episodesData[i].scenes;
     for (var j in scenes){
       // calculate length of scene in seconds
-      var sceneLength;
-      if(config.countUp == true){
-        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
-      } else if(config.countUp == false){
-        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
-      }
-      
+      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
       // append absolute value of scene start in seconds
       scenes[j].absStartSec = totalTime;
       // append absolute value of scene end in seconds
@@ -139,7 +138,7 @@ function ready(error, e, c) {
   var barHeight = config.barHeight;
 
   var svg = d3.select("svg"),
-      margin = config.charactersPerScene.svg.margin,
+      margin = config.margin,
       width = +svg.attr("width") - margin.left - margin.right,
       // height = barHeight*data.length + margin.top + margin.bottom,
       height = barHeight * maxCharacters,

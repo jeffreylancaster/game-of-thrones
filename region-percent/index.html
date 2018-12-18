@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
-<!-- from: https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458 -->
   <head>
     <title>Game of Thrones: % Time Per Region</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: % Time Per Region">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <!--
-      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-    -->
     <svg id="region-percent"></svg>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -44,27 +39,41 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+var config = {
+  "title":"% Time Per Region",
+  "width":960,
+  "height":550,
+  "margin":{
+    "top": 20,
+    "right": 150,
+    "bottom": 30,
+    "left": 180
+  },
+  "legendOffset": {
+    "x":50,
+    "y":40
+  },
+  "barHeight": 20
+}
+
 
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/locations.json')
   .defer(d3.json, '../data/episodes.json')
-  .defer(d3.json, '../data/config.json')
   .await(ready);
 
-function ready(error, l, e, c) {
+function ready(error, l, e) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
   locationsData = l.regions;
   episodesData = e.episodes;
-  config = c.config;
 
   /* CONFIG SETUP */
-  $("svg").attr({
-    width: config.regionPercent.svg.width,
-    height: config.regionPercent.svg.height
-  });
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
   /* END CONFIG SETUP */
 
   var allCharacters = []; // array for all characters
@@ -75,12 +84,7 @@ function ready(error, l, e, c) {
     var scenes = episodesData[i].scenes;
     for (var j in scenes){
       // calculate length of scene in seconds
-      var sceneLength;
-      if(config.countUp == true){
-        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
-      } else if(config.countUp == false){
-        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
-      }
+      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
       scenes[j].length = sceneLength;
 
       // add characters in scene to allCharacters array
@@ -132,14 +136,13 @@ function ready(error, l, e, c) {
   var barHeight = config.barHeight;
 
   var svg = d3.select("svg"),
-      margin = config.regionPercent.svg.margin,
+      margin = config.margin,
       width = +svg.attr("width") - margin.left - margin.right,
       height = barHeight*data.length + margin.top + margin.bottom,
       g = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  d3.select("svg")
-    .attr("height", height);
+  svg.attr("height", height);
 
   var y = d3.scaleBand() 
       .rangeRound([0, height])
@@ -149,21 +152,52 @@ function ready(error, l, e, c) {
   var x = d3.scaleLinear()
       .rangeRound([0, width]);
 
-  //var z = d3.scaleOrdinal(d3.schemeCategory20c);
+  // var z = d3.scaleOrdinal(d3.schemeCategory20c);
+
+  /* CUSTOM FOR GAME OF THRONES */
+  var z = d3.scaleOrdinal()
+    .range([
+      "#f7fbff", // North of the Wall
+      "#deebf7", // The Wall
+      "#c6dbef", // The North
+      "#9ecae1", // The Shivering Sea
+      "#6baed6", // The Vale
+      "#4292c6", // The Iron Islands
+      "#2171b5", // The Sunset Sea
+      "#084594", // The Westerlands
+      "#00441b", // The Riverlands
+      "#006d2c", // The Narrow Sea
+      "#238b45", // The Crownlands
+      "#41ae76", // The Stormlands
+      "#66c2a4", // The Reach
+      "#99d8c9", // Dorne
+      "#ccece6", // Pentos
+      "#e5f5f9", // Braavos
+      "#f7fcfd", // The Summer Sea
+      "#ffffe5", // Volantis
+      "#fff7bc", // Valyria
+      "#fee391", // The Dothraki Sea
+      "#fec44f", // Meereen
+      "#fe9929", // Yunkai
+      "#ec7014", // Astapor
+      "#cc4c02", // Vaes Dothrak
+      "#993404", // The Red Waste
+      "#662506" // Qarth
+    ]);
   
-  /* CUSTOM FOR STRANGER THINGS */
-  var z = d3.scaleOrdinal().range([
-    "#393b79", // Big City
-    "#5254a3", // Chicago, Illinois
-    "#6b6ecf", // outside Chicago, Illinois
-    "#9c9ede", // Pittsburgh, Pennsylvania
-    "#CCCCCC", // Sesser, Illinois
-    "#cedb9c", // to Sesser, Illinois
-    "#b5cf6b", // Indianapolis, Indiana
-    "#8ca252", // 515 Larrabee Road, Indiana
-    "#637939", // Hawkins, Indiana
-    "#141e30" // Upside Down
-  ]); // based on d3.schemeCategory20b
+  // /* CUSTOM FOR STRANGER THINGS */
+  // var z = d3.scaleOrdinal().range([
+  //   "#393b79", // Big City
+  //   "#5254a3", // Chicago, Illinois
+  //   "#6b6ecf", // outside Chicago, Illinois
+  //   "#9c9ede", // Pittsburgh, Pennsylvania
+  //   "#CCCCCC", // Sesser, Illinois
+  //   "#cedb9c", // to Sesser, Illinois
+  //   "#b5cf6b", // Indianapolis, Indiana
+  //   "#8ca252", // 515 Larrabee Road, Indiana
+  //   "#637939", // Hawkins, Indiana
+  //   "#141e30" // Upside Down
+  // ]); // based on d3.schemeCategory20b
 
   var stack = d3.stack()
     .offset(d3.stackOffsetExpand);
@@ -233,7 +267,7 @@ function ready(error, l, e, c) {
     .attr("font-family", "sans-serif")
     .attr("font-size", 10)
     .attr("text-anchor", "end")
-    .attr("transform", function(d, i) { return `translate(${config.regionPercent.svg.legendOffset.x}, ${config.regionPercent.svg.legendOffset.y})` })
+    .attr("transform", function(d, i) { return `translate(${config.legendOffset.x}, ${config.legendOffset.y})` })
     .selectAll("g")
     .data(keys.slice())
     .enter().append("g")
@@ -250,7 +284,8 @@ function ready(error, l, e, c) {
     .attr("y", 9.5)
     .attr("dy", "0.32em")
     .text(function(d) {
-      return d.replace("Pennsylvania","PA").replace("Illinois","IL").replace(", Indiana",", IN"); // CUSTOM FOR STRANGER THINGS: was return d - added .replace() to update labels in keys
+      return d;
+      // return d.replace("Pennsylvania","PA").replace("Illinois","IL").replace(", Indiana",", IN"); // CUSTOM FOR STRANGER THINGS: was return d - added .replace() to update labels in keys
     });
 };
 

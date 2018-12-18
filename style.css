@@ -7,10 +7,11 @@
 body{
   font-family: "Helvetica Neue";
   font-family: Georgia, serif;
-  /*overflow: hidden;*/
   margin: 0;
-  text-align: center;
   background: #fff;
+}
+.main{
+  text-align: center;
 }
 .breadcrumbs {
   font-size: small;
@@ -107,6 +108,10 @@ canvas {
   cursor: move;
 }
 
+select{
+  margin-left: 20px;
+}
+
 .wrapper {
   width: calc(100% - 2em);
   max-width: calc(600px - 2em);
@@ -199,11 +204,35 @@ blockquote {
 .treemap rect {
   fill: none;
 }
+#treemap{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+}
+.treemap .node {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+}
 
 /* force-directed */
 .links line {
   stroke: #999;
   stroke-opacity: 0.6;
+}
+.links path {
+  stroke: #999;
+  stroke-opacity: 0.6;
+  fill: none;
 }
 .nodes circle {
   stroke: #fff;
@@ -212,6 +241,10 @@ blockquote {
 .force text {
   font-family: sans-serif;
   font-size: 10px;
+}
+.selected {
+  stroke-width: 10px;
+  stroke: #00F!important;
 }
 
 /* force-directed circle */
@@ -228,18 +261,50 @@ blockquote {
 .node circle {
 }
 
-/*.mobile{
-  display: none;
-}*/
+/* geographic map */
+#geoMap {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.foreground {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  pointer-events: all;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+
+.foreground.zooming {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+}
+
+.graticule {
+  fill: none;
+  stroke: #636B62;
+  stroke-width: .5px;
+  stroke-dasharray: 2,2;
+}
+
+.land {
+  fill: #69D2E7;
+  stroke: none;
+}
+
+.mesh {
+  stroke: #50576A;
+  stroke-width: .5px;
+  fill: none;
+}
+
+.point {
+  fill: #f00;
+}
+
+
+
 .hidden{
   display: none;
 }
-
-/*@media(max-width: 760px){
-  .desktop{
-    display: none;
-  }
-  .mobile{
-    display: block;
-  }
-}*/

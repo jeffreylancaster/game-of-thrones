@@ -4,16 +4,11 @@
     <title>Game of Thrones: Scenes by Characters (Bubbles)</title>
     <meta charset="UTF-8">
     <meta name="description" content="Game of Thrones: Scenes by Characters">
-    <meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <!--
-      <p>Code for this chart is on <a href="https://github.com/jeffreylancaster/game-of-thrones" target="_blank">github</a>, and a description of the project is on <a href="https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb" target="_blank">Medium</a>. Comments and suggestions are welcome on github, Medium, or <a href="mailto: jeffrey@jeffreylancaster.com" target="_blank">here</a>.</p>
-    -->
     <svg></svg>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -44,29 +39,41 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
 
+var config = {
+  "title": "Scenes by Character (Bubbles)",
+  "totalCutoff":300,
+  "minBubbleSize":10,
+  "buffer":2,
+  "fuzzyScene":10,
+  "width":4000,
+  "height":300,
+  "margin":{
+    "top": 0,
+    "right": 0,
+    "bottom": 0,
+    "left": 0
+  }
+}
 
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
   .defer(d3.json, '../data/characters-houses.json')
   .defer(d3.json, '../data/colors.json')
-  .defer(d3.json, '../data/config.json')
   .await(ready);
 
-function ready(error, e, g, l, c) {
+function ready(error, e, g, l) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
   episodesData = e.episodes;
   group = g.house;
   colors = l.colors;
-  config = c.config;
 
   /* CONFIG SETUP */
-  $("svg").attr({
-    width: config.bubbleCharacter.svg.width,
-    height: config.bubbleCharacter.svg.height
-  });
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height);
   /* END CONFIG SETUP */
 
   var allCharacters = []; // array for all characters
@@ -85,13 +92,7 @@ function ready(error, e, g, l, c) {
     var scenes = episodesData[i].scenes;
     for (var j in scenes){
       // calculate length of scene in seconds
-      var sceneLength;
-      if(config.countUp == true){
-        sceneLength = sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart);
-      } else if(config.countUp == false){
-        sceneLength = sec(scenes[j].sceneStart) - sec(scenes[j].sceneEnd);
-      }
-      
+      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
       // append absolute value of scene start in seconds
       scenes[j].absStartSec = totalTime;
       // append absolute value of scene end in seconds
@@ -140,7 +141,7 @@ function ready(error, e, g, l, c) {
 
   for(var i in uniqueCharactersObject){
     // limit to main characters (totalCutoff)
-    if(uniqueCharactersObject[i].total > config.bubbleCharacter.totalCutoff){
+    if(uniqueCharactersObject[i].total > config.totalCutoff){
       charactersArray.push(uniqueCharactersObject[i]);
     }
   }
@@ -150,7 +151,7 @@ function ready(error, e, g, l, c) {
   // concatenate successive scenes based on fuzzyScene
   for(var i in charactersArray){
     for(j=0; j < charactersArray[i].scenes.length-1; j++){
-      if(charactersArray[i].scenes[j].absEndSec + config.bubbleCharacter.fuzzyScene >= charactersArray[i].scenes[j+1].absStartSec){
+      if(charactersArray[i].scenes[j].absEndSec + config.fuzzyScene >= charactersArray[i].scenes[j+1].absStartSec){
         charactersArray[i].scenes[j+1].absStartSec = charactersArray[i].scenes[j].absStartSec;
         charactersArray[i].scenes[j] = {};
       }
@@ -197,7 +198,7 @@ function ready(error, e, g, l, c) {
 
     for(var j in charactersArray[i].scenes){
       // limit to bubbles bigger than minBubbleSize
-      if(charactersArray[i].scenes[j].absEndSec - charactersArray[i].scenes[j].absStartSec >= config.bubbleCharacter.minBubbleSize){
+      if(charactersArray[i].scenes[j].absEndSec - charactersArray[i].scenes[j].absStartSec >= config.minBubbleSize){
         matrix.nodes.push({
           "absEndSec":charactersArray[i].scenes[j].absEndSec,
           "absMidSec":charactersArray[i].scenes[j].absMidSec,
@@ -215,7 +216,7 @@ function ready(error, e, g, l, c) {
   var data = charactersArray;
 
   var svg = d3.select("svg"),
-    margin = config.bubbleCharacter.svg.margin,
+    margin = config.margin,
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") + margin.top + margin.bottom,
     links = matrix.links,
@@ -234,7 +235,7 @@ function ready(error, e, g, l, c) {
 
   var simulation = d3.forceSimulation()
       .force("collision", d3.forceCollide().radius(function(d){
-        return x(d.absEndSec - d.absMidSec)+config.bubbleCharacter.buffer;
+        return x(d.absEndSec - d.absMidSec)+config.buffer;
       }))
       .force("y", d3.forceY(height/2).strength(0.3));
 
