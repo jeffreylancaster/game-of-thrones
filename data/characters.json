@@ -23,7 +23,11 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzI5MDg0ZDAtN2Y2ZC00MzU1LTgyYjQtNTBjYjEzODczZDVhXkEyXkFqcGdeQXVyNTg0Nzg4NTE@._V1_.jpg",
          "characterLink":"/character/ch0540081/",
          "actorName":"Michael Feast",
-         "actorLink":"/name/nm0269923/"
+         "actorLink":"/name/nm0269923/",
+         "siblings":[
+              "Balon Greyjoy",
+              "Euron Greyjoy"
+          ]
       },
       {
          "characterName":"Aerys II Targaryen",
@@ -35,6 +39,10 @@
          "actorLink":"/name/nm0727778/",
          "nickname":"The Mad King",
          "royal":true,
+         "parents":[
+              "Aegon V Targaryen",
+              "Unknown Targaryen Queen"
+          ],
          "killed":[
             "Brandon Stark",
             "Rickard Stark"
@@ -81,6 +89,9 @@
          "characterLink":"/character/ch0305012/",
          "actorName":"Karl Davies",
          "actorLink":"/name/nm0203801/",
+         "parents":[
+              "Cynda Lannister"
+         ],
          "killedBy":"Jaime Lannister"
       },
       {
@@ -158,6 +169,10 @@
          "characterLink":"/character/ch0158604/",
          "actorName":"Maisie Williams",
          "actorLink":"/name/nm3586035/",
+         "parents":[
+            "Eddard Stark",
+            "Catelyn Stark"
+         ],
          "siblings":[
             "Robb Stark",
             "Sansa Stark",
@@ -206,6 +221,17 @@
          "characterLink":"/character/ch0292152/",
          "actorName":"Patrick Malahide",
          "actorLink":"/name/nm0538869/",
+         "marriedEngaged":"Alannys Greyjoy",
+         "parentOf":[
+              "Rodrik Greyjoy",
+              "Maron Greyjoy",
+              "Yara Greyjoy",
+              "Theon Greyjoy"
+         ],
+         "siblings":[
+              "Aeron Greyjoy",
+              "Euron Greyjoy"
+         ],
          "killedBy":"Euron Greyjoy"
       },
       {
@@ -233,7 +259,8 @@
          "actorName":"Joseph Mawle",
          "actorLink":"/name/nm1152798/",
          "parents":[
-            "Rickard Stark"
+            "Rickard Stark",
+            "Lyarra Stark"
          ],
          "siblings":[
             "Brandon Stark",
@@ -437,7 +464,8 @@
          "actorName":"Lena Headey",
          "actorLink":"/name/nm0372176/",
          "parents":[
-            "Tywin Lannister"
+             "Tywin Lannister",
+             "Joanna Lannister"
          ],
          "parentOf":[
             "Joffrey Baratheon",
@@ -536,6 +564,9 @@
             "Aerys II Targaryen",
             "Rhaella Targaryen"
          ],
+         "parentOf":[
+              "Rhaego"
+          ],
          "siblings":[
             "Rhaegar Targaryen",
             "Viserys Targaryen"
@@ -710,7 +741,8 @@
             "Lyanna Stark"
          ],
          "parents":[
-            "Rickard Stark"
+            "Rickard Stark",
+            "Lyarra Stark"
          ],
          "killed":[
             "Arthur Dayne",
@@ -779,7 +811,11 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzg1MTJhMjMtMmY4Yy00NTU2LTliZWUtNjM4YzAxY2M3ZDBkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0518715/",
          "actorName":"Pilou Asbæk",
-         "actorLink":"/name/nm1561982/",
+          "actorLink":"/name/nm1561982/",
+          "siblings":[
+              "Balon Greyjoy",
+              "Aeron Greyjoy"
+          ],
          "killed":[
             "Balon Greyjoy",
             "Obara Sand",
@@ -1244,7 +1280,8 @@
          "nickname":"The Kingslayer",
          "kingsguard":true,
          "parents":[
-            "Tywin Lannister"
+             "Tywin Lannister",
+             "Joanna Lannister"
          ],
          "parentOf":[
             "Joffrey Baratheon",
@@ -1492,6 +1529,12 @@
          "characterLink":"/character/ch0305013/",
          "actorName":"Ian Gelder",
          "actorLink":"/name/nm0312245/",
+         "marriedEngaged":"Dorna Lannister",
+         "parentOf":[
+            "Lancel Lannister",
+            "Martyn Lannister",
+            "Willem Lannister"
+         ],
          "killedBy":"Cersei Lannister"
       },
       {
@@ -1652,6 +1695,14 @@
          "characterLink":"/character/ch0376927/",
          "actorName":"Eugene Simon",
          "actorLink":"/name/nm1638294/",
+         "parents":[
+            "Kevan Lannister",
+            "Dorna Lannister"
+         ],
+         "siblings":[
+            "Martyn Lannister",
+            "Willem Lannister"
+         ],
          "killedBy":"Cersei Lannister"
       },
       {
@@ -1908,7 +1959,8 @@
          "actorName":"Aisling Franciosi",
          "actorLink":"/name/nm4957233/",
          "parents":[
-            "Rickard Stark"
+            "Rickard Stark",
+            "Lyarra Stark"
          ],
          "siblings":[
             "Brandon Stark",
@@ -2104,6 +2156,14 @@
          "characterLink":"/character/ch0395355/",
          "actorName":"Dean-Charles Chapman",
          "actorLink":"/name/nm2835616/",
+         "parents":[
+            "Kevan Lannister",
+            "Dorna Lannister"
+         ],
+         "siblings":[
+            "Lancel Lannister",
+            "Willem Lannister"
+         ],
          "killedBy":"Rickard Karstark"
       },
       {
@@ -2806,6 +2866,10 @@
          "actorName":"Gethin Anthony",
          "actorLink":"/name/nm2167445/",
          "killedBy":"Melisandre",
+         "parents":[
+            "Steffon Baratheon",
+            "Cassana Baratheon"
+         ],
          "siblings":[
             "Robert Baratheon",
             "Stannis Baratheon"
@@ -2869,6 +2933,10 @@
          "siblings":[
             "Aerys II Targaryen"
          ],
+         "parents":[
+              "Aegon V Targaryen",
+              "Unknown Targaryen Queen"
+          ],
          "marriedEngaged":"Aerys II Targaryen"
       },
       {
@@ -2879,6 +2947,9 @@
             "Elia Martell",
             "Rhaegar Targaryen"
          ],
+          "siblings":[
+              "Aegon Targaryen"
+          ],
          "killedBy":"Gregor Clegane"
       },
       {
@@ -2918,6 +2989,7 @@
             "Eddard Stark",
             "Lyanna Stark"
          ],
+         "marriedEngaged":"Lyarra Stark",
          "killedBy":"Aerys II Targaryen"
       },
       {
@@ -2928,6 +3000,10 @@
          "characterLink":"/character/ch0233141/",
          "actorName":"Art Parkinson",
          "actorLink":"/name/nm3280686/",
+         "parents":[
+            "Eddard Stark",
+            "Catelyn Stark"
+         ],
          "siblings":[
             "Robb Stark",
             "Sansa Stark",
@@ -2944,6 +3020,10 @@
          "characterLink":"/character/ch0158596/",
          "actorName":"Richard Madden",
          "actorLink":"/name/nm0534635/",
+         "parents":[
+            "Eddard Stark",
+            "Catelyn Stark"
+         ],
          "siblings":[
             "Sansa Stark",
             "Arya Stark",
@@ -2970,6 +3050,10 @@
          "actorLink":"/name/nm0004692/",
          "royal":true,
          "guardedBy":"Jon Arryn",
+         "parents":[
+            "Steffon Baratheon",
+            "Cassana Baratheon"
+         ],
          "marriedEngaged":[
             "Lyanna Stark",
             "Cersei Lannister"
@@ -3125,6 +3209,10 @@
          "characterLink":"/character/ch0158137/",
          "actorName":"Sophie Turner",
          "actorLink":"/name/nm3849842/",
+         "parents":[
+            "Eddard Stark",
+            "Catelyn Stark"
+         ],
          "siblings":[
             "Robb Stark",
             "Arya Stark",
@@ -3161,6 +3249,10 @@
                ]
             }
          ],
+         "parentOf":[
+            "Shireen Baratheon"
+         ],
+         "marriedEngaged":"Stannis Baratheon",
          "killedBy":"Selyse Baratheon",
          "killed":"Selyse Baratheon"
       },
@@ -3255,6 +3347,10 @@
          "characterLink":"/character/ch0306346/",
          "actorName":"Kerry Ingram",
          "actorLink":"/name/nm5081192/",
+         "parents":[
+            "Stannis Baratheon",
+            "Selyse Baratheon"
+         ],
          "killedBy":"Melisandre"
       },
       {
@@ -3293,6 +3389,13 @@
          "characterLink":"/character/ch0250897/",
          "actorName":"Stephen Dillane",
          "actorLink":"/name/nm0226820/",
+         "siblings":[
+            "Robert Baratheon",
+            "Renly Baratheon"
+         ],
+         "parentOf":[
+            "Shireen Baratheon"
+         ],
          "siblings":[
             "Robert Baratheon",
             "Renly Baratheon"
@@ -3485,6 +3588,15 @@
          "characterLink":"/character/ch0158526/",
          "actorName":"Alfie Allen",
          "actorLink":"/name/nm0654295/",
+         "parents":[
+              "Balon Greyjoy",
+              "Alannys Greyjoy"
+         ],
+         "siblings":[
+            "Rodrik Greyjoy",
+            "Maron Greyjoy",
+            "Yara Greyjoy"
+         ],
          "killed":[
             "Stiv",
             "Rodrik Cassel",
@@ -3649,6 +3761,14 @@
          "actorName":"Peter Dinklage",
          "actorLink":"/name/nm0227759/",
          "marriedEngaged":"Sansa Stark",
+         "parents":[
+             "Tywin Lannister",
+             "Joanna Lannister"
+         ],
+         "siblings":[
+            "Cersei Lannister",
+            "Jaime Lannister"
+         ],
          "killed":[
             "Shae",
             "Tywin Lannister"
@@ -3662,10 +3782,17 @@
          "characterLink":"/character/ch0242185/",
          "actorName":"Charles Dance",
          "actorLink":"/name/nm0001097/",
+         "parents":[
+            "Tytos Lannister",
+            "Jeyne Lannister"
+         ],
          "parentOf":[
             "Jaime Lannister",
             "Cersei Lannister",
             "Tyrion Lannister"
+         ],
+         "siblings":[
+            "Kevan Lannister"
          ],
          "allies":[
             "Robert Baratheon"
@@ -3847,6 +3974,14 @@
          "characterLink":"/character/ch0395356/",
          "actorName":"Timothy Gibbons",
          "actorLink":"/name/nm5624523/",
+         "siblings":[
+            "Lancel Lannister",
+            "Martyn Lannister"
+         ],
+         "parents":[
+            "Kevan Lannister",
+            "Dorna Lannister"
+         ],
          "killedBy":"Rickard Karstark"
       },
       {
@@ -3901,7 +4036,16 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NzU5ODk0MV5BMl5BanBnXkFtZTcwMzEyNDY2OQ@@._V1_SY1000_CR0,0,1503,1000_AL_.jpg",
          "characterLink":"/character/ch0300217/",
          "actorName":"Gemma Whelan",
-         "actorLink":"/name/nm2247629/"
+         "actorLink":"/name/nm2247629/",
+         "siblings":[
+            "Rodrik Greyjoy",
+            "Maron Greyjoy",
+            "Theon Greyjoy"
+         ],
+         "parents":[
+            "Balon Greyjoy",
+            "Alannys Greyjoy"
+         ]
       },
       {
          "characterName":"Yezzan zo Qaggaz",
