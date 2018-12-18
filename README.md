@@ -224,10 +224,10 @@ Outputs the _Game of Thrones_ narrative chart.
 
 ```
 
-### data/characters-houses.json
+### data/characters-groups.json
 ```javascript
 {
-  "house": [
+  "group": [
     {
       "name": "string",
       "characters": [

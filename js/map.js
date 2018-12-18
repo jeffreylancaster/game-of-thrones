@@ -412,8 +412,8 @@ $.getJSON("../data/"+keyValues, function( data ) {
 // add house-specific styling to lines
 .done(function(){
 	$("#loading").hide();
-	$.getJSON( "../data/characters-houses.json", function( data ) {
-		var house = data.house;
+	$.getJSON( "../data/characters-groups.json", function( data ) {
+		var house = data.group;
 		var charactersArray = [];
 		for(i=0; i<house.length; i++){
 			for(j=0; j<house[i].characters.length; j++){

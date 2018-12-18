@@ -59,14 +59,14 @@
         console.log("episodes.json loaded.");
         episodes = data.episodes;
 
-        $.getJSON( "../data/characters-houses.json", function(houses){
-          console.log("characters-houses.json loaded.");
-          charactersHouses = houses;
+        $.getJSON( "../data/characters-groups.json", function(groups){
+          console.log("characters-groups.json loaded.");
+          charactersHouses = groups;
 
           // build a single array of all characters to keep based on characters-houses.json
-          for(i=0; i<charactersHouses.house.length; i++){
-            for(j=0; j<charactersHouses.house[i].characters.length; j++){
-              charactersKeepArray.push(charactersHouses.house[i].characters[j]);
+          for(i=0; i<charactersHouses.groups.length; i++){
+            for(j=0; j<charactersHouses.groups[i].characters.length; j++){
+              charactersKeepArray.push(charactersHouses.groups[i].characters[j]);
             }
           }
 
@@ -136,9 +136,9 @@
         
           for(i=0; i<uniqueCharacters.length; i++){
             matrixObject.nodes[i] = {"name":uniqueCharacters[i],"group": 0};
-            for(j=0; j<charactersHouses.house.length; j++){
-              for(k=0; k<charactersHouses.house[j].characters.length; k++){
-                if(uniqueCharacters[i] == charactersHouses.house[j].characters[k]){
+            for(j=0; j<charactersHouses.groups.length; j++){
+              for(k=0; k<charactersHouses.groups[j].characters.length; k++){
+                if(uniqueCharacters[i] == charactersHouses.groups[j].characters[k]){
                   matrixObject.nodes[i].group = j+1;
                 }
               }

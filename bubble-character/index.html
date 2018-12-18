@@ -58,7 +58,7 @@ var config = {
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
-  .defer(d3.json, '../data/characters-houses.json')
+  .defer(d3.json, '../data/characters-groups.json')
   .defer(d3.json, '../data/colors.json')
   .await(ready);
 
@@ -67,7 +67,7 @@ function ready(error, e, g, l) {
   console.log("now that the files are loaded... do magic.");
 
   episodesData = e.episodes;
-  group = g.house;
+  group = g.groups;
   colors = l.colors;
 
   /* CONFIG SETUP */

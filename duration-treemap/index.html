@@ -55,7 +55,7 @@ var config = {
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
-  .defer(d3.json, '../data/characters-houses.json')
+  .defer(d3.json, '../data/characters-groups.json')
   .defer(d3.json, '../data/episodes.json')
   .await(ready);
 
@@ -64,7 +64,7 @@ function ready(error, e, cg, l) {
   console.log("now that the files are loaded... do magic.");
 
   episodesData = e.episodes;
-  group = cg.house;
+  group = cg.groups;
   colors = l.colors;
 
   var allCharacters = {}; // an object with total times for each character
