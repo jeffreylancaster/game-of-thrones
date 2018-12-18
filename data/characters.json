@@ -14,7 +14,9 @@
             "Elia Martell",
             "Rhaegar Targaryen"
          ],
-         "killedBy":"Gregor Clegane"
+         "killedBy":[
+            "Gregor Clegane"
+         ]
       },
       {
          "characterName":"Aeron Greyjoy",
@@ -23,7 +25,12 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNzI5MDg0ZDAtN2Y2ZC00MzU1LTgyYjQtNTBjYjEzODczZDVhXkEyXkFqcGdeQXVyNTg0Nzg4NTE@._V1_.jpg",
          "characterLink":"/character/ch0540081/",
          "actorName":"Michael Feast",
-         "actorLink":"/name/nm0269923/"
+         "actorLink":"/name/nm0269923/",
+         "siblings":[
+            "Balon Greyjoy",
+            "Euron Greyjoy"
+         ],
+         "nickname":"Damphair"
       },
       {
          "characterName":"Aerys II Targaryen",
@@ -51,8 +58,12 @@
          "siblings":[
             "Rhaella Targaryen"
          ],
-         "marriedEngaged":"Rhaella Targaryen",
-         "killedBy":"Jaime Lannister"
+         "marriedEngaged":[
+            "Rhaella Targaryen"
+         ],
+         "killedBy":[
+            "Jaime Lannister"
+         ]
       },
       {
          "characterName":"Akho",
@@ -61,7 +72,9 @@
          "characterLink":"/character/ch0544520/",
          "actorName":"Chuku Modu",
          "actorLink":"/name/nm6729880/",
-         "killedBy":"Daario Naharis"
+         "killedBy":[
+            "Daario Naharis"
+         ]
       },
       {
          "characterName":"Alliser Thorne",
@@ -70,8 +83,12 @@
          "characterLink":"/character/ch0246938/",
          "actorName":"Owen Teale",
          "actorLink":"/name/nm0853583/",
-         "killed":"Jon Snow",
-         "killedBy":"Jon Snow"
+         "killed":[
+            "Jon Snow"
+         ],
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Alton Lannister",
@@ -81,13 +98,18 @@
          "characterLink":"/character/ch0305012/",
          "actorName":"Karl Davies",
          "actorLink":"/name/nm0203801/",
-         "killedBy":"Jaime Lannister"
+         "killedBy":[
+            "Jaime Lannister"
+         ]
       },
       {
          "characterName":"Alys Karstark",
          "characterLink":"/character/ch0576836/",
          "actorName":"Megan Parkinson",
-         "actorLink":"/name/nm8257864/"
+         "actorLink":"/name/nm8257864/",
+         "parents":[
+            "Harald Karstark"
+         ]
       },
       {
          "characterName":"Amory Lorch",
@@ -96,8 +118,12 @@
          "characterLink":"/character/ch0305002/",
          "actorName":"Fintan McKeown",
          "actorLink":"/name/nm0571654/",
-         "killed":"Yoren",
-         "killedBy":"Jaqen H'ghar"
+         "killed":[
+            "Yoren"
+         ],
+         "killedBy":[
+            "Jaqen H'ghar"
+         ]
       },
       {
          "characterName":"Anguy",
@@ -120,7 +146,12 @@
          "characterLink":"/character/ch0507107/",
          "actorName":"Deobia Oparei",
          "actorLink":"/name/nm0649046/",
-         "killedBy":"Tyene Sand"
+         "killedBy":[
+            "Tyene Sand"
+         ],
+         "serves":[
+            "Doran Martell"
+         ]
       },
       {
          "characterName":"Armeca",
@@ -148,7 +179,9 @@
             "Howland Reed",
             "Eddard Stark"
          ],
-         "serves":"Aerys II Targaryen"
+         "serves":[
+            "Aerys II Targaryen"
+         ]
       },
       {
          "characterName":"Arya Stark",
@@ -176,6 +209,13 @@
             "Lothar Frey",
             "Walder Frey",
             "Petyr Baelish"
+         ],
+         "parents":[
+            "Eddard Stark",
+            "Catelyn Stark"
+         ],
+         "guardedBy":[
+            "Nymeria"
          ]
       },
       {
@@ -196,6 +236,10 @@
                   7
                ]
             }
+         ],
+         "parents":[
+            "Samwell Tarly",
+            "Gilly"
          ]
       },
       {
@@ -206,7 +250,17 @@
          "characterLink":"/character/ch0292152/",
          "actorName":"Patrick Malahide",
          "actorLink":"/name/nm0538869/",
-         "killedBy":"Euron Greyjoy"
+         "killedBy":[
+            "Euron Greyjoy"
+         ],
+         "parentOf":[
+            "Yara Greyjoy",
+            "Theon Greyjoy"
+         ],
+         "siblings":[
+            "Euron Greyjoy",
+            "Aeron Greyjoy"
+         ]
       },
       {
          "characterName":"Baratheon Guard",
@@ -222,7 +276,12 @@
          "characterLink":"/character/ch0241346/",
          "actorName":"Ian McElhinney",
          "actorLink":"/name/nm0568400/",
-         "killedBy":"Sons of the Harpy"
+         "killedBy":[
+            "Sons of the Harpy"
+         ],
+         "serves":[
+            "Daenerys Targaryen"
+         ]
       },
       {
          "characterName":"Benjen Stark",
@@ -240,7 +299,9 @@
             "Lyanna Stark",
             "Eddard Stark"
          ],
-         "killedBy":"Wights"
+         "killedBy":[
+            "Wights"
+         ]
       },
       {
          "characterName":"Beric Dondarrion",
@@ -252,7 +313,10 @@
                "actorName":"Richard Dormer",
                "actorLink":"/name/nm0233807/",
                "seasonsActive":[
-                  3
+                  3,
+                  6,
+                  7,
+                  8
                ]
             },
             {
@@ -263,7 +327,9 @@
                ]
             }
          ],
-         "killedBy":"Sandor Clegane"
+         "killedBy":[
+            "Sandor Clegane"
+         ]
       },
       {
          "characterName":"Bianca",
@@ -280,7 +346,9 @@
          "characterLink":"/character/ch0305028/",
          "actorName":"Gerard Jordan",
          "actorLink":"/name/nm0429956/",
-         "killedBy":"Sandor Clegane"
+         "killedBy":[
+            "Sandor Clegane"
+         ]
       },
       {
          "characterName":"Black Lorren",
@@ -296,8 +364,15 @@
          "characterLink":"/character/ch0014591/",
          "actorName":"Tim Plester",
          "actorLink":"/name/nm1043031/",
-         "killed":"Catelyn Stark",
-         "killedBy":"Arya Stark"
+         "killed":[
+            "Catelyn Stark"
+         ],
+         "killedBy":[
+            "Arya Stark"
+         ],
+         "parents":[
+            "Walder Frey"
+         ]
       },
       {
          "characterName":"Bobono",
@@ -314,13 +389,19 @@
          "characterLink":"/character/ch0305036/",
          "actorName":"Michael Condron",
          "actorLink":"/name/nm1638006/",
-         "killed":"Jon Snow",
-         "killedBy":"Jon Snow"
+         "killed":[
+            "Jon Snow"
+         ],
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Brandon Stark",
          "houseName":"Stark",
-         "killedBy":"Aerys II Targaryen",
+         "killedBy":[
+            "Aerys II Targaryen"
+         ],
          "parents":[
             "Rickard Stark"
          ],
@@ -343,6 +424,13 @@
             "Sansa Stark",
             "Arya Stark",
             "Rickon Stark"
+         ],
+         "parents":[
+            "Eddard Stark",
+            "Catelyn Stark"
+         ],
+         "guardedBy":[
+            "Summer"
          ]
       },
       {
@@ -364,6 +452,13 @@
             "Soldier Tom",
             "Stannis Baratheon",
             "Bolton Officer"
+         ],
+         "serves":[
+            "Renly Baratheon",
+            "Catelyn Stark"
+         ],
+         "servedBy":[
+            "Podrick Payne"
          ]
       },
       {
@@ -377,6 +472,9 @@
             "Vardis Egen",
             "Matthos Seaworth",
             "Lead Dornish Guard"
+         ],
+         "marriedEngaged":[
+            "Lollys Stokeworth"
          ]
       },
       {
@@ -386,7 +484,9 @@
          "characterLink":"/character/ch0541878/",
          "actorName":"Ian McShane",
          "actorLink":"/name/nm0574534/",
-         "killedBy":"Lem Lemoncloak"
+         "killedBy":[
+            "Lem Lemoncloak"
+         ]
       },
       {
          "characterName":"Brynden Tully",
@@ -396,7 +496,10 @@
          "characterLink":"/character/ch0381563/",
          "actorName":"Clive Russell",
          "actorLink":"/name/nm0751085/",
-         "nickname":"Blackfish"
+         "nickname":"Blackfish",
+         "siblings":[
+            "Hoster Tully"
+         ]
       },
       {
          "characterName":"Captain of the Archers",
@@ -415,15 +518,39 @@
          "characterLink":"/character/ch0145135/",
          "actorName":"Michelle Fairley",
          "actorLink":"/name/nm0265610/",
-         "killed":"Joyeuse Erenford",
-         "killedBy":"Black Walder Rivers"
+         "killed":[
+            "Joyeuse Erenford"
+         ],
+         "killedBy":[
+            "Black Walder Rivers"
+         ],
+         "parents":[
+            "Hoster Tully"
+         ],
+         "parentOf":[
+            "Robb Stark",
+            "Sansa Stark",
+            "Arya Stark",
+            "Bran Stark",
+            "Rickon Stark"
+         ],
+         "siblings":[
+            "Lysa Arryn",
+            "Edmure Tully"
+         ],
+         "marriedEngaged":[
+            "Eddard Stark",
+            "Brandon Stark"
+         ]
       },
       {
          "characterName":"Catspaw Assassin",
          "characterLink":"/character/ch0305046/",
          "actorName":"Lalor Roddy",
          "actorLink":"/name/nm0734498/",
-         "killedBy":"Summer"
+         "killedBy":[
+            "Summer"
+         ]
       },
       {
          "characterName":"Cersei Lannister",
@@ -449,7 +576,9 @@
             "Jaime Lannister",
             "Tyrion Lannister"
          ],
-         "marriedEngaged":"Robert Baratheon",
+         "marriedEngaged":[
+            "Robert Baratheon"
+         ],
          "killed":[
             "Lancel Lannister",
             "High Sparrow",
@@ -489,7 +618,9 @@
          "characterLink":"/character/ch0300218/",
          "actorName":"Robert Pugh",
          "actorLink":"/name/nm0700059/",
-         "killedBy":"Karl Tanner"
+         "killedBy":[
+            "Karl Tanner"
+         ]
       },
       {
          "characterName":"Daario Naharis",
@@ -521,6 +652,9 @@
             "Mossador",
             "Iggo",
             "Akho"
+         ],
+         "serves":[
+            "Daenerys Targaryen"
          ]
       },
       {
@@ -554,6 +688,24 @@
             "Dothraki Bloodrider #2",
             "Randyll Tarly",
             "Dickon Tarly"
+         ],
+         "servedBy":[
+            "Barristan Selmy",
+            "Daario Naharis",
+            "Grey Worm",
+            "Jorah Mormont",
+            "Missandei"
+         ],
+         "parentOf":[
+            "Rhaego"
+         ],
+         "marriedEngaged":[
+            "Khal Drogo"
+         ],
+         "guardedBy":[
+            "Drogon",
+            "Rhaegal",
+            "Viserion"
          ]
       },
       {
@@ -578,7 +730,14 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTMwODc0NzI4Ml5BMl5BanBnXkFtZTcwNzY3NDk4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0255396/",
          "actorName":"Liam Cunningham",
-         "actorLink":"/name/nm0192377/"
+         "actorLink":"/name/nm0192377/",
+         "serves":[
+            "Stannis Baratheon",
+            "Jon Snow"
+         ],
+         "parentOf":[
+            "Matthos Seaworth"
+         ]
       },
       {
          "characterName":"Dickon Tarly",
@@ -601,7 +760,17 @@
                ]
             }
          ],
-         "killedBy":"Daenerys Targaryen"
+         "killedBy":[
+            "Daenerys Targaryen"
+         ],
+         "parents":[
+            "Randyll Tarly",
+            "Melessa Tarly"
+         ],
+         "siblings":[
+            "Samwell Tarly",
+            "Talla Tarly"
+         ]
       },
       {
          "characterName":"Dongo the Giant",
@@ -610,7 +779,9 @@
          "characterLink":"/character/ch0510932/",
          "actorName":"Ian Whyte",
          "actorLink":"/name/nm1613839/",
-         "killedBy":"Night's Watchman"
+         "killedBy":[
+            "Night's Watchman"
+         ]
       },
       {
          "characterName":"Donnel Waynwood",
@@ -625,7 +796,9 @@
          "characterLink":"/character/ch0305031/",
          "actorName":"Tony Way",
          "actorLink":"/name/nm0915453/",
-         "killedBy":"Petyr Baelish"
+         "killedBy":[
+            "Petyr Baelish"
+         ]
       },
       {
          "characterName":"Doran Martell",
@@ -635,7 +808,16 @@
          "characterLink":"/character/ch0468006/",
          "actorName":"Alexander Siddig",
          "actorLink":"/name/nm0796502/",
-         "killedBy":"Ellaria Sand"
+         "killedBy":[
+            "Ellaria Sand"
+         ],
+         "parentOf":[
+            "Trystane Martell"
+         ],
+         "siblings":[
+            "Elia Martell",
+            "Oberyn Martell"
+         ]
       },
       {
          "characterName":"Doreah",
@@ -644,8 +826,12 @@
          "characterLink":"/character/ch0248504/",
          "actorName":"Roxanne McKee",
          "actorLink":"/name/nm1861467/",
-         "killed":"Irri",
-         "killedBy":"Daenerys Targaryen"
+         "killed":[
+            "Irri"
+         ],
+         "killedBy":[
+            "Daenerys Targaryen"
+         ]
       },
       {
          "characterName":"Dothraki Bloodrider #1",
@@ -654,7 +840,9 @@
          "characterLink":"/character/ch0542918/",
          "actorName":"Diogo Sales",
          "actorLink":"/name/nm6088160/",
-         "killedBy":"Daenerys Targaryen"
+         "killedBy":[
+            "Daenerys Targaryen"
+         ]
       },
       {
          "characterName":"Dothraki Bloodrider #2",
@@ -663,14 +851,18 @@
          "characterLink":"/character/ch0542918/",
          "actorName":"Junade Khan",
          "actorLink":"/name/nm2999602/",
-         "killedBy":"Daenerys Targaryen"
+         "killedBy":[
+            "Daenerys Targaryen"
+         ]
       },
       {
          "characterName":"Drennan",
          "characterLink":"/character/ch0305030/",
          "actorName":"David Coakley",
          "actorLink":"/name/nm2231505/",
-         "killedBy":"Osha"
+         "killedBy":[
+            "Osha"
+         ]
       },
       {
          "characterName":"Drogon",
@@ -679,7 +871,9 @@
             "Rhaegal",
             "Viserion"
          ],
-         "guardianOf":"Daenerys Targaryen",
+         "guardianOf":[
+            "Daenerys Targaryen"
+         ],
          "killed":[
             "Pyat Pree",
             "Kraznys mo Nakloz",
@@ -703,7 +897,9 @@
          "actorName":"Sean Bean",
          "actorLink":"/name/nm0000293/",
          "nickname":"Ned",
-         "guardianOf":"Jon Snow",
+         "guardianOf":[
+            "Jon Snow"
+         ],
          "siblings":[
             "Brandon Stark",
             "Benjen Stark",
@@ -722,8 +918,22 @@
             "Howland Reed",
             "Robert Baratheon"
          ],
-         "guardedBy":"Jon Arryn",
-         "killedBy":"Ilyn Payne"
+         "guardedBy":[
+            "Jon Arryn"
+         ],
+         "killedBy":[
+            "Ilyn Payne"
+         ],
+         "marriedEngaged":[
+            "Catelyn Stark"
+         ],
+         "parentOf":[
+            "Robb Stark",
+            "Sansa Stark",
+            "Arya Stark",
+            "Bran Stark",
+            "Rickon Stark"
+         ]
       },
       {
          "characterName":"Eddison Tollett",
@@ -741,7 +951,13 @@
          "characterLink":"/character/ch0316931/",
          "actorName":"Tobias Menzies",
          "actorLink":"/name/nm0580014/",
-         "marriedEngaged":"Roslin Frey"
+         "marriedEngaged":[
+            "Roslin Frey"
+         ],
+         "siblings":[
+            "Catelyn Stark",
+            "Lysa Arryn"
+         ]
       },
       {
          "characterName":"Ellaria Sand",
@@ -754,17 +970,32 @@
          "killed":[
             "Myrcella Baratheon",
             "Doran Martell"
+         ],
+         "parentOf":[
+            "Tyene Sand"
+         ],
+         "marriedEngaged":[
+            "Oberyn Martell"
          ]
       },
       {
          "characterName":"Elia Martell",
+         "houseName":"Martell",
          "royal":true,
-         "marriedEngaged":"Rhaegar Targaryen",
+         "marriedEngaged":[
+            "Rhaegar Targaryen"
+         ],
          "parentOf":[
             "Rhaenys Targaryen",
             "Aegon Targaryen"
          ],
-         "killedBy":"Gregor Clegane"
+         "killedBy":[
+            "Gregor Clegane"
+         ],
+         "siblings":[
+            "Doran Martell",
+            "Oberyn Martell"
+         ]
       },
       {
          "characterName":"Eon Hunter",
@@ -784,6 +1015,10 @@
             "Balon Greyjoy",
             "Obara Sand",
             "Nymeria Sand"
+         ],
+         "siblings":[
+            "Balon Greyjoy",
+            "Aeron Greyjoy"
          ]
       },
       {
@@ -807,7 +1042,9 @@
          "characterLink":"/character/ch0171395/",
          "actorName":"Dermot Keaney",
          "actorLink":"/name/nm0443825/",
-         "killedBy":"White Walker"
+         "killedBy":[
+            "White Walker"
+         ]
       },
       {
          "characterName":"Gatins",
@@ -816,7 +1053,9 @@
          "characterLink":"/character/ch0523969/",
          "actorName":"Ricky Champ",
          "actorLink":"/name/nm2307468/",
-         "killedBy":"Sandor Clegane"
+         "killedBy":[
+            "Sandor Clegane"
+         ]
       },
       {
          "characterName":"Gendry",
@@ -840,7 +1079,9 @@
          "characterLink":"/character/ch0540530/",
          "actorName":"Eddie Eyre",
          "actorLink":"/name/nm6793798/",
-         "killedBy":"Eddard Stark"
+         "killedBy":[
+            "Eddard Stark"
+         ]
       },
       {
          "characterName":"Ghost",
@@ -852,8 +1093,12 @@
             "Summer",
             "Shaggydog"
          ],
-         "guardianOf":"Jon Snow",
-         "killed":"Rast"
+         "guardianOf":[
+            "Jon Snow"
+         ],
+         "killed":[
+            "Rast"
+         ]
       },
       {
          "characterName":"Gilly",
@@ -861,7 +1106,16 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTYzOTQxMTA3MF5BMl5BanBnXkFtZTcwODM5NDk4OQ@@._V1_SY1000_CR0,0,760,1000_AL_.jpg",
          "characterLink":"/character/ch0306819/",
          "actorName":"Hannah Murray",
-         "actorLink":"/name/nm2356940/"
+         "actorLink":"/name/nm2356940/",
+         "marriedEngaged":[
+            "Samwell Tarly"
+         ],
+         "parentOf":[
+            "Baby Sam"
+         ],
+         "parents":[
+            "Craster"
+         ]
       },
       {
          "characterName":"Goldcloak",
@@ -894,7 +1148,9 @@
          "characterLink":"/character/ch0232836/",
          "actorName":"Julian Glover",
          "actorLink":"/name/nm0002103/",
-         "killedBy":"Little Birds"
+         "killedBy":[
+            "Little Birds"
+         ]
       },
       {
          "characterName":"Great Master #1",
@@ -977,7 +1233,10 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2VjMTM4OTItMDUxMi00N2NiLThhMWMtNGNhMDQ4OGJhOWU0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0305010/",
          "actorName":"Clive Mantle",
-         "actorLink":"/name/nm0544139/"
+         "actorLink":"/name/nm0544139/",
+         "parentOf":[
+            "Smalljon Umber"
+         ]
       },
       {
          "characterName":"Gregor Clegane",
@@ -1005,12 +1264,17 @@
                "seasonsActive":[
                   4,
                   5,
-                  6
+                  6,
+                  7,
+                  8
                ]
             }
          ],
          "nickname":"The Mountain",
-         "serves":"Tywin Lannister",
+         "serves":[
+            "Tywin Lannister",
+            "Cersei Lannister"
+         ],
          "killed":[
             "Elia Martell",
             "Rhaenys Targaryen",
@@ -1028,7 +1292,9 @@
          "characterLink":"/character/ch0396531/",
          "actorName":"Cliff Barry",
          "actorLink":"/name/nm0057965/",
-         "killedBy":"Unsullied"
+         "killedBy":[
+            "Unsullied"
+         ]
       },
       {
          "characterName":"Grenn",
@@ -1037,8 +1303,12 @@
          "characterLink":"/character/ch0251496/",
          "actorName":"Mark Stanley",
          "actorLink":"/name/nm4440305/",
-         "killed":"Mag the Mighty",
-         "killedBy":"Mag the Mighty"
+         "killed":[
+            "Mag the Mighty"
+         ],
+         "killedBy":[
+            "Mag the Mighty"
+         ]
       },
       {
          "characterName":"Grey Wind",
@@ -1050,9 +1320,15 @@
             "Shaggydog",
             "Ghost"
          ],
-         "guardianOf":"Robb Stark",
-         "killed":"Rennick",
-         "killedBy":"Frey Crossbowmen"
+         "guardianOf":[
+            "Robb Stark"
+         ],
+         "killed":[
+            "Rennick"
+         ],
+         "killedBy":[
+            "Frey Crossbowmen"
+         ]
       },
       {
          "characterName":"Grey Worm",
@@ -1064,6 +1340,9 @@
          "killed":[
             "Belicho Paenymion",
             "Razdal mo Eraz"
+         ],
+         "serves":[
+            "Daenerys Targaryen"
          ]
       },
       {
@@ -1096,7 +1375,13 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTE4OTIwNWQtZjNkOC00MzhhLThhYzQtMmU1OTFiZGU3YzMzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0542917/",
          "actorName":"Paul Rattray",
-         "actorLink":"/name/nm1051151/"
+         "actorLink":"/name/nm1051151/",
+         "parents":[
+            "Rickard Karstark"
+         ],
+         "parentOf":[
+            "Alys Karstark"
+         ]
       },
       {
          "characterName":"High Priestess",
@@ -1111,7 +1396,9 @@
          "characterLink":"/character/ch0508056/",
          "actorName":"David Verrey",
          "actorLink":"/name/nm0894857/",
-         "killedBy":"Kings Landing Rioters"
+         "killedBy":[
+            "Kings Landing Rioters"
+         ]
       },
       {
          "characterName":"High Septon",
@@ -1128,7 +1415,9 @@
          "characterLink":"/character/ch0476559/",
          "actorName":"Jonathan Pryce",
          "actorLink":"/name/nm0000596/",
-         "killedBy":"Cersei Lannister"
+         "killedBy":[
+            "Cersei Lannister"
+         ]
       },
       {
          "characterName":"Hizdahr zo Loraq",
@@ -1137,7 +1426,9 @@
          "characterLink":"/character/ch0414458/",
          "actorName":"Joel Fry",
          "actorLink":"/name/nm2181128/",
-         "killedBy":"Sons of the Harpy"
+         "killedBy":[
+            "Sons of the Harpy"
+         ]
       },
       {
          "characterName":"Hodor",
@@ -1146,8 +1437,12 @@
          "characterLink":"/character/ch0238584/",
          "actorName":"Kristian Nairn",
          "actorLink":"/name/nm3964231/",
-         "killed":"Locke",
-         "killedBy":"Wights"
+         "killed":[
+            "Locke"
+         ],
+         "killedBy":[
+            "Wights"
+         ]
       },
       {
          "characterName":"Hoster Tully",
@@ -1178,6 +1473,10 @@
          ],
          "killed":[
             "Arthur Dayne"
+         ],
+         "parentOf":[
+            "Jojen Reed",
+            "Meera Reed"
          ]
       },
       {
@@ -1187,7 +1486,9 @@
          "characterLink":"/character/ch0305026/",
          "actorName":"Jefferson Hall",
          "actorLink":"/name/nm2131630/",
-         "killedBy":"Gregor Clegane"
+         "killedBy":[
+            "Gregor Clegane"
+         ]
       },
       {
          "characterName":"Illyrio Mopatis",
@@ -1204,7 +1505,9 @@
          "characterLink":"/character/ch0246254/",
          "actorName":"Wilko Johnson",
          "actorLink":"/name/nm3330122/",
-         "killed":"Eddard Stark"
+         "killed":[
+            "Eddard Stark"
+         ]
       },
       {
          "characterName":"Irri",
@@ -1213,7 +1516,9 @@
          "characterLink":"/character/ch0249444/",
          "actorName":"Amrita Acharia",
          "actorLink":"/name/nm3822505/",
-         "killedBy":"Doreah"
+         "killedBy":[
+            "Doreah"
+         ]
       },
       {
          "characterName":"Izembaro",
@@ -1231,7 +1536,9 @@
       },
       {
          "characterName":"Jafer Flowers",
-         "killedBy":"White Walker"
+         "killedBy":[
+            "White Walker"
+         ]
       },
       {
          "characterName":"Jaime Lannister",
@@ -1275,8 +1582,12 @@
          "characterLink":"/character/ch0300651/",
          "actorName":"Dominic Carter",
          "actorLink":"/name/nm0141582/",
-         "killed":"Barra",
-         "killedBy":"Jon Snow"
+         "killed":[
+            "Barra"
+         ],
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Jaqen H'ghar",
@@ -1313,7 +1624,9 @@
          "characterLink":"/character/ch0251492/",
          "actorName":"James Cosmo",
          "actorLink":"/name/nm0181920/",
-         "killedBy":"Rast"
+         "killedBy":[
+            "Rast"
+         ]
       },
       {
          "characterName":"Jhiqui",
@@ -1343,7 +1656,9 @@
             "Margaery Tyrell"
          ],
          "royal":true,
-         "killed":"Ros",
+         "killed":[
+            "Ros"
+         ],
          "killedBy":[
             "Petyr Baelish",
             "Olenna Tyrell"
@@ -1356,7 +1671,15 @@
          "characterLink":"/character/ch0316921/",
          "actorName":"Thomas Brodie-Sangster",
          "actorLink":"/name/nm1032473/",
-         "killedBy":"Meera Reed"
+         "killedBy":[
+            "Meera Reed"
+         ],
+         "siblings":[
+            "Meera Reed"
+         ],
+         "parents":[
+            "Howland Reed"
+         ]
       },
       {
          "characterName":"Jon Arryn",
@@ -1372,7 +1695,9 @@
          "allies":[
             "Robert Baratheon"
          ],
-         "killedBy":"Lysa Arryn"
+         "killedBy":[
+            "Lysa Arryn"
+         ]
       },
       {
          "characterName":"Jon Snow",
@@ -1389,7 +1714,10 @@
             "Rhaegar Targaryen",
             "Lyanna Stark"
          ],
-         "guardedBy":"Eddard Stark",
+         "guardedBy":[
+            "Eddard Stark",
+            "Ghost"
+         ],
          "killed":[
             "Othor",
             "Qhorin Halfhand",
@@ -1410,6 +1738,9 @@
             "Othell Yarwyck",
             "Bowen Marsh",
             "Olly"
+         ],
+         "marriedEngaged":[
+            "Ygritte"
          ]
       },
       {
@@ -1430,6 +1761,12 @@
             "Qotho",
             "Norvoshi Pit Fighter",
             "Meereenese Champion"
+         ],
+         "serves":[
+            "Daenerys Targaryen"
+         ],
+         "parents":[
+            "Jeor Mormont"
          ]
       },
       {
@@ -1439,7 +1776,12 @@
          "characterLink":"/character/ch0245400/",
          "actorName":"Jamie Sives",
          "actorLink":"/name/nm0803397/",
-         "killedBy":"Jaime Lannister"
+         "killedBy":[
+            "Jaime Lannister"
+         ],
+         "serves":[
+            "Eddard Stark"
+         ]
       },
       {
          "characterName":"Joyeuse Erenford",
@@ -1448,7 +1790,12 @@
          "characterLink":"/character/ch0304494/",
          "actorName":"Kelly Long",
          "actorLink":"/name/nm4958677/",
-         "killedBy":"Catelyn Stark"
+         "killedBy":[
+            "Catelyn Stark"
+         ],
+         "marriedEngaged":[
+            "Walder Frey"
+         ]
       },
       {
          "characterName":"Karl Tanner",
@@ -1457,8 +1804,12 @@
          "characterLink":"/character/ch0396528/",
          "actorName":"Burn Gorman",
          "actorLink":"/name/nm1218607/",
-         "killed":"Craster",
-         "killedBy":"Jon Snow"
+         "killed":[
+            "Craster"
+         ],
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Karsi",
@@ -1467,7 +1818,13 @@
          "characterLink":"/character/ch0512707/",
          "actorName":"Birgitte Hjort Sørensen",
          "actorLink":"/name/nm2171898/",
-         "killedBy":"Pack of Wights"
+         "killedBy":[
+            "Pack of Wights"
+         ],
+         "parentOf":[
+            "Johnna",
+            "Willa"
+         ]
       },
       {
          "characterName":"Kayla",
@@ -1482,7 +1839,9 @@
          "characterLink":"/character/ch0305327/",
          "actorName":"Tim Landers",
          "actorLink":"/name/nm2461009/",
-         "killedBy":"Wildling"
+         "killedBy":[
+            "Wildling"
+         ]
       },
       {
          "characterName":"Kevan Lannister",
@@ -1492,7 +1851,17 @@
          "characterLink":"/character/ch0305013/",
          "actorName":"Ian Gelder",
          "actorLink":"/name/nm0312245/",
-         "killedBy":"Cersei Lannister"
+         "killedBy":[
+            "Cersei Lannister"
+         ],
+         "siblings":[
+            "Tywin Lannister"
+         ],
+         "parentOf":[
+            "Lancel Lannister",
+            "Martyn Lannister",
+            "Willem Lannister"
+         ]
       },
       {
          "characterName":"Khal Drogo",
@@ -1501,10 +1870,18 @@
          "characterLink":"/character/ch0171388/",
          "actorName":"Jason Momoa",
          "actorLink":"/name/nm0597388/",
-         "killedBy":"Daenerys Targaryen",
+         "killedBy":[
+            "Daenerys Targaryen"
+         ],
          "killed":[
             "Viserys Targaryen",
             "Mago"
+         ],
+         "marriedEngaged":[
+            "Daenerys Targaryen"
+         ],
+         "parentOf":[
+            "Rhaego"
          ]
       },
       {
@@ -1514,7 +1891,9 @@
          "characterLink":"/character/ch0538748/",
          "actorName":"Joseph Naufahu",
          "actorLink":"/name/nm0622533/",
-         "killedBy":"Daenerys Targaryen"
+         "killedBy":[
+            "Daenerys Targaryen"
+         ]
       },
       {
          "characterName":"Khal Rhalko",
@@ -1523,7 +1902,9 @@
          "characterLink":"/character/ch0535371/",
          "actorName":"Andrei Claude",
          "actorLink":"/name/nm3040811/",
-         "killedBy":"Daenerys Targaryen"
+         "killedBy":[
+            "Daenerys Targaryen"
+         ]
       },
       {
          "characterName":"King Joffrey Baratheon Dwarf",
@@ -1554,21 +1935,27 @@
          "characterLink":"/character/ch0348391/",
          "actorName":"Reg Wayment",
          "actorLink":"/name/nm1168404/",
-         "killedBy":"Sandor Clegane"
+         "killedBy":[
+            "Sandor Clegane"
+         ]
       },
       {
          "characterName":"King's Landing Rioter #2",
          "characterLink":"/character/ch0348391/",
          "actorName":"Marko Juraga",
          "actorLink":"/name/nm0432837/",
-         "killedBy":"Sandor Clegane"
+         "killedBy":[
+            "Sandor Clegane"
+         ]
       },
       {
          "characterName":"King's Landing Rioter #3",
          "characterLink":"/character/ch0348391/",
          "actorName":"Rea Separovic",
          "actorLink":"/name/nm5037688/",
-         "killedBy":"Sandor Clegane"
+         "killedBy":[
+            "Sandor Clegane"
+         ]
       },
       {
          "characterName":"Kinvara",
@@ -1580,9 +1967,13 @@
       },
       {
          "characterName":"Kitty Frey",
+         "houseName":"Frey",
          "characterLink":"/character/ch0576869/",
          "actorName":"Lucy Hayes",
-         "actorLink":"/name/nm8314450/"
+         "actorLink":"/name/nm8314450/",
+         "marriedEngaged":[
+            "Walder Frey"
+         ]
       },
       {
          "characterName":"Knight of House Frey",
@@ -1611,7 +2002,9 @@
          "characterLink":"/character/ch0339503/",
          "actorName":"Dan Hildebrand",
          "actorLink":"/name/nm0383835/",
-         "killedBy":"Drogon"
+         "killedBy":[
+            "Drogon"
+         ]
       },
       {
          "characterName":"Kurleket",
@@ -1620,12 +2013,16 @@
          "characterLink":"/character/ch0305315/",
          "actorName":"Kevin Keenan",
          "actorLink":"/name/nm4450657/",
-         "killedBy":"Mountain Clansman"
+         "killedBy":[
+            "Mountain Clansman"
+         ]
       },
       {
          "characterName":"Lady",
          "houseName":"Stark",
-         "killedBy":"Eddard Stark",
+         "killedBy":[
+            "Eddard Stark"
+         ],
          "siblings":[
             "Grey Wind",
             "Nymeria",
@@ -1633,7 +2030,9 @@
             "Shaggydog",
             "Ghost"
          ],
-         "guardianOf":"Sansa Stark"
+         "guardianOf":[
+            "Sansa Stark"
+         ]
       },
       {
          "characterName":"Lady Crane",
@@ -1642,7 +2041,9 @@
          "characterLink":"/character/ch0541190/",
          "actorName":"Essie Davis",
          "actorLink":"/name/nm0204583/",
-         "killedBy":"The Waif"
+         "killedBy":[
+            "The Waif"
+         ]
       },
       {
          "characterName":"Lancel Lannister",
@@ -1652,7 +2053,16 @@
          "characterLink":"/character/ch0376927/",
          "actorName":"Eugene Simon",
          "actorLink":"/name/nm1638294/",
-         "killedBy":"Cersei Lannister"
+         "killedBy":[
+            "Cersei Lannister"
+         ],
+         "parents":[
+            "Kevan Lannister"
+         ],
+         "siblings":[
+            "Martyn Lannister",
+            "Willem Lannister"
+         ]
       },
       {
          "characterName":"Lannister Captain",
@@ -1691,7 +2101,9 @@
          "characterLink":"/character/ch0539716/",
          "actorName":"Christian Vit",
          "actorLink":"/name/nm5908524/",
-         "killedBy":"Bronn"
+         "killedBy":[
+            "Bronn"
+         ]
       },
       {
          "characterName":"Leaf",
@@ -1714,7 +2126,9 @@
                ]
             }
          ],
-         "killedBy":"Wights"
+         "killedBy":[
+            "Wights"
+         ]
       },
       {
          "characterName":"Lem Lemoncloak",
@@ -1723,8 +2137,12 @@
          "characterLink":"/character/ch0542106/",
          "actorName":"Jóhannes Haukur Jóhannesson",
          "actorLink":"/name/nm1778512/",
-         "killed":"Brother Ray",
-         "killedBy":"Sandor Clegane"
+         "killed":[
+            "Brother Ray"
+         ],
+         "killedBy":[
+            "Sandor Clegane"
+         ]
       },
       {
          "characterName":"Leo Lefford",
@@ -1789,7 +2207,9 @@
          "characterLink":"/character/ch0511931/",
          "actorName":"Zachary Baharov",
          "actorLink":"/name/nm1707712/",
-         "killedBy":"White Walker"
+         "killedBy":[
+            "White Walker"
+         ]
       },
       {
          "characterName":"Locke",
@@ -1798,7 +2218,9 @@
          "characterLink":"/character/ch0045904/",
          "actorName":"Noah Taylor",
          "actorLink":"/name/nm0852965/",
-         "killedBy":"Hodor"
+         "killedBy":[
+            "Hodor"
+         ]
       },
       {
          "characterName":"Lollys Stokeworth",
@@ -1806,7 +2228,10 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BODQ5MTY2MjAtZmM4NC00OGZmLWIyYjEtYTNlOGQxMzg2NzgxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0511247/",
          "actorName":"Elizabeth Cadwallader",
-         "actorLink":"/name/nm5502252/"
+         "actorLink":"/name/nm5502252/",
+         "marriedEngaged":[
+            "Bronn"
+         ]
       },
       {
          "characterName":"Lommy Greenhands",
@@ -1815,7 +2240,9 @@
          "characterLink":"/character/ch0257030/",
          "actorName":"Eros Vlahos",
          "actorLink":"/name/nm2869309/",
-         "killedBy":"Polliver"
+         "killedBy":[
+            "Polliver"
+         ]
       },
       {
          "characterName":"Loras Tyrell",
@@ -1825,7 +2252,15 @@
          "characterLink":"/character/ch0231428/",
          "actorName":"Finn Jones",
          "actorLink":"/name/nm3645691/",
-         "killedBy":"Cersei Lannister"
+         "killedBy":[
+            "Cersei Lannister"
+         ],
+         "siblings":[
+            "Margaery Tyrell"
+         ],
+         "parents":[
+            "Mace Tyrell"
+         ]
       },
       {
          "characterName":"Lord Galbart Glover",
@@ -1875,8 +2310,15 @@
                ]
             }
          ],
-         "killed":"Talisa Maegyr",
-         "killedBy":"Arya Stark"
+         "killed":[
+            "Talisa Maegyr"
+         ],
+         "killedBy":[
+            "Arya Stark"
+         ],
+         "parents":[
+            "Walder Frey"
+         ]
       },
       {
          "characterName":"Loyal Night's Watchman #1",
@@ -1919,11 +2361,15 @@
             "Robert Baratheon",
             "Rhaegar Targaryen"
          ],
-         "abductedBy":"Rhaegar Targaryen",
+         "abductedBy":[
+            "Rhaegar Targaryen"
+         ],
          "parentOf":[
             "Jon Snow"
          ],
-         "killedBy":"Jon Snow"
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Lysa Arryn",
@@ -1936,9 +2382,22 @@
             "Arryn",
             "Tully"
          ],
-         "killed":"Jon Arryn",
-         "killedBy":"Petyr Baelish",
-         "marriedEngaged":"Petyr Baelish"
+         "killed":[
+            "Jon Arryn"
+         ],
+         "killedBy":[
+            "Petyr Baelish"
+         ],
+         "marriedEngaged":[
+            "Petyr Baelish"
+         ],
+         "parents":[
+            "Hoster Tully"
+         ],
+         "siblings":[
+            "Catelyn Tully",
+            "Edmure Tully"
+         ]
       },
       {
          "characterName":"Mace Tyrell",
@@ -1948,7 +2407,13 @@
          "characterLink":"/character/ch0384328/",
          "actorName":"Roger Ashton-Griffiths",
          "actorLink":"/name/nm0004355/",
-         "killedBy":"Cersei Lannister"
+         "killedBy":[
+            "Cersei Lannister"
+         ],
+         "parentOf":[
+            "Margaery Tyrell",
+            "Loras Tyrell"
+         ]
       },
       {
          "characterName":"Maester Aemon",
@@ -1958,7 +2423,9 @@
          "characterLink":"/character/ch0246936/",
          "actorName":"Peter Vaughan",
          "actorLink":"/name/nm0891092/",
-         "killedBy":"Natural Causes"
+         "killedBy":[
+            "Natural Causes"
+         ]
       },
       {
          "characterName":"Maester Cressen",
@@ -1967,8 +2434,12 @@
          "characterLink":"/character/ch0255280/",
          "actorName":"Oliver Ford Davies",
          "actorLink":"/name/nm0203882/",
-         "killedBy":"Maester Cressen",
-         "killed":"Maester Cressen"
+         "killedBy":[
+            "Maester Cressen"
+         ],
+         "killed":[
+            "Maester Cressen"
+         ]
       },
       {
          "characterName":"Maester Luwin",
@@ -1977,7 +2448,9 @@
          "characterLink":"/character/ch0171393/",
          "actorName":"Donald Sumpter",
          "actorLink":"/name/nm0838910/",
-         "killedBy":"Osha"
+         "killedBy":[
+            "Osha"
+         ]
       },
       {
          "characterName":"Maester Wolkan",
@@ -2018,7 +2491,9 @@
          "characterLink":"/character/ch0379227/",
          "actorName":"Ivailo Dimitrov",
          "actorLink":"/name/nm2162079/",
-         "killedBy":"Khal Drogo"
+         "killedBy":[
+            "Khal Drogo"
+         ]
       },
       {
          "characterName":"Male Prostitute",
@@ -2051,7 +2526,9 @@
          "characterLink":"/character/ch0306220/",
          "actorName":"James Doran",
          "actorLink":"/name/nm0243696/",
-         "killedBy":"Podrick Payne"
+         "killedBy":[
+            "Podrick Payne"
+         ]
       },
       {
          "characterName":"Manservant",
@@ -2080,7 +2557,15 @@
             "Joffrey Baratheon",
             "Tommen Baratheon"
          ],
-         "killedBy":"Cersei Lannister"
+         "killedBy":[
+            "Cersei Lannister"
+         ],
+         "siblings":[
+            "Loras Tyrell"
+         ],
+         "parents":[
+            "Mace Tyrell"
+         ]
       },
       {
          "characterName":"Margaery's Handmaiden",
@@ -2104,7 +2589,16 @@
          "characterLink":"/character/ch0395355/",
          "actorName":"Dean-Charles Chapman",
          "actorLink":"/name/nm2835616/",
-         "killedBy":"Rickard Karstark"
+         "killedBy":[
+            "Rickard Karstark"
+         ],
+         "parents":[
+            "Kevan Lannister"
+         ],
+         "siblings":[
+            "Lancel Lannister",
+            "Willem Lannister"
+         ]
       },
       {
          "characterName":"Masha Heddle",
@@ -2119,7 +2613,12 @@
          "characterLink":"/character/ch0305029/",
          "actorName":"Kerr Logan",
          "actorLink":"/name/nm4523680/",
-         "killedBy":"Bronn"
+         "killedBy":[
+            "Bronn"
+         ],
+         "parents":[
+            "Davos Seaworth"
+         ]
       },
       {
          "characterName":"Meera Reed",
@@ -2131,6 +2630,9 @@
          "killed":[
             "Jojen Reed",
             "White Walker"
+         ],
+         "parents":[
+            "Howland Reed"
          ]
       },
       {
@@ -2145,7 +2647,15 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BN2U0YmU1Y2EtNTNkOS00MzIxLWI3OTgtNjUwNGY4YTNiNWJlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541191/",
          "actorName":"Samantha Spiro",
-         "actorLink":"/name/nm0819087/"
+         "actorLink":"/name/nm0819087/",
+         "marriedEngaged":[
+            "Randyll Tarly"
+         ],
+         "parentOf":[
+            "Dickon Tarly",
+            "Samwell Tarly",
+            "Talla Tarly"
+         ]
       },
       {
          "characterName":"Melisandre",
@@ -2166,7 +2676,9 @@
          "characterLink":"/character/ch0531846/",
          "actorName":"Gary Pillai",
          "actorLink":"/name/nm0997747/",
-         "killedBy":"Obara Sand"
+         "killedBy":[
+            "Obara Sand"
+         ]
       },
       {
          "characterName":"Mero",
@@ -2175,7 +2687,9 @@
          "characterLink":"/character/ch0123670/",
          "actorName":"Mark Killeen",
          "actorLink":"/name/nm2075330/",
-         "killedBy":"Daario Naharis"
+         "killedBy":[
+            "Daario Naharis"
+         ]
       },
       {
          "characterName":"Meryn Trant",
@@ -2184,8 +2698,12 @@
          "characterLink":"/character/ch0246933/",
          "actorName":"Ian Beattie",
          "actorLink":"/name/nm0064155/",
-         "killed":"Syrio Forel",
-         "killedBy":"Arya Stark"
+         "killed":[
+            "Syrio Forel"
+         ],
+         "killedBy":[
+            "Arya Stark"
+         ]
       },
       {
          "characterName":"Mhaegen",
@@ -2214,8 +2732,12 @@
          "characterLink":"/character/ch0305011/",
          "actorName":"Mia Soteriou",
          "actorLink":"/name/nm0815420/",
-         "killedBy":"Daenerys Targaryen",
-         "killed":"Rhaego"
+         "killedBy":[
+            "Daenerys Targaryen"
+         ],
+         "killed":[
+            "Rhaego"
+         ]
       },
       {
          "characterName":"Missandei",
@@ -2223,7 +2745,10 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNTE5OTI0OTA0OV5BMl5BanBnXkFtZTcwODczOTAzOQ@@._V1_SY1000_CR0,0,666,1000_AL_.jpg",
          "characterLink":"/character/ch0316923/",
          "actorName":"Nathalie Emmanuel",
-         "actorLink":"/name/nm2812026/"
+         "actorLink":"/name/nm2812026/",
+         "serves":[
+            "Daenerys Targaryen"
+         ]
       },
       {
          "characterName":"Mord",
@@ -2240,8 +2765,12 @@
          "characterLink":"/character/ch0508053/",
          "actorName":"Reece Noi",
          "actorLink":"/name/nm0634139/",
-         "killedBy":"Daario Naharis",
-         "killed":"Son of the Harpy"
+         "killedBy":[
+            "Daario Naharis"
+         ],
+         "killed":[
+            "Son of the Harpy"
+         ]
       },
       {
          "characterName":"Musician #1",
@@ -2314,7 +2843,9 @@
          "characterLink":"/character/ch0305045/",
          "actorName":"Rhodri Hosking",
          "actorLink":"/name/nm4430905/",
-         "killedBy":"Sandor Clegane"
+         "killedBy":[
+            "Sandor Clegane"
+         ]
       },
       {
          "characterName":"Myranda",
@@ -2323,7 +2854,9 @@
          "characterLink":"/character/ch0316926/",
          "actorName":"Charlotte Hope",
          "actorLink":"/name/nm3745225/",
-         "killedBy":"Theon Greyjoy"
+         "killedBy":[
+            "Theon Greyjoy"
+         ]
       },
       {
          "characterName":"Myrcella Baratheon",
@@ -2359,8 +2892,12 @@
             "Tommen Baratheon"
          ],
          "royal":true,
-         "killedBy":"Ellaria Sand",
-         "marriedEngaged":"Trystane Martell"
+         "killedBy":[
+            "Ellaria Sand"
+         ],
+         "marriedEngaged":[
+            "Trystane Martell"
+         ]
       },
       {
          "characterName":"Night's Watch Deserter",
@@ -2438,7 +2975,9 @@
             "Shaggydog",
             "Ghost"
          ],
-         "guardianOf":"Arya Stark"
+         "guardianOf":[
+            "Arya Stark"
+         ]
       },
       {
          "characterName":"Nymeria Sand",
@@ -2448,7 +2987,12 @@
          "characterLink":"/character/ch0468074/",
          "actorName":"Jessica Henwick",
          "actorLink":"/name/nm3725055/",
-         "killedBy":"Euron Greyjoy"
+         "killedBy":[
+            "Euron Greyjoy"
+         ],
+         "parents":[
+            "Oberyn Martell"
+         ]
       },
       {
          "characterName":"Obara Sand",
@@ -2462,7 +3006,12 @@
             "Merchant Captain",
             "Trystane Martell"
          ],
-         "killedBy":"Euron Greyjoy"
+         "killedBy":[
+            "Euron Greyjoy"
+         ],
+         "parents":[
+            "Oberyn Martell"
+         ]
       },
       {
          "characterName":"Oberyn Martell",
@@ -2472,7 +3021,21 @@
          "characterLink":"/character/ch0392307/",
          "actorName":"Pedro Pascal",
          "actorLink":"/name/nm0050959/",
-         "killedBy":"Gregor Clegane"
+         "killedBy":[
+            "Gregor Clegane"
+         ],
+         "marriedEngaged":[
+            "Ellaria Sand"
+         ],
+         "parentOf":[
+            "Obara Sand",
+            "Nymeria Sand",
+            "Tyene Sand"
+         ],
+         "siblings":[
+            "Doran Martell",
+            "Elia Martell"
+         ]
       },
       {
          "characterName":"Old Nan",
@@ -2496,9 +3059,14 @@
          "characterLink":"/character/ch0010188/",
          "actorName":"Diana Rigg",
          "actorLink":"/name/nm0001671/",
-         "killedBy":"Jaime Lannister",
+         "killedBy":[
+            "Jaime Lannister"
+         ],
          "killed":[
             "Joffrey Baratheon"
+         ],
+         "parentOf":[
+            "Mace Tyrell"
          ]
       },
       {
@@ -2512,7 +3080,9 @@
             "Ygritte",
             "Jon Snow"
          ],
-         "killedBy":"Jon Snow"
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Olyvar",
@@ -2529,7 +3099,9 @@
          "characterLink":"/character/ch0316922/",
          "actorName":"Mackenzie Crook",
          "actorLink":"/name/nm0188871/",
-         "killedBy":"Jon Snow"
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Ornela",
@@ -2550,7 +3122,9 @@
             "Drennan",
             "Maester Luwin"
          ],
-         "killedBy":"Ramsay Snow"
+         "killedBy":[
+            "Ramsay Snow"
+         ]
       },
       {
          "characterName":"Othell Yarwyck",
@@ -2559,8 +3133,12 @@
          "characterLink":"/character/ch0305003/",
          "actorName":"Brian Fortune",
          "actorLink":"/name/nm1987270/",
-         "killed":"Jon Snow",
-         "killedBy":"Jon Snow"
+         "killed":[
+            "Jon Snow"
+         ],
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Othor",
@@ -2588,8 +3166,12 @@
             "Dontos Hollard",
             "Lysa Arryn"
          ],
-         "marriedEngaged":"Lysa Arryn",
-         "killedBy":"Arya Stark"
+         "marriedEngaged":[
+            "Lysa Arryn"
+         ],
+         "killedBy":[
+            "Arya Stark"
+         ]
       },
       {
          "characterName":"Podrick Payne",
@@ -2601,6 +3183,10 @@
          "killed":[
             "Mandon Moore",
             "Bolton Soldier"
+         ],
+         "serves":[
+            "Tyrion Lannister",
+            "Brienne of Tarth"
          ]
       },
       {
@@ -2610,8 +3196,12 @@
          "characterLink":"/character/ch0305023/",
          "actorName":"Andy Kellegher",
          "actorLink":"/name/nm3464945/",
-         "killed":"Lommy Greenhands",
-         "killedBy":"Arya Stark"
+         "killed":[
+            "Lommy Greenhands"
+         ],
+         "killedBy":[
+            "Arya Stark"
+         ]
       },
       {
          "characterName":"Prendahl na Ghezn",
@@ -2620,7 +3210,9 @@
          "characterLink":"/character/ch0339504/",
          "actorName":"Ramon Tikaram",
          "actorLink":"/name/nm0863130/",
-         "killedBy":"Daario Naharis"
+         "killedBy":[
+            "Daario Naharis"
+         ]
       },
       {
          "characterName":"Pyat Pree",
@@ -2646,7 +3238,9 @@
          "characterLink":"/character/ch0273477/",
          "actorName":"Josef Altin",
          "actorLink":"/name/nm1086981/",
-         "killedBy":"Ygritte"
+         "killedBy":[
+            "Ygritte"
+         ]
       },
       {
          "characterName":"Qhono",
@@ -2663,7 +3257,9 @@
          "characterLink":"/character/ch0303951/",
          "actorName":"Simon Armstrong",
          "actorLink":"/name/nm1409802/",
-         "killedBy":"Jon Snow"
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Qotho",
@@ -2672,7 +3268,9 @@
          "characterLink":"/character/ch0246162/",
          "actorName":"Dar Salim",
          "actorLink":"/name/nm1502469/",
-         "killedBy":"Jorah Mormont"
+         "killedBy":[
+            "Jorah Mormont"
+         ]
       },
       {
          "characterName":"Quaithe",
@@ -2688,7 +3286,10 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGEzNDY2YjktMDM1ZS00MTI1LWEyYmMtNTdiMzczNmY4ZWEzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0316929/",
          "actorName":"Anton Lesser",
-         "actorLink":"/name/nm0504320/"
+         "actorLink":"/name/nm0504320/",
+         "serves":[
+            "Cersei Lannister"
+         ]
       },
       {
          "characterName":"Rakharo",
@@ -2697,7 +3298,9 @@
          "characterLink":"/character/ch0251495/",
          "actorName":"Elyes Gabel",
          "actorLink":"/name/nm1175468/",
-         "killedBy":"Khal Jhaqo's Khalasar"
+         "killedBy":[
+            "Khal Jhaqo's Khalasar"
+         ]
       },
       {
          "characterName":"Ramsay Snow",
@@ -2718,8 +3321,15 @@
             "Rickon Stark",
             "Wun Wun"
          ],
-         "marriedEngaged":"Sansa Stark",
-         "killedBy":"Ramsay Snow's Hounds"
+         "marriedEngaged":[
+            "Sansa Stark"
+         ],
+         "killedBy":[
+            "Ramsay Snow's Hounds"
+         ],
+         "parents":[
+            "Roose Bolton"
+         ]
       },
       {
          "characterName":"Randyll Tarly",
@@ -2728,7 +3338,17 @@
          "characterLink":"/character/ch0524408/",
          "actorName":"James Faulkner",
          "actorLink":"/name/nm0269077/",
-         "killedBy":"Daenerys Targaryen"
+         "killedBy":[
+            "Daenerys Targaryen"
+         ],
+         "marriedEngaged":[
+            "Melessa Tarly"
+         ],
+         "parentOf":[
+            "Dickon Tarly",
+            "Samwell Tarly",
+            "Talla Tarly"
+         ]
       },
       {
          "characterName":"Rast",
@@ -2737,8 +3357,12 @@
          "characterLink":"/character/ch0251498/",
          "actorName":"Luke Barnes",
          "actorLink":"/name/nm4430828/",
-         "killed":"Jeor Mormont",
-         "killedBy":"Ghost"
+         "killed":[
+            "Jeor Mormont"
+         ],
+         "killedBy":[
+            "Ghost"
+         ]
       },
       {
          "characterName":"Rattleshirt",
@@ -2763,7 +3387,9 @@
                ]
             }
          ],
-         "killedBy":"Tormund Giantsbane"
+         "killedBy":[
+            "Tormund Giantsbane"
+         ]
       },
       {
          "characterName":"Razdal mo Eraz",
@@ -2772,7 +3398,9 @@
          "characterLink":"/character/ch0413591/",
          "actorName":"George Georgiou",
          "actorLink":"/name/nm1745190/",
-         "killedBy":"Grey Worm"
+         "killedBy":[
+            "Grey Worm"
+         ]
       },
       {
          "characterName":"Red Keep Stableboy",
@@ -2781,7 +3409,9 @@
          "characterLink":"/character/ch0379229/",
          "actorName":"Hugo Culverhouse",
          "actorLink":"/name/nm4164318/",
-         "killedBy":"Arya Stark"
+         "killedBy":[
+            "Arya Stark"
+         ]
       },
       {
          "characterName":"Red Priestess",
@@ -2805,12 +3435,16 @@
          "characterLink":"/character/ch0246253/",
          "actorName":"Gethin Anthony",
          "actorLink":"/name/nm2167445/",
-         "killedBy":"Melisandre",
+         "killedBy":[
+            "Melisandre"
+         ],
          "siblings":[
             "Robert Baratheon",
             "Stannis Baratheon"
          ],
-         "marriedEngaged":"Margaery Tyrell"
+         "marriedEngaged":[
+            "Margaery Tyrell"
+         ]
       },
       {
          "characterName":"Rhaegal",
@@ -2819,7 +3453,9 @@
             "Drogon",
             "Viserion"
          ],
-         "guardianOf":"Daenerys Targaryen",
+         "guardianOf":[
+            "Daenerys Targaryen"
+         ],
          "killed":[
             "Pyat Pree",
             "Great Master #1"
@@ -2837,12 +3473,16 @@
             "Daenerys Targaryen",
             "Viserys Targaryen"
          ],
-         "abducted":"Lyanna Stark",
+         "abducted":[
+            "Lyanna Stark"
+         ],
          "marriedEngaged":[
             "Elia Martell",
             "Lyanna Stark"
          ],
-         "killedBy":"Robert Baratheon",
+         "killedBy":[
+            "Robert Baratheon"
+         ],
          "parentOf":[
             "Jon Snow",
             "Rhaenys Targaryen",
@@ -2851,7 +3491,9 @@
       },
       {
          "characterName":"Rhaego",
-         "killedBy":"Mirri Maz Duur",
+         "killedBy":[
+            "Mirri Maz Duur"
+         ],
          "parents":[
             "Khal Drogo",
             "Daenerys Targaryen"
@@ -2869,7 +3511,9 @@
          "siblings":[
             "Aerys II Targaryen"
          ],
-         "marriedEngaged":"Aerys II Targaryen"
+         "marriedEngaged":[
+            "Aerys II Targaryen"
+         ]
       },
       {
          "characterName":"Rhaenys Targaryen",
@@ -2879,7 +3523,9 @@
             "Elia Martell",
             "Rhaegar Targaryen"
          ],
-         "killedBy":"Gregor Clegane"
+         "killedBy":[
+            "Gregor Clegane"
+         ]
       },
       {
          "characterName":"Rickard Karstark",
@@ -2907,7 +3553,12 @@
             "Martyn Lannister",
             "Willem Lannister"
          ],
-         "killedBy":"Robb Stark"
+         "killedBy":[
+            "Robb Stark"
+         ],
+         "parentOf":[
+            "Harald Karstark"
+         ]
       },
       {
          "characterName":"Rickard Stark",
@@ -2918,7 +3569,9 @@
             "Eddard Stark",
             "Lyanna Stark"
          ],
-         "killedBy":"Aerys II Targaryen"
+         "killedBy":[
+            "Aerys II Targaryen"
+         ]
       },
       {
          "characterName":"Rickon Stark",
@@ -2934,7 +3587,16 @@
             "Arya Stark",
             "Bran Stark"
          ],
-         "killedBy":"Ramsay Snow"
+         "killedBy":[
+            "Ramsay Snow"
+         ],
+         "parents":[
+            "Eddard Stark",
+            "Catelyn Stark"
+         ],
+         "guardedBy":[
+            "Shaggydog"
+         ]
       },
       {
          "characterName":"Robb Stark",
@@ -2958,7 +3620,16 @@
             "Roslin Frey",
             "Talisa Maegyr"
          ],
-         "killedBy":"Roose Bolton"
+         "killedBy":[
+            "Roose Bolton"
+         ],
+         "parents":[
+            "Eddard Stark",
+            "Catelyn Stark"
+         ],
+         "guardedBy":[
+            "Grey Wind"
+         ]
       },
       {
          "characterName":"Robert Baratheon",
@@ -2969,7 +3640,9 @@
          "actorName":"Mark Addy",
          "actorLink":"/name/nm0004692/",
          "royal":true,
-         "guardedBy":"Jon Arryn",
+         "guardedBy":[
+            "Jon Arryn"
+         ],
          "marriedEngaged":[
             "Lyanna Stark",
             "Cersei Lannister"
@@ -2987,7 +3660,9 @@
             "Myrcella Baratheon",
             "Tommen Baratheon"
          ],
-         "killedBy":"Boar",
+         "killedBy":[
+            "Boar"
+         ],
          "siblings":[
             "Stannis Baratheon",
             "Renly Baratheon"
@@ -3007,7 +3682,11 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BNjBlNzE3YjEtMTcwYS00OTQxLTk1NjEtNGMwNzJhNWI2OGJjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0300949/",
          "actorName":"Lino Facioli",
-         "actorLink":"/name/nm2996220/"
+         "actorLink":"/name/nm2996220/",
+         "parents":[
+            "Jon Arryn",
+            "Lysa Arryn"
+         ]
       },
       {
          "characterName":"Rodrik Cassel",
@@ -3016,7 +3695,12 @@
          "characterLink":"/character/ch0171391/",
          "actorName":"Ron Donachie",
          "actorLink":"/name/nm0231871/",
-         "killedBy":"Theon Greyjoy"
+         "killedBy":[
+            "Theon Greyjoy"
+         ],
+         "serves":[
+            "Eddard Stark"
+         ]
       },
       {
          "characterName":"Roose Bolton",
@@ -3026,8 +3710,18 @@
          "characterLink":"/character/ch0305006/",
          "actorName":"Michael McElhatton",
          "actorLink":"/name/nm0568385/",
-         "killed":"Robb Stark",
-         "killedBy":"Ramsay Snow"
+         "killed":[
+            "Robb Stark"
+         ],
+         "killedBy":[
+            "Ramsay Snow"
+         ],
+         "parentOf":[
+            "Ramsay Snow"
+         ],
+         "marriedEngaged":[
+            "Walda Bolton"
+         ]
       },
       {
          "characterName":"Rorge",
@@ -3036,7 +3730,9 @@
          "characterLink":"/character/ch0305019/",
          "actorName":"Andy Beckwith",
          "actorLink":"/name/nm0065874/",
-         "killedBy":"Arya Stark"
+         "killedBy":[
+            "Arya Stark"
+         ]
       },
       {
          "characterName":"Ros",
@@ -3045,7 +3741,9 @@
          "characterLink":"/character/ch0010187/",
          "actorName":"Esmé Bianco",
          "actorLink":"/name/nm2657974/",
-         "killedBy":"Joffrey Baratheon"
+         "killedBy":[
+            "Joffrey Baratheon"
+         ]
       },
       {
          "characterName":"Roslin Frey",
@@ -3058,6 +3756,9 @@
          "marriedEngaged":[
             "Robb Stark",
             "Edmure Tully"
+         ],
+         "parents":[
+            "Walder Frey"
          ]
       },
       {
@@ -3070,7 +3771,10 @@
          "characterName":"Ryger Rivers",
          "characterLink":"/character/ch0014591/",
          "actorName":"Bryan McCaugherty",
-         "actorLink":"/name/nm0565472/"
+         "actorLink":"/name/nm0565472/",
+         "parents":[
+            "Walder Frey"
+         ]
       },
       {
          "characterName":"Salladhor Saan",
@@ -3090,6 +3794,20 @@
          "killed":[
             "White Walker",
             "Thenn Warg"
+         ],
+         "parents":[
+            "Randyll Tarly",
+            "Melessa Tarly"
+         ],
+         "siblings":[
+            "Dickon Tarly",
+            "Talla Tarly"
+         ],
+         "marriedEngaged":[
+            "Gilly"
+         ],
+         "parentOf":[
+            "Baby Sam"
          ]
       },
       {
@@ -3115,6 +3833,9 @@
             "Gatins",
             "Morgan",
             "Lem Lemoncloak"
+         ],
+         "siblings":[
+            "Gregor Clegane"
          ]
       },
       {
@@ -3135,6 +3856,13 @@
             "Joffrey Baratheon",
             "Tyrion Lannister",
             "Ramsay Snow"
+         ],
+         "guardedBy":[
+            "Lady"
+         ],
+         "parents":[
+            "Eddard Stark",
+            "Catelyn Stark"
          ]
       },
       {
@@ -3161,8 +3889,18 @@
                ]
             }
          ],
-         "killedBy":"Selyse Baratheon",
-         "killed":"Selyse Baratheon"
+         "killedBy":[
+            "Selyse Baratheon"
+         ],
+         "killed":[
+            "Selyse Baratheon"
+         ],
+         "marriedEngaged":[
+            "Stannis Baratheon"
+         ],
+         "parentOf":[
+            "Shireen Baratheon"
+         ]
       },
       {
          "characterName":"Septa Moelle",
@@ -3179,7 +3917,9 @@
          "characterLink":"/character/ch0248505/",
          "actorName":"Susan Brown",
          "actorLink":"/name/nm0114742/",
-         "killedBy":"Lannister Guardsman"
+         "killedBy":[
+            "Lannister Guardsman"
+         ]
       },
       {
          "characterName":"Septa Scolera",
@@ -3224,7 +3964,9 @@
          "characterLink":"/character/ch0250564/",
          "actorName":"Sibel Kekilli",
          "actorLink":"/name/nm1402546/",
-         "killedBy":"Tyrion Lannister"
+         "killedBy":[
+            "Tyrion Lannister"
+         ]
       },
       {
          "characterName":"Shagga",
@@ -3244,8 +3986,12 @@
             "Summer",
             "Ghost"
          ],
-         "guardianOf":"Rickon Stark",
-         "killedBy":"Smalljon Umber"
+         "guardianOf":[
+            "Rickon Stark"
+         ],
+         "killedBy":[
+            "Smalljon Umber"
+         ]
       },
       {
          "characterName":"Shireen Baratheon",
@@ -3255,7 +4001,13 @@
          "characterLink":"/character/ch0306346/",
          "actorName":"Kerry Ingram",
          "actorLink":"/name/nm5081192/",
-         "killedBy":"Melisandre"
+         "killedBy":[
+            "Melisandre"
+         ],
+         "parents":[
+            "Stannis Baratheon",
+            "Selyse Baratheon"
+         ]
       },
       {
          "characterName":"Silk King",
@@ -3264,7 +4016,9 @@
          "characterLink":"/character/ch0345051/",
          "actorName":"Slavko Juraga",
          "actorLink":"/name/nm0432838/",
-         "killedBy":"Pyat Pree"
+         "killedBy":[
+            "Pyat Pree"
+         ]
       },
       {
          "characterName":"Smalljon Umber",
@@ -3273,8 +4027,15 @@
          "characterLink":"/character/ch0540067/",
          "actorName":"Dean S. Jagger",
          "actorLink":"/name/nm2746504/",
-         "killed":"Shaggydog",
-         "killedBy":"Tormund Giantsbane"
+         "killed":[
+            "Shaggydog"
+         ],
+         "killedBy":[
+            "Tormund Giantsbane"
+         ],
+         "parents":[
+            "Greatjon Umber"
+         ]
       },
       {
          "characterName":"Spice King",
@@ -3283,7 +4044,9 @@
          "characterLink":"/character/ch0305005/",
          "actorName":"Nicholas Blane",
          "actorLink":"/name/nm0087432/",
-         "killedBy":"Pyat Pree"
+         "killedBy":[
+            "Pyat Pree"
+         ]
       },
       {
          "characterName":"Stannis Baratheon",
@@ -3301,7 +4064,15 @@
             "Gordy",
             "Simpson"
          ],
-         "killedBy":"Brienne of Tarth"
+         "killedBy":[
+            "Brienne of Tarth"
+         ],
+         "marriedEngaged":[
+            "Selyse Baratheon"
+         ],
+         "parentOf":[
+            "Shireen Baratheon"
+         ]
       },
       {
          "characterName":"Stark Bannerman",
@@ -3355,7 +4126,9 @@
          "characterLink":"/character/ch0304972/",
          "actorName":"Stephen Don",
          "actorLink":"/name/nm1651043/",
-         "killedBy":"Theon Greyjoy"
+         "killedBy":[
+            "Theon Greyjoy"
+         ]
       },
       {
          "characterName":"Styr",
@@ -3364,8 +4137,12 @@
          "characterLink":"/character/ch0400416/",
          "actorName":"Yuri Kolokolnikov",
          "actorLink":"/name/nm0464305/",
-         "killed":"Olly's Mother",
-         "killedBy":"Jon Snow"
+         "killed":[
+            "Olly's Mother"
+         ],
+         "killedBy":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Summer",
@@ -3377,9 +4154,15 @@
             "Shaggydog",
             "Ghost"
          ],
-         "guardianOf":"Bran Stark",
-         "killed":"Catspaw Assassin",
-         "killedBy":"Wights"
+         "guardianOf":[
+            "Bran Stark"
+         ],
+         "killed":[
+            "Catspaw Assassin"
+         ],
+         "killedBy":[
+            "Wights"
+         ]
       },
       {
          "characterName":"Syrio Forel",
@@ -3388,7 +4171,9 @@
          "characterLink":"/character/ch0246934/",
          "actorName":"Miltos Yerolemou",
          "actorLink":"/name/nm1115654/",
-         "killedBy":"Meryn Trant"
+         "killedBy":[
+            "Meryn Trant"
+         ]
       },
       {
          "characterName":"Talisa Maegyr",
@@ -3397,8 +4182,12 @@
          "characterLink":"/character/ch0305007/",
          "actorName":"Oona Chaplin",
          "actorLink":"/name/nm2772105/",
-         "marriedEngaged":"Robb Stark",
-         "killedBy":"Lothar Frey"
+         "marriedEngaged":[
+            "Robb Stark"
+         ],
+         "killedBy":[
+            "Lothar Frey"
+         ]
       },
       {
          "characterName":"Talla Tarly",
@@ -3407,7 +4196,15 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZTYwYTA2MWEtM2FjNS00MDNhLWIyMzMtODI0Mjg2Y2ZlODBiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0523897/",
          "actorName":"Rebecca Benson",
-         "actorLink":"/name/nm5039410/"
+         "actorLink":"/name/nm5039410/",
+         "parents":[
+            "Randyll Tarly",
+            "Melessa Tarly"
+         ],
+         "siblings":[
+            "Dickon Tarly",
+            "Samwell Tarly"
+         ]
       },
       {
          "characterName":"Ternesio Terys",
@@ -3441,7 +4238,9 @@
                "actorName":"Vladimir 'Furdo' Furdik",
                "actorLink":"/name/nm0298842/",
                "seasonsActive":[
-                  6
+                  6,
+                  7,
+                  8
                ]
             }
          ],
@@ -3457,8 +4256,12 @@
          "characterLink":"/character/ch0305033/",
          "actorName":"Anthony Morris",
          "actorLink":"/name/nm1677757/",
-         "killed":"Tortured Prisoner",
-         "killedBy":"Jaqen H'ghar"
+         "killed":[
+            "Tortured Prisoner"
+         ],
+         "killedBy":[
+            "Jaqen H'ghar"
+         ]
       },
       {
          "characterName":"The Waif",
@@ -3467,15 +4270,21 @@
          "characterLink":"/character/ch0508054/",
          "actorName":"Faye Marsay",
          "actorLink":"/name/nm3849670/",
-         "killed":"Lady Crane",
-         "killedBy":"Arya Stark"
+         "killed":[
+            "Lady Crane"
+         ],
+         "killedBy":[
+            "Arya Stark"
+         ]
       },
       {
          "characterName":"Thenn Warg",
          "characterLink":"/character/ch0400416/",
          "actorName":"Joseph Gatt",
          "actorLink":"/name/nm1395532/",
-         "killedBy":"Samwell Tarly"
+         "killedBy":[
+            "Samwell Tarly"
+         ]
       },
       {
          "characterName":"Theon Greyjoy",
@@ -3491,6 +4300,12 @@
             "Myranda",
             "Bolton Soldier",
             "Harrag"
+         ],
+         "siblings":[
+            "Yara Greyjoy"
+         ],
+         "parents":[
+            "Balon Greyjoy"
          ]
       },
       {
@@ -3528,7 +4343,9 @@
                ]
             }
          ],
-         "killedBy":"The Night King"
+         "killedBy":[
+            "The Night King"
+         ]
       },
       {
          "characterName":"Timett",
@@ -3591,9 +4408,15 @@
             "Myrcella Baratheon"
          ],
          "royal":true,
-         "marriedEngaged":"Margaery Tyrell",
-         "killed":"Tommen Baratheon",
-         "killedBy":"Tommen Baratheon"
+         "marriedEngaged":[
+            "Margaery Tyrell"
+         ],
+         "killed":[
+            "Tommen Baratheon"
+         ],
+         "killedBy":[
+            "Tommen Baratheon"
+         ]
       },
       {
          "characterName":"Tormund Giantsbane",
@@ -3615,8 +4438,15 @@
          "characterLink":"/character/ch0506400/",
          "actorName":"Toby Sebastian",
          "actorLink":"/name/nm4514519/",
-         "marriedEngaged":"Myrcella Baratheon",
-         "killedBy":"Obara Sand"
+         "marriedEngaged":[
+            "Myrcella Baratheon"
+         ],
+         "killedBy":[
+            "Obara Sand"
+         ],
+         "parents":[
+            "Doran Martell"
+         ]
       },
       {
          "characterName":"Tycho Nestoris",
@@ -3638,7 +4468,13 @@
             "Areo Hotah",
             "Maester Caleotte"
          ],
-         "killedBy":"Cersei Lannister"
+         "killedBy":[
+            "Cersei Lannister"
+         ],
+         "parents":[
+            "Oberyn Martell",
+            "Ellaria Sand"
+         ]
       },
       {
          "characterName":"Tyrion Lannister",
@@ -3648,10 +4484,19 @@
          "characterLink":"/character/ch0146096/",
          "actorName":"Peter Dinklage",
          "actorLink":"/name/nm0227759/",
-         "marriedEngaged":"Sansa Stark",
+         "marriedEngaged":[
+            "Sansa Stark"
+         ],
          "killed":[
             "Shae",
             "Tywin Lannister"
+         ],
+         "parents":[
+            "Tywin Lannister"
+         ],
+         "siblings":[
+            "Cersei Lannister",
+            "Jaime Lannister"
          ]
       },
       {
@@ -3673,7 +4518,9 @@
          "servedBy":[
             "Gregor Clegane"
          ],
-         "killedBy":"Tyrion Lannister"
+         "killedBy":[
+            "Tyrion Lannister"
+         ]
       },
       {
          "characterName":"Vala",
@@ -3690,14 +4537,18 @@
          "characterLink":"/character/ch0294458/",
          "actorName":"Brendan McCormack",
          "actorLink":"/name/nm1788152/",
-         "killedBy":"Bronn"
+         "killedBy":[
+            "Bronn"
+         ]
       },
       {
          "characterName":"Varly",
          "characterLink":"/character/ch0379226/",
          "actorName":"Graham Charles",
          "actorLink":"/name/nm1378721/",
-         "killedBy":"Goldcloak"
+         "killedBy":[
+            "Goldcloak"
+         ]
       },
       {
          "characterName":"Viserion",
@@ -3706,12 +4557,16 @@
             "Drogon",
             "Rhaegal"
          ],
-         "guardianOf":"Daenerys Targaryen",
+         "guardianOf":[
+            "Daenerys Targaryen"
+         ],
          "killed":[
             "Pyat Pree",
             "Great Master #1"
          ],
-         "killedBy":"The Night King"
+         "killedBy":[
+            "The Night King"
+         ]
       },
       {
          "characterName":"Viserys Targaryen",
@@ -3730,7 +4585,9 @@
             "Daenerys Targaryen",
             "Rhaegar Targaryen"
          ],
-         "killedBy":"Khal Drogo"
+         "killedBy":[
+            "Khal Drogo"
+         ]
       },
       {
          "characterName":"Walda Bolton",
@@ -3743,7 +4600,12 @@
          "characterLink":"/character/ch0506401/",
          "actorName":"Elizabeth Webster",
          "actorLink":"/name/nm3531913/",
-         "killedBy":"Ramsay Snow's Hounds"
+         "killedBy":[
+            "Ramsay Snow's Hounds"
+         ],
+         "marriedEngaged":[
+            "Roose Bolton"
+         ]
       },
       {
          "characterName":"Walder Frey",
@@ -3753,12 +4615,26 @@
          "characterLink":"/character/ch0305328/",
          "actorName":"David Bradley",
          "actorLink":"/name/nm0103195/",
-         "killedBy":"Arya Stark"
+         "killedBy":[
+            "Arya Stark"
+         ],
+         "parentOf":[
+            "Black Walder Rivers",
+            "Lothar Frey",
+            "Roslin Frey",
+            "Ryger Rivers"
+         ],
+         "marriedEngaged":[
+            "Joyeuse Erenford",
+            "Kitty Frey"
+         ]
       },
       {
          "characterName":"Wallen",
          "actorName":"Barry O'Connor",
-         "killedBy":"Robb Stark"
+         "killedBy":[
+            "Robb Stark"
+         ]
       },
       {
          "characterName":"Warlock",
@@ -3775,7 +4651,12 @@
          "characterLink":"/character/ch0171390/",
          "actorName":"Rob Ostlere",
          "actorLink":"/name/nm3209935/",
-         "killedBy":"White Walker"
+         "killedBy":[
+            "White Walker"
+         ],
+         "parents":[
+            "Yohn Royce"
+         ]
       },
       {
          "characterName":"Wedding Band",
@@ -3798,7 +4679,9 @@
          "characterLink":"/character/ch0304921/",
          "actorName":"Ross Mullan",
          "actorLink":"/name/nm1368643/",
-         "killedBy":"Samwell Tarly"
+         "killedBy":[
+            "Samwell Tarly"
+         ]
       },
       {
          "characterName":"White Walker",
@@ -3807,8 +4690,12 @@
          "characterLink":"/character/ch0304921/",
          "actorName":"Tim Loane",
          "actorLink":"/name/nm0516385/",
-         "killedBy":"Jon Snow",
-         "killed":"Loboda"
+         "killedBy":[
+            "Jon Snow"
+         ],
+         "killed":[
+            "Loboda"
+         ]
       },
       {
          "characterName":"White Walker #2",
@@ -3839,7 +4726,9 @@
          "characterLink":"/character/ch0171394/",
          "actorName":"Bronson Webb",
          "actorLink":"/name/nm0916037/",
-         "killedBy":"Eddard Stark"
+         "killedBy":[
+            "Eddard Stark"
+         ]
       },
       {
          "characterName":"Willem Lannister",
@@ -3847,7 +4736,16 @@
          "characterLink":"/character/ch0395356/",
          "actorName":"Timothy Gibbons",
          "actorLink":"/name/nm5624523/",
-         "killedBy":"Rickard Karstark"
+         "killedBy":[
+            "Rickard Karstark"
+         ],
+         "parents":[
+            "Kevan Lannister"
+         ],
+         "siblings":[
+            "Lancel Lannister",
+            "Martyn Lannister"
+         ]
       },
       {
          "characterName":"Willis Wode",
@@ -3856,7 +4754,9 @@
          "characterLink":"/character/ch0305315/",
          "actorName":"Ryan McKenna",
          "actorLink":"/name/nm4416560/",
-         "killedBy":"Mountain Clansman"
+         "killedBy":[
+            "Mountain Clansman"
+         ]
       },
       {
          "characterName":"Wine Merchant",
@@ -3877,7 +4777,9 @@
          "characterLink":"/character/ch0524621/",
          "actorName":"Ian Whyte",
          "actorLink":"/name/nm1613839/",
-         "killedBy":"Ramsay Snow"
+         "killedBy":[
+            "Ramsay Snow"
+         ]
       },
       {
          "characterName":"Wyllis",
@@ -3892,7 +4794,9 @@
          "characterLink":"/character/ch0303950/",
          "actorName":"Nonso Anozie",
          "actorLink":"/name/nm1996829/",
-         "killedBy":"Daenerys Targaryen"
+         "killedBy":[
+            "Daenerys Targaryen"
+         ]
       },
       {
          "characterName":"Yara Greyjoy",
@@ -3901,7 +4805,13 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NzU5ODk0MV5BMl5BanBnXkFtZTcwMzEyNDY2OQ@@._V1_SY1000_CR0,0,1503,1000_AL_.jpg",
          "characterLink":"/character/ch0300217/",
          "actorName":"Gemma Whelan",
-         "actorLink":"/name/nm2247629/"
+         "actorLink":"/name/nm2247629/",
+         "parents":[
+            "Balon Greyjoy"
+         ],
+         "siblings":[
+            "Theon Greyjoy"
+         ]
       },
       {
          "characterName":"Yezzan zo Qaggaz",
@@ -3924,7 +4834,12 @@
             "Mole's Town Whore",
             "Pypar"
          ],
-         "killedBy":"Olly"
+         "killedBy":[
+            "Olly"
+         ],
+         "marriedEngaged":[
+            "Jon Snow"
+         ]
       },
       {
          "characterName":"Yohn Royce",
@@ -3932,7 +4847,10 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZjgwNDc4NGQtMmQyMS00YjMyLWFhZWUtZmM0MjRkYmNmNGExXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0524546/",
          "actorName":"Rupert Vansittart",
-         "actorLink":"/name/nm0889338/"
+         "actorLink":"/name/nm0889338/",
+         "parentOf":[
+            "Waymar Royce"
+         ]
       },
       {
          "characterName":"Yoren",
@@ -3941,7 +4859,9 @@
          "characterLink":"/character/ch0251493/",
          "actorName":"Francis Magee",
          "actorLink":"/name/nm0535837/",
-         "killedBy":"Amory Lorch"
+         "killedBy":[
+            "Amory Lorch"
+         ]
       },
       {
          "characterName":"Young Benjen Stark",
