@@ -206,8 +206,8 @@ function() {
         ]).translate([t / 2, n / 2]).scale(t / 2 - 10).rotate([0, -30])
     }
     var e = 180 / Math.PI,
-        a = 1e3,
-        o = 600,
+        a = 600, //width
+        o = 600, //height
         r = d3.dispatch("world"),
         c = -1;
     d3.selectAll("#geoMap").data([n(a, o).scale(245).translate([a / 2, .56 * o]).translate([a / 2, o / 2]).scale(250).rotate([0, -30])]).append("svg").attr("width", a).attr("height", o).each(function(n) {
