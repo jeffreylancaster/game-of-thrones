@@ -173,47 +173,47 @@ Outputs the _Game of Thrones_ narrative chart.
         "string",
         ...
       ],
-      "parentOf": [ // just string if single value
+      "parentOf": [
         "string",
         ...
       ],
-      "guardianOf": [ // just string if single value
+      "guardianOf": [
         "string",
         ...
       ],
       "guardedBy": [
-        "string", // just string if single value
-        ...
-      ],
-      "siblings": [ // just string if single value
         "string",
         ...
       ],
-      "marriedEngaged": [ // just string if single value
+      "siblings": [
+        "string",
+        ...
+      ],
+      "marriedEngaged": [
         "string",
         ...
       ],
       "allies":[
-        "string", // just string if single value
+        "string",
         ...
       ],
       "abducted":[
-        "string", // just string if single value
+        "string",
         ...
       ],
-      "killed": [ // just string if single value
+      "killed": [
         "string", 
         ...
       ],
-      "killedBy": [ // just string if single value
+      "killedBy": [
         "string",
         ...
       ],
-      "serves": [ // just string if single value
+      "serves": [
         "string",
         ...
       ]
-      "servedBy": [ // just string if single value
+      "servedBy": [
         "string",
         ...
       ]
