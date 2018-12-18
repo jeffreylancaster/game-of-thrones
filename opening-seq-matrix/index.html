@@ -31,7 +31,7 @@ var config = {
 }
 
 var width = config.width,
-		height = config.height;
+	height = config.height;
 
 var oceanColor = '#f9f9f9',
 		landColor = '#ddd',
@@ -61,12 +61,9 @@ var link,
 		focalPoint,
 		flyingArcLength;
 
-var width = 960,
-		height = 600;
-
 var canvas = d3.select('body').append('canvas')
-		.attr('width', width)
-		.attr('height', height);
+		.attr('width', width + config.margin.left + config.margin.right)
+		.attr('height', height + config.margin.top + config.margin.bottom);
 
 var context = canvas.node().getContext('2d');
 
