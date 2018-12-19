@@ -15,7 +15,6 @@
     </p>
     <svg></svg>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
 /* HELPFUL FUNCTIONS */
@@ -79,17 +78,19 @@ function ready(error, e, ol) {
 
   // build the select
   for(var i in episodesData){
-    $('#episodesTitles').append($('<option>', {text:episodesData[i].episodeTitle + " (S"+episodesData[i].seasonNum+"E"+episodesData[i].episodeNum+")"}));
+    d3.select("#episodesTitles")
+      .append("option")
+      .text(episodesData[i].episodeTitle + " (S"+episodesData[i].seasonNum+"E"+episodesData[i].episodeNum+")");
   }
-  $("#episodesTitles").show();
-
   // select behavior
-  $('#episodesTitles').change(function(){
-    var episodeClass = $(this).val().split("(")[0].trim().toLowerCase().replace(/([^A-Z0-9])/gi,"");
-    $(".selected").removeClass("selected");
-    $("."+episodeClass).addClass("selected");
-  });
-        
+  d3.select("#episodesTitles")
+    .style("display", "block")
+    .on("change", function(){
+      var episodeClass = d3.select(this).property('value').split("(")[0].trim().toLowerCase().replace(/([^A-Z0-9])/gi,"");
+      d3.selectAll(".selected").classed("selected", false);
+      d3.selectAll("."+episodeClass).classed("selected", true);
+    })
+
   for(var i in episodesData) {
     for(var j in episodesData[i].openingSequenceLocations){
       allLocations.push(episodesData[i].openingSequenceLocations[j]);

@@ -239,7 +239,7 @@ function ready(error, h) {
   var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height")
-    radius = 800;
+    radius = config.circle.r;
 
   var color = d3.scaleOrdinal(d3.schemeCategory20);
 

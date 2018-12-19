@@ -16,8 +16,6 @@
     
     <svg></svg>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <!-- for d3.queue() using d3.v5 -->
     <script src="https://d3js.org/d3-collection.v1.min.js"></script>
@@ -204,11 +202,17 @@ function ready(error, e) {
   })
 
   // add hover behavior
-  $("rect").hover(function() {
-    $("rect:not(." + $(this).attr("class") + ")").css({ opacity: 0.3 });
-  }, function() {
-    $("rect").css({ opacity: 1 });
-  });
+  d3.selectAll("rect")
+    .on("mouseover", function(){
+      d3.selectAll("rect")
+        .style("opacity", 0.3)
+      d3.selectAll("."+d3.select(this).attr("class"))
+        .style("opacity", 1)
+    })
+    .on("mouseout", function(){
+      d3.selectAll("rect")
+        .style("opacity", 1)
+    })
   
 };
 

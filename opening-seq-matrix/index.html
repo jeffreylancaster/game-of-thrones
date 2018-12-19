@@ -15,7 +15,6 @@
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <script>
 
@@ -115,19 +114,22 @@ function ready(error, world, e) {
 				uniqueLocations = [],
 				links = [];
 
-		// build the select
-		for(var i in episodesData){
-			$('#episodesTitles').append($('<option>', {text:episodesData[i].episodeTitle + " (S"+episodesData[i].seasonNum+"E"+episodesData[i].episodeNum+")"}));
-		}
-		$("#episodesTitles").show().css("margin-top", config.margin.top);
-
-		// select behavior
-	  $('#episodesTitles').change(function(){
-	    var episodeSelect = $(this).val().split("(")[1].toLowerCase().replace(/([^A-Z0-9])/gi,"");
-	    	console.log(episodeSelect);
-	    	context.clearRect(0, 0, width, height);
+	  // build the select
+	  for(var i in episodesData){
+	    d3.select("#episodesTitles")
+	      .append("option")
+	      .text(episodesData[i].episodeTitle + " (S"+episodesData[i].seasonNum+"E"+episodesData[i].episodeNum+")");
+	  }
+	  // select behavior
+	  d3.select("#episodesTitles")
+	    .style("display", "block")
+	    .style("margin-top", config.margin.top)
+	    .on("change", function(){
+	      var episodeSelect = d3.select(this).property('value').split("(")[1].toLowerCase().replace(/([^A-Z0-9])/gi,"");
+	      console.log(episodeSelect);
+	      context.clearRect(0, 0, width, height);
 	    	drawLine(locationsObject[episodeSelect]);
-	  });
+	    })
 
 		var sphere = {type: "Sphere"},
 				land = topojson.feature(world, world.objects.land);
