@@ -55,7 +55,6 @@ var config = {
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
   .defer(d3.json, '../data/characters-groups.json')
-  .defer(d3.json, '../data/episodes.json')
   .await(ready);
 
 function ready(error, e, cg, l) {
@@ -64,51 +63,51 @@ function ready(error, e, cg, l) {
 
   episodesData = e.episodes;
   group = cg.groups;
-  colors = l.colors;
 
   var allCharacters = {}; // an object with total times for each character
   var flare = {"name":config.name, "children":[]};
   var charactersIncluded = [];
-        
-  for (var i in episodesData) {
-    // act on scenes
-    var scenes = episodesData[i].scenes;
-    for (var j in scenes){
-      // calculate length of scene in seconds
-      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
-      scenes[j].length = sceneLength;
 
-      // add characters in scene to allCharacters array
-      for (var k in scenes[j].characters){
-        if(!allCharacters.hasOwnProperty(scenes[j].characters[k].name)){
-          allCharacters[scenes[j].characters[k].name] = 0;
-        }
-        allCharacters[scenes[j].characters[k].name] += scenes[j].length;
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "sceneLength": sceneLength});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // go through scenes and add sceneLength values to characters' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      if(!allCharacters.hasOwnProperty(v.name)){
+        allCharacters[v.name] = 0;
       }
-    }
-  }
+      allCharacters[v.name] += val.sceneLength;
+    })
+  })
 
-  // rearrange group data and bring in length from allCharacters
-  for(var i in group){
-    var childrenArray = [];
-    for(j=0; j<group[i].characters.length; j++){
-      childrenArray.push({"name":group[i].characters[j], "size":allCharacters[group[i].characters[j]]});
-      charactersIncluded.push(group[i].characters[j]);
-    }
-    flare.children.push({"name":group[i].name, "children":childrenArray});
-  }
+  // group characters based on characters-groups.json
+  group.forEach(function(val, ind){
+    var childrenArray = val.characters.map(function(v, i){
+      charactersIncluded.push(v);
+      return {"name": v, "size": allCharacters[v]}
+    });
+    flare.children.push({"name":val.name, "children":childrenArray});
+  })
+
+  // add other characters not included in characters-groups.json
   if(config.includeOthers){
-    var otherChildren = [];
-    for(var i in allCharacters){
-      if(charactersIncluded.indexOf(i) < 0){
-        otherChildren.push({"name":i, "size":allCharacters[i]});
-      }
-    }
+    var otherChildren = Object.keys(allCharacters)
+      .filter(function(val){
+        return (charactersIncluded.indexOf(val) < 0)
+      })
+      .map(function(v, i){
+        return {"name": v, "size": allCharacters[v]}
+      })
     flare.children.push({"name":"Other", "children": otherChildren});
   }
-  
-  // console.log(flare);
-
 
   // build the visualization
   'use strict';
