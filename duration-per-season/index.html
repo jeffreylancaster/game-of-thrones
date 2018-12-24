@@ -62,132 +62,145 @@ function ready(error, e) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  episodesData = e.episodes;
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "sceneLength": sceneLength});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
 
-  var bySeason = {};
-        
-  for (var i in episodesData) {
-    // act on scenes
-    var scenes = episodesData[i].scenes;
-    for (var j in scenes){
-      // calculate length of scene in seconds
-      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
-      scenes[j].length = sceneLength;
-    }
-  }
+  // put all seasons in an array
+  var seasons = scenes.reduce(function(acc, val, ind){
+    return [...acc, val.seasonNum];
+  }, [])
+    .filter(onlyUnique);
 
-  // sum scene lengths for characters in scenes
-  for(var i in episodesData) {
-    // if no season yet, create it
-    if(!bySeason[episodesData[i].seasonNum]){
-      bySeason[episodesData[i].seasonNum] = {};
-    }
-    for(var j in episodesData[i].scenes){
-      for(var k in episodesData[i].scenes[j].characters){
-        // if no entry yet, create it
-        if(!bySeason[episodesData[i].seasonNum][episodesData[i].scenes[j].characters[k].name]){
-          bySeason[episodesData[i].seasonNum][episodesData[i].scenes[j].characters[k].name] = {"total":0};
-        }
-        // add scene length to entry
-        bySeason[episodesData[i].seasonNum][episodesData[i].scenes[j].characters[k].name].total += episodesData[i].scenes[j].length;
-      }
-    }
-  }
+  // then put that array into an object with 0 count
+  var seasonsObj = seasons.reduce(function(acc, val, ind){
+      var obj = {};
+      obj[val] = 0;
+      return Object.assign(acc, obj);
+    }, {});
 
-  // create new svg's for each season
-  for(var i in bySeason){
-    if(Object.keys(bySeason[i]).length > 0){
-      d3.select("body")
+  // put all characters in one array, make object to count character time
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .map(function(cur, ind){
+      return Object.assign({}, {"name": cur}, seasonsObj);
+    });
+
+  // go through scenes and add sceneLength values to characters' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      var index = characters.findIndex(function(element){
+        return element.name == v.name;
+      });
+      characters[index][val.seasonNum] += val.sceneLength;
+    })
+  })
+
+  // for each season, build the data and visualization
+  seasons.forEach(function(val, ind){
+    var seasonCharacters = characters.reduce(function(a, v, i){
+      return a.concat({
+        "name": v.name,
+        "total": v[val]
+      })
+    }, [])
+      .filter(function(value){
+        return value.total > 0;
+      });
+
+    d3.select("body")
         .append("h1")
-        .html("Season "+i)
+        .html("Season "+val)
         .attr("class", "main");
-      d3.select("body").append("svg")
+    d3.select("body").append("svg")
         .attr("width", config.width)
-        .attr("height", (Object.keys(bySeason[i]).length+2)*config.barHeight)
-        .attr("id", "s"+i);
+        .attr("height", (seasonCharacters.length+2)*config.barHeight)
+        .attr("id", "s"+val);
 
-      // rebuild bySeason[i] as an array
-      var seasonArray = [];
-      for(var j in bySeason[i]){
-        seasonArray.push({
-          name: j,
-          total: bySeason[i][j].total
+    // build the visualization
+    var data = seasonCharacters;
+    var barHeight = config.barHeight;
+
+    var svg = d3.select("#s"+val),
+        margin = config.margin,
+        width = +svg.attr("width") - margin.left - margin.right,
+        height = barHeight*data.length + margin.top + margin.bottom,
+        g = svg.append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var y = d3.scaleBand() 
+        .rangeRound([0, height])
+        .paddingInner(0.15)
+        .align(0.1);
+
+    var x = d3.scaleLinear()
+        .rangeRound([0, width]);
+
+    var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+        .range(range);
+
+    range.shift();
+
+    var keys = d3.keys(data[0]).slice(1,2);
+
+    data.sort(function(a, b) { return a.total - b.total; }).reverse();
+    
+    y.domain(data.map(function(d) { return d.name; }));
+    x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+    z.domain(keys);
+
+    g.append("g")
+      .selectAll("g")
+      .data(d3.stack().keys(keys)(data))
+      .enter().append("g")
+        .attr("fill", function(d) { return z(d.key); })
+      .selectAll("rect")
+      .data(function(d) { return d; })
+      .enter().append("rect")
+        .attr("y", function(d) { return y(d.data.name); })
+        .attr("x", function(d) { return x(d[0]); })
+        .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+        .attr("height", y.bandwidth());
+
+    g.selectAll("g")
+      .data(d3.stack().keys(keys)(data))
+      .append("svg:title")
+        .text(function(d,i) {
+          // not sure why this shift needs to happen...
+          if(i == 0){
+            return "Season "+keys[keys.length-1]
+          } else {
+            return "Season "+keys[i-1]
+          };
         });
-      }
 
-      // build the visualization
-      var data = seasonArray;
-      var barHeight = config.barHeight;
+    g.append("g")
+      .attr("class", "axis")
+      .attr("transform", "translate(0,0)")
+      .call(d3.axisLeft(y));
 
-      var svg = d3.select("#s"+i),
-          margin = config.margin,
-          width = +svg.attr("width") - margin.left - margin.right,
-          height = barHeight*data.length + margin.top + margin.bottom,
-          g = svg.append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    g.selectAll(".axis")
+      .selectAll(".tick")
+      .data(data)
+      .append("text")
+      .attr("class", "timestamp")
+      .attr("dy", "0.35em")
+      .attr("dx", function(d){ return x(d.total) + 5; })
+      .attr("text-anchor", "start")
+      .text(function(d){ return secondsToHMS(d.total); });
 
-      var y = d3.scaleBand() 
-          .rangeRound([0, height])
-          .paddingInner(0.15)
-          .align(0.1);
-
-      var x = d3.scaleLinear()
-          .rangeRound([0, width]);
-
-      var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-          .range(range);
-
-      range.shift();
-
-      var keys = d3.keys(data[0]).slice(1,2);
-
-      data.sort(function(a, b) { return a.total - b.total; }).reverse();
-      
-      y.domain(data.map(function(d) { return d.name; }));
-      x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-      z.domain(keys);
-
-      g.append("g")
-        .selectAll("g")
-        .data(d3.stack().keys(keys)(data))
-        .enter().append("g")
-          .attr("fill", function(d) { return z(d.key); })
-        .selectAll("rect")
-        .data(function(d) { return d; })
-        .enter().append("rect")
-          .attr("y", function(d) { return y(d.data.name); })
-          .attr("x", function(d) { return x(d[0]); })
-          .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-          .attr("height", y.bandwidth());
-
-      g.selectAll("g")
-        .data(d3.stack().keys(keys)(data))
-        .append("svg:title")
-          .text(function(d,i) {
-            // not sure why this shift needs to happen...
-            if(i == 0){
-              return "Season "+keys[keys.length-1]
-            } else {
-              return "Season "+keys[i-1]
-            };
-          });
-
-      g.append("g")
-        .attr("class", "axis")
-        .attr("transform", "translate(0,0)")
-        .call(d3.axisLeft(y));
-
-      g.selectAll(".axis")
-        .selectAll(".tick")
-        .data(data)
-        .append("text")
-        .attr("class", "timestamp")
-        .attr("dy", "0.35em")
-        .attr("dx", function(d){ return x(d.total) + 5; })
-        .attr("text-anchor", "start")
-        .text(function(d){ return secondsToHMS(d.total); });
-    }
-  }
+  });
 };
 
     </script>
