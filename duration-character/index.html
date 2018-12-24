@@ -62,60 +62,60 @@ function ready(error, e) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  episodesData = e.episodes;
-
   /* CONFIG SETUP */
   d3.select("svg")
     .attr("width", config.width)
     .attr("height", config.height)
   /* END CONFIG SETUP */
 
-  var allCharacters = []; // array for all characters
-  var uniqueCharacters = []; // array for uniqueCharacters
-        
-  for (var i in episodesData) {
-    // act on scenes
-    var scenes = episodesData[i].scenes;
-    for (var j in scenes){
-      // calculate length of scene in seconds
-      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
-      scenes[j].length = sceneLength;
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "sceneLength": sceneLength});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
 
-      // add characters in scene to allCharacters array
-      for (var k in scenes[j].characters){
-        if(scenes[j].characters[k].name.length > 0){
-          allCharacters.push(scenes[j].characters[k].name);
-        }
-      }
-    }
-  }
+  // put all seasons in an array
+  var seasons = scenes.reduce(function(acc, val, ind){
+    return [...acc, val.seasonNum];
+  }, [])
+    .filter(onlyUnique);
 
-  // deduplicate the list of characters from scenes
-  uniqueCharacters = allCharacters.filter(onlyUnique).sort();
+  // then put that array into an object with 0 count
+  var seasonsObj = seasons.reduce(function(acc, val, ind){
+      var obj = {};
+      obj[val] = 0;
+      return Object.assign(acc, obj);
+    }, {});
 
-  // rebuild uniqueCharacters array
-  for(i=0; i<uniqueCharacters.length; i++){
-    uniqueCharacters[i] = {"name":uniqueCharacters[i], "1":0, "2":0, "3":0, "4":0, "5":0, "6":0, "7":0, "8":0};
-  }
+  // put all characters in one array, make object to count character time
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .map(function(cur, ind){
+      return Object.assign({}, {"name": cur}, seasonsObj);
+    });
 
-  // sum scene lengths for characters in scenes
-  for(var i in episodesData) {
-    for(var j in episodesData[i].scenes){
-      for(var k in episodesData[i].scenes[j].characters){
-        for(var l in uniqueCharacters){
-          if(episodesData[i].scenes[j].characters[k].name == uniqueCharacters[l].name){
-            uniqueCharacters[l][episodesData[i].seasonNum] += episodesData[i].scenes[j].length;
-          }
-        } 
-      }
-    }
-  }
+  // go through scenes and add sceneLength values to characters' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      var index = characters.findIndex(function(element){
+        return element.name == v.name;
+      });
+      characters[index][val.seasonNum] += val.sceneLength;
+    })
+  })
 
   // build the visualization
-  var data = uniqueCharacters;
+  var data = characters;
   var barHeight = config.barHeight;
-
-  console.log(data);
 
   var svg = d3.select("svg"),
       margin = config.margin,
@@ -137,7 +137,7 @@ function ready(error, e) {
   var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
       .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
 
-  var keys = d3.keys(data[0]).slice(0,8);
+  var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
 
   for (i=0; i<data.length; i++){
     var t=0;
@@ -170,11 +170,7 @@ function ready(error, e) {
     .append("svg:title")
       .text(function(d,i) {
         // not sure why this shift needs to happen...
-        if(i == 0){
-          return "Season "+keys[keys.length-1]
-        } else {
-          return "Season "+keys[i-1]
-        };
+        return (i == 0) ? "Season "+keys[keys.length-1] : "Season "+keys[i-1]
       });
 
   g.append("g")
@@ -196,7 +192,7 @@ function ready(error, e) {
     .attr("font-family", "sans-serif")
     .attr("font-size", 10)
     .attr("text-anchor", "end")
-    .attr("transform", function(d, i) { return `translate(${config.legendOffset.x}, ${config.legendOffset.y})`})
+    .attr("transform", function(d, i) {return `translate(${config.legendOffset.x}, ${config.legendOffset.y})`})
     .selectAll("g")
     .data(keys.slice())
     .enter().append("g")
