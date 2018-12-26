@@ -70,17 +70,16 @@ function ready(error, e) {
     .attr("height", config.height)
   /* END CONFIG SETUP */
 
-  var sequences = [];
-  var allLocations = []; // array for all locations
-  var uniqueLocations = []; // array for all locations
-  var matrix = {"nodes": [], "links": []}
+  var matrix = {"nodes": [], "links": []};
+  var scale = 30;
 
   // build the select
-  for(var i in episodesData){
+  episodesData.forEach(function(val, ind){
     d3.select("#episodesTitles")
       .append("option")
-      .text(episodesData[i].episodeTitle + " (S"+episodesData[i].seasonNum+"E"+episodesData[i].episodeNum+")");
-  }
+      .text(val.episodeTitle + " (S"+val.seasonNum+"E"+val.episodeNum+")");
+  })
+
   // select behavior
   d3.select("#episodesTitles")
     .style("display", "block")
@@ -89,31 +88,34 @@ function ready(error, e) {
       d3.selectAll(".selected").classed("selected", false);
       d3.selectAll("."+episodeClass).classed("selected", true);
     })
-        
-  for(var i in episodesData) {
-    for(var j in episodesData[i].openingSequenceLocations){
-      allLocations.push(episodesData[i].openingSequenceLocations[j]);
-    }
-  }
-  uniqueLocations = allLocations.filter(onlyUnique).sort();
-  
-  for(var i in uniqueLocations){
-    matrix.nodes.push({
-      "name": uniqueLocations[i],
-      "group": 1
-    })
-  }
 
-  for(var i in episodesData){
-    for(j=0; j<episodesData[i].openingSequenceLocations.length-1; j++){
-      matrix.links.push({
-        "source": episodesData[i].openingSequenceLocations[j],
-        "target": episodesData[i].openingSequenceLocations[j+1],
-        "value": 1,
-        "class": episodesData[i].episodeTitle.toLowerCase().replace(/([^A-Z0-9])/gi,"")
+  // get a list of unique locations shown in the opening sequence
+  var locations = episodesData.reduce(function(acc, val, ind){
+    var l = val.openingSequenceLocations.reduce(function(a, v, i){
+      return a.concat(v);
+    }, []);
+    return [...acc, ...l]
+  }, [])
+    .filter(onlyUnique)
+    .map(function(cur, ind){
+      matrix.nodes.push({
+        "name": cur,
+        "group": 1
       })
-    }
-  }
+    });
+
+  episodesData.forEach(function(val, ind){
+    val.openingSequenceLocations.forEach(function(v, i){
+      if(i < val.openingSequenceLocations.length - 1){
+        matrix.links.push({
+          "source": v,
+          "target": val.openingSequenceLocations[i+1],
+          "value": 1,
+          "class": val.episodeTitle.toLowerCase().replace(/([^A-Z0-9])/gi,"")
+        })
+      }
+    })
+  })
 
   // build the visualization
   var svg = d3.select("svg"),
@@ -198,6 +200,10 @@ function ready(error, e) {
     d.fx = null;
     d.fy = null;
   }
+
+  // select the first episode in the select
+  var episodeClass = d3.select("#episodesTitles").property('value').split("(")[0].trim().toLowerCase().replace(/([^A-Z0-9])/gi,"");
+    d3.selectAll("."+episodeClass).classed("selected", true);
 
 };
 
