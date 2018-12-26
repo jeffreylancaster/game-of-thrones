@@ -75,63 +75,68 @@ function ready(error, l, e) {
     .attr("height", config.height)
   /* END CONFIG SETUP */
 
-  var allCharacters = []; // array for all characters
-  var uniqueCharacters = []; // array for uniqueCharacters
-        
-  for (var i in episodesData) {
-    // act on scenes
-    var scenes = episodesData[i].scenes;
-    for (var j in scenes){
-      // calculate length of scene in seconds
-      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
-      scenes[j].length = sceneLength;
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "sceneLength": sceneLength});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
 
-      // add characters in scene to allCharacters array
-      for (var k in scenes[j].characters){
-        if(scenes[j].characters[k].name.length > 0){
-          allCharacters.push(scenes[j].characters[k].name);
-        }
-      }
-    }
-  }
+  // get the list of all locations
+  var locations = l.regions.map(function(val, ind){
+    return val.location
+  })
 
-  // deduplicate the list of characters from scenes
-  uniqueCharacters = allCharacters.filter(onlyUnique).sort();
+  // then put that array into an object with 0 count
+  var locationsObj = locations.reduce(function(acc, val, ind){
+    var obj = {};
+    obj[val] = 0;
+    return Object.assign(acc, obj);
+  }, {});
 
-  // rebuild uniqueCharacters array
-  for(i=0; i<uniqueCharacters.length; i++){
-    uniqueCharacters[i] = {"name":uniqueCharacters[i], "num":0};
-    for(j=0; j<locationsData.length; j++){
-      uniqueCharacters[i][locationsData[j].location] = 0;
-    }
-  }
+  // put all characters in one array, make object to count character time
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .sort()
+    .map(function(cur, ind){
+      return Object.assign({}, {"name": cur}, locationsObj);
+    });
 
-  // sum scene lengths for characters in scenes
-  for(var i in episodesData) {
-    for(var j in episodesData[i].scenes){
-      for(var k in episodesData[i].scenes[j].characters){
-        for(var l in uniqueCharacters){
-          if(episodesData[i].scenes[j].characters[k].name == uniqueCharacters[l].name){
-            // counter for the number of different regions
-            if(uniqueCharacters[l][episodesData[i].scenes[j].location] == 0){
-              uniqueCharacters[l].num += 1;
-            }
-            uniqueCharacters[l][episodesData[i].scenes[j].location] += episodesData[i].scenes[j].length;
-          }
-        } 
-      }
-    }
-  }
+  // go through scenes and add sceneLength values to characters' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      var index = characters.findIndex(function(element){
+        return element.name == v.name;
+      });
+      characters[index][val.location] += val.sceneLength;
+    })
+  })
 
-  for(var i = uniqueCharacters.length; i--; ) {
-    if(uniqueCharacters[i].num < 2) {
-      uniqueCharacters.splice(i, 1);
-    }
-  }
+  // count the number of regions with > 0 sec
+  characters.forEach(function(val, ind){
+    var num = Object.values(val)
+      .filter(function(v){
+        return v > 0
+      })
+    num = num.length;
+    val.num = num;
+  })
+
+  characters = characters.filter(function(val){
+    return val.num > 1;
+  })
 
   // build the visualization
 
-  var data = uniqueCharacters;
+  var data = characters;
   var barHeight = config.barHeight;
 
   var svg = d3.select("svg"),
@@ -201,17 +206,9 @@ function ready(error, l, e) {
   var stack = d3.stack()
     .offset(d3.stackOffsetExpand);
 
-  var keys = d3.keys(data[0]).slice(2,);
-
-  for (i=0; i<data.length; i++){
-    var t=0;
-    for(j=0; j<keys.length; j++){
-      t += data[i][keys[j]];
-    }
-    data[i].total = t;
-  } 
-
-  data.sort(function(a, b) { return a.num - b.num; }).reverse();
+  data.sort(function(a, b) { return b.num - a.num; });
+  
+  var keys = d3.keys(data[0]).slice(1,-1);
 
   y.domain(data.map(function(d) { return d.name; }));
   //x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
@@ -260,7 +257,7 @@ function ready(error, l, e) {
     .attr("dy", "0.35em")
     .attr("dx", function(d){ return width + 6; })
     .attr("text-anchor", "start")
-    .text(function(d){ return "[" + d.num + "]"; });
+    .text(function(d){ return `[${d.num}]`; });
 
   var legend = g.append("g")
     .attr("font-family", "sans-serif")
@@ -270,7 +267,7 @@ function ready(error, l, e) {
     .selectAll("g")
     .data(keys.slice())
     .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(100," + i * 20 + ")"; });
+    .attr("transform", function(d, i) { return `translate(100,${i * 20})`; });
 
   legend.append("rect")
     .attr("x", width - 19)
