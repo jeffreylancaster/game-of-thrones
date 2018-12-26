@@ -73,11 +73,15 @@ function ready(error, e, ol) {
   var scale = 30;
 
   // build the select
-  episodesData.forEach(function(val, ind){
-    d3.select("#episodesTitles")
-      .append("option")
-      .text(val.episodeTitle + " (S"+val.seasonNum+"E"+val.episodeNum+")");
-  })
+  episodesData
+    .filter(function(val){
+      return val.openingSequenceLocations.length > 0
+    })
+    .forEach(function(val, ind){
+      d3.select("#episodesTitles")
+        .append("option")
+        .text(val.episodeTitle + " (S"+val.seasonNum+"E"+val.episodeNum+")");
+    })
 
   // select behavior
   d3.select("#episodesTitles")
