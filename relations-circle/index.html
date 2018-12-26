@@ -121,9 +121,7 @@ function ready(error, h) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  charactersData = h.characters;
-
-  var relationships = [];
+  characters = h.characters;
 
   /* CONFIG SETUP */
   d3.select("svg")
@@ -133,14 +131,15 @@ function ready(error, h) {
     .append("circle")
       .attr("r", config.circle.r)
       .styles(config.circle.style);
-
-  for(var i in config.directed){
-    relationships.push(config.directed[i].type);
-  }
-  for(var i in config.undirected){
-    relationships.push(config.undirected[i].type);
-  }
   /* END CONFIG SETUP */
+
+  var directed = config.directed.map(function(v,i){
+    return v.type;
+  })
+  var undirected = config.undirected.map(function(v,i){
+    return v.type;
+  })
+  var relationships = [...directed, ...undirected];
 
 
   /* MAKE A LIST OF ALL RELATIONSHIPS in characters.json */
@@ -163,10 +162,10 @@ function ready(error, h) {
 
   // build an array of characters involved
   relationships.forEach(function(val, i){
-    charactersData.forEach(function(value, j){
-      if(charactersData[j].hasOwnProperty(val)){
+    characters.forEach(function(value, j){
+      if(characters[j].hasOwnProperty(val)){
         charactersArray.push(value.characterName);
-        charactersData[j][val].forEach(function(valu, k){
+        characters[j][val].forEach(function(valu, k){
           charactersArray.push(valu);
         });
       }
@@ -177,62 +176,54 @@ function ready(error, h) {
   charactersArray = charactersArray.filter(onlyUnique).sort();
 
   // modify charactersArray to be objects with image files, other info
-  for(var i in charactersArray){
-    var image;
-    for(var j in charactersData){
-      if(charactersArray[i] == charactersData[j].characterName){
-        image = charactersData[j].characterImageThumb;
-      }
-    }
+  charactersArray.forEach(function(v,i){
+    var index = characters.findIndex(function(element){
+      return element.characterName == v;
+    });
+    var image = (index > -1 && characters[index].characterImageThumb) ? characters[index].characterImageThumb : null;
     charactersArray[i] = {
       "name":charactersArray[i],
       "image":image
     };
-  }
-  
-  // add nodes to matrix
-  charactersArray.forEach(function(val, i){
-    matrix.nodes.push({"id":val.name, "group":1, "image":val.image});
-  });
+  })
 
-  // build list of nodes and links based on position in array of characters
+  // add nodes to matrix
+  matrix.nodes = charactersArray.map(function(val, ind){
+    return {
+      "id":val.name,
+      "group":1,
+      "image":val.image
+    }
+  })
+
+  // build list of links based on position in array of characters
   relationships.forEach(function(val, i){
-    charactersData.forEach(function(value, j){
-      if(charactersData[j].hasOwnProperty(val)){
-        if(Array.isArray(charactersData[j][val])){
-          charactersData[j][val].forEach(function(valu, k){
-            // link valu to value, add the type of link
-            matrix.links.push({
-              "source":valu,
-              "target":value.characterName,
-              "value":1,
-              "type":val
-            });
-          });
-        } else {
+    characters.forEach(function(value, j){
+      if(value.hasOwnProperty(val)){
+        value[val].forEach(function(v, k){
           matrix.links.push({
-            "source":charactersData[j][val],
+            "source":v,
             "target":value.characterName,
             "value":1,
             "type":val
           });
-        }
+        });
       }
     })
   });
 
   // deduplicate links
-   for(i=0; i<matrix.links.length; i++){
-    for(j=i+1; j<matrix.links.length; j++){
-      if(matrix.links[i].source == matrix.links[j].target &&
-        matrix.links[i].target == matrix.links[j].source &&
-        matrix.links[i].type == matrix.links[j].type){
-        matrix.links.splice(j, 1);
+  matrix.links.forEach(function(val, ind){
+    matrix.links.forEach(function(v, i){
+      if(i > ind){
+        if(val.source == v.target &&
+          val.target == v.source &&
+          val.type == v.type){
+          matrix.links.splice(i, 1);
+        }
       }
-    }
-  }
-
-  // console.log("charactersArray", charactersArray);
+    })
+  })
   
   /* BUILD THE VISUALIZATION */
   
@@ -270,7 +261,7 @@ function ready(error, h) {
     bilinks.push([s, i, t, type, id]);
   });
 
-  console.log(bilinks);
+  // console.log(bilinks);
 
   var link = svg.selectAll(".link")
     .data(bilinks)
@@ -298,19 +289,15 @@ function ready(error, h) {
   }
 
   // check to see if the property is an array, and if so, apply the styles therein
-  for(var i in config){
-    if(Array.isArray(config[i])){
-      for(var j in config[i]){
-        svg.selectAll("."+config[i][j].type)
-        .styles(config[i][j].style)
-      }
-    }
-  }
+  [...config.directed, ...config.undirected].forEach(function(val, ind){
+    svg.selectAll(`.${val.type}`)
+    .styles(val.style)
+  })
 
   var node = svg.selectAll(".node")
     .data(nodes.filter(function(d) { return d.id; }))
     .enter().append("g")
-      .attr("transform", function(d) { return (d.x && d.y) ? "translate(" + radialPoint(d.x, d.y) + ")" : "translate(0,0)"; })
+      .attr("transform", function(d) { return (d.x && d.y) ? `translate(${radialPoint(d.x, d.y)})` : "translate(0,0)"; })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
@@ -320,7 +307,7 @@ function ready(error, h) {
     return [(y = +y) * Math.cos(x -= Math.PI / 2), y * Math.sin(x)];
   }
 
-  console.log(nodes);
+  // console.log(nodes);
 
   svg.append("defs")
     .selectAll("defs")
