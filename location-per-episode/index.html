@@ -52,8 +52,7 @@ var config = {
     "x":-20,
     "y":40
   },
-  "barHeight": 20,
-  "useSubLocation": false
+  "barHeight": 20
 }
 
 /* IMPORT DATA */
@@ -66,77 +65,48 @@ function ready(error, l, e) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  locationsData = l.regions;
-  episodesData = e.episodes;
-
   /* CONFIG SETUP */
   d3.select("svg")
     .attr("width", config.width)
     .attr("height", config.height);
   /* END CONFIG SETUP */
 
-  var totalTime = 0;
-  var seasons = [];
-  var episodes = {};
-  var episodesArray = [];
-  var allLocations = [];
-  var uniqueLocations = [];
-  var locationsArray = [];
-  var location;
-        
-  for (var i in episodesData) {
-    // act on scenes
-    var scenes = episodesData[i].scenes;
-    var episodesLocations = {};
+  // get the list of all locations
+  var locations = l.regions.map(function(val, ind){
+    return val.location
+  })
 
-    for (var j in scenes){
-      // calculate length of scene in seconds
-      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
-      scenes[j].length = sceneLength;
+  // then put that array into an object with 0 count
+  var locationsObj = locations.reduce(function(acc, val, ind){
+    var obj = {};
+    obj[val] = 0;
+    return Object.assign(acc, obj);
+  }, {});
 
-      // add location of scene to allLocations array
-      // location = (scenes[j].subLocation && config.useSubLocation) ? scenes[j].location + " - " + scenes[j].subLocation : scenes[j].location;
-      // allLocations.push(location);
-    }
-  }
+  // go through episodes; add title, season, episode, sort, and locations
+  var episodes = e.episodes.filter(function(val){
+    return val.scenes.length > 0
+  })
+    .map(function(val, ind){
+      var title = `S${val.seasonNum} E${val.episodeNum} - ${val.episodeTitle}`;
+      var episode = {
+        "name": title,
+        "seasonNum": val.seasonNum,
+        "episodeNum": val.episodeNum,
+        "total": 0
+      }
+      episode = Object.assign({}, episode, locationsObj);
 
-  // deduplicate the list of locations from scenes
-  // allLocations = allLocations.filter(onlyUnique).sort();
-  allLocations = locationsData.map(function(i){return i.location});
-
-  for(var i in episodesData){
-    // make episodesLocations array with all 0's
-    var episodesLocations = {};
-    for(var j in allLocations){
-      episodesLocations[allLocations[j]] = 0;
-    }
-
-    var scenes = episodesData[i].scenes;
-
-    // add sceneLength to location
-    for (var j in scenes){
-      location = (scenes[j].subLocation && config.useSubLocation) ? scenes[j].location + " - " + scenes[j].subLocation : scenes[j].location;
-      episodesLocations[location] += scenes[j].length;
-    }
-
-    // add episode info
-    if(episodesData[i].scenes.length > 0){
-      var title = `S${episodesData[i].seasonNum} E${episodesData[i].episodeNum} - ${episodesData[i].episodeTitle}`;
-      episodes[title] = episodesLocations;
-      episodes[title].name = title;
-      episodes[title].seasonNum = episodesData[i].seasonNum;
-      episodes[title].episodeNum = episodesData[i].episodeNum;
-      episodes[title].sort = parseInt(episodesData[i].seasonNum.toString()+episodesData[i].episodeNum.toString());
-    }
-  }
-
-  // convert object to an array
-  for(var i in episodes){
-    episodesArray.push(episodes[i]);
-  }
+      val.scenes.forEach(function(v, i){
+        var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+        episode[v.location] += sceneLength;
+        episode.total += sceneLength;
+      })
+      return episode;
+    })
 
   // build the visualization
-  var data = episodesArray;
+  var data = episodes;
   var barHeight = config.barHeight;
 
   var svg = d3.select("svg"),
@@ -204,18 +174,8 @@ function ready(error, l, e) {
   //   "#141e30" // Upside Down
   // ]); // based on d3.schemeCategory20b
 
-  var keys = allLocations;
+  var keys = locations;
 
-  for(var i in data){
-    var t = 0;
-    for(var j in keys){
-      t += data[i][keys[j]];
-    }
-    data[i].total = t;
-  }
-
-
-  // data.sort(function(a, b) { return a.sort - b.sort; });
   y.domain(data.map(function(d) { return d.name; }));
   x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
   z.domain(keys);

@@ -80,7 +80,7 @@ function ready(error, e, ol) {
     .forEach(function(val, ind){
       d3.select("#episodesTitles")
         .append("option")
-        .text(val.episodeTitle + " (S"+val.seasonNum+"E"+val.episodeNum+")");
+        .text(`${val.episodeTitle} (S${val.seasonNum}E${val.episodeNum})`);
     })
 
   // select behavior
