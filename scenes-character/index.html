@@ -75,9 +75,8 @@ function ready(error, l, e) {
   /* END CONFIG SETUP */
 
   var end = 0,
-    totalTime = 0,
-    charactersObj = {};
-
+    totalTime = 0;
+  
   // put all scenes in one array
   var scenes = e.episodes.reduce(function(acc, val, ind){
     var scene = val.scenes.reduce(function(a, v, i){
