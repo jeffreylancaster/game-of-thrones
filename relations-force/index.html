@@ -60,6 +60,7 @@ var config = {
   "title":"Relations",
   "width":1500,
   "height":1500,
+  "margin": 20,
   "directed":[
     {
       "type":"killedBy",
@@ -69,7 +70,7 @@ var config = {
         "stroke-opacity": 1
       },
       "textStyle":{
-        "font-size": "1em",
+        "font-size": "0.8em",
         "dominant-baseline": "central"
       }
     }
@@ -112,22 +113,21 @@ function ready(error, h) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  charactersData = h.characters;
-
-  var relationships = [];
+  characters = h.characters;
 
   /* CONFIG SETUP */
   d3.select("svg")
     .attr("width", config.width)
     .attr("height", config.height);
-
-  for(var i in config.directed){
-    relationships.push(config.directed[i].type);
-  }
-  for(var i in config.undirected){
-    relationships.push(config.undirected[i].type);
-  }
   /* END CONFIG SETUP */
+
+  var directed = config.directed.map(function(v,i){
+    return v.type;
+  })
+  var undirected = config.undirected.map(function(v,i){
+    return v.type;
+  })
+  var relationships = [...directed, ...undirected];
 
   var charactersArray = [];
   var matrix = {
@@ -137,78 +137,69 @@ function ready(error, h) {
 
   // build an array of characters involved
   relationships.forEach(function(val, i){
-    charactersData.forEach(function(value, j){
-      if(charactersData[j].hasOwnProperty(val)){
+    characters.forEach(function(value, j){
+      if(value.hasOwnProperty(val)){
         charactersArray.push(value.characterName);
-        charactersData[j][val].forEach(function(valu, k){
-          charactersArray.push(valu);
+        value[val].forEach(function(v, k){
+          charactersArray.push(v);
         });
       }
     })
   });
 
-
   // deduplicate array
   charactersArray = charactersArray.filter(onlyUnique).sort();
 
   // modify charactersArray to be objects with image files, other info
-  for(var i in charactersArray){
-    var image;
-    for(var j in charactersData){
-      if(charactersArray[i] == charactersData[j].characterName){
-        image = charactersData[j].characterImageThumb;
-      }
-    }
+  charactersArray.forEach(function(v,i){
+    var index = characters.findIndex(function(element){
+      return element.characterName == v;
+    });
+    var image = (index > -1 && characters[index].characterImageThumb) ? characters[index].characterImageThumb : null;
     charactersArray[i] = {
       "name":charactersArray[i],
       "image":image
     };
-  }
+  })
   
   // add nodes to matrix
   charactersArray.forEach(function(val, i){
-    matrix.nodes.push({"id":val.name, "group":1, "image":val.image});
+    matrix.nodes.push({
+      "id":val.name,
+      "group":1,
+      "image":val.image});
   });
 
-  // build list of nodes and links based on position in array of characters
+  // build list of links based on position in array of characters
   relationships.forEach(function(val, i){
-    charactersData.forEach(function(value, j){
-      if(charactersData[j].hasOwnProperty(val)){
-        if(Array.isArray(charactersData[j][val])){
-          charactersData[j][val].forEach(function(valu, k){
-            // link valu to value, add the type of link
-            matrix.links.push({
-              "source":valu,
-              "target":value.characterName,
-              "value":1,
-              "type":val
-            });
-          });
-        } else {
+    characters.forEach(function(value, j){
+      if(value.hasOwnProperty(val)){
+        value[val].forEach(function(v, k){
           matrix.links.push({
-            "source":charactersData[j][val],
+            "source":v,
             "target":value.characterName,
             "value":1,
-            "type":val
+            "type":val,
+            "id":Math.floor(Math.random()*100000)
           });
-        }
+        });
       }
     })
   });
 
   // deduplicate links
-   for(i=0; i<matrix.links.length; i++){
-    for(j=i+1; j<matrix.links.length; j++){
-      if(matrix.links[i].source == matrix.links[j].target &&
-        matrix.links[i].target == matrix.links[j].source &&
-        matrix.links[i].type == matrix.links[j].type){
-        matrix.links.splice(j, 1);
+  matrix.links.forEach(function(val, ind){
+    matrix.links.forEach(function(v, i){
+      if(i > ind){
+        if(val.source == v.target &&
+          val.target == v.source &&
+          val.type == v.type){
+          matrix.links.splice(i, 1);
+        }
       }
-    }
-  }
+    })
+  })
 
-  // console.log("charactersArray", charactersArray);
-  
   /* BUILD THE VISUALIZATION */
 
   var svg = d3.select("svg"),
@@ -226,7 +217,7 @@ function ready(error, h) {
       .force("link", d3.forceLink().id(function(d) { return d.id; }))
       .force("charge", d3.forceManyBody(100))
       .force("center", d3.forceCenter(width/2, height/2))
-      .force("collision", d3.forceCollide().radius(radius*2))
+      .force("collision", d3.forceCollide().radius(function(d){return radius*2}).iterations(5))
       .force("x", d3.forceX().strength(0.01))
       .force("y", d3.forceY().strength(0.01));
 
@@ -235,9 +226,9 @@ function ready(error, h) {
     .selectAll("path")
     .data(links)
     .enter().append("path")
-      .attr("class", function(d){ return "link "+d.type; })
+      .attr("class", function(d){ return `link ${d.type}`; })
       .attr("stroke-width", "2")
-      .attr("id", function(d){ return d.id });
+      .attr("id", function(d){ return d.id; })
 
   // add images to nodes
   svg.append("defs")
@@ -264,6 +255,7 @@ function ready(error, h) {
     .data(nodes)
     .enter().append("g")
       .attr("class", "node")
+      .on("click", mousedownNode)
       .call(d3.drag()
         .on("start", dragstarted)
         .on("drag", dragged)
@@ -286,29 +278,26 @@ function ready(error, h) {
     .attr("id", "arrows"); 
 
   // for directed arrays, add arrows and set styles
-  for(var i in config.directed){
+  [...config.directed].forEach(function(val, ind){
     links.forEach(function(value, index){
-      if(links[index].type == config.directed[i].type){
+      if(value.type == val.type){
         svg.selectAll("#arrows")
           .append("textPath")
-          .styles(config.directed[i].textStyle)
-          .attr("xlink:xlink:href", function(d){ return "#"+links[index].id; })
+          .styles(val.textStyle)
+          .attr("xlink:xlink:href", function(d){ return `#${value.id}`; })
           .attr("text-anchor", "middle")
           .attr("startOffset", "50%")
           .text("➤");
       }
-    });
-  }
+    })
+  })
 
-  // check to see if the property is an array, and if so, apply the styles therein
-  for(var i in config){
-    if(Array.isArray(config[i])){
-      for(var j in config[i]){
-        svg.selectAll("."+config[i][j].type)
-        .styles(config[i][j].style)
-      }
-    }
-  }
+  // apply the styles of the arrays
+  var setStyles = [...config.directed, ...config.undirected];
+  setStyles.forEach(function(val, ind){
+    svg.selectAll(`.${val.type}`)
+    .styles(val.style)
+  })
 
   simulation
     .nodes(nodes)
@@ -318,20 +307,25 @@ function ready(error, h) {
     .links(links);
 
   function positionLink(d) {
-    return "M" + d.source.x + "," + d.source.y + " " + d.target.x + "," + d.target.y;
+    return "M" +
+      Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.source.x)) + "," +
+      Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.source.y)) + " " +
+      Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.target.x)) + "," +
+      Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.target.y));
   }
 
   function ticked() {
     link
-      .attr("d", positionLink)
-      .attr("x1", function(d) { return Math.max(radius, Math.min(width - radius, d.source.x)); })
-      .attr("y1", function(d) { return Math.max(radius, Math.min(height - radius, d.source.y)); })
-      .attr("x2", function(d) { return Math.max(radius, Math.min(width - radius, d.target.x)); })
-      .attr("y2", function(d) { return Math.max(radius, Math.min(height - radius, d.target.y)); });
+      .attr("d", function(d){ return positionLink(d);})
+      .attr("x1", function(d) { return Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.source.x)); })
+      .attr("y1", function(d) { return Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.source.y)); })
+      .attr("x2", function(d) { return Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.target.x)); })
+      .attr("y2", function(d) { return Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.target.y)); });
 
     node.attr("transform", function(d) {
-      return "translate(" + Math.max(radius, Math.min(width - radius, d.x)) + "," + Math.max(radius, Math.min(height - radius, d.y)) + ")";
+      return "translate(" + Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.x)) + "," + Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.y)) + ")";
     });
+
   }
 
   function dragstarted(d) {
@@ -350,6 +344,38 @@ function ready(error, h) {
     d.fx = null;
     d.fy = null;
   }
+
+  var counter = 0;
+  function mousedownNode(d, i) {
+    simulation.stop();
+
+    // Apply the general update pattern to the nodes.
+    var index = nodes.findIndex(function(val){
+      return d.id == val.id;
+    })
+    nodes.splice(index, 1);
+    node = node.data(nodes, function(d) { return d.id;});
+    node.exit().remove();
+    node = node.enter().merge(node);
+
+    // Apply the general update pattern to the links.
+    links = links.filter(function(l) {
+      return l.source.id !== d.id && l.target.id !== d.id;
+    })
+    link = link.data(links);
+    link.exit().remove();
+    link = link.enter().merge(link);
+
+    // Update and restart the simulation.
+    simulation.nodes(nodes);
+    simulation.force("link").links(links);
+    simulation.alpha(0.15).restart();
+
+  }
+
+  // function restart() {
+    
+  // }
 };
 
     </script>
