@@ -40,42 +40,127 @@ function onlyUnique(value, index, self) {
 
 var config = {
   "scopeMain": false,
-  "all": {
-    "size": 1200,
-    "file": "matrixObject-all.json"
-  },
-  "main": {
-    "size": 800,
-    "file": "matrixObject-main.json"
-  }
+  "all": 1200,
+  "main": 800,
+  "margin": 30
 }
+
+var matrix = {"nodes":[], "links":[]}
 
 /* IMPORT DATA */
 d3.queue()
   .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/characters-groups.json')
   .await(ready);
 
-function ready(error, e) {
+function ready(error, e, g) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  episodesData = e.episodes;
+  var groups = {};
+  g.groups.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      groups[v] = ind + 1;
+    })
+  })
 
-  var file, width, height;
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {
+        "seasonNum":val.seasonNum,
+        "episodeNum":val.episodeNum,
+        "sceneLength": sceneLength});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
 
-  if(config.scopeMain){
-    width = config.main.size;
-    height = config.main.size;
-    file = config.main.file;
+  // put all characters in one array, make object to count character time
+  var characters = [];
+  if(!config.scopeMain){
+    characters = scenes.reduce(function(acc, val, ind){
+      var c = val.characters.reduce(function(a, v, i){
+        // return (val.characters.length > 1) ? a.concat(v.name) : '';
+        return a.concat(v.name);
+      }, []);
+      return [...acc, ...c];
+    }, [])
+      .filter(onlyUnique)
+      .map(function(cur, ind){
+        return Object.assign({}, {"name": cur});
+      });
   } else {
-    width = config.all.size;
-    height = config.all.size;
-    file = config.all.file;
+    g.groups.forEach(function(val, ind){
+      val.characters.forEach(function(v, i){
+        characters.push({"name": v});
+      })
+    })
   }
 
+  // Compute index per node.
+  var matrixArr = [];
+  characters.forEach(function(val, ind) {
+    group = (groups[val.name]) ? groups[val.name] : g.groups.length + 1;
+    matrix.nodes.push({
+      "name": val.name,
+      "group": group,
+      "id": ind,
+      "index": ind,
+      "count": 0
+    });
+    matrixArr[ind] = d3.range(characters.length).map(function(j) { return {x: j, y: ind, z: 0}; });
+  });
+
+  // go through scenes and add sceneLength values to characters' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      var a = characters.findIndex(function(value){
+        return value.name == v.name;
+      });
+      if(a > -1){
+        matrix.nodes[a].count += val.sceneLength;
+      }
+      val.characters.forEach(function(w, j){
+        var b = characters.findIndex(function(value){
+          return value.name == w.name;
+        });
+        if(a > -1 && b > -1 && a !== b){
+          matrixArr[a][b].z += val.sceneLength;
+        }
+      })
+    })
+  })
+
+  matrixArr.forEach(function(val, ind){
+    val.forEach(function(v, i){
+      if(v.z > 0){
+        matrix.links.push({
+          "source": v.x,
+          "target": v.y,
+          "value": v.z
+        })
+      }
+    })
+  })
+
+  console.log(matrixArr);
+
+  // build the visualization
+  
+  var width = (!config.scopeMain) ? config.all - 2*config.margin : config.main - 2*config.margin;
+  var height = width;
+
+  // build the visualization
   var svg = d3.select("svg")
     .attr("width", width)
-    .attr("height", height);
+    .attr("height", height)
+    .attr("transform", function(d){
+      return `translate(${config.margin},${config.margin})`
+    })
+    .style("margin-bottom", config.margin)
+    .style("margin-right", config.margin);
 
   var radius = 5;
 
@@ -86,64 +171,59 @@ function ready(error, e) {
       .force("charge", d3.forceManyBody())
       .force("center", d3.forceCenter(width / 2, height / 2));
 
-  d3.json("../data/"+file, function(error, graph) {
-    console.log(graph);
-    if (error) throw error;
+  var link = svg.append("g")
+      .attr("class", "links")
+    .selectAll("line")
+    .data(matrix.links)
+    .enter().append("line")
+      // .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+      .attr("stroke-width", "1px");
 
-    var link = svg.append("g")
-        .attr("class", "links")
-      .selectAll("line")
-      .data(graph.links)
-      .enter().append("line")
-        // .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
-        .attr("stroke-width", "1px");
+  var node = svg.append("g")
+      .attr("class", "nodes")
+    .selectAll("g")
+    .data(matrix.nodes)
+    .enter().append("g")
+    
+  var circles = node.append("circle")
+      .attr("r", radius)
+      .attr("fill", function(d) { return color(d.group); })
+      .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));
 
-    var node = svg.append("g")
-        .attr("class", "nodes")
-      .selectAll("g")
-      .data(graph.nodes)
-      .enter().append("g")
-      
-    var circles = node.append("circle")
-        .attr("r", radius)
-        .attr("fill", function(d) { return color(d.group); })
-        .call(d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended));
+  var lables = node.append("text")
+      .text(function(d) {
+        return d.name;
+      })
+      .attr('x', 6)
+      .attr('y', 3);
 
-    var lables = node.append("text")
-        .text(function(d) {
-          return d.name;
-        })
-        .attr('x', 6)
-        .attr('y', 3);
+  node.append("title")
+      .text(function(d) { return d.name; });
 
-    node.append("title")
-        .text(function(d) { return d.name; });
+  simulation
+      .nodes(matrix.nodes)
+      .on("tick", ticked);
 
-    simulation
-        .nodes(graph.nodes)
-        .on("tick", ticked);
+  simulation.force("link")
+      .links(matrix.links);
 
-    simulation.force("link")
-        .links(graph.links);
+  function ticked() {
+    link
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
 
-    function ticked() {
-      link
-          .attr("x1", function(d) { return d.source.x; })
-          .attr("y1", function(d) { return d.source.y; })
-          .attr("x2", function(d) { return d.target.x; })
-          .attr("y2", function(d) { return d.target.y; });
-
-      node
-          .attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
-          .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); })
-          .attr("transform", function(d) {
-            return "translate(" + d.x + "," + d.y + ")";
-          });
-    }
-  });
+    node
+        .attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
+        .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); })
+        .attr("transform", function(d) {
+          return "translate(" + d.x + "," + d.y + ")";
+        });
+  }
 
   function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();

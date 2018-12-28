@@ -46,7 +46,7 @@ function onlyUnique(value, index, self) {
 
 var config = {
   "title":"Co-Occurrence",
-  "scopeMain": false,
+  "scopeMain": true,
   "all": 5000,
   "main": 1600,
   "margin": {
@@ -91,7 +91,7 @@ function ready(error, e, g) {
 
   // put all characters in one array, make object to count character time
   var characters = [];
-  if(config.scopeMain){
+  if(!config.scopeMain){
     characters = scenes.reduce(function(acc, val, ind){
       var c = val.characters.reduce(function(a, v, i){
         return a.concat(v.name);
@@ -146,7 +146,7 @@ function ready(error, e, g) {
 
   // build the visualization
   
-  var width = height = (config.scopeMain) ? config.all : config.main;
+  var width = height = (!config.scopeMain) ? config.all : config.main;
 
   var x = d3.scaleBand().range([0, width]),
     z = d3.scaleLinear().domain([0, 100]).clamp(true),
