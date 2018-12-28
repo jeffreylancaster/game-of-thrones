@@ -47,16 +47,19 @@ d3.queue()
 function ready(error, data, d) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
-    
-  for(var i in data){
-    if(data[i].actors.length > 1){
-      data[i].actors.forEach(function(val, j){
-        actors[val.personID] = {"actorName":val.actorName, "personID":val.personID};
-      });
-    }
-  }
 
-  // clean up data from costars.json
+  data = Object.values(data)
+    .filter(function(val){
+      return val.actors.length > 1
+    });
+    
+  data.forEach(function(val, ind){
+    val.actors.forEach(function(v, i){
+      actors[v.personID] = {"actorName":v.actorName, "personID":v.personID};
+    });
+  })
+
+  // clean up data from costars.json [missing n's, etc.]
   d.characters.forEach(function(val, ind){
     // character played by one actor
     if(val.actorLink){
@@ -95,18 +98,16 @@ function ready(error, data, d) {
     matrixArr[i] = d3.range(matrix.nodes.length).map(function(j) { return {x: j, y: i, z: 0}; });
   });
   
-  for(var j in data){
-    if(data[j].actors.length > 1){
-      data[j].actors.forEach(function(val, ind){
-        var a = actors[val.personID].id;
-        matrix.nodes[a].count++;
-        data[j].actors.forEach(function(v, i){
-          var b = actors[v.personID].id;
-          matrixArr[a][b].z++;
-        })
+  data.forEach(function(value, j){
+    value.actors.forEach(function(val, ind){
+      var a = actors[val.personID].id;
+      matrix.nodes[a].count++;
+      data[j].actors.forEach(function(v, i){
+        var b = actors[v.personID].id;
+        matrixArr[a][b].z++;
       })
-    }
-  }
+    })
+  })
 
   // make the visualization
 
