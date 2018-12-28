@@ -13,7 +13,7 @@ function onlyUnique(value, index, self) {
 }
 
 // import characters JSON file
-$.getJSON( "data/characters.json", function( data ) {
+$.getJSON( "../data/characters.json", function( data ) {
 	var list = data.characters;
 	for (var i in list) {
   	//console.log(list[i].characterName);
@@ -69,7 +69,7 @@ var keyValues = [];
 var maxCharLoc = [];
 
 // import episodes JSON file
-$.getJSON( "data/episodes.json", function( data ) {
+$.getJSON( "../data/episodes.json", function( data ) {
   console.log("episodes.json loaded.");
 	
   list = data.episodes;
@@ -337,7 +337,7 @@ $.getJSON( "data/episodes.json", function( data ) {
 
 // import characters-include JSON file
 .done(function(){
-  $.getJSON( "data/characters-include.json", function( data ) {
+  $.getJSON( "../data/characters-include.json", function( data ) {
     console.log("characters-include.json loaded.");
     var list = data.include;
     for (var i in list) {
@@ -352,7 +352,7 @@ $.getJSON( "data/episodes.json", function( data ) {
 .done(function(){
   if(importLocations){
     //import locations JSON file
-    $.getJSON( "data/locations.json", function( data ) {
+    $.getJSON( "../data/locations.json", function( data ) {
       console.log("locations.json loaded.");
       sceneSubLocations = data.regions;
       for(i in data.regions){
@@ -378,7 +378,7 @@ $.getJSON( "data/episodes.json", function( data ) {
     }); // END import locations.json file
   } else {
     // a static locations file made from the output of the function above to expedite the process
-    $.getJSON( "data/locations-alt.json", function( data ) {
+    $.getJSON( "../data/locations-alt.json", function( data ) {
       console.log("locations-alt.json loaded.");
       if(!useSubLocation){
         // set location array to be sceneLocSorted

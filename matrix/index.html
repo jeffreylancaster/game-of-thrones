@@ -7,19 +7,17 @@
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" />
-    <script src="//d3js.org/d3.v2.min.js" charset="utf-8"></script>
-    <!-- for d3.queue() -->
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
   </head>
   <body>
-    <p style="margin-left: 20px;">Order: 
+    <p> 
       <select id="order">
-        <option value="name">by Name</option>
-        <option value="count">by Frequency</option>
-        <option value="group">by Cluster</option>
+        <option value="name">Order by Name</option>
+        <option value="count">Order by Frequency</option>
+        <option value="group">Order by Cluster</option>
       </select>
+      <!-- <button type="button" id="show">Show all</button> -->
     </p>
-    
     <svg class="matrix"></svg>
 
     <script>
@@ -48,15 +46,9 @@ function onlyUnique(value, index, self) {
 
 var config = {
   "title":"Co-Occurrence",
-  "scopeMain": true,
-  "all": {
-    "size": 2000,
-    "file": "matrixObject-all.json"
-  },
-  "main": {
-    "size": 1600,
-    "file": "matrixObject-main.json"
-  },
+  "scopeMain": false,
+  "all": 5000,
+  "main": 1600,
   "margin": {
     "top": 120,
     "right": 60,
@@ -65,31 +57,101 @@ var config = {
   }
 }
 
+var matrix = {"nodes":[], "links":[]};
 
 /* IMPORT DATA */
 d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/characters-groups.json')
   .await(ready);
 
-function ready(error) {
+function ready(error, e, g) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  var file, width, height;
-  
-  if(config.scopeMain){
-    width = config.main.size;
-    height = config.main.size;
-    file = config.main.file;
-  } else {
-    width = config.all.size;
-    height = config.all.size;
-    file = config.all.file;
-  }
+  var groups = {};
+  g.groups.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      groups[v] = ind + 1;
+    })
+  })
 
-  var x = d3.scale.ordinal().rangeBands([0, width]),
-    z = d3.scale.linear().domain([0, 100]).clamp(true),
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {
+        "seasonNum":val.seasonNum,
+        "episodeNum":val.episodeNum,
+        "sceneLength": sceneLength});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // put all characters in one array, make object to count character time
+  var characters = [];
+  if(config.scopeMain){
+    characters = scenes.reduce(function(acc, val, ind){
+      var c = val.characters.reduce(function(a, v, i){
+        return a.concat(v.name);
+      }, []);
+      return [...acc, ...c];
+    }, [])
+      .filter(onlyUnique)
+      .map(function(cur, ind){
+        return Object.assign({}, {"name": cur});
+      });
+    } else {
+      g.groups.forEach(function(val, ind){
+        val.characters.forEach(function(v, i){
+          characters.push({"name": v});
+        })
+      })
+    }
+
+  // Compute index per node.
+  var matrixArr = [];
+  characters.forEach(function(val, ind) {
+    group = (groups[val.name]) ? groups[val.name] : g.groups.length + 1;
+    matrix.nodes.push({
+      "name": val.name,
+      "group": group,
+      "id": ind,
+      "index": ind,
+      "count": 0
+    });
+    matrixArr[ind] = d3.range(characters.length).map(function(j) { return {x: j, y: ind, z: 0}; });
+  });
+
+  // go through scenes and add sceneLength values to characters' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      var a = characters.findIndex(function(value){
+        return value.name == v.name;
+      });
+      if(a > -1){
+        matrix.nodes[a].count += val.sceneLength;
+      }
+      val.characters.forEach(function(w, j){
+        var b = characters.findIndex(function(value){
+          return value.name == w.name;
+        });
+        if(a > -1 && b > -1){
+          matrixArr[a][b].z += val.sceneLength;
+        }
+      })
+    })
+  })
+
+  // build the visualization
+  
+  var width = height = (config.scopeMain) ? config.all : config.main;
+
+  var x = d3.scaleBand().range([0, width]),
+    z = d3.scaleLinear().domain([0, 100]).clamp(true),
     //c = d3.scale.category20c().domain(d3.range(20));
-    c = d3.scale.ordinal().range([
+    c = d3.scaleOrdinal().range([
         "#666666",// Stark
         "#9B0056",// Targaryen
         "#B36305",// Baratheon
@@ -113,27 +175,8 @@ function ready(error) {
     .append("g")
       .attr("transform", "translate(" + config.margin.left + "," + config.margin.top + ")");
 
-  d3.json("../data/"+file, function(dataMatrix) {
-    var matrix = [],
-      nodes = dataMatrix.nodes,
+    var nodes = matrix.nodes,
       n = nodes.length;
-
-    // Compute index per node.
-    nodes.forEach(function(node, i) {
-      node.index = i;
-      node.count = 0;
-      matrix[i] = d3.range(n).map(function(j) { return {x: j, y: i, z: 0}; });
-    });
-
-    // Convert links to matrix; count character occurrences.
-    dataMatrix.links.forEach(function(link) {
-      matrix[link.source][link.target].z += link.value;
-      matrix[link.target][link.source].z += link.value;
-      matrix[link.source][link.source].z += link.value;
-      matrix[link.target][link.target].z += link.value;
-      nodes[link.source].count += link.value;
-      nodes[link.target].count += link.value;
-    });
 
     // Precompute the orders.
     var orders = {
@@ -151,7 +194,7 @@ function ready(error) {
         .attr("height", height);
 
     var row = svg.selectAll(".row")
-        .data(matrix)
+        .data(matrixArr)
       .enter().append("g")
         .attr("class", "row")
         .attr("transform", function(d, i) { return "translate(0," + x(i) + ")"; })
@@ -162,13 +205,13 @@ function ready(error) {
 
     row.append("text")
         .attr("x", -6)
-        .attr("y", x.rangeBand() / 2)
+        .attr("y", x.bandwidth() / 2)
         .attr("dy", ".32em")
         .attr("text-anchor", "end")
         .text(function(d, i) { return nodes[i].name; });
 
     var column = svg.selectAll(".column")
-      .data(matrix)
+      .data(matrixArr)
       .enter().append("g")
         .attr("class", "column")
         .attr("transform", function(d, i) { return "translate(" + x(i) + ")rotate(-90)"; });
@@ -178,7 +221,7 @@ function ready(error) {
 
     column.append("text")
         .attr("x", 6)
-        .attr("y", x.rangeBand() / 2)
+        .attr("y", x.bandwidth() / 2)
         .attr("dy", ".32em")
         .attr("text-anchor", "start")
         .text(function(d, i) { return nodes[i].name; });
@@ -189,12 +232,21 @@ function ready(error) {
         .enter().append("rect")
           .attr("class", "cell")
           .attr("x", function(d) { return x(d.x); })
-          .attr("width", x.rangeBand())
-          .attr("height", x.rangeBand())
+          .attr("width", x.bandwidth())
+          .attr("height", x.bandwidth())
           .style("fill-opacity", function(d) { return z(d.z); })
           .style("fill", function(d) { return nodes[d.x].group == nodes[d.y].group ? c(nodes[d.x].group) : null; })
           .on("mouseover", mouseover)
-          .on("mouseout", mouseout);
+          .on("mouseout", mouseout)
+          .append("svg:title")
+          .text(function(d,i) {
+            var suffix = (d.z > 1) ? "s" : "";
+            if(d.x == d.y){
+              return `${matrix.nodes[d.x].name} is onscreen for ${secondsToHMS(d.z)}`;
+            } else {
+              return `${matrix.nodes[d.x].name} and ${matrix.nodes[d.y].name} are onscreen together for ${secondsToHMS(d.z)}`;
+            }
+          });
     }
 
     function mouseover(p) {
@@ -232,7 +284,7 @@ function ready(error) {
       order("group");
       d3.select("#order").property("selectedIndex", 2).node().focus();
       }, 5000);
-    });
+
 };
 
     </script>

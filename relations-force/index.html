@@ -255,7 +255,7 @@ function ready(error, h) {
     .data(nodes)
     .enter().append("g")
       .attr("class", "node")
-      .on("click", mousedownNode)
+      // .on("click", mousedownNode) // not ready yet - still buggy
       .call(d3.drag()
         .on("start", dragstarted)
         .on("drag", dragged)
