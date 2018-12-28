@@ -65,165 +65,141 @@ function ready(error, e, g, l) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  episodesData = e.episodes;
-  group = g.groups;
-  colors = l.colors;
-
   /* CONFIG SETUP */
   d3.select("svg")
     .attr("width", config.width)
     .attr("height", config.height);
   /* END CONFIG SETUP */
 
-  var allCharacters = []; // array for all characters
-  var uniqueCharacters = []; // array for uniqueCharacters
-  var totalTime = 0;
-  var charactersArray = [];
-  var matrix = {
-    "nodes":[],
-    "links":[]
-  }
-  // var seasons = [];
-  var end = 0;
-        
-  for (var i in episodesData) {
-    // act on scenes
-    var scenes = episodesData[i].scenes;
-    for (var j in scenes){
+  var nodes = [];
+
+  var end = 0,
+    totalTime = 0;
+
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
       // calculate length of scene in seconds
-      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
-      // append absolute value of scene start in seconds
-      scenes[j].absStartSec = totalTime;
-      // append absolute value of scene end in seconds
-      scenes[j].absEndSec = totalTime + sceneLength;
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      // determine the location
+      var location = (v.subLocation) ? v.location + " - " + v.subLocation : v.location;
+      var s = Object.assign({}, v, {
+        "seasonNum": val.seasonNum,
+        "episodeNum": val.episodeNum,
+        "sceneLength": sceneLength,
+        "location": location,
+        "absStartSec": totalTime,
+        "absEndSec": totalTime + sceneLength
+      });
       // store the last absEndSec as end
-      end = scenes[j].absEndSec;
+      end = totalTime + sceneLength;
       // add scene length to total time
       totalTime += sceneLength;
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
 
-      // add characters in scene to allCharacters array
-      for (var k in scenes[j].characters){
-        if(scenes[j].characters[k].name.length > 0){
-          allCharacters.push(scenes[j].characters[k].name);
-        }
-      }
-    }
-  }
+  // put all characters in one array, make object to count character scenes
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .map(function(v, i){
+      return {"name": v, "scenes":[], "total":0}
+    });
 
-  // deduplicate the list of characters from scenes
-  uniqueCharacters = allCharacters.filter(onlyUnique).sort();
-
-  // modify uniqueCharacters
-  var uniqueCharactersObject = {};
-  for(i=0; i<uniqueCharacters.length; i++){
-    uniqueCharactersObject[uniqueCharacters[i]] = {"name":uniqueCharacters[i], "scenes":[], "total":0}
-  }
-
-  // sum scene lengths for characters in scenes
-  for(var i in episodesData){
-    if(episodesData[i].scenes){
-      for(var j in episodesData[i].scenes){
-        if(episodesData[i].scenes[j].characters.length > 0){
-          for(var k in episodesData[i].scenes[j].characters){
-            var location = (episodesData[i].scenes[j].location) ? episodesData[i].scenes[j].location + " - " + episodesData[i].scenes[j].subLocation : episodesData[i].scenes[j].location
-            uniqueCharactersObject[episodesData[i].scenes[j].characters[k].name].scenes.push({
-              "absStartSec":episodesData[i].scenes[j].absStartSec,
-              "absEndSec":episodesData[i].scenes[j].absEndSec,
-              "location":location
-            });
-            uniqueCharactersObject[episodesData[i].scenes[j].characters[k].name].total += episodesData[i].scenes[j].absEndSec - episodesData[i].scenes[j].absStartSec
-          }
-        }
-      }
-    }
-  }
-
-  for(var i in uniqueCharactersObject){
-    // limit to main characters (totalCutoff)
-    if(uniqueCharactersObject[i].total > config.totalCutoff){
-      charactersArray.push(uniqueCharactersObject[i]);
-    }
-  }
-
-  charactersArray.sort(function(a, b) { return a.total - b.total; }).reverse();
+  // go through scenes and add sceneLength values to characters' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      var index = characters.findIndex(function(element){
+        return element.name == v.name;
+      });
+      characters[index].scenes.push({
+        "absStartSec":val.absStartSec,
+        "absEndSec":val.absEndSec,
+        "season":val.seasonNum,
+        "location":val.location
+      });
+      characters[index].total += (val.absEndSec - val.absStartSec);
+    })
+  })
+  
+  // remove characters with fewer than totalCutoff seconds
+  characters = characters.filter(function(val){
+    return val.total > config.totalCutoff;
+  })
 
   // concatenate successive scenes based on fuzzyScene
-  for(var i in charactersArray){
-    for(j=0; j < charactersArray[i].scenes.length-1; j++){
-      if(charactersArray[i].scenes[j].absEndSec + config.fuzzyScene >= charactersArray[i].scenes[j+1].absStartSec){
-        charactersArray[i].scenes[j+1].absStartSec = charactersArray[i].scenes[j].absStartSec;
-        charactersArray[i].scenes[j] = {};
+  characters.forEach(function(val, ind){
+    val.scenes.forEach(function(v, i){
+      if(i < val.scenes.length - 1){
+        if(v.absEndSec + config.fuzzyScene >= val.scenes[i+1].absStartSec){
+          val.scenes[i+1].absStartSec = v.absStartSec;
+          val.scenes[i] = {};
+        }
       }
-    }
-    var newScenes = [];
-    for(var j in charactersArray[i].scenes){
-      if(charactersArray[i].scenes[j].absStartSec){
-        charactersArray[i].scenes[j].absMidSec = (charactersArray[i].scenes[j].absStartSec + charactersArray[i].scenes[j].absEndSec)/2;
-        newScenes.push(charactersArray[i].scenes[j]);
-      }
-    }
-    charactersArray[i].scenes = newScenes;
-  }
-
-  console.log(charactersArray);
+    })
+    val.scenes = val.scenes.filter(function(v){
+      return v.hasOwnProperty('absStartSec')
+    })
+  })
 
   // align characters, groups
-  var charactersGroups = {};
-  for(var i in group){
-    if(group[i].characters.length > 0){
-      for(var j in group[i].characters){
-        charactersGroups[group[i].characters[j].toLowerCase().replace(/([^A-Z0-9])/gi,"")] = group[i].name.toLowerCase().replace(/([^A-Z0-9])/gi,"");
-      }
-    }
-  }
+  var groups = {};
+  g.groups.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      var prop = v.toLowerCase().replace(/([^A-Z0-9])/gi,"");
+      var value = val.name.toLowerCase().replace(/([^A-Z0-9])/gi,"");
+      groups[prop] = value;
+    })
+  })
+  
   // align groups, colors
-  var groupsColors = {};
-  for(var i in colors){
-    if(colors[i].class){
-      for(var j in colors[i].class){
-        groupsColors[colors[i].class[j].toLowerCase().replace(/([^A-Z0-9])/gi,"")] = colors[i].hexadecimal;
-      }
+  var colors = {};
+  l.colors.forEach(function(val, ind){
+    if(val.class){
+      val.class.forEach(function(v, i){
+        var prop = v.toLowerCase().replace(/([^A-Z0-9])/gi,"");
+        colors[prop] = val.hexadecimal;
+      })
     }
-  }
+  })
 
-  console.log(charactersGroups, groupsColors);
+  // modify characters into matrix (all nodes, no links)
+  characters.forEach(function(val, ind){
+    var name = val.name.toLowerCase().replace(/([^A-Z0-9])/gi,"");
+    val.color = colors[groups[name]];
 
-  // modify charactersArray into matrix (all nodes, no links)
-  for(var i in charactersArray){
-    // use charactersGroups and groupsColors to add color to entry
-    var characterGroup = charactersGroups[charactersArray[i].name.toLowerCase().replace(/([^A-Z0-9])/gi,"")];
-    var characterColor = groupsColors[characterGroup];
-    charactersArray[i].color = characterColor;
-
-    for(var j in charactersArray[i].scenes){
-      // limit to bubbles bigger than minBubbleSize
-      if(charactersArray[i].scenes[j].absEndSec - charactersArray[i].scenes[j].absStartSec >= config.minBubbleSize){
-        matrix.nodes.push({
-          "absEndSec":charactersArray[i].scenes[j].absEndSec,
-          "absMidSec":charactersArray[i].scenes[j].absMidSec,
-          "absStartSec":charactersArray[i].scenes[j].absStartSec,
-          "location":charactersArray[i].scenes[j].location,
-          "name":charactersArray[i].name,
-          "color":charactersArray[i].color
-        });
-      }
-    }
-  }
+    val.scenes.forEach(function(v, i){
+      if((v.absEndSec - v.absStartSec) >= config.minBubbleSize){
+        nodes.push({
+          "absEndSec": v.absEndSec,
+          "absMidSec": (v.absStartSec + v.absEndSec)/2,
+          "absStartSec": v.absStartSec,
+          "location": v.location,
+          "name": val.name,
+          "color": val.color,
+          "radius": (v.absEndSec - v.absStartSec)/2
+        })
+      }      
+    })
+  })
 
   /* BUILD THE VISUALIZATION */
 
-  var data = charactersArray;
+  var data = characters;
 
   var svg = d3.select("svg"),
     margin = config.margin,
     width = +svg.attr("width") - margin.left - margin.right,
-    height = +svg.attr("height") + margin.top + margin.bottom,
-    links = matrix.links,
-    nodes = matrix.nodes,
-    radius = 20;
+    height = +svg.attr("height") + margin.top + margin.bottom
     
   // account for margins
-  svg.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  svg.attr("transform", `translate(${margin.left},${margin.top})`);
 
   var x = d3.scaleLinear()
     .rangeRound([0, width]);
@@ -233,63 +209,68 @@ function ready(error, e, g, l) {
   // var color = d3.scaleOrdinal(d3.schemeCategory20);
 
   var simulation = d3.forceSimulation()
-      .force("collision", d3.forceCollide().radius(function(d){
-        return x(d.absEndSec - d.absMidSec)+config.buffer;
-      }))
-      .force("y", d3.forceY(height/2).strength(0.3));
+    // .alphaDecay(0.01)
+    .force("collision", d3.forceCollide()
+      .radius(function(d){
+        return x(d.radius) + config.buffer;
+      })
+      .iterations(3)
+      // .strength(1)
+    )
+    .force("y", d3.forceY(height/2).strength(0.2))
+    .nodes(nodes)
+    .on("tick", ticked);
 
   var node = svg.selectAll(".node")
     .data(nodes)
     .enter().append("g")
       .attr("class", "node")
-      .call(d3.drag()
-        .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended));
+      // .call(d3.drag()
+      //   .on("start", dragstarted)
+      //   .on("drag", dragged)
+      //   .on("end", dragended));
 
   node.append("circle")
-    .attr("class", function(d){ return d.name.toLowerCase().replace(/([^A-Z0-9])/gi,""); })
+    .attr("class", function(d){
+      return d.name.toLowerCase().replace(/([^A-Z0-9])/gi,"");
+    })
     .attr("r", function(d){
-      return x(d.absEndSec - d.absMidSec);
+      return x(d.radius);
     })
     .attr("fill", function(d){
       if(d.color){
         return d.color;
       } else {
-        return groupsColors.include;
+        return colors.include;
       }
     })
     .append("svg:title")
       .text(function(d) {return d.name});
     ;
 
-  simulation
-    .nodes(nodes)
-    .on("tick", ticked);
-
   function ticked() {
     nodes.forEach(function(d, i) {
       d.x = x(d.absMidSec);
     });
-    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    node.attr("transform", function(d) { return `translate(${d.x},${d.y})`; });
   }
 
-  function dragstarted(d) {
-    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
-  }
+  // function dragstarted(d) {
+  //   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  //   d.fx = d.x;
+  //   d.fy = d.y;
+  // }
 
-  function dragged(d) {
-    d.fx = d3.event.x;
-    d.fy = d3.event.y;
-  }
+  // function dragged(d) {
+  //   d.fx = d3.event.x;
+  //   d.fy = d3.event.y;
+  // }
 
-  function dragended(d) {
-    if (!d3.event.active) simulation.alphaTarget(0);
-    d.fx = null;
-    d.fy = null;
-  }
+  // function dragended(d) {
+  //   if (!d3.event.active) simulation.alphaTarget(0);
+  //   d.fx = null;
+  //   d.fy = null;
+  // }
 
   d3.selectAll("circle")
     .on("mouseover", function(d,i){

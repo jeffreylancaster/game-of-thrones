@@ -79,60 +79,62 @@ function ready(error, e) {
     .attr("height", config.height);
   /* END CONFIG SETUP */
 
-  var allCharacters = []; // array for all characters
-  var uniqueCharacters = []; // array for uniqueCharacters
-  var totalTime = 0;
-  var charactersArray = [];
-  var seasons = [];
-  var end = 0;
-  var allScenes = [];
-        
-  for (var i in episodesData) {
-    // act on scenes
-    var scenes = episodesData[i].scenes;
-    for (var j in scenes){
+  var end = 0,
+    totalTime = 0;
+  
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      // sort characters
+      v.characters.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+      // give each character an index and count the total i the scene
+      v.characters.forEach(function(value, index){
+        value.index = index;
+        value.total = v.characters.length-1;
+      })
       // calculate length of scene in seconds
-      var sceneLength = Math.abs(sec(scenes[j].sceneEnd) - sec(scenes[j].sceneStart));
-      // append absolute value of scene start in seconds
-      scenes[j].absStartSec = totalTime;
-      // append absolute value of scene end in seconds
-      scenes[j].absEndSec = totalTime + sceneLength;
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      // determine the location
+      var location = (v.subLocation) ? v.location + " - " + v.subLocation : v.location;
+      var s = Object.assign({}, v, {
+        "seasonNum": val.seasonNum,
+        "episodeNum": val.episodeNum,
+        "sceneLength": sceneLength,
+        "location": location,
+        "absStartSec": totalTime,
+        "absEndSec": totalTime + sceneLength
+      });
       // store the last absEndSec as end
-      end = scenes[j].absEndSec;
+      end = totalTime + sceneLength;
       // add scene length to total time
       totalTime += sceneLength;
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
 
-      allScenes.push(episodesData[i].scenes[j]);
-      allScenes[allScenes.length - 1].season = episodesData[i].seasonNum;
+  // put all seasons in an array
+  var seasons = scenes.reduce(function(acc, val, ind){
+    return [...acc, val.seasonNum];
+  }, [])
+    .filter(onlyUnique);
 
-      // add characters in scene to allCharacters array
-      for (var k in scenes[j].characters){
-        if(scenes[j].characters[k].name.length > 0){
-          allCharacters.push(scenes[j].characters[k].name);
-        }
-      }
-    }
-  }
-
-  for(var i in allScenes){
-    allScenes[i].characters.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
-    for(var j in allScenes[i].characters){
-      allScenes[i].characters[j].index = parseInt(j);
-      allScenes[i].characters[j].total = allScenes[i].characters.length-1;
-    }
-  }
-
-  // deduplicate the list of characters from scenes
-  uniqueCharacters = allCharacters.filter(onlyUnique).sort();
+  // put all characters in one array
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .sort();
 
   // calculate the maximum number of characters in a scene
-  var maxCharacters = 0;
-  for(var i in allScenes){
-    maxCharacters = (allScenes[i].characters.length > maxCharacters) ? allScenes[i].characters.length : maxCharacters;
-  }  
+  var maxCharacters = Math.max.apply(Math, scenes.map(function(o) { return o.characters.length; }))
+
 
   // build the visualization
-  var data = allScenes;
+  var data = scenes;
   var barHeight = config.barHeight;
 
   var svg = d3.select("svg"),
@@ -143,64 +145,60 @@ function ready(error, e) {
       g = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  // var y = d3.scaleBand() 
-  //     .rangeRound([0, height])
-  //     .paddingInner(0.15)
-  //     .align(0.1);
-
   var x = d3.scaleLinear()
       .rangeRound([0, width]);
-
-  // var z = d3.schemeCategory20c;
-  // var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-      // .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
-
-  // y.domain(data.map(function(d) { return d.name; }));
   x.domain([0, end]).nice();
-  // z.domain(["1", "2"]);
 
-  for(i=0; i<data.length; i++){
-    g.append("g")
-    .selectAll("g")
-    .data(data[i].characters)
-    .enter().append("rect")
-      //.attr("y", function(d){return height/2 + (barHeight * d.index) - (barHeight * d.total)/2}) // center baseline
-      .attr("y", function(d){return height - (barHeight * d.index)}) // bottom baseline
-      .attr("x", function(d){return x(data[i].absStartSec)})
-      .attr("width", function(d){return x(data[i].absEndSec) - x(data[i].absStartSec)})
-      .attr("height", barHeight)
-      .attr("fill", function(d){
-        return d3.interpolateSinebow(uniqueCharacters.indexOf(d.name)/uniqueCharacters.length);
-      })
-      .attr("class", function(d){return d.name.toLowerCase().replace(/([^A-Z0-9])/gi,"")})
-      .append("svg:title")
-        .text(function(d) {return d.name});
-  }
+  var s = g.selectAll(".scene")
+    .data(data)
+    .enter().append("g")
+      .attr("class", "scene")
+      .attr("transform", function(d){return "translate("+x(d.absStartSec)+", 0)"})
+      .selectAll("rect")
+        .data(function(d) { return d.characters; })
+        .enter().append("rect")
+          .attr("y", function(d){return height - (barHeight * d.index)}) // bottom baseline
+          .attr("width", function(d){
+            var parent = d3.select(this.parentNode).datum();
+            return x(parent.absEndSec) - x(parent.absStartSec)})
+          .attr("height", barHeight)
+          .attr("fill", function(d){
+            return d3.interpolateSinebow(characters.indexOf(d.name)/characters.length);
+          })
+          .attr("class", function(d){return d.name.toLowerCase().replace(/([^A-Z0-9])/gi,"")})
+          .append("svg:title")
+            .text(function(d) {return d.name});    
 
   var t = d3.transition()
     .duration(2000)
     .ease(d3.easeCubic);
 
   // transition to center baseline
-  $("button.center").click(function(){
-    $(".center").attr("disabled", "disabled");
-    $(".baseline").removeAttr("disabled");
-    d3.selectAll("rect")
-      .interrupt()
-      .transition(t)
-      .delay(function(d, i) { return i * 5; })
-      .attr("y", function(d){return height/2 - (barHeight * d.index) + (barHeight * d.total)/2}) // center baseline
-  })
-
-  $("button.baseline").click(function(){
-    $(".baseline").attr("disabled", "disabled");
-    $(".center").removeAttr("disabled");
-    d3.selectAll("rect")
-      .interrupt()
-      .transition(t)
-      .attr("y", function(d){return height - (barHeight * d.index)}) // bottom baseline
-  })
-
+  d3.select("button.center")
+    .on("click", function(){
+      d3.select(".center")
+        .classed("disabled", true);
+      d3.select(".baseline")
+        .classed("disabled", false)
+      d3.selectAll("rect")
+        .interrupt()
+        .transition(t)
+        .delay(function(d, i) { return i * 5; })
+        .attr("y", function(d){return height/2 - (barHeight * d.index) + (barHeight * d.total)/2}) // center baseline
+    })
+    
+  d3.select("button.baseline")
+    .on("click", function(){
+      d3.selectAll(".baseline")
+        .classed("disabled", true)
+      d3.selectAll(".center")
+        .classed("disabled", false)
+      d3.selectAll("rect")
+        .interrupt()
+        .transition(t)
+        .attr("y", function(d){return height - (barHeight * d.index)}) // bottom baseline
+    })
+    
   // add hover behavior
   d3.selectAll("rect")
     .on("mouseover", function(){
