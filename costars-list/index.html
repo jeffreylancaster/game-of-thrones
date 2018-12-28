@@ -21,35 +21,34 @@
       }
       var characters = {};
       var films = {};
-      var filmsArray = [];
-      var getAPI = config.getAPI;
-      var cutoff = config.cutoff;
 
       // import characters JSON file
       $.getJSON( "../data/characters.json", function( data ) {
         //console.log("characters.json loaded.");
         
         // parse actorLink to just nm####### into array of objects with characterName and actorName.
-        for(var i in data.characters){
-          if(data.characters[i].actors){
-            $.each(data.characters[i].actors, function(j, val){
-              characters[val.actorLink.split("/")[2]] = {
-                "actorLink": val.actorLink.split("/")[2],
-                "characterName": data.characters[i].characterName,
-                "actorName": val.actorName
+        data.characters.forEach(function(val, ind){
+          if(val.actors){
+            val.actors.forEach(function(v, i){
+              var link = v.actorLink.split("/")[2];
+              characters[link] = {
+                "actorLink": link,
+                "characterName": val.characterName,
+                "actorName": v.actorName
               };
-            });
+            })
           }
-          if(data.characters[i].actorLink){
-            characters[data.characters[i].actorLink.split("/")[2]] = {
-              "actorLink": data.characters[i].actorLink.split("/")[2],
-              "characterName": data.characters[i].characterName,
-              "actorName": data.characters[i].actorName
+          if(val.actorLink){
+            var link = val.actorLink.split("/")[2];
+            characters[link] = {
+              "actorLink": link,
+              "characterName": val.characterName,
+              "actorName": val.actorName
             };
           }
-        }
+        })
 
-        if(getAPI){
+        if(config.getAPI){
           // lookup in theimdbapi based on actorLink, if type = "Film" or "Short Film", in new object, if imdb_id exists, then add nm#####,  title, characterName to imdb_id.actors - if it doesn't exist, then create a new object
           
           for(var i in characters){
@@ -157,43 +156,34 @@
           }
         } else {
           $.getJSON( "../data/costars.json", function( data ) {
-            // console.log("costars.json loaded.");
-            // console.log(data);
-            // console.log(characters);
+            
             films = data;
-          })
-          .done(function(){
+
             // match names from characters.json back to films
-            $.each(films, function(i, val){
-              $.each(val.actors, function(j, value){
-                value.actorName = characters[value.personID].actorName;
-              });
-            });
-          })
-          .done(function(){
             for(var i in films){
-              filmsArray.push(films[i]);
+              films[i].actors.forEach(function(val, ind){
+                val.actorName = characters[val.personID].actorName;
+              })
             }
 
-            filmsArray = filmsArray.sort(function(a, b) {
-              return b.actors.length - a.actors.length;
-            });
+            var filmsArray = Object.values(films)
+              .filter(function(val){
+                return val.actors.length >= config.cutoff;
+              })
+              .sort(function(a, b) {
+                return b.actors.length - a.actors.length;
+              });
 
             //$("#list").html(JSON.stringify(filmsArray));
 
-            $("#list").html("");
-            for(i=0; i<filmsArray.length; i++){
-              if(filmsArray[i].actors.length >= cutoff){
-                var yearToAdd = "";
-                if(filmsArray[i].year){
-                  yearToAdd = " ("+filmsArray[i].year+")";
-                }
-                $("#list").append("<h2><a href='http://www.imdb.com/title/"+filmsArray[i].imdb_id+"' target='_blank'>"+filmsArray[i].title+"</a>"+yearToAdd+"</h2>");
-                $.each(filmsArray[i].actors, function(j, value){
-                  $("#list").append("<li><a href='http://www.imdb.com/name/"+value.personID+"' target='_blank'>"+value.actorName+"</a> ("+value.characterName+")</li>");
-                });
-              }
-            }
+            $("#list").innerHTML = "";
+            filmsArray.forEach(function(val, ind){
+              var yearToAdd = (val.year) ? `(${val.year})` : '';
+              $("#list").append(`<h2><a href='http://www.imdb.com/title/${val.imdb_id}' target='_blank'>${val.title}</a> ${yearToAdd}</h2>`);
+              val.actors.forEach(function(v, i){
+                $("#list").append(`<li><a href='http://www.imdb.com/name/${v.personID}' target='_blank'>${v.actorName}</a> (${v.characterName})</li>`);
+              })
+            })
           });
         }
       });
