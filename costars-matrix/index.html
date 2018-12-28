@@ -7,8 +7,6 @@
     <meta name="author" content="Jeffrey Lancaster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" />
-    <script src="https://d3js.org/d3.v2.min.js" charset="utf-8"></script>
-    <!-- for d3.queue() -->
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
   </head>
   <body>
@@ -33,15 +31,13 @@ var config = {
   }
 }
 
-var matrixObject = {"nodes":[], "links":[]};
+var matrix = {"nodes":[], "links":[]};
 var actors = {};
 
 // to dedpulicate an array
 function onlyUnique(value, index, self) { 
   return self.indexOf(value) === index;
 }
-
-// import costars JSON file
 
 d3.queue()
   .defer(d3.json, '../data/costars.json')
@@ -61,56 +57,67 @@ function ready(error, data, d) {
   }
 
   // clean up data from costars.json
-  for(var i in actors){
-    for(j=0; j<d.characters.length; j++){
-      if(d.characters[j].actorLink){
-        if(i == d.characters[j].actorLink.split("/")[2]){
-          actors[i].actorName = d.characters[j].actorName;
-        }
+  d.characters.forEach(function(val, ind){
+    // character played by one actor
+    if(val.actorLink){
+      var key = val.actorLink.split("/")[2];
+      if(actors.hasOwnProperty(key)){
+        actors[key].actorName = val.actorName;
       }
-      if(d.characters[j].actors){
-        for(k=0; k<d.characters[j].actors.length; k++){
-          if(i == d.characters[j].actors[k].actorLink.split("/")[2]){
-            actors[i].actorName = d.characters[j].actors[k].actorName;
-          }
+    }
+    // character played by multiple actors
+    if(val.actors){
+      val.actors.forEach(function(v, i){
+        var key = v.actorLink.split("/")[2];
+        if(actors.hasOwnProperty(key)){
+          actors[key].actorName = v.actorName;
         }
-      }
-    } 
-  }
+      })
+    }
+  })
     
   // append an id number to actors and nodes
   var counter = 0;
   for(var i in actors){
     actors[i].id = counter;
-    matrixObject.nodes.push({"name":actors[i].actorName, "group":1, "id":counter});
+    matrix.nodes.push({
+      "name": actors[i].actorName,
+      "group": 1,
+      "id": counter,
+      "count": 0
+    });
     counter++;
   }
 
-  // cycle through the costars.json and create links
-  for(var i in data){
-    if(data[i].actors.length > 1){
-      data[i].actors.forEach(function(val, j){
-        data[i].actors.forEach(function(value, k){
-          if(data[i].actors[j].personID !== data[i].actors[k].personID){
-            matrixObject.links.push({
-              "source":actors[data[i].actors[j].personID].id,
-              "target":actors[data[i].actors[k].personID].id,
-              "value":1});
-          }
-        });
-      });
+  // Compute index per node.
+  var matrixArr = [];
+  matrix.nodes.forEach(function(node, i) {
+    matrixArr[i] = d3.range(matrix.nodes.length).map(function(j) { return {x: j, y: i, z: 0}; });
+  });
+  
+  for(var j in data){
+    if(data[j].actors.length > 1){
+      data[j].actors.forEach(function(val, ind){
+        var a = actors[val.personID].id;
+        matrix.nodes[a].count++;
+        data[j].actors.forEach(function(v, i){
+          var b = actors[v.personID].id;
+          matrixArr[a][b].z++;
+        })
+      })
     }
   }
-  //console.log(matrixObject);
+
+  // make the visualization
 
   var margin = config.margin,
     width = config.width,
     height = config.height;
 
-  var x = d3.scale.ordinal().rangeBands([0, width]),
-    z = d3.scale.linear().domain([0, 100]).clamp(true),
-    //c = d3.scale.category10().domain(d3.range(10));
-    c = d3.scale.ordinal().range(["#3366cc", "#dc3912", "#ff9900", "#109618", "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", "#316395", "#994499", "#22aa99", "#aaaa11", "#6633cc", "#e67300", "#8b0707", "#651067", "#329262", "#5574a6", "#3b3eac"]);
+  var x = d3.scaleBand().range([0, width]),
+    z = d3.scaleLinear().domain([0, 100]).clamp(true),
+    //c = d3.schemeCategory10;
+    c = d3.scaleOrdinal().range(["#3366cc", "#dc3912", "#ff9900", "#109618", "#990099", "#0099c6", "#dd4477", "#66aa00", "#b82e2e", "#316395", "#994499", "#22aa99", "#aaaa11", "#6633cc", "#e67300", "#8b0707", "#651067", "#329262", "#5574a6", "#3b3eac"]);
 
   var svg = d3.select("svg")
       .attr("width", width + margin.left + margin.right)
@@ -119,33 +126,13 @@ function ready(error, data, d) {
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  var GoTmatrix = matrixObject;
-  var matrix = [],
-    nodes = GoTmatrix.nodes,
+  var nodes = matrix.nodes,
     n = nodes.length;
-
-  // Compute index per node.
-  nodes.forEach(function(node, i) {
-    node.index = i;
-    node.count = 0;
-    matrix[i] = d3.range(n).map(function(j) { return {x: j, y: i, z: 0}; });
-  });
-
-  // Convert links to matrix; count character occurrences.
-  GoTmatrix.links.forEach(function(link) {
-    matrix[link.source][link.target].z += link.value;
-    matrix[link.target][link.source].z += link.value;
-    matrix[link.source][link.source].z += link.value;
-    matrix[link.target][link.target].z += link.value;
-    nodes[link.source].count += link.value;
-    nodes[link.target].count += link.value;
-  });
 
   // Precompute the orders.
   var orders = {
     name: d3.range(n).sort(function(a, b) { return d3.ascending(nodes[a].name, nodes[b].name); }),
-    count: d3.range(n).sort(function(a, b) { return nodes[b].count - nodes[a].count; }),
-    group: d3.range(n).sort(function(a, b) { return nodes[a].group - nodes[b].group; })
+    count: d3.range(n).sort(function(a, b) { return nodes[b].count - nodes[a].count; })
   };
 
   // The default sort order.
@@ -157,7 +144,7 @@ function ready(error, data, d) {
       .attr("height", height);
 
   var row = svg.selectAll(".row")
-      .data(matrix)
+      .data(matrixArr)
     .enter().append("g")
       .attr("class", "row")
       .attr("transform", function(d, i) { return "translate(0," + x(i) + ")"; })
@@ -168,13 +155,13 @@ function ready(error, data, d) {
 
   row.append("text")
       .attr("x", -6)
-      .attr("y", x.rangeBand() / 2)
+      .attr("y", x.bandwidth() / 2)
       .attr("dy", ".32em")
       .attr("text-anchor", "end")
       .text(function(d, i) { return nodes[i].name; });
 
   var column = svg.selectAll(".column")
-    .data(matrix)
+    .data(matrixArr)
     .enter().append("g")
       .attr("class", "column")
       .attr("transform", function(d, i) { return "translate(" + x(i) + ")rotate(-90)"; });
@@ -184,7 +171,7 @@ function ready(error, data, d) {
 
   column.append("text")
       .attr("x", 6)
-      .attr("y", x.rangeBand() / 2)
+      .attr("y", x.bandwidth() / 2)
       .attr("dy", ".32em")
       .attr("text-anchor", "start")
       .text(function(d, i) { return nodes[i].name; });
@@ -195,12 +182,21 @@ function ready(error, data, d) {
       .enter().append("rect")
         .attr("class", "cell")
         .attr("x", function(d) { return x(d.x); })
-        .attr("width", x.rangeBand())
-        .attr("height", x.rangeBand())
+        .attr("width", x.bandwidth())
+        .attr("height", x.bandwidth())
         .style("fill-opacity", function(d) { return 8 * z(d.z); })
         .style("fill", function(d) { return nodes[d.x].group == nodes[d.y].group ? c(nodes[d.x].group) : null; })
         .on("mouseover", mouseover)
-        .on("mouseout", mouseout);
+        .on("mouseout", mouseout)
+        .append("svg:title")
+          .text(function(d,i) {
+            var suffix = (d.z > 1) ? "s" : "";
+            if(d.x == d.y){
+              return `${matrix.nodes[d.x].name} has been in ${d.z} movie${suffix} with other actors`;
+            } else {
+              return `${matrix.nodes[d.x].name} and ${matrix.nodes[d.y].name} have been in ${d.z} movie${suffix} together`;
+            }
+          });
   }
 
   function mouseover(p) {
