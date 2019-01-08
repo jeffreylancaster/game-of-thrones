@@ -10,15 +10,13 @@
 	<link rel="stylesheet" href="../style.css">
 	<style>
 		svg{
-			/*border: 2px solid #444;*/
-			/*margin: 15px 15px 5px;*/
 			padding: 25px;
 			font-family: "Helvetica Neue";
 		}
-		.season1, .season3, .season5, .season7{
+		.season:nth-child(odd){
 			fill: rgba(200, 200, 200, 0.2);
 		}
-		.season2, .season4, .season6, .season8{
+		.season:nth-child(even){
 			fill: rgba(200, 200, 255, 0.2);
 		}
 		.episode{
@@ -31,12 +29,6 @@
 			fill: #BBB;
 			display: none;
 		}
-		.episode:nth-child(even){
-
-		}
-		.episode:nth-child(odd){
-
-		}
 		circle.dead{
 			fill: #CC0000;
 			opacity: 0.2;
@@ -44,34 +36,34 @@
 
 			animation-name: dead;
 			animation-duration: 3s;
-				animation-iteration-count: 3;
-				animation-timing-function: ease-out;
+			animation-iteration-count: 3;
+			animation-timing-function: ease-out;
 			
 			/* Safari 4.0 - 8.0 */
 			-webkit-animation-name: dead;
 			-webkit-animation-duration: 3s; 
-				-webkit-animation-iteration-count: 3;
-				-webkit-animation-timing-function: ease-out;
+			-webkit-animation-iteration-count: 3;
+			-webkit-animation-timing-function: ease-out;
 		}
+		
 		/* Safari 4.0 - 8.0 */
 		@-webkit-keyframes dead {
-				0% {r: 10; opacity: 0.2;}
-				1% {r: 0; opacity: 0.5;}
-				100% {r: 10; opacity: 0.2;}
+			0% {r: 10; opacity: 0.2;}
+			1% {r: 0; opacity: 0.5;}
+			100% {r: 10; opacity: 0.2;}
 		}
 		@-webkit-keyframes offset {
-				100% {opacity: 1;}
+			100% {opacity: 1;}
 		}
-
 		/* Standard syntax */
 		@keyframes dead {
 			0% {r: 10; opacity: 0.2;}
-				33% {r: 15; opacity: 0;}
-				34% {r: 0; opacity: 0.5;}
-				100% {r: 10; opacity: 0.2;}
+			33% {r: 15; opacity: 0;}
+			34% {r: 0; opacity: 0.5;}
+			100% {r: 10; opacity: 0.2;}
 		}
 		@keyframes offset {
-				100% {opacity: 1;}
+			100% {opacity: 1;}
 		}
 
 		rect.region{
@@ -86,9 +78,9 @@
 		.titleLine{
 			fill: none;
 		}
+		/* Game of Thrones */
 		.king, .khal, .khaleesi{
-			/*stroke: #E21836;*/
-			stroke: gold;
+			stroke: #FFDF00;
 			stroke-width: 3px;
 		}
 		.hand{
@@ -97,6 +89,7 @@
 			stroke-dasharray: 1, 8;
 			stroke-linecap: round;
 		}
+		/* End Game of Thrones */
 		.line {
 			fill: none;
 			stroke: #CCC;
@@ -125,69 +118,11 @@
 			display: inline-block;
 			cursor: default;
 		}
-		.keyLabel{
-			font-family: "Helvetica Neue";
-			font-size: 0.8em;
-			fill: #777;
-		}
-		#key g:hover text{
-			fill: #333;
-			cursor: default;
-		}
-		#description{
-			width: 100%;
-			max-width: 1000px;
-			margin: 0 15px 80px;
-			color: #999;
-			font-size: 0.8em;
-		}
-		#description a{
-			text-decoration: none;
-		}
-		#loading path{
-			fill: none;
-			stroke: #888;
-			stroke-width: 0.5px;
-		}
-		#key{
-			display: inline-block;
-			/*display: none;*/
-		}
-		#ui{
-			width: 410px;
-			/*height: calc(410px * 9/16);*/
-			border: 2px solid #444;
-			margin: 15px 15px;
-			padding: 25px;
-			display: inline-block;
-			/*display: none;*/
-			vertical-align: top;
-			font-size: 12px;
-		}
-		#ui h1{
-			font-size: 30px;
-			margin-top: -5px;
-			margin-bottom: 0;
-			font-weight: 400;
-			color: rgb(230, 230, 230);
-		}
-		#ui h2{
-			font-size: 20px;
-			margin: 5px 0 0 0;
-			font-weight: 400;
-			color: rgb(230, 230, 230);
-		}
 		.hide{
 			display: none;
 			opacity: 0;
 			stroke: none;
 			fill: none;
-		}
-		input[type=radio]{
-			margin-right: 5px;
-		}
-		input[type=radio]:nth-child(3n), input[type=radio]:nth-child(3n+1){
-			margin-left: 10px;
 		}
 		.characterThumb{
 			width: 75px;
@@ -206,7 +141,6 @@
 			font-size: 1.4em;
 			fill: rgb(80,80,80);
 		}
-
 		footer{
 			width: 100%;
 			position: fixed;
@@ -236,14 +170,52 @@
 		#footer-content {
 			display: none;
 			background-color: white;
-				padding: 30px;
-				/*border-top: 2px solid #444;*/
-				/*box-shadow: 0px -1px 8px #AAAAAA;*/
+			padding: 30px;
 		}
 		.footer-container{
 			margin: 0 auto;
 			min-width: 50%;
 			width: 1000px;
+		}
+		input[type=radio]{
+			margin-right: 5px;
+		}
+		input[type=radio]:nth-child(3n), input[type=radio]:nth-child(3n+1){
+			margin-left: 10px;
+		}
+		#key{
+			display: inline-block;
+		}
+		.keyLabel{
+			font-family: "Helvetica Neue";
+			font-size: 0.8em;
+			fill: #777;
+		}
+		#key g:hover text{
+			fill: #333;
+			cursor: default;
+		}
+		#ui{
+			width: 410px;
+			border: 2px solid #444;
+			margin: 15px 15px;
+			padding: 25px;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 12px;
+		}
+		#ui h1{
+			font-size: 30px;
+			margin-top: -5px;
+			margin-bottom: 0;
+			font-weight: 400;
+			color: rgb(230, 230, 230);
+		}
+		#ui h2{
+			font-size: 20px;
+			margin: 5px 0 0 0;
+			font-weight: 400;
+			color: rgb(230, 230, 230);
 		}
 	</style>
 </head>
@@ -262,24 +234,28 @@
 						<div id="gender-select">
 							<h2>Gender</h2>
 						</div>
-						<div id="house-select">
-							<h2>House</h2>
+						<!-- Game of Thrones -->
+						<div id="group-select">
+							<h2>House<!-- Group --></h2>
 							<select>
-								<option disabled selected>Select a House</option>
+								<option disabled selected>Select a House<!-- Group --></option>
 							</select>
 						</div>
+						<!-- End Game of Thrones -->
 						<div id="character-select">
 							<h2>Character</h2>
 							<select>
 								<option disabled selected>Select a Character</option>
 							</select>
 						</div>
+						<!-- Game of Thrones -->
 						<div id="title-select">
 							<h2>Title</h2>
 							<select>
 								<option disabled selected>Select a Title</option>
 							</select>
 						</div>
+						<!-- End Game of Thrones -->
 						<div id="life-select">
 							<h2>Alive</h2>
 							<input type="radio" value="alive" name="alive">Alive
@@ -304,9 +280,11 @@ function cn(d){
 	return d.toLowerCase().replace(/([^A-Z0-9])/gi,"")
 };
 
+// to show one class
 function isolate(c){ // className
 	c = cn(c);
 	$(".character").addClass("hide");
+	/* Game of Thrones - otherwise can remove king/khal/khaleesi/hand */
 	if(c == "king" || c == "khal" || c == "khaleesi" || c == "hand" || c == "dead"){
 		$("."+c).parent().removeClass("hide");
 	} else if(c == "alive"){
@@ -323,12 +301,12 @@ function toTitleCase(str){
 }
 
 // from: http://bl.ocks.org/eesur/4e0a69d57d3bfc8a82c2
-d3.selection.prototype.moveToFront = function() {  
+d3.selection.prototype.moveToFront = function() {
 	return this.each(function(){
 		this.parentNode.appendChild(this);
 	});
 };
-d3.selection.prototype.moveToBack = function() {  
+d3.selection.prototype.moveToBack = function() {
 	return this.each(function() { 
 		var firstChild = this.parentNode.firstChild; 
 		if(firstChild) { 
@@ -345,19 +323,18 @@ function onlyUnique(value, index, self) {
 // hide the UI box until everything is loaded
 d3.select("footer").style("display", "none")
 
+// config parameters
 var c = {
 	'x': 0.01,
 	'y': 2
 }
 
 d3.queue()
-	.defer(d3.json, '../data/keyValues.json') // d
+	.defer(d3.json, '../data/keyValues.json')
 	.defer(d3.json, '../data/characters-groups.json')
 	.defer(d3.json, '../data/characters-gender.json')
 	.defer(d3.json, '../data/colors.json')
-	.defer(d3.json, '../data/characters.json') // ch.characters
-	// .defer(d3.json, '../data/characters-include.json') // inc.include
-	// .defer(d3.json, '../data/locations.json') // l.regions
+	.defer(d3.json, '../data/characters.json')
 	.await(ready);
 
 function ready(error, d, groups, gender, colors, ch) {
@@ -377,9 +354,9 @@ function ready(error, d, groups, gender, colors, ch) {
 		.attr("height", height);
 
 	var x = d3.scaleLinear()
-    .rangeRound([0, width]);
-  var y = d3.scaleLinear()
-    .rangeRound([0, height]);
+		.rangeRound([0, width]);
+	var y = d3.scaleLinear()
+		.rangeRound([0, height]);
 
 	// make array of titles
 	var titles = Object.values(characters).reduce(function(acc, val, ind){
@@ -397,8 +374,8 @@ function ready(error, d, groups, gender, colors, ch) {
 	// add titles to select
 	titles.forEach(function(val, ind){
 		d3.select("#title-select > select")
-        .append("option")
-        .text(`${val}`);
+			.append("option")
+			.text(`${val}`);
 	})
 
 	// build the arrays of points, titlepoints from characters
@@ -409,6 +386,7 @@ function ready(error, d, groups, gender, colors, ch) {
 			if(v.s > v.e){
 				console.log("mismatch: ", val.key, v);
 			}
+			/* Game of Thrones - otherwise can remove v.g, v.w, v.b */
 			// ignore flashbacks, greensight, warging, not yet born
 			if(v.f || v.g || v.w || v.b == false){
 				return a;
@@ -489,7 +467,8 @@ function ready(error, d, groups, gender, colors, ch) {
 		.data(d.episodes)
 		.enter()
 		.append("g")
-			.attr("class", function(d){return `season season${d.seasonNum}`});
+			.attr("class", function(d){return `season season${d.seasonNum}`})
+			.on("click", function(d){return isolate('character')});
 	
 	// add group and rectangle for each episode
 	var episodes = seasons.selectAll("g.episodes")
@@ -556,6 +535,7 @@ function ready(error, d, groups, gender, colors, ch) {
 			.attr("class", function(d){return `character ${cn(d.key)}`})
 			.on("mouseover", characterOver)
 			.on("mouseout", characterOut)
+			.on("click", function(d){return isolate(cn(d.key))})
 
 	// for each character who dies, add a circle at that spot
 	var circle = characterGroup.selectAll("circle")
@@ -667,39 +647,39 @@ function ready(error, d, groups, gender, colors, ch) {
 		.sort()
 		.forEach(function(val, ind){
 			d3.select("#character-select > select")
-        .append("option")
-        .text(`${val}`);
+				.append("option")
+				.text(`${val}`);
 		});
 	d3.select("#character-select > select")
-    .append("option")
-    .attr("disabled", "disabled")
-  d3.select("#character-select > select")
-  	.append("option")
-  	.attr("value", "character")
-  	.text("All Characters")
+		.append("option")
+		.attr("disabled", "disabled")
+	d3.select("#character-select > select")
+		.append("option")
+		.attr("value", "character")
+		.text("All Characters")
 
-	// add house-specific styling to lines, add houses to select
+	// add house/group-specific styling to lines, add houses to select
 	groups.groups.forEach(function(val, ind){
 		val.characters.forEach(function(v, i){
-			var houseClass = (val.name == "Include") ? cn(val.name) : `${cn(val.name)} include`;
-			d3.select(`.${cn(v)}`).classed(houseClass, true)
+			var groupClass = (val.name == "Include") ? cn(val.name) : `${cn(val.name)} include`;
+			d3.select(`.${cn(v)}`).classed(groupClass, true)
 		})
 		if(val.name == "Include"){
-			d3.select("#house-select > select")
-		    .append("option")
-		    .attr("disabled", "disabled")
-			d3.select("#house-select > select")
-		  	.append("option")
-		  	.attr("value", "include")
-		  	.text("All Main Characters")
-		  d3.select("#house-select > select")
-		  	.append("option")
-		  	.attr("value", "character")
-		  	.text("All Characters")
+			d3.select("#group-select > select")
+				.append("option")
+				.attr("disabled", "disabled")
+			d3.select("#group-select > select")
+				.append("option")
+				.attr("value", "include")
+				.text("All Main Characters")
+			d3.select("#group-select > select")
+				.append("option")
+				.attr("value", "character")
+				.text("All Characters")
 		} else {
-			d3.select("#house-select > select")
-		  	.append("option")
-		  	.text(`${val.name}`)
+			d3.select("#group-select > select")
+				.append("option")
+				.text(`${val.name}`)
 		}
 	})
 
@@ -720,7 +700,7 @@ function ready(error, d, groups, gender, colors, ch) {
 		.attr("dominant-baseline", "hanging")
 		.attr("text-anchor", "start");
 	
-	// add a group for each house
+	// add a group for each house/group
 	var keyGroups = selectKey.selectAll("g")
 		.data(groups.groups)
 		.enter()
@@ -730,6 +710,7 @@ function ready(error, d, groups, gender, colors, ch) {
 			})
 			.attr("transform", function(d, i){return `translate(0,${14*i+40})`});
 
+	/* Game of Thrones */
 	// add special lines and points (King, Khaleesi, Khal, Hand, Dead)
 	selectKey.select("g.stark").selectAll("paths")
 		.data([[{"x":(100*Math.random()+50)/c.x,"y":0},{"x":200/c.x,"y":0}]])
@@ -791,6 +772,7 @@ function ready(error, d, groups, gender, colors, ch) {
 			.attr("dominant-baseline", "middle")
 			.attr("text-anchor", "start");
 
+	/* Game of Thrones */
 	// modify special key labels
 	keyGroups.select("g.stark .keyLabel")
 		.text("Stark + King");
