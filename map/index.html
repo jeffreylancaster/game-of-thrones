@@ -26,9 +26,6 @@
 			stroke-width: 0.5px;
 			stroke-dasharray: 2,4;
 		}
-		.episode:hover{
-			display: block;
-		}
 		.episodeTitle{
 			font-size: 0.8em;
 			fill: #BBB;
@@ -47,34 +44,34 @@
 
 			animation-name: dead;
 			animation-duration: 3s;
-		    animation-iteration-count: 3;
-		    animation-timing-function: ease-out;
+				animation-iteration-count: 3;
+				animation-timing-function: ease-out;
 			
 			/* Safari 4.0 - 8.0 */
 			-webkit-animation-name: dead;
 			-webkit-animation-duration: 3s; 
-		    -webkit-animation-iteration-count: 3;
-		    -webkit-animation-timing-function: ease-out;
+				-webkit-animation-iteration-count: 3;
+				-webkit-animation-timing-function: ease-out;
 		}
 		/* Safari 4.0 - 8.0 */
 		@-webkit-keyframes dead {
-		    0% {r: 10; opacity: 0.2;}
-		    1% {r: 0; opacity: 0.5;}
-		    100% {r: 10; opacity: 0.2;}
+				0% {r: 10; opacity: 0.2;}
+				1% {r: 0; opacity: 0.5;}
+				100% {r: 10; opacity: 0.2;}
 		}
 		@-webkit-keyframes offset {
-		    100% {opacity: 1;}
+				100% {opacity: 1;}
 		}
 
 		/* Standard syntax */
 		@keyframes dead {
 			0% {r: 10; opacity: 0.2;}
-		    33% {r: 15; opacity: 0;}
-		    34% {r: 0; opacity: 0.5;}
-		    100% {r: 10; opacity: 0.2;}
+				33% {r: 15; opacity: 0;}
+				34% {r: 0; opacity: 0.5;}
+				100% {r: 10; opacity: 0.2;}
 		}
 		@keyframes offset {
-		    100% {opacity: 1;}
+				100% {opacity: 1;}
 		}
 
 		rect.region{
@@ -101,9 +98,9 @@
 			stroke-linecap: round;
 		}
 		.line {
-		  fill: none;
-		  stroke: #CCC;
-		  stroke-width: 0.5px;
+			fill: none;
+			stroke: #CCC;
+			stroke-width: 0.5px;
 		}
 		.rect{
 			fill: #CCC;
@@ -123,7 +120,7 @@
 		.include:hover .rect{
 			stroke-width: 3px;
 		}
-		g:hover text{ /* show all names */
+		g.character:hover text{ /* show all names */
 		/*.include:hover text{*/ /* show only .include names */
 			display: inline-block;
 			cursor: default;
@@ -203,7 +200,7 @@
 			border: 3px solid white;
 			box-shadow: 3px 3px 3px #AAAAAA;
 		}
-		.subLocation{
+		.sublocation{
 			font-family: "Helvetica Neue";
 			font-weight: 200;
 			font-size: 1.4em;
@@ -214,7 +211,7 @@
 			width: 100%;
 			position: fixed;
 			bottom: 0;
-		    left: 0;
+				left: 0;
 		}
 		.toggle-footer{
 			width: 100px;
@@ -239,9 +236,9 @@
 		#footer-content {
 			display: none;
 			background-color: white;
-		    padding: 30px;
-		    /*border-top: 2px solid #444;*/
-		    /*box-shadow: 0px -1px 8px #AAAAAA;*/
+				padding: 30px;
+				/*border-top: 2px solid #444;*/
+				/*box-shadow: 0px -1px 8px #AAAAAA;*/
 		}
 		.footer-container{
 			margin: 0 auto;
@@ -251,17 +248,14 @@
 	</style>
 </head>
 <body>
-	<div id="map">
-		<svg version="1.1" id="loading" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 	 width="900px" height="500px" viewBox="800 -89.5 900 500" enable-background="new 800 -89.5 900 500" xml:space="preserve">
-		</svg>
-	</div>
+	<div id="map"></div>
 	<footer>
 		<div class="toggle-footer">
 			<i class="zmdi zmdi-info-outline zmdi-hc-lg"></i>&nbsp; <i class="zmdi zmdi-search zmdi-hc-lg"></i>
 		</div>
-    	<div id="footer-content">
-    		<div class="footer-container">
-	    		<div id="key"></div>
+			<div id="footer-content">
+				<div class="footer-container">
+					<div id="key"></div>
 				<div id="ui">
 					<h1>Select</h1>
 					<form>
@@ -290,30 +284,619 @@
 							<h2>Alive</h2>
 							<input type="radio" value="alive" name="alive">Alive
 							<input type="radio" value="dead" name="alive">Dead
-							<input type="radio" value="characters" name="alive">Both
+							<input type="radio" value="character" name="alive">Both
 						</div>
 					</form>	
 				</div>
 			</div>
-    	</div>
+			</div>
 	</footer>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
 	<!-- for local development -->
-	<!-- <script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/d3.min.js"></script> -->
-	<script src="../js/map.js"></script>
+	<!-- <script src="js/jquery-3.1.1.min.js"></script> -->
+	<!-- <script src="js/d3.min.js"></script> -->
 	<script>
-		$(document).ready(function(){
-		    $(".toggle-footer").click(function(){
-		        $("#footer-content").slideToggle("fast");
-		    });
 
-		    $("#map, header").click(function(){
-		        $("#footer-content").slideUp("fast");
-		    });
+// to make a class name
+function cn(d){
+	return d.toLowerCase().replace(/([^A-Z0-9])/gi,"")
+};
+
+function isolate(c){ // className
+	c = cn(c);
+	$(".character").addClass("hide");
+	if(c == "king" || c == "khal" || c == "khaleesi" || c == "hand" || c == "dead"){
+		$("."+c).parent().removeClass("hide");
+	} else if(c == "alive"){
+		$(".character").not($(".dead").parent()).removeClass("hide");
+	} else {
+		$("."+c).removeClass("hide");
+	}
+}
+
+function toTitleCase(str){
+	return str.replace(/\w\S*/g, function(txt){
+		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+	});
+}
+
+// from: http://bl.ocks.org/eesur/4e0a69d57d3bfc8a82c2
+d3.selection.prototype.moveToFront = function() {  
+	return this.each(function(){
+		this.parentNode.appendChild(this);
+	});
+};
+d3.selection.prototype.moveToBack = function() {  
+	return this.each(function() { 
+		var firstChild = this.parentNode.firstChild; 
+		if(firstChild) { 
+			this.parentNode.insertBefore(this, firstChild); 
+		} 
+	});
+};
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+		return self.indexOf(value) === index;
+}
+
+// hide the UI box until everything is loaded
+d3.select("footer").style("display", "none")
+
+var c = {
+	'x': 0.01,
+	'y': 2
+}
+
+d3.queue()
+	.defer(d3.json, '../data/keyValues.json') // d
+	.defer(d3.json, '../data/characters-groups.json')
+	.defer(d3.json, '../data/characters-gender.json')
+	.defer(d3.json, '../data/colors.json')
+	.defer(d3.json, '../data/characters.json') // ch.characters
+	// .defer(d3.json, '../data/characters-include.json') // inc.include
+	// .defer(d3.json, '../data/locations.json') // l.regions
+	.await(ready);
+
+function ready(error, d, groups, gender, colors, ch) {
+	if (error) throw error;
+	console.log("now that the files are loaded... do magic.");
+
+	var characters = d.characters;
+	var episodes = d.episodes;
+	// var locations = d.locations;
+	var subLocations = d.sublocations;
+	
+	const width = c.x*episodes[episodes.length-1].episodes[episodes[episodes.length-1].episodes.length-1].shift;
+	const height = c.y*(d.locations[d.locations.length-1].middle + d.locations[d.locations.length-1].max/2);
+
+	const svg = d3.select("#map").append("svg")
+		.attr("width", width)
+		.attr("height", height);
+
+	var x = d3.scaleLinear()
+    .rangeRound([0, width]);
+  var y = d3.scaleLinear()
+    .rangeRound([0, height]);
+
+	// make array of titles
+	var titles = Object.values(characters).reduce(function(acc, val, ind){
+		var t = val.values.filter(function(v, i){
+			return v.t
+		})
+			.map(function(v, i){
+				return v.t
+			})
+		return [...acc, ...t]
+	}, [])
+		.filter(onlyUnique)
+		.sort();
+
+	// add titles to select
+	titles.forEach(function(val, ind){
+		d3.select("#title-select > select")
+        .append("option")
+        .text(`${val}`);
+	})
+
+	// build the arrays of points, titlepoints from characters
+	var points = Object.values(characters).map(function(val, ind){
+		val.points = [];
+		var p = val.values.reduce(function(a, v, i){
+			// check if start and end are mismatched
+			if(v.s > v.e){
+				console.log("mismatch: ", val.key, v);
+			}
+			// ignore flashbacks, greensight, warging, not yet born
+			if(v.f || v.g || v.w || v.b == false){
+				return a;
+			}
+			// for everything else
+			else {
+				var s = {'x':v.s, 'y':v.y, 'c':val.key};
+				var e = {'x':v.e, 'y':v.y, 'c':val.key};
+				(v.t) ? s.t = v.t : null; // s.t = null?
+				(v.t) ? e.t = v.t : null; // e.t = null?
+				(v.t && !characters[val.key].titlepoints) ? characters[val.key].titlepoints = [] : null;
+				(v.a == false) ? e.a = false : null;
+				// add s, e to titlepoints
+				(v.t && characters[val.key].titlepoints) ? characters[val.key].titlepoints.push(s, e) : (characters[val.key].titlepoints) ? characters[val.key].titlepoints.push(null) : null;
+				// add s, e to points
+				return [...a, s, e];
+			}
+		}, []);
+		characters[val.key].points = p;
+		return p;
+	});
+
+	// define line generators: if > 1 title, then split into separate objects
+	var lineFunction = d3.line()
+		.x(function(d) { return c.x*d.x; })
+		.y(function(d) { return c.y*d.y; })
+		.curve(d3.curveMonotoneX);
+
+	var discontinuousLineFunction = d3.line()
+		.defined(function(d) { return d; })
+		.x(function(d) { return c.x*d.x; })
+		.y(function(d) { return c.y*d.y; })
+		.curve(d3.curveMonotoneX);
+
+	// add rectangles representing each region
+	var region = svg.selectAll("rect.region")
+		.data(d.locations)
+		.enter()
+		.append("rect")
+			.attr("class", function(d){return `region ${cn(d.name)}`})
+			.attr("height", function(d){return c.y*d.max})
+			.attr("width", width)
+			.attr("x", 0)
+			.attr("y", function(d){return c.y*(d.middle-d.max/2)});
+	
+	// add left-most region label
+	var regionLeft = svg.selectAll("text.left")
+		.data(d.locations)
+		.enter()
+		.append("text")
+			.attr("class", "region left")
+			.text(function(d){return d.name.replace("#","")})
+			.style("font-size", function(d){
+				return (c.y*d.max > 100) ? 100 : c.y*d.max
+			})
+			.attr("x", 10)
+			.attr("y", function(d){return c.y*d.middle+2})
+			.attr("dominant-baseline", "middle")
+			.attr("text-anchor", "start");
+	
+	// add right-most region label
+	var regionRight = svg.selectAll("text.right")
+		.data(d.locations)
+		.enter()
+		.append("text")
+			.attr("class", "region right")
+			.text(function(d){return d.name.replace("#","")})
+			.style("font-size", function(d){
+				return (c.y*d.max > 100) ? 100 : c.y*d.max
+			})
+			.attr("x", width-10)
+			.attr("y", function(d){return c.y*d.middle+2})
+			.attr("dominant-baseline", "middle")
+			.attr("text-anchor", "end");
+	
+	// add group for each season
+	var seasons = svg.selectAll("g.season")
+		.data(d.episodes)
+		.enter()
+		.append("g")
+			.attr("class", function(d){return `season season${d.seasonNum}`});
+	
+	// add group and rectangle for each episode
+	var episodes = seasons.selectAll("g.episodes")
+		.data(function(d){return d.episodes})
+		.enter()
+		.append("g")
+			.attr("class", "episode")
+			.append("rect")
+				.attr("class", function(d){return `episode${d.episodeNum}`})
+				.attr("height", height+10)
+				.attr("width", function(d){return c.x*d.length})
+				.attr("x", function(d){return c.x*d.shift})
+				.attr("y", -5)
+				.on("mouseover", function(){
+					d3.selectAll(".episodeTitle")
+						.style("display", "none");
+					d3.select(this.parentNode).selectAll(".episodeTitle")
+						.style("display", "block");
+				});
+	
+	// add top label
+	var episodeTop = svg.selectAll(".episode")
+		.append("text")
+			.attr("class", "episodeTitle")
+			.text(function(d){
+				var p = d3.select(this.parentNode.parentNode).datum();
+				return `${d.episodeTitle} (S${p.seasonNum}E${d.episodeNum})`
+			})
+			.attr("x", function(d){
+				var p = d3.select(this.parentNode.parentNode).datum();
+				return (p.seasonNum == 1 && d.episodeNum < 5) ? c.x*d.shift : (p.seasonNum == 7) ? c.x*(d.shift + d.length) : c.x*(d.shift + d.length/2);
+			})
+			.attr("y", 15)
+			.attr("dominant-baseline", "ideographic")
+			.attr("text-anchor", function(d){
+				var p = d3.select(this.parentNode.parentNode).datum();
+				return (p.seasonNum == 1 && d.episodeNum < 5) ? "start" : (p.seasonNum == 7) ? "end" : "middle";
+			});
+	
+	// add bottom label
+	var episodeBottom = svg.selectAll(".episode")
+		.append("text")
+			.attr("class", "episodeTitle")
+			.text(function(d){
+				var p = d3.select(this.parentNode.parentNode).datum();
+				return `${d.episodeTitle} (S${p.seasonNum}E${d.episodeNum})`
+			})
+			.attr("x", function(d){
+				var p = d3.select(this.parentNode.parentNode).datum();
+				return (p.seasonNum == 1 && d.episodeNum < 5) ? c.x*d.shift : (p.seasonNum == 7) ? c.x*(d.shift + d.length) : c.x*(d.shift + d.length/2);
+			})
+			.attr("y", height-15)
+			.attr("dominant-baseline", "text-before-edge")
+			.attr("text-anchor", function(d){
+				var p = d3.select(this.parentNode.parentNode).datum();
+				return (p.seasonNum == 1 && d.episodeNum < 5) ? "start" : (p.seasonNum == 7) ? "end" : "middle";
+			});
+	
+	// for each character, make a group
+	var characterGroup = svg.selectAll(".character")
+		.data(Object.values(characters))
+		.enter()
+		.append("g")
+			.attr("class", function(d){return `character ${cn(d.key)}`})
+			.on("mouseover", characterOver)
+			.on("mouseout", characterOut)
+
+	// for each character who dies, add a circle at that spot
+	var circle = characterGroup.selectAll("circle")
+		.data(function(d){
+			return d.values.filter(function(val){
+				return val.a == false
+			})
+		})
+		.enter()
+		.append("circle")
+			.attr("cx", function(d){return c.x*d.e;})
+			.attr("cy", function(d){return c.y*d.y;})
+			.attr("class", "dead");
+
+	// for each character with a title, add title line to the group
+	var titleLines = characterGroup.selectAll(".titleLine")
+		.data(function(d){
+			return (d.hasOwnProperty('titlepoints')) ? [d.titlepoints] : [[null]];
+		})
+		.enter()
+		.append("path")
+			.attr("class", function(d){
+				return (d[0] == null) ? 'titleLine' : `titleLine ${d[0].t.toLowerCase()}`
+			})
+			.attr("d", discontinuousLineFunction);
+	
+	// for each character, add the linear path to the group
+	var characterLines = characterGroup.selectAll(".line")
+		.data(function(d){return [d.points]})
+		.enter()
+		.append("path")
+			.attr("class", "line")
+			.attr("d", lineFunction);
+
+	// append rectangles representing each scene to the group
+	var characterBoxes = characterGroup.selectAll("rect.rect")
+		.data(function(d){return d.values})
+		.enter()
+		.append("rect")
+			.attr("x", function(d){return c.x*d.s})
+			.attr("y", function(d){return c.y*d.y-(6/2)})
+			.attr("width", function(d){return c.x*(d.e - d.s)})
+			.attr("height", 6)
+			.attr("class", "rect");
+
+	// append character name to the group
+	var characterText = characterGroup
+		.append("text")
+			.attr("class", "text")
+			.text(function(d){return d.key})
+			.style("font", "400 20px Helvetica Neue")
+			.attr("dominant-baseline", "hanging")
+			.attr("text-anchor", "end");
+
+	// add a single text box to display all sublocations
+	var sublocationText = svg.append("text")
+		.attr("x", 0)
+		.attr("y", 0)
+		.attr("class", "sublocation")
+		.attr("dominant-baseline", "middle")
+		.attr("text-anchor", "start");
+
+	// function to bring the group to the front when rolled over and show the text label
+	function characterOver(d){
+		d3.select(this).moveToFront();
+		d3.select(this).selectAll(".text")
+			.attr("x", function(){return d3.event.pageX - 40;})
+			.attr("y", d3.mouse(this)[1]+10)
+			.style("display", "block")
+			.attr("text-anchor", function(){
+				return (d3.event.pageX < 200) ? "start" : "end";
+			});
+		var thumbClass = `.${d3.select(this).attr("class").split(" ")[1]}-image`;
+		d3.select(thumbClass).style("display", "block");
+		if(d3.event.pageX < 200){
+			d3.select(thumbClass)
+				.style("top", `${d3.event.pageY-22.5}px`)
+				.style("left", `${d3.event.pageX-80-20}px`);
+		} else {
+			d3.select(thumbClass)
+				.style("top", `${d3.event.pageY-22.5}px`)
+				.style("left", `${d3.event.pageX+10}px`);
+		}
+		d3.select(".sublocation").style("display", "block");
+		var mouseY = d3.mouse(this)[1]/c.y;
+		subLocations.forEach(function(val, ind){
+			var lower = (mouseY > val.middle - val.max/2);
+			var upper = (mouseY < val.middle + val.max/2);
+			if(lower && upper){
+				d3.selectAll(".sublocation")
+					.attr("x", function(){return window.pageXOffset + 20;})
+					.attr("y", function(){return 2*val.middle;})
+					.text(function(){return val.name;});
+			}
+		})
+	}
+	// function to hide things when rolled out
+	function characterOut(d){
+		d3.selectAll(".characterThumb").style("display", "none");
+		d3.select(".sublocation").style("display", "none");
+		d3.select(this).selectAll(".text").style("display", "none");
+	}
+
+	// characters-groups.json
+	// list characters to include in the select, and add to select
+	var characterSelect = groups.groups.reduce(function(acc, val, ind){
+		return [...acc, ...val.characters]
+	}, [])
+		.sort()
+		.forEach(function(val, ind){
+			d3.select("#character-select > select")
+        .append("option")
+        .text(`${val}`);
 		});
+	d3.select("#character-select > select")
+    .append("option")
+    .attr("disabled", "disabled")
+  d3.select("#character-select > select")
+  	.append("option")
+  	.attr("value", "character")
+  	.text("All Characters")
+
+	// add house-specific styling to lines, add houses to select
+	groups.groups.forEach(function(val, ind){
+		val.characters.forEach(function(v, i){
+			var houseClass = (val.name == "Include") ? cn(val.name) : `${cn(val.name)} include`;
+			d3.select(`.${cn(v)}`).classed(houseClass, true)
+		})
+		if(val.name == "Include"){
+			d3.select("#house-select > select")
+		    .append("option")
+		    .attr("disabled", "disabled")
+			d3.select("#house-select > select")
+		  	.append("option")
+		  	.attr("value", "include")
+		  	.text("All Main Characters")
+		  d3.select("#house-select > select")
+		  	.append("option")
+		  	.attr("value", "character")
+		  	.text("All Characters")
+		} else {
+			d3.select("#house-select > select")
+		  	.append("option")
+		  	.text(`${val.name}`)
+		}
+	})
+
+	// build the key
+	var keyWidth = 410;
+	var key = d3.select("#key").append("svg")
+		.attr("width", keyWidth)
+		.attr("height", (9/16)*keyWidth);
+	var selectKey = d3.select("#key").select("svg");
+
+	// add key title
+	key.append("text")
+		.attr("class", "region")
+		.text("Key")
+		.style("font-size", 30)
+		.attr("x", 0)
+		.attr("y", 0)
+		.attr("dominant-baseline", "hanging")
+		.attr("text-anchor", "start");
+	
+	// add a group for each house
+	var keyGroups = selectKey.selectAll("g")
+		.data(groups.groups)
+		.enter()
+		.append("g")
+			.attr("class", function(d){
+				return cn(d.name)
+			})
+			.attr("transform", function(d, i){return `translate(0,${14*i+40})`});
+
+	// add special lines and points (King, Khaleesi, Khal, Hand, Dead)
+	selectKey.select("g.stark").selectAll("paths")
+		.data([[{"x":(100*Math.random()+50)/c.x,"y":0},{"x":200/c.x,"y":0}]])
+		.enter()
+		.append("path")
+			.attr("class", "king")
+			.attr("d", lineFunction);
+
+	selectKey.select("g.targaryen").selectAll("paths")
+		.data([[{"x":(100*Math.random()+50)/c.x,"y":0},{"x":200/c.x,"y":0}]])
+		.enter()
+		.append("path")
+			.attr("class", "khaleesi")
+			.attr("d", lineFunction);
+
+	selectKey.select("g.dothraki").selectAll("paths")
+		.data([[{"x":(100*Math.random()+50)/c.x,"y":0},{"x":200/c.x,"y":0}]])
+		.enter()
+		.append("path")
+			.attr("class", "khal")
+			.attr("d", lineFunction);
+
+	selectKey.select("g.lannister").selectAll("paths")
+		.data([[{"x":(100*Math.random()+50)/c.x,"y":0},{"x":200/c.x,"y":0}]])
+		.enter()
+		.append("path")
+			.attr("class", "hand")
+			.attr("d", lineFunction);
+
+	selectKey.select("g.tyrell")
+		.append("circle")
+			.attr("cx", 150)
+			.attr("cy", 0)
+			.attr("class", "dead");
+
+	selectKey.select("g.frey")
+		.append("circle")
+			.attr("cx", 150)
+			.attr("cy", 0)
+			.attr("class", "dead");
+
+	// add line for each group
+	keyGroups.selectAll("paths")
+		.data(function(d){
+			return (d.name == "Tyrell" || d.name == "Frey") ? [[{"x":0,"y":0},{"x":150/c.x,"y":0}]] : [[{"x":0,"y":0},{"x":200/c.x,"y":0}]]
+		})
+		.enter()
+		.append("path")
+			.attr("class", "line")
+			.attr("d", lineFunction)
+
+	// add line label
+	keyGroups
+		.append("text")
+			.text(function(d){return d.name})
+			.attr("class", "keyLabel")
+			.attr("x", 215)
+			.attr("y", 0)
+			.attr("dominant-baseline", "middle")
+			.attr("text-anchor", "start");
+
+	// modify special key labels
+	keyGroups.select("g.stark .keyLabel")
+		.text("Stark + King");
+	keyGroups.select("g.targaryen .keyLabel")
+		.text("Targaryen + Khaleesi");
+	keyGroups.select("g.lannister .keyLabel")
+		.text("Lannister + Hand");
+	keyGroups.select("g.dothraki .keyLabel")
+		.text("Dothraki + Khal");
+	keyGroups.select("g.tyrell .keyLabel")
+		.text("Tyrell + Dead");
+	keyGroups.select("g.frey .keyLabel")
+		.text("Frey + Dead");
+	keyGroups.select("g.include .keyLabel")
+		.text("Other");
+
+	// add .include to all groups for hover behavior
+	keyGroups
+		.classed("include", true);
+	
+	// characters-gender.json
+	// add gender class to each character and to select
+	gender.gender.forEach(function(val, ind){
+		val.characters.forEach(function(v, i){
+			d3.select(`.${cn(v)}`).classed(val.gender, true)
+		})
+		d3.select("#gender-select")
+			.append("input")
+				.attr("type", "radio")
+				.attr("name", "gender")
+				.attr("value", val.gender)
+		d3.select("#gender-select")
+			.append("text")
+				.text(toTitleCase(val.gender))
+	})
+	d3.select("#gender-select")
+		.append("input")
+			.attr("type", "radio")
+			.attr("name", "gender")
+			.attr("value", "character")
+	d3.select("#gender-select")
+		.append("text")
+			.text("All Characters")
+
+	// key select behavior
+	d3.selectAll("input, select")
+		.on("change", function(){
+			var selected = d3.select(this);
+			var id = d3.select(this.parentNode).attr("id");
+			var value = selected.property('value');
+			// reset other selects
+			d3.selectAll("option")
+				.property("selected", function(){return this.defaultSelected;})
+			// reset the other input or both inputs
+			if(id == "gender-select"){
+				d3.selectAll("#life-select input").property("checked", false)
+			} else if(id == "life-select"){
+				d3.selectAll("#gender-select input").property("checked", false)
+			} else {
+				d3.selectAll("#gender-select input, #life-select input").property("checked", false)
+			}
+			// reselect the select with the selected value
+			selected.property('value', value)
+			// isolate characters with that property
+			isolate(d3.select(this).property('value'))
+		})
+
+	// colors.json
+	// add color data to styles
+	colors.colors.forEach(function(val, ind){
+		if(val.class){
+			val.class.forEach(function(v, i){
+				var colorClass = `.${cn(v)}`;
+				d3.selectAll(`${colorClass}`).selectAll(".line, .rect")
+					.style("stroke", val.hexadecimal);
+				d3.selectAll(`${colorClass}`).selectAll(".rect")
+					.style("fill", val.hexadecimal);
+			})
+		}
+	})
+
+	// show the UI box
+	d3.select("footer").style("display", "block")
+
+	// characters.json
+	// append the character thumbnail to the body
+	ch.characters.forEach(function(val, ind){
+		if(val.characterImageThumb){
+			d3.select("body")
+				.append("div")
+				.attr("class", `characterThumb ${cn(val.characterName)}-image`)
+				.style("background-image", `url(${val.characterImageThumb})`)
+		}
+	})
+};
+	</script>
+	<script>
+	$(document).ready(function(){
+		$(".toggle-footer").click(function(){
+			$("#footer-content").slideToggle("fast");
+		});
+
+		$("#map, header").click(function(){
+			$("#footer-content").slideUp("fast");
+		});
+	});
 	</script>
 </body>
 </html>

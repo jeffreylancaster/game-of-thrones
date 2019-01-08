@@ -3,6 +3,7 @@ GoT_notes.txt
 js/jquery.min.js
 js/d3.min.js
 geography/
-**/indexOld.html
+**/indexOld*.html
 m/
 **/*Old*
+js/

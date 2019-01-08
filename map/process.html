@@ -23,8 +23,345 @@
 	</head>
 	<body>
 		<div id="loading">Crunching the data...</div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<!-- <script src="js/jquery-3.1.1.min.js"></script>-->
-		<script src="../js/process.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+		<script>
+// to convert scene start/end times into seconds
+function sec(timeString){
+    var sec = 0;
+    if (timeString.length == 0) return sec;
+    var splitArray = timeString.split(":");
+    sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+    return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
+}
+
+var config = {
+	"includeAll": true, // whether to include all characters or not
+	"useSub": true, // whether to use locations (false) or sublocations (true)
+	"laneHeight": 3
+}
+
+/* IMPORT DATA */
+d3.queue()
+  // .defer(d3.json, '../data/characters.json') // c.characters
+  .defer(d3.json, '../data/episodes.json') // e.episodes
+  .defer(d3.json, '../data/characters-include.json') // inc.include
+  .defer(d3.json, '../data/locations.json') // l.regions
+  // .defer(d3.json, '../data/locations-alt.json') // la.sceneLocSorted
+  .await(ready);
+
+function ready(error, e, inc, l) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  // make array for locations from locations.json
+  var locations = l.regions.reduce(function(acc, val, ind){
+  	return acc.concat(val.location)
+  }, [])
+  	.map(function(val, ind){
+  		return {"name": val, "max": 0, "middle": 0}
+  	});
+  // make a dictionary for locations
+  var lo = locations.reduce(function(acc, val, ind) {
+	  acc[val.name] = ind;
+		return acc;
+	}, {});
+  
+  // make array for sublocations from locations.json
+  var sublocations = l.regions.reduce(function(acc, val, ind){
+  	var s = val.subLocation.reduce(function(a, v, i){
+  		var l = `${val.location}#${v}`;
+  		return a.concat(l);
+  	}, [])
+  	return [...acc, ...s];
+  }, [])
+  	.map(function(val, ind){
+  		return {"name": val, "max": 0, "middle": 0}
+  	});
+  // make a dictionary for sublocations
+  var su = sublocations.reduce(function(acc, val, ind) {
+	  acc[val.name] = ind;
+		return acc;
+	}, {});
+  
+  // make list of opening locations
+  var openinglocations = e.episodes.reduce(function(acc, val, ind){
+    return [...acc, ...val.openingSequenceLocations];
+  }, [])
+  	.filter(onlyUnique);
+
+  // put all scenes in one array
+  var end = 0,
+    totalTime = 0;
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var loc = (!config.useSub) ? v.location : (v.subLocation) ? `${v.location}#${v.subLocation}` : `${v.location}#`;
+      var s = Object.assign({}, v, {
+      	"seasonNum":val.seasonNum,
+      	"episodeNum":val.episodeNum,
+      	"sceneLength": sceneLength,
+      	"loc": loc,
+        "absStartSec": totalTime,
+        "absEndSec": totalTime + sceneLength
+      });
+      // store the last absEndSec as end
+      end = totalTime + sceneLength;
+      // add scene length to total time
+      totalTime += sceneLength;
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // put all locations in an array ...
+  var Locations = scenes.reduce(function(acc, val, ind){
+  	return acc.concat(val.location)
+  }, [])
+  	.filter(onlyUnique)
+  	// ... and check to see if locations are missing from locations.json
+  	.filter(function(val, ind){
+  		if(!locations.some(function(v){return v.name == val})){
+  			return val
+  		}
+  	});
+
+  // put all sublocations in an array ...
+  var subLocations = scenes.reduce(function(acc, val, ind){
+  	var l = (val.subLocation) ? `${val.location}#${val.subLocation}` : `${val.location}#`;
+  	return acc.concat(l)
+  }, [])
+  	.filter(onlyUnique)
+  	// ... and check to see if locations are missing from locations.json
+  	.filter(function(val, ind){
+  		if(!sublocations.some(function(v){return v.name == val})){
+  			return val
+  		}
+  	});
+
+  // check to see if there are new locations or sublocations to add to locations.json
+  if(Locations.length > 0 || subLocations.length > 0){
+  	console.log("New for locations.json", Locations, subLocations)
+  }
+
+  // put all seasons in an array
+  var seasons = e.episodes.reduce(function(acc, val, ind){
+    return acc.concat(val.seasonNum);
+  }, [])
+    .filter(onlyUnique);
+
+  // make list of episodes arranged by season
+  var episodes = seasons.map(function(cur, ind){
+    return Object.assign({}, {
+    	"seasonNum": cur,
+    	"length": 0,
+    	"shift": 0,
+    	"episodes": []
+    });
+  });
+  // add episode information, including length and shift
+  var episodeShift = 0;
+  e.episodes.forEach(function(val, ind){
+  	var episodeLength = (val.scenes.length > 0) ? val.scenes.reduce(function(a, v, i){
+  		return a + Math.abs(sec(v.sceneEnd) - sec(v.sceneStart))
+  	}, 0) : 0;
+  	episodes[val.seasonNum-1].episodes.push({
+  		"episodeNum": val.episodeNum,
+  		"length": episodeLength,
+  		"episodeTitle": val.episodeTitle,
+  		"shift": episodeShift
+  	})
+  	episodeShift += episodeLength;
+  })
+  // add lengths and shifts to seasons
+  seasons.forEach(function(val, ind){
+  	var seasonLength = scenes.filter(function(v){
+  		return v.seasonNum == val
+  	})
+  		.reduce(function(a, v, i){
+  			return a += v.sceneLength;
+  		}, 0);
+  	episodes[ind].length = seasonLength;
+  	episodes[ind].shift = (ind !== 0) ? episodes[ind-1].length + episodes[ind-1].shift : 0;
+  })
+
+  // put all characters in one array
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .filter(function(val, ind){
+    	if(config.includeAll){
+    		return val
+    	} else {
+    		var index = inc.include.findIndex(function(element){
+	  			return element.name == val
+	  		})
+	  		if(index > -1){
+	  			return inc.include[index].include == true
+	  		}
+    	}
+  	})
+
+	// make a dictionary for characters
+	var ch = characters.reduce(function(acc, val, ind) {
+	  acc[val] = ind;
+		return acc;
+	}, {});
+
+	console.log("Dictionaries:", ch, lo, su);
+
+	// OR use scenes, add holder of who's there in that place, and work forward/backward matching on location. go through sublocations with a filter for each location, then use characters in other places to remove characters in a place. write a function that removes a character from all locations EXCEPT a specified one. maybe have a location key with scenes in that location with a scene index.
+	// - go through scenes and add all characters to whosThere. go through scenes again and if character is in a scene/place then remove from all other places?
+
+	// build: i (scenes) x j (sub/locations) x k (characters) array
+  var ijk = scenes.map(function(val, ind){
+  	var ij = sublocations.map(function(v, i){
+  		var arr = new Array(characters.length);
+  		return arr;
+  	})
+  	return ij;
+  })
+  // build: first scene is all 0's
+  ijk[0] = sublocations.map(function(val, ind){
+  	var arr = characters.map(function(v, i){
+  		return 0;
+  	})
+  	return arr;
+  })
+  // build: go through scenes, in that location, replace character with 1 or dead - in other places, make character a 0
+  scenes.forEach(function(val, sce){
+  	sublocations.forEach(function(value, index){
+  		val.characters.forEach(function(v, i){
+  			ijk[sce][su[value.name]][ch[v.name]] = (value.name !== val.loc) ? 0 : (v.alive === false) ? 'dead' : 1;
+  		})
+  	})
+  })
+  // modify: iterate over scenes and if value == "dead" set value = 1 and next scene value of same character in same location = 0
+  // modify: forward flesh out - if value == 0, look at same character, same location in next scene - if "", set to 0
+  for(i=0; i<ijk.length; i++){
+  	for(j=0; j<ijk[i].length; j++){
+  		for(k=0; k<ijk[i][j].length; k++){
+  			if(ijk[i][j][k] == 'dead'){
+  				ijk[i][j][k] = 1;
+  				if(i < ijk.length-1){
+  					ijk[i+1][j][k] = (ijk[i+1][j][k] == null) ? 0 : ijk[i+1][j][k]
+  				};
+  			} else {
+  				if(ijk[i][j][k] == 0 && i < ijk.length-1){
+  					ijk[i+1][j][k] = (ijk[i+1][j][k] == null) ? 0 : ijk[i+1][j][k]
+  				}
+  			}
+  		}
+  	}
+  }
+  
+  // modify: backward flesh out - if value == 0, look at same character, same location in previous scene - if "", set to 0
+  // modify: replace remaining "" with 1
+  for(i=ijk.length-1; i>0; i--){
+  	for(j=0; j<ijk[i].length; j++){
+  		for(k=0; k<ijk[i][j].length; k++){
+  			if(ijk[i][j][k] == 0 && ijk[i-1][j][k] == null){
+  				ijk[i-1][j][k] = 0
+  			} else if(ijk[i][j][k] == null){
+  				ijk[i][j][k] = 1
+  			}
+  		}
+  	}
+  }
+
+  // analyze ijk array
+  scenes.forEach(function(val, sce){
+  	// sort characters by name
+  	val.characters.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+  	// add list of all known characters in that sublocation
+  	val.all = characters.filter(function(v, i){
+  		return ijk[sce][su[val.loc]][i] == 1
+  	}).sort();
+  	// count max # characters per sublocation
+  	sublocations[su[val.loc]].max = Math.max(val.all.length, sublocations[su[val.loc]].max);
+  })
+
+  // total number of "lanes"
+  var lanes = sublocations.reduce(function(acc, val, ind){
+  	return acc + val.max
+  }, 0);
+  var height = lanes * config.laneHeight;
+
+  console.log(`${lanes} character lanes @ ${config.laneHeight} each = ${height}px height`);
+
+  // determine middle for each sublocation
+  var m = 0;
+  sublocations.forEach(function(val, ind){
+  	val.middle = m + val.max/2;
+  	m += val.max;
+  })
+
+  // add sublocation max values to give max for location, middle
+  sublocations.forEach(function(val, ind){
+  	locations[lo[val.name.split("#")[0]]].max += val.max;
+  })
+  var m = 0;
+  locations.forEach(function(val, ind){
+  	val.middle = m + val.max/2;
+  	m += val.max;
+  })
+
+  // convert characters array to an object with keys/values
+	var characters = characters.reduce(function(acc, val, ind) {
+	  acc[val] = {"key":val, "values":[]};
+		return acc;
+	}, {});
+
+  // add character parameters
+  scenes.forEach(function(val, ind){
+  	val.characters.forEach(function(v, i){
+  		var c = {};
+  		c.s = val.absStartSec; // x start
+  		c.e = val.absEndSec; // x end
+  		c.y = sublocations[su[val.loc]].middle - (val.all.length/2) + val.all.indexOf(v.name); // y coordinate
+  		if(v.hasOwnProperty('alive') && (v.hasOwnProperty('mannerOfDeath') || v.hasOwnProperty('killedBy'))){c.a = v.alive} // add "alive":false if present and has mannerOfDeath or killedBy
+  		if(v.title){c.t = v.title} // title
+  		if(v.hasOwnProperty('born')){c.b = v.born} // born
+  		if(val.greensight){c.g = true} // greensight
+  		if(val.flashback){c.f = true} // flashback
+  		if(val.warg){c.w = true} // warg
+  		characters[v.name].values.push(c);
+  	})
+  })
+
+  // modify the sublocations to just give the sublocation
+  var specific = sublocations.map(function(val, ind){
+  	val.name = (val.name.split("#")[1] !== "") ? val.name.split("#")[1] : val.name.split("#")[0];
+  	return val
+  })
+
+  var result = Object.assign({}, {
+  	// 'characters': Object.values(characters),
+  	'characters': characters,
+  	'episodes': episodes,
+  	'locations': locations,
+  	'sublocations': specific
+  })
+
+  console.log("done crunching...");
+
+  document.getElementsByTagName('body')[0].innerHTML = JSON.stringify(result);
+}
+		</script>
 	</body>
 </html>
