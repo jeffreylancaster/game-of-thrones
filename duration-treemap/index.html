@@ -57,7 +57,7 @@ d3.queue()
   .defer(d3.json, '../data/characters-groups.json')
   .await(ready);
 
-function ready(error, e, cg, l) {
+function ready(error, e, cg) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
