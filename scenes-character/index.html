@@ -57,15 +57,13 @@ var config = {
 
 /* IMPORT DATA */
 d3.queue()
-  .defer(d3.json, '../data/locations.json')
   .defer(d3.json, '../data/episodes.json')
   .await(ready);
 
-function ready(error, l, e) {
+function ready(error, e) {
   if (error) throw error;
   console.log("now that the files are loaded... do magic.");
 
-  locationsData = l.regions;
   episodesData = e.episodes;
 
   /* CONFIG SETUP */

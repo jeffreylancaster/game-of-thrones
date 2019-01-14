@@ -51,7 +51,7 @@ var flyingArcWidth = 2,
 	cityLabelOffset = [0, -7],
 	cityLabelShadowBlur = 5,
 	loftedness = 1.3,
-	transitionDuration = 4000,
+	// transitionDuration = 4000,
 	transitionEase = d3.easeQuad;
 
 // TODO: These probably shouldn't be global
@@ -245,6 +245,8 @@ function ready(error, world, e) {
 		// focus on first --> focus on last
 		// focalPoint = d3.geoInterpolate(episode.locations[0].coordinatesGeo, episode.locations[episode.locations.length-1].coordinatesGeo);
 		// focus on first --> focus on center between first and last
+		var transitionDuration = episode.ids.length * 1000;
+
 		focalPoint = d3.geoInterpolate(current, centerCoordinates(episode));
 		
 		flyingArcLength = lineLength(flyingArc(episode));
