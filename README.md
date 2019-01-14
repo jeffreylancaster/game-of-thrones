@@ -105,14 +105,14 @@ Outputs the _Game of Thrones_ narrative chart.
               "title": "Hand | Khal | Khaleesi | King",
               "alive": false,
               "born": false,
-              "weapon": [ // just object if single value
+              "weapon": [
                 {
                   "action": "string",
                   "name": "string"
                 }
               ],
               "sex": [
-                "with": [ // just string if single value
+                "with": [
                   "string"
                 ],
                 "when": "string",
@@ -125,7 +125,7 @@ Outputs the _Game of Thrones_ narrative chart.
                 "consummated": true
               },
               "mannerOfDeath": "string",
-              "killedBy": [ // just string if single value
+              "killedBy": [
                 "string"
               ]
             },
