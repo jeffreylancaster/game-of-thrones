@@ -111,13 +111,13 @@ Outputs the _Game of Thrones_ narrative chart.
                   "name": "string"
                 }
               ],
-              "sex": [
+              "sex": {
                 "with": [
                   "string"
                 ],
                 "when": "string",
                 "type": "string"
-              ],
+              },
               "married": {
                 "to": "string",
                 "when": "string",
