@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Death (Bubbles)</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Death">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+var config = {
+  "title": "Death (Bubbles)",
+  "width":4000,
+  "height":300,
+  "margin":{
+    "top": 0,
+    "right": 0,
+    "bottom": 0,
+    "left": 0
+  }
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .await(ready);
+
+function ready(error, e) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height);
+  /* END CONFIG SETUP */
+
+  var end = 0,
+    totalTime = 0;
+
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      // calculate length of scene in seconds
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      // determine the location
+      var location = (v.subLocation) ? v.location + " - " + v.subLocation : v.location;
+      var s = Object.assign({}, v, {
+        "seasonNum": val.seasonNum,
+        "episodeNum": val.episodeNum,
+        "sceneLength": sceneLength,
+        "location": location,
+        "absStartSec": totalTime,
+        "absEndSec": totalTime + sceneLength
+      });
+      // store the last absEndSec as end
+      end = totalTime + sceneLength;
+      // add scene length to total time
+      totalTime += sceneLength;
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // filter scenes to only scenes where a death occurs
+  var deathScenes = scenes.filter(function(val){
+    var d = val.characters.filter(function(v){
+      return v.alive == false && (v.hasOwnProperty('killedBy') || v.hasOwnProperty('mannerOfDeath'))
+    })
+    return d.length > 0;
+  })
+
+  // make list of death events
+  var deaths = [];
+  deathScenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      if(v.alive == false && (v.hasOwnProperty('killedBy') || v.hasOwnProperty('mannerOfDeath'))){
+        var d = Object.assign({}, v, {
+          "seasonNum": val.seasonNum,
+          "episodeNum": val.episodeNum,
+          "sceneLength": val.sceneLength,
+          "location": val.location,
+          "absStartSec": val.absStartSec,
+          "absEndSec": val.absEndSec
+        });
+        deaths.push(d);
+      }
+    })
+  })
+
+  /* BUILD THE VISUALIZATION */
+
+  var data = deaths;
+
+  var svg = d3.select("svg"),
+    margin = config.margin,
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") + margin.top + margin.bottom
+    
+  // account for margins
+  svg.attr("transform", `translate(${margin.left},${margin.top})`);
+
+  var x = d3.scaleLinear()
+    .rangeRound([0, width]);
+
+  x.domain([0, end]).nice();
+
+  var simulation = d3.forceSimulation()
+    .force("collision", d3.forceCollide()
+      .radius(12)
+      .iterations(3)
+    )
+    .force("y", d3.forceY(height/2).strength(0.2))
+    .nodes(data)
+    .on("tick", ticked);
+
+  var node = svg.selectAll(".node")
+    .data(data)
+    .enter().append("g")
+      .attr("class", "node");
+
+  node.append("circle")
+    .attr("class", "dead")
+    .attr("r", 13)
+    .attr("fill", "red")
+    .style("opacity", 0.7)
+    .append("svg:title")
+      .text(function(d){
+        var who = (d.killedBy) ? `by ${d.killedBy.join(', ').replace(/,(?=[^,]*$)/, ' and')} ` : '';
+        var mannerOfDeath = (d.mannerOfDeath) ? `via ${d.mannerOfDeath.toLowerCase()}` : '';
+        return `${d.name} killed ${who}${mannerOfDeath}`;
+      });
+
+  function ticked() {
+    deaths.forEach(function(d, i) {
+      d.x = x(d.absEndSec);
+    });
+    node.attr("transform", function(d) { return `translate(${d.x},${d.y})`; });
+  }
+  
+};
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Weapons by Scene</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Scenes">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+var config = {
+  "title": "Weapons by Scene",
+  "width":2000,
+  "height":250,
+  "margin":{
+    "top": 20,
+    "right": 40,
+    "bottom": 30,
+    "left": 130
+  },
+  "legendOffset": {
+    "x":20,
+    "y":20
+  },
+  "barHeight": 20
+}
+
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .await(ready);
+
+function ready(error, e) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  episodesData = e.episodes;
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
+  /* END CONFIG SETUP */
+
+  var end = 0,
+    totalTime = 0;
+  
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      // calculate length of scene in seconds
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      // determine the location
+      var location = (v.subLocation) ? v.location + " - " + v.subLocation : v.location;
+      var s = Object.assign({}, v, {
+        "seasonNum": val.seasonNum,
+        "episodeNum": val.episodeNum,
+        "sceneLength": sceneLength,
+        "location": location,
+        "absStartSec": totalTime,
+        "absEndSec": totalTime + sceneLength
+      });
+      // store the last absEndSec as end
+      end = totalTime + sceneLength;
+      // add scene length to total time
+      totalTime += sceneLength;
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // filter only scenes with weapons
+  var weaponScenes = scenes.filter(function(val){
+    var w = val.characters.filter(function(v){
+      return v.hasOwnProperty('weapon')
+    })
+    return w.length > 0
+  })
+
+  // build a list of the names of the weapons
+  var names = weaponScenes.map(function(val){
+    return val.characters.filter(function(v){
+      return v.hasOwnProperty('weapon')
+    })
+      .map(function(v, i){
+        return v.weapon
+      })
+      .reduce(function(a, v, i){
+        return [...a, ...v] 
+      }, [])
+      .reduce(function(a, v, i){
+        return [...a, v.name]
+      }, [])
+  })
+    .reduce(function(acc, val, ind){
+      return acc.concat(val);
+    }, [])
+    .filter(onlyUnique);
+
+  // put all seasons in an array
+  var seasons = scenes.reduce(function(acc, val, ind){
+    return [...acc, val.seasonNum];
+  }, [])
+    .filter(onlyUnique);
+
+  console.log(names)
+
+  // put all special entries in one array, make object to count character scenes
+  var weapons = names.map(function(v, i){
+    return {"name": v, "scenes":[], "total":0}
+  })
+
+  // go through scenes and add sceneLength values to specials' counts
+  weapons.forEach(function(val, ind){
+    var name = val.name;
+    weaponScenes.forEach(function(v, i){
+      v.characters.forEach(function(value, index){
+        if(value.hasOwnProperty('weapon')){
+          value.weapon.forEach(function(w, j){
+            if(name == w.name){
+              val.scenes.push({
+                "absStartSec":v.absStartSec,
+                "absEndSec":v.absEndSec,
+                "season":v.seasonNum,
+                "episode":v.episodeNum,
+                "location":v.location,
+                "character":value.name,
+                "action":w.action,
+                "weapon":w.name
+              })
+              val.total += (v.absEndSec - v.absStartSec)
+            }
+          })
+        }
+      })
+    })
+  })
+
+  // sort the specials by total time
+  weapons.sort(function(a, b){
+    return b.total - a.total;
+  })
+
+  // build the visualization
+  var data = weapons;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("svg"),
+      margin = config.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      // height = barHeight*data.length + margin.top + margin.bottom,
+      height = config.height + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, end]).nice();
+  // z.domain(["1", "2"]);
+
+  var row = g.selectAll(".row")
+    .data(data)
+    .enter()
+    .append("g")
+      .attr("class", "row")
+      .attr("transform", function(d){return "translate(0,"+y(d.name)+")"})
+      
+  var rects = row.selectAll("rect")
+    .data(function(d){
+      return d.scenes;
+    })
+    .enter().append("rect")
+      .attr("x", function(d){return x(d.absStartSec)})
+      .attr("width", function(d){return x(d.absEndSec) - x(d.absStartSec)})
+      .attr("height", y.bandwidth())
+      .attr("fill", function(d){return z(d.season)})
+      .append("svg:title")
+        .text(function(d) {return `(S${d.season}E${d.episode}) ${d.character} ${d.action} ${d.weapon} at ${d.location}`});
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  var legend = g.append("g")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 10)
+    .attr("text-anchor", "end")
+    .attr("transform", function(d, i) {return `translate(${config.legendOffset.x}, ${config.legendOffset.y})`})
+    .selectAll("g")
+    .data(seasons)
+    .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+    .attr("x", width - 19)
+    .attr("width", 19)
+    .attr("height", 19)
+    .attr("fill", z);
+
+  legend.append("text")
+    .attr("x", width - 24)
+    .attr("y", 9.5)
+    .attr("dy", "0.32em")
+    .text(function(d) { return "Season " + d; });
+  
+};
+
+    </script>
+  </body>
+</html>

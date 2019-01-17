@@ -1,0 +1,400 @@
+<html>
+<head>
+	<title>Game of Thrones: Character Journeys (Arcs)</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Game of Thrones: Character Journeys (Arcs)">
+  <meta name="author" content="Jeffrey Lancaster">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+	<p>
+		<select id="characters" style="display: none;"></select>
+	</p>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+
+<script>
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+var config = {
+	"width": 700,
+	"height": 600,
+	"margin":{
+    "top": 20,
+    "right": 40,
+    "bottom": 30,
+    "left": 40
+  },
+  "cutoff": 4
+}
+
+var width = config.width,
+	height = config.height;
+
+var oceanColor = '#f9f9f9',
+	landColor = '#ddd',
+	flyingArcColor = 'tomato',
+	flyingArcShadowColor = '#333',
+	flyingArcShadowStrokeColor = '#ccc',
+	cityMarkerColor = '#999',
+	cityLabelColor = '#666',
+	cityLabelShadowColor = '#eee';
+
+var flyingArcWidth = 2,
+	flyingArcShadowWidth = 0.5,
+	flyingArcShadowOpacity = 0.5,
+	flyingArcShadowBlur = 5,
+	cityMarkerRadius = 2,
+	cityLabelFont = '12px "Montserrat", sans-serif',
+	cityLabelTextAlign = 'center',
+	cityLabelOffset = [0, -7],
+	cityLabelShadowBlur = 5,
+	loftedness = 1.3,
+	// transitionDuration = 4000,
+	// transitionEase = d3.easeQuad;
+	transitionEase = d3.easeLinear;
+
+// TODO: These probably shouldn't be global
+var link,
+	focalPoint,
+	flyingArcLength;
+
+var canvas = d3.select('body').append('canvas')
+	.attr('width', width + config.margin.left + config.margin.right)
+	.attr('height', height + config.margin.top + config.margin.bottom);
+
+var context = canvas.node().getContext('2d');
+
+context.font = cityLabelFont;
+context.textAlign = cityLabelTextAlign;
+
+var projection = d3.geoOrthographic()
+	.scale((height - 10) / 2)
+	.translate([width / 2, height / 2])
+	.precision(0.1);
+
+var loftedProjection = d3.geoOrthographic()
+	.scale(((height - 10) / 2) * loftedness)
+	.translate([width / 2, height / 2])
+	.precision(0.1);
+
+var path = d3.geoPath()
+	.projection(projection)
+	.context(context);
+
+var swoosh = d3.line()
+	.curve(d3.curveNatural)
+	.defined(function(d) { return projection.invert(d); })
+	.context(context);
+
+var current = [0,45];
+
+var draw = function() {}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+	return self.indexOf(value) === index;
+}
+
+d3.queue()
+	.defer(d3.json, '../data/lands-of-ice-and-fire.json')
+	.defer(d3.json, '../data/episodes.json')
+	.await(ready);
+
+function ready(error, world, e) {
+	if (error) throw error;
+
+	// build the array of season/episodes and opening locations
+	var places = world.objects.places.geometries,
+		charactersObject = {};
+
+	var sphere = {type: "Sphere"},
+		land = topojson.feature(world, world.objects.land);
+
+	// Add unique ID for each geo city
+	places.forEach(function(d, i) {
+		d.id = i;
+		// align map data with episode data
+		(d.properties.name == "Sunspear") ? d.properties.name = "Dorne" : d.properties.name;
+		(d.properties.name == "The Dreadfort") ? d.properties.name = "Dreadfort" : d.properties.name;
+		// (d.properties.name == "Castle Black") ? d.properties.name = "The Wall" : d.properties.name;
+	});
+
+	// put all places in one array
+	var placeArray = places.map(function(val, ind){
+		return val.properties.name
+	})
+
+	// put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "sceneLength": sceneLength});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, [])
+  	.filter(function(val, ind){
+  		return !val.flashback && !val.greensight && !val.warg
+  	});
+
+  // put all characters in one array, make object to count character time
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .reduce(function(acc, val, ind){
+      acc[val] = {"name": val, "places":[]};
+      return acc;
+    }, {});
+
+  // go through scenes and add locations to characters' places
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+    	var location = (val.subLocation) ? val.subLocation : val.location;
+    	if(placeArray.indexOf(location) > -1){
+      	characters[v.name].places.push(location)
+      }
+    })
+  })
+
+  characters = Object.values(characters).filter(function(val, ind){
+  	return val.places.length > 1
+  })
+
+  characters.forEach(function(val, ind){
+  	val.places = val.places.filter(function(v, i){
+  		return v !== val.places[i-1]
+  	})
+  })
+
+  characters = characters.filter(function(val, ind){
+  	return val.places.length >= config.cutoff
+  }).sort(function(a, b){return a.places.length - b.places.length}).reverse();
+
+  // build the select
+  characters.forEach(function(val, ind){
+	    d3.select("#characters")
+	      .append("option")
+	      .text(`${val.name} (${val.places.length})`);
+	  })
+
+ 	// select behavior
+  d3.select("#characters")
+    .style("display", "block")
+    .style("margin-top", config.margin.top)
+    .on("change", function(){
+      var characterSelect = d3.select(this).property('value').split("(")[0].toLowerCase().replace(/([^A-Z0-9])/gi,"");
+      context.clearRect(0, 0, width, height);
+    	drawLine(charactersObject[characterSelect]);
+    })
+
+	// make the characters/locations object	
+	characters.forEach(function(val, ind){
+		var ids = [],
+		coords = [],
+		locations = [],
+		featuresProp = [];
+
+		val.places.forEach(function(v, i){
+			var index = places.findIndex(function(element){
+        return element.properties.name == v;
+      });
+      var place = places[index];
+      ids.push(place.id);
+			coords.push(place.coordinatesGeo);
+			locations.push(place);
+			featuresProp.push({
+				name: place.properties.name,
+				id: place.id
+			})
+		})
+
+		var feature = {
+			type: 'Feature', 
+				geometry: { 
+					type: "LineString",
+					coordinates: coords
+				},
+				properties: featuresProp
+		}
+		charactersObject[val.name.toLowerCase().replace(/([^A-Z0-9])/gi,"")] = {
+			ids: ids,
+			locations: locations,
+			feature: feature
+		};
+	})
+	
+	// build the visualization
+	function draw(t, character){
+		context.clearRect(0, 0, width, height);
+
+		// Rotate globe to focus on the flying arc
+		focusGlobeOnPoint(focalPoint(t));
+
+		// Oceans
+		context.beginPath(); 
+		path(sphere);
+		context.fillStyle = oceanColor; 
+		context.fill();
+
+		// Land
+		context.beginPath();
+		path(land);
+		context.fillStyle = landColor; 
+		context.fill();
+
+		// Flying arc
+		context.beginPath();
+		path(character.feature);
+		// swoosh(flyingArc(episode));
+		context.setLineDash([t * flyingArcLength * 1.7, 1e6]);
+		context.lineWidth = flyingArcWidth;
+		context.strokeStyle = flyingArcColor;
+		context.stroke();
+
+		// Flying arc's shadow
+		// context.beginPath();
+		// path(episode.feature);
+		// context.setLineDash([t * flyingArcLength * 1.6, 1e6]);
+		// context.globalAlpha = flyingArcShadowOpacity;
+		// context.shadowColor = flyingArcShadowColor;
+		// context.shadowBlur = flyingArcShadowBlur;
+		// context.lineWidth = flyingArcShadowWidth;
+		// context.strokeStyle = flyingArcShadowStrokeColor;
+		// context.stroke();
+		// context.shadowBlur = 0;
+		// context.globalAlpha = 1;
+
+		// add markers and labels for all cities
+		character.locations.forEach(function(d,i){
+			// City marker 
+			var p = projection(d.coordinatesGeo),
+				x = p[0],
+				y = p[1];
+			context.beginPath();
+			context.arc(x, y, cityMarkerRadius, 0, 2 * Math.PI);
+			context.fillStyle = cityMarkerColor;
+			context.fill();
+
+			// City label 
+			var x = x + cityLabelOffset[0],
+					y = y + cityLabelOffset[1];
+			context.shadowBlur = cityLabelShadowBlur;
+			context.shadowColor = cityLabelShadowColor;
+			context.fillStyle = cityLabelColor;
+			context.fillText(d.properties.name, x, y);
+			context.shadowBlur = 0;
+		})
+	};
+
+	function drawLine(character) {
+		// focus on first --> focus on last
+		// focalPoint = d3.geoInterpolate(episode.locations[0].coordinatesGeo, episode.locations[episode.locations.length-1].coordinatesGeo);
+		// focus on first --> focus on center between first and last
+		var transitionDuration = character.ids.length * 500;
+		// var transitionDuration = 4000;
+
+		focalPoint = d3.geoInterpolate(current, centerCoordinates(character));
+		
+		flyingArcLength = lineLength(flyingArc(character));
+
+		var timer = d3.timer(tick);
+
+		function tick(elapsed) {
+			// draw the link
+			draw(transitionEase(elapsed / transitionDuration), character);
+			
+			if (elapsed / transitionDuration >= 1) {
+				timer.stop();
+				current = centerCoordinates(character);
+			};
+		}
+	}
+	// draw the first episode
+	drawLine(charactersObject['jorahmormont']);
+}
+
+function flyingArc(character) {
+	var coordinates = character.feature.geometry.coordinates.map(function(val, ind){
+		return projection(val);
+	});
+	return coordinates;
+}
+
+function locationAlongArc(start, end, theta) {
+	return d3.geoInterpolate(start, end)(theta);
+}
+
+function focusGlobeOnPoint(point) {
+	var x = point[0],
+		y = point[1],
+		cx = x,
+		cy = y - 25,
+		rotation = [-cx, -cy];
+	projection.rotate(rotation);
+	//loftedProjection.rotate(rotation);
+}
+
+function lineLength(points) {
+	var d = 0;
+	for(var i = 0; i < points.length - 1; i++) {
+		var x0 = points[i][0],
+			y0 = points[i][1],
+			x1 = points[i+1][0],
+			y1 = points[i+1][1],
+			dx = x1 - x0,
+			dy = y1 - y0;
+		d += Math.sqrt(dx * dx + dy * dy);
+	}
+	return d;
+}
+
+function centerCoordinates(character){
+	var cx = 0,
+			cy = 0,
+			l = character.locations.length;
+	// episode.locations.forEach(function(d,i){
+	// 	cx += d.coordinatesGeo[0];
+	// 	cy += d.coordinatesGeo[1];
+	// })
+	// return [cx/l, cy/l];
+	cx += character.locations[0].coordinatesGeo[0];
+	cy += character.locations[0].coordinatesGeo[1];
+	cx += character.locations[l-1].coordinatesGeo[0];
+	cy += character.locations[l-1].coordinatesGeo[1];
+	return [cx/2+20, cy/2];
+}
+
+
+
+	</script>
+</body>
+
+</html>

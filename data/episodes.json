@@ -9833,6 +9833,7 @@
                "sceneEnd":"0:46:11",
                "location":"Qarth",
                "subLocation":"King's Landing",
+               "greensight": true,
                "characters":[
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"}
                ]
@@ -9842,6 +9843,7 @@
                "sceneEnd":"0:46:51",
                "location":"Qarth",
                "subLocation":"The Wall",
+               "greensight": true,
                "characters":[
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"}
                ]
@@ -9851,6 +9853,7 @@
                "sceneEnd":"0:49:31",
                "location":"Qarth",
                "subLocation":"Vaes Dothrak",
+               "greensight": true,
                "characters":[
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
                   {"name":"Khal Drogo", "title":"Khal", "alive":false},

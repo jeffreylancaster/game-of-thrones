@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Sexual Relations</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: SexualRelations">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- for using style objects to apply multiple styles at once -->
+    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+//   // "characterName",
+//   // "credited",
+//   // "actors",
+//   // "actorName",
+//   // "actorLink",
+//   // "characterImageThumb",
+//   // "characterImageFull",
+//   // "characterNameAlt",
+//   // "characterLink",
+//   // "nickname",
+//   // "parents",
+//   "killedBy",
+//   "siblings", // need to deduplicate?
+//   "parentOf",
+//   "marriedEngaged", // need to deduplicate?
+//   // "killed" // covered by killedBy
+
+var config = {
+  "title":"Sexual Relations",
+  "width":1000,
+  "height":1000,
+  "margin": 20
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/characters.json') // h.characters
+  .await(ready);
+
+function ready(error, e, h) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height);
+  /* END CONFIG SETUP */
+
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "sceneLength": sceneLength});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, [])
+    .filter(function(val, ind){
+      var c = val.characters.filter(function(v, i){
+        return v.hasOwnProperty('sex')
+      })
+      return c.length > 0
+    });
+
+  // put all characters in one array, make object to count character time
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .map(function(cur, ind){
+      return Object.assign({}, {"name": cur, "partners":[]});
+    });
+
+  // go through scenes and add relations values to characters' partners
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      if(v.sex){
+        var index = characters.findIndex(function(element){
+          return element.name == v.name;
+        });
+        characters[index].partners.push(v.sex)
+      }
+    })
+  })
+
+  // add partner names into an array and deduplicate
+  characters.forEach(function(val, ind){
+    val.characters = val.partners.reduce(function(acc, val, ind){
+      return [...acc, ...val.with]
+    }, [])
+      .filter(onlyUnique)
+  })
+
+  // remove characters with no partners
+  var characters = characters.filter(function(val, ind){
+    return val.characters.length > 0
+  })
+
+  // add image files to characters
+  characters.forEach(function(val, ind){
+    var index = h.characters.findIndex(function(element){
+      return element.characterName == val.name
+    })
+    var image = (index > -1 && h.characters[index].characterImageThumb) ? h.characters[index].characterImageThumb : null;
+    characters[ind] = Object.assign({}, val, {
+      'image': image,
+      'id': val.name,
+      'index': ind,
+      'group': 1
+    })
+  })
+
+  var matrix = {
+    "nodes":characters,
+    "links":[]
+  }
+
+  // build list of links based on position in array of characters
+  characters.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      matrix.links.push({
+        'source': val.name,
+        'target': v,
+        'value': 1,
+        'id': Math.floor(Math.random()*100000)
+      })
+    })
+  })
+
+  // deduplicate links
+  matrix.links.forEach(function(val, ind){
+    matrix.links.forEach(function(v, i){
+      if(i > ind){
+        if(val.source == v.target &&
+          val.target == v.source &&
+          val.type == v.type){
+          matrix.links.splice(i, 1);
+        }
+      }
+    })
+  })
+
+  /* BUILD THE VISUALIZATION */
+
+  var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height"),
+    links = matrix.links,
+    nodes = matrix.nodes,
+    radius = 20;
+
+  var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+  var simulation = d3.forceSimulation()
+      .force("link", d3.forceLink().id(function(d) { return d.id; }))
+      .force("charge", d3.forceManyBody(100))
+      .force("center", d3.forceCenter(width/2, height/2))
+      .force("collision", d3.forceCollide().radius(function(d){return radius*2}).iterations(5))
+      .force("x", d3.forceX().strength(0.01))
+      .force("y", d3.forceY().strength(0.01));
+
+  var link = svg.append("g")
+      .attr("class", "links")
+    .selectAll("path")
+    .data(links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("stroke-width", "2")
+      .attr("id", function(d){ return d.id; })
+
+  // add images to nodes
+  svg.append("defs")
+    .selectAll("defs")
+    .data(nodes.filter(function(d) { return d.id; }))
+    .enter().append("pattern")
+      .attr("id", function(d){ return (d.image) ? d.id.toLowerCase().replace(/([^A-Z0-9])/gi,"") : ''; })
+      .attrs({
+        "height":"100%",
+        "width":"100%",
+        "patternContentUnits":"objectBoundingBox",
+        "viewBox":"0 0 1 1",
+        "preserveAspectRatio": "xMidYMid slice"
+      })
+      .append("image")
+        .attrs({
+          "height":"1",
+          "width":"1",
+          "preserveAspectRatio":"xMidYMid slice"
+        })
+        .attr("xlink:xlink:href", function(d){ return d.image; });
+
+  var node = svg.selectAll(".node")
+    .data(nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      // .on("click", mousedownNode) // not ready yet - still buggy
+      .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
+
+  node.append("circle")
+    .attr("r", radius)
+    .attr("fill", function(d){
+      return (d.image) ? `url(#${d.id.toLowerCase().replace(/([^A-Z0-9])/gi,"")})` : color(d.group);
+    })
+    .attrs({"stroke": "black", "stroke-width": "1"});
+
+  node.append("text")
+    .attr("dy", 1.45*radius)
+    .attr("text-anchor", "middle")
+    .text(function(d) { return d.id });
+
+  // add arrows to lines
+  svg.append("text")
+    .attr("id", "arrows");
+
+  simulation
+    .nodes(nodes)
+    .on("tick", ticked);
+
+  simulation.force("link")
+    .links(links);
+
+  function positionLink(d) {
+    return "M" +
+      Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.source.x)) + "," +
+      Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.source.y)) + " " +
+      Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.target.x)) + "," +
+      Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.target.y));
+  }
+
+  function ticked() {
+    link
+      .attr("d", function(d){ return positionLink(d);})
+      .attr("x1", function(d) { return Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.source.x)); })
+      .attr("y1", function(d) { return Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.source.y)); })
+      .attr("x2", function(d) { return Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.target.x)); })
+      .attr("y2", function(d) { return Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.target.y)); });
+
+    node.attr("transform", function(d) {
+      return "translate(" + Math.max(radius + config.margin, Math.min(width - radius - config.margin, d.x)) + "," + Math.max(radius + config.margin, Math.min(height - radius - config.margin, d.y)) + ")";
+    });
+
+  }
+
+  function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+  }
+
+  function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+
+  var counter = 0;
+  function mousedownNode(d, i) {
+    simulation.stop();
+
+    // Apply the general update pattern to the nodes.
+    var index = nodes.findIndex(function(val){
+      return d.id == val.id;
+    })
+    nodes.splice(index, 1);
+    node = node.data(nodes, function(d) { return d.id;});
+    node.exit().remove();
+    node = node.enter().merge(node);
+
+    // Apply the general update pattern to the links.
+    links = links.filter(function(l) {
+      return l.source.id !== d.id && l.target.id !== d.id;
+    })
+    link = link.data(links);
+    link.exit().remove();
+    link = link.enter().merge(link);
+
+    // Update and restart the simulation.
+    simulation.nodes(nodes);
+    simulation.force("link").links(links);
+    simulation.alpha(0.15).restart();
+
+  }
+
+  // function restart() {
+    
+  // }
+};
+
+    </script>
+  </body>
+</html>
