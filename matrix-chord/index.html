@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>Game of Thrones: Co-occurrence</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Co-occurrence">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+  </head>
+	<style>
+		.group-tick line {
+			stroke: #000;
+		}
+		.label {
+			font: 10px sans-serif;
+		}
+		.ribbons {
+			fill-opacity: 0.6;
+		}
+	</style>
+<body>
+	<svg></svg>
+</body>
+<script>
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .await(ready);
+
+function ready(error, e) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {
+        "seasonNum":val.seasonNum,
+        "episodeNum":val.episodeNum,
+        "sceneLength": sceneLength});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // put all characters in one array, make object to count character time
+  var characters = [];
+  characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .map(function(cur, ind){
+      return Object.assign({}, {"name": cur});
+    });
+
+  // assemble the matrix of values
+  var matrix = [];
+	characters.forEach(function(node, i) {
+ 		matrix[i] = d3.range(characters.length).map(function(j) { return 0});
+	});
+
+	// populate the matrix with times
+	scenes.forEach(function(val, ind){
+		val.characters.forEach(function(v, i){
+			var index = characters.findIndex(function(element){
+        return element.name == v.name;
+      });
+			val.characters.forEach(function(w, j){
+				var indexj = characters.findIndex(function(element){
+          return element.name == w.name;
+        });
+				if(v !== w){
+					matrix[index][indexj] += val.sceneLength;
+				}
+			})
+		})
+	})
+
+  var labels = characters.reduce(function(acc, val, ind){
+    return [...acc, val.name]
+  }, []);
+
+	// based on https://jsfiddle.net/kLe38tff/
+
+	var config = {
+		"width": 1200,
+		"height": 1200,
+		"border": 30,
+		"color": "#BBB",
+		"margin": 150
+	}
+
+	var svg = d3.select("svg"),
+		width = config.width,
+		height = config.height,
+		outerRadius = Math.min(width, height) * 0.5 - config.margin,
+		innerRadius = outerRadius - config.border;
+
+	svg
+		.attr("width", width)
+		.attr("height", height)
+
+	// initialize chord diagram
+	var chord = d3.chord()
+		.padAngle(0.000)
+		.sortSubgroups(d3.descending);
+
+	// arc radii
+	var arc = d3.arc()
+		.innerRadius(innerRadius)
+		.outerRadius(outerRadius);
+
+	// ribbbons
+	var ribbon = d3.ribbon()
+		.radius(innerRadius);
+
+	var color = d3.scaleOrdinal(d3.schemeCategory20c);
+
+	var g = svg.append("g")
+		.attr("transform", `translate(${width / 2},${height / 2})`)
+		.datum(chord(matrix));
+
+	var group = g.append("g")
+		.attr("class", "groups")
+		.selectAll("g")
+			.data(function(chords) { return chords.groups; })
+			.enter().append("g")
+
+	group.append("path")
+		.style("fill", function(d) { return /*config.color*/ color(d.index); })
+		.style("stroke", function(d) { return d3.rgb(/*config.color*/ color(d.index)).darker(); })
+		.attr("d", arc)
+		.on("mouseover", fade(.1))
+		.on("mouseout", fade(1))
+
+	group.append("title")
+		.text(function(d){
+			return `${labels[d.index]}`;
+		});
+
+	// add labels to each group
+	group.append("text")
+		.attr("dy", ".35em") //width
+		.attr("class", "label")
+		.attr("transform", function(d,i) { //angle
+			d.angle = (d.startAngle + d.endAngle) / 2; //calculate the average of the start angle and the end angle
+			d.name = labels[i]; //assignment for the label
+			return `rotate(${d.angle * 180 / Math.PI}) translate(0, ${-(outerRadius + config.border/2 - 10)}) ${((d.angle < Math.PI) ? 'rotate(-90)' : 'rotate(90)')}`;
+				// + ((d.angle > Math.PI * 3 / 4 && d.angle < Math.PI * 5 / 4) ? "rotate(180)" : "");
+			}) //to spin when the angle between 135 to 225 degrees
+		.attr("text-anchor", function(d){
+			d.angle = (d.startAngle + d.endAngle) / 2;
+			return ((d.angle < Math.PI) ? "start" : "end");
+		})
+		.text(function(d) {
+			return d.name;
+		});
+
+	// draw the ribbons that go from group to group
+	var ribbons = g.append("g")
+		.attr("class", "ribbons")
+		.selectAll("path")
+		.data(function(chords) { return chords; })
+		.enter().append("path")
+			.attr("d", ribbon)
+			.style("fill", function(d) { return /*config.color*/ color(d.source.index); })
+			.style("stroke", function(d) { return d3.rgb(/*config.color*/ color(d.source.index)).darker(); });
+			
+	ribbons.append("title")
+		.text(function(d){
+			return `${labels[d.source.index]} and ${labels[d.target.index]} have been on-screen together for ${secondsToHMS(d.source.value)}.`;
+		});
+
+	function fade(opacity) {
+		return function(d, i) {
+			ribbons
+				.filter(function(d) {
+					return d.source.index != i && d.target.index != i;
+				})
+				.transition()
+					.style("opacity", opacity);
+		};
+	}
+}
+</script>
+</html>
