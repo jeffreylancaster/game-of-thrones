@@ -158,12 +158,48 @@ img {
   background-image: url("/img/vis-thumbnails/force-1.png");
 }
 
+.card-image-force-2 {
+  background-image: url("/img/vis-thumbnails/force-2.png");
+}
+
 .card-image-duration-3 {
   background-image: url("/img/vis-thumbnails/duration-3.png");
 }
 
 .card-image-list {
   background-image: url("/img/vis-thumbnails/list-1.png");
+}
+
+.card-image-chord {
+  background-image: url("/img/vis-thumbnails/chord-3.png");
+}
+
+.card-image-bubble-1 {
+  background-image: url("/img/vis-thumbnails/bubble-1.png");
+}
+
+.card-image-bubble-2 {
+  background-image: url("/img/vis-thumbnails/bubble-2.png");
+}
+
+.card-image-geo {
+  background-image: url("/img/vis-thumbnails/geo-1.png");
+}
+
+.card-image-bar {
+  background-image: url("/img/vis-thumbnails/bar.png");
+}
+
+.card-image-tree {
+  background-image: url("/img/vis-thumbnails/tree-1.png");
+}
+
+.card-image-relationships {
+  background-image: url("/img/vis-thumbnails/relationships-1.png");
+}
+
+.card-image-broken-bar {
+  background-image: url("/img/vis-thumbnails/broken-bar-1.png");
 }
 
 .card-title {
@@ -218,6 +254,42 @@ a {
   </li>
   <li class="cards-item">
     <div class="card">
+      <a href="/game-of-thrones/bubble-character/">
+        <div class="card-image card-image-bubble-1"></div>
+        <div class="card-content">
+          <div class="card-title">Characters On-Screen (Bubbles)</div>
+        </a>
+        <p class="card-text">A visualization of when each character is on screen for extended periods of time.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/bubble-death/">
+        <div class="card-image card-image-bubble-2"></div>
+        <div class="card-content">
+          <div class="card-title">Character Deaths (Bubbles)</div>
+        </a>
+        <p class="card-text">A visualization of when characters die. Hover to see who killed them and how.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/characters-per-scene/">
+        <div class="card-image card-image-bar"></div>
+        <div class="card-content">
+          <div class="card-title">Characters Per Scene</div>
+        </a>
+        <p class="card-text">A bar chart of the number of characters per scene. Hover to see character names.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
       <a href="/game-of-thrones/costars-list/">
         <div class="card-image card-image-list"></div>
         <div class="card-content">
@@ -254,6 +326,42 @@ a {
   </li>
   <li class="cards-item">
     <div class="card">
+      <a href="/game-of-thrones/duration-per-location/">
+        <div class="card-image card-image-duration-3"></div>
+        <div class="card-content">
+          <div class="card-title">Time Spent per Location</div>
+        </a>
+        <p class="card-text">A visualization of how long is spent in each location throughout the show.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/duration-per-season/">
+        <div class="card-image card-image-duration-1"></div>
+        <div class="card-content">
+          <div class="card-title">On-Screen Time per Season</div>
+        </a>
+        <p class="card-text">A visualization of how long each character has been on-screen in each season.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/duration-per-sublocation/">
+        <div class="card-image card-image-duration-3"></div>
+        <div class="card-content">
+          <div class="card-title">Time Spent per Specific Location</div>
+        </a>
+        <p class="card-text">A visualization of how long is spent in each more-specific location throughout the show.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
       <a href="/game-of-thrones/duration-percent/">
         <div class="card-image card-image-duration-2"></div>
         <div class="card-content">
@@ -266,10 +374,22 @@ a {
   </li>
   <li class="cards-item">
     <div class="card">
+      <a href="/game-of-thrones/duration-treemap/">
+        <div class="card-image card-image-tree"></div>
+        <div class="card-content">
+          <div class="card-title">Character Time Spent On-Screen (Treemap)</div>
+        </a>
+        <p class="card-text">A treemap visualization of how much time a character spends on screen.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
       <a href="/game-of-thrones/force-directed/">
         <div class="card-image card-image-force"></div>
         <div class="card-content">
-          <div class="card-title">Force-Directed On-Screen Co-Occurrence (work in progress)</div>
+          <div class="card-title">Force-Directed On-Screen Co-Occurrence</div>
         </a>
         <p class="card-text">A force-directed visualization of characters on-screen together throughout the show.</p>
         <!-- <button class="btn btn-block card-btn">Button</button> -->
@@ -278,12 +398,96 @@ a {
   </li>
   <li class="cards-item">
     <div class="card">
-      <a href="/game-of-thrones/costars-list/">
+      <a href="/game-of-thrones/geography-locations/">
+        <div class="card-image card-image-geo"></div>
+        <div class="card-content">
+          <div class="card-title">Geographic Locations</div>
+        </a>
+        <p class="card-text">A map showing various geographic locations.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/location-per-episode/">
+        <div class="card-image card-image-duration-3"></div>
+        <div class="card-content">
+          <div class="card-title">Locations Per Episode</div>
+        </a>
+        <p class="card-text">A visualization showing the number of locations per episode and how long is spent in each.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/matrix/">
         <div class="card-image card-image-matrix"></div>
         <div class="card-content">
           <div class="card-title">Character Co-Occurrence Matrix</div>
         </a>
         <p class="card-text">A matrix visualization of how often characters are on screen together.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/matrix-chord/">
+        <div class="card-image card-image-chord"></div>
+        <div class="card-content">
+          <div class="card-title">Character Co-Occurrence Chord</div>
+        </a>
+        <p class="card-text">A chord diagram visualization of how often characters are on screen together.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/opening-locations-fixed/">
+        <div class="card-image card-image-geo"></div>
+        <div class="card-content">
+          <div class="card-title">Opening Sequence Locations</div>
+        </a>
+        <p class="card-text">A geography-based map showing the various paths taken in the opening sequence.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/opening-locations-force/">
+        <div class="card-image card-image-geo"></div>
+        <div class="card-content">
+          <div class="card-title">Opening Sequence Locations (Force)</div>
+        </a>
+        <p class="card-text">A force-directed network visualization showing the various paths taken in the opening sequence.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/opening-sequence-arcs/">
+        <div class="card-image card-image-geo"></div>
+        <div class="card-content">
+          <div class="card-title">Opening Sequence Paths Per Episode</div>
+        </a>
+        <p class="card-text">An interactive map showing the various paths taken in the opening sequence.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/opening-sequence-matrix/">
+        <div class="card-image card-image-geo"></div>
+        <div class="card-content">
+          <div class="card-title">Opening Sequence Paths</div>
+        </a>
+        <p class="card-text">An interactive map showing the various paths taken in the opening sequence.</p>
         <!-- <button class="btn btn-block card-btn">Button</button> -->
       </div>
     </div>
@@ -296,6 +500,102 @@ a {
           <div class="card-title">Travelling Characters</div>
         </a>
         <p class="card-text">A visualization of the various locations characters visit and how much of their time they spend there.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/relations-circle/">
+        <div class="card-image card-image-relationships"></div>
+        <div class="card-content">
+          <div class="card-title">Character Relationships</div>
+        </a>
+        <p class="card-text">A visualization of the various relationships between characters.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/relations-force/">
+        <div class="card-image card-image-force-2"></div>
+        <div class="card-content">
+          <div class="card-title">Character Relationships</div>
+        </a>
+        <p class="card-text">A force-directed visualization of the various relationships between characters.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/relations-force-sex/">
+        <div class="card-image card-image-force-2"></div>
+        <div class="card-content">
+          <div class="card-title">Character Sexual Relationships</div>
+        </a>
+        <p class="card-text">A force-directed visualization of the various sexual relationships between characters.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/scenes-character/">
+        <div class="card-image card-image-broken-bar"></div>
+        <div class="card-content">
+          <div class="card-title">Character On Screen Time</div>
+        </a>
+        <p class="card-text">A visualization of when characters are on screen.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/scenes-location/">
+        <div class="card-image card-image-broken-bar"></div>
+        <div class="card-content">
+          <div class="card-title">Location On Screen Time</div>
+        </a>
+        <p class="card-text">A visualization of when locations are on screen.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/scenes-special/">
+        <div class="card-image card-image-broken-bar"></div>
+        <div class="card-content">
+          <div class="card-title">Special Scenes On Screen</div>
+        </a>
+        <p class="card-text">A visualization of when special types of scenes are on screen.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/scenes-sublocation/">
+        <div class="card-image card-image-broken-bar"></div>
+        <div class="card-content">
+          <div class="card-title">Sublocation On Screen Time</div>
+        </a>
+        <p class="card-text">A visualization of when more-specific locations are on screen.</p>
+        <!-- <button class="btn btn-block card-btn">Button</button> -->
+      </div>
+    </div>
+  </li>
+  <li class="cards-item">
+    <div class="card">
+      <a href="/game-of-thrones/scenes-weapons/">
+        <div class="card-image card-image-broken-bar"></div>
+        <div class="card-content">
+          <div class="card-title">Weapon On Screen Time</div>
+        </a>
+        <p class="card-text">A visualization of when weapons are on screen.</p>
         <!-- <button class="btn btn-block card-btn">Button</button> -->
       </div>
     </div>
