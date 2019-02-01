@@ -303,7 +303,15 @@ blockquote {
   fill: #f00;
 }
 
-
+.regression {
+  stroke-width: 2px;
+  stroke: steelblue;
+  stroke-dasharray: 10,5;
+}
+.label{
+  stroke: black;
+  font: 10px sans-serif;
+}
 
 .hidden{
   display: none;

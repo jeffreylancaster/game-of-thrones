@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Character Time Per Episode - Scatter</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Character Time Per Episode - Scatter">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+      text.select{
+        display: block!important;
+        font-size: 12px!important;
+        fill: #000!important;
+      }
+      .overlay text{
+        font-family: serif;
+        font-size: 20px;
+        text-anchor: middle;
+      }
+      span{
+        font-family: sans-serif;
+        font-size: 12px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <select id="characters" style="display: none;"></select>
+      <span>
+        Show Overlay: <input type="checkbox" style="display: inline-block;" id="overlay" name="overlay">
+      </span>
+    </p>
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+// from: http://bl.ocks.org/eesur/4e0a69d57d3bfc8a82c2
+d3.selection.prototype.moveToFront = function() {
+  return this.each(function(){
+    this.parentNode.appendChild(this);
+  });
+};
+d3.selection.prototype.moveToBack = function() {
+  return this.each(function() { 
+    var firstChild = this.parentNode.firstChild; 
+    if(firstChild) { 
+      this.parentNode.insertBefore(this, firstChild); 
+    } 
+  });
+};
+
+var config = {
+  "title":"Character Time Per Episode - Scatter",
+  "width":960,
+  "height":700,
+  "margin":{
+    "top":20,
+    "right":100,
+    "bottom":200,
+    "left":40
+  },
+  "r": 10
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/characters-include.json')
+  .await(ready);
+
+function ready(error, e, inc) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
+  /* END CONFIG SETUP */
+
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "sceneLength":sceneLength, "episodeIndex":ind});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // put all episodes in an array
+  var episodes = e.episodes.filter(function(val, ind){
+    return val.scenes.length > 0
+  })
+    .map(function(val, ind){
+      return {"title":val.episodeTitle, "seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "episodeIndex":ind};
+    })
+
+  // then make an array of objects {x, y, ybar} with 0 count for values
+  var episodesObj = episodes.map(function(val, ind){
+    return Object.assign({}, {"x":ind, "y":0});
+  });
+
+  // put all characters in one array, make object to count character time
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .map(function(cur, ind){
+      // have to do parse/stringify because of deep clone of episodesObj
+      return Object.assign({}, {
+        "name":cur,
+        "last":0,
+        "dead":false,
+        "data":JSON.parse(JSON.stringify(episodesObj))
+      });
+    });
+
+  // go through scenes and add sceneLength values to characters' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      var index = characters.findIndex(function(element){
+        return element.name == v.name;
+      });
+      characters[index].data[val.episodeIndex].y += val.sceneLength;
+      characters[index].last = val.seasonNum;
+      if(val.flashback || val.greensight || val.warg){
+        // ignore the past
+      } else {
+        characters[index].dead = (v.alive == false) ? true : false;
+      }
+    })
+  })
+
+  // add slope and intercept from calcLinear (below)
+  characters.forEach(function(val, ind){
+    val.slope = calcLinear(val.data).slope;
+    val.intercept = calcLinear(val.data).intercept;
+  })
+
+  // extract the data for the scatter plot
+  var characterScatter = characters.map(function(val, ind){
+    return Object.assign({}, {
+      'name':val.name,
+      'last':val.last,
+      'dead':val.dead,
+      'x':val.slope,
+      'y':val.intercept
+    })
+  })
+
+  // build the select
+  var include = inc.include.filter(function(val, ind){
+    return val.include
+  })
+    .map(function(val, ind){
+      return val.name
+    })
+    .sort();
+
+  include.forEach(function(val, ind){
+    d3.select("#characters")
+      .append("option")
+      .text(val);
+  })
+
+  // select behavior
+  d3.select("#characters")
+    .style("display", "inline-block")
+    .style("margin-top", config.margin.top)
+    .on("change", function(){
+      // update pattern from: https://bl.ocks.org/ctufts/674ece47de093f6e0cd5af22d7ee9b9b
+      var value = d3.select(this).property('value').toLowerCase().replace(/([^A-Z0-9])/gi,"");
+
+      svg.selectAll(".point").select("path")
+        .classed("select", false)
+        .transition()
+        .duration(500)
+        .attr("transform", function(d){return `translate(${x(d.x)}, ${y(d.y)}) scale(1) rotate(45)`})
+
+      svg.selectAll(".point").select("text")
+        .classed("select", false)
+
+      svg.select("."+value).moveToFront();
+
+      svg.select("."+value).select("path")
+        .classed("select", true)
+        .transition()
+        .duration(500)
+          .attr("transform", function(d){return `translate(${x(d.x)}, ${y(d.y)}) scale(2) rotate(45)`})
+
+      svg.select("."+value).select("text")
+        .classed("select", true)
+
+    })
+
+  data = characterScatter;
+
+  // build the visualization
+  // based on: https://bl.ocks.org/HarryStevens/be559bed98d662f69e68fc8a7e0ad097
+  var width = config.width-config.margin.left-config.margin.right,
+    height = config.height-config.margin.top-config.margin.bottom;
+
+  var svg = d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
+    .append("g")
+      .attr("transform", `translate(${config.margin.left}, ${config.margin.top})`);
+
+  var x = d3.scaleLinear()
+    .range([0,width])
+
+  var y = d3.scaleLinear()
+    .range([height,0]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  var xAxis = d3.axisBottom()
+    .scale(x)
+
+  var yAxis = d3.axisLeft()
+    .scale(y)
+
+  y.domain(d3.extent(data, function(d){ return d.y}));
+  x.domain(d3.extent(data, function(d){ return d.x}));
+
+  console.log(height, x(0), y(0))
+
+  svg.append("g")
+    .attr("class", "x axis-show")
+    .attr("transform", "translate(0," + y(0) + ")")
+    .call(xAxis);
+
+  svg.append("g")
+    .attr("class", "y axis-show")
+    .attr("transform", "translate(" + x(0) + ",0)")
+    .call(yAxis);
+
+  svg.append("text")
+    .attr("transform", "translate(" + x(0) + ",-5)")
+    .attr("text-anchor", "middle")
+    .style("font-size", "12px")
+    .text("y-intercept (sec)")
+
+  svg.append("text")
+    .attr("transform", "translate(" + width + "," + (y(0)-5) + ")")
+    .attr("text-anchor", "middle")
+    .style("font-size", "12px")
+    .text("slope (sec/episode)")
+
+  var symbolGenerator = d3.symbol();
+
+  var points = svg.selectAll(".point")
+    .data(data)
+    .enter()
+      .append("g")
+      .attr("class", function(d){return `point ${d.name.toLowerCase().replace(/([^A-Z0-9])/gi,"")}`})
+      .on("mouseover", function(d){
+        d3.select(this).moveToFront();
+        d3.select(this).select("path")
+          .classed("select", true)
+          .transition()
+          .duration(500)
+            .attr("transform", function(d){return `translate(${x(d.x)}, ${y(d.y)}) scale(2) rotate(45)`})
+        d3.select(this).select("text")
+          .classed("select", true)
+      })
+      .on("mouseout", function(d){
+        d3.select(this).moveToBack();
+        d3.select(this).select("path")
+          .classed("select", false)
+          .transition()
+          .duration(500)
+            .attr("transform", function(d){return `translate(${x(d.x)}, ${y(d.y)}) scale(1) rotate(45)`})
+        d3.select(this).select("text")
+          .classed("select", false)
+      })
+      .append("path")
+        .attr('transform', function(d, i) {
+          return 'translate(' + x(d.x) + ', ' + y(d.y) + ') rotate(45)';
+        })
+        .attr('d', function(d){
+          symbolGenerator.type(function(){
+            return (!d.dead) ? d3['symbolCircle'] : d3['symbolCross']
+          });
+          return symbolGenerator();
+        })
+        .style("fill", function(d){
+          return z(d.last);
+        })
+        .append("svg:title")
+          .text(function(d,i){
+            return d.name;
+          });
+
+  svg.selectAll(".point")
+    .append("text")
+      .attr("x", function(d){return x(d.x)})
+      .attr("y", function(d){return y(d.y)})
+      .attr("dx", `${config.r}px`)
+      .style("fill", "#ddd")
+      .style("font-size", "9px")
+      .style("font-weight", 400)
+      .style("font-family", "sans-serif")
+      .text(function(d){
+        return d.name
+      })
+      .style("display", "none");
+
+  // make the unscientific overlay
+  var overlay = svg.append("g")
+    .attr("class", "overlay")
+    .style("display", "none");
+
+  overlay.append("line")
+    .attr("class", "regression")
+    .attr("x1", x(0.35))
+    .attr("y1", y(-75))
+    .attr("x2", x(-4))
+    .attr("y2", y(450));
+
+  overlay.append("line")
+    .attr("class", "regression")
+    .attr("x1", x(0.35))
+    .attr("y1", y(-75))
+    .attr("x2", x(4))
+    .attr("y2", y(450));
+
+  overlay.append("circle")
+    .attr("class", "regression")
+    .attr("cx", x(-0.25))
+    .attr("cy", y(0))
+    .attr("r", 100)
+    .style("fill", "none");
+
+  overlay.append("text")
+    .text("Dead")
+    .attr("x", x(-6))
+    .attr("y", y(100))
+
+  overlay.append("text")
+    .text("Contenders")
+    .attr("x", x(0))
+    .attr("y", y(275))
+
+  overlay.append("text")
+    .text("Dutiful Servants")
+    .attr("x", x(6))
+    .attr("y", y(100))
+
+  overlay.append("text")
+    .text("Minor")
+    .attr("x", x(-1))
+    .attr("y", y(-50))
+
+  // change overlay display based on checkbox
+  d3.select("#overlay")
+    .on("change", function(){
+      var value = d3.select(this).property("checked");
+      d3.select(".overlay")
+        .style("display", function(){
+          return (value) ? "block" : "none";
+        });
+    })
+    
+  // draw the first dot and select the character
+  document.getElementById("characters").value = "Jon Snow";
+  d3.select(".jonsnow").select("path")
+    .classed("select", true)
+    .attr("transform", function(d){return `translate(${x(d.x)}, ${y(d.y)}) scale(2) rotate(45)`});
+  d3.select(".jonsnow").select("text")
+    .classed("select", true);
+
+
+  // Calculate a linear regression from the data, returns an object with two points, where each point is an object with an x and y coordinate
+  function calcLinear(data){
+    var minX = d3.min(data, function(d){ return d.x});
+    var maxX = d3.max(data, function(d){ return d.x});
+    var minY = d3.min(data, function(d){ return d.y});
+    var maxY = d3.max(data, function(d){ return d.y});
+
+    // SLOPE
+    // Let n = the number of data points
+    var n = data.length;
+
+    // Get just the points
+    var pts = [];
+    data.forEach(function(d,i){
+      var obj = {};
+      obj.x = d.x;
+      obj.y = d.y;
+      obj.mult = obj.x*obj.y;
+      pts.push(obj);
+    });
+
+    // Let a equal n times the summation of all x-values multiplied by their corresponding y-values
+    // Let b equal the sum of all x-values times the sum of all y-values
+    // Let c equal n times the sum of all squared x-values
+    // Let d equal the squared sum of all x-values
+    var sum = 0;
+    var xSum = 0;
+    var ySum = 0;
+    var sumSq = 0;
+    pts.forEach(function(pt){
+      sum = sum + pt.mult;
+      xSum = xSum + pt.x;
+      ySum = ySum + pt.y;
+      sumSq = sumSq + (pt.x * pt.x);
+    });
+    var a = sum * n;
+    var b = xSum * ySum;
+    var c = sumSq * n;
+    var d = xSum * xSum;
+
+    // slope: m = (a - b) / (c - d)
+    var m = (a - b) / (c - d);
+
+    // INTERCEPT
+
+    // Let e equal the sum of all y-values
+    var e = ySum;
+
+    // Let f equal the slope times the sum of all x-values
+    var f = m * xSum;
+
+    // y-intercept: g = (e - f) / n
+    var g = (e - f) / n;
+
+    // the equation
+    // console.log("y = " + m + "x + " + g);
+
+    // return an object of two points
+    return {
+      ptA : {x: minX, y: m * minX + g},
+      ptB : {x: maxX, y: m * maxX + g},
+      slope: m,
+      intercept: g
+    }
+  }
+
+};
+
+    </script>
+  </body>
+</html>

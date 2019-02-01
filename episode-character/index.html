@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Character Time Per Episode</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Character Time Per Episode">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <p>
+      <select id="characters" style="display: none;"></select>
+    </p>
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+var config = {
+  "title":"Character Time Per Episode",
+  "width":960,
+  "height":700,
+  "margin":{
+    "top":5,
+    "right":15,
+    "bottom":200,
+    "left":60
+  }
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .await(ready);
+
+function ready(error, e) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
+  /* END CONFIG SETUP */
+
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "sceneLength":sceneLength, "episodeIndex":ind});
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // put all episodes in an array
+  var episodes = e.episodes.filter(function(val, ind){
+    return val.scenes.length > 0
+  })
+    .map(function(val, ind){
+      return {"title":val.episodeTitle, "seasonNum":val.seasonNum, "episodeNum":val.episodeNum, "episodeIndex":ind};
+    })
+
+  // then make an array of objects {x, y, ybar} with 0 count for values
+  var episodesObj = episodes.map(function(val, ind){
+    return Object.assign({}, {"x":ind, "y":0});
+  });
+
+  // put all characters in one array, make object to count character time
+  var characters = scenes.reduce(function(acc, val, ind){
+    var c = val.characters.reduce(function(a, v, i){
+      return a.concat(v.name);
+    }, []);
+    return [...acc, ...c];
+  }, [])
+    .filter(onlyUnique)
+    .map(function(cur, ind){
+      // have to do parse/stringify because of deep clone of episodesObj
+      return Object.assign({}, {"name":cur, "data":JSON.parse(JSON.stringify(episodesObj))});
+    });
+
+  // go through scenes and add sceneLength values to characters' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      var index = characters.findIndex(function(element){
+        return element.name == v.name;
+      });
+      characters[index].data[val.episodeIndex].y += val.sceneLength;
+    })
+  })
+
+  characters.forEach(function(val, ind){
+    val.slope = calcLinear(val.data).slope;
+    val.intercept = calcLinear(val.data).intercept;
+  })
+
+  // build the select
+  var ch = characters.reduce(function(acc, val, ind){
+    return acc.concat(val.name);
+  }, [])
+    .sort()
+    .forEach(function(val, ind){
+      d3.select("#characters")
+        .append("option")
+        .text(val);
+    })
+
+  // select behavior
+  d3.select("#characters")
+    .style("display", "block")
+    .style("margin-top", config.margin.top)
+    .on("change", function(){
+      // update pattern from: https://bl.ocks.org/ctufts/674ece47de093f6e0cd5af22d7ee9b9b
+      var value = d3.select(this).property('value');
+      var index = characters.findIndex(function(element){
+        return element.name == value;
+      });
+      var data = characters[index].data;
+      var lg = calcLinear(data);
+
+      // Update scale domains
+      // x.domain([0, d3.max(data, function(d) { return d.x; })]);
+      y.domain(d3.extent(data, function(d){ return d.y}));
+
+      d3.selectAll("title")
+        .remove()
+
+      // update data points
+      svg.selectAll(".point")
+        .data(data)
+        .transition()
+        .duration(1000)
+          // .attr("cx", function(d){return x(d.x);})
+          // .attr("cy", function(d){return y(d.y);});
+          .attr("x", function(d){return x(d.x) - 5})
+          .attr("y", function(d){return y(d.y);})
+          .attr("height", function(d){ return height - y(d.y); })
+
+      svg.selectAll(".point")
+        .append("svg:title")
+          .text(function(d,i) {
+            return `${document.getElementById("characters").value} was on-screen in "${episodes[d.x].title}" (S${episodes[d.x].seasonNum}E${episodes[d.x].episodeNum}) for ${secondsToHMS(d.y)}`
+          });
+
+      // update and transition regression line
+      svg.select(".regression")
+        .datum(data)
+          .transition()
+          .duration(1000)
+          .attr("x1", x(lg.ptA.x))
+          .attr("y1", y(lg.ptA.y))
+          .attr("x2", x(lg.ptB.x))
+          .attr("y2", y(lg.ptB.y));
+
+      // update axes
+      svg.select(".x.axis")
+        .transition()
+        .duration(1000)
+        .call(xAxis);
+
+      svg.select(".y.axis")
+        .transition()
+        .duration(1000)
+        .call(yAxis);
+
+    })
+
+  // draw the first set and select the character
+  document.getElementById("characters").value = "Jon Snow";
+  data = characters[5].data;
+  console.log(characters);
+
+
+  // build the visualization
+  // based on: https://bl.ocks.org/HarryStevens/be559bed98d662f69e68fc8a7e0ad097
+  var width = config.width-config.margin.left-config.margin.right,
+    height = config.height-config.margin.top-config.margin.bottom;
+
+  var svg = d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
+    .append("g")
+      .attr("transform", `translate(${config.margin.left}, ${config.margin.top})`);
+
+  var x = d3.scaleLinear()
+    .range([0,width])
+
+  var y = d3.scaleLinear()
+    .range([height,0]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  var xAxis = d3.axisBottom()
+    .scale(x)
+    .ticks(episodes.length)
+    .tickFormat(function(d, i){
+      // return episodes[d].title
+      return `S${episodes[d].seasonNum} E${episodes[d].episodeNum}`;
+    });
+
+  var yAxis = d3.axisLeft()
+    .scale(y)
+    .tickFormat(function(d, i){
+      // return episodes[d].title
+      return secondsToHMS(d);
+    });
+
+  y.domain(d3.extent(data, function(d){ return d.y}));
+  x.domain(d3.extent(data, function(d){ return d.x}));
+
+  // calcLinear function
+  var lg = calcLinear(data);
+
+  svg.append("line")
+    .attr("class", "regression")
+    .attr("x1", x(lg.ptA.x))
+    .attr("y1", y(lg.ptA.y))
+    .attr("x2", x(lg.ptB.x))
+    .attr("y2", y(lg.ptB.y));
+
+  svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis)
+    .selectAll("text")  
+      .style("text-anchor", "end")
+      .attr("dx", "-.8em")
+      .attr("dy", ".15em")
+      .attr("transform", "rotate(-65)")
+
+  svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+
+  svg.selectAll(".point")
+    .data(data)
+    // .enter().append("circle")
+    //   .attr("class", "point")
+    //   .attr("r", 3)
+    //   .attr("cy", function(d){ return y(d.y); })
+    //   .attr("cx", function(d){ return x(d.x); });
+    .enter().append("rect")
+      .attr("class", "point")
+      .attr("x", function(d){return x(d.x) - 5})
+      .attr("y", function(d){return y(d.y);})
+      .attr("height", function(d){return height - y(d.y);})
+      .attr("width", 12)
+      .style("fill", function(d){
+        return z(episodes[d.x].seasonNum)
+      })
+      .append("svg:title")
+        .text(function(d,i) {
+          return `${document.getElementById("characters").value} was on-screen in "${episodes[d.x].title}" (S${episodes[d.x].seasonNum}E${episodes[d.x].episodeNum}) for ${secondsToHMS(d.y)}`
+        });
+
+  // Calculate a linear regression from the data, returns an object with two points, where each point is an object with an x and y coordinate
+
+  function calcLinear(data){
+    var minX = d3.min(data, function(d){ return d.x});
+    var maxX = d3.max(data, function(d){ return d.x});
+    var minY = d3.min(data, function(d){ return d.y});
+    var maxY = d3.max(data, function(d){ return d.y});
+
+    // SLOPE
+    // Let n = the number of data points
+    var n = data.length;
+
+    // Get just the points
+    var pts = [];
+    data.forEach(function(d,i){
+      var obj = {};
+      obj.x = d.x;
+      obj.y = d.y;
+      obj.mult = obj.x*obj.y;
+      pts.push(obj);
+    });
+
+    // Let a equal n times the summation of all x-values multiplied by their corresponding y-values
+    // Let b equal the sum of all x-values times the sum of all y-values
+    // Let c equal n times the sum of all squared x-values
+    // Let d equal the squared sum of all x-values
+    var sum = 0;
+    var xSum = 0;
+    var ySum = 0;
+    var sumSq = 0;
+    pts.forEach(function(pt){
+      sum = sum + pt.mult;
+      xSum = xSum + pt.x;
+      ySum = ySum + pt.y;
+      sumSq = sumSq + (pt.x * pt.x);
+    });
+    var a = sum * n;
+    var b = xSum * ySum;
+    var c = sumSq * n;
+    var d = xSum * xSum;
+
+    // slope: m = (a - b) / (c - d)
+    var m = (a - b) / (c - d);
+
+    // INTERCEPT
+
+    // Let e equal the sum of all y-values
+    var e = ySum;
+
+    // Let f equal the slope times the sum of all x-values
+    var f = m * xSum;
+
+    // y-intercept: g = (e - f) / n
+    var g = (e - f) / n;
+
+    // the equation
+    // console.log("y = " + m + "x + " + g);
+
+    // return an object of two points
+    return {
+      ptA : {x: minX, y: m * minX + g},
+      ptB : {x: maxX, y: m * maxX + g},
+      slope: m,
+      intercept: g
+    }
+  }
+
+};
+
+    </script>
+  </body>
+</html>
