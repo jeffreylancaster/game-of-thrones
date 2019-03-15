@@ -816,7 +816,12 @@
                   {"name":"Catelyn Stark"},
                   {"name":"Robb Stark"},
                   {"name":"Maester Luwin"},
-                  {"name":"Rodrik Cassel"},
+                  {
+                     "name":"Rodrik Cassel",
+                     "weapon":[
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
                   {"name":"Theon Greyjoy"}
                ]
             },
@@ -1042,7 +1047,8 @@
                   {"name":"Sansa Stark"},
                   {"name":"Arya Stark"},
                   {"name":"Jory Cassel"},
-                  {"name":"Septa Mordane"}
+                  {"name":"Septa Mordane"},
+                  {"name":"Royal Steward"}
                ]
             },
             {
@@ -1951,7 +1957,8 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Eddard Stark", "title":"Hand"}
+                  {"name":"Eddard Stark", "title":"Hand"},
+                  {"name":"Royal Steward"}
                ]
             },
             {
@@ -2559,7 +2566,8 @@
                   {"name":"Rast"},
                   {"name":"Alliser Thorne"},
                   {"name":"Maester Aemon"},
-                  {"name":"Othell Yarwyck"}
+                  {"name":"Othell Yarwyck"},
+                  {"name":"Jaremy Rykker"}
                ]
             },
             {
@@ -2589,7 +2597,13 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Eddard Stark", "title":"Hand"},
+                  {
+                     "name":"Eddard Stark",
+                     "title":"Hand",
+                     "weapon":[
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
                   {"name":"Tomard"},
                   {"name":"Petyr Baelish"}
                ]
@@ -2602,7 +2616,8 @@
                "characters":[
                   {"name":"Jon Snow"},
                   {"name":"Samwell Tarly"},
-                  {"name":"Ghost"}
+                  {"name":"Ghost"},
+                  {"name":"Othell Yarwyck"}
                ]
             },
             {
@@ -2648,6 +2663,7 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Eddard Stark", "title":"Hand"},
+                  {"name":"Varly"},
                   {"name":"Royal Steward"},
                   {
                      "name":"Robert Baratheon",
@@ -2678,7 +2694,9 @@
                "characters":[
                   {"name":"Eddard Stark", "title":"Hand"},
                   {"name":"Petyr Baelish"},
-                  {"name":"Lord Varys"}
+                  {"name":"Lord Varys"},
+                  {"name":"Royal Steward"},
+                  {"name":"Janos Slynt"}
                ]
             },
             {
@@ -2693,7 +2711,9 @@
                   {"name":"Joffrey Baratheon", "title":"King"},
                   {"name":"Cersei Lannister"},
                   {"name":"Barristan Selmy"},
-                  {"name":"Sandor Clegane"}
+                  {"name":"Sandor Clegane"},
+                  {"name":"Royal Steward"},
+                  {"name":"Janos Slynt"}
                ]
             }
          ]
@@ -3521,7 +3541,8 @@
                         {"action":"has", "name":"Needle"}
                      ]
                   },
-                  {"name":"King's Landing Baker"}
+                  {"name":"King's Landing Baker"},
+                  {"name":"Street Urchin"}
                ]
             },
             {
@@ -3711,7 +3732,8 @@
                   {"name":"Rodrik Cassel"},
                   {"name":"Theon Greyjoy"},
                   {"name":"Greatjon Umber"},
-                  {"name":"Rickard Karstark"}
+                  {"name":"Rickard Karstark"},
+                  {"name":"Jonos Bracken"}
                ]
             },
             {
@@ -3757,7 +3779,8 @@
                   {"name":"Tywin Lannister"},
                   {"name":"Kevan Lannister"},
                   {"name":"Tyrion Lannister"},
-                  {"name":"Leo Lefford"}
+                  {"name":"Leo Lefford"},
+                  {"name":"Addam Marbrand"}
                ]
             },
             {
@@ -4587,6 +4610,7 @@
                   {"name":"Jorah Mormont"},
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
                   {"name":"Irri"},
+                  {"name":"Doreah"},
                   {
                      "name":"Rakharo",
                      "alive":false,
@@ -5004,7 +5028,8 @@
                   },
                   {"name":"Brienne of Tarth"},
                   {"name":"Catelyn Stark"},
-                  {"name":"Loras Tyrell"}
+                  {"name":"Loras Tyrell"},
+                  {"name":"Colen of Greenpools"}
                ]
             },
             {
@@ -5017,7 +5042,7 @@
                   {"name":"Catelyn Stark"},
                   {"name":"Renly Baratheon", "title":"King"},
                   {"name":"Brienne of Tarth"},
-                  {"name":"Gerald"}
+                  {"name":"Gerard"}
                ]
             },
             {
@@ -5216,7 +5241,8 @@
                      }
                   },
                   {"name":"Bronn"},
-                  {"name":"Tyrion Lannister", "title":"Hand"}
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Timett"}
                ]
             },
             {
@@ -5396,7 +5422,7 @@
                "subLocation":"Oxcross",
                "characters":[
                   {"name":"Talisa Maegyr"},
-                  {"name":"Wounded Lannister"}
+                  {"name":"Wounded Lannister Solider"}
                ]
             },
             {
@@ -5407,7 +5433,7 @@
                "characters":[
                   {"name":"Talisa Maegyr"},
                   {"name":"Robb Stark", "title":"King"},
-                  {"name":"Wounded Lannister"},
+                  {"name":"Wounded Lannister Soldier"},
                   {"name":"Roose Bolton"}
                ]
             },
@@ -5645,7 +5671,8 @@
                "subLocation":"Harrenhal",
                "characters":[
                   {"name":"Arya Stark"},
-                  {"name":"Old Woman Prisoner"}
+                  {"name":"Old Woman Prisoner"},
+                  {"name":"Polliver"}
                ]
             },
             {
@@ -6363,7 +6390,8 @@
                "subLocation":"Harrenhal",
                "characters":[
                   {"name":"Arya Stark"},
-                  {"name":"Tywin Lannister"}
+                  {"name":"Tywin Lannister"},
+                  {"name":"Amory Lorch"}
                ]
             },
             {
@@ -6703,7 +6731,8 @@
                "location":"The Westerlands",
                "subLocation":"Camp of the North",
                "characters":[
-                  {"name":"Robb Stark", "title":"King"}
+                  {"name":"Robb Stark", "title":"King"},
+                  {"name":"Quent"}
                ]
             },
             {
@@ -7044,7 +7073,8 @@
                   {"name":"Robb Stark", "title":"King"},
                   {"name":"Alton Lannister"},
                   {"name":"Rickard Karstark"},
-                  {"name":"Roose Bolton"}
+                  {"name":"Roose Bolton"},
+                  {"name":"Torrhen Karstark"},
                ]
             },
             {
@@ -7669,7 +7699,8 @@
                   {"name":"Tyrion Lannister", "title":"Hand"},
                   {"name":"Ros"},
                   {"name":"Cersei Lannister"},
-                  {"name":"Podrick Payne"}
+                  {"name":"Podrick Payne"},
+                  {"name":"Mandon Moore"}
                ]
             },
             {
@@ -10445,8 +10476,7 @@
             {
                "sceneStart":"0:35:23",
                "sceneEnd":"0:35:48",
-               "location":"Astapor",
-               "subLocation":"Slaver's Bay",
+               "location":"The Summer Sea",
                "characters":[
                   {"name":"Drogon"},
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
@@ -10458,8 +10488,7 @@
             {
                "sceneStart":"0:35:48",
                "sceneEnd":"0:36:13",
-               "location":"Astapor",
-               "subLocation":"Slaver's Bay",
+               "location":"The Summer Sea",
                "characters":[
                   {"name":"Drogon"},
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
@@ -10469,8 +10498,7 @@
             {
                "sceneStart":"0:36:13",
                "sceneEnd":"0:37:12",
-               "location":"Astapor",
-               "subLocation":"Slaver's Bay",
+               "location":"The Summer Sea",
                "characters":[
                   {"name":"Daenerys Targaryen", "title":"Khaleesi"},
                   {"name":"Jorah Mormont"}
@@ -23593,6 +23621,8 @@
                   },
                   {"name":"Davos Seaworth", "title":"Hand"},
                   {"name":"Eddison Tollett"},
+                  {"name":"Alliser Thorne"},
+                  {"name":"Janos Slynt"},
                   {"name":"Samwell Tarly"},
                   {"name":"Tormund Giantsbane"},
                   {
@@ -37078,7 +37108,7 @@
                "subLocation":"Oldtown",
                "characters":[
                   {"name":"Samwell Tarly"},
-                  {"name":"Archmaester Marwyn"}
+                  {"name":"Archmaester Ebrose"}
                ]
             },
             {
@@ -39982,7 +40012,8 @@
                "subLocation":"Oldtown",
                "characters":[
                   {"name":"Archmaester Ebrose"},
-                  {"name":"Samwell Tarly"}
+                  {"name":"Samwell Tarly"},
+                  {"name":"Maester Sandhu"}
                ]
             },
             {
@@ -39991,7 +40022,8 @@
                "location":"The Reach",
                "subLocation":"Oldtown",
                "characters":[
-                  {"name":"Archmaester Ebrose"}
+                  {"name":"Archmaester Ebrose"},
+                  {"name":"Maester Sandhu"}
                ]
             },
             {
