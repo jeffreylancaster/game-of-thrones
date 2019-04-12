@@ -1,0 +1,953 @@
+{
+	"synonyms": [
+		{
+			"accepted": "Alliser Thorne",
+			"alt": [
+				"Alliser",
+				"Alliser Throne",
+				"Allister",
+				"Ser Alliser",
+				"Alliser Thorn"
+			]
+		},
+		{
+			"accepted": "Arya Stark",
+			"alt": ["Arya"]
+		},
+		{
+			"accepted": "Areo Hotah",
+			"alt": ["Areo"]
+		},
+		{
+			"accepted": "Yohn Royce",
+			"alt": ["Yohn",
+				"Lord Royce",
+				"Royce"
+			]
+		},
+		{
+			"accepted": "Euron Greyjoy",
+			"alt": ["Euron"]
+		},
+		{
+			"accepted": "Maester Aemon",
+			"alt": ["Aemon"]
+		},
+		{
+			"accepted": "Aeron Greyjoy",
+			"alt": ["Aeron"]
+		},
+		{
+			"accepted": "Alton Lannister",
+			"alt": ["Alton"]
+		},
+		{
+			"accepted": "Petyr Baelish",
+			"alt": ["Baelish",
+				"Petyr",
+				"Littlefinger"
+			]
+		},
+		{
+			"accepted": "Arthur Dayne",
+			"alt": ["Arthur"]
+		},
+		{
+			"accepted": "Balon Greyjoy",
+			"alt": ["Balon"]
+		},
+		{
+			"accepted": "Barristan Selmy",
+			"alt": ["Barristan",
+				"Barriston",
+				"Ser Barristan"
+			]
+		},
+		{
+			"accepted": "Benjen Stark",
+			"alt": ["Benjen"]
+		},
+		{
+			"accepted": "Belicho Paenymion",
+			"alt": ["Belicho"]
+		},
+		{
+			"accepted": "Catspaw Assassin",
+			"alt": ["Assassin"]
+		},
+		{
+			"accepted": "Beric Dondarrion",
+			"alt": ["Beric"]
+		},
+		{
+			"accepted": "Black Walder Rivers",
+			"alt": ["Black Walder"]
+		},
+		{
+			"accepted": "Brynden Tully",
+			"alt": ["Blackfish",
+				"Brynden"
+			]
+		},
+		{
+			"accepted": "Bran Stark",
+			"alt": ["Bran"]
+		},
+		{
+			"accepted": "Brienne of Tarth",
+			"alt": ["Brienne"]
+		},
+		{
+			"accepted": "Catelyn Stark",
+			"alt": ["Catelyn"]
+		},
+		{
+			"accepted": "Cersei Lannister",
+			"alt": ["Cersei",
+				"Cersei Baratheon",
+				"Cersie"
+			]
+		},
+		{
+			"accepted": "Rodrik Cassel",
+			"alt": ["Cassel",
+				"Rodrick Cassel",
+				"Ser Rodrik",
+				"Rodrik"
+			]
+		},
+		{
+			"accepted": "Daario Naharis",
+			"alt": ["Daario",
+				"Dario",
+				"Darrio"
+			]
+		},
+		{
+			"accepted": "Maester Cressen",
+			"alt": ["Cressen"]
+		},
+		{
+			"accepted": "Daenerys Targaryen",
+			"alt": ["Daenerys",
+				"Daenerys Stormborn",
+				"Daerneys",
+				"Danerys",
+				"Dany",
+				"Deanerys Targarian",
+				"Denerys",
+				"Dsaenerys"
+			]
+		},
+		{
+			"accepted": "Davos Seaworth",
+			"alt": ["Davos"]
+		},
+		{
+			"accepted": "Dickon Tarly",
+			"alt": ["Dickon"]
+		},
+		{
+			"accepted": "Eddison Tollett",
+			"alt": ["Dolorous Edd",
+				"Ed",
+				"Edd",
+				"Doloroud Edd",
+				"Dolrous Edd"
+			]
+		},
+		{
+			"accepted": "Eddard Stark",
+			"alt": ["Eddark Stark",
+				"Ned",
+				"Ned Stark"
+			]
+		},
+		{
+			"accepted": "Ellaria Sand",
+			"alt": ["Elaria",
+				"Ellaria",
+				"Ellia"
+			]
+		},
+		{
+			"accepted": "Doran Martell",
+			"alt": ["Doran"]
+		},
+		{
+			"accepted": "Grand Maester Pycelle",
+			"alt": ["Grand Maester Pyrcelle",
+				"Maester Pycell",
+				"Maester Pycelle",
+				"Pycell",
+				"Pycelle"
+			]
+		},
+		{
+			"accepted": "Grey Worm",
+			"alt": ["Greyworm"]
+		},
+		{
+			"accepted": "Hizdahr zo Loraq",
+			"alt": ["Hizdahr Zo Loraq",
+				"Hizdahr"
+			]
+		},
+		{
+			"accepted": "Illyrio Mopatis",
+			"alt": ["Illyrio"]
+		},
+		{
+			"accepted": "Jaime Lannister",
+			"alt": ["Jaime",
+			"Jiame"]
+		},
+		{
+			"accepted": "Janos Slynt",
+			"alt": ["Janos",
+			"Janos Slunt"]
+		},
+		{
+			"accepted": "Jaqen H'ghar",
+			"alt": ["Jaqen"]
+		},
+		{
+			"accepted": "Joffrey Baratheon",
+			"alt": ["Joffrey",
+				"King Joffrey"
+			]
+		},
+		{
+			"accepted": "Jojen Reed",
+			"alt": ["Jojen"]
+		},
+		{
+			"accepted": "Jon Snow",
+			"alt": ["Jon"]
+		},
+		{
+			"accepted": "Jorah Mormont",
+			"alt": ["Jora",
+				"Jorah",
+				"Ser Jorah"
+			]
+		},
+		{
+			"accepted": "Kevan Lannister",
+			"alt": ["Kevan"]
+		},
+		{
+			"accepted": "Harald Karstark",
+			"alt": ["Karstark"]
+		},
+		{
+			"accepted": "Kingsguard",
+			"alt": ["Kings Guard"]
+		},
+		{
+			"accepted": "Lady Crane",
+			"alt": ["Ladyc Rane"]
+		},
+		{
+			"accepted": "Olenna Tyrell",
+			"alt": ["Lady Olenna",
+				"Oleanna",
+				"Olenna"
+			]
+		},
+		{
+			"accepted": "Walda Frey",
+			"alt": ["Lady Walda"]
+		},
+		{
+			"accepted": "Lancel Lannister",
+			"alt": ["Lancel"]
+		},
+		{
+			"accepted": "Lem Lemoncloak",
+			"alt": ["Lem"]
+		},
+		{
+			"accepted": "Lollys Stokeworth",
+			"alt": ["Lollys"]
+		},
+		{
+			"accepted": "Lommy Greenhands",
+			"alt": ["Lommy"]
+		},
+		{
+			"accepted": "Loras Tyrell",
+			"alt": ["Loras"]
+		},
+		{
+			"accepted": "Maester Luwin",
+			"alt": ["Luwin"]
+		},
+		{
+			"accepted": "Maester Wolkan",
+			"alt": ["Wolkan"]
+		},
+		{
+			"accepted": "Lyanna Mormont",
+			"alt": ["Lyanna"]
+		},
+		{
+			"accepted": "Lothar Frey",
+			"alt": ["Lothar"]
+		},
+		{
+			"accepted": "Mace Tyrell",
+			"alt": ["Mace"]
+		},
+		{
+			"accepted": "Lord of Bones",
+			"alt": ["Lord Of Bones"]
+		},
+		{
+			"accepted": "Margaery Tyrell",
+			"alt": ["Margaery"]
+		},
+		{
+			"accepted": "Meryn Trant",
+			"alt": ["Maryn Trant",
+				"Meryn",
+				"Endrew"
+			]
+		},
+		{
+			"accepted": "Mance Rayder",
+			"alt": ["Mance"]
+		},
+		{
+			"accepted": "Edmure Tully",
+			"alt": ["Edmure"]
+		},
+		{
+			"accepted": "Archmaester Ebrose",
+			"alt": [
+				"Marwyn",
+				"Archmaester Marwyn"
+			]
+		},
+		{
+			"accepted": "Matthos Seaworth",
+			"alt": ["Matthos"]
+		},
+		{
+			"accepted": "Meera Reed",
+			"alt": ["Meera"]
+		},
+		{
+			"accepted": "Melessa Tarly",
+			"alt": ["Melessa"]
+		},
+		{
+			"accepted": "Melisandre",
+			"alt": ["Melisdandre"]
+		},
+		{
+			"accepted": "Mhaegen",
+			"alt": ["Mhaegan"]
+		},
+		{
+			"accepted": "Mossador",
+			"alt": ["Mosador"]
+		},
+		{
+			"accepted": "Septa Mordane",
+			"alt": ["Mordane"]
+		},
+		{
+			"accepted": "Myrcella Baratheon",
+			"alt": ["Myrcella"]
+		},
+		{
+			"accepted": "Old Nan",
+			"alt": ["Nan"]
+		},
+		{
+			"accepted": "Gregor Clegane",
+			"alt": ["Mountain"]
+		},
+		{
+			"accepted": "Sandor Clegane",
+			"alt": ["Hound",
+				"Sandor",
+				"The Hound"
+			]
+		},
+		{
+			"accepted": "Nymeria Sand",
+			"alt": ["Nymeria"]
+		},
+		{
+			"accepted": "Obara Sand",
+			"alt": ["Obara"]
+		},
+		{
+			"accepted": "Oberyn Martell",
+			"alt": ["Oberyn"]
+		},
+		{
+			"accepted": "Night's Watch Brother",
+			"alt": ["Nights Watch Brother"]
+		},
+		{
+			"accepted": "Othell Yarwyck",
+			"alt": ["Othell Yarwick",
+				"Yarwick",
+				"Yarwyck"
+			]
+		},
+		{
+			"accepted": "Podrick Payne",
+			"alt": ["Podrick"]
+		},
+		{
+			"accepted": "Pypar",
+			"alt": ["Pyp"]
+		},
+		{
+			"accepted": "Qyburn",
+			"alt": ["Qyburns"]
+		},
+		{
+			"accepted": "Ramsay Snow",
+			"alt": ["Ramsay",
+				"Ramsey"
+			]
+		},
+		{
+			"accepted": "Randyll Tarly",
+			"alt": ["Randyll"]
+		},
+		{
+			"accepted": "Razdal mo Eraz",
+			"alt": ["Razdal"]
+		},
+		{
+			"accepted": "Rakharo",
+			"alt": ["Rhakaro",
+				"Rhakharo"
+			]
+		},
+		{
+			"accepted": "Brother Ray",
+			"alt": ["Ray"]
+		},
+		{
+			"accepted": "Rickon Stark",
+			"alt": ["Rickon"]
+		},
+		{
+			"accepted": "Robb Stark",
+			"alt": ["Robb"]
+		},
+		{
+			"accepted": "Robert Baratheon",
+			"alt": ["Robert"]
+		},
+		{
+			"accepted": "Robett Glover",
+			"alt": ["Robett"]
+		},
+		{
+			"accepted": "Robin Arryn",
+			"alt": ["Robin"]
+		},
+		{
+			"accepted": "Roose Bolton",
+			"alt": ["Roose",
+				"Lord Bolton"
+			]
+		},
+		{
+			"accepted": "Roslin Frey",
+			"alt": ["Roslin"]
+		},
+
+		{
+			"accepted": "Ros",
+			"alt": ["Roz"]
+		},
+		{
+			"accepted": "Samwell Tarly",
+			"alt": ["Sam",
+				"Same",
+				"Sammy",
+				"Samwel Tarly",
+				"Samwell"
+			]
+		},
+		{
+			"accepted": "Salladhor Saan",
+			"alt": ["Saan"]
+		},
+		{
+			"accepted": "Sansa Stark",
+			"alt": ["Sansa"]
+		},
+		{
+			"accepted": "Selyse Baratheon",
+			"alt": ["Selyse"]
+		},
+		{
+			"accepted": "Yara Greyjoy",
+			"alt": ["Yara"]
+		},
+		{
+			"accepted": "Walda Frey",
+			"alt": ["Walda"]
+		},
+		{
+			"accepted": "Walder Frey",
+			"alt": ["Walder",
+				"Waldery Frey"
+			]
+		},
+		{
+			"accepted": "Wife #1",
+			"alt": ["Wife#1"]
+		},
+		{
+			"accepted": "Rickard Stark",
+			"alt": ["Rickard"]
+		},
+		{
+			"accepted": "Septa Unella",
+			"alt": ["Septa"]
+		},
+		{
+			"accepted": "Dontos Hollard",
+			"alt": ["Ser Dontos"]
+		},
+		{
+			"accepted": "Vardis Egen",
+			"alt": ["Ser Vardis"]
+		},
+		{
+			"accepted": "Vance Corbray",
+			"alt": ["Ser Vance"]
+		},
+		{
+			"accepted": "Shireen Baratheon",
+			"alt": ["Shireen"]
+		},
+		{
+			"accepted": "Smalljon Umber",
+			"alt": ["Smalljon"]
+		},
+		{
+			"accepted": "Stannis Baratheon",
+			"alt": ["Stannis"]
+		},
+		{
+			"accepted": "Talisa Maegyr",
+			"alt": ["Talisa"]
+		},
+		{
+			"accepted": "Talla Tarly",
+			"alt": ["Talla"]
+		},
+		{
+			"accepted": "Theon Greyjoy",
+			"alt": ["Theon"]
+		},
+		{
+			"accepted": "Thoros of Myr",
+			"alt": ["Thoros"]
+		},
+		{
+			"accepted": "Tommen Baratheon",
+			"alt": ["Tommen"]
+		},
+		{
+			"accepted": "Tormund Giantsbane",
+			"alt": ["Tormund"]
+		},
+		{
+			"accepted": "Trystane Martell",
+			"alt": ["Trystane"]
+		},
+		{
+			"accepted": "Tycho Nestoris",
+			"alt": ["Tycho",
+				"Banker"
+			]
+		},
+		{
+			"accepted": "Tyene Sand",
+			"alt": ["Tyene"]
+		},
+		{
+			"accepted": "Tyrion Lannister",
+			"alt": ["Tyrion"]
+		},
+		{
+			"accepted": "Tywin Lannister",
+			"alt": ["Tywen",
+				"Tywin"
+			]
+		},
+		{
+			"accepted": "Lord Varys",
+			"alt": ["Varys"]
+		},
+		{
+			"accepted": "Viserys Targaryen",
+			"alt": ["Viserys"]
+		},
+		{
+			"accepted": "Young Ned Stark",
+			"alt": ["Young Ned"]
+		},
+		{
+			"accepted": "Young Rodrik Cassel",
+			"alt": ["Young Rodrik"]
+		},
+
+		{
+			"accepted": "Young Lyanna Stark",
+			"alt": ["Young Lyanna"]
+		},
+		{
+			"accepted": "Young Benjen Stark",
+			"alt": ["Young Benjen"]
+		},
+		{
+			"accepted": "Wyllis",
+			"alt": ["Young Hodor"]
+		},
+		{
+			"accepted": "Yezzan zo Qaggaz",
+			"alt": ["Yezzan"]
+		},
+		{
+			"accepted": "Tobho Mott",
+			"alt": ["Blacksmith"]
+		},
+		{
+			"accepted": "Donnel Waynwood",
+			"alt": ["Donnel"]
+		},
+		{
+			"accepted": "Jeor Mormont",
+			"alt": [
+				"Lord Mormont",
+				"Jeor"
+			]
+		},
+		{
+			"accepted": "Rickard Karstark",
+			"alt": ["Lord Karstark"]
+		},
+		{
+			"accepted": "Baby Sam",
+			"alt": ["Little Sam"]
+		},
+		{
+			"accepted": "Wyman Manderly",
+			"alt": ["Manderly"]
+		},
+		{
+			"accepted": "Amory Lorch",
+			"alt": ["Amory"]
+		},
+		{
+			"accepted": "Dagmer Cleftjaw",
+			"alt": ["Dagmer"]
+		},
+		{
+			"accepted": "Khal Drogo",
+			"alt": ["Drogo"]
+		},
+		{
+			"accepted": "Karl Tanner",
+			"alt": [
+				"Karl",
+				"Tanner"
+			]
+		},
+		{
+			"accepted": "Lysa Arryn",
+			"alt":[
+				"Lysa"
+			]
+		},
+		{
+			"accepted": "Mandon Moore",
+			"alt": ["Mandon"]
+		},
+		{
+			"accepted": "Pyat Pree",
+			"alt": ["Pyatt Pree"]
+		},
+		{
+			"accepted": "Qhorin Halfhand",
+			"alt": ["Qhorin"]
+		},
+		{
+			"accepted": "Renly Baratheon",
+			"alt": ["Renly"]
+		},
+		{
+			"accepted": "Rhaegar Targaryen",
+			"alt": ["Rhaegar"]
+		},
+		{
+			"accepted": "Xaro Xhoan Daxos",
+			"alt": ["Xaro"]
+		}
+	],
+	"groups":[
+		"All",
+		"All Three",
+		"All Together",
+		"Everybody",
+		"Everyone",
+		"Both Jon And Sam",
+		"Crowd",
+		"Jon/robb",
+		"Margaery & Tommen",
+		"Edmure & Roslin",
+		"Ned & Alys",
+		"Sam, Pyp, And Grenn",
+		"Several Stark Bannermen",
+		"The Group",
+		"The Others At The Table",
+		"Tyrion and Jaime",
+		"Sand Snakes",
+		"Archers",
+		"Grey Worm & Missandei",
+		"Populace"
+	], 
+	"others": [
+		"Addam Marbrand",
+		"Announcer",
+		"Attendant",
+		"Bianca",
+		"Black Haired Prostitute",
+		"Blonde Prostitute",
+		"Bloodrider",
+		"Bloodrider #1",
+		"Bloodrider #2",
+		"Bloodrider #3",
+		"Bloodrider #4",
+		"Bobono",
+		"Bolton Bannerman",
+		"Bolton Officer",
+		"Bowen Marsh",
+		"Boy",
+		"Braavosi Man",
+		"Brand",
+		"Bronn",
+		"Brothel Keeper",
+		"Brother",
+		"Brothers",
+		"Buyer",
+		"Bystanders",
+		"Camello",
+		"Captain",
+		"Child Of The Forest",
+		"Clarenzo",
+		"Client",
+		"Cohollo",
+		"Cooper",
+		"Craster",
+		"Daisy",
+		"Daughter",
+		"Derryk",
+		"Dim Dalba",
+		"Doreah",
+		"Dothraki #1",
+		"Dothraki Man",
+		"Dothraki Matron",
+		"Dothraki Woman",
+		"Fellow Night's Watch Brothers",
+		"Fennesz",
+		"Frey Guard",
+		"Frey Man",
+		"Galbart Glover",
+		"Gared",
+		"Gatins",
+		"Gendry",
+		"Giant",
+		"Gilly",
+		"Girl",
+		"Glover",
+		"Gold Cloak",
+		"Greatjon Umber",
+		"Grenn",
+		"Guard",
+		"Guard 1",
+		"Guard 2",
+		"Guard Captain",
+		"Handmaiden",
+		"Harpy",
+		"Head",
+		"Head Prostitute",
+		"High Septon",
+		"High Sparrow",
+		"Hodor",
+		"Hooded Figure",
+		"Hot Pie",
+		"Hugh Of The Vale",
+		"Hunters",
+		"Irri",
+		"Izembaro",
+		"Jaremy Rykker",
+		"Jhiqui",
+		"John",
+		"Jonos Bracken",
+		"Jory Cassel",
+		"Karsi",
+		"Khal #1",
+		"Khal #2",
+		"Khal #3",
+		"Khal #4",
+		"Khal Moro",
+		"King's Landing Baker",
+		"King's Landing Guard",
+		"King's Landing Page",
+		"King's Soldier",
+		"Kinvara",
+		"Knight",
+		"Knight 1",
+		"Knight 2",
+		"Knight 3",
+		"Knight 4",
+		"Knight 5",
+		"Knight Of House Bracken",
+		"Knight Of House Whent",
+		"Lady Anya",
+		"Lannister Scout",
+		"Lannister Soldier",
+		"Leader",
+		"Leaf",
+		"Leo Lefford",
+		"Lhazareen Woman",
+		"Listeners",
+		"Little Bird",
+		"Loboda",
+		"Maester",
+		"Maester 1",
+		"Maester 2",
+		"Maggy",
+		"Mago",
+		"Maid",
+		"Male Voice #1",
+		"Male Voice #2",
+		"Malko",
+		"Man",
+		"Man #1",
+		"Man #2",
+		"Man #3",
+		"Man 1",
+		"Man 2",
+		"Man 3",
+		"Man 4",
+		"Marillion",
+		"Masha Heddle",
+		"Master",
+		"Master Of Arms",
+		"Melara",
+		"Member 1",
+		"Men",
+		"Merchant",
+		"Merry",
+		"Messenger",
+		"Militant",
+		"Mirri Maz Duur",
+		"Missandei",
+		"Mistress",
+		"Mole's Town Whore",
+		"Mord",
+		"Mycah",
+		"Myranda",
+		"Night Watch Stable Boy",
+		"Night's Watch",
+		"Night's Watcher #1",
+		"Night's Watcher #2",
+		"Night's Watchman",
+		"Night's Watchman #1",
+		"Night's Watchman #2",
+		"Night's Watchmen #1",
+		"Old Man",
+		"Olly",
+		"Olyvar",
+		"Orell",
+		"Osha",
+		"Owner",
+		"Pig Farmer",
+		"Populace",
+		"Portan",
+		"Priest",
+		"Priestess",
+		"Prostitute",
+		"Qotho",
+		"Quick",
+		"Ralf",
+		"Rast",
+		"Red Priest",
+		"Red Priestess",
+		"Rider",
+		"Rorge",
+		"Ryger Rivers",
+		"Septon",
+		"Shadow Tower Brother",
+		"Shae",
+		"Shagga",
+		"Slave Buyer",
+		"Slave Owner",
+		"Slaver",
+		"Soldier",
+		"Soldier 1",
+		"Soldier 2",
+		"Sparrow",
+		"Squire",
+		"Stable Boy",
+		"Stark Bannermen",
+		"Stark Guard",
+		"Stevron Frey",
+		"Steward",
+		"Steward Of House Stark",
+		"Storyteller",
+		"Street Urchin",
+		"Strong",
+		"Styr",
+		"Survivor",
+		"Syrio Forel",
+		"Thenn Warg",
+		"Thin Man",
+		"Three-Eyed Raven",
+		"Tomard",
+		"Tribesmen Of The Vale",
+		"Unidentified Night's Watchers",
+		"Unsullied 1",
+		"Vala",
+		"Vale Knight",
+		"Varly",
+		"Voice",
+		"Voices Outside",
+		"Waif",
+		"Waitress",
+		"Watchman",
+		"Waymar Royce",
+		"White Rat",
+		"Wife #2",
+		"Wildling",
+		"Wildlings",
+		"Wildling 1",
+		"Wildling 2",
+		"Wildling Elder",
+		"Will",
+		"Wine Merchant",
+		"Woman",
+		"Woman 2",
+		"Wun Wun",
+		"Ygritte",
+		"Yoren",
+		"Young Man",
+		"Young Man #2"
+	]
+}

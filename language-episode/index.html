@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Languages Per Episode</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Languages Per Episode">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+// to title case labels
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()})
+}
+
+// to add commas to numbers
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+var config = {  
+  "title":"Languages Per Episode",
+  "width":960,
+  "height":1300,
+  "margin":{
+    "top": 20,
+    "right": 0,
+    "bottom": 30,
+    "left": 220
+  },
+  "legendOffset": {
+    "x":-20,
+    "y":40
+  },
+  "barHeight": 20,
+  "centerOffset": 50
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/wordcount.json')
+  .await(ready);
+
+function ready(error, w) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height);
+  /* END CONFIG SETUP */
+
+  // put all lines in one array
+  var words = w.count.reduce(function(acc, val, ind){
+    var word = val.text.reduce(function(a, v, i){
+      var c = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum});
+      return a.concat(c);
+    }, []);
+    return [...acc, ...word];
+  }, []);
+
+  // put all languages in an array
+  var languages = words.reduce(function(acc, val, ind){
+    var lang = (val.lang) ? val.lang : "Common Tongue";
+    return [...acc, lang];
+  }, [])
+    .filter(onlyUnique);
+
+  // then put that array into an object with 0 count
+  var languagesObj = languages.reduce(function(acc, val, ind){
+      var obj = {};
+      obj[val] = 0;
+      return Object.assign(acc, obj);
+    }, {});
+
+  // go through words; add counts to episode/season
+  var episodes = w.count.map(function(val, ind){
+    var title = `S${val.seasonNum} E${val.episodeNum} - ${val.episodeTitle}`;
+    var episode = {
+      "name": title,
+      "seasonNum": val.seasonNum,
+      "episodeNum": val.episodeNum,
+      "total": 0
+    }
+    episode = Object.assign({}, episode, languagesObj);
+
+    val.text.forEach(function(v, i){
+      var lang = (v.lang) ? v.lang : "Common Tongue";
+      episode[lang] += v.count;
+      episode.total += v.count;
+    })
+    return episode;
+  })
+
+  // build the visualization
+  var data = episodes;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("svg"),
+      margin = config.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width - 500]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574", "#33a02c"]);
+
+  var keys = languages;
+
+  // data.sort(function(a, b) { return a.total - b.total; }).reverse();
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth())
+      .append("svg:title")
+        .text(function(d){
+          var name = d.data.name.split("-")[1].trim();
+          var lang = d3.select(this.parentNode.parentNode).datum().key;
+          var diff = d[1]-d[0];
+          var word = (diff == 1) ? "word" : "words";
+          return `In "${name}", characters spoke ${numberWithCommas(diff)} ${word} in ${lang}`;
+        });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  g.selectAll(".axis")
+    .selectAll(".tick")
+    .data(data)
+    .append("text")
+    .attr("class", "timestamp")
+    .attr("dy", "0.35em")
+    .attr("dx", function(d){ return x(d.total) + 5; })
+    .attr("text-anchor", "start")
+    .text(function(d){
+      var langs = languages.filter(function(val, ind){
+        return d[val] > 0 && val !== "Common Tongue"
+      })
+        .map(function(val, ind){
+          var wds = (d[val] > 1) ? "wds" : "wd";
+          return `${val}: ${d[val]} ${wds}`
+        })
+        .join(", ");
+      langs = (langs.length > 0) ? `(${langs})` : langs;
+      var wds = (d.total > 1) ? "wds" : "wd";
+      return `${numberWithCommas(d.total)} ${wds} ${langs}`;
+    });
+
+  var legend = g.append("g")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 10)
+    .attr("text-anchor", "end")
+    .attr("transform", function(d, i) {return `translate(${config.legendOffset.x}, ${config.legendOffset.y})`})
+    .selectAll("g")
+    .data(keys.slice())
+    .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+    .attr("x", width - 19)
+    .attr("width", 19)
+    .attr("height", 19)
+    .attr("fill", z);
+
+  legend.append("text")
+    .attr("x", width - 24)
+    .attr("y", 9.5)
+    .attr("dy", "0.32em")
+    .text(function(d) { return d; });
+};
+
+    </script>
+  </body>
+</html>

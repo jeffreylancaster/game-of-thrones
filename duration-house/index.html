@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Time Per House</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Time Per House">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d % 86400); // specify value for SECONDS here
+  var hhmmss = date.toISOString().substr(11, 8);
+  // account for time > 1 day
+  if(d > 86400){
+    var h = Math.floor(d/86400)*24 + parseInt(hhmmss.split(":")[0]);
+    hhmmss = hhmmss.split(":");
+    hhmmss[0] = h.toString();
+    hhmmss = hhmmss.join(":")
+  }
+  return hhmmss;
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+var config = {
+  "title":"Time Per House",
+  "width":960,
+  "height":1000,
+  "margin":{
+    "top": 10,
+    "right": 40,
+    "bottom": 10,
+    "left": 120
+  },
+  "legendOffset": {
+    "x":20,
+    "y":50
+  },
+  "barHeight": 20
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json')
+  .defer(d3.json, '../data/characters-groups.json')
+  .await(ready);
+
+function ready(error, e, g) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
+  /* END CONFIG SETUP */
+
+  // remove the "Include" group
+  g.groups.pop();
+
+  // create a groups dictionary
+  groupDict = {};
+  g.groups.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      groupDict[v] = val.name;
+    })
+  })
+
+  // put remaining groups in an array
+  var groups = g.groups.reduce(function(acc, val, ind){
+    return [...acc, val.name]
+  }, [])
+    .filter(onlyUnique);
+
+  // add value to the group object
+  var groupObj = {};
+  groups.forEach(function(val, ind){
+    groupObj[val] = false;
+  })
+
+  // put all scenes in one array
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var s = Object.assign({}, v, {
+        "seasonNum":val.seasonNum,
+        "episodeNum":val.episodeNum,
+        "sceneLength": sceneLength,
+        "groups": JSON.parse(JSON.stringify(groupObj))
+      });
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // put all seasons in an array
+  var seasons = scenes.reduce(function(acc, val, ind){
+    return [...acc, val.seasonNum];
+  }, [])
+    .filter(onlyUnique);
+
+  // then put that array into an object with 0 count
+  var seasonsObj = seasons.reduce(function(acc, val, ind){
+      var obj = {};
+      obj[val] = 0;
+      return Object.assign(acc, obj);
+    }, {});
+
+  // put all groups in one array, make object to count time
+  var groupScenes = groups.map(function(cur, ind){
+    return Object.assign({}, {"name": cur}, seasonsObj);
+  });
+
+  // go through scenes and add sceneLength values to houses' counts
+  scenes.forEach(function(val, ind){
+    val.characters.forEach(function(v, i){
+      if(groupDict[v.name] !== undefined){
+        val.groups[groupDict[v.name]] = true;
+      }
+    });
+    Object.keys(val.groups).forEach(function(v, i){
+      if(val.groups[v]){
+        groupScenes[i][val.seasonNum] += val.sceneLength;
+      }
+    })  
+  })
+
+  // build the visualization
+  var data = groupScenes;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("svg"),
+      margin = config.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
+
+  for (i=0; i<data.length; i++){
+    var t=0;
+    for(j=0; j<keys.length; j++){
+      t += data[i][keys[j]];
+    }
+    data[i].total = t;
+  } 
+
+  data.sort(function(a, b) { return a.total - b.total; }).reverse();
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth());
+
+  g.selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .append("svg:title")
+      .text(function(d,i) {
+        // not sure why this shift needs to happen...
+        return (i == 0) ? "Season "+keys[keys.length-1] : "Season "+keys[i-1]
+      });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y)
+      .tickFormat(function(d){
+        var groups = ["Lannister", "Stark", "Baratheon", "Targaryen", "Tyrell", "Greyjoy", "Martell", "Frey", "Tully"];
+        var alt = (groups.indexOf(d) > -1) ? `House ${d}` : `The ${d}`;
+        return alt;
+      })
+    );
+
+  g.selectAll(".axis")
+    .selectAll(".tick")
+    .data(data)
+    .append("text")
+    .attr("class", "timestamp")
+    .attr("dy", "0.35em")
+    .attr("dx", function(d){ return x(d.total) + 5; })
+    .attr("text-anchor", "start")
+    .text(function(d){ return secondsToHMS(d.total); });
+
+  var legend = g.append("g")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 10)
+    .attr("text-anchor", "end")
+    .attr("transform", function(d, i) {return `translate(${config.legendOffset.x}, ${config.legendOffset.y})`})
+    .selectAll("g")
+    .data(keys.slice())
+    .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+    .attr("x", width - 19)
+    .attr("width", 19)
+    .attr("height", 19)
+    .attr("fill", z);
+
+  legend.append("text")
+    .attr("x", width - 24)
+    .attr("y", 9.5)
+    .attr("dy", "0.32em")
+    .text(function(d) { return "Season " + d; });
+};
+
+    </script>
+  </body>
+</html>

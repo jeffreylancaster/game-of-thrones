@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Duration Percent Per Gender Per Episode</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Duration Percent Per Gender Per Episode">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+// to title case labels
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()})
+}
+
+// number to percent
+function toPercentage(x) {
+    return (x*100).toFixed(1);
+}
+
+var config = {  
+  "title":"Duration Percent Per Gender Per Episode",
+  "width":960,
+  "height":1300,
+  "margin":{
+    "top": 20,
+    "right": 0,
+    "bottom": 30,
+    "left": 220
+  },
+  "legendOffset": {
+    "x":-20,
+    "y":40
+  },
+  "barHeight": 20,
+  "centerOffset": 0.03
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/characters-gender-all.json')
+  .defer(d3.json, '../data/episodes.json')
+  .await(ready);
+
+function ready(error, g, e) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height);
+  /* END CONFIG SETUP */
+
+  // rebuild the genders object
+  var gen = {};
+  Object.keys(g).forEach(function(val, ind){
+    g[val].forEach(function(v, i){
+      gen[v] = val;
+    })
+  })
+
+  // get the list of genders
+  // var genders = Object.keys(g);
+  var genders = ["all female", "more female", "even", "more male", "all male", "none"];
+
+  // then put that array into an object with 0 count
+  var gendersObj = genders.reduce(function(acc, val, ind){
+    var obj = {};
+    obj[val] = 0;
+    return Object.assign(acc, obj);
+  }, {});
+
+  // go through episodes; add title, season, episode, sort, and gender counts
+  var episodes = e.episodes.filter(function(val){
+    return val.scenes.length > 0
+  })
+    .map(function(val, ind){
+      var title = `S${val.seasonNum} E${val.episodeNum} - ${val.episodeTitle}`;
+      var episode = {
+        "name": title,
+        "seasonNum": val.seasonNum,
+        "episodeNum": val.episodeNum,
+        "total": 0
+      }
+      episode = Object.assign({}, episode, gendersObj);
+
+      val.scenes.forEach(function(v, i){
+        var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+        var comparison = {"male":0, "female":0};
+        v.characters.forEach(function(w, j){
+          comparison[gen[w.name]]++
+        })
+        if(comparison.male == 0 && comparison.female == 0){
+          episode['none'] += sceneLength;
+        } else if(comparison.male == 0){
+          episode['all female'] += sceneLength;
+        } else if(comparison.female == 0){
+          episode['all male'] += sceneLength;
+        } else if(comparison.male > comparison.female){
+          episode['more male'] += sceneLength;
+        } else if(comparison.female > comparison.male){
+          episode['more female'] += sceneLength;
+        } else if(comparison.male == comparison.female){
+          episode['even'] += sceneLength;
+        }
+        episode.total += sceneLength;
+      });
+
+      // convert to percentages
+      genders.forEach(function(val, ind){
+        episode[val] = episode[val]/episode.total;
+      })
+
+      episode.negOffset = episode['all female'] + episode['more female'] + episode['even']/2;
+      episode.posOffset = episode['all male'] + episode['more male'] + episode['even']/2;
+      return episode;
+    })
+
+  // build the visualization
+  var data = episodes;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("svg"),
+      margin = config.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  /* CUSTOM */
+  var z = d3.scaleOrdinal()
+    .range([
+      "#ca0020",
+      "#f4a582",
+      "#ededed",
+      "#92c5de",
+      "#0571b0"
+    ]);
+
+  var keys = genders.slice(0,-1); // remove "none"
+  var maxNegOffset = data.map(function(val, ind){
+    return val.negOffset
+  })
+    .reduce(function(a, b) {
+      return Math.max(a, b);
+    })
+  var maxPosOffset = data.map(function(val, ind){
+    return val.posOffset
+  })
+    .reduce(function(a, b) {
+      return Math.max(a, b);
+    })
+  var range = Math.ceil(maxNegOffset + maxPosOffset) + 2*config.centerOffset;
+
+  y.domain(data.map(function(d) { return d.name; }));
+  // x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  x.domain([0, range]).nice();
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth())
+      .attr("transform", function(d){
+        return `translate(${x(config.centerOffset + maxNegOffset - d.data.negOffset)},0)`;
+      })
+      .append("svg:title")
+        .text(function(d){
+          var label = d3.select(this.parentNode.parentNode).datum().key;
+          return `${toTitleCase(label)}: ${toPercentage(d[1]-d[0])} % of time`
+        });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  g.append("line")
+    .attr("class", "line")
+    .style("stroke", "black")
+    .style("fill", "none")
+    .style("shape-rendering", "crispEdges")
+    .attr("x1", x(maxNegOffset+config.centerOffset))
+    .attr("y1", 0)
+    .attr("x2", x(maxNegOffset+config.centerOffset))
+    .attr("y2", barHeight*data.length + 10);
+
+  var legend = g.append("g")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 10)
+    .attr("text-anchor", "end")
+    .attr("transform", function(d, i) { return `translate(${config.legendOffset.x}, ${config.legendOffset.y})` })
+    .selectAll("g")
+    .data(keys.slice())
+    .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+    .attr("x", width - 19)
+    .attr("width", 19)
+    .attr("height", 19)
+    .attr("fill", z);
+
+  legend.append("text")
+    .attr("x", width - 24)
+    .attr("y", 9.5)
+    .attr("dy", "0.32em")
+    .text(function(d) { return toTitleCase(d); });
+};
+
+    </script>
+  </body>
+</html>

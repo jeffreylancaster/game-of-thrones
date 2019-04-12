@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Game of Thrones: Characters Per Location Per Time (Heatmap)</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Game of Thrones: Characters Per Location Per Time (Heatmap)">
+		<meta name="keywords" content="Game of Thrones, data visualization, narrative chart, Stark, Baratheon, Lannister, Targaryen, John Snow, Tyrion Lannister, Daenerys Targaryen">
+		<meta name="author" content="Jeffrey Lancaster">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+		<script>
+// to convert scene start/end times into seconds
+function sec(timeString){
+    var sec = 0;
+    if (timeString.length == 0) return sec;
+    var splitArray = timeString.split(":");
+    sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+    return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
+}
+
+var config = {
+  "title":"Characters Per Location Per Time (Heatmap)",
+  "width":2000,
+  "height":900,
+  "margin":{
+    "top": 20,
+    "right": 200,
+    "bottom": 20,
+    "left": 200
+  },
+  "barHeight": 10,
+	"useSub": true, // whether to use locations (false) or sublocations (true)
+  "calcData": false
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/episodes.json') // e.episodes
+  .defer(d3.json, '../data/locations.json') // l.regions
+  .defer(d3.json, '../data/heatmap.json') // l.regions
+  .await(ready);
+
+function ready(error, e, l, heatmap) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height)
+  /* END CONFIG SETUP */
+
+  if(config.calcData){
+    // make array for locations from locations.json
+    var locations = l.regions.reduce(function(acc, val, ind){
+    	return acc.concat(val.location)
+    }, [])
+    	.map(function(val, ind){
+    		return {"name": val, "max": 0, "middle": 0}
+    	});
+    // make a dictionary for locations
+    var lo = locations.reduce(function(acc, val, ind) {
+  	  acc[val.name] = ind;
+  		return acc;
+  	}, {});
+    
+    // make array for sublocations from locations.json
+    var sublocations = l.regions.reduce(function(acc, val, ind){
+    	var s = val.subLocation.reduce(function(a, v, i){
+    		var l = `${val.location}#${v}`;
+    		return a.concat(l);
+    	}, [])
+    	return [...acc, ...s];
+    }, [])
+    	.map(function(val, ind){
+    		return {"name": val, "count": []}
+    	});
+    // make a dictionary for sublocations
+    var su = sublocations.reduce(function(acc, val, ind) {
+  	  acc[val.name] = ind;
+  		return acc;
+  	}, {});
+    
+    // make list of opening locations
+    // var openinglocations = e.episodes.reduce(function(acc, val, ind){
+    //   return [...acc, ...val.openingSequenceLocations];
+    // }, [])
+    // 	.filter(onlyUnique);
+
+    // put all scenes in one array
+    var end = 0,
+      totalTime = 0;
+    var scenes = e.episodes.reduce(function(acc, val, ind){
+      var scene = val.scenes.reduce(function(a, v, i){
+        var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+        var loc = (!config.useSub) ? v.location : (v.subLocation) ? `${v.location}#${v.subLocation}` : `${v.location}#`;
+        var s = Object.assign({}, v, {
+        	"seasonNum":val.seasonNum,
+        	"episodeNum":val.episodeNum,
+        	"sceneLength": sceneLength,
+        	"loc": loc,
+          "absStartSec": totalTime,
+          "absEndSec": totalTime + sceneLength
+        });
+        // store the last absEndSec as end
+        end = totalTime + sceneLength;
+        // add scene length to total time
+        totalTime += sceneLength;
+        return a.concat(s);
+      }, []);
+      return [...acc, ...scene];
+    }, []);
+
+    // put all locations in an array ...
+    var Locations = scenes.reduce(function(acc, val, ind){
+    	return acc.concat(val.location)
+    }, [])
+    	.filter(onlyUnique)
+    	// ... and check to see if locations are missing from locations.json
+    	.filter(function(val, ind){
+    		if(!locations.some(function(v){return v.name == val})){
+    			return val
+    		}
+    	});
+
+    // put all sublocations in an array ...
+    var subLocations = scenes.reduce(function(acc, val, ind){
+    	var l = (val.subLocation) ? `${val.location}#${val.subLocation}` : `${val.location}#`;
+    	return acc.concat(l)
+    }, [])
+    	.filter(onlyUnique)
+    	// ... and check to see if locations are missing from locations.json
+    	.filter(function(val, ind){
+    		if(!sublocations.some(function(v){return v.name == val})){
+    			return val
+    		}
+    	});
+
+    // check to see if there are new locations or sublocations to add to locations.json
+    if(Locations.length > 0 || subLocations.length > 0){
+    	console.log("New for locations.json", Locations, subLocations)
+    }
+
+    // put all seasons in an array
+    // var seasons = e.episodes.reduce(function(acc, val, ind){
+    //   return acc.concat(val.seasonNum);
+    // }, [])
+    //   .filter(onlyUnique);
+
+    // make list of episodes arranged by season
+    // var episodes = seasons.map(function(cur, ind){
+    //   return Object.assign({}, {
+    //   	"seasonNum": cur,
+    //   	"length": 0,
+    //   	"shift": 0,
+    //   	"episodes": []
+    //   });
+    // });
+    // add episode information, including length and shift
+    // var episodeShift = 0;
+    // e.episodes.forEach(function(val, ind){
+    // 	var episodeLength = (val.scenes.length > 0) ? val.scenes.reduce(function(a, v, i){
+    // 		return a + Math.abs(sec(v.sceneEnd) - sec(v.sceneStart))
+    // 	}, 0) : 0;
+    // 	episodes[val.seasonNum-1].episodes.push({
+    // 		"episodeNum": val.episodeNum,
+    // 		"length": episodeLength,
+    // 		"episodeTitle": val.episodeTitle,
+    // 		"shift": episodeShift
+    // 	})
+    // 	episodeShift += episodeLength;
+    // })
+    // add lengths and shifts to seasons
+    // seasons.forEach(function(val, ind){
+    // 	var seasonLength = scenes.filter(function(v){
+    // 		return v.seasonNum == val
+    // 	})
+    // 		.reduce(function(a, v, i){
+    // 			return a += v.sceneLength;
+    // 		}, 0);
+    // 	episodes[ind].length = seasonLength;
+    // 	episodes[ind].shift = (ind !== 0) ? episodes[ind-1].length + episodes[ind-1].shift : 0;
+    // })
+
+    // put all characters in one array
+    var characters = scenes.reduce(function(acc, val, ind){
+      var c = val.characters.reduce(function(a, v, i){
+        return a.concat(v.name);
+      }, []);
+      return [...acc, ...c];
+    }, [])
+      .filter(onlyUnique);
+
+  	// make a dictionary for characters
+  	var ch = characters.reduce(function(acc, val, ind) {
+  	  acc[val] = ind;
+  		return acc;
+  	}, {});
+
+  	console.log("Dictionaries:", ch, lo, su);
+
+  	// OR use scenes, add holder of who's there in that place, and work forward/backward matching on location. go through sublocations with a filter for each location, then use characters in other places to remove characters in a place. write a function that removes a character from all locations EXCEPT a specified one. maybe have a location key with scenes in that location with a scene index.
+  	// - go through scenes and add all characters to whosThere. go through scenes again and if character is in a scene/place then remove from all other places?
+
+  	// build: i (scenes) x j (sub/locations) x k (characters) array
+    var ijk = scenes.map(function(val, ind){
+    	var ij = sublocations.map(function(v, i){
+    		var arr = new Array(characters.length);
+    		return arr;
+    	})
+    	return ij;
+    })
+    // build: first scene is all 0's
+    ijk[0] = sublocations.map(function(val, ind){
+    	var arr = characters.map(function(v, i){
+    		return 0;
+    	})
+    	return arr;
+    })
+    // build: go through scenes, in that location, replace character with 1 or dead - in other places, make character a 0
+    scenes.forEach(function(val, sce){
+    	sublocations.forEach(function(value, index){
+    		val.characters.forEach(function(v, i){
+    			ijk[sce][su[value.name]][ch[v.name]] = (value.name !== val.loc) ? 0 : (v.alive === false) ? 'dead' : 1;
+    		})
+    	})
+    })
+    // modify: iterate over scenes and if value == "dead" set value = 1 and next scene value of same character in same location = 0
+    // modify: forward flesh out - if value == 0, look at same character, same location in next scene - if "", set to 0
+    for(i=0; i<ijk.length; i++){
+    	for(j=0; j<ijk[i].length; j++){
+    		for(k=0; k<ijk[i][j].length; k++){
+    			if(ijk[i][j][k] == 'dead'){
+    				ijk[i][j][k] = 1;
+    				if(i < ijk.length-1){
+    					ijk[i+1][j][k] = (ijk[i+1][j][k] == null) ? 0 : ijk[i+1][j][k]
+    				};
+    			} else {
+    				if(ijk[i][j][k] == 0 && i < ijk.length-1){
+    					ijk[i+1][j][k] = (ijk[i+1][j][k] == null) ? 0 : ijk[i+1][j][k]
+    				}
+    			}
+    		}
+    	}
+    }
+    
+    // modify: backward flesh out - if value == 0, look at same character, same location in previous scene - if "", set to 0
+    // modify: replace remaining "" with 1
+    for(i=ijk.length-1; i>0; i--){
+    	for(j=0; j<ijk[i].length; j++){
+    		for(k=0; k<ijk[i][j].length; k++){
+    			if(ijk[i][j][k] == 0 && ijk[i-1][j][k] == null){
+    				ijk[i-1][j][k] = 0
+    			} else if(ijk[i][j][k] == null){
+    				ijk[i][j][k] = 1
+    			}
+    		}
+    	}
+    }
+
+    // analyze: count the number of characters in each location
+    ijk.forEach(function(val, i){
+      val.forEach(function(value, j){
+        var sum = value.reduce(function(acc, v, k){
+          return acc + v;
+        }, 0);
+        ijk[i][j] = sum;
+      })
+    })
+
+    // add counts to sublocations with x1(absStartSec), x2(absEndSec), z(count)
+    sublocations.forEach(function(val, loc){
+      ijk.forEach(function(v, i){
+        if(ijk[i][loc] !== 0){
+          sublocations[loc].count.push({
+            "x1":scenes[i].absStartSec,
+            "x2":scenes[i].absEndSec,
+            "z":ijk[i][loc]
+          })
+        }
+      })
+      // join if same count and same location, expand start/end: 135383 without joining, 1443 with
+      function join(array){
+        for(i=0; i<array.length-1; i++){
+          var j = i+1;
+          if(array[i].z == array[j].z && array[i].x2 == array[j].x1){
+            array[i].x2 = array[j].x2;
+            array.splice(j,1);
+            join(array);
+          }
+        }
+      }
+      join(sublocations[loc].count);
+    })
+
+    // to count the number of entries after joining
+    // sublocations = sublocations.reduce(function(acc, val, ind){
+    //   return [...acc, ...val.count]
+    // }, [])
+    
+    // console.log(JSON.stringify(sublocations));
+  }
+
+  // put all scenes in one array
+  var end = 0,
+      totalTime = 0;
+  var scenes = e.episodes.reduce(function(acc, val, ind){
+    var scene = val.scenes.reduce(function(a, v, i){
+      var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+      var loc = (!config.useSub) ? v.location : (v.subLocation) ? `${v.location}#${v.subLocation}` : `${v.location}#`;
+      var s = Object.assign({}, v, {
+        "seasonNum":val.seasonNum,
+        "episodeNum":val.episodeNum,
+        "sceneLength": sceneLength,
+        "loc": loc,
+        "absStartSec": totalTime,
+        "absEndSec": totalTime + sceneLength
+      });
+      // store the last absEndSec as end
+      end = totalTime + sceneLength;
+      // add scene length to total time
+      totalTime += sceneLength;
+      return a.concat(s);
+    }, []);
+    return [...acc, ...scene];
+  }, []);
+
+  // build the visualization
+
+  var data = (config.calcData) ? sublocations : heatmap;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("svg"),
+      margin = config.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  // set the axes
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .align(0.1);
+  var x = d3.scaleLinear()
+      .range([0, width]);
+  var z = d3.scaleSequential(d3.interpolateInferno);
+
+  // set the axis domains
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, d3.max(data, function(d) {
+    var max = d3.max(d.count, function(c){
+      return c.x2;
+    })
+    return max;
+  })]);
+  z.domain([0, d3.max(data, function(d) {
+    var max = d3.max(d.count, function(c){
+      return c.z;
+    })
+    return max;
+  })]);
+
+  // add a group for each location (row), and rectangles for each timespan
+  g.selectAll("g")
+    .data(data)
+    .enter().append("g")
+      .attr("transform", function(d, i){
+        return `translate(0, ${i*y.bandwidth()})`;
+      })
+      .attr("class", "location")
+    .selectAll("rect")
+    .data(function(d){return d.count;})
+    .enter().append("rect")
+      .attr("x", function(d){
+        return x(d.x1);
+      })
+      .attr("y", 0)
+      .attr("width", function(d){
+        return x(d.x2 - d.x1)
+      })
+      .attr("height", y.bandwidth())
+      .style("fill", function(d){
+        return z(d.z + 5);
+      })
+      .style("stroke-width", 0)
+      .append("svg:title")
+      .text(function(d,i) {
+        var place = d3.select(this.parentNode.parentNode).datum().name;
+        var location = `${place.split("#")[0]}`;
+        var sublocation = (place.split("#")[1].length > 0) ? `${place.split("#")[1]}, ` : "";
+        var people = (d.z == 1) ? "person" : "people";
+        return `${d.z} ${people} at ${sublocation}${location}`
+      })
+
+  // add full-width background color bar behind others
+  g.selectAll(".location")
+    .insert("rect", ":first-child")
+      .attr("height", y.bandwidth())
+      .attr("x", "0")
+      .attr("width", width)
+      .style("fill", "#000")
+
+  // add left axis
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", `translate(0, ${-y.bandwidth()/2})`)
+    .call(d3.axisLeft(y)
+      .tickFormat(function(d){
+        return d.split("#")[(d.split("#")[1].length > 0) ? 1 : 0];
+      })
+    );
+
+  // add right axis
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", `translate(${width}, ${-y.bandwidth()/2})`)
+    .call(d3.axisRight(y)
+      .tickFormat(function(d){
+        return d.split("#")[(d.split("#")[1].length > 0) ? 1 : 0];
+      })
+    );
+      
+  // add rects for when scene is on screen
+  g.append("g")
+    .attr("class", "show")
+    .selectAll("rect")
+    .data(scenes)
+      .enter()
+      .append("rect")
+      .attr("x", function(d){ 
+        return x(d.absStartSec);
+      })
+      .attr("y", function(d){
+        return y(d.loc) - 0.5
+      })
+      .attr("height", y.bandwidth()/3)
+      .attr("width", function(d){
+        return x(d.absEndSec - d.absStartSec)
+      })
+      .attr("fill", "#FFF")
+  
+}
+		</script>
+	</body>
+</html>

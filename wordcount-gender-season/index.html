@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Word Count Per Gender Per Season</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Word Count Per Gender Per Season">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+
+    <svg></svg>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+// to title case labels
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()})
+}
+
+// to add commas to numbers
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+var config = {  
+  "title":"Word Count Per Gender Per Season",
+  "width":960,
+  "height":1300,
+  "margin":{
+    "top": 20,
+    "right": 0,
+    "bottom": 30,
+    "left": 120
+  },
+  "legendOffset": {
+    "x":-10,
+    "y":50
+  },
+  "barHeight": 20,
+  "centerOffset": 5000
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/wordcount-gender.json')
+  .defer(d3.json, '../data/wordcount.json')
+  .await(ready);
+
+function ready(error, g, w) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  /* CONFIG SETUP */
+  d3.select("svg")
+    .attr("width", config.width)
+    .attr("height", config.height);
+  /* END CONFIG SETUP */
+
+  // put all lines in one array
+  var words = w.count.reduce(function(acc, val, ind){
+    var word = val.text.reduce(function(a, v, i){
+      var c = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum});
+      return a.concat(c);
+    }, []);
+    return [...acc, ...word];
+  }, []);
+
+  // rebuild the genders object
+  var gen = {};
+  Object.keys(g).forEach(function(val, ind){
+    g[val].forEach(function(v, i){
+      gen[v] = val;
+    })
+  })
+
+  // get the list of genders
+  var genders = Object.keys(g);
+
+  // then put that array into an object with 0 count
+  var gendersObj = genders.reduce(function(acc, val, ind){
+    var obj = {};
+    obj[val] = 0;
+    return Object.assign(acc, obj);
+  }, {});
+
+  // go through words; add counts to episode/season
+  var seasons = w.count.reduce(function(acc, val, ind){
+    return [...acc, val.seasonNum];
+  }, [])
+    .filter(onlyUnique)
+    .map(function(val, ind){
+      var season = {
+        "name": `Season ${val}`,
+        "number": val,
+        "total": 0
+      }
+      season = Object.assign({}, season, gendersObj);
+      return season;
+    });
+  
+  words.forEach(function(val, ind){
+    seasons[val.seasonNum-1][gen[val.name]] += val.count;
+  })
+
+  seasons.forEach(function(val, ind){
+    val.negOffset = val.female;
+    val.posOffset = val.male;
+  });
+
+  // build the visualization
+  var data = seasons;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("svg"),
+      margin = config.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  var y = d3.scaleBand() 
+      // .rangeRound([0, height])
+      .rangeRound([0, barHeight*data.length + 10])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  /* CUSTOM */
+  var z = d3.scaleOrdinal()
+    .range([
+      "#ca0020",
+      // "#f4a582",
+      // "#ededed",
+      // "#92c5de",
+      "#0571b0"
+    ]);
+
+  var keys = genders.slice(0,-1).sort(); // remove "crowd"
+  var maxNegOffset = data.map(function(val, ind){
+    return val.negOffset
+  })
+    .reduce(function(a, b) {
+      return Math.max(a, b);
+    })
+  var maxPosOffset = data.map(function(val, ind){
+    return val.posOffset
+  })
+    .reduce(function(a, b) {
+      return Math.max(a, b);
+    })
+  var range = Math.ceil(maxNegOffset + maxPosOffset) + 2*config.centerOffset;
+
+  y.domain(data.map(function(d) { return d.name; }));
+  // x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  // x.domain([0, range]).nice();
+  x.domain([0, range])
+  z.domain(keys);
+
+  // add bars
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth())
+      .attr("transform", function(d){
+        return `translate(${x(config.centerOffset + maxNegOffset - d.data.negOffset)},0)`;
+      })
+      .append("svg:title")
+        .text(function(d){
+          var label = d3.select(this.parentNode.parentNode).datum().key;
+          return `${toTitleCase(label)}: ${numberWithCommas(d[1]-d[0])} words`
+        });
+
+  // add bar labels
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("text")
+    .data(function(d) { return d; })
+    .enter().append("text")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) {
+        return (d3.select(this.parentNode).datum().key == "female") ? x(d[0]) : x(d[1]);
+      })
+      .attr("font-family", "sans-serif")
+      .attr("font-size", "10")
+      .attr("alignment-baseline", "middle")
+      .attr("dy", function(){ return barHeight/2 })
+      .attr("dx", function(d){
+        return (d3.select(this.parentNode).datum().key == "female") ? "-0.5em" : "0.5em";
+      })
+      .attr("text-anchor", function(d){
+        return (d3.select(this.parentNode).datum().key == "female") ? "end" : "start";
+      })
+      .attr("fill", "#000")
+      .text(function(d){
+        return `${numberWithCommas(d[1]-d[0])} wds`
+      })
+      .attr("transform", function(d){
+        return `translate(${x(config.centerOffset + maxNegOffset - d.data.negOffset)}, 0)`;
+      })
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  var legend = g.append("g")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 10)
+    .attr("text-anchor", "end")
+    .attr("transform", function(d, i) { return `translate(${config.legendOffset.x}, ${config.legendOffset.y})` })
+    .selectAll("g")
+    .data(keys.slice())
+    .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  legend.append("rect")
+    .attr("x", width - 19)
+    .attr("width", 19)
+    .attr("height", 19)
+    .attr("fill", z);
+
+  legend.append("text")
+    .attr("x", width - 24)
+    .attr("y", 9.5)
+    .attr("dy", "0.32em")
+    .text(function(d) { return toTitleCase(d); });
+
+  var height = (height < 250) ? 250 : height;
+  svg.attr("height", height);
+
+};
+
+    </script>
+  </body>
+</html>

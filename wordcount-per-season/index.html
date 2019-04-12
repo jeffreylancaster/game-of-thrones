@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Word Count by Season</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Word Count by Season">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+
+/* HELPFUL FUNCTIONS */
+
+// to convert scene start/end times into seconds
+function sec(timeString){
+  var sec = 0;
+  if (timeString.length == 0) return sec;
+  var splitArray = timeString.split(":");
+  sec = 3600*parseFloat(splitArray[0])+60*parseFloat(splitArray[1])+parseFloat(splitArray[2]);
+  return sec;
+}
+
+// to convert seconds into hh:mm:ss
+function secondsToHMS(d) {
+  var date = new Date(null);
+  date.setSeconds(d); // specify value for SECONDS here
+  return date.toISOString().substr(11, 8);
+}
+
+// to dedpulicate an array
+function onlyUnique(value, index, self) { 
+  return self.indexOf(value) === index;
+}
+
+// to add commas to numbers
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+
+/* VARIABLES AND CONFIGURATION */
+
+var range = ["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"];
+
+var config = {
+  "title":"Word Count by Season",
+  "width":960,
+  "height":500,
+  "margin":{
+    "top": 20,
+    "right": 40,
+    "bottom": 30,
+    "left": 180
+  },
+  "barHeight": 20
+}
+
+/* IMPORT DATA */
+d3.queue()
+  .defer(d3.json, '../data/wordcount.json')
+  .await(ready);
+
+function ready(error, w) {
+  if (error) throw error;
+  console.log("now that the files are loaded... do magic.");
+
+  // put all lines in one array
+  var words = w.count.reduce(function(acc, val, ind){
+    var word = val.text.reduce(function(a, v, i){
+      var c = Object.assign({}, v, {"seasonNum":val.seasonNum, "episodeNum":val.episodeNum});
+      return a.concat(c);
+    }, []);
+    return [...acc, ...word];
+  }, []);
+
+  // put all seasons in an array
+  var seasons = words.reduce(function(acc, val, ind){
+    return [...acc, val.seasonNum];
+  }, [])
+    .filter(onlyUnique);
+
+  // then put that array into an object with 0 count
+  var seasonsObj = seasons.reduce(function(acc, val, ind){
+      var obj = {};
+      obj[val] = 0;
+      return Object.assign(acc, obj);
+    }, {});
+
+  // put all characters in one array, make object to count character words
+  var characters = words.map(function(val, ind){
+    return val.name
+  })
+    .filter(onlyUnique)
+    .map(function(cur, ind){
+      return Object.assign({}, {"name": cur}, seasonsObj);
+    });
+
+  // go through lines and add word count values to characters' counts
+  words.forEach(function(val, ind){
+    var index = characters.findIndex(function(element){
+      return element.name == val.name;
+    });
+    characters[index][val.seasonNum] += val.count;
+  })
+
+  // for each season, build the data and visualization
+  seasons.forEach(function(val, ind){
+    var seasonCharacters = characters.reduce(function(a, v, i){
+      return a.concat({
+        "name": v.name,
+        "total": v[val]
+      })
+    }, [])
+      .filter(function(value){
+        return value.total > 0;
+      });
+
+    d3.select("body")
+        .append("h1")
+        .html("Season "+val)
+        .attr("class", "main");
+    d3.select("body").append("svg")
+        .attr("width", config.width)
+        .attr("height", (seasonCharacters.length+2)*config.barHeight)
+        .attr("id", "s"+val);
+
+    // build the visualization
+    var data = seasonCharacters;
+    var barHeight = config.barHeight;
+
+    var svg = d3.select("#s"+val),
+        margin = config.margin,
+        width = +svg.attr("width") - margin.left - margin.right,
+        height = barHeight*data.length + margin.top + margin.bottom,
+        g = svg.append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var y = d3.scaleBand() 
+        .rangeRound([0, height])
+        .paddingInner(0.15)
+        .align(0.1);
+
+    var x = d3.scaleLinear()
+        .rangeRound([0, width]);
+
+    var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+        .range(range);
+
+    range.shift();
+
+    var keys = d3.keys(data[0]).slice(1,2);
+
+    data.sort(function(a, b) { return a.total - b.total; }).reverse();
+    
+    y.domain(data.map(function(d) { return d.name; }));
+    x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+    z.domain(keys);
+
+    g.append("g")
+      .selectAll("g")
+      .data(d3.stack().keys(keys)(data))
+      .enter().append("g")
+        .attr("fill", function(d) { return z(d.key); })
+      .selectAll("rect")
+      .data(function(d) { return d; })
+      .enter().append("rect")
+        .attr("y", function(d) { return y(d.data.name); })
+        .attr("x", function(d) { return x(d[0]); })
+        .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+        .attr("height", y.bandwidth())
+        .append("svg:title")
+        .text(function(d){
+          var name = d.data.name;
+          var season = d3.select(this.parentNode.parentNode).datum().key;
+          var diff = d[1]-d[0];
+          var word = (diff == 1) ? "word" : "words";
+          return `${name} spoke ${numberWithCommas(diff)} ${word} in Season ${val}`;
+        });
+
+    g.append("g")
+      .attr("class", "axis")
+      .attr("transform", "translate(0,0)")
+      .call(d3.axisLeft(y));
+
+    g.selectAll(".axis")
+      .selectAll(".tick")
+      .data(data)
+      .append("text")
+      .attr("class", "timestamp")
+      .attr("dy", "0.35em")
+      .attr("dx", function(d){ return x(d.total) + 5; })
+      .attr("text-anchor", "start")
+      .text(function(d){ return numberWithCommas(d.total); });
+
+  });
+};
+
+    </script>
+  </body>
+</html>
