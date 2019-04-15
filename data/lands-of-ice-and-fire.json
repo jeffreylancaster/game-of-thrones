@@ -620,7 +620,8 @@
 				{"type":"Point","coordinates":[68115.6491904928,58036.8610165477],"coordinatesGeo":[61.6988562223072,49.043260382399],"properties":{"name":"Port of Ibben","type":"city"}},
 				{"type":"Point","coordinates":[25539.2389178494,13214.7932611709],"coordinatesGeo":[-13.1278753640608,5.82043708888222],"properties":{"name":"Lotus Port","type":"city"}},
 				{"type":"Point","coordinates":[27418.4405126176,11410.8723432001],"coordinatesGeo":[-9.82523635743833,4.08087979093547],"properties":{"name":"Tall Trees Town","type":"town"}},
-				{"type":"Point","coordinates":[15139.8388708667,54997.9498311726],"coordinatesGeo":[-31.4045011056824,46.1127770792407],"properties":{"name":"Moat Cailin","type":"ruin"}}
+				{"type":"Point","coordinates":[15139.8388708667,54997.9498311726],"coordinatesGeo":[-31.4045011056824,46.1127770792407],"properties":{"name":"Moat Cailin","type":"ruin"}},
+				{"type":"Point","coordinates":[18509.1965410538,65515.5644826098],"coordinatesGeo":[-25.4829586273219,56.2551248626902],"properties":{"name":"Last Hearth","type":"castle"}}
 			]
 		},
 		"citiesOther":{
@@ -682,7 +683,8 @@
 				{"type":"Feature","geometry":{"type":"Point","coordinates":[68115.6491904928,58036.8610165477]},"properties":{"name":"Port of Ibben","type":"city"}},
 				{"type":"Feature","geometry":{"type":"Point","coordinates":[25539.2389178494,13214.7932611709]},"properties":{"name":"Lotus Port","type":"city"}},
 				{"type":"Feature","geometry":{"type":"Point","coordinates":[27418.4405126176,11410.8723432001]},"properties":{"name":"Tall Trees Town","type":"town"}},
-				{"type":"Feature","geometry":{"type":"Point","coordinates":[15139.8388708667,54997.9498311726]},"properties":{"name":"Moat Cailin","type":"ruin"}}
+				{"type":"Feature","geometry":{"type":"Point","coordinates":[15139.8388708667,54997.9498311726]},"properties":{"name":"Moat Cailin","type":"ruin"}},
+				{"type":"Feature","geometry":{"type":"Point","coordinates":[18509.1965410538,65515.5644826098]},"properties":{"name":"Last Hearth","type":"castle"}}
 			]
 		}
 	}

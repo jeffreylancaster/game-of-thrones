@@ -40,15 +40,15 @@ function onlyUnique(value, index, self) {
 var config = {
   "title": "Weapons by Scene",
   "width":2000,
-  "height":250,
+  "height":300,
   "margin":{
     "top": 20,
-    "right": 40,
+    "right": 60,
     "bottom": 30,
     "left": 130
   },
   "legendOffset": {
-    "x":20,
+    "x":40,
     "y":20
   },
   "barHeight": 20
@@ -183,7 +183,7 @@ function ready(error, e) {
       g = svg.append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   
-  svg.attr("height", height);
+  svg.attr("height", height+50);
 
   var y = d3.scaleBand() 
       .rangeRound([0, height])
@@ -245,7 +245,7 @@ function ready(error, e) {
     .attr("y", 9.5)
     .attr("dy", "0.32em")
     .text(function(d) { return "Season " + d; });
-  
+
 };
 
     </script>

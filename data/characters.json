@@ -1388,6 +1388,13 @@
          ]
       },
       {
+         "characterName":"Harry Strickland",
+         "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGVkZjRkMzUtMzgzYy00YzcyLThhZmMtNDMxMGNmNGRmNWQyXkEyXkFqcGdeQXVyNDgzNTg0OTA@._V1._SX100_SY140_.jpg",
+         "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGVkZjRkMzUtMzgzYy00YzcyLThhZmMtNDMxMGNmNGRmNWQyXkEyXkFqcGdeQXVyNDgzNTg0OTA@._V1_.jpg",
+         "actorName":"Marc Rissmann",
+         "actorLink":"/name/nm4704928/"
+      },
+      {
          "characterName":"High Priestess",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA1MzQxOTMwM15BMl5BanBnXkFtZTgwMzkwMzg4ODE@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjA1MzQxOTMwM15BMl5BanBnXkFtZTgwMzkwMzg4ODE@._V1_SY1000_CR0,0,1502,1000_AL_.jpg",
@@ -2907,6 +2914,16 @@
          ]
       },
       {
+         "characterName":"Ned Umber",
+         "houseName":"Umber",
+         "characterLink":"/title/tt0944947/characters/nm9132255",
+         "actorName":"Harry Grasby",
+         "actorLink":"/name/nm9132255/",
+         "killedBy":[
+            "The Night King"
+         ]
+      },
+      {
          "characterName":"Night's Watch Deserter",
          "characterLink":"/character/ch0305319/",
          "actorName":"Barry John O'Connor",
@@ -4257,7 +4274,8 @@
          ],
          "killed":[
             "Three-Eyed Raven",
-            "Viserion"
+            "Viserion",
+            "Ned Umber"
          ]
       },
       {
