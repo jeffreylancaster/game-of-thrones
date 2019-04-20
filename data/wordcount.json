@@ -2,8 +2,11 @@
 	"episodeAlt": "S1E1",
 	"seasonNum": 1,
 	"episodeNum": 1,
-	"episodeTitle":"Winter Is Coming",
+	"episodeTitle": "Winter Is Coming",
 	"text": [{
+		"name": "Will",
+		"count": 2
+	}, {
 		"name": "Waymar Royce",
 		"count": 24
 	}, {
@@ -539,13 +542,13 @@
 		"count": 1
 	}, {
 		"name": "Viserys Targaryen",
-		"count": 25
+		"count": 24
 	}, {
 		"name": "Daenerys Targaryen",
 		"count": 15
 	}, {
 		"name": "Viserys Targaryen",
-		"count": 51
+		"count": 50
 	}, {
 		"name": "Daenerys Targaryen",
 		"count": 1
@@ -886,7 +889,7 @@
 		"count": 25
 	}, {
 		"name": "Catelyn Stark",
-		"count": 24
+		"count": 23
 	}, {
 		"name": "Maester Luwin",
 		"count": 6
@@ -1024,7 +1027,7 @@
 	"episodeAlt": "S1E2",
 	"seasonNum": 1,
 	"episodeNum": 2,
-	"episodeTitle":"The Kingsroad",
+	"episodeTitle": "The Kingsroad",
 	"text": [{
 		"name": "Jorah Mormont",
 		"count": 7
@@ -1907,7 +1910,7 @@
 	"episodeAlt": "S1E3",
 	"seasonNum": 1,
 	"episodeNum": 3,
-	"episodeTitle":"Lord Snow",
+	"episodeTitle": "Lord Snow",
 	"text": [{
 		"name": "Royal Steward",
 		"count": 21
@@ -2387,7 +2390,7 @@
 		"count": 4
 	}, {
 		"name": "Alliser Thorne",
-		"count": 37
+		"count": 47
 	}, {
 		"name": "Alliser Thorne",
 		"count": 1
@@ -3062,7 +3065,7 @@
 	"episodeAlt": "S1E4",
 	"seasonNum": 1,
 	"episodeNum": 4,
-	"episodeTitle":"Cripples, Bastards, and Broken Things",
+	"episodeTitle": "Cripples, Bastards, and Broken Things",
 	"text": [{
 		"name": "Old Nan",
 		"count": 6
@@ -3671,7 +3674,7 @@
 		"count": 9
 	}, {
 		"name": "Arya Stark",
-		"count": 17
+		"count": 16
 	}, {
 		"name": "Eddard Stark",
 		"count": 25
@@ -4310,7 +4313,7 @@
 	"episodeAlt": "S1E5",
 	"seasonNum": 1,
 	"episodeNum": 5,
-	"episodeTitle":"The Wolf and the Lion",
+	"episodeTitle": "The Wolf and the Lion",
 	"text": [{
 		"name": "Eddard Stark",
 		"count": 9
@@ -4409,10 +4412,10 @@
 		"count": 7
 	}, {
 		"name": "Robert Baratheon",
-		"count": 13
+		"count": 10
 	}, {
 		"name": "Eddard Stark",
-		"count": 12
+		"count": 15
 	}, {
 		"name": "Robert Baratheon",
 		"count": 10
@@ -5621,7 +5624,7 @@
 	"episodeAlt": "S1E6",
 	"seasonNum": 1,
 	"episodeNum": 6,
-	"episodeTitle":"A Golden Crown",
+	"episodeTitle": "A Golden Crown",
 	"text": [{
 		"name": "Eddard Stark",
 		"count": 8
@@ -6212,7 +6215,7 @@
 		"name": "Eddard Stark",
 		"count": 9
 	}, {
-		"name": "Man",
+		"name": "Joss",
 		"count": 41
 	}, {
 		"name": "Petyr Baelish",
@@ -6571,7 +6574,7 @@
 	"episodeAlt": "S1E7",
 	"seasonNum": 1,
 	"episodeNum": 7,
-	"episodeTitle":"You Win or You Die",
+	"episodeTitle": "You Win or You Die",
 	"text": [{
 		"name": "Jaime Lannister",
 		"count": 35
@@ -6873,7 +6876,7 @@
 		"name": "Jon Snow",
 		"count": 3
 	}, {
-		"name": "Night's Watch Stable Boy",
+		"name": "Night Watch Stable Boy",
 		"count": 3
 	}, {
 		"name": "Jon Snow",
@@ -7395,13 +7398,13 @@
 		"name": "Eddard Stark",
 		"count": 9
 	}, {
-		"name": "Messenger",
+		"name": "Royal Steward",
 		"count": 15
 	}, {
 		"name": "Eddard Stark",
 		"count": 2
 	}, {
-		"name": "Messenger",
+		"name": "Royal Steward",
 		"count": 9
 	}, {
 		"name": "Petyr Baelish",
@@ -7416,7 +7419,7 @@
 		"name": "Janos Slynt",
 		"count": 6
 	}, {
-		"name": "Messenger",
+		"name": "Royal Steward",
 		"count": 33
 	}, {
 		"name": "Joffrey Baratheon",
@@ -7474,7 +7477,7 @@
 	"episodeAlt": "S1E8",
 	"seasonNum": 1,
 	"episodeNum": 8,
-	"episodeTitle":"The Pointy End",
+	"episodeTitle": "The Pointy End",
 	"text": [{
 		"name": "Syrio Forel",
 		"count": 5
@@ -8597,7 +8600,7 @@
 		"name": "Joffrey Baratheon",
 		"count": 4
 	}, {
-		"name": "King's Landing Page",
+		"name": "Royal Steward",
 		"count": 6
 	}, {
 		"name": "Cersei Lannister",
@@ -8652,7 +8655,7 @@
 	"episodeAlt": "S1E9",
 	"seasonNum": 1,
 	"episodeNum": 9,
-	"episodeTitle":"Baelor",
+	"episodeTitle": "Baelor",
 	"text": [{
 		"name": "Lord Varys",
 		"count": 6
@@ -9366,7 +9369,7 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Qotho",
-		"count": 7
+		"count": 6
 	}, {
 		"lang": "Dothraki",
 		"name": "Daenerys Targaryen",
@@ -9784,7 +9787,7 @@
 		"name": "Arya Stark",
 		"count": 6
 	}, {
-		"name": "Street Urchin",
+		"name": "King's Landing Street Urchin",
 		"count": 8
 	}, {
 		"name": "Arya Stark",
@@ -9836,7 +9839,7 @@
 	"episodeAlt": "S1E10",
 	"seasonNum": 1,
 	"episodeNum": 10,
-	"episodeTitle":"Fire and Blood",
+	"episodeTitle": "Fire and Blood",
 	"text": [{
 		"name": "Yoren",
 		"count": 32
@@ -9848,7 +9851,7 @@
 		"count": 4
 	}, {
 		"name": "Yoren",
-		"count": 24
+		"count": 23
 	}, {
 		"name": "Bran Stark",
 		"count": 25
@@ -10091,6 +10094,7 @@
 		"count": 8
 	}, {
 		"name": "Catelyn Stark",
+		"check": true,
 		"count": 2
 	}, {
 		"name": "Jaime Lannister",
@@ -10160,6 +10164,7 @@
 		"count": 22
 	}, {
 		"name": "Tyrion Lannister",
+		"check": true,
 		"count": 41
 	}, {
 		"name": "Kevan Lannister",
@@ -10688,7 +10693,7 @@
 	"episodeAlt": "S2E1",
 	"seasonNum": 2,
 	"episodeNum": 1,
-	"episodeTitle":"The North Remembers",
+	"episodeTitle": "The North Remembers",
 	"text": [{
 		"name": "Joffrey Baratheon",
 		"count": 5
@@ -11160,7 +11165,7 @@
 		"count": 10
 	}, {
 		"name": "Jeor Mormont",
-		"count": 19
+		"count": 18
 	}, {
 		"name": "Craster",
 		"count": 9
@@ -11288,7 +11293,7 @@
 		"name": "Melisandre",
 		"count": 32
 	}, {
-		"name": "Crowd On Dragonstone",
+		"name": "Dragonstone Crowd",
 		"count": 6
 	}, {
 		"name": "Melisandre",
@@ -11820,7 +11825,7 @@
 	"episodeAlt": "S2E2",
 	"seasonNum": 2,
 	"episodeNum": 2,
-	"episodeTitle":"The Night Lands",
+	"episodeTitle": "The Night Lands",
 	"text": [{
 		"name": "Jaqen H'ghar",
 		"count": 1
@@ -12601,7 +12606,7 @@
 		"count": 3
 	}, {
 		"name": "Theon Greyjoy",
-		"count": 24
+		"count": 23
 	}, {
 		"name": "Lordsport Dockhand",
 		"count": 5
@@ -13045,7 +13050,7 @@
 	"episodeAlt": "S2E3",
 	"seasonNum": 2,
 	"episodeNum": 3,
-	"episodeTitle":"What Is Dead May Never Die",
+	"episodeTitle": "What Is Dead May Never Die",
 	"text": [{
 		"name": "Craster",
 		"count": 24
@@ -13291,6 +13296,7 @@
 		"count": 11
 	}, {
 		"name": "Theon Greyjoy",
+		"check": true,
 		"count": 16
 	}, {
 		"name": "Balon Greyjoy",
@@ -14080,7 +14086,7 @@
 	"episodeAlt": "S2E4",
 	"seasonNum": 2,
 	"episodeNum": 4,
-	"episodeTitle":"Garden of Bones",
+	"episodeTitle": "Garden of Bones",
 	"text": [{
 		"name": "Lannister Guard",
 		"count": 12
@@ -14862,6 +14868,10 @@
 		"name": "Daenerys Targaryen",
 		"count": 6
 	}, {
+		"name": "Spice King",
+		"check": true,
+		"count": 1
+	}, {
 		"name": "Daenerys Targaryen",
 		"count": 1
 	}, {
@@ -14997,37 +15007,37 @@
 		"name": "Tyrion Lannister",
 		"count": 6
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 15
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 18
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 13
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 26
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 16
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 8
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 5
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 9
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 14
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 18
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 15
 	}, {
 		"name": "Tyrion Lannister",
@@ -15036,67 +15046,67 @@
 		"name": "Tyrion Lannister",
 		"count": 12
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 4
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 30
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 6
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 23
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 4
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 13
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 20
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 8
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 9
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 44
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 7
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 9
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 17
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 4
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 2
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 63
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 11
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 62
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 3
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 5
 	}, {
-		"name": "Loras Tyrell",
+		"name": "Lancel Lannister",
 		"count": 2
 	}, {
 		"name": "Tyrion Lannister",
@@ -15220,7 +15230,7 @@
 	"episodeAlt": "S2E5",
 	"seasonNum": 2,
 	"episodeNum": 5,
-	"episodeTitle":"The Ghost of Harrenhal",
+	"episodeTitle": "The Ghost of Harrenhal",
 	"text": [{
 		"name": "Renly Baratheon",
 		"count": 3
@@ -16513,7 +16523,7 @@
 	"episodeAlt": "S2E6",
 	"seasonNum": 2,
 	"episodeNum": 6,
-	"episodeTitle":"The Old Gods and the New",
+	"episodeTitle": "The Old Gods and the New",
 	"text": [{
 		"name": "Theon Greyjoy",
 		"count": 4
@@ -17812,7 +17822,7 @@
 	"episodeAlt": "S2E7",
 	"seasonNum": 2,
 	"episodeNum": 7,
-	"episodeTitle":"A Man Without Honor",
+	"episodeTitle": "A Man Without Honor",
 	"text": [{
 		"name": "Theon Greyjoy",
 		"count": 17
@@ -19048,7 +19058,7 @@
 	"episodeAlt": "S2E8",
 	"seasonNum": 2,
 	"episodeNum": 8,
-	"episodeTitle":"The Prince of Winterfell",
+	"episodeTitle": "The Prince of Winterfell",
 	"text": [{
 		"name": "Ironborn Man #1",
 		"count": 2
@@ -20269,7 +20279,7 @@
 	"episodeAlt": "S2E9",
 	"seasonNum": 2,
 	"episodeNum": 9,
-	"episodeTitle":"Blackwater",
+	"episodeTitle": "Blackwater",
 	"text": [{
 		"name": "Stannis Baratheon Soldier",
 		"count": 2
@@ -21308,7 +21318,7 @@
 	"episodeAlt": "S2E10",
 	"seasonNum": 2,
 	"episodeNum": 10,
-	"episodeTitle":"Valar Morghulis",
+	"episodeTitle": "Valar Morghulis",
 	"text": [{
 		"name": "Tyrion Lannister",
 		"count": 21
@@ -22291,7 +22301,7 @@
 	"episodeAlt": "S3E1",
 	"seasonNum": 3,
 	"episodeNum": 1,
-	"episodeTitle":"Valar Dohaeris",
+	"episodeTitle": "Valar Dohaeris",
 	"text": [{
 		"name": "Night's Watch Man",
 		"count": 2
@@ -23298,7 +23308,7 @@
 	"episodeAlt": "S3E2",
 	"seasonNum": 3,
 	"episodeNum": 2,
-	"episodeTitle":"Dark Wings, Dark Words",
+	"episodeTitle": "Dark Wings, Dark Words",
 	"text": [{
 		"name": "Jon Snow",
 		"count": 5
@@ -24612,7 +24622,7 @@
 	"episodeAlt": "S3E3",
 	"seasonNum": 3,
 	"episodeNum": 3,
-	"episodeTitle":"Walk of Punishment",
+	"episodeTitle": "Walk of Punishment",
 	"text": [{
 		"name": "Edmure Tully",
 		"count": 22
@@ -25721,7 +25731,7 @@
 	"episodeAlt": "S3E4",
 	"seasonNum": 3,
 	"episodeNum": 4,
-	"episodeTitle":"And Now His Watch Is Ended",
+	"episodeTitle": "And Now His Watch Is Ended",
 	"text": [{
 		"name": "Bolton Soldier",
 		"count": 14
@@ -26719,7 +26729,7 @@
 	"episodeAlt": "S3E5",
 	"seasonNum": 3,
 	"episodeNum": 5,
-	"episodeTitle":"Kissed by Fire",
+	"episodeTitle": "Kissed by Fire",
 	"text": [{
 		"name": "Thoros Of Myr",
 		"count": 6
@@ -27948,7 +27958,7 @@
 	"episodeAlt": "S3E6",
 	"seasonNum": 3,
 	"episodeNum": 6,
-	"episodeTitle":"The Climb",
+	"episodeTitle": "The Climb",
 	"text": [{
 		"name": "Gilly",
 		"count": 7
@@ -28882,7 +28892,7 @@
 	"episodeAlt": "S3E7",
 	"seasonNum": 3,
 	"episodeNum": 7,
-	"episodeTitle":"The Bear and the Maiden Fair",
+	"episodeTitle": "The Bear and the Maiden Fair",
 	"text": [{
 		"name": "Ygritte",
 		"count": 4
@@ -30084,7 +30094,7 @@
 	"episodeAlt": "S3E8",
 	"seasonNum": 3,
 	"episodeNum": 8,
-	"episodeTitle":"Second Sons",
+	"episodeTitle": "Second Sons",
 	"text": [{
 		"name": "Sandor Clegane",
 		"count": 52
@@ -30743,17 +30753,24 @@
 		"lang": "Dothraki",
 		"count": 15
 	}, {
+		"lang": "Dothraki",
 		"name": "Missandei",
 		"count": 1
 	}, {
 		"name": "Daenerys Targaryen",
+		"lang": "Dothraki",
 		"count": 1
 	}, {
 		"name": "Missandei",
+		"lang": "Dothraki",
 		"count": 1
 	}, {
 		"name": "Daenerys Targaryen",
-		"count": 10
+		"lang": "Dothraki",
+		"count": 1
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 9
 	}, {
 		"name": "Missandei",
 		"count": 25
@@ -30933,7 +30950,7 @@
 	"episodeAlt": "S3E9",
 	"seasonNum": 3,
 	"episodeNum": 9,
-	"episodeTitle":"The Rains of Castamere",
+	"episodeTitle": "The Rains of Castamere",
 	"text": [{
 		"name": "Catelyn Stark",
 		"count": 5
@@ -31739,7 +31756,7 @@
 	"episodeAlt": "S3E10",
 	"seasonNum": 3,
 	"episodeNum": 10,
-	"episodeTitle":"Mhysa",
+	"episodeTitle": "Mhysa",
 	"text": [{
 		"name": "Frey Men",
 		"count": 2
@@ -32883,7 +32900,7 @@
 	"episodeAlt": "S4E1",
 	"seasonNum": 4,
 	"episodeNum": 1,
-	"episodeTitle":"Two Swords",
+	"episodeTitle": "Two Swords",
 	"text": [{
 		"name": "Jaime Lannister",
 		"count": 1
@@ -34197,7 +34214,7 @@
 	"episodeAlt": "S4E2",
 	"seasonNum": 4,
 	"episodeNum": 2,
-	"episodeTitle":"The Lion and the Rose",
+	"episodeTitle": "The Lion and the Rose",
 	"text": [{
 		"name": "Ramsay Snow",
 		"count": 3
@@ -35289,7 +35306,7 @@
 	"episodeAlt": "S4E3",
 	"seasonNum": 4,
 	"episodeNum": 3,
-	"episodeTitle":"Breaker of Chains",
+	"episodeTitle": "Breaker of Chains",
 	"text": [{
 		"name": "Cersei Lannister",
 		"count": 6
@@ -35693,7 +35710,7 @@
 		"name": "Sandor Clegane",
 		"count": 24
 	}, {
-		"name": "Night's Watch Man",
+		"name": "Night's Watchman",
 		"count": 12
 	}, {
 		"name": "Alliser Thorne",
@@ -36509,7 +36526,7 @@
 	"episodeAlt": "S4E4",
 	"seasonNum": 4,
 	"episodeNum": 4,
-	"episodeTitle":"Oathkeeper",
+	"episodeTitle": "Oathkeeper",
 	"text": [{
 		"name": "Grey Worm",
 		"count": 11
@@ -37328,7 +37345,7 @@
 	"episodeAlt": "S4E5",
 	"seasonNum": 4,
 	"episodeNum": 5,
-	"episodeTitle":"First of His Name",
+	"episodeTitle": "First of His Name",
 	"text": [{
 		"name": "High Septon",
 		"count": 91
@@ -38432,7 +38449,7 @@
 	"episodeAlt": "S4E6",
 	"seasonNum": 4,
 	"episodeNum": 6,
-	"episodeTitle":"The Laws of Gods and Men",
+	"episodeTitle": "The Laws of Gods and Men",
 	"text": [{
 		"name": "Davos Seaworth",
 		"count": 10
@@ -39298,7 +39315,7 @@
 	"episodeAlt": "S4E7",
 	"seasonNum": 4,
 	"episodeNum": 7,
-	"episodeTitle":"Mockingbird",
+	"episodeTitle": "Mockingbird",
 	"text": [{
 		"name": "Jaime Lannister",
 		"count": 19
@@ -40282,7 +40299,7 @@
 	"episodeAlt": "S4E8",
 	"seasonNum": 4,
 	"episodeNum": 8,
-	"episodeTitle":"The Mountain and the Viper",
+	"episodeTitle": "The Mountain and the Viper",
 	"text": [{
 		"name": "Night's Watch Man",
 		"count": 3
@@ -41199,7 +41216,7 @@
 	"episodeAlt": "S4E9",
 	"seasonNum": 4,
 	"episodeNum": 9,
-	"episodeTitle":"The Watchers on the Wall",
+	"episodeTitle": "The Watchers on the Wall",
 	"text": [{
 		"name": "Samwell Tarly",
 		"count": 4
@@ -41916,7 +41933,7 @@
 	"episodeAlt": "S4E10",
 	"seasonNum": 4,
 	"episodeNum": 10,
-	"episodeTitle":"The Children",
+	"episodeTitle": "The Children",
 	"text": [{
 		"name": "Mance Rayder",
 		"count": 6
@@ -42893,7 +42910,7 @@
 	"episodeAlt": "S5E1",
 	"seasonNum": 5,
 	"episodeNum": 1,
-	"episodeTitle":"The Wars to Come",
+	"episodeTitle": "The Wars to Come",
 	"text": [{
 		"name": "Melara Hetherspoon",
 		"count": 6
@@ -43788,7 +43805,7 @@
 	"episodeAlt": "S5E2",
 	"seasonNum": 5,
 	"episodeNum": 2,
-	"episodeTitle":"The House of Black and White",
+	"episodeTitle": "The House of Black and White",
 	"text": [{
 		"name": "Ternesio Terys",
 		"count": 27
@@ -44908,7 +44925,7 @@
 	"episodeAlt": "S5E3",
 	"seasonNum": 5,
 	"episodeNum": 3,
-	"episodeTitle":"High Sparrow",
+	"episodeTitle": "High Sparrow",
 	"text": [{
 		"name": "Despondent Man",
 		"count": 2
@@ -45981,7 +45998,7 @@
 	"episodeAlt": "S5E4",
 	"seasonNum": 5,
 	"episodeNum": 4,
-	"episodeTitle":"Sons of the Harpy",
+	"episodeTitle": "Sons of the Harpy",
 	"text": [{
 		"name": "Jaime Lannister",
 		"count": 3
@@ -46879,7 +46896,7 @@
 	"episodeAlt": "S5E5",
 	"seasonNum": 5,
 	"episodeNum": 5,
-	"episodeTitle":"Kill the Boy",
+	"episodeTitle": "Kill the Boy",
 	"text": [{
 		"name": "Hizdahr zo Loraq",
 		"count": 11
@@ -47712,7 +47729,7 @@
 	"episodeAlt": "S5E6",
 	"seasonNum": 5,
 	"episodeNum": 6,
-	"episodeTitle":"Unbowed, Unbent, Unbroken",
+	"episodeTitle": "Unbowed, Unbent, Unbroken",
 	"text": [{
 		"name": "Arya Stark",
 		"count": 7
@@ -48637,7 +48654,7 @@
 	"episodeAlt": "S5E7",
 	"seasonNum": 5,
 	"episodeNum": 7,
-	"episodeTitle":"The Gift",
+	"episodeTitle": "The Gift",
 	"text": [{
 		"name": "Jon Snow",
 		"count": 8
@@ -49541,7 +49558,7 @@
 	"episodeAlt": "S5E8",
 	"seasonNum": 5,
 	"episodeNum": 8,
-	"episodeTitle":"Hardhome",
+	"episodeTitle": "Hardhome",
 	"text": [{
 		"name": "Jorah Mormont",
 		"count": 6
@@ -50487,7 +50504,7 @@
 	"episodeAlt": "S5E9",
 	"seasonNum": 5,
 	"episodeNum": 9,
-	"episodeTitle":"The Dance of Dragons",
+	"episodeTitle": "The Dance of Dragons",
 	"text": [{
 		"name": "Stannis Baratheon Soldier #1",
 		"count": 2
@@ -51222,7 +51239,7 @@
 	"episodeAlt": "S5E10",
 	"seasonNum": 5,
 	"episodeNum": 10,
-	"episodeTitle":"Mother's Mercy",
+	"episodeTitle": "Mother's Mercy",
 	"text": [{
 		"name": "Melisandre",
 		"count": 24
@@ -51947,12 +51964,12 @@
 	"episodeAlt": "S6E1",
 	"seasonNum": 6,
 	"episodeNum": 1,
-	"episodeTitle":"The Red Woman",
+	"episodeTitle": "The Red Woman",
 	"text": [{
-		"name": "Loyal Night's Watch Man #1",
+		"name": "Loyal Night's Watchman #1",
 		"count": 5
 	}, {
-		"name": "Loyal Night's Watch Man #2",
+		"name": "Loyal Night's Watchman #2",
 		"count": 4
 	}, {
 		"name": "Davos Seaworth",
@@ -52021,7 +52038,7 @@
 		"name": "Davos Seaworth",
 		"count": 15
 	}, {
-		"name": "Loyal Night's Watch Man #1",
+		"name": "Loyal Night's Watchman #1",
 		"count": 4
 	}, {
 		"name": "Davos Seaworth",
@@ -52593,25 +52610,25 @@
 		"name": "Davos Seaworth",
 		"count": 35
 	}, {
-		"name": "Loyal Night's Watch Man #1",
+		"name": "Loyal Night's Watchman #1",
 		"count": 5
 	}, {
-		"name": "Loyal Night's Watch Man #2",
+		"name": "Loyal Night's Watchman #2",
 		"count": 9
 	}, {
 		"name": "Davos Seaworth",
 		"count": 11
 	}, {
-		"name": "Loyal Night's Watch Man #2",
+		"name": "Loyal Night's Watchman #2",
 		"count": 5
 	}, {
-		"name": "Loyal Night's Watch Man #1",
+		"name": "Loyal Night's Watchman #1",
 		"count": 12
 	}, {
 		"name": "Davos Seaworth",
 		"count": 5
 	}, {
-		"name": "Loyal Night's Watch Man #1",
+		"name": "Loyal Night's Watchman #1",
 		"count": 9
 	}, {
 		"name": "Davos Seaworth",
@@ -52621,7 +52638,7 @@
 	"episodeAlt": "S6E2",
 	"seasonNum": 6,
 	"episodeNum": 2,
-	"episodeTitle":"Home",
+	"episodeTitle": "Home",
 	"text": [{
 		"name": "Young Rodrik Cassel",
 		"count": 5
@@ -53384,7 +53401,7 @@
 	"episodeAlt": "S6E3",
 	"seasonNum": 6,
 	"episodeNum": 3,
-	"episodeTitle":"Oathbreaker",
+	"episodeTitle": "Oathbreaker",
 	"text": [{
 		"name": "Davos Seaworth",
 		"count": 7
@@ -54135,7 +54152,7 @@
 	"episodeAlt": "S6E4",
 	"seasonNum": 6,
 	"episodeNum": 4,
-	"episodeTitle":"Book of the Stranger",
+	"episodeTitle": "Book of the Stranger",
 	"text": [{
 		"name": "Eddison Tollett",
 		"count": 4
@@ -55289,7 +55306,7 @@
 	"episodeAlt": "S6E5",
 	"seasonNum": 6,
 	"episodeNum": 5,
-	"episodeTitle":"The Door",
+	"episodeTitle": "The Door",
 	"text": [{
 		"name": "Sansa Stark",
 		"count": 1
@@ -56137,7 +56154,7 @@
 	"episodeAlt": "S6E6",
 	"seasonNum": 6,
 	"episodeNum": 6,
-	"episodeTitle":"Blood of My Blood",
+	"episodeTitle": "Blood of My Blood",
 	"text": [{
 		"name": "Bran Stark",
 		"count": 4
@@ -56869,7 +56886,7 @@
 	"episodeAlt": "S6E7",
 	"seasonNum": 6,
 	"episodeNum": 7,
-	"episodeTitle":"The Broken Man",
+	"episodeTitle": "The Broken Man",
 	"text": [{
 		"name": "Villager Man #1",
 		"count": 7
@@ -57631,7 +57648,7 @@
 	"episodeAlt": "S6E8",
 	"seasonNum": 6,
 	"episodeNum": 8,
-	"episodeTitle":"No One",
+	"episodeTitle": "No One",
 	"text": [{
 		"name": "Lady Crane",
 		"count": 109
@@ -58529,7 +58546,7 @@
 	"episodeAlt": "S6E9",
 	"seasonNum": 6,
 	"episodeNum": 9,
-	"episodeTitle":"Battle of the Bastards",
+	"episodeTitle": "Battle of the Bastards",
 	"text": [{
 		"name": "Tyrion Lannister",
 		"count": 16
@@ -59130,7 +59147,7 @@
 	"episodeAlt": "S6E10",
 	"seasonNum": 6,
 	"episodeNum": 10,
-	"episodeTitle":"The Winds of Winter",
+	"episodeTitle": "The Winds of Winter",
 	"text": [{
 		"name": "Tommen's Manservant",
 		"count": 9
@@ -59832,7 +59849,7 @@
 	"episodeAlt": "S7E1",
 	"seasonNum": 7,
 	"episodeNum": 1,
-	"episodeTitle":"Dragonstone",
+	"episodeTitle": "Dragonstone",
 	"text": [{
 		"name": "Walder Frey",
 		"count": 97
@@ -60598,7 +60615,7 @@
 	"episodeAlt": "S7E2",
 	"seasonNum": 7,
 	"episodeNum": 2,
-	"episodeTitle":"Stormborn",
+	"episodeTitle": "Stormborn",
 	"text": [{
 		"name": "Tyrion Lannister",
 		"count": 10
@@ -61449,7 +61466,7 @@
 	"episodeAlt": "S7E3",
 	"seasonNum": 7,
 	"episodeNum": 3,
-	"episodeTitle":"The Queen's Justice",
+	"episodeTitle": "The Queen's Justice",
 	"text": [{
 		"name": "Tyrion Lannister",
 		"count": 4
@@ -62415,7 +62432,7 @@
 	"episodeAlt": "S7E4",
 	"seasonNum": 7,
 	"episodeNum": 4,
-	"episodeTitle":"The Spoils of War",
+	"episodeTitle": "The Spoils of War",
 	"text": [{
 		"name": "Lannister Soldier",
 		"count": 3
@@ -63344,7 +63361,7 @@
 	"episodeAlt": "S7E5",
 	"seasonNum": 7,
 	"episodeNum": 5,
-	"episodeTitle":"Eastwatch",
+	"episodeTitle": "Eastwatch",
 	"text": [{
 		"name": "Jaime Lannister",
 		"count": 5
@@ -64366,7 +64383,7 @@
 	"episodeAlt": "S7E6",
 	"seasonNum": 7,
 	"episodeNum": 6,
-	"episodeTitle":"Beyond the Wall",
+	"episodeTitle": "Beyond the Wall",
 	"text": [{
 		"name": "Jon Snow",
 		"count": 4
@@ -65263,7 +65280,7 @@
 	"episodeAlt": "S7E7",
 	"seasonNum": 7,
 	"episodeNum": 7,
-	"episodeTitle":"The Dragon and the Wolf",
+	"episodeTitle": "The Dragon and the Wolf",
 	"text": [{
 		"name": "Bronn",
 		"count": 1
@@ -66379,4 +66396,873 @@
 		"name": "Tormund Giantsbane",
 		"count": 4
 	}]
+}, {
+	"episodeAlt": "S8E1",
+	"seasonNum": 8,
+	"episodeNum": 1,
+	"episodeTitle": "Winterfell",
+	"text": [{
+		"name": "Tyrion Lannister",
+		"count": 12
+	}, {
+		"name": "Lord Varys",
+		"count": 15
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 7
+	}, {
+		"name": "Jon Snow",
+		"count": 8
+	}, {
+		"name": "Jon Snow",
+		"count": 6
+	}, {
+		"name": "Bran Stark",
+		"count": 1
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "Sansa Stark",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 13
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 22
+	}, {
+		"name": "Sansa Stark",
+		"count": 5
+	}, {
+		"name": "Bran Stark",
+		"count": 26
+	}, {
+		"name": "Sansa Stark",
+		"count": 27
+	}, {
+		"name": "Ned Umber",
+		"count": 18
+	}, {
+		"name": "Sansa Stark",
+		"count": 18
+	}, {
+		"name": "Jon Snow",
+		"count": 24
+	}, {
+		"name": "Maester Wolkan",
+		"count": 4
+	}, {
+		"name": "Lyanna Mormont",
+		"count": 28
+	}, {
+		"name": "Jon Snow",
+		"count": 3
+	}, {
+		"name": "Lyanna Mormont",
+		"count": 9
+	}, {
+		"name": "Stark Bannerman",
+		"count": 4
+	}, {
+		"name": "Jon Snow",
+		"count": 58
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 59
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 20
+	}, {
+		"name": "Sansa Stark",
+		"count": 41
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 3
+	}, {
+		"name": "Gendry",
+		"count": 10
+	}, {
+		"name": "Winterfell Man #1",
+		"count": 3
+	}, {
+		"name": "Gendry",
+		"count": 7
+	}, {
+		"name": "Winterfell Man #2",
+		"count": 1
+	}, {
+		"name": "Gendry",
+		"count": 9
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 4
+	}, {
+		"name": "Yohn Royce",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 10
+	}, {
+		"name": "Sansa Stark",
+		"count": 12
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 10
+	}, {
+		"name": "Sansa Stark",
+		"count": 9
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 17
+	}, {
+		"name": "Sansa Stark",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 45
+	}, {
+		"name": "Sansa Stark",
+		"count": 12
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 2
+	}, {
+		"name": "Sansa Stark",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 13
+	}, {
+		"name": "Sansa Stark",
+		"count": 10
+	}, {
+		"name": "Arya Stark",
+		"count": 5
+	}, {
+		"name": "Jon Snow",
+		"count": 7
+	}, {
+		"name": "Arya Stark",
+		"count": 9
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Arya Stark",
+		"count": 1
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Arya Stark",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 1
+	}, {
+		"name": "Arya Stark",
+		"count": 4
+	}, {
+		"name": "Jon Snow",
+		"count": 11
+	}, {
+		"name": "Arya Stark",
+		"count": 7
+	}, {
+		"name": "Jon Snow",
+		"count": 6
+	}, {
+		"name": "Arya Stark",
+		"count": 7
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 7
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Qyburn",
+		"count": 15
+	}, {
+		"name": "Cersei Lannister",
+		"count": 1
+	}, {
+		"name": "Yara Greyjoy",
+		"count": 11
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 38
+	}, {
+		"name": "Yara Greyjoy",
+		"count": 5
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 1
+	}, {
+		"name": "Yara Greyjoy",
+		"count": 5
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 15
+	}, {
+		"name": "Cersei Lannister",
+		"count": 4
+	}, {
+		"name": "Harry Strickland",
+		"count": 8
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 18
+	}, {
+		"name": "Cersei Lannister",
+		"count": 1
+	}, {
+		"name": "Harry Strickland",
+		"count": 2
+	}, {
+		"name": "Cersei Lannister",
+		"count": 2
+	}, {
+		"name": "Harry Strickland",
+		"count": 5
+	}, {
+		"name": "Cersei Lannister",
+		"count": 10
+	}, {
+		"name": "Harry Strickland",
+		"count": 13
+	}, {
+		"name": "Cersei Lannister",
+		"count": 13
+	}, {
+		"name": "Harry Strickland",
+		"count": 10
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 5
+	}, {
+		"name": "Cersei Lannister",
+		"count": 12
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 17
+	}, {
+		"name": "Cersei Lannister",
+		"count": 7
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 4
+	}, {
+		"name": "Cersei Lannister",
+		"count": 12
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 24
+	}, {
+		"name": "Cersei Lannister",
+		"count": 7
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 4
+	}, {
+		"name": "Dirah",
+		"count": 10
+	}, {
+		"name": "Craya",
+		"count": 7
+	}, {
+		"name": "Dirah",
+		"count": 3
+	}, {
+		"name": "Craya",
+		"count": 2
+	}, {
+		"name": "Dirah",
+		"count": 3
+	}, {
+		"name": "Craya",
+		"count": 16
+	}, {
+		"name": "Bronn",
+		"count": 12
+	}, {
+		"name": "Craya",
+		"count": 2
+	}, {
+		"name": "Bronn",
+		"count": 3
+	}, {
+		"name": "Marei",
+		"count": 2
+	}, {
+		"name": "Craya",
+		"count": 3
+	}, {
+		"name": "Dirah",
+		"count": 2
+	}, {
+		"name": "Craya",
+		"count": 15
+	}, {
+		"name": "Dirah",
+		"count": 7
+	}, {
+		"name": "Bronn",
+		"count": 11
+	}, {
+		"name": "Qyburn",
+		"count": 5
+	}, {
+		"name": "Bronn",
+		"count": 3
+	}, {
+		"name": "Qyburn",
+		"count": 12
+	}, {
+		"name": "Bronn",
+		"count": 5
+	}, {
+		"name": "Craya",
+		"count": 10
+	}, {
+		"name": "Qyburn",
+		"count": 10
+	}, {
+		"name": "Bronn",
+		"count": 2
+	}, {
+		"name": "Qyburn",
+		"count": 17
+	}, {
+		"name": "Bronn",
+		"count": 16
+	}, {
+		"name": "Qyburn",
+		"count": 33
+	}, {
+		"name": "Bronn",
+		"count": 19
+	}, {
+		"name": "Qyburn",
+		"count": 8
+	}, {
+		"name": "Bronn",
+		"count": 6
+	}, {
+		"name": "Qyburn",
+		"count": 17
+	}, {
+		"name": "Qyburn",
+		"count": 8
+	}, {
+		"name": "Bronn",
+		"count": 3
+	}, {
+		"name": "Qyburn",
+		"count": 39
+	}, {
+		"name": "Cersei Lannister",
+		"count": 4
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 9
+	}, {
+		"name": "Cersei Lannister",
+		"count": 5
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 3
+	}, {
+		"name": "Cersei Lannister",
+		"count": 18
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 3
+	}, {
+		"name": "Cersei Lannister",
+		"count": 7
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 3
+	}, {
+		"name": "Cersei Lannister",
+		"count": 7
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 5
+	}, {
+		"name": "Cersei Lannister",
+		"count": 20
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 9
+	}, {
+		"name": "Yara Greyjoy",
+		"count": 25
+	}, {
+		"name": "Theon Greyjoy",
+		"count": 3
+	}, {
+		"name": "Yara Greyjoy",
+		"count": 17
+	}, {
+		"name": "Theon Greyjoy",
+		"count": 8
+	}, {
+		"name": "Yara Greyjoy",
+		"count": 12
+	}, {
+		"name": "Yara Greyjoy",
+		"count": 6
+	}, {
+		"name": "Theon Greyjoy",
+		"count": 6
+	}, {
+		"name": "Yara Greyjoy",
+		"count": 5
+	}, {
+		"name": "Yohn Royce",
+		"count": 8
+	}, {
+		"name": "Lord Varys",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 9
+	}, {
+		"name": "Davos Seaworth",
+		"count": 27
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Davos Seaworth",
+		"count": 52
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 8
+	}, {
+		"name": "Davos Seaworth",
+		"count": 38
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 6
+	}, {
+		"name": "Lord Varys",
+		"count": 15
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 16
+	}, {
+		"name": "Lord Varys",
+		"count": 23
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Lord Varys",
+		"count": 2
+	}, {
+		"name": "Winterfell Man",
+		"count": 1
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 5
+	}, {
+		"name": "Jon Snow",
+		"count": 21
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 17
+	}, {
+		"lang": "Dothraki",
+		"name": "Daenerys Targaryen",
+		"count": 2
+	}, {
+		"lang": "Dothraki",
+		"name": "Qhono",
+		"count": 4
+	}, {
+		"name": "Jon Snow",
+		"count": 3
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 5
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 5
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 8
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 7
+	}, {
+		"name": "Jon Snow",
+		"count": 7
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 7
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 1
+	}, {
+		"name": "Jon Snow",
+		"count": 6
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 11
+	}, {
+		"name": "Jon Snow",
+		"count": 12
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 8
+	}, {
+		"name": "Winterfell Smith #1",
+		"count": 2
+	}, {
+		"name": "Winterfell Smith #2",
+		"count": 3
+	}, {
+		"name": "Gendry",
+		"count": 10
+	}, {
+		"name": "Sandor Clegane",
+		"count": 7
+	}, {
+		"name": "Gendry",
+		"count": 8
+	}, {
+		"name": "Sandor Clegane",
+		"count": 15
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Sandor Clegane",
+		"count": 10
+	}, {
+		"name": "Arya Stark",
+		"count": 4
+	}, {
+		"name": "Sandor Clegane",
+		"count": 13
+	}, {
+		"name": "Arya Stark",
+		"count": 12
+	}, {
+		"name": "Gendry",
+		"count": 10
+	}, {
+		"name": "Arya Stark",
+		"count": 4
+	}, {
+		"name": "Gendry",
+		"count": 13
+	}, {
+		"name": "Arya Stark",
+		"count": 6
+	}, {
+		"name": "Gendry",
+		"count": 6
+	}, {
+		"name": "Arya Stark",
+		"count": 4
+	}, {
+		"name": "Gendry",
+		"count": 4
+	}, {
+		"name": "Arya Stark",
+		"count": 7
+	}, {
+		"name": "Gendry",
+		"count": 8
+	}, {
+		"name": "Arya Stark",
+		"count": 6
+	}, {
+		"name": "Gendry",
+		"count": 7
+	}, {
+		"name": "Gendry",
+		"count": 12
+	}, {
+		"name": "Arya Stark",
+		"count": 7
+	}, {
+		"name": "Sansa Stark",
+		"count": 2
+	}, {
+		"name": "Sansa Stark",
+		"count": 15
+	}, {
+		"name": "Jon Snow",
+		"count": 19
+	}, {
+		"name": "Sansa Stark",
+		"count": 13
+	}, {
+		"name": "Jon Snow",
+		"count": 6
+	}, {
+		"name": "Sansa Stark",
+		"count": 11
+	}, {
+		"name": "Jon Snow",
+		"count": 22
+	}, {
+		"name": "Sansa Stark",
+		"count": 4
+	}, {
+		"name": "Jon Snow",
+		"count": 49
+	}, {
+		"name": "Sansa Stark",
+		"count": 4
+	}, {
+		"name": "Jon Snow",
+		"count": 13
+	}, {
+		"name": "Sansa Stark",
+		"count": 18
+	}, {
+		"name": "Samwell Tarly",
+		"count": 1
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 4
+	}, {
+		"name": "Samwell Tarly",
+		"count": 7
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 11
+	}, {
+		"name": "Jorah Mormont",
+		"count": 5
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 21
+	}, {
+		"name": "Samwell Tarly",
+		"count": 9
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 9
+	}, {
+		"name": "Samwell Tarly",
+		"count": 11
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 3
+	}, {
+		"name": "Samwell Tarly",
+		"count": 13
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 3
+	}, {
+		"name": "Samwell Tarly",
+		"count": 22
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 3
+	}, {
+		"name": "Samwell Tarly",
+		"count": 3
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 17
+	}, {
+		"name": "Samwell Tarly",
+		"count": 14
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 6
+	}, {
+		"name": "Samwell Tarly",
+		"count": 12
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 2
+	}, {
+		"name": "Samwell Tarly",
+		"count": 6
+	}, {
+		"name": "Bran Stark",
+		"count": 12
+	}, {
+		"name": "Samwell Tarly",
+		"count": 9
+	}, {
+		"name": "Bran Stark",
+		"count": 13
+	}, {
+		"name": "Jon Snow",
+		"count": 1
+	}, {
+		"name": "Samwell Tarly",
+		"count": 11
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Samwell Tarly",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 23
+	}, {
+		"name": "Samwell Tarly",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "Samwell Tarly",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "Samwell Tarly",
+		"count": 15
+	}, {
+		"name": "Jon Snow",
+		"count": 9
+	}, {
+		"name": "Samwell Tarly",
+		"count": 5
+	}, {
+		"name": "Jon Snow",
+		"count": 7
+	}, {
+		"name": "Samwell Tarly",
+		"count": 12
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Samwell Tarly",
+		"count": 6
+	}, {
+		"name": "Jon Snow",
+		"count": 17
+	}, {
+		"name": "Samwell Tarly",
+		"count": 36
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Samwell Tarly",
+		"count": 38
+	}, {
+		"name": "Jon Snow",
+		"count": 19
+	}, {
+		"name": "Samwell Tarly",
+		"count": 42
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Samwell Tarly",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "Samwell Tarly",
+		"count": 17
+	}, {
+		"name": "Eddison Tollett",
+		"count": 6
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 5
+	}, {
+		"name": "Beric Dondarrion",
+		"count": 4
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 3
+	}, {
+		"name": "Beric Dondarrion",
+		"count": 7
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 9
+	}, {
+		"name": "Eddison Tollett",
+		"count": 13
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 21
+	}, {
+		"name": "Winterfell Man #3",
+		"count": 4
+	}, {
+		"name": "Winterfell Man #4",
+		"count": 2
+	}, {
+		"name": "Winterfell Man #5",
+		"count": 3
+	}]
+}, {
+	"episodeAlt": "S8E2",
+	"seasonNum": 8,
+	"episodeNum": 2,
+	"episodeTitle": "Episode #8.2",
+	"text": []
+}, {
+	"episodeAlt": "S8E3",
+	"seasonNum": 8,
+	"episodeNum": 3,
+	"episodeTitle": "Episode #8.3",
+	"text": []
+}, {
+	"episodeAlt": "S8E4",
+	"seasonNum": 8,
+	"episodeNum": 4,
+	"episodeTitle": "Episode #8.4",
+	"text": []
+}, {
+	"episodeAlt": "S8E5",
+	"seasonNum": 8,
+	"episodeNum": 5,
+	"episodeTitle": "Episode #8.5",
+	"text": []
+}, {
+	"episodeAlt": "S8E6",
+	"seasonNum": 8,
+	"episodeNum": 6,
+	"episodeTitle": "Episode #8.6",
+	"text": []
 }]}
