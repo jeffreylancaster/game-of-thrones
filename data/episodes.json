@@ -43815,7 +43815,7 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Qyburn"},
+                  {"name":"Qyburn", "title":"Hand"},
                   {"name":"Cersei Lannister", "title":"King"},
                   {"name":"Gregor Clegane"}
                ]
@@ -43846,7 +43846,7 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Qyburn"},
+                  {"name":"Qyburn", "title":"Hand"},
                   {"name":"Cersei Lannister", "title":"King"},
                   {"name":"Gregor Clegane"},
                   {"name":"Euron Greyjoy"},
@@ -43859,7 +43859,7 @@
                "location":"The Crownlands",
                "subLocation":"King's Landing",
                "characters":[
-                  {"name":"Qyburn"},
+                  {"name":"Qyburn", "title":"Hand"},
                   {"name":"Cersei Lannister", "title":"King"},
                   {"name":"Gregor Clegane"},
                   {"name":"Euron Greyjoy"}
@@ -43901,7 +43901,7 @@
                   {"name":"Craya"},
                   {"name":"Dirah"},
                   {"name":"Marei"},
-                  {"name":"Qyburn"}
+                  {"name":"Qyburn", "title":"Hand"}
                ]
             },
             {
@@ -43911,7 +43911,7 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Bronn"},
-                  {"name":"Qyburn"}
+                  {"name":"Qyburn", "title":"Hand"}
                ]
             },
             {
@@ -43921,7 +43921,7 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Bronn"},
-                  {"name":"Qyburn"},
+                  {"name":"Qyburn", "title":"Hand"},
                   {"name":"Lannister Guard"}
                ]
             },
@@ -43932,7 +43932,7 @@
                "subLocation":"King's Landing",
                "characters":[
                   {"name":"Bronn"},
-                  {"name":"Qyburn"}
+                  {"name":"Qyburn", "title":"Hand"}
                ]
             },
             {
@@ -44434,23 +44434,1083 @@
       {
          "seasonNum":8,
          "episodeNum":2,
-         "episodeTitle":"Episode #8.2",
-         "episodeLink":"/title/tt5924366/",
-         "episodeAirDate":"2019--",
-         "episodeDescription":"",
+         "episodeTitle":"A Knight of the Seven Kingdoms",
+         "episodeLink":"/title/tt6027908/",
+         "episodeAirDate":"2019-04-21",
+         "episodeDescription":"The battle at Winterfell is approaching. Jaime is confronted with the consequences of the past. A tense interaction between Sansa and Daenerys follows.",
          "openingSequenceLocations":[
-
+            "Last Hearth",
+            "Winterfell",
+            "King's Landing"
          ],
          "scenes":[
-
+            {
+               "sceneStart":"0:03:39",
+               "sceneEnd":"0:07:46",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Jaime Lannister"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Jon Snow"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Alys Karstark"},
+                  {"name":"Brienne of Tarth"},
+                  {"name":"Lord Varys"},
+                  {"name":"Grey Worm"},
+                  {"name":"Missandei"},
+                  {"name":"Jorah Mormont"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:07:46",
+               "sceneEnd":"0:08:12",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"receives", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Jon Snow"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Alys Karstark"},
+                  {"name":"Brienne of Tarth"},
+                  {"name":"Lord Varys"},
+                  {
+                     "name":"Grey Worm",
+                     "weapon":[
+                        {"action":"gives", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Missandei"},
+                  {"name":"Jorah Mormont"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:08:12",
+               "sceneEnd":"0:08:21",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Jon Snow"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Alys Karstark"},
+                  {"name":"Brienne of Tarth"},
+                  {"name":"Lord Varys"},
+                  {"name":"Grey Worm"},
+                  {"name":"Missandei"},
+                  {"name":"Jorah Mormont"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:08:21",
+               "sceneEnd":"0:08:26",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Alys Karstark"},
+                  {"name":"Brienne of Tarth"},
+                  {"name":"Lord Varys"},
+                  {"name":"Grey Worm"},
+                  {"name":"Missandei"},
+                  {"name":"Jorah Mormont"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:08:26",
+               "sceneEnd":"0:08:36",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Brienne of Tarth"},
+                  {"name":"Grey Worm"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:08:36",
+               "sceneEnd":"0:08:42",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Grey Worm"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:08:42",
+               "sceneEnd":"0:09:00",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"},
+                  {"name":"Jorah Mormont"}
+               ]
+            },
+            {
+               "sceneStart":"0:09:00",
+               "sceneEnd":"0:09:11",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"},
+                  {"name":"Jorah Mormont"}
+               ]
+            },
+            {
+               "sceneStart":"0:09:11",
+               "sceneEnd":"0:09:38",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Gendry"}
+               ]
+            },
+            {
+               "sceneStart":"0:09:38",
+               "sceneEnd":"0:11:54",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Gendry"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:11:54",
+               "sceneEnd":"0:13:16",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:13:16",
+               "sceneEnd":"0:13:40",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:13:40",
+               "sceneEnd":"0:15:07",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:15:07",
+               "sceneEnd":"0:16:02",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:16:02",
+               "sceneEnd":"0:16:07",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:16:07",
+               "sceneEnd":"0:16:17",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":[
+                        {"action":"has", "name":"Oathkeeper"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:16:17",
+               "sceneEnd":"0:16:27",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Grey Worm"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:16:27",
+               "sceneEnd":"0:16:32",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Podrick Payne"}
+               ]
+            },
+            {
+               "sceneStart":"0:16:32",
+               "sceneEnd":"0:16:56",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":[
+                        {"action":"has", "name":"Oathkeeper"}
+                     ]
+                  },
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Podrick Payne"}
+               ]
+            },
+            {
+               "sceneStart":"0:16:56",
+               "sceneEnd":"0:18:13",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":[
+                        {"action":"has", "name":"Oathkeeper"}
+                     ]
+                  },
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:18:13",
+               "sceneEnd":"0:19:33",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Jorah Mormont"}
+               ]
+            },
+            {
+               "sceneStart":"0:19:33",
+               "sceneEnd":"0:20:07",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Yohn Royce"}
+               ]
+            },
+            {
+               "sceneStart":"0:20:07",
+               "sceneEnd":"0:23:33",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Sansa Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:23:33",
+               "sceneEnd":"0:23:39",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Maester Wolkan"}
+               ]
+            },
+            {
+               "sceneStart":"0:23:39",
+               "sceneEnd":"0:24:43",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Maester Wolkan"},
+                  {"name":"Theon Greyjoy"}
+               ]
+            },
+            {
+               "sceneStart":"0:24:43",
+               "sceneEnd":"0:24:46",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:24:46",
+               "sceneEnd":"0:25:27",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Davos Seaworth"},
+                  {"name":"Gilly"},
+                  {"name":"Fergus"}
+               ]
+            },
+            {
+               "sceneStart":"0:25:27",
+               "sceneEnd":"0:25:38",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Gilly"}
+               ]
+            },
+            {
+               "sceneStart":"0:25:38",
+               "sceneEnd":"0:26:32",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Davos Seaworth"},
+                  {"name":"Teela"},
+                  {"name":"Gilly"}
+               ]
+            },
+            {
+               "sceneStart":"0:26:32",
+               "sceneEnd":"0:26:37",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Davos Seaworth"},
+                  {"name":"Gilly"}
+               ]
+            },
+            {
+               "sceneStart":"0:26:37",
+               "sceneEnd":"0:26:41",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:26:41",
+               "sceneEnd":"0:26:57",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Eddison Tollett"},
+                  {"name":"Samwell Tarly"},
+                  {"name":"Beric Dondarrion"}
+               ]
+            },
+            {
+               "sceneStart":"0:26:57",
+               "sceneEnd":"0:27:51",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Eddison Tollett"},
+                  {"name":"Samwell Tarly"},
+                  {"name":"Beric Dondarrion"},
+                  {"name":"Tormund Giantsbane"}
+               ]
+            },
+            {
+               "sceneStart":"0:27:51",
+               "sceneEnd":"0:27:56",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:27:56",
+               "sceneEnd":"0:28:02",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Gendry"}
+               ]
+            },
+            {
+               "sceneStart":"0:28:02",
+               "sceneEnd":"0:28:07",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:28:07",
+               "sceneEnd":"0:28:11",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Fergus"}
+               ]
+            },
+            {
+               "sceneStart":"0:28:11",
+               "sceneEnd":"0:28:21",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:28:21",
+               "sceneEnd":"0:31:28",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Theon Greyjoy"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Sansa Stark"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lyanna Mormont"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Yohn Royce"},
+                  {"name":"Alys Karstark"},
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":[
+                        {"action":"has", "name":"Oathkeeper"}
+                     ]
+                  },
+                  {"name":"Lord Varys"},
+                  {"name":"Missandei"},
+                  {"name":"Jorah Mormont"},
+                  {"name":"Bran Stark"},
+                  {"name":"Tormund Giantsbane"},
+                  {"name":"Samwell Tarly"},
+                  {"name":"Beric Dondarrion"},
+                  {"name":"Qhono"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:31:28",
+               "sceneEnd":"0:31:31",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:31:31",
+               "sceneEnd":"0:31:36",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:31:36",
+               "sceneEnd":"0:32:08",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Bran Stark"}
+               ]
+            },
+            {
+               "sceneStart":"0:32:08",
+               "sceneEnd":"0:32:21",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:32:21",
+               "sceneEnd":"0:32:32",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Missandei"}
+               ]
+            },
+            {
+               "sceneStart":"0:32:32",
+               "sceneEnd":"0:33:45",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Missandei"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:33:45",
+               "sceneEnd":"0:34:22",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Samwell Tarly"},
+                  {"name":"Ghost"}
+               ]
+            },
+            {
+               "sceneStart":"0:34:22",
+               "sceneEnd":"0:35:54",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Samwell Tarly"},
+                  {"name":"Ghost"},
+                  {"name":"Eddison Tollett"}
+               ]
+            },
+            {
+               "sceneStart":"0:35:54",
+               "sceneEnd":"0:37:15",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:37:15",
+               "sceneEnd":"0:38:04",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":[
+                        {"action":"has", "name":"Oathkeeper"}
+                     ]
+                  },
+                  {"name":"Podrick Payne"}
+               ]
+            },
+            {
+               "sceneStart":"0:38:04",
+               "sceneEnd":"0:39:53",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":[
+                        {"action":"has", "name":"Oathkeeper"}
+                     ]
+                  },
+                  {"name":"Podrick Payne"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tormund Giantsbane"}
+               ]
+            },
+            {
+               "sceneStart":"0:39:53",
+               "sceneEnd":"0:41:15",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:41:15",
+               "sceneEnd":"0:42:35",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Beric Dondarrion"}
+               ]
+            },
+            {
+               "sceneStart":"0:42:35",
+               "sceneEnd":"0:42:40",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:42:40",
+               "sceneEnd":"0:43:07",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"},
+                        {"action":"receives", "name":"Dragonglass Staff"}
+                     ]
+                  },
+                  {
+                     "name":"Gendry",
+                     "weapon":[
+                        {"action":"gives", "name":"Dragonglass Staff"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:43:07",
+               "sceneEnd":"0:43:55",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"},
+                        {"action":"has", "name":"Dragonglass Staff"}
+                     ]
+                  },
+                  {"name":"Gendry"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:55",
+               "sceneEnd":"0:45:39",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ],
+                     "sex":{
+                        "with":["Gendry"],
+                        "type":"love",
+                        "when":"present"
+                     }
+                  },
+                  {
+                     "name":"Gendry",
+                     "sex":{
+                        "with":["Arya Stark"],
+                        "type":"love",
+                        "when":"present"
+                     }
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:45:39",
+               "sceneEnd":"0:49:49",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":[
+                        {"action":"has", "name":"Oathkeeper"}
+                     ]
+                  },
+                  {"name":"Podrick Payne"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tormund Giantsbane"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:49",
+               "sceneEnd":"0:50:34",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":[
+                        {"action":"has", "name":"Heartsbane"}
+                     ]
+                  },
+                  {"name":"Jorah Mormont"},
+                  {"name":"Lyanna Mormont"}
+               ]
+            },
+            {
+               "sceneStart":"0:50:34",
+               "sceneEnd":"0:52:07",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Samwell Tarly",
+                     "weapon":[
+                        {"action":"gives", "name":"Heartsbane"}
+                     ]
+                  },
+                  {
+                     "name":"Jorah Mormont",
+                     "weapon":[
+                        {"action":"receives", "name":"Heartsbane"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:52:07",
+               "sceneEnd":"0:53:04",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {
+                     "name":"Jaime Lannister",
+                     "weapon":[
+                        {"action":"has", "name":"Widow's Wail"}
+                     ]
+                  },
+                  {
+                     "name":"Brienne of Tarth",
+                     "weapon":[
+                        {"action":"has", "name":"Oathkeeper"}
+                     ]
+                  },
+                  {"name":"Podrick Payne"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Tormund Giantsbane"}
+               ]
+            },
+            {
+               "sceneStart":"0:53:04",
+               "sceneEnd":"0:53:08",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Samwell Tarly"},
+                  {"name":"Gilly"},
+                  {"name":"Baby Sam"}
+               ]
+            },
+            {
+               "sceneStart":"0:53:08",
+               "sceneEnd":"0:53:22",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Sansa Stark"},
+                  {"name":"Theon Greyjoy"}
+               ]
+            },
+            {
+               "sceneStart":"0:53:22",
+               "sceneEnd":"0:53:29",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Arya Stark"},
+                  {"name":"Gendry"}
+               ]
+            },
+            {
+               "sceneStart":"0:53:29",
+               "sceneEnd":"0:53:48",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Missandei"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:53:48",
+               "sceneEnd":"0:53:56",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {
+                     "name":"Jorah Mormont",
+                     "weapon":[
+                        {"action":"has", "name":"Heartsbane"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:53:56",
+               "sceneEnd":"0:57:16",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:57:16",
+               "sceneEnd":"0:57:35",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:57:35",
+               "sceneEnd":"0:57:49",
+               "location":"The North",
+               "subLocation":"Winterfell",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:57:49",
+               "sceneEnd":"0:58:16",
+               "location":"The North",
+               "subLocation":"Outside Winterfell",
+               "characters":[
+                  {"name":"White Walker"}
+               ]
+            }
          ]
       },
       {
          "seasonNum":8,
          "episodeNum":3,
          "episodeTitle":"Episode #8.3",
-         "episodeLink":"/title/tt5924366/",
-         "episodeAirDate":"2019--",
+         "episodeLink":"/title/tt6027912/",
+         "episodeAirDate":"2019-04-28",
          "episodeDescription":"",
          "openingSequenceLocations":[
 
@@ -44463,8 +45523,8 @@
          "seasonNum":8,
          "episodeNum":4,
          "episodeTitle":"Episode #8.4",
-         "episodeLink":"/title/tt5924366/",
-         "episodeAirDate":"2019--",
+         "episodeLink":"/title/tt6027914/",
+         "episodeAirDate":"2019-05-05",
          "episodeDescription":"",
          "openingSequenceLocations":[
 
@@ -44477,8 +45537,8 @@
          "seasonNum":8,
          "episodeNum":5,
          "episodeTitle":"Episode #8.5",
-         "episodeLink":"/title/tt5924366/",
-         "episodeAirDate":"2019--",
+         "episodeLink":"/title/tt6027916/",
+         "episodeAirDate":"2019-05-12",
          "episodeDescription":"",
          "openingSequenceLocations":[
 
@@ -44491,8 +45551,8 @@
          "seasonNum":8,
          "episodeNum":6,
          "episodeTitle":"Episode #8.6",
-         "episodeLink":"/title/tt5924366/",
-         "episodeAirDate":"2019--",
+         "episodeLink":"/title/tt6027920/",
+         "episodeAirDate":"2019-05-19",
          "episodeDescription":"",
          "openingSequenceLocations":[
 

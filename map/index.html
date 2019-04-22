@@ -499,13 +499,13 @@ function ready(error, d, groups, gender, colors, ch) {
 			})
 			.attr("x", function(d){
 				var p = d3.select(this.parentNode.parentNode).datum();
-				return (p.seasonNum == 1 && d.episodeNum < 5) ? c.x*d.shift : (p.seasonNum == 7) ? c.x*(d.shift + d.length) : c.x*(d.shift + d.length/2);
+				return (p.seasonNum == 1 && d.episodeNum < 5) ? c.x*d.shift : (p.seasonNum >= 7) ? c.x*(d.shift + d.length) : c.x*(d.shift + d.length/2);
 			})
 			.attr("y", 15)
 			.attr("dominant-baseline", "ideographic")
 			.attr("text-anchor", function(d){
 				var p = d3.select(this.parentNode.parentNode).datum();
-				return (p.seasonNum == 1 && d.episodeNum < 5) ? "start" : (p.seasonNum == 7) ? "end" : "middle";
+				return (p.seasonNum == 1 && d.episodeNum < 5) ? "start" : (p.seasonNum >= 7) ? "end" : "middle";
 			});
 	
 	// add bottom label
@@ -518,13 +518,13 @@ function ready(error, d, groups, gender, colors, ch) {
 			})
 			.attr("x", function(d){
 				var p = d3.select(this.parentNode.parentNode).datum();
-				return (p.seasonNum == 1 && d.episodeNum < 5) ? c.x*d.shift : (p.seasonNum == 7) ? c.x*(d.shift + d.length) : c.x*(d.shift + d.length/2);
+				return (p.seasonNum == 1 && d.episodeNum < 5) ? c.x*d.shift : (p.seasonNum >= 7) ? c.x*(d.shift + d.length) : c.x*(d.shift + d.length/2);
 			})
 			.attr("y", height-15)
 			.attr("dominant-baseline", "text-before-edge")
 			.attr("text-anchor", function(d){
 				var p = d3.select(this.parentNode.parentNode).datum();
-				return (p.seasonNum == 1 && d.episodeNum < 5) ? "start" : (p.seasonNum == 7) ? "end" : "middle";
+				return (p.seasonNum == 1 && d.episodeNum < 5) ? "start" : (p.seasonNum >= 7) ? "end" : "middle";
 			});
 	
 	// for each character, make a group
