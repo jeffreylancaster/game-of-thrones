@@ -132,7 +132,9 @@ function ready(error, g, w) {
   })
 
   // build the visualization
-  var data = episodes;
+  var data = episodes.filter(function(val, ind){
+    return val.total > 0
+  });
   var barHeight = config.barHeight;
 
   var svg = d3.select("svg"),
