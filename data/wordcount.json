@@ -2826,23 +2826,23 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 2
 	}, {
 		"lang": "Dothraki",
 		"name": "Irri",
-		"count": 1
+		"count": 2
 	}, {
 		"lang": "Dothraki",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 2
 	}, {
 		"lang": "Dothraki",
 		"name": "Irri",
-		"count": 1
+		"count": 2
 	}, {
 		"lang": "Dothraki",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 2
 	}, {
 		"name": "Irri",
 		"count": 2
@@ -8134,7 +8134,7 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Qotho",
-		"count": 1
+		"count": 2
 	}, {
 		"name": "Mirri Maz Duur",
 		"count": 37
@@ -10654,7 +10654,7 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Rakharo",
-		"count": 1
+		"count": 5
 	}, {
 		"name": "Jorah Mormont",
 		"count": 31
@@ -23213,21 +23213,21 @@
 	}, {
 		"name": "Kraznys Mo Nakloz",
 		"lang": "Astapori Valyrian",
-		"count": 1
+		"count": 3
 	}, {
 		"name": "Daenerys Targaryen",
 		"count": 8
 	}, {
 		"name": "Kraznys Mo Nakloz",
 		"lang": "Astapori Valyrian",
-		"count": 1
+		"count": 15
 	}, {
 		"name": "Missandei",
 		"count": 9
 	}, {
 		"name": "Kraznys Mo Nakloz",
 		"lang": "Astapori Valyrian",
-		"count": 1
+		"count": 5
 	}, {
 		"name": "Unsullied",
 		"lang": "Astapori Valyrian",
@@ -25265,7 +25265,7 @@
 	}, {
 		"name": "Kraznys Mo Nakloz",
 		"lang": "Astapori Valyrian",
-		"count": 1
+		"count": 13
 	}, {
 		"name": "Missandei",
 		"count": 13
@@ -28247,7 +28247,7 @@
 	}, {
 		"name": "Thoros Of Myr",
 		"lang": "High Valyrian",
-		"count": 1
+		"count": 2
 	}, {
 		"name": "Melisandre",
 		"lang": "High Valyrian",
@@ -30755,19 +30755,19 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Missandei",
-		"count": 1
+		"count": 2
 	}, {
 		"name": "Daenerys Targaryen",
 		"lang": "Dothraki",
-		"count": 1
+		"count": 2
 	}, {
 		"name": "Missandei",
 		"lang": "Dothraki",
-		"count": 1
+		"count": 2
 	}, {
 		"name": "Daenerys Targaryen",
 		"lang": "Dothraki",
-		"count": 1
+		"count": 2
 	}, {
 		"name": "Daenerys Targaryen",
 		"count": 9
@@ -36479,7 +36479,7 @@
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 11
 	}, {
 		"name": "Barristan Selmy",
 		"count": 11
@@ -38732,7 +38732,7 @@
 	}, {
 		"name": "Missandei",
 		"lang": "Meereenese Valyrian",
-		"count": 1
+		"count": 40
 	}, {
 		"name": "Daenerys Targaryen",
 		"lang": "High Valyrian",
@@ -38756,11 +38756,11 @@
 	}, {
 		"name": "Manservant",
 		"lang": "Meereenese Valyrian",
-		"count": 1
+		"count": 11
 	}, {
 		"name": "Daenerys Targaryen",
 		"lang": "High Valyrian",
-		"count": 1
+		"count": 10
 	}, {
 		"name": "Hizdahr zo Loraq",
 		"count": 9
@@ -40456,15 +40456,15 @@
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Grey Worm",
-		"count": 1
+		"count": 6
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Missandei",
-		"count": 1
+		"count": 5
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Grey Worm",
-		"count": 1
+		"count": 6
 	}, {
 		"name": "Missandei",
 		"count": 1
@@ -40504,11 +40504,11 @@
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Missandei",
-		"count": 1
+		"count": 7
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Grey Worm",
-		"count": 1
+		"count": 3
 	}, {
 		"name": "Ramsay Snow",
 		"count": 49
@@ -42292,7 +42292,7 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Fennesz",
-		"count": 1
+		"count": 11
 	}, {
 		"name": "Fennesz",
 		"count": 9
@@ -42347,15 +42347,15 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Meereenese Man",
-		"count": 1
+		"count": 12
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Missandei",
-		"count": 1
+		"count": 6
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Meereenese Man",
-		"count": 1
+		"count": 26
 	}, {
 		"name": "Missandei",
 		"count": 26
@@ -42381,11 +42381,11 @@
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Grey Worm",
-		"count": 1
+		"count": 16
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 5
 	}, {
 		"name": "Maester Aemon",
 		"count": 51
@@ -43079,11 +43079,11 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Vala",
-		"count": 1
+		"count": 7
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "White Rat",
-		"count": 1
+		"count": 5
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Vala",
@@ -43106,11 +43106,11 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Mossador",
-		"count": 1
+		"count": 9
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 11
 	}, {
 		"name": "Daenerys Targaryen",
 		"count": 46
@@ -44835,42 +44835,42 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Son of the Harpy",
-		"count": 1
+		"count": 21
 	}, {
 		"name": "Daenerys Targaryen",
 		"count": 1
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Mossador",
-		"count": 1
+		"count": 23
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 10
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Mossador",
-		"count": 1
+		"count": 14
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 10
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Mossador",
-		"count": 1
+		"count": 76
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 14
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Mossador",
-		"count": 1
+		"count": 6
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 7
 	}, {
 		"name": "Meereenese Crowd",
 		"count": 8
@@ -44883,23 +44883,23 @@
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 19
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Meereenese Crowd",
-		"count": 1
+		"count": 2
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Mossador",
-		"count": 1
+		"count": 4
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 16
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Meereenese Crowd",
-		"count": 1
+		"count": 6
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Mossador",
@@ -45905,7 +45905,7 @@
 	}, {
 		"lang": "Volantene Low Valyrian",
 		"name": "Brothel Guard",
-		"count": 1
+		"count": 8
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 21
@@ -46890,7 +46890,7 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Vala",
-		"count": 1
+		"count": 4
 	}]
 }, {
 	"episodeAlt": "S5E5",
@@ -46915,27 +46915,27 @@
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 2
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Great Master #1",
-		"count": 1
+		"count": 4
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 2
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 42
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 8
 	}, {
 		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 20
 	}, {
 		"lang": "High Valyrian",
 		"name": "Hizdahr zo Loraq",
@@ -47567,22 +47567,22 @@
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Grey Worm",
-		"count": 1
+		"count": 6
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Missandei",
-		"count": 1
+		"count": 2
 	}, {
 		"name": "Grey Worm",
 		"count": 2
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Grey Worm",
-		"count": 1
+		"count": 11
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Missandei",
-		"count": 1
+		"count": 10
 	}, {
 		"name": "Missandei",
 		"count": 15
@@ -51094,7 +51094,7 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Pit Announcer",
-		"count": 1
+		"count": 33
 	}, {
 		"lang": "Low Valyrian",
 		"name": "Quick Fighter",
@@ -51157,7 +51157,7 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Pit Announcer",
-		"count": 1
+		"count": 6
 	}, {
 		"name": "Daenerys Targaryen",
 		"count": 12
@@ -51170,7 +51170,7 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Pit Announcer",
-		"count": 1
+		"count": 3
 	}, {
 		"name": "Hizdahr zo Loraq",
 		"count": 9
@@ -51192,11 +51192,11 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Pit Announcer",
-		"count": 1
+		"count": 4
 	}, {
 		"lang": "Low Valyrian",
 		"name": "Jorah Mormont",
-		"count": 1
+		"count": 10
 	}, {
 		"name": "Hizdahr zo Loraq",
 		"count": 2
@@ -51586,15 +51586,15 @@
 	}, {
 		"lang": "Astapori Valyrian",
 		"name": "Missandei",
-		"count": 1
+		"count": 13
 	}, {
 		"lang": "High Valyrian",
 		"name": "Tyrion Lannister",
-		"count": 1
+		"count": 13
 	}, {
 		"lang": "High Valyrian",
 		"name": "Missandei",
-		"count": 1
+		"count": 3
 	}, {
 		"lang": "High Valyrian",
 		"name": "Tyrion Lannister",
@@ -52327,7 +52327,7 @@
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Meereenese Crowd",
-		"count": 1
+		"count": 9
 	}, {
 		"lang": "Meereenese Valyrian",
 		"name": "Zanrush",
@@ -62877,7 +62877,7 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 3
 	}, {
 		"name": "Jon Snow",
 		"count": 39
@@ -63337,7 +63337,7 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Qhono",
-		"count": 1
+		"count": 4
 	}, {
 		"name": "Jaime Lannister",
 		"count": 2
@@ -63548,11 +63548,11 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Qhono",
-		"count": 1
+		"count": 8
 	}, {
 		"lang": "Dothraki",
 		"name": "Daenerys Targaryen",
-		"count": 1
+		"count": 4
 	}, {
 		"name": "Jorah Mormont",
 		"count": 2
@@ -68341,8 +68341,507 @@
 	"episodeAlt": "S8E3",
 	"seasonNum": 8,
 	"episodeNum": 3,
-	"episodeTitle": "Episode #8.3",
-	"text": []
+	"episodeTitle": "The Long Night",
+	"text": [{
+		"name": "Northman #1",
+		"count": 1
+	}, {
+		"name": "Northman #2",
+		"count": 2
+	}, {
+		"name": "Northman #1",
+		"count": 1
+	}, {
+		"name": "Northman #3",
+		"count": 5
+	}, {
+		"name": "Northern Soldier #1",
+		"count": 5
+	}, {
+		"name": "Northern Soldier #2",
+		"count": 2
+	}, {
+		"name": "Northman #4",
+		"count": 3
+	}, {
+		"name": "Lyanna Mormont",
+		"count": 5
+	}, {
+		"name": "Mormont Soldier #1",
+		"count": 3
+	}, {
+		"name": "Lyanna Mormont",
+		"count": 7
+	}, {
+		"name": "Mormont Soldier #1",
+		"count": 2
+	}, {
+		"name": "Mormont Soldier #2",
+		"count": 3
+	}, {
+		"name": "Mormont Soldier #3",
+		"count": 2
+	}, {
+		"name": "Eddison Tollett",
+		"count": 8
+	}, {
+		"name": "Melisandre",
+		"count": 11
+	}, {
+		"name": "Jorah Mormont",
+		"lang": "Dothraki",
+		"count": 2
+	}, {
+		"name": "Melisandre",
+		"lang": "High Valyrian",
+		"count": 16
+	}, {
+		"name": "Melisandre",
+		"lang": "High Valyrian",
+		"count": 2
+	}, {
+		"name": "Grey Worm",
+		"lang": "High Valyrian",
+		"count": 2
+	}, {
+		"name": "Davos Seaworth",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #3",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #4",
+		"count": 3
+	}, {
+		"name": "Northman #5",
+		"count": 4
+	}, {
+		"name": "Melisandre",
+		"count": 14
+	}, {
+		"name": "Unsullied #1",
+		"lang": "Astapori Valyrian",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 5
+	}, {
+		"name": "Grey Worm",
+		"lang": "Astapori Valyrian",
+		"count": 1
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 3
+	}, {
+		"name": "Arya Stark",
+		"count": 5
+	}, {
+		"name": "Sansa Stark",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 4
+	}, {
+		"name": "Sansa Stark",
+		"count": 7
+	}, {
+		"name": "Arya Stark",
+		"count": 6
+	}, {
+		"name": "Samwell Tarly",
+		"count": 2
+	}, {
+		"name": "Eddison Tollett",
+		"count": 6
+	}, {
+		"name": "Northern Woman #1",
+		"count": 1
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 4
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 2
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "Lyanna Mormont",
+		"count": 3
+	}, {
+		"name": "Mormont Soldier #1",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #5",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #6",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #7",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #8",
+		"count": 2
+	}, {
+		"name": "Northern Soldier #9",
+		"count": 2
+	}, {
+		"name": "Lyanna Mormont",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #10",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #11",
+		"count": 1
+	}, {
+		"name": "Northern Soldier #12",
+		"count": 2
+	}, {
+		"name": "Northern Soldier #13",
+		"count": 5
+	}, {
+		"name": "Grey Worm",
+		"lang": "Astapori Valyrian",
+		"count": 6
+	}, {
+		"name": "Jon Snow",
+		"count": 1
+	}, {
+		"name": "Northern Soldier #14",
+		"count": 4
+	}, {
+		"name": "Northern Soldier #15",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #16",
+		"count": 3
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #17",
+		"count": 4
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 4
+	}, {
+		"name": "Jaime Lannister",
+		"count": 8
+	}, {
+		"name": "Northern Soldier #18",
+		"count": 1
+	}, {
+		"name": "Unsullied #2",
+		"lang": "Astapori Valyrian",
+		"count": 1
+	}, {
+		"name": "Unsullied #3",
+		"lang": "Astapori Valyrian",
+		"count": 1
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 2
+	}, {
+		"name": "Lyanna Mormont",
+		"count": 3
+	}, {
+		"name": "Mormont Soldier #1",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #19",
+		"count": 4
+	}, {
+		"name": "Sandor Clegane",
+		"count": 2
+	}, {
+		"name": "Grey Worm",
+		"count": 6
+	}, {
+		"name": "Northern Soldier #20",
+		"count": 1
+	}, {
+		"name": "Northern Soldier #21",
+		"count": 3
+	}, {
+		"name": "Davos Seaworth",
+		"count": 7
+	}, {
+		"name": "Northern Soldier #22",
+		"count": 8
+	}, {
+		"name": "Northern Soldier #23",
+		"count": 2
+	}, {
+		"name": "Davos Seaworth",
+		"count": 3
+	}, {
+		"name": "Grey Worm",
+		"lang": "Astapori Valyrian",
+		"count": 1
+	}, {
+		"name": "Melisandre",
+		"lang": "High Valyrian",
+		"count": 48
+	}, {
+		"name": "Beric Dondarrion",
+		"count": 1
+	}, {
+		"name": "Northern Woman #2",
+		"count": 7
+	}, {
+		"name": "Lord Varys",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 31
+	}, {
+		"name": "Lord Varys",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 12
+	}, {
+		"name": "Sansa Stark",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 28
+	}, {
+		"name": "Sansa Stark",
+		"count": 35
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 6
+	}, {
+		"name": "Sansa Stark",
+		"count": 6
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 4
+	}, {
+		"name": "Sansa Stark",
+		"count": 5
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 2
+	}, {
+		"name": "Sansa Stark",
+		"count": 10
+	}, {
+		"name": "Missandei",
+		"count": 16
+	}, {
+		"name": "Theon Greyjoy",
+		"count": 17
+	}, {
+		"name": "Bran Stark",
+		"count": 18
+	}, {
+		"name": "Theon Greyjoy",
+		"count": 2
+	}, {
+		"name": "Davos Seaworth",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #3",
+		"count": 3
+	}, {
+		"name": "Davos Seaworth",
+		"count": 3
+	}, {
+		"name": "Lyanna Mormont",
+		"count": 10
+	}, {
+		"name": "Jaime Lannister",
+		"count": 9
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 2
+	}, {
+		"name": "Northern Soldier #24",
+		"count": 4
+	}, {
+		"name": "Davos Seaworth",
+		"count": 5
+	}, {
+		"name": "Jaime Lannister",
+		"count": 7
+	}, {
+		"name": "Northern Soldier #25",
+		"count": 4
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #26",
+		"count": 3
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #27",
+		"count": 2
+	}, {
+		"name": "Northern Soldier #28",
+		"count": 6
+	}, {
+		"name": "Northern Soldier #29",
+		"count": 2
+	}, {
+		"name": "Northern Soldier #30",
+		"count": 2
+	}, {
+		"name": "Northern Soldier #28",
+		"count": 6
+	}, {
+		"name": "Northern Soldier #29",
+		"count": 2
+	}, {
+		"name": "Northern Soldier #30",
+		"count": 4
+	}, {
+		"name": "Grey Worm",
+		"lang": "Astapori Valyrian",
+		"count": 1
+	}, {
+		"name": "Northern Soldier #27",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #28",
+		"count": 5
+	}, {
+		"name": "Northern Soldier #29",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #30",
+		"count": 3
+	}, {
+		"name": "Jaime Lannister",
+		"count": 1
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "Northern Soldier #31",
+		"count": 3
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "Beric Dondarrion",
+		"count": 2
+	}, {
+		"name": "Beric Dondarrion",
+		"count": 11
+	}, {
+		"name": "Sandor Clegane",
+		"count": 20
+	}, {
+		"name": "Beric Dondarrion",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #32",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #33",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #34",
+		"count": 2
+	}, {
+		"name": "Northern Soldier #35",
+		"count": 9
+	}, {
+		"name": "Beric Dondarrion",
+		"count": 2
+	}, {
+		"name": "Sandor Clegane",
+		"count": 2
+	}, {
+		"name": "Beric Dondarrion",
+		"count": 1
+	}, {
+		"name": "Sandor Clegane",
+		"count": 2
+	}, {
+		"name": "Beric Dondarrion",
+		"count": 1
+	}, {
+		"name": "Sandor Clegane",
+		"count": 3
+	}, {
+		"name": "Melisandre",
+		"count": 14
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Melisandre",
+		"count": 4
+	}, {
+		"name": "Arya Stark",
+		"count": 5
+	}, {
+		"name": "Melisandre",
+		"count": 10
+	}, {
+		"name": "Arya Stark",
+		"count": 13
+	}, {
+		"name": "Melisandre",
+		"count": 7
+	}, {
+		"name": "Melisandre",
+		"count": 9
+	}, {
+		"name": "Arya Stark",
+		"count": 2
+	}, {
+		"name": "Theon Greyjoy",
+		"count": 11
+	}, {
+		"name": "Ironborn #1",
+		"count": 2
+	}, {
+		"name": "Ironborn #2",
+		"count": 1
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "Daenerys Targaryen",
+		"lang": "High Valyrian",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 4
+	}, {
+		"name": "Northern Woman #3",
+		"count": 4
+	}, {
+		"name": "Jon Snow",
+		"count": 1
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 1
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 1
+	}, {
+		"name": "Bran Stark",
+		"count": 7
+	}, {
+		"name": "Jorah Mormont",
+		"count": 2
+	}]
 }, {
 	"episodeAlt": "S8E4",
 	"seasonNum": 8,
