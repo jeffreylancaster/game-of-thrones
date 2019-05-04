@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game of Thrones: Script Search</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game of Thrones: Script Search">
+    <meta name="author" content="Jeffrey Lancaster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+      #results{
+        max-width: 800px;
+        padding: 1em;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .result{
+        border-left: 5px solid #98abc5;
+        padding: 0.5em 1em;
+        width: calc(100% - 3em);
+        margin: 1em 0;
+      }
+      .translation{
+        font-weight: normal;
+        font-variant: italic;
+      }
+      .dothraki{
+        border-color: #8a89a6;
+      }
+      .astaporivalyrian{
+        border-color: #7b6888;
+      }
+      .highvalyrian{
+        border-color: #6b486b;
+      }
+      .meereenesevalyrian{
+        border-color: #a05d56;
+      }
+      .volantenelowvalyrian{
+        border-color: #d0743c;
+      }
+      .oldtongue{
+        border-color: #ff8c00;
+      }
+      .lowvalyrian{
+        border-color: #FEC574;
+      }
+      form{
+        margin: 0 auto;
+        text-align: center;
+      }
+      #searchText{
+        max-width: 500px;
+        width: calc(100% - 3em);
+        margin: 0.5em;
+        padding: 0.5em;
+        font-size: 1em;
+      }
+      #button{
+        width: 100px;
+        margin: 0.5em;
+        font-size: 1em;
+        padding: 1em;
+      }
+      #helper{
+        font-size: 0.75em;
+        color: #AAA;
+        text-align: center;
+      }
+      .resultCount{
+        font-size: 1.3em;
+        margin-left: 0em;
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="return makeSearch()">
+      <input type="text" placeholder="Search here" id="searchText">
+      <input type="submit" id="button">
+    </form>
+    <div id="helper">Serving up no more than 1,000 semi-relevant results. No optimal search configuration here.</div>
+    <div id="results"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script>
+      function makeSearch(){
+        // clear #results
+        $("#results").html("");
+        // get the search query
+        var query = $("#searchText").val();
+
+        // initialize algolia
+        var client = algoliasearch('<database>', '<key>');
+        var index = client.initIndex('game-of-thrones');
+
+        // search settings
+        index.setSettings({
+          'searchableAttributes': [
+            'text',
+            'name'
+          ]
+        }, function(err, content) {
+          console.log(content);
+        });
+
+        // generate formatted results
+        function result(entry){
+          var lang = (entry.lang) ? entry.lang.replace(/ /g, "").toLowerCase() : "commontongue";
+          var language = (entry.lang) ? `(${entry.lang})` : "";
+          var name = (entry.name) ? entry.name : "";
+          var result = `<div class="result ${lang}">`;
+          result += (entry.text) ? `<h3>${entry.text}</h3>` : "";
+          result += (entry.translation) ? `<h3 class="translation">${entry.translation}</h3>` : "";
+          result += (entry.name) ? `<h4>${entry.name} in "${entry.episodeTitle}" (Season ${entry.seasonNum}, Episode ${entry.episodeNum}) ${language}</h4>` : "";
+          result += `</div>`;
+          return result;
+        }
+
+        // do the search and append results to #results
+        index.search(query, function(err, content) {
+          // add result count
+          $("#results").append(`<div class="resultCount">${content.hits.length} results for "${query}"</div>`);
+          // populate results
+          content.hits.forEach(function(val, ind){
+            $("#results").append(result(val));
+          })
+        });
+
+        // prevent default behavior
+        return false;
+      }
+    </script>
+  </body>
+</html>

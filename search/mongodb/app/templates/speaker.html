@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Game of Thrones Script Search</title>
+        <style>
+        .header{
+          max-width: 800px;
+          padding-top: 0.5em;
+          margin: 0 auto;
+          width: 100%;
+          text-align: center;
+        }
+        .header img{
+          height: 45px;
+          vertical-align: middle;
+          margin-top: -12px;
+        }
+        .header h1{
+          font-family: sans-serif;
+          font-weight: normal;
+          font-variant: small-caps;
+        }
+        .header a{
+          color: black;
+        }
+        #results{
+          max-width: 800px;
+          padding: 1em;
+          margin: 0 auto;
+          width: 100%;
+        }
+        .result{
+          border-left: 5px solid #FFFFFF;
+          padding: 0.5em 1em;
+          width: calc(100% - 3em);
+          margin: 1em 0;
+        }
+        .translation{
+          font-weight: normal;
+          font-variant: italic;
+        }
+        .commontongue{
+          border-color: #98abc5;
+        }
+        .dothraki{
+          border-color: #8a89a6;
+        }
+        .astaporivalyrian{
+          border-color: #7b6888;
+        }
+        .highvalyrian{
+          border-color: #6b486b;
+        }
+        .meereenesevalyrian{
+          border-color: #a05d56;
+        }
+        .volantenelowvalyrian{
+          border-color: #d0743c;
+        }
+        .oldtongue{
+          border-color: #ff8c00;
+        }
+        .lowvalyrian{
+          border-color: #FEC574;
+        }
+        form{
+          margin: 0 auto;
+          text-align: center;
+        }
+        #searchText{
+          max-width: 500px;
+          width: calc(100% - 3em);
+          margin: 0.5em;
+          padding: 0.5em;
+          font-size: 1em;
+        }
+        #button{
+          width: 100px;
+          margin: 0.5em;
+          font-size: 1em;
+          padding: 1em;
+        }
+        #helper{
+          font-size: 0.75em;
+          color: #AAA;
+          text-align: center;
+        }
+        .resultCount{
+          font-size: 1.3em;
+          margin-left: 0em;
+          margin-top: 1em;
+        }
+        a{
+          text-decoration: none;
+          /*color: #0087ff;*/
+        }
+        a:visited{
+          /*color: #00afaf;*/
+        }
+      </style>
+    </head>
+    <body>
+      <div class="header">
+        <a href="/">
+          <h1><img src="https://jeffreylancaster.github.io/game-of-thrones/img/GoT_logo.png"> Script Search</h1>
+        </a>
+      </div>
+      <form method="post" action="../index">
+        <input type="text" name="query" value="" placeholder="Search here" id="searchText">
+      </form>
+      <div id="helper">Serving up no more than 1,000 semi-relevant results. No optimal search configuration here. <a href="https://jeffreylancaster.github.io/game-of-thrones/">About this project.</a></div>
+      <div class="script-list" id="results">
+        <h2>{{ name }} </h2>
+        <div class="count">
+          {% if script %}
+            {% if num %}1-{{ "{:,}".format(num) }} of {% endif%}{{ "{:,}".format(count) }} results
+          {% endif %}
+        </div>
+        {% for entry in script %}
+          <div class="result {{entry.lang.lower().replace(' ','') if entry.lang else 'commontongue' if entry.seasonNum }}">
+            <h3>{{ entry.text}}</h3>
+            {% if entry.translation %} <h3 class="translation">{{entry.translation}}</h3>{% endif %}
+            {% if entry.seasonNum %}
+              <h4>{% if entry.name %}{{ entry.name }}{% endif %}
+                {% if entry.episodeTitle %} in "{{entry.episodeTitle}}" {% endif %}
+                {% if entry.seasonNum %} (Season {{entry.seasonNum}}, Episode {{entry.episodeNum}}){% endif %}{{' in '+ entry.lang if entry.lang }}
+              </h4>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </body>
+</html>
