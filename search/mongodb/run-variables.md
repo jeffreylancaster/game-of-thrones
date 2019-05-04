@@ -4,3 +4,6 @@ export FLASK_RUN_PORT=8080
 export FLASK_DEBUG=1
 export LC_ALL=C.UTF-8
 export LANG=C.UTF-8
+
+
+git subtree push --prefix search/mongodb heroku master
