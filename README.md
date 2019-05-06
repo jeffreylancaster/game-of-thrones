@@ -19,7 +19,7 @@
 
 ## Visualizations
 
-### Narrative Chart (`/map/`)
+#### Narrative Chart: `map/`
 
 A visualization of when each character is on-screen throughout the show, where they are, with whom they are, when they die, and more. [Visualization](https://jeffreylancaster.github.io/game-of-thrones/map/) | [Code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/map/index.html)
    
