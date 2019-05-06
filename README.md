@@ -26,7 +26,7 @@
 #### Narrative Chart: `map/`
 
 - A visualization of when each character is on-screen throughout the show, where they are, with whom they are, when they die, and more.
-  - <a href="https://jeffreylancaster.github.io/game-of-thrones/map/" target="_blank">View visualization</a>
+  - <a href="https://jeffreylancaster.github.io/game-of-thrones/map/" target="_blank_">View visualization</a>
   - [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/map/index.html)
     - `process.html`: Builds `keyValues.json` from `episodes.json` by adding y-values and additional location-specific information and outputs the data for `keyValues.json`.
     - `index.html`: Builds the visualization using d3.js and outputs the _Game of Thrones_ narrative chart.
