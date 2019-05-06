@@ -54,13 +54,9 @@ A matrix visualization of how often characters are on screen together. [Visualiz
 
 A visualization of the various locations characters visit and how much of their time they spend there. [Visualization](https://jeffreylancaster.github.io/game-of-thrones/region-percent/) | [Code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/region-percent/index.html)
 
-## JavaScript
-
-
-
 ## Data
 
-### data/episodes.json
+#### `data/episodes.json`
 ```javascript
 {
   "episodes": [
@@ -126,7 +122,7 @@ A visualization of the various locations characters visit and how much of their 
 }
 ```
 
-### data/characters.json
+#### `data/characters.json`
 ```javascript
 {
   "characters":[
@@ -210,7 +206,7 @@ A visualization of the various locations characters visit and how much of their 
 
 ```
 
-### data/characters-groups.json
+#### `data/characters-groups.json`
 ```javascript
 {
   "group": [
@@ -227,7 +223,7 @@ A visualization of the various locations characters visit and how much of their 
 
 ```
 
-### data/characters-include.json
+#### `data/characters-include.json`
 ```javascript
 {
   "include":[
@@ -241,7 +237,7 @@ A visualization of the various locations characters visit and how much of their 
 
 ```
 
-### data/locations.json
+#### `data/locations.json`
 ```javascript
 {
   "regions":[
