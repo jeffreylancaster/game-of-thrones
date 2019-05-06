@@ -2826,23 +2826,23 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Daenerys Targaryen",
-		"count": 2
+		"count": 1
 	}, {
 		"lang": "Dothraki",
 		"name": "Irri",
-		"count": 2
+		"count": 1
 	}, {
 		"lang": "Dothraki",
 		"name": "Daenerys Targaryen",
-		"count": 2
+		"count": 1
 	}, {
 		"lang": "Dothraki",
 		"name": "Irri",
-		"count": 2
+		"count": 1
 	}, {
 		"lang": "Dothraki",
 		"name": "Daenerys Targaryen",
-		"count": 2
+		"count": 1
 	}, {
 		"name": "Irri",
 		"count": 2
@@ -8134,7 +8134,7 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Qotho",
-		"count": 2
+		"count": 1
 	}, {
 		"name": "Mirri Maz Duur",
 		"count": 37
@@ -28247,7 +28247,7 @@
 	}, {
 		"name": "Thoros Of Myr",
 		"lang": "High Valyrian",
-		"count": 2
+		"count": 1
 	}, {
 		"name": "Melisandre",
 		"lang": "High Valyrian",
@@ -30755,19 +30755,19 @@
 	}, {
 		"lang": "Dothraki",
 		"name": "Missandei",
-		"count": 2
+		"count": 1
 	}, {
 		"name": "Daenerys Targaryen",
 		"lang": "Dothraki",
-		"count": 2
+		"count": 1
 	}, {
 		"name": "Missandei",
 		"lang": "Dothraki",
-		"count": 2
+		"count": 1
 	}, {
 		"name": "Daenerys Targaryen",
 		"lang": "Dothraki",
-		"count": 2
+		"count": 1
 	}, {
 		"name": "Daenerys Targaryen",
 		"count": 9
@@ -68390,11 +68390,11 @@
 	}, {
 		"name": "Jorah Mormont",
 		"lang": "Dothraki",
-		"count": 2
+		"count": 4
 	}, {
 		"name": "Melisandre",
 		"lang": "High Valyrian",
-		"count": 16
+		"count": 18
 	}, {
 		"name": "Melisandre",
 		"lang": "High Valyrian",
@@ -68819,7 +68819,7 @@
 	}, {
 		"name": "Daenerys Targaryen",
 		"lang": "High Valyrian",
-		"count": 2
+		"count": 1
 	}, {
 		"name": "Tyrion Lannister",
 		"count": 4
@@ -68846,8 +68846,1224 @@
 	"episodeAlt": "S8E4",
 	"seasonNum": 8,
 	"episodeNum": 4,
-	"episodeTitle": "Episode #8.4",
-	"text": []
+	"episodeTitle": "The Last of the Starks",
+	"text": [{
+		"name": "Jon Snow",
+		"count": 102
+	}, {
+		"name": "Winterfell Man #1",
+		"count": 3
+	}, {
+		"name": "Gendry",
+		"count": 4
+	}, {
+		"name": "Sandor Clegane",
+		"count": 14
+	}, {
+		"name": "Gendry",
+		"count": 7
+	}, {
+		"name": "Sandor Clegane",
+		"count": 4
+	}, {
+		"name": "Gendry",
+		"count": 5
+	}, {
+		"name": "Sandor Clegane",
+		"count": 17
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 5
+	}, {
+		"name": "Gendry",
+		"count": 3
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 18
+	}, {
+		"name": "Gendry",
+		"count": 13
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 14
+	}, {
+		"name": "Gendry",
+		"count": 5
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 11
+	}, {
+		"name": "Gendry",
+		"count": 6
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 23
+	}, {
+		"name": "Davos Seaworth",
+		"count": 7
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 2
+	}, {
+		"name": "Winterfell Man #2",
+		"count": 2
+	}, {
+		"name": "Winterfell Man #3",
+		"count": 1
+	}, {
+		"name": "Winterfell Man #4",
+		"count": 1
+	}, {
+		"name": "Winterfell Man #5",
+		"count": 1
+	}, {
+		"name": "Winterfell Man #6",
+		"count": 2
+	}, {
+		"name": "Winterfell Man #7",
+		"count": 1
+	}, {
+		"name": "Winterfell Man #8",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 6
+	}, {
+		"name": "Samwell Tarly",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 13
+	}, {
+		"name": "Winterfell Man #9",
+		"count": 3
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 8
+	}, {
+		"name": "Winterfell Woman #1",
+		"count": 9
+	}, {
+		"name": "Jaime Lannister",
+		"count": 19
+	}, {
+		"name": "Davos Seaworth",
+		"count": 18
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 6
+	}, {
+		"name": "Davos Seaworth",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Davos Seaworth",
+		"count": 45
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 14
+	}, {
+		"name": "Davos Seaworth",
+		"count": 9
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 17
+	}, {
+		"name": "Davos Seaworth",
+		"count": 6
+	}, {
+		"name": "Winterfell Man #10",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 12
+	}, {
+		"name": "Bran Stark",
+		"count": 20
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 15
+	}, {
+		"name": "Bran Stark",
+		"count": 5
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 13
+	}, {
+		"name": "Bran Stark",
+		"count": 5
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Bran Stark",
+		"count": 10
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 3
+	}, {
+		"name": "Winterfell Man #11",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Sansa Stark",
+		"count": 6
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 6
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 8
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 7
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 4
+	}, {
+		"name": "Winterfell Woman #2",
+		"count": 1
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 2
+	}, {
+		"name": "Jaime Lannister",
+		"count": 6
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 5
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 2
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 4
+	}, {
+		"name": "Jaime Lannister",
+		"count": 6
+	}, {
+		"name": "Podrick Payne",
+		"count": 1
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 1
+	}, {
+		"name": "Winterfell Man #12",
+		"count": 4
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 6
+	}, {
+		"name": "Davos Seaworth",
+		"count": 3
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 8
+	}, {
+		"name": "Davos Seaworth",
+		"count": 4
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 45
+	}, {
+		"name": "Jon Snow",
+		"count": 8
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 45
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 1
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 5
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 1
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 5
+	}, {
+		"name": "Jaime Lannister",
+		"count": 1
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 4
+	}, {
+		"name": "Jaime Lannister",
+		"count": 6
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 20
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 4
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 28
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 6
+	}, {
+		"name": "Winterfell Man #13",
+		"count": 2
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 26
+	}, {
+		"name": "Sandor Clegane",
+		"count": 3
+	}, {
+		"name": "Willa",
+		"count": 9
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 12
+	}, {
+		"name": "Sandor Clegane",
+		"count": 6
+	}, {
+		"name": "Winterfell Man #14",
+		"count": 4
+	}, {
+		"name": "Winterfell Man #13",
+		"count": 7
+	}, {
+		"name": "Winterfell Man #14",
+		"count": 6
+	}, {
+		"name": "Winterfell Woman #3",
+		"count": 4
+	}, {
+		"name": "Sandor Clegane",
+		"count": 6
+	}, {
+		"name": "Sansa Stark",
+		"count": 10
+	}, {
+		"name": "Sandor Clegane",
+		"count": 8
+	}, {
+		"name": "Sansa Stark",
+		"count": 3
+	}, {
+		"name": "Sandor Clegane",
+		"count": 12
+	}, {
+		"name": "Sansa Stark",
+		"count": 14
+	}, {
+		"name": "Sandor Clegane",
+		"count": 14
+	}, {
+		"name": "Sansa Stark",
+		"count": 11
+	}, {
+		"name": "Sandor Clegane",
+		"count": 1
+	}, {
+		"name": "Sansa Stark",
+		"count": 1
+	}, {
+		"name": "Sandor Clegane",
+		"count": 24
+	}, {
+		"name": "Sansa Stark",
+		"count": 17
+	}, {
+		"name": "Winterfell Man #15",
+		"count": 1
+	}, {
+		"name": "Winterfell Man #16",
+		"count": 3
+	}, {
+		"name": "Gendry",
+		"count": 15
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Gendry",
+		"count": 21
+	}, {
+		"name": "Arya Stark",
+		"count": 1
+	}, {
+		"name": "Gendry",
+		"count": 54
+	}, {
+		"name": "Arya Stark",
+		"count": 26
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 3
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 2
+	}, {
+		"name": "Jaime Lannister",
+		"count": 6
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 9
+	}, {
+		"name": "Jaime Lannister",
+		"count": 9
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 26
+	}, {
+		"name": "Jaime Lannister",
+		"count": 5
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 2
+	}, {
+		"name": "Jaime Lannister",
+		"count": 15
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 4
+	}, {
+		"name": "Jaime Lannister",
+		"count": 23
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 4
+	}, {
+		"name": "Jaime Lannister",
+		"count": 9
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 7
+	}, {
+		"name": "Jaime Lannister",
+		"count": 12
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 6
+	}, {
+		"name": "Jaime Lannister",
+		"count": 9
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 3
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 29
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 24
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 64
+	}, {
+		"name": "Jon Snow",
+		"count": 7
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 29
+	}, {
+		"name": "Jon Snow",
+		"count": 14
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 76
+	}, {
+		"name": "Jon Snow",
+		"count": 7
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 13
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 20
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 6
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 15
+	}, {
+		"name": "Jon Snow",
+		"count": 17
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 7
+	}, {
+		"name": "Grey Worm",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Lord Varys",
+		"count": 20
+	}, {
+		"name": "Missandei",
+		"count": 15
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 21
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 11
+	}, {
+		"name": "Lord Varys",
+		"count": 26
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 30
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 31
+	}, {
+		"name": "Jon Snow",
+		"count": 33
+	}, {
+		"name": "Tyrion Lannisters",
+		"count": 14
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 2
+	}, {
+		"name": "Sansa Stark",
+		"count": 23
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 5
+	}, {
+		"name": "Sansa Stark",
+		"count": 11
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 27
+	}, {
+		"name": "Sansa Stark",
+		"count": 20
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 11
+	}, {
+		"name": "Jon Snow",
+		"count": 23
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 69
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 28
+	}, {
+		"name": "Arya Stark",
+		"count": 4
+	}, {
+		"name": "Jon Snow",
+		"count": 18
+	}, {
+		"name": "Sansa Stark",
+		"count": 8
+	}, {
+		"name": "Jon Snow",
+		"count": 7
+	}, {
+		"name": "Sansa Stark",
+		"count": 17
+	}, {
+		"name": "Jon Snow",
+		"count": 9
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Sansa Stark",
+		"count": 3
+	}, {
+		"name": "Arya Stark",
+		"count": 27
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 9
+	}, {
+		"name": "Jon Snow",
+		"count": 15
+	}, {
+		"name": "Arya Stark",
+		"count": 8
+	}, {
+		"name": "Jon Snow",
+		"count": 1
+	}, {
+		"name": "Arya Stark",
+		"count": 11
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Sansa Stark",
+		"count": 13
+	}, {
+		"name": "Arya Stark",
+		"count": 12
+	}, {
+		"name": "Bran Stark",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 16
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 9
+	}, {
+		"name": "Sansa Stark",
+		"count": 16
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Sansa Stark",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 8
+	}, {
+		"name": "Jaime Lannister",
+		"count": 11
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 31
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Jaime Lannister",
+		"count": 5
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 12
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 9
+	}, {
+		"name": "Bronn",
+		"count": 19
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 17
+	}, {
+		"name": "Jaime Lannister",
+		"count": 6
+	}, {
+		"name": "Bronn",
+		"count": 10
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Bronn",
+		"count": 12
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 4
+	}, {
+		"name": "Bronn",
+		"count": 14
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 6
+	}, {
+		"name": "Bronn",
+		"count": 17
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Bronn",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Bronn",
+		"count": 15
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 9
+	}, {
+		"name": "Bronn",
+		"count": 18
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 4
+	}, {
+		"name": "Bronn",
+		"count": 6
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 4
+	}, {
+		"name": "Bronn",
+		"count": 37
+	}, {
+		"name": "Jaime Lannister",
+		"count": 4
+	}, {
+		"name": "Bronn",
+		"count": 79
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Bronn",
+		"count": 8
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 9
+	}, {
+		"name": "Bronn",
+		"count": 15
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 8
+	}, {
+		"name": "Jaime Lannister",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Jaime Lannister",
+		"count": 13
+	}, {
+		"name": "Bronn",
+		"count": 14
+	}, {
+		"name": "Jaime Lannister",
+		"count": 7
+	}, {
+		"name": "Bronn",
+		"count": 76
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 32
+	}, {
+		"name": "Bronn",
+		"count": 33
+	}, {
+		"name": "Sandor Clegane",
+		"count": 3
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Sandor Clegane",
+		"count": 6
+	}, {
+		"name": "Arya Stark",
+		"count": 2
+	}, {
+		"name": "Sandor Clegane",
+		"count": 11
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Sandor Clegane",
+		"count": 12
+	}, {
+		"name": "Arya Stark",
+		"count": 9
+	}, {
+		"name": "Sandor Clegane",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 2
+	}, {
+		"name": "Sandor Clegane",
+		"count": 6
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Sandor Clegane",
+		"count": 10
+	}, {
+		"name": "Arya Stark",
+		"count": 1
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 8
+	}, {
+		"name": "Sansa Stark",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 6
+	}, {
+		"name": "Sansa Stark",
+		"count": 8
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 28
+	}, {
+		"name": "Sansa Stark",
+		"count": 13
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 11
+	}, {
+		"name": "Sansa Stark",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 36
+	}, {
+		"name": "Sansa Stark",
+		"count": 17
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 29
+	}, {
+		"name": "Sansa Stark",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 10
+	}, {
+		"name": "Sansa Stark",
+		"count": 19
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 43
+	}, {
+		"name": "Sansa Stark",
+		"count": 8
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 7
+	}, {
+		"name": "Jon Snow",
+		"count": 14
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 27
+	}, {
+		"name": "Jon Snow",
+		"count": 14
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 26
+	}, {
+		"name": "Jon Snow",
+		"count": 24
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 11
+	}, {
+		"name": "Tormund Giantsbane",
+		"count": 12
+	}, {
+		"name": "Samwell Tarly",
+		"count": 28
+	}, {
+		"name": "Gilly",
+		"count": 18
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Samwell Tarly",
+		"count": 7
+	}, {
+		"name": "Jon Snow",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 25
+	}, {
+		"name": "Lord Varys",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Lord Varys",
+		"count": 23
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 14
+	}, {
+		"name": "Lord Varys",
+		"count": 13
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Lord Varys",
+		"count": 22
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 16
+	}, {
+		"name": "Lord Varys",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 6
+	}, {
+		"name": "Lord Varys",
+		"count": 41
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 11
+	}, {
+		"name": "Lord Varys",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 35
+	}, {
+		"name": "Grey Worm",
+		"count": 5
+	}, {
+		"name": "Unsullied #1",
+		"count": 1
+	}, {
+		"name": "Unsullied #2",
+		"count": 4
+	}, {
+		"name": "Unsullied #3",
+		"count": 1
+	}, {
+		"name": "Unsullied #4",
+		"count": 1
+	}, {
+		"name": "Unsullied #5",
+		"count": 3
+	}, {
+		"name": "Missandei",
+		"count": 1
+	}, {
+		"name": "Unsullied #4",
+		"count": 2
+	}, {
+		"name": "Unsullied #5",
+		"count": 1
+	}, {
+		"name": "Grey Worm",
+		"count": 3
+	}, {
+		"name": "Cersei Lannister",
+		"count": 5
+	}, {
+		"name": "Qyburn",
+		"count": 21
+	}, {
+		"name": "Cersei Lannister",
+		"count": 5
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 7
+	}, {
+		"name": "Cersei Lannister",
+		"count": 5
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 6
+	}, {
+		"name": "Cersei Lannister",
+		"count": 26
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 4
+	}, {
+		"name": "Cersei Lannister",
+		"count": 31
+	}, {
+		"name": "Grey Worm",
+		"count": 15
+	}, {
+		"name": "Lord Varys",
+		"count": 28
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 11
+	}, {
+		"name": "Lord Varys",
+		"count": 70
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 31
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 45
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 41
+	}, {
+		"name": "Lord Varys",
+		"count": 12
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 24
+	}, {
+		"name": "Lord Varys",
+		"count": 18
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 7
+	}, {
+		"name": "Lord Varys",
+		"count": 27
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 11
+	}, {
+		"name": "Lord Varys",
+		"count": 14
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Lord Varys",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 9
+	}, {
+		"name": "Lord Varys",
+		"count": 24
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 18
+	}, {
+		"name": "Lord Varys",
+		"count": 17
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 13
+	}, {
+		"name": "Lord Varys",
+		"count": 15
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 6
+	}, {
+		"name": "Lord Varys",
+		"count": 33
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 13
+	}, {
+		"name": "Lord Varys",
+		"count": 5
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 17
+	}, {
+		"name": "Lord Varys",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 17
+	}, {
+		"name": "Lord Varys",
+		"count": 14
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 23
+	}, {
+		"name": "Lord Varys",
+		"count": 51
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 7
+	}, {
+		"name": "Lord Varys",
+		"count": 20
+	}, {
+		"name": "Winterfell Man #17",
+		"count": 6
+	}, {
+		"name": "Winterfell Woman #4",
+		"count": 2
+	}, {
+		"name": "Winterfell Man #18",
+		"count": 7
+	}, {
+		"name": "Winterfell Man #17",
+		"count": 8
+	}, {
+		"name": "Winterfell Man #19",
+		"count": 12
+	}, {
+		"name": "Winterfell Man #20",
+		"count": 3
+	}, {
+		"name": "Winterfell Man #19",
+		"count": 2
+	}, {
+		"name": "Winterfell Woman #5",
+		"count": 5
+	}, {
+		"name": "Winterfell Man #21",
+		"count": 5
+	}, {
+		"name": "Winterfell Man #19",
+		"count": 4
+	}, {
+		"name": "Sansa Stark",
+		"count": 7
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 19
+	}, {
+		"name": "Sansa Stark",
+		"count": 18
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 10
+	}, {
+		"name": "Jaime Lannister",
+		"count": 8
+	}, {
+		"name": "Brienne of Tarth",
+		"count": 35
+	}, {
+		"name": "Jaime Lannister",
+		"count": 53
+	}, {
+		"name": "Qyburn",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 14
+	}, {
+		"name": "Qyburn",
+		"count": 17
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Qyburn",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 12
+	}, {
+		"name": "Qyburn",
+		"count": 1
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 21
+	}, {
+		"name": "Qyburn",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 12
+	}, {
+		"name": "Qyburn",
+		"count": 10
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 2
+	}, {
+		"name": "Qyburn",
+		"count": 11
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 11
+	}, {
+		"name": "Qyburn",
+		"count": 27
+	}, {
+		"name": "King's Landing Captain",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 79
+	}, {
+		"name": "Cersei Lannister",
+		"count": 10
+	}, {
+		"name": "Missandei",
+		"lang": "High Valyrian",
+		"count": 1
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 1
+	}]
 }, {
 	"episodeAlt": "S8E5",
 	"seasonNum": 8,
