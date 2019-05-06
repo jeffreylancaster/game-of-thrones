@@ -79,7 +79,7 @@
 
 - A matrix visualization of how often characters are on screen together. [Visualization](https://jeffreylancaster.github.io/game-of-thrones/matrix/) | [Code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/matrix/index.html)
 
----
+## 
 
 ![Game of Thrones Travelling Characters](/region-percent/game-of-thrones-region-percent.png)
 
@@ -87,7 +87,7 @@
 
 - A visualization of the various locations characters visit and how much of their time they spend there. [Visualization](https://jeffreylancaster.github.io/game-of-thrones/region-percent/) | [Code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/region-percent/index.html)
 
----
+## 
 
 ## Data
 
