@@ -19,9 +19,9 @@
 
 ## Visualizations
 
-### Narrative Chart [View](https://jeffreylancaster.github.io/game-of-thrones/map/) | [Code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/map/index.html)
+### Narrative Chart
 
-A visualization of when each character is on-screen throughout the show, where they are, with whom they are, when they die, and more
+A visualization of when each character is on-screen throughout the show, where they are, with whom they are, when they die, and more. [View](https://jeffreylancaster.github.io/game-of-thrones/map/) | [<>](https://github.com/jeffreylancaster/game-of-thrones/blob/master/map/index.html)
    
    
 
