@@ -1,5 +1,9 @@
 # _Game of Thrones_ Datasets and Visualizations
 
+1. [About this Project](#about-this-project)
+2. [Visualizations](#visualizations)
+3. [Data](#data)
+
 ## About this Project
 
 - View all visualizations at [jeffreylancaster.github.io/game-of-thrones](https://jeffreylancaster.github.io/game-of-thrones/)
