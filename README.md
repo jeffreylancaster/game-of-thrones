@@ -35,9 +35,7 @@
    
 #### Costars List: `costars-list/`
 
-- A list of other films in which _Game of Thrones_ costars, well, costar.
-  - [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/costars-list/)
-  - [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/costars-list/index.html)
+- A list of other films in which _Game of Thrones_ costars, well, costar. [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/costars-list/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/costars-list/index.html)
 
 ![Game of Thrones Costars List](/costars-list/game-of-thrones-costars-list.png)
 
@@ -45,9 +43,7 @@
    
 #### Costars Matrix: `costars-matrix/`
 
-- A matrix visualization of frequency of other films in which _Game of Thrones_ costars, well, costar.
-  - [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/costars-matrix/)
-  - [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/costars-matrix/index.html)
+- A matrix visualization of frequency of other films in which _Game of Thrones_ costars, well, costar. [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/costars-matrix/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/costars-matrix/index.html)
 
 ![Game of Thrones Costars Matrix](/costars-matrix/game-of-thrones-costars-matrix.png)
 
@@ -55,9 +51,7 @@
 
 #### Supercut Duration: `duration-character/`
 
-- A visualization of how long each character has been on-screen throughout the show.
-  - [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-character/)
-  - [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-character/index.html)
+- A visualization of how long each character has been on-screen throughout the show. [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-character/index.html)
 
 ![Game of Thrones Supercut Duration](/duration-character/game-of-thrones-duration-character.png)
 
@@ -65,9 +59,7 @@
    
 #### Character Time Percentage Per Season: `duration-percent/`
 
-- A visualization of how much of a character's time on screen is spent in each season.
-  - [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-percent/)
-  - [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-percent/index.html)
+- A visualization of how much of a character's time on screen is spent in each season. [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-percent/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-percent/index.html)
 
 ![Game of Thrones Character Time Percentage Per Season](/duration-percent/game-of-thrones-duration-percent.png)
 
@@ -75,9 +67,7 @@
 
 #### Force-Directed On-Screen Co-Occurrence: `force-directed/`
 
-- A force-directed visualization of characters on-screen together throughout the show.
-  - [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/force-directed/)
-  - [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/force-directed/index.html)
+- A force-directed visualization of characters on-screen together throughout the show. [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/force-directed/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/force-directed/index.html)
 
 ![Game of Thrones Force-Directed On-Screen Co-Occurrence](/force-directed/game-of-thrones-force-directed.png)
 
@@ -85,9 +75,7 @@
    
 #### Character Co-Occurrence Matrix: `matrix/`
 
-- A matrix visualization of how often characters are on screen together.
-  - [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/matrix/)
-  - [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/matrix/index.html)
+- A matrix visualization of how often characters are on screen together. [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/matrix/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/matrix/index.html)
 
 ![Game of Thrones Co-Occurrence Matrix](/matrix/game-of-thrones-matrix.png)
 
@@ -95,9 +83,7 @@
 
 #### Travelling Characters: `region-percent/`
 
-- A visualization of the various locations characters visit and how much of their time they spend there.
-  - [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/region-percent/)
-  - [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/region-percent/index.html)
+- A visualization of the various locations characters visit and how much of their time they spend there. [View the visualization](https://jeffreylancaster.github.io/game-of-thrones/region-percent/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/region-percent/index.html)
 
 ![Game of Thrones Travelling Characters](/region-percent/game-of-thrones-region-percent.png)
 
