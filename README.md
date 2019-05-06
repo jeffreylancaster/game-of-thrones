@@ -1,14 +1,29 @@
 # _Game of Thrones_ Datasets and Visualizations
 
-I've written a bit about this project on [Medium](https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb) and the narrative chart visualization that kicked this off is here: [https://jeffreylancaster.github.io/game-of-thrones/map/](https://jeffreylancaster.github.io/game-of-thrones/map/).
+## About this Project
+
+- View all visualizations at [jeffreylancaster.github.io/game-of-thrones](https://jeffreylancaster.github.io/game-of-thrones/)
+
+### Articles on Medium
+
+- ["The Ultimate Game of Thrones Dataset"](https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb)
+- ["32 Game of Thrones Data Visualizations"](https://medium.com/@jeffrey.lancaster/32-game-of-thrones-data-visualizations-f4ab6bc978d8)
+- ["19 More Game of Thrones Data Visualizations"](https://medium.com/@jeffrey.lancaster/19-more-game-of-thrones-data-visualizations-bb2d2c0981f9)
+
+### Data Visualization Episode Recaps
+
+- ["Winterfell"](https://medium.com/@jeffrey.lancaster/game-of-thrones-s8-e1-data-visualization-recap-9656a97c3df3) (Season 8, Episode 1)
+- ["A Knight of the Seven Kingdoms"](https://medium.com/@jeffrey.lancaster/game-of-thrones-s8-e2-data-visualization-recap-3d7336ca975e) (Season 8, Episode 2)
+- ["The Long Night"](https://medium.com/@jeffrey.lancaster/game-of-thrones-s8-e3-data-visualization-recap-7843e1d24282) (Season 8, Episode 3)
+- "The Last of the Starks" (Season 8, Episode 4)
 
 ## Visualizations
 
-### Narrative Chart
+### Narrative Chart [View](https://jeffreylancaster.github.io/game-of-thrones/map/) | [Code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/map/index.html)
 
-   A visualization of when each character is on-screen throughout the show, where they are, with whom they are, when they die, and more
+A visualization of when each character is on-screen throughout the show, where they are, with whom they are, when they die, and more
    
-   [View](https://jeffreylancaster.github.io/game-of-thrones/map/) | [<>](https://github.com/jeffreylancaster/game-of-thrones/blob/master/map/index.html)
+   
 
 ### Costars List
 
