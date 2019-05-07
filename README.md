@@ -40,7 +40,7 @@
 
 #### Script Search: `search/mongodb/`
 
-- A simple search interface to explore the words spoken on _Game of Thrones_, including text and translations in Dothraki, Valyrian, etc. and who says each line.<br>[Search the database](https://game-of-thrones-script.herokuapp.com) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/search/mongodb/)
+- A simple search interface to explore the words spoken on _Game of Thrones_, including who says each line and text and translations in Dothraki, Valyrian, etc.<br>[Search the database](https://game-of-thrones-script.herokuapp.com) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/search/mongodb/)
 
 ## Visualizations
 
@@ -69,7 +69,7 @@
 
 #### Characters On Screen: `scenes-character/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-character/index.html)
+- A visualization of when each character is on screen throughout the entire show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-character/index.html)
 
 ![Game of Thrones Characters On Screen](/scenes-character/game-of-thrones-scenes-character.png)
 
@@ -77,7 +77,7 @@
 
 #### Locations On Screen: `scenes-location/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-location/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-location/index.html)
+- A visualization of when each location is shown on screen throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-location/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-location/index.html)
 
 ![Game of Thrones Locations On Screen](/scenes-location/game-of-thrones-scenes-location.png)
 
@@ -85,7 +85,7 @@
 
 #### More-Specific Locations On Screen: `scenes-sublocation/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-sublocation/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-sublocation/index.html)
+- A visualization of when each more-specific location is shown on screen throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-sublocation/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-sublocation/index.html)
 
 ![Game of Thrones Sublocations On Screen](/scenes-sublocation/game-of-thrones-scenes-sublocation.png)
 
@@ -93,7 +93,7 @@
 
 #### Special Scenes On Screen: `scenes-special/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-special/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-special/index.html)
+- A visualization of when special scenes (death, sex, flashback, warging, greensight, etc.) are shown on screen throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-special/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-special/index.html)
 
 ![Game of Thrones Special Scenes On Screen](/scenes-special/game-of-thrones-scenes-special.png)
 
@@ -101,7 +101,7 @@
 
 #### Deaths On Screen: `bubble-death/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/bubble-death/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/bubble-death/index.html)
+- A visualization of when deaths happen throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/bubble-death/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/bubble-death/index.html)
 
 ![Game of Thrones Deaths On Screen](/bubble-death/game-of-thrones-bubble-death.png)
 
@@ -109,7 +109,7 @@
 
 #### Weapons On Screen: `scenes-weapons/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-weapons/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-weapons/index.html)
+- A visualization of when weapons show up on screen throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-weapons/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-weapons/index.html)
 
 ![Game of Thrones Weapons On Screen](/scenes-weapons/game-of-thrones-scenes-weapons.png)
 
@@ -117,7 +117,7 @@
 
 #### Houses On Screen: `scenes-house/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-house/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-house/index.html)
+- A visualization of when various Houses are represented throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-house/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-house/index.html)
 
 ![Game of Thrones Houses On Screen](/scenes-house/game-of-thrones-scenes-house.png)
 
@@ -125,7 +125,7 @@
 
 #### Number of Characters Per Scene: `characters-per-scene/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/characters-per-scene/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/characters-per-scene/index.html)
+- A visualization of how many characters are on-screen at one time.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/characters-per-scene/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/characters-per-scene/index.html)
 
 ![Game of Thrones Number of Characters Per Scene](/characters-per-scene/game-of-thrones-characters-per-scene.png)
 
@@ -133,7 +133,7 @@
 
 #### Continuous Screen Time: `bubble-character/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/bubble-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/bubble-character/index.html)
+- A visualization where each bubble represents a character and the size of the bubble is continuous time on screen.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/bubble-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/bubble-character/index.html)
 
 ![Game of Thrones Continuous Screen Time](/bubble-character/game-of-thrones-bubble-character.png)
 
@@ -151,7 +151,7 @@
 
 #### Screen Time Per Season: `duration-per-season/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-per-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-per-season/index.html)
+- A visualization of how long each character has been on-screen in each season of the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-per-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-per-season/index.html)
 
 ![Game of Thrones Screen Time Per Season](/duration-per-season/game-of-thrones-duration-per-season.png)
 
@@ -159,7 +159,7 @@
 
 #### Character On Screen Time Per Episode: `episode-character/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/episode-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/episode-character/index.html)
+- A visualization of how long each character has been on-screen in each episode throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/episode-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/episode-character/index.html)
 
 ![Game of Thrones Character On Screen Time Per Episode](/episode-character/game-of-thrones-episode-character-tyrion-lannister.png)
 
@@ -167,7 +167,7 @@
 
 #### Screen Time Per Location: `duration-per-location/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-per-location/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-per-location/index.html)
+- A visualization of how long has been spent in each location throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-per-location/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-per-location/index.html)
 
 ![Game of Thrones Screen Time Per Location](/duration-per-location/game-of-thrones-duration-per-location.png)
 
@@ -175,7 +175,7 @@
 
 #### Screen Time Per More-Specific Location: `duration-per-sublocation/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-per-sublocation/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-per-sublocation/index.html)
+- A visualization of how long has been spent in each more-specific location throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-per-sublocation/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-per-sublocation/index.html)
 
 ![Game of Thrones Screen Time Per More-Specific Location](/duration-per-sublocation/game-of-thrones-duration-per-sublocation.png)
 
@@ -191,7 +191,7 @@
 
 #### Overall Character Time (Treemap): `duration-treemap/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-treemap/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-treemap/index.html)
+- A visualization of how long each character has been on screen throughout the show in proportion to all other characters.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-treemap/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-treemap/index.html)
 
 ![Game of Thrones Overall Character Time (Treemap)](/duration-treemap/game-of-thrones-duration-treemap.png)
 
@@ -199,7 +199,7 @@
 
 #### Screen Time Per House: `duration-house/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-house/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-house/index.html)
+- A visualization of how long each House has been on screen throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-house/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-house/index.html)
 
 ![Game of Thrones Screen Time Per House](/duration-house/game-of-thrones-duration-house.png)
 
@@ -215,7 +215,7 @@
 
 #### Screen Time in Locations Per Episode: `location-per-episode/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/location-per-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/location-per-episode/index.html)
+- A visualization of how long is spent in each location during each episode.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/location-per-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/location-per-episode/index.html)
 
 ![Game of Thrones Screen Time in Locations Per Episode](/location-per-episode/game-of-thrones-location-per-episode.png)
 
@@ -223,7 +223,7 @@
 
 #### Screen Time Per Gender By Season: `duration-gender-season/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-gender-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-gender-season/index.html)
+- A visualization of how much time women and men are on screen during each season.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-gender-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-gender-season/index.html)
 
 ![Game of Thrones Screen Time Per Gender By Season](/duration-gender-season/game-of-thrones-duration-gender-season.png)
 
@@ -231,7 +231,7 @@
 
 #### Screen Time Per Gender By Episode: `duration-gender-episode/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-gender-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-gender-episode/index.html)
+- A visualization of how much time women and men are on screen during each episode.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-gender-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-gender-episode/index.html)
 
 ![Game of Thrones Screen Time Per Gender By Episode](/duration-gender-episode/game-of-thrones-duration-gender-episode.png)
 
@@ -239,7 +239,7 @@
 
 #### Screen Time Per Gender By Episode (Percent): `duration-gender-percent/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-gender-percent/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-gender-percent/index.html)
+- A visualization of how much time women and men are on screen during each episode as percentages of the episode length.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-gender-percent/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-gender-percent/index.html)
 
 ![Game of Thrones Screen Time Per Gender By Episode (Percent)](/duration-gender-percent/game-of-thrones-duration-gender-percent.png)
 
@@ -249,7 +249,7 @@
 
 #### Character Wordcount: `wordcount-character/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-character/index.html)
+- A visualization of how many words each character says throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-character/index.html)
 
 ![Game of Thrones Character Wordcount](/wordcount-character/game-of-thrones-wordcount-character.png)
 
@@ -257,7 +257,7 @@
 
 #### Character Wordcount By Season: `wordcount-per-season/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-per-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-per-season/index.html)
+- A visualization of how many words each character says during each season.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-per-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-per-season/index.html)
 
 ![Game of Thrones Character Wordcount By Season](/wordcount-per-season/game-of-thrones-wordcount-per-season.png)
 
@@ -265,7 +265,7 @@
 
 #### Wordcount Per House: `wordcount-house/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-house/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-house/index.html)
+- A visualization of how many words members of each House say throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-house/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-house/index.html)
 
 ![Game of Thrones Wordcount Per House](/wordcount-house/game-of-thrones-wordcount-house.png)
 
@@ -273,7 +273,7 @@
 
 #### Wordcount Per Gender By Season: `wordcount-gender-season/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-gender-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-gender-season/index.html)
+- A visualization of how many words women and men say during each season.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-gender-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-gender-season/index.html)
 
 ![Game of Thrones Wordcount Per Gender By Season](/wordcount-gender-season/game-of-thrones-wordcount-gender-season.png)
 
@@ -281,7 +281,7 @@
 
 #### Wordcount Per Gender By Episode: `wordcount-gender-episode/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-gender-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-gender-episode/index.html)
+- A visualization of how many words women and men say during each episode.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-gender-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-gender-episode/index.html)
 
 ![Game of Thrones Wordcount Per Gender By Episode](/wordcount-gender-episode/game-of-thrones-wordcount-gender-episode.png)
 
@@ -289,7 +289,7 @@
 
 #### Wordcount Per Gender By Episode (Percent): `wordcount-gender-percent/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-gender-percent/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-gender-percent/index.html)
+- A visualization of how many words women and men say during each episode as a percentage of the total words spoken per episode.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-gender-percent/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-gender-percent/index.html)
 
 ![Game of Thrones Wordcount Per Gender By Episode (Percent)](/wordcount-gender-percent/game-of-thrones-wordcount-gender-percent.png)
 
@@ -297,7 +297,7 @@
 
 #### Languages Spoken Per Character: `language-character/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/language-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/language-character/index.html)
+- A visualization of the languages spoken by characters throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/language-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/language-character/index.html)
 
 ![Game of Thrones Languages Spoken Per Character](/language-character/game-of-thrones-language-character.png)
 
@@ -305,7 +305,7 @@
 
 #### Languages Spoken Per Episode: `language-episode`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/language-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/language-episode/index.html)
+- A visualization of the languages spoken by characters throughout each episode.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/language-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/language-episode/index.html)
 
 ![Game of Thrones Languages Spoken Per Episode](/language-episode/game-of-thrones-language-episode.png)
 
@@ -331,7 +331,7 @@
    
 #### Chord Diagram of On-Screen Co-Occurrence: `matrix-chord/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/matrix-chord/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/matrix-chord/index.html)
+- A chord diagram visualization where chord width represents time spent on-screen together by the conected characters.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/matrix-chord/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/matrix-chord/index.html)
 
 ![Game of Thrones Chord Diagram of On-Screen Co-Occurrence](/matrix-chord/game-of-thrones-matrix-chord.png)
 
@@ -341,7 +341,7 @@
 
 #### Force-Directed Relationships: `relations-force/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/relations-force/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/relations-force/index.html)
+- A force-directed visualization of various relationships between characters (e.g. parents, spouses, who killed whom).<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/relations-force/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/relations-force/index.html)
 
 ![Game of Thrones Force-Directed Relationships](/relations-force/game-of-thrones-relations-force.png)
 
@@ -349,7 +349,7 @@
 
 #### Circle-based Relationships: `relations-circle/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/relations-circle/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/relations-circle/index.html)
+- A circle-based visualization of various relationships between characters (e.g. parents, spouses, who killed whom).<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/relations-circle/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/relations-circle/index.html)
 
 ![Game of Thrones Circle-based Relationships](/relations-circle/game-of-thrones-relations-circle.png)
 
@@ -357,7 +357,7 @@
 
 #### Force-Directed Sexual Relationships: `relations-force-sex/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/relations-force-sex/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/relations-force-sex/index.html)
+- A force-directed visualization of sexual relationships between characters.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/relations-force-sex/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/relations-force-sex/index.html)
 
 ![Game of Thrones Force-Directed Sexual Relationships](/relations-force-sex/game-of-thrones-relations-force-sex.png)
 
@@ -385,7 +385,7 @@
 
 #### Force-Directed Network of Opening Sequence Locations: `opening-locations-force/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-locations-force/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-locations-force/index.html)
+- A force-directed network visualization of the _Game of Thrones_ opening sequence locations.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-locations-force/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-locations-force/index.html)
 
 ![Game of Thrones Force-Directed Network of Opening Sequence Locations](/opening-locations-force/game-of-thrones-opening-locations-force.png)
 
@@ -393,7 +393,7 @@
 
 #### Geographic Network of Opening Sequence Locations: `opening-locations-fixed/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-locations-fixed/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-locations-fixed/index.html)
+- A geographic network visualization of the _Game of Thrones_ opening sequence locations.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-locations-fixed/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-locations-fixed/index.html)
 
 ![Game of Thrones Geographic Network of Opening Sequence Locations](/opening-locations-fixed/game-of-thrones-opening-locations-fixed.png)
 
@@ -401,7 +401,7 @@
 
 #### Locations on a Globe: `geography-locations/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/geography-locations/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/geography-locations/index.html)
+- Various _Game of Thrones_ locations displayed on a globe.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/geography-locations/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/geography-locations/index.html)
 
 ![Game of Thrones Locations on a Globe](/geography-locations/game-of-thrones-geography-locations.png)
 
@@ -409,7 +409,7 @@
 
 #### Opening Sequence Locations: `opening-seq-arcs/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-seq-arcs/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-seq-arcs/index.html)
+- A geographic visualization of the _Game of Thrones_ opening sequence locations on a globe.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-seq-arcs/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-seq-arcs/index.html)
 
 ![Game of Thrones Opening Sequence Locations](/opening-seq-arcs/game-of-thrones-opening-seq-arcs.png)
 
@@ -417,7 +417,7 @@
 
 #### Opening Sequence Locations (with Underlying Matrix): `opening-seq-matrix/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-seq-matrix/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-seq-matrix/index.html)
+- A geographic visualization of the _Game of Thrones_ opening sequence locations on a globe with an underlying matrix showing the frequency of opening sequence paths between locations.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-seq-matrix/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-seq-matrix/index.html)
 
 ![Game of Thrones Opening Sequence Locations (with Underlying Matrix)](/opening-seq-matrix/game-of-thrones-opening-seq-matrix.png)
 
@@ -425,7 +425,7 @@
 
 #### Character Travel Paths: `character-arcs/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/character-arcs/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/character-arcs/index.html)
+- A geographic visualization of the paths characters have travelled in the Lands of Ice and Fire.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/character-arcs/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/character-arcs/index.html)
 
 ![Game of Thrones Character Travel Paths](/character-arcs/game-of-thrones-character-arcs.png)
 
@@ -435,7 +435,7 @@
 
 #### Simple Cluster Analysis (for Prediction?): `episode-character-scatter/`
 
-- Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/episode-character-scatter/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/episode-character-scatter/index.html)
+- A simple cluster analysis plotting the slope and y-intercept of the linear regression of time spent on-screen in each episode. We'll see whether it's predictive at all.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/episode-character-scatter/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/episode-character-scatter/index.html)
 
 ![Game of Thrones Simple Cluster Analysis (for Prediction?)](/episode-character-scatter/game-of-thrones-episode-character-scatter.png)
 
