@@ -36,11 +36,11 @@
 
 #### Episode Viewer: `episode/`
 
-- Description.<br>[View the visualizations](https://jeffreylancaster.github.io/game-of-thrones/episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/episode/index.html)
+- A compilation of episode-specific data visualizations, including aggregate character time on screen, wordcount, languages, locations, and more.<br>[View the visualizations](https://jeffreylancaster.github.io/game-of-thrones/episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/episode/index.html)
 
-#### Script Search
+#### Script Search: `search/mongodb/`
 
-- Description.<br>[Search the database](https://game-of-thrones-script.herokuapp.com) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/search/mongodb/)
+- A simple search interface to explore the words spoken on _Game of Thrones_, including text and translations in Dothraki, Valyrian, etc. and who says each line.<br>[Search the database](https://game-of-thrones-script.herokuapp.com) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/search/mongodb/)
 
 ## Visualizations
 
