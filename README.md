@@ -2,7 +2,7 @@
 
 1. [About this Project](#about-this-project)
 2. [Visualizations](#visualizations)
-    0. [Interfaces](#interfaces)
+    1. [Interfaces](#interfaces)
     1. [Narrative Charts](#narrative-charts)
     2. [Screen Time](#screen-time)
     3. [Cumulative Time](#cumulative-time)
