@@ -140,7 +140,7 @@
 
 - Description.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/episode-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/episode-character/index.html)
 
-![Game of Thrones Character On Screen Time Per Episode](/episode-character/game-of-thrones-episode-character.png)
+![Game of Thrones Character On Screen Time Per Episode](/episode-character/game-of-thrones-episode-character-tyrion-lannister.png)
 
 ---
 
