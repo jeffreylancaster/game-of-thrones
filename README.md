@@ -2,6 +2,16 @@
 
 1. [About this Project](#about-this-project)
 2. [Visualizations](#visualizations)
+    1. [Narrative Charts](#narrative-charts)
+    2. [Screen Time](#screen-time)
+    3. [Cumulative Time](#cumulative-time)
+    4. [Wordcount & Language](#wordcount--language)
+    5. [Co-Occurrence](#co-occurrence)
+    6. [Relationships](#relationships)
+    7. [Actor Relationships](#actor-relationships)
+    8. [Lands of Ice and Fire Geography](#lands-of-ice-and-fire-geography)
+    9. [Prediction](#prediction)
+    10. [Others](#others)
 3. [Data](#data)
 
 ## About this Project
