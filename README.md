@@ -53,7 +53,7 @@
   - `index.html`: Builds the visualization using d3.js and outputs the _Game of Thrones_ narrative chart.
 
 ![Game of Thrones Narrative Chart](/map/game-of-thrones-map.png)
-<center><em>Test caption</em></center>
+<div style="text-align: center; font-variant: italics; font-size: 0.75em;">Test caption</div>
 
 ---
 
