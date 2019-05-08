@@ -72,7 +72,6 @@
 - A visualization of when each character is on screen throughout the entire show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/scenes-character/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/scenes-character/index.html)
 
 ![Game of Thrones Characters On Screen](/scenes-character/game-of-thrones-scenes-character.png)
-> Description here
 
 ---
 
