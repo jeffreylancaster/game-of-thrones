@@ -54,7 +54,7 @@
 
 ![Game of Thrones Narrative Chart](/map/game-of-thrones-map.png)
 
-<div style="text-align: center">Test caption</div>
+<p style="text-align: center;">Test caption</p>
 
 ---
 
