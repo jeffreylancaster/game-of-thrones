@@ -53,6 +53,7 @@
   - `index.html`: Builds the visualization using d3.js and outputs the _Game of Thrones_ narrative chart.
 
 ![Game of Thrones Narrative Chart](/map/game-of-thrones-map.png)
+_<center>Test caption</center>_
 
 ---
 
@@ -444,7 +445,7 @@
 ### Other People's
 
 - [Timelapse animation](https://www.youtube.com/watch?v=6dUjMo5LOgc) from [Type A Media](https://typeamedia.net/)
-- [Viz of Thrones](http://www.vizofthrones.com/): a single interface by [Adam Groner](https://medium.com/@adamgroner), including a geographic map with characters in locations, sex count, death count, scenes in which characters show up, and more
+- [Viz of Thrones](http://www.vizofthrones.com/): a single interface by [Adam Groner](https://github.com/ahgroner), including a geographic map with characters in locations, sex count, death count, scenes in which characters show up, and more
 - [GraphXR demo](https://www.youtube.com/watch?v=ZXxBDPPWwYc) from [Kineviz](https://www.kineviz.com/)
 - [Character travels through various regions](https://news.northeastern.edu/2019/04/10/the-many-travels-of-jon-snow-tyrion-lannister-and-the-rest-of-hbos-game-of-thrones-characters/) by Lia Petronio
 - [Character Social Network](https://news.northeastern.edu/2019/04/11/the-game-of-thrones-social-network/) by Lia Petronio
