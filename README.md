@@ -25,6 +25,7 @@
 - ["The Ultimate Game of Thrones Dataset"](https://medium.com/@jeffrey.lancaster/the-ultimate-game-of-thrones-dataset-a100c0cf35fb)
 - ["32 Game of Thrones Data Visualizations"](https://medium.com/@jeffrey.lancaster/32-game-of-thrones-data-visualizations-f4ab6bc978d8)
 - ["19 More Game of Thrones Data Visualizations"](https://medium.com/@jeffrey.lancaster/19-more-game-of-thrones-data-visualizations-bb2d2c0981f9)
+- ["Introducing Game of Thrones Script Search"](https://medium.com/@jeffrey.lancaster/introducing-game-of-thrones-script-search-8ccb2a1df726)
 
 ### Data Visualization Episode Recaps
 
