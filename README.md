@@ -56,6 +56,8 @@
 
 ![Game of Thrones Narrative Chart](/map/game-of-thrones-map.png)
 
+> Note: map contains spoilers.
+
 ---
 
 #### Heatmap / Flattened Narrative Chart: `heatmap/`
@@ -64,7 +66,9 @@
   - includes a `calcData` parameter that pre-processes the data for `data/heatmap.json`.
 
 ![Game of Thrones Heatmap](/heatmap/game-of-thrones-heatmap.png)
+
 > Inspired by [Hubble Image of Galaxy Cluster Converted Into Sound](https://www.youtube.com/watch?v=IHIwDHsrGOc).</a>
+
 ---
 
 ### Screen Time
@@ -139,6 +143,8 @@
 
 ![Game of Thrones Continuous Screen Time](/bubble-character/game-of-thrones-bubble-character.png)
 
+> Circles are color-coded by House.
+
 ---
 
 ### Cumulative Time
@@ -149,6 +155,8 @@
 
 ![Game of Thrones Supercut Duration](/duration-character/game-of-thrones-duration-character.png)
 
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
+
 ---
 
 #### Screen Time Per Season: `duration-per-season/`
@@ -156,6 +164,8 @@
 - A visualization of how long each character has been on-screen in each season of the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-per-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-per-season/index.html)
 
 ![Game of Thrones Screen Time Per Season](/duration-per-season/game-of-thrones-duration-per-season.png)
+
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
 
 ---
 
@@ -165,6 +175,8 @@
 
 ![Game of Thrones Character On Screen Time Per Episode](/episode-character/game-of-thrones-episode-character-tyrion-lannister.png)
 
+> Based on [Harry Stevens's Linear Regression for Scatter Plot](https://bl.ocks.org/HarryStevens/be559bed98d662f69e68fc8a7e0ad097).
+
 ---
 
 #### Screen Time Per Location: `duration-per-location/`
@@ -172,6 +184,8 @@
 - A visualization of how long has been spent in each location throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-per-location/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-per-location/index.html)
 
 ![Game of Thrones Screen Time Per Location](/duration-per-location/game-of-thrones-duration-per-location.png)
+
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
 
 ---
 
@@ -181,6 +195,8 @@
 
 ![Game of Thrones Screen Time Per More-Specific Location](/duration-per-sublocation/game-of-thrones-duration-per-sublocation.png)
 
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
+
 ---
 
 #### Character Time Percentage Per Season: `duration-percent/`
@@ -188,6 +204,8 @@
 - A visualization of how much of a character's time on screen is spent in each season.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-percent/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-percent/index.html)
 
 ![Game of Thrones Character Time Percentage Per Season](/duration-percent/game-of-thrones-duration-percent.png)
+
+> Based on [Mike Bostock's Normalized Stacked Bar Chart](https://gist.github.com/mbostock/3886394).
 
 ---
 
@@ -197,6 +215,8 @@
 
 ![Game of Thrones Overall Character Time (Treemap)](/duration-treemap/game-of-thrones-duration-treemap.png)
 
+> Based on [takayuki's Treemap in d3 v4](https://bl.ocks.org/ganezasan/52fced34d2182483995f0ca3960fe228).
+
 ----
 
 #### Screen Time Per House: `duration-house/`
@@ -204,6 +224,8 @@
 - A visualization of how long each House has been on screen throughout the show.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-house/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-house/index.html)
 
 ![Game of Thrones Screen Time Per House](/duration-house/game-of-thrones-duration-house.png)
+
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
 
 ---
 
@@ -213,6 +235,8 @@
 
 ![Game of Thrones Travelling Characters](/region-percent/game-of-thrones-region-percent.png)
 
+> Based on [Mike Bostock's Normalized Stacked Bar Chart](https://gist.github.com/mbostock/3886394).
+
 ---
 
 #### Screen Time in Locations Per Episode: `location-per-episode/`
@@ -220,6 +244,8 @@
 - A visualization of how long is spent in each location during each episode.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/location-per-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/location-per-episode/index.html)
 
 ![Game of Thrones Screen Time in Locations Per Episode](/location-per-episode/game-of-thrones-location-per-episode.png)
+
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
 
 ---
 
@@ -229,6 +255,8 @@
 
 ![Game of Thrones Screen Time Per Gender By Season](/duration-gender-season/game-of-thrones-duration-gender-season.png)
 
+> Based on [wpoely86's Diverging Stacked Bar Chart](http://bl.ocks.org/wpoely86/e285b8e4c7b84710e463).
+
 ---
 
 #### Screen Time Per Gender By Episode: `duration-gender-episode/`
@@ -237,6 +265,8 @@
 
 ![Game of Thrones Screen Time Per Gender By Episode](/duration-gender-episode/game-of-thrones-duration-gender-episode.png)
 
+> Based on [wpoely86's Diverging Stacked Bar Chart](http://bl.ocks.org/wpoely86/e285b8e4c7b84710e463).
+
 ---
 
 #### Screen Time Per Gender By Episode (Percent): `duration-gender-percent/`
@@ -244,6 +274,8 @@
 - A visualization of how much time women and men are on screen during each episode as percentages of the episode length.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/duration-gender-percent/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/duration-gender-percent/index.html)
 
 ![Game of Thrones Screen Time Per Gender By Episode (Percent)](/duration-gender-percent/game-of-thrones-duration-gender-percent.png)
+
+> Based on [wpoely86's Diverging Stacked Bar Chart](http://bl.ocks.org/wpoely86/e285b8e4c7b84710e463).
 
 ---
 
@@ -255,6 +287,8 @@
 
 ![Game of Thrones Character Wordcount](/wordcount-character/game-of-thrones-wordcount-character.png)
 
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
+
 ---
 
 #### Character Wordcount By Season: `wordcount-per-season/`
@@ -262,6 +296,8 @@
 - A visualization of how many words each character says during each season.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-per-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-per-season/index.html)
 
 ![Game of Thrones Character Wordcount By Season](/wordcount-per-season/game-of-thrones-wordcount-per-season.png)
+
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
 
 ---
 
@@ -271,6 +307,8 @@
 
 ![Game of Thrones Wordcount Per House](/wordcount-house/game-of-thrones-wordcount-house.png)
 
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
+
 ---
 
 #### Wordcount Per Gender By Season: `wordcount-gender-season/`
@@ -278,6 +316,8 @@
 - A visualization of how many words women and men say during each season.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-gender-season/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-gender-season/index.html)
 
 ![Game of Thrones Wordcount Per Gender By Season](/wordcount-gender-season/game-of-thrones-wordcount-gender-season.png)
+
+> Based on [wpoely86's Diverging Stacked Bar Chart](http://bl.ocks.org/wpoely86/e285b8e4c7b84710e463).
 
 ---
 
@@ -287,6 +327,8 @@
 
 ![Game of Thrones Wordcount Per Gender By Episode](/wordcount-gender-episode/game-of-thrones-wordcount-gender-episode.png)
 
+> Based on [wpoely86's Diverging Stacked Bar Chart](http://bl.ocks.org/wpoely86/e285b8e4c7b84710e463).
+
 ---
 
 #### Wordcount Per Gender By Episode (Percent): `wordcount-gender-percent/`
@@ -294,6 +336,8 @@
 - A visualization of how many words women and men say during each episode as a percentage of the total words spoken per episode.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/wordcount-gender-percent/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/wordcount-gender-percent/index.html)
 
 ![Game of Thrones Wordcount Per Gender By Episode (Percent)](/wordcount-gender-percent/game-of-thrones-wordcount-gender-percent.png)
+
+> Based on [wpoely86's Diverging Stacked Bar Chart](http://bl.ocks.org/wpoely86/e285b8e4c7b84710e463).
 
 ---
 
@@ -303,6 +347,8 @@
 
 ![Game of Thrones Languages Spoken Per Character](/language-character/game-of-thrones-language-character.png)
 
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
+
 ---
 
 #### Languages Spoken Per Episode: `language-episode`
@@ -310,6 +356,8 @@
 - A visualization of the languages spoken by characters throughout each episode.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/language-episode/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/language-episode/index.html)
 
 ![Game of Thrones Languages Spoken Per Episode](/language-episode/game-of-thrones-language-episode.png)
+
+> Based on [Andrew Reid's Horizontal Stacked Bar Chart](https://bl.ocks.org/Andrew-Reid/0aedd5f3fb8b099e3e10690bd38bd458).
 
 ---
 
@@ -321,6 +369,8 @@
 
 ![Game of Thrones Co-Occurrence Matrix](/matrix/game-of-thrones-matrix.png)
 
+> Based on [Mike Bostock's Les Misérables Co-occurrence](https://bost.ocks.org/mike/miserables/).
+
 ---
 
 #### Force-Directed On-Screen Co-Occurrence: `force-directed/`
@@ -329,6 +379,8 @@
 
 ![Game of Thrones Force-Directed On-Screen Co-Occurrence](/force-directed/game-of-thrones-force-directed.png)
 
+> Based on [heybignick's d3 v4 force-directed graph](https://bl.ocks.org/heybignick/3faf257bbbbc7743bb72310d03b86ee8).
+
 ---
    
 #### Chord Diagram of On-Screen Co-Occurrence: `matrix-chord/`
@@ -336,6 +388,8 @@
 - A chord diagram visualization where chord width represents time spent on-screen together by the conected characters.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/matrix-chord/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/matrix-chord/index.html)
 
 ![Game of Thrones Chord Diagram of On-Screen Co-Occurrence](/matrix-chord/game-of-thrones-matrix-chord.png)
+
+> Based on [HenryLau's chord diagram on JSFiddle](https://jsfiddle.net/kLe38tff/).
 
 ---
 
@@ -347,6 +401,8 @@
 
 ![Game of Thrones Force-Directed Relationships](/relations-force/game-of-thrones-relations-force.png)
 
+> Parent-child (solid gray), spouse (dashed blue), and killed by (solid black arrow) relationships shown. Based on [Mike Bostock's Labeled Force Layout](https://bl.ocks.org/mbostock/950642).
+
 ---
 
 #### Circle-based Relationships: `relations-circle/`
@@ -355,6 +411,8 @@
 
 ![Game of Thrones Circle-based Relationships](/relations-circle/game-of-thrones-relations-circle.png)
 
+> Parent-child (solid gray), spouse (dashed blue), and killed by (solid black arrow) relationships shown. Based on an [HBO infographic](http://i.imgur.com/PG0963W.png).
+
 ---
 
 #### Force-Directed Sexual Relationships: `relations-force-sex/`
@@ -362,6 +420,8 @@
 - A force-directed visualization of sexual relationships between characters.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/relations-force-sex/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/relations-force-sex/index.html)
 
 ![Game of Thrones Force-Directed Sexual Relationships](/relations-force-sex/game-of-thrones-relations-force-sex.png)
+
+> Based on a [Cool Material infographic](https://coolmaterial.com/feature/heres-all-the-sex-from-game-of-thrones-in-an-infographic/).
 
 ---
 
