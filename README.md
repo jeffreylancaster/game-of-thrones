@@ -14,6 +14,7 @@
     9. [Prediction](#prediction)
     10. [Other People's](#other-peoples)
 3. [Data](#data)
+4. [Use, Licensing, Attribution](#use-licensing-attribution)
 
 ## About this Project
 
@@ -30,7 +31,7 @@
 - ["Winterfell"](https://medium.com/@jeffrey.lancaster/game-of-thrones-s8-e1-data-visualization-recap-9656a97c3df3) (Season 8, Episode 1)
 - ["A Knight of the Seven Kingdoms"](https://medium.com/@jeffrey.lancaster/game-of-thrones-s8-e2-data-visualization-recap-3d7336ca975e) (Season 8, Episode 2)
 - ["The Long Night"](https://medium.com/@jeffrey.lancaster/game-of-thrones-s8-e3-data-visualization-recap-7843e1d24282) (Season 8, Episode 3)
-- "The Last of the Starks" (Season 8, Episode 4)
+- ["The Last of the Starks"](https://medium.com/@jeffrey.lancaster/game-of-thrones-s8-e4-data-visualization-recap-20ee28cf2af1) (Season 8, Episode 4)
 
 ## Interfaces
 
@@ -649,3 +650,9 @@
 }
 
 ```
+
+## Use, Licensing, Attribution
+
+Feel free to take an use this data however you'd like. It's provided as is, is a creative work, and is probably not perfectly accurate.
+
+I only ask that you cite this repository if you do post/publish/share something you make using the data, and that you let me know (on Github or by email) about what you've made.
