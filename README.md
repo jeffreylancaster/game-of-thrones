@@ -433,6 +433,8 @@
 
 ![Game of Thrones Costars List](/costars-list/game-of-thrones-costars-list.png)
 
+> Data last pulled following Season 7.
+
 ---
    
 #### Costars Matrix: `costars-matrix/`
@@ -440,6 +442,8 @@
 - A matrix visualization of frequency of other films in which _Game of Thrones_ costars, well, costar.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/costars-matrix/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/costars-matrix/index.html)
 
 ![Game of Thrones Costars Matrix](/costars-matrix/game-of-thrones-costars-matrix.png)
+
+> Data last pulled following Season 7. Based on [Mike Bostock's Les Misérables Co-occurrence](https://bost.ocks.org/mike/miserables/).
 
 ---
 
@@ -451,6 +455,8 @@
 
 ![Game of Thrones Force-Directed Network of Opening Sequence Locations](/opening-locations-force/game-of-thrones-opening-locations-force.png)
 
+> Based on [heybignick's d3 v4 force-directed graph](https://bl.ocks.org/heybignick/3faf257bbbbc7743bb72310d03b86ee8).
+
 ---
 
 #### Geographic Network of Opening Sequence Locations: `opening-locations-fixed/`
@@ -458,6 +464,8 @@
 - A geographic network visualization of the _Game of Thrones_ opening sequence locations.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-locations-fixed/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-locations-fixed/index.html)
 
 ![Game of Thrones Geographic Network of Opening Sequence Locations](/opening-locations-fixed/game-of-thrones-opening-locations-fixed.png)
+
+> Based on the [A Song of Ice and Fire Wiki](https://vignette.wikia.nocookie.net/iceandfire/images/3/37/Ice_and_Fire_World_Map.png/revision/latest?cb=20130127004523) geography.
 
 ---
 
@@ -467,6 +475,8 @@
 
 ![Game of Thrones Locations on a Globe](/geography-locations/game-of-thrones-geography-locations.png)
 
+> Adapted from [Jason Davies' "Rotate the World"](https://www.jasondavies.com/maps/rotate/).
+
 ---
 
 #### Opening Sequence Locations: `opening-seq-arcs/`
@@ -474,6 +484,8 @@
 - A geographic visualization of the _Game of Thrones_ opening sequence locations on a globe.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/opening-seq-arcs/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/opening-seq-arcs/index.html)
 
 ![Game of Thrones Opening Sequence Locations](/opening-seq-arcs/game-of-thrones-opening-seq-arcs.png)
+
+> Adapted from [Andrew Mollica's "World Tour along Flying Arcs"](https://bl.ocks.org/armollica/88ef1c807c4bb4cff6f7e033e25172ee).
 
 ---
 
@@ -483,6 +495,8 @@
 
 ![Game of Thrones Opening Sequence Locations (with Underlying Matrix)](/opening-seq-matrix/game-of-thrones-opening-seq-matrix.png)
 
+> Adapted from [Andrew Mollica's "World Tour along Flying Arcs"](https://bl.ocks.org/armollica/88ef1c807c4bb4cff6f7e033e25172ee).
+
 ---
 
 #### Character Travel Paths: `character-arcs/`
@@ -490,6 +504,8 @@
 - A geographic visualization of the paths characters have travelled in the Lands of Ice and Fire.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/character-arcs/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/character-arcs/index.html)
 
 ![Game of Thrones Character Travel Paths](/character-arcs/game-of-thrones-character-arcs.png)
+
+> Adapted from [Andrew Mollica's "World Tour along Flying Arcs"](https://bl.ocks.org/armollica/88ef1c807c4bb4cff6f7e033e25172ee).
 
 ---
 
@@ -500,6 +516,8 @@
 - A simple cluster analysis plotting the slope and y-intercept of the linear regression of time spent on-screen in each episode. We'll see whether it's predictive at all.<br>[View the visualization](https://jeffreylancaster.github.io/game-of-thrones/episode-character-scatter/) || [Explore the code](https://github.com/jeffreylancaster/game-of-thrones/blob/master/episode-character-scatter/index.html)
 
 ![Game of Thrones Simple Cluster Analysis (for Prediction?)](/episode-character-scatter/game-of-thrones-episode-character-scatter.png)
+
+> Adapted from [Harry Stevens's Linear Regression for Scatter Plot](https://bl.ocks.org/HarryStevens/be559bed98d662f69e68fc8a7e0ad097).
 
 ---
 
