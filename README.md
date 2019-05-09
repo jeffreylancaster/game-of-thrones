@@ -64,7 +64,7 @@
   - includes a `calcData` parameter that pre-processes the data for `data/heatmap.json`.
 
 ![Game of Thrones Heatmap](/heatmap/game-of-thrones-heatmap.png)
-
+> Inspired by [Hubble Image of Galaxy Cluster Converted Into Sound](https://www.youtube.com/watch?v=IHIwDHsrGOc).</a>
 ---
 
 ### Screen Time
