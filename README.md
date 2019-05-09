@@ -813,7 +813,9 @@ A pre-processed file for the `map/` visualization:
 
 A GeoJSON file for geographic visualizations.
 
-It's better to just go look at the file if you're curious.
+```javascript
+// It's better to just go look at the file if you're curious.
+```
 
 #### `data/opening-locations.json`
 
@@ -917,7 +919,7 @@ A working file to rename characters in the script.
       "text": [
         {
           "name": "string",
-          "count": integer,
+          "text": "string",
           "lang": "string", // optional
           "translation": "string", //optional
           "type": "string" // optional
