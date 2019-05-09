@@ -476,15 +476,15 @@
           "location": "string",
           "subLocation": "string",
           "altLocation": "string",
-          "flashback": true,
-          "greensight": true,
-          "warg": true,
+          "flashback": Boolean,
+          "greensight": Boolean,
+          "warg": Boolean,
           "characters": [
             {
               "name": "string",
               "title": "Hand | Khal | Khaleesi | King",
-              "alive": false,
-              "born": false,
+              "alive": Boolean,
+              "born": Boolean,
               "weapon": [
                 {
                   "action": "string",
@@ -502,7 +502,7 @@
                 "to": "string",
                 "when": "string",
                 "type": "string",
-                "consummated": true
+                "consummated": Boolean
               },
               "mannerOfDeath": "string",
               "killedBy": [
@@ -547,8 +547,8 @@
         ...
       ],
       "nickname": "string",
-      "royal": true,
-      "kingsguard": true,
+      "royal": Boolean,
+      "kingsguard": Boolean,
       "parents": [
         "string",
         ...
@@ -627,7 +627,7 @@
   "include":[
     {
       "name": "string",
-      "include": true
+      "include": Boolean
     },
     ...
   ]
@@ -650,6 +650,284 @@
   ]
 }
 
+```
+
+#### `data/characters-gender-all.json`
+```javascript
+{
+  "male": [
+    "string",
+    ...
+  ],
+  "female": [
+    "string",
+    ...
+  ]
+}
+```
+
+#### `data/characters-gender.json`
+```javascript
+{
+  "gender": [
+    {
+      "gender":"male",
+      "characters": [
+        "string",
+        ...
+      ]
+    },
+    {
+      "gender":"female",
+      "characters": [
+        "string",
+        ...
+      ]
+    }
+  ]
+}
+```
+
+#### `data/colors.json`
+```javascript
+{
+  "colors": [
+    {
+      "name": "string",
+      "hexadecimal": "string",
+      "webSafe": "string",
+      "basic": "string",
+      "rgb": "string",
+      "class": [
+        "string"
+      ],
+      "css": {
+        "stroke-width": "string",
+        "stroke-dasharray": "string",
+        "stroke-linecap": "string"
+      }
+    },
+    ...
+  ]
+}
+```
+
+#### `data/costars.json`
+```javascript
+{
+  "IMDB_ID": {
+    "imdb_id": "string",
+    "title": "string",
+    "year": "string",
+    "actors": [
+      {
+        "personID": "string",
+        "actorName": "string",
+        "characterName": "string"
+      },
+      ...
+    ]
+  },
+  ...
+}
+```
+
+#### `data/heatmap.json`
+
+A pre-processed file for the `heatmap/` visualization:
+
+```javascript
+[
+  {
+    "name": "string",
+    "count": [
+      {
+        "x1": integer,
+        "x2": integer,
+        "z": integer
+      },
+      ...
+    ]
+  },
+  ...
+]
+```
+
+#### `data/keyValues.json`
+
+A pre-processed file for the `map/` visualization:
+
+```javascript
+{
+  "characters": {
+    "CharacterName": {
+      "key": "string",
+      "values": [
+        {
+          "s": integer,
+          "e": integer,
+          "y": integer
+        },
+        ...
+      ]
+    },
+    ...
+  },
+  "episodes": [
+    {
+      "seasonNum": integer,
+      "length": integer,
+      "shift": integer,
+      "episodes":[
+        {
+          "episodeNum": integer,
+          "length": integer,
+          "episodeTitle": "string",
+          "shift": integer
+        },
+        ...
+      ]
+    },
+    ...
+  ],
+  "locations": [
+    {
+      "name": "string",
+      "max": integer,
+      "middle": integer
+    },
+    ...
+  ],
+  "sublocations": [
+    {
+      "name": "string",
+      "max": integer,
+      "middle": integer
+    },
+    ...
+  ]
+}
+```
+
+#### `data/lands-of-ice-and-fire.json`
+
+A GeoJSON file for geographic visualizations.
+
+It's better to just go look at the file if you're curious.
+
+#### `data/opening-locations.json`
+
+A data file for the `opening-locations-fixed/` visualization:
+
+```javascript
+{
+  "note": "string",
+  "locations": [
+    {
+      "name": "string",
+      "fx": float,
+      "fy": float
+    },
+    ...
+  ]
+}
+```
+
+#### `data/wordcount-gender.json`
+
+```javascript
+{
+  "male": [
+    "string",
+    ...
+  ],
+  "female": [
+    "string",
+    ...
+  ],
+  "crowd": [
+    "string",
+    ...
+  ]
+}
+```
+
+#### `data/wordcount-synonyms.json`
+
+A working file to rename characters in the script.
+
+```javascript
+{
+  "synonyms": [
+    {
+      "accepted": "string",
+      "alt": [
+        "string",
+        ...
+      ]
+    },
+    ...
+  ],
+  "groups": [
+    "string",
+    ...
+  ], 
+  "others": [
+    "string",
+    ...
+  ]
+}
+```
+
+#### `data/wordcount.json`
+
+```javascript
+{
+  "count": [
+    {
+      "episodeAlt": "string",
+      "seasonNum": integer,
+      "episodeNum": integer,
+      "episodeTitle": "string",
+      "text": [
+        {
+          "name": "string",
+          "count": integer,
+          "lang": "string", // optional
+          "type": "string" // optional
+        },
+        ...
+      ]
+    },
+    ...
+  ]
+} 
+```
+
+#### `data/script-bag-of-words.json`
+
+```javascript
+{
+  "count": [
+    {
+      "episodeAlt": "string",
+      "seasonNum": integer,
+      "episodeNum": integer,
+      "episodeTitle": "string",
+      "text": [
+        {
+          "name": "string",
+          "count": integer,
+          "lang": "string", // optional
+          "translation": "string", //optional
+          "type": "string" // optional
+        },
+        ...
+      ]
+    },
+    ...
+  ]
+} 
 ```
 
 ## Use, Licensing, Attribution
