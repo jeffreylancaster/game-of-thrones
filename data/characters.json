@@ -212,7 +212,10 @@
             "Black Walder Rivers",
             "Lothar Frey",
             "Walder Frey",
-            "Petyr Baelish"
+            "Petyr Baelish",
+            "The Night King",
+            "White Walker",
+            "Viserion"
          ],
          "parents":[
             "Eddard Stark",
@@ -332,7 +335,8 @@
             }
          ],
          "killedBy":[
-            "Sandor Clegane"
+            "Sandor Clegane",
+            "Wights"
          ]
       },
       {
@@ -945,7 +949,10 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTY1MjQ4ODAwNV5BMl5BanBnXkFtZTcwMTc5NDk4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0305008/",
          "actorName":"Ben Crompton",
-         "actorLink":"/name/nm0174005/"
+         "actorLink":"/name/nm0174005/",
+         "killedBy":[
+            "Wight"
+         ]
       },
       {
          "characterName":"Edmure Tully",
@@ -1018,7 +1025,8 @@
          "killed":[
             "Balon Greyjoy",
             "Obara Sand",
-            "Nymeria Sand"
+            "Nymeria Sand",
+            "Rhaegal"
          ],
          "siblings":[
             "Balon Greyjoy",
@@ -1286,7 +1294,8 @@
             "Hugh of the Vale",
             "Oberyn Martell",
             "King's Landing Boaster",
-            "Faith Militant"
+            "Faith Militant",
+            "Missandei"
          ]
       },
       {
@@ -1781,6 +1790,9 @@
          ],
          "parents":[
             "Jeor Mormont"
+         ],
+         "killedBy":[
+            "Wights"
          ]
       },
       {
@@ -2353,7 +2365,13 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTY3MWNmYjAtZjZhYi00M2IzLWJjNDMtMjUzZmU3NTYyYWUxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg",
          "characterLink":"/character/ch0541884/",
          "actorName":"Bella Ramsey",
-         "actorLink":"/name/nm8165602/"
+         "actorLink":"/name/nm8165602/",
+         "killedBy":[
+            "Wun Wun"
+         ],
+         "killed":[
+            "Wun Wun"
+         ]
       },
       {
          "characterName":"Lyanna Stark",
@@ -2438,7 +2456,7 @@
          "actorName":"Peter Vaughan",
          "actorLink":"/name/nm0891092/",
          "killedBy":[
-            "Natural Causes"
+            "Old Age"
          ]
       },
       {
@@ -2683,6 +2701,9 @@
             "Axell Florent",
             "Mance Rayder",
             "Shireen Baratheon"
+         ],
+         "killedBy":[
+            "Old Age"
          ]
       },
       {
@@ -2762,6 +2783,9 @@
          "actorLink":"/name/nm2812026/",
          "serves":[
             "Daenerys Targaryen"
+         ],
+         "killedBy":[
+            "Gregor Clegane"
          ]
       },
       {
@@ -3483,6 +3507,9 @@
          "killed":[
             "Pyat Pree",
             "Great Master #1"
+         ],
+         "killedBy":[
+            "Euron Greyjoy"
          ]
       },
       {
@@ -4275,7 +4302,11 @@
          "killed":[
             "Three-Eyed Raven",
             "Viserion",
-            "Ned Umber"
+            "Ned Umber",
+            "Theon Greyjoy"
+         ],
+         "killedBy":[
+            "Arya Stark"
          ]
       },
       {
@@ -4335,6 +4366,9 @@
          ],
          "parents":[
             "Balon Greyjoy"
+         ],
+         "killedBy":[
+            "The Night King"
          ]
       },
       {
@@ -4594,7 +4628,8 @@
             "Great Master #1"
          ],
          "killedBy":[
-            "The Night King"
+            "The Night King",
+            "Arya Stark"
          ]
       },
       {
@@ -4807,7 +4842,11 @@
          "actorName":"Ian Whyte",
          "actorLink":"/name/nm1613839/",
          "killedBy":[
-            "Ramsay Snow"
+            "Ramsay Snow",
+            "Lyanna Mormont"
+         ],
+         "killed":[
+            "Lyanna Mormont"
          ]
       },
       {
