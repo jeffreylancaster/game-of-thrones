@@ -51051,15 +51051,2494 @@
       {
          "seasonNum":8,
          "episodeNum":5,
-         "episodeTitle":"Episode #8.5",
+         "episodeTitle":"The Bells",
          "episodeLink":"/title/tt6027916/",
          "episodeAirDate":"2019-05-12",
-         "episodeDescription":"",
+         "episodeDescription":"Daenerys and Cersei weigh their options as an epic conflict looms at King's Landing.",
          "openingSequenceLocations":[
-
+            "Last Hearth",
+            "Winterfell",
+            "King's Landing"
          ],
          "scenes":[
-
+            {
+               "sceneStart":"0:04:45",
+               "sceneEnd":"0:05:19",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:05:19",
+               "sceneEnd":"0:06:12",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Lord Varys"},
+                  {"name":"Martha"}
+               ]
+            },
+            {
+               "sceneStart":"0:06:12",
+               "sceneEnd":"0:06:18",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:06:18",
+               "sceneEnd":"0:06:24",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:06:24",
+               "sceneEnd":"0:06:28",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:06:28",
+               "sceneEnd":"0:08:17",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Lord Varys"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:08:17",
+               "sceneEnd":"0:08:27",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Lord Varys"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:08:27",
+               "sceneEnd":"0:08:42",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:08:42",
+               "sceneEnd":"0:11:35",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"}
+               ]
+            },
+            {
+               "sceneStart":"0:11:35",
+               "sceneEnd":"0:12:12",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Lord Varys"}
+               ]
+            },
+            {
+               "sceneStart":"0:12:12",
+               "sceneEnd":"0:12:21",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Lord Varys"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:12:21",
+               "sceneEnd":"0:12:40",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Lord Varys"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:12:40",
+               "sceneEnd":"0:14:28",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Lord Varys"},
+                  {"name":"Grey Worm"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"}
+               ]
+            },
+            {
+               "sceneStart":"0:14:28",
+               "sceneEnd":"0:15:15",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {
+                     "name":"Lord Varys",
+                     "alive":false,
+                     "mannerOfDeath":"Dragon",
+                     "killedBy":[
+                        "Daenerys Targaryen"
+                     ]
+                  },
+                  {"name":"Grey Worm"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:15:15",
+               "sceneEnd":"0:15:20",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Grey Worm"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:15:20",
+               "sceneEnd":"0:16:22",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Grey Worm"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"}
+               ]
+            },
+            {
+               "sceneStart":"0:16:22",
+               "sceneEnd":"0:16:53",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Grey Worm"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Jon Snow"}
+               ]
+            },
+            {
+               "sceneStart":"0:16:53",
+               "sceneEnd":"0:18:48",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Jon Snow"}
+               ]
+            },
+            {
+               "sceneStart":"0:18:48",
+               "sceneEnd":"0:20:20",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:20:20",
+               "sceneEnd":"0:21:21",
+               "location":"The Crownlands",
+               "subLocation":"Dragonstone",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:21:21",
+               "sceneEnd":"0:21:31",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Eleanor"},
+                  {"name":"Eleanor's Daughter"}
+               ]
+            },
+            {
+               "sceneStart":"0:21:31",
+               "sceneEnd":"0:21:44",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:21:44",
+               "sceneEnd":"0:22:05",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:22:05",
+               "sceneEnd":"0:22:14",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:22:14",
+               "sceneEnd":"0:22:19",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:22:19",
+               "sceneEnd":"0:22:37",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:22:37",
+               "sceneEnd":"0:22:51",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:22:51",
+               "sceneEnd":"0:23:00",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:23:00",
+               "sceneEnd":"0:23:36",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Northern Guard"}
+               ]
+            },
+            {
+               "sceneStart":"0:23:36",
+               "sceneEnd":"0:24:37",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Unsullied Soldier"}
+               ]
+            },
+            {
+               "sceneStart":"0:24:37",
+               "sceneEnd":"0:24:42",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:24:42",
+               "sceneEnd":"0:29:16",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:29:16",
+               "sceneEnd":"0:29:21",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:29:21",
+               "sceneEnd":"0:29:43",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:29:43",
+               "sceneEnd":"0:29:49",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:29:49",
+               "sceneEnd":"0:30:01",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+                  {"name":"Euron Greyjoy"}
+               ]
+            },
+            {
+               "sceneStart":"0:30:01",
+               "sceneEnd":"0:30:21",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:30:21",
+               "sceneEnd":"0:30:46",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:30:46",
+               "sceneEnd":"0:31:06",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:31:06",
+               "sceneEnd":"0:31:33",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:31:33",
+               "sceneEnd":"0:31:48",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:31:48",
+               "sceneEnd":"0:31:54",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:31:54",
+               "sceneEnd":"0:31:59",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:31:59",
+               "sceneEnd":"0:32:15",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:32:15",
+               "sceneEnd":"0:32:39",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Harry Strickland"}
+               ]
+            },
+            {
+               "sceneStart":"0:32:39",
+               "sceneEnd":"0:32:45",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Davos Seaworth"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:32:45",
+               "sceneEnd":"0:33:17",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Davos Seaworth"},
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:33:17",
+               "sceneEnd":"0:33:30",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:33:30",
+               "sceneEnd":"0:33:39",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Qyburn", "title":"Hand"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"0:33:39",
+               "sceneEnd":"0:33:52",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:33:52",
+               "sceneEnd":"0:34:10",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Eleanor"},
+                  {"name":"Eleanor's Daughter"},
+                  {"name":"Sandor Clegane"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:34:10",
+               "sceneEnd":"0:34:25",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Eleanor"},
+                  {"name":"Eleanor's Daughter"}
+               ]
+            },
+            {
+               "sceneStart":"0:34:25",
+               "sceneEnd":"0:34:29",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:34:29",
+               "sceneEnd":"0:35:06",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:35:06",
+               "sceneEnd":"0:35:12",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:35:12",
+               "sceneEnd":"0:35:18",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:35:18",
+               "sceneEnd":"0:35:22",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:35:22",
+               "sceneEnd":"0:35:32",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:35:32",
+               "sceneEnd":"0:35:51",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+                  {"name":"Euron Greyjoy"}
+               ]
+            },
+            {
+               "sceneStart":"0:35:51",
+               "sceneEnd":"0:36:04",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+                  {"name":"Euron Greyjoy"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:36:04",
+               "sceneEnd":"0:36:07",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:36:07",
+               "sceneEnd":"0:36:10",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+                  {"name":"Euron Greyjoy"}
+               ]
+            },
+            {
+               "sceneStart":"0:36:10",
+               "sceneEnd":"0:36:13",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:36:13",
+               "sceneEnd":"0:36:50",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+                  {"name":"Euron Greyjoy"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:36:50",
+               "sceneEnd":"0:37:00",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:37:00",
+               "sceneEnd":"0:37:09",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:37:09",
+               "sceneEnd":"0:37:12",
+               "location":"The Crownlands",
+               "subLocation":"Blackwater Bay",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:37:12",
+               "sceneEnd":"0:37:19",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:37:19",
+               "sceneEnd":"0:37:21",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:37:21",
+               "sceneEnd":"0:37:27",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:37:27",
+               "sceneEnd":"0:37:29",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:37:29",
+               "sceneEnd":"0:37:32",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:37:32",
+               "sceneEnd":"0:37:37",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:37:37",
+               "sceneEnd":"0:38:12",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Harry Strickland"},
+                  {"name":"Grey Worm"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:38:12",
+               "sceneEnd":"0:38:29",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Harry Strickland"},
+                  {"name":"Grey Worm"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Davos Seaworth"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:38:29",
+               "sceneEnd":"0:38:33",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Harry Strickland"},
+                  {"name":"Grey Worm"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:38:33",
+               "sceneEnd":"0:38:43",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:38:43",
+               "sceneEnd":"0:39:11",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Harry Strickland",
+                     "alive":false,
+                     "mannerOfDeath":"Back stab",
+                     "killedBy":[
+                        "Grey Worm"
+                     ]
+                  },
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:39:11",
+               "sceneEnd":"0:39:39",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:39:39",
+               "sceneEnd":"0:39:42",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:39:42",
+               "sceneEnd":"0:39:52",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:39:52",
+               "sceneEnd":"0:39:55",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:39:55",
+               "sceneEnd":"0:40:01",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:40:01",
+               "sceneEnd":"0:40:16",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:40:16",
+               "sceneEnd":"0:40:19",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:40:19",
+               "sceneEnd":"0:40:24",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:40:24",
+               "sceneEnd":"0:40:35",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:40:35",
+               "sceneEnd":"0:40:44",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:40:44",
+               "sceneEnd":"0:40:59",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:40:59",
+               "sceneEnd":"0:41:02",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:41:02",
+               "sceneEnd":"0:41:38",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Qyburn", "title":"Hand"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"0:41:38",
+               "sceneEnd":"0:41:41",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Qyburn", "title":"Hand"},
+                  {"name":"Gregor Clegane"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:41:41",
+               "sceneEnd":"0:41:53",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Qyburn", "title":"Hand"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"0:41:53",
+               "sceneEnd":"0:42:23",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Grey Worm"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:42:23",
+               "sceneEnd":"0:42:46",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Grey Worm"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:42:46",
+               "sceneEnd":"0:43:02",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:02",
+               "sceneEnd":"0:43:11",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:11",
+               "sceneEnd":"0:43:17",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:17",
+               "sceneEnd":"0:43:21",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:21",
+               "sceneEnd":"0:43:31",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:43:31",
+               "sceneEnd":"0:43:40",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:40",
+               "sceneEnd":"0:43:45",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:43:45",
+               "sceneEnd":"0:43:49",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:43:49",
+               "sceneEnd":"0:44:04",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:44:04",
+               "sceneEnd":"0:44:10",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:44:10",
+               "sceneEnd":"0:44:12",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:44:12",
+               "sceneEnd":"0:44:34",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:44:34",
+               "sceneEnd":"0:44:39",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:44:39",
+               "sceneEnd":"0:44:52",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:44:52",
+               "sceneEnd":"0:44:58",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:44:58",
+               "sceneEnd":"0:45:13",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:13",
+               "sceneEnd":"0:45:21",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:21",
+               "sceneEnd":"0:45:28",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:28",
+               "sceneEnd":"0:45:31",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:31",
+               "sceneEnd":"0:45:36",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:36",
+               "sceneEnd":"0:45:41",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:41",
+               "sceneEnd":"0:45:45",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:45",
+               "sceneEnd":"0:45:49",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:45:49",
+               "sceneEnd":"0:46:00",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:00",
+               "sceneEnd":"0:46:08",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:46:08",
+               "sceneEnd":"0:46:13",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:13",
+               "sceneEnd":"0:46:21",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:21",
+               "sceneEnd":"0:46:31",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:31",
+               "sceneEnd":"0:46:37",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:46:37",
+               "sceneEnd":"0:46:51",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:51",
+               "sceneEnd":"0:46:53",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:53",
+               "sceneEnd":"0:46:58",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:46:58",
+               "sceneEnd":"0:47:02",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:47:02",
+               "sceneEnd":"0:47:12",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:47:12",
+               "sceneEnd":"0:47:14",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:47:14",
+               "sceneEnd":"0:47:17",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:47:17",
+               "sceneEnd":"0:47:21",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:47:21",
+               "sceneEnd":"0:47:30",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:47:30",
+               "sceneEnd":"0:47:32",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:47:32",
+               "sceneEnd":"0:47:36",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:47:36",
+               "sceneEnd":"0:48:00",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Grey Worm"},
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:48:00",
+               "sceneEnd":"0:48:16",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:48:16",
+               "sceneEnd":"0:48:28",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:48:28",
+               "sceneEnd":"0:48:30",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:48:30",
+               "sceneEnd":"0:48:39",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:48:39",
+               "sceneEnd":"0:48:44",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:48:44",
+               "sceneEnd":"0:49:05",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Grey Worm"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:05",
+               "sceneEnd":"0:49:12",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:12",
+               "sceneEnd":"0:49:15",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:49:15",
+               "sceneEnd":"0:49:22",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:22",
+               "sceneEnd":"0:49:25",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:25",
+               "sceneEnd":"0:49:31",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:31",
+               "sceneEnd":"0:49:34",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Tyrion Lannister", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:34",
+               "sceneEnd":"0:49:38",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:38",
+               "sceneEnd":"0:49:52",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:49:52",
+               "sceneEnd":"0:49:56",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"0:49:56",
+               "sceneEnd":"0:50:02",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:50:02",
+               "sceneEnd":"0:50:35",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:50:35",
+               "sceneEnd":"0:50:41",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:50:41",
+               "sceneEnd":"0:51:18",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:51:18",
+               "sceneEnd":"0:51:26",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:51:26",
+               "sceneEnd":"0:51:44",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:51:44",
+               "sceneEnd":"0:51:53",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:51:53",
+               "sceneEnd":"0:51:57",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:51:57",
+               "sceneEnd":"0:52:00",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:52:00",
+               "sceneEnd":"0:52:04",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:52:04",
+               "sceneEnd":"0:52:08",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:52:08",
+               "sceneEnd":"0:52:10",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"0:52:10",
+               "sceneEnd":"0:52:14",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:52:14",
+               "sceneEnd":"0:52:24",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"}
+               ]
+            },
+            {
+               "sceneStart":"0:52:24",
+               "sceneEnd":"0:53:11",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"},
+                  {"name":"Euron Greyjoy"}
+               ]
+            },
+            {
+               "sceneStart":"0:53:11",
+               "sceneEnd":"0:53:13",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"0:53:13",
+               "sceneEnd":"0:53:32",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:53:32",
+               "sceneEnd":"0:53:34",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"0:53:34",
+               "sceneEnd":"0:54:48",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"},
+                  {"name":"Euron Greyjoy"}
+               ]
+            },
+            {
+               "sceneStart":"0:54:48",
+               "sceneEnd":"0:55:43",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Gregor Clegane"},
+                  {"name":"Qyburn", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:55:43",
+               "sceneEnd":"0:57:00",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"},
+                  {"name":"Euron Greyjoy"}
+               ]
+            },
+            {
+               "sceneStart":"0:57:00",
+               "sceneEnd":"0:57:11",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Euron Greyjoy",
+                     "alive":false,
+                     "mannerOfDeath":"Gut stab",
+                     "killedBy":[
+                        "Jaime Lannister"
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:57:11",
+               "sceneEnd":"0:57:23",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"0:57:23",
+               "sceneEnd":"0:58:48",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:58:48",
+               "sceneEnd":"0:58:53",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"0:58:53",
+               "sceneEnd":"0:59:34",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Gregor Clegane"},
+                  {"name":"Qyburn", "title":"Hand"}
+               ]
+            },
+            {
+               "sceneStart":"0:59:34",
+               "sceneEnd":"1:00:28",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Gregor Clegane"},
+                  {
+                     "name":"Qyburn",
+                     "title":"Hand",
+                     "alive":false,
+                     "mannerOfDeath":"Neck snap",
+                     "killedBy":[
+                        "Gregor Clegane"
+                     ]
+                  },
+                  {"name":"Sandor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:00:28",
+               "sceneEnd":"1:00:48",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"},
+                  {"name":"Gregor Clegane"},
+                  {"name":"Qyburn", "title":"Hand", "alive":false},
+                  {"name":"Sandor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:00:48",
+               "sceneEnd":"1:00:51",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Gregor Clegane"},
+                  {"name":"Qyburn", "title":"Hand", "alive":false},
+                  {"name":"Sandor Clegane"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"1:00:51",
+               "sceneEnd":"1:01:36",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Gregor Clegane"},
+                  {"name":"Sandor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:01:36",
+               "sceneEnd":"1:01:58",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"1:01:58",
+               "sceneEnd":"1:03:36",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Jaime Lannister"},
+                  {"name":"Cersei Lannister", "title":"King"}
+               ]
+            },
+            {
+               "sceneStart":"1:03:36",
+               "sceneEnd":"1:04:47",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Gregor Clegane"},
+                  {"name":"Sandor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:04:47",
+               "sceneEnd":"1:05:56",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:05:56",
+               "sceneEnd":"1:06:00",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"1:06:00",
+               "sceneEnd":"1:06:20",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:06:20",
+               "sceneEnd":"1:06:23",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:06:23",
+               "sceneEnd":"1:06:25",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:06:25",
+               "sceneEnd":"1:06:28",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:06:28",
+               "sceneEnd":"1:06:29",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:06:29",
+               "sceneEnd":"1:06:31",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:06:31",
+               "sceneEnd":"1:06:33",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:06:33",
+               "sceneEnd":"1:06:35",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:06:35",
+               "sceneEnd":"1:06:37",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:06:37",
+               "sceneEnd":"1:06:41",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:06:41",
+               "sceneEnd":"1:06:42",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:06:42",
+               "sceneEnd":"1:06:47",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:06:47",
+               "sceneEnd":"1:06:49",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:06:49",
+               "sceneEnd":"1:06:53",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:06:53",
+               "sceneEnd":"1:07:21",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Eleanor"},
+                  {"name":"Eleanor's Daughter"}
+               ]
+            },
+            {
+               "sceneStart":"1:07:21",
+               "sceneEnd":"1:07:26",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:07:26",
+               "sceneEnd":"1:08:54",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Sandor Clegane"},
+                  {"name":"Gregor Clegane"}
+               ]
+            },
+            {
+               "sceneStart":"1:08:54",
+               "sceneEnd":"1:09:07",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Sandor Clegane",
+                     "alive":false,
+                     "mannerOfDeath":"Fire and fall",
+                     "killedBy":[
+                        "Sandor Clegane"
+                     ]
+                  },
+                  {
+                     "name":"Gregor Clegane",
+                     "alive":false,
+                     "mannerOfDeath":"Fire and fall",
+                     "killedBy":[
+                        "Sandor Clegane"
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:09:07",
+               "sceneEnd":"1:09:16",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:09:16",
+               "sceneEnd":"1:09:20",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"1:09:20",
+               "sceneEnd":"1:09:21",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"1:09:21",
+               "sceneEnd":"1:09:24",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+               ]
+            },
+            {
+               "sceneStart":"1:09:24",
+               "sceneEnd":"1:09:48",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"1:09:48",
+               "sceneEnd":"1:09:50",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"},
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"1:09:50",
+               "sceneEnd":"1:09:53",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jon Snow",
+                     "weapon":[
+                        {"action":"has", "name":"Longclaw"}
+                     ]
+                  },
+                  {"name":"Davos Seaworth"}
+               ]
+            },
+            {
+               "sceneStart":"1:09:53",
+               "sceneEnd":"1:10:05",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"1:10:05",
+               "sceneEnd":"1:11:10",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:11:10",
+               "sceneEnd":"1:12:45",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Eleanor"},
+                  {"name":"Eleanor's Daughter"}
+               ]
+            },
+            {
+               "sceneStart":"1:12:45",
+               "sceneEnd":"1:13:09",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Eleanor"},
+                  {"name":"Eleanor's Daughter"},
+                  {"name":"Daenerys Targaryen", "title":"Khaleesi"},
+                  {"name":"Drogon"}
+               ]
+            },
+            {
+               "sceneStart":"1:12:45",
+               "sceneEnd":"1:13:12",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {
+                     "name":"Eleanor",
+                     "alive":false,
+                     "mannerOfDeath":"Dragon",
+                     "killedBy":[
+                        "Daenerys Targaryen"
+                     ]
+                  },
+                  {
+                     "name":"Eleanor's Daughter",
+                     "alive":false,
+                     "mannerOfDeath":"Dragon",
+                     "killedBy":[
+                        "Daenerys Targaryen"
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:13:12",
+               "sceneEnd":"1:15:37",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Jaime Lannister",
+                     "alive":false,
+                     "mannerOfDeath":"Crushed via roof collapse"
+                  },
+                  {
+                     "name":"Cersei Lannister",
+                     "title":"King",
+                     "alive":false,
+                     "mannerOfDeath":"Crushed via roof collapse"
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:15:37",
+               "sceneEnd":"1:17:14",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            },
+            {
+               "sceneStart":"1:17:14",
+               "sceneEnd":"1:17:39",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  },
+                  {"name":"Eleanor", "alive":false},
+                  {"name":"Eleanor's Daughter", "alive":false}
+               ]
+            },
+            {
+               "sceneStart":"1:17:39",
+               "sceneEnd":"1:19:24",
+               "location":"The Crownlands",
+               "subLocation":"King's Landing",
+               "characters":[
+                  {
+                     "name":"Arya Stark",
+                     "weapon":[
+                        {"action":"has", "name":"Needle"},
+                        {"action":"has", "name":"Valyrian Steel Dagger"}
+                     ]
+                  }
+               ]
+            }
          ]
       },
       {

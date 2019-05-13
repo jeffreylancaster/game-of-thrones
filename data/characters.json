@@ -595,6 +595,9 @@
             "Margaery Tyrell",
             "Kevan Lannister",
             "Tyene Sand"
+         ],
+         "killedBy":[
+            "Roof collapse"
          ]
       },
       {
@@ -695,7 +698,10 @@
             "Dothraki Bloodrider #1",
             "Dothraki Bloodrider #2",
             "Randyll Tarly",
-            "Dickon Tarly"
+            "Dickon Tarly",
+            "Eleanor",
+            "Eleanor's Daughter",
+            "Lord Varys"
          ],
          "servedBy":[
             "Barristan Selmy",
@@ -1031,6 +1037,9 @@
          "siblings":[
             "Balon Greyjoy",
             "Aeron Greyjoy"
+         ],
+         "killedBy":[
+            "Jaime Lannister"
          ]
       },
       {
@@ -1295,7 +1304,11 @@
             "Oberyn Martell",
             "King's Landing Boaster",
             "Faith Militant",
-            "Missandei"
+            "Missandei",
+            "Qyburn"
+         ],
+         "killedBy":[
+            "Sandor Clegane"
          ]
       },
       {
@@ -1352,7 +1365,8 @@
          "actorLink":"/name/nm2760664/",
          "killed":[
             "Belicho Paenymion",
-            "Razdal mo Eraz"
+            "Razdal mo Eraz",
+            "Harry Strickland"
          ],
          "serves":[
             "Daenerys Targaryen"
@@ -1401,7 +1415,10 @@
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGVkZjRkMzUtMzgzYy00YzcyLThhZmMtNDMxMGNmNGRmNWQyXkEyXkFqcGdeQXVyNDgzNTg0OTA@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGVkZjRkMzUtMzgzYy00YzcyLThhZmMtNDMxMGNmNGRmNWQyXkEyXkFqcGdeQXVyNDgzNTg0OTA@._V1_.jpg",
          "actorName":"Marc Rissmann",
-         "actorLink":"/name/nm4704928/"
+         "actorLink":"/name/nm4704928/",
+         "killedBy":[
+            "Grey Worm"
+         ]
       },
       {
          "characterName":"High Priestess",
@@ -1588,11 +1605,15 @@
             "Jory Cassel",
             "Alton Lannister",
             "Torrhen Karstark",
-            "Olenna Tyrell"
+            "Olenna Tyrell",
+            "Euron Greyjoy"
          ],
          "siblings":[
             "Cersei Lannister",
             "Tyrion Lannister"
+         ],
+         "killedBy":[
+            "Roof collapse"
          ]
       },
       {
@@ -2306,7 +2327,10 @@
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzNDk2MjczM15BMl5BanBnXkFtZTcwODk0ODg4OQ@@._V1_.jpg",
          "characterLink":"/character/ch0249636/",
          "actorName":"Conleth Hill",
-         "actorLink":"/name/nm0384152/"
+         "actorLink":"/name/nm0384152/",
+         "killedBy":[
+            "Daenerys Targaryen"
+         ]
       },
       {
          "characterName":"Lordsport Dockhand",
@@ -3337,6 +3361,9 @@
          "actorLink":"/name/nm0504320/",
          "serves":[
             "Cersei Lannister"
+         ],
+         "killedBy":[
+            "Gregor Clegane"
          ]
       },
       {
@@ -3887,10 +3914,15 @@
             "Riddell",
             "Gatins",
             "Morgan",
-            "Lem Lemoncloak"
+            "Lem Lemoncloak",
+            "Gregor Clegane",
+            "Sandor Clegane"
          ],
          "siblings":[
             "Gregor Clegane"
+         ],
+         "killedBy":[
+            "Sandor Clegane"
          ]
       },
       {

@@ -15495,10 +15495,10 @@
 		"text": "Grace. He Your was,",
 		"name": "Petyr Baelish"
 	}, {
-		"text": "\"Your And Calling Grace.\" I King King, Queen. Renly a a doesn't if make one. wasn't wasn't you yourself",
+		"text": "\"Your And Calling Grace.\" I King Renly a a doesn't if king, make one. queen. wasn't wasn't you yourself",
 		"name": "Margaery Tyrell"
 	}, {
-		"text": "Do Queen? a be to want you",
+		"text": "Do a be queen? to want you",
 		"name": "Petyr Baelish"
 	}, {
 		"text": "I No. Queen. be the to want",
@@ -15546,10 +15546,10 @@
 		"text": "Schemes They We and are are attack be going need plots ready. same the thing. to to us.",
 		"name": "Tyrion Lannister"
 	}, {
-		"text": "No The charge concern is it. king need of over personal preparations. siege taking to yourself",
+		"text": "King No The charge concern is it. need of over personal preparations. siege taking to yourself",
 		"name": "Cersei Lannister"
 	}, {
-		"text": "I May ask has in king mind? specifically the what",
+		"text": "I King May ask has in mind? specifically the what",
 		"name": "Tyrion Lannister"
 	}, {
 		"text": "The You answer ask be may may, or same. specifically, the vaguely. will you",
@@ -15558,7 +15558,7 @@
 		"text": "It's about important talk that this. we",
 		"name": "Tyrion Lannister"
 	}, {
-		"text": "It's councilors. from his information king's prerogative royal sensitive the to withhold",
+		"text": "It's King's councilors. from his information prerogative royal sensitive the to withhold",
 		"name": "Cersei Lannister"
 	}, {
 		"text": "It's wildfire.",
@@ -15753,7 +15753,7 @@
 		"text": "It's argue assessment. hard his to with",
 		"name": "Tyrion Lannister"
 	}, {
-		"text": "I'm It's Not The a about after birthday cause. did he is king lost now. of present. rest the to us what worried your",
+		"text": "I'm It's King Not The a about after birthday cause. did he is lost now. of present. rest the to us what worried your",
 		"name": "Bronn"
 	}, {
 		"text": "A a blood-stained dancing demon down halls his king monkey. of prancing the to tune twisted",
@@ -15768,7 +15768,7 @@
 		"text": "Demon What? monkey?",
 		"name": "Tyrion Lannister"
 	}, {
-		"text": "People They blame city's for ills. king's pulling strings. the the think you you're",
+		"text": "King's People They blame city's for ills. pulling strings. the the think you you're",
 		"name": "Bronn"
 	}, {
 		"text": "Blame I'm me? save them. to trying",
@@ -16116,7 +16116,9 @@
 		"text": "Hallyne. I I'm King's Landing The Wisdom You You'll advisor, afraid any be be concur contents could for for have it lay longer. low. making making me. my my of room sister this to wildfire with won't",
 		"name": "Tyrion Lannister"
 	}, {
+		"lang": "High Valyrian",
 		"text": "Dracarys. Dracarys.",
+		"translation": "Dragon Dragon fire. fire.",
 		"name": "Daenerys Targaryen"
 	}, {
 		"text": "He'll able be feed from himself now on. to",
@@ -16224,7 +16226,7 @@
 		"text": "It's They're at better good killing men. not only quite the the thing.",
 		"name": "Jorah Mormont"
 	}, {
-		"text": "I'm Queen That's be. going kind not of the to",
+		"text": "I'm That's be. going kind not of queen the to",
 		"name": "Daenerys Targaryen"
 	}, {
 		"text": "A Dragons. I Mother On Qarth, behalf demonstration? of of of the warlocks welcome you.",
@@ -16251,6 +16253,7 @@
 		"text": "Do I know you?",
 		"name": "Jorah Mormont"
 	}, {
+		"check": true,
 		"text": "Bear I Island. Jorah Mormont Who are know of you. you?",
 		"name": "Quaithe"
 	}, {
@@ -16803,6 +16806,7 @@
 		"text": "And You'll a about all as days' few go in tasks time... usual. your",
 		"name": "Theon Greyjoy"
 	}, {
+		"check": true,
 		"text": "Greyjoy!",
 		"name": "Black Lorren"
 	}, {
@@ -17034,7 +17038,16 @@
 		"text": "Thank you.",
 		"name": "Petyr Baelish"
 	}, {
-		"text": "Ah, Baratheon's I I King Murdered Rather Renly Renly. What a a by camp. capital? directly from from hear. here late news reign. short the the traveled woman,",
+		"check": true,
+		"text": "What capital? from news the",
+		"name": "Tywin Lannister"
+	}, {
+		"check": true,
+		"text": "Baratheon's I Renly camp. directly from here traveled",
+		"name": "Petyr Baelish"
+	}, {
+		"check": true,
+		"text": "Ah, I King Murdered Rather Renly. a a by hear. late reign. short the woman,",
 		"name": "Tywin Lannister"
 	}, {
 		"text": "Dark So There at been forces forces. has of other say. talk they work.",
@@ -17316,7 +17329,7 @@
 		"text": "Push hard.",
 		"name": "Kingsguard #3"
 	}, {
-		"text": "Protect king! the",
+		"text": "King! Protect the",
 		"name": "Meryn Trant"
 	}, {
 		"text": "Get back!",
@@ -17367,10 +17380,10 @@
 		"text": "All They They're a a all? at because cow decided fool. kill of pie so started. starving, them threw to war you you you you,",
 		"name": "Tyrion Lannister"
 	}, {
-		"text": "King! You're a talking to",
+		"text": "You're a king! talking to",
 		"name": "Joffrey Baratheon"
 	}, {
-		"text": "And Did I've King. Stark Where a fall from girl? hand is my my now struck the wrist?",
+		"text": "And Did I've Stark Where a fall from girl? hand is king. my my now struck the wrist?",
 		"name": "Tyrion Lannister"
 	}, {
 		"text": "Let have her. them",
@@ -17466,10 +17479,11 @@
 		"text": "I I I I'm a better cannot do fear give have. in no not regard. servant than this what you",
 		"name": "Spice King"
 	}, {
-		"text": "I'm I'm asking asking for for kingdoms. not ships. the you you",
+		"text": "I I'm I'm Narrow Sea. asking asking cross for for kingdoms. need not ships. the the to you you",
 		"name": "Daenerys Targaryen"
 	}, {
-		"text": "I I I Narrow Sea. another. as bring cross from my need need one port see, ships spices the them, to to to use well. you",
+		"check": true,
+		"text": "I I another. as bring from my need one port see, ships spices them, to to use well. you",
 		"name": "Spice King"
 	}, {
 		"text": "I Iron Throne. Whatever be grant me now over repaid retake the three times when will you",
@@ -17646,7 +17660,7 @@
 		"text": "Grace. I'm I'm Westerosi Your a a are bit customs foreign lady. me. not still sure to",
 		"name": "Talisa Maegyr"
 	}, {
-		"text": "But I I It's Queen Unless a a a a all always birth called could find hard if is keep knows. lady. lessons, my noble of or princess. remember rules she's someone straight. the to who woman",
+		"text": "But I I It's Unless a a a a all always birth called could find hard if is keep knows. lady. lessons, my noble of or princess. queen remember rules she's someone straight. the to who woman",
 		"name": "Robb Stark"
 	}, {
 		"text": "I'm Why are birth? noble of so sure you",
@@ -17871,7 +17885,7 @@
 		"text": "Like what?",
 		"name": "Theon Greyjoy"
 	}, {
-		"text": "We free know people. the things,",
+		"text": "Free People. We know the things,",
 		"name": "Osha"
 	}, {
 		"text": "How Like You dirt? eat know things? to what?",
@@ -17898,7 +17912,7 @@
 		"text": "What do life? miserable other than then, want you your",
 		"name": "Theon Greyjoy"
 	}, {
-		"text": "My What all free freedom. people want.",
+		"text": "Free My People What all freedom. want.",
 		"name": "Osha"
 	}, {
 		"text": "But Well, have if it, me only serve shall then. well. you you",
@@ -17928,7 +17942,7 @@
 		"text": "He's It You Your are better children. dead. doesn't eats everything have. he his horse matter never now. than will",
 		"name": "Shae"
 	}, {
-		"text": "I I I any bread given had hate have if it. king more of than the them them! would",
+		"text": "I I I King any bread given had hate have if it. more of than the them them! would",
 		"name": "Sansa Stark"
 	}, {
 		"text": "Don't If hear people say the these things. wrong you...",
@@ -18120,8 +18134,11 @@
 		"text": "I'm Would You a better crow. free me, please shut than think up? woman. you you're",
 		"name": "Ygritte"
 	}, {
-		"text": "I I'm You're a a be but free free might prisoner, woman. woman? your",
+		"text": "You're a free woman?",
 		"name": "Jon Snow"
+	}, {
+		"text": "I I'm a be but free might prisoner, woman. your",
+		"name": "Ygritte"
 	}, {
 		"text": "\"prisoner\" If That's a free means. my not prisoner, what woman. you're you're",
 		"name": "Jon Snow"
@@ -18984,10 +19001,11 @@
 		"text": "And King is now? our where",
 		"name": "Rickard Karstark"
 	}, {
-		"text": "You know very well.",
+		"text": "Crag He You accept gone has know surrender. the the to to very well.",
 		"name": "Catelyn Stark"
 	}, {
-		"text": "Aye, Crag Crag, He He accept bitch brought but foreign gone gone has him. negotiate. not surrender. that the the the to to to to with",
+		"check": true,
+		"text": "Aye, Crag, He bitch brought but foreign gone him. negotiate. not that the to to with",
 		"name": "Rickard Karstark"
 	}, {
 		"text": "How dare you!",
@@ -19005,7 +19023,7 @@
 		"text": "I When demand head. murderer's returns, son this will your",
 		"name": "Rickard Karstark"
 	}, {
-		"text": "Kings. Wise demands do make men not of",
+		"text": "Wise demands do kings. make men not of",
 		"name": "Catelyn Stark"
 	}, {
 		"text": "Fathers I do. have head. his love sons their who will",
@@ -19107,7 +19125,7 @@
 		"text": "King. We're sworn the to",
 		"name": "Stark Man #2"
 	}, {
-		"text": "King. There's a not",
+		"text": "There's a king. not",
 		"name": "Stark Man #1"
 	}, {
 		"text": "That's treason.",
@@ -70548,7 +70566,888 @@
 	"seasonNum": 8,
 	"episodeNum": 5,
 	"episodeTitle": "Episode #8.5",
-	"text": []
+	"text": [{
+		"name": "Lord Varys",
+		"text": "And? Come Nothing? in."
+	}, {
+		"name": "Martha",
+		"text": "She eat. won't"
+	}, {
+		"name": "Lord Varys",
+		"text": "We'll again at supper. try"
+	}, {
+		"name": "Martha",
+		"text": "I me. they're think watching"
+	}, {
+		"name": "Lord Varys",
+		"text": "Who?"
+	}, {
+		"name": "Martha",
+		"text": "Her soldiers."
+	}, {
+		"name": "Lord Varys",
+		"text": "I Martha? Of That's What are. course have job. their they told you,"
+	}, {
+		"name": "Martha",
+		"text": "The greater greater reward. risk, the the the"
+	}, {
+		"name": "Lord Varys",
+		"text": "Go They'll be in kitchen. missing on. the you"
+	}, {
+		"name": "Lord Varys",
+		"text": "Northern The armies?"
+	}, {
+		"name": "Jon Snow",
+		"text": "How Just King's Landing They'll Trident. at be crossed days. in is of she? the the two walls"
+	}, {
+		"name": "Lord Varys",
+		"text": "Hasn't She accepted any anyone chambers, food. hasn't hasn't her left returned. seen since we"
+	}, {
+		"name": "Jon Snow",
+		"text": "She alone. be shouldn't"
+	}, {
+		"name": "Lord Varys",
+		"text": "I You're admire empathy. for her. worried your"
+	}, {
+		"name": "Jon Snow",
+		"text": "Aren't for her? worried you"
+	}, {
+		"name": "Lord Varys",
+		"text": "I'm Targaryen They a a all and born, breath. coin every for gods holds is its of say the the time toss us. world worried"
+	}, {
+		"name": "Jon Snow",
+		"text": "I'm We're for from. much not riddles where"
+	}, {
+		"name": "Lord Varys",
+		"text": "We about both do. know she's to what"
+	}, {
+		"name": "Jon Snow",
+		"text": "Queen. She That's decision her is make. our to"
+	}, {
+		"name": "Lord Varys",
+		"text": "Men decide it. know not or power resides, they where whether"
+	}, {
+		"name": "Jon Snow",
+		"text": "What do want? you"
+	}, {
+		"name": "Lord Varys",
+		"text": "All But I I'm I've Iron The Throne. about certain coin don't ever has her how know landed. on quite right ruler still the wanted. yours."
+	}, {
+		"name": "Jon Snow",
+		"text": "I I don't have. it. never want"
+	}, {
+		"name": "Lord Varys",
+		"text": "But I I I I've and and and any crowds, designs, do furthered have have heard horrible. however in is kings known living. man more now queens rule say seen shadows. she... tell than the their they they to true: well, what what what while will wisely you you"
+	}, {
+		"name": "Jon Snow",
+		"text": "She... is my queen."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Grace? There's Your know. need something to you"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "Someone betrayed has me."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Yes."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "Jon Snow."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Varys."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "He Jon. about knows the truth"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "He does."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "And As Because I I Jon, Sansa. You begged betrayed from from he her. him him. learned learned me. not said... she tell though to told you"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Hand. I I I'm Sansa am any aware be facing. glad me. need of threats to told you're your"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "And Varys?"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Master Whisperers Your aware, be needs of to too."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "Without Without You asking coming first. him me. my permission. spoke to to"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "It a mistake. was"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "Sansa What Why do do gain? hoped she think think to told you you you?"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "She me. trusts"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "And Queen. She Yes, could destroy did down. her let not own secrets she spread that to trusted trusts you you you. your"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "A But I If Our Queen, Varys We all anyone. as as better doesn't failed forgive good. have intentions it matter me. much my now. of us. want. wanted were what world, you you,"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "It No. doesn't matter now."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "It me. was"
+	}, {
+		"name": "Lord Varys",
+		"text": "Goodbye, I I I I I'm Truly, deserve do. friend. hope hope old this. wrong."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "Breaker Chains Daenerys Dragons... First House I, Lord Mother My Name, Targaryen, Varys. and die. of of of of sentence to you"
+	}, {
+		"lang": "High Valyrian",
+		"name": "Daenerys Targaryen",
+		"translation": "Dragon fire.",
+		"text": "Dracarys."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "Her Narrow Sea. This all brought crossed her only possession. she the was we when with"
+	}, {
+		"lang": "High Valyrian",
+		"name": "Daenerys Targaryen",
+		"translation": "It's Let Nudho. Torgo all him. me right, speak with",
+		"text": ""
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "I What did happen if say sister? told would you your"
+	}, {
+		"name": "Jon Snow",
+		"text": "I I and don't him. it, that's told want what"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "Far I I I Now She She This Varys Westeros a about as as betrayed did. don't fear. for happens have have hear her. here. in killed knows love love love me. more much only people people she than the trust. truth victory was what when you you. your"
+	}, {
+		"name": "Jon Snow",
+		"text": "And I Queen. always be love my will you you."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "I Is Queen? Your all am that to you?"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "All Let be fear. it right, then."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Meereen. The They're enemies. in innocents, liberated like live not ones people the there, they're who you your"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "I In Meereen, and arrived. city liberated masters moment on slaves the the the the themselves turned"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Anyone Cersei They're They're You afraid. be butchered. can't expect family heroes. his hostages. resists see them to who will"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "In Mine? They Whose a are. fault grip. is that? tyrant's"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Thousands What burns. children city die does fault if is? it it matter of the whose will"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "That's Your against enemies' her how is: knows mercy our she sister them. thinks to use weakness. weaknesses what"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I Queen... beg my you,"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "But King's Landing Mercy Northern Our Ready Tonight Unsullied. a again armies. be by for future generations held hostage is join mercy never our sail she's strength. the the to towards tyrant. who will wrong. you"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Cersei's Give If Please, abandon and attack. bells bells, call chance. city followers gates. hear her if if is know lost. off raise ring ringing surrenders, that the the the the the the them them they they war will will you"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "Wait You'll city. for it's know me outside the time. when"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "It The Your abandoned after all. be brother fail fail get hasn't he last lines. me. me... next our past seems sister stopped the time time to trying was will you you your"
+	}, {
+		"name": "King's Landing Guard #1",
+		"text": "Let pass. them"
+	}, {
+		"name": "King's Landing Guard #2",
+		"text": "Through gate. the"
+	}, {
+		"name": "King's Landing Guard #3",
+		"text": "Get going."
+	}, {
+		"name": "Davos Seaworth",
+		"text": "The be by daybreak. here rearguard should"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "She attack now. to wants"
+	}, {
+		"name": "Jon Snow",
+		"text": "Daybreak at earliest. the"
+	}, {
+		"name": "Northern Soldier #1",
+		"text": "Careful that. with"
+	}, {
+		"name": "Northern Soldier #2",
+		"text": "My lord."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Davos. I You're a alive, aren't ask favor. greatest need smuggler the to you you?"
+	}, {
+		"name": "Davos Seaworth",
+		"text": "I'm I? am favor, gonna like not this"
+	}, {
+		"name": "Northern Soldier #3",
+		"text": "He's always better food got he's him. in some when"
+	}, {
+		"name": "Northern Soldier #4",
+		"text": "Problem See did drink got he he's him. in is other the week? what when"
+	}, {
+		"name": "Northern Soldier #3",
+		"text": "Aye. Commander Fighting as caught him. nearly well."
+	}, {
+		"name": "Northern Guard #1",
+		"text": "Ay Where going? up. you"
+	}, {
+		"name": "Arya Stark",
+		"text": "Arya Cersei. I'm I'm Queen Stark. going kill to"
+	}, {
+		"name": "Sandor Clegane",
+		"text": "Cersei, She There Think You a about be die even it. kills might not over. siege. the tomorrow. war's won't"
+	}, {
+		"name": "Northern Guard #1",
+		"text": "I captain. go my need talk to to"
+	}, {
+		"name": "Sandor Clegane",
+		"text": "Go ahead, him. talk to"
+	}, {
+		"name": "Northern Soldier #3",
+		"text": "Where's going? he"
+	}, {
+		"lang": "High Valyrian",
+		"name": "Tyrion Lannister",
+		"translation": "I I drink eat eat keeper. keeper. skull skull the the to to want",
+		"text": ""
+	}, {
+		"lang": "High Valyrian",
+		"name": "Tyrion Lannister",
+		"translation": "I see the... to want",
+		"text": ""
+	}, {
+		"name": "Unsullied Soldier #1",
+		"text": "We common speak the tongue."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Ah. Get Good. I Tomorrow a alone be be day. long prisoner. rest. some the to want will with"
+	}, {
+		"name": "Unsullied Soldier #1",
+		"text": "We guard have orders prisoner. the to"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Ordered Queen The by herself? whom?"
+	}, {
+		"name": "Unsullied Soldier #1",
+		"text": "No."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Hand I Probably Queen, Well, a as by case, gave in lot. of order. outrank quite that the whomever your"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Did How consider did find it off? taking they you you?"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "\"the Cersei Lannister.\" called me once stupidest"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And back die going her, her. to to with you're"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "You've before. her underestimated"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "She's Unless action. can change convince course die. going her her of to to you"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Cersei Difficult I When able anything? been convince do ever from have here. of to to"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "If Try. city, every for for for her, if in innocent million not not of one or otherwise. people that the then yourself,"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "I Innocent To be cared for honest, much never or otherwise. really them."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And Cersei. I She You a care do do. does for has innocent. know now. one reason so you"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "All It's The an child children. done done, ever for give her impossible inch. is never not reason she'll she'll she's she's that the the things win. worst"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "She won't."
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Her She's Two are as be. been dead. depleted, dragons enemy's evened forces have odds. of said she the the they three would"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "The city fall tomorrow. will"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Company... Golden Lannister She army, has has she the the"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I I It anyone. attacked. better city defended fall it it know last than the time tomorrow. was will"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "I I'll Then before. die if not suppose tomorrow,"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "A Escape. If Keep Keep? Pentos. Red Remember Sail Start Take The Why? You'll a a are as as at bay. be beach beneath come dinghy down down down, dragon far following foot for go. her it keep keep. kind, life. make met, new of of of onto out out skulls, stairways the the the the the the the there. they they'll to together. two waiting we where where will winds you'll you, you."
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Cersei Fleet Iron Sail Sounds a a and into less life? likely lot new past right than the this war... winning"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Cersei Do Fleet If Iron Swear There again. an be don't, for it. longer. me. much never see to won't you you'll"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "You have my word."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "If King's Landing That all and be bells city gates. give has in it open order our ring signal surrendered. that the the the the to will works,"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "I'll try."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I I'd Remember, and bells favor. gates. get never open repay ring the the the thought to"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Queen Your execute for this. will you"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Daenerys If Tens a a blood, can dwarf... fair innocent innocent it it like lives... made make maybe mercy not of of of one particularly person possible. river seems she'll show that the the thousands throne through to to trade. wading who without"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I If childhood. for it my never survived weren't would've you,"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "You have. would"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I You You a all didn't had. like me monster. one only the treat were were who"
+	}, {
+		"name": "Lannister Soldier #1",
+		"text": "Eyes horizon! on the"
+	}, {
+		"name": "Lannister Soldier #2",
+		"text": "Load scorpion! the"
+	}, {
+		"name": "Lannister Soldier #3",
+		"text": "Archers, close up!"
+	}, {
+		"name": "King's Landing Man #1",
+		"text": "Come on!"
+	}, {
+		"name": "Lannister Soldier #4",
+		"text": "Up espringal! the to"
+	}, {
+		"name": "Lannister Soldier #5",
+		"text": "To back it! of the"
+	}, {
+		"name": "Lannister Soldier #6",
+		"text": "Archers, line up!"
+	}, {
+		"name": "King's Landing Woman #1",
+		"text": "Come This on! way!"
+	}, {
+		"name": "Lannister Soldier #7",
+		"text": "Clear now! streets the"
+	}, {
+		"name": "King's Landing Woman #2",
+		"text": "No!"
+	}, {
+		"name": "King's Landing Man #2",
+		"text": "And In, come now. on. you,"
+	}, {
+		"name": "Lannister Soldier #8",
+		"text": "Inside, now!"
+	}, {
+		"name": "King's Landing Man #2",
+		"text": "Quickly."
+	}, {
+		"name": "Lannister Soldier #9",
+		"text": "Follow Get Keep. Red They're Yes. down here. the there. to"
+	}, {
+		"name": "King's Landing Man #3",
+		"text": "My son!"
+	}, {
+		"name": "Lannister Soldier #10",
+		"text": "Get inside!"
+	}, {
+		"name": "King's Landing Man #4",
+		"text": "I Just ahead can it! of see you,"
+	}, {
+		"name": "Lannister Soldier #11",
+		"text": "All it! move right,"
+	}, {
+		"name": "King's Landing Woman #3",
+		"text": "Come on!"
+	}, {
+		"name": "Lannister Soldier #12",
+		"text": "Keep moving!"
+	}, {
+		"name": "Lannister Soldier #13",
+		"text": "Keep going!"
+	}, {
+		"name": "Lannister Soldier #12",
+		"text": "Keep moving!"
+	}, {
+		"name": "Lannister Soldier #13",
+		"text": "Quickly!"
+	}, {
+		"name": "Lannister Soldier #12",
+		"text": "All the way!"
+	}, {
+		"name": "King's Landing Man #5",
+		"text": "Come on!"
+	}, {
+		"name": "King's Landing Man #6",
+		"text": "Come on!"
+	}, {
+		"name": "King's Landing Man #7",
+		"text": "Hold hand! mother's your"
+	}, {
+		"name": "Lannister Soldier #14",
+		"text": "Close Company! Golden Make for gate! the the way"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Call If bells hear men. off ring, surrendered. the they've you your"
+	}, {
+		"name": "Northern Soldier #5",
+		"text": "Move along lads. now,"
+	}, {
+		"name": "Lannister Soldier #15",
+		"text": "That's it."
+	}, {
+		"name": "Lannister Soldier #16",
+		"text": "Come Come Faster, Go Keep faster. going. it. it. move move move, move. on, on, on,"
+	}, {
+		"name": "Lannister Soldier #15",
+		"text": "Keep moving."
+	}, {
+		"name": "Sandor Clegane",
+		"text": "Move."
+	}, {
+		"name": "Lannister Soldier #15",
+		"text": "Stay him. with"
+	}, {
+		"name": "King's Landing Man #8",
+		"text": "Hold on."
+	}, {
+		"name": "King's Landing Woman #4",
+		"text": "Hold hand. my"
+	}, {
+		"name": "Eleanor",
+		"text": "Get behind there."
+	}, {
+		"name": "Lannister Soldier #16",
+		"text": "Close No gate! more the through."
+	}, {
+		"name": "King's Landing Woman #5",
+		"text": "No."
+	}, {
+		"name": "King's Landing Child",
+		"text": "Mommy. No."
+	}, {
+		"name": "King's Landing Woman #6",
+		"text": "Please! Vicky!"
+	}, {
+		"name": "Eleanor",
+		"text": "No, please, sir!"
+	}, {
+		"name": "King's Landing Man #9",
+		"text": "Open gate! the"
+	}, {
+		"name": "Lannister Soldier #17",
+		"text": "Close gate! the"
+	}, {
+		"name": "King's Landing Man #10",
+		"text": "Open it!"
+	}, {
+		"name": "King's Landing Man #11",
+		"text": "Open gate! the"
+	}, {
+		"name": "Lannister Soldier #18",
+		"text": "Get back."
+	}, {
+		"name": "Eleanor",
+		"text": "Go. Go. Look, one. that try"
+	}, {
+		"name": "Lannister Soldier #19",
+		"text": "The are gates locked now!"
+	}, {
+		"name": "King's Landing Woman #7",
+		"text": "Open!"
+	}, {
+		"name": "Lannister Soldier #19",
+		"text": "Get back!"
+	}, {
+		"name": "King's Landing Woman #7",
+		"text": "Open gate! the"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Soldier! Soldier!"
+	}, {
+		"name": "King's Landing Man #12",
+		"text": "Please gate! open the"
+	}, {
+		"name": "Lannister Soldier #19",
+		"text": "Go It's Stay back back! closed! homes! to your"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Soldier!"
+	}, {
+		"name": "Lannister Soldier #17",
+		"text": "Move Stop! away!"
+	}, {
+		"name": "King's Landing Man #13",
+		"text": "Let We're in! leaving! not us"
+	}, {
+		"name": "Ironborn Soldier #1",
+		"text": "Turn!"
+	}, {
+		"name": "Euron Greyjoy",
+		"text": "Turn around! it"
+	}, {
+		"name": "Ironborn Soldier #2",
+		"text": "Turn around! it"
+	}, {
+		"name": "Euron Greyjoy",
+		"text": "Back! Fire! Get back!"
+	}, {
+		"name": "Lannister Soldier #18",
+		"text": "I Move! Ready! can her! see"
+	}, {
+		"name": "Lannister Soldier #19",
+		"text": "Fire! Reload!"
+	}, {
+		"name": "Lannister Soldier #20",
+		"text": "Faster! Hurry! Reload!"
+	}, {
+		"name": "Lannister Soldier #21",
+		"text": "Fire!"
+	}, {
+		"name": "Golden Company Soldier #1",
+		"text": "Go!"
+	}, {
+		"name": "Golden Company Soldier #2",
+		"text": "Run!"
+	}, {
+		"name": "Qyburn",
+		"text": "Grace. Your"
+	}, {
+		"name": "Cersei Lannister",
+		"text": "All good is need one shot. we"
+	}, {
+		"name": "Qyburn",
+		"text": "Grace. The Your all been destroyed, have scorpions"
+	}, {
+		"name": "Cersei Lannister",
+		"text": "Bay. Blackwater Euron Fleet He Iron The another. can dragons. her hold kill killed of one"
+	}, {
+		"name": "Qyburn",
+		"text": "Company... Fleet Golden Grace, Iron The The Your been breached. burning. gates have is the"
+	}, {
+		"name": "Cersei Lannister",
+		"text": "Our Queen They could. defend ever fight harder last man. men sellswords than the their to will will"
+	}, {
+		"name": "Qyburn",
+		"text": "Grace. Yes, Your"
+	}, {
+		"name": "Cersei Lannister",
+		"text": "It Keep Red The fall fallen. has never today. won't"
+	}, {
+		"name": "Lannister Soldier #22",
+		"text": "No, no! no,"
+	}, {
+		"name": "Jon Snow",
+		"text": "Move, move!"
+	}, {
+		"name": "King's Landing Man #14",
+		"text": "Come Run! Run. on!"
+	}, {
+		"name": "Lannister Soldier #23",
+		"text": "Ring bells! the"
+	}, {
+		"name": "Lannister Soldier #24",
+		"text": "Ring bells! the"
+	}, {
+		"name": "King's Landing Man #15",
+		"text": "The bells!"
+	}, {
+		"name": "King's Landing Man #16",
+		"text": "Ring bells! the"
+	}, {
+		"name": "King's Landing Woman #8",
+		"text": "Ring bells! the"
+	}, {
+		"name": "King's Landing Man #16",
+		"text": "Ring bells! bloody the"
+	}, {
+		"name": "King's Landing Man #17",
+		"text": "Ring bells! the"
+	}, {
+		"name": "King's Landing Woman #8",
+		"text": "Queen Ring Tell bells! bells. ring the the the to"
+	}, {
+		"name": "King's Landing Man #18",
+		"text": "Ring Ring bell! bells! the the"
+	}, {
+		"name": "King's Landing Woman #8",
+		"text": "This way."
+	}, {
+		"name": "Lannister Soldier #25",
+		"text": "Ring bell! the"
+	}, {
+		"name": "King's Landing Man #19",
+		"text": "Ring bell! the"
+	}, {
+		"name": "King's Landing Man #20",
+		"text": "Ring them!"
+	}, {
+		"name": "King's Landing Woman #9",
+		"text": "Ring bells! the"
+	}, {
+		"name": "King's Landing Man #21",
+		"text": "Ring bells! the"
+	}, {
+		"name": "King's Landing Man #22",
+		"text": "Ring bells! the"
+	}, {
+		"name": "King's Landing Man #23",
+		"text": "Help us!"
+	}, {
+		"name": "King's Landing Man #24",
+		"text": "In name of the the..."
+	}, {
+		"name": "King's Landing Man #25",
+		"text": "Queen! We're surrounded!"
+	}, {
+		"name": "King's Landing Man #26",
+		"text": "Ring bells! the"
+	}, {
+		"name": "King's Landing Man #27",
+		"text": "Come Hurry Now! on! up!"
+	}, {
+		"name": "King's Landing Woman #10",
+		"text": "Ring bells! the"
+	}, {
+		"name": "Jon Snow",
+		"text": "Get Get No! Stay! Stay! back! back!"
+	}, {
+		"name": "Lannister Soldier #26",
+		"text": "No, no, no, no, no."
+	}, {
+		"name": "Davos Seaworth",
+		"text": "Quickly. Quickly."
+	}, {
+		"name": "Jon Snow",
+		"text": "Stop!"
+	}, {
+		"name": "King's Landing Woman #11",
+		"text": "Get bitch! off,"
+	}, {
+		"name": "Northern Soldier #6",
+		"text": "Get bitch! off,"
+	}, {
+		"name": "King's Landing Woman #11",
+		"text": "Help! Help! No! No, get off!"
+	}, {
+		"name": "Lannister Soldier #27",
+		"text": "Go! Go!"
+	}, {
+		"name": "Jon Snow",
+		"text": "Find hide. somewhere to"
+	}, {
+		"name": "King's Landing Man #28",
+		"text": "My god!"
+	}, {
+		"name": "Euron Greyjoy",
+		"text": "Kingslayer. The"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "King's Landing. Queen We get need of out the to"
+	}, {
+		"name": "Euron Greyjoy",
+		"text": "It's Listen. That's a city dying. of over. sound the"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Well, for maybe you."
+	}, {
+		"name": "Euron Greyjoy",
+		"text": "If about another before die... forever. kill king sing they'll you you you"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "You're king. no"
+	}, {
+		"name": "Euron Greyjoy",
+		"text": "And Cersei I I I I'll If Oh, Queen. am. bring but can fucked head her kiss last one so the time. to win... you your"
+	}, {
+		"name": "Qyburn",
+		"text": "Grace, Your any here isn't it longer. safe"
+	}, {
+		"name": "Cersei Lannister",
+		"text": "Keep Red The city. in is place safest the the"
+	}, {
+		"name": "Qyburn",
+		"text": "Holdfast Keep. Maegor's Red The Unsullied a be better breached gates have of out place storm. the the the to wait would"
+	}, {
+		"name": "Euron Greyjoy",
+		"text": "You a cripple. for fought well..."
+	}, {
+		"name": "Euron Greyjoy",
+		"text": "Another But I I I'm Jaime Lannister. for got got killed king man the who you! you! you."
+	}, {
+		"name": "Sandor Clegane",
+		"text": "And Dothraki. Go It Or She's The be dead dead. doesn't don't dragon eat fire get get girl. her, her. here. home, if matter. maybe of of one or out that the too will will you you'll"
+	}, {
+		"name": "Arya Stark",
+		"text": "I'm going her. kill to"
+	}, {
+		"name": "Sandor Clegane",
+		"text": "And I I've It's Look You You You a about. after all all at at be been care come die here. it life. like long look me! me, me. me? my revenge think time? wanna wanted with you you"
+	}, {
+		"name": "Arya Stark",
+		"text": "Sandor. Thank you."
+	}, {
+		"name": "Sandor Clegane",
+		"text": "Grace. Hello, Your big brother."
+	}, {
+		"name": "Cersei Lannister",
+		"text": "Gregor, Gregor, I Ser Ser by command my side. stay you."
+	}, {
+		"name": "Qyburn",
+		"text": "Gregor. Obey Queen, Ser your"
+	}, {
+		"name": "Sandor Clegane",
+		"text": "That's Yeah, always been. that's what you've you."
+	}, {
+		"name": "Cersei Lannister",
+		"text": "You're hurt."
+	}, {
+		"name": "Jaime Lannister",
+		"text": "It doesn't matter."
+	}, {
+		"name": "Cersei Lannister",
+		"text": "You're bleeding."
+	}, {
+		"name": "Owen",
+		"text": "Alanna! Alanna! Have Have my my seen seen wife? wife? you you"
+	}, {
+		"name": "Arya Stark",
+		"text": "Let go."
+	}, {
+		"name": "Owen",
+		"text": "Have my seen wife? you"
+	}, {
+		"name": "King's Landing Man #29",
+		"text": "Out of the way!"
+	}, {
+		"name": "King's Landing Man #30",
+		"text": "No!"
+	}, {
+		"name": "Sandor Clegane",
+		"text": "Oh."
+	}, {
+		"name": "Eleanor",
+		"text": "Get Get No. No. Take Take hand. hand. my my up. up."
+	}, {
+		"name": "Arya Stark",
+		"text": "No! Wait! Wait!"
+	}, {
+		"name": "Sandor Clegane",
+		"text": "Fucking die!"
+	}, {
+		"name": "Jon Snow",
+		"text": "Fall Fall We back back! back! behind fall need the to wall!"
+	}, {
+		"name": "Northern Soldier #7",
+		"text": "Fall back!"
+	}, {
+		"name": "Jon Snow",
+		"text": "Fall Fall Fall Get back! back! back! city! of out the"
+	}, {
+		"name": "Northern Soldier #7",
+		"text": "Fall back!"
+	}, {
+		"name": "Arya Stark",
+		"text": "You You can't have here. keep moving. stay to"
+	}, {
+		"name": "King's Landing Woman #12",
+		"text": "We can't go out there."
+	}, {
+		"name": "Arya Stark",
+		"text": "You have to."
+	}, {
+		"name": "King's Landing Woman #12",
+		"text": "Everyone dead. is out there"
+	}, {
+		"name": "Arya Stark",
+		"text": "Follow Follow If die. here, me! me. stay you you'll"
+	}, {
+		"name": "King's Landing Man #31",
+		"text": "Come Come me. on, quickly. to"
+	}, {
+		"name": "King's Landing Man #32",
+		"text": "Lean him there. up"
+	}, {
+		"name": "King's Landing Man #31",
+		"text": "All Come of on, quickly. you!"
+	}, {
+		"name": "Arya Stark",
+		"text": "Run! Run!"
+	}, {
+		"name": "Eleanor's Daughter",
+		"text": "Mama! Mama! Mama! Mama! Mama! Mama! No."
+	}, {
+		"name": "Arya Stark",
+		"text": "Get Get We have keep moving. to up! up."
+	}, {
+		"name": "Eleanor",
+		"text": "Take Take Take her! her. her."
+	}, {
+		"name": "Arya Stark",
+		"text": "Come Come on! on!"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "This way."
+	}, {
+		"name": "Cersei Lannister",
+		"text": "Don't I I I Jaime. Please baby baby baby die, die. don't let let live. live. live. me me our our our to to to want want want"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "It's all right."
+	}, {
+		"name": "Cersei Lannister",
+		"text": "Please die. don't let me"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "It's all right."
+	}, {
+		"name": "Cersei Lannister",
+		"text": "I die. don't to want"
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Just Look Look at at look... me. me."
+	}, {
+		"name": "Cersei Lannister",
+		"text": "Not Not Not like like like this. this. this."
+	}, {
+		"name": "Jaime Lannister",
+		"text": "Don't Don't Just Look Look Look... Look... Nothing Nothing Only at at away. else else eye. in look look look... matters. matters. me me! me. the us."
+	}]
 }, {
 	"episodeAlt": "S8E6",
 	"seasonNum": 8,

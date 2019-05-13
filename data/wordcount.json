@@ -15979,6 +15979,7 @@
 		"name": "Tyrion Lannister",
 		"count": 37
 	}, {
+		"lang": "High Valyrian",
 		"name": "Daenerys Targaryen",
 		"count": 2
 	}, {
@@ -16105,6 +16106,7 @@
 		"name": "Jorah Mormont",
 		"count": 4
 	}, {
+		"check": true,
 		"name": "Quaithe",
 		"count": 11
 	}, {
@@ -16657,6 +16659,7 @@
 		"name": "Theon Greyjoy",
 		"count": 14
 	}, {
+		"check": true,
 		"name": "Black Lorren",
 		"count": 1
 	}, {
@@ -16888,8 +16891,17 @@
 		"name": "Petyr Baelish",
 		"count": 2
 	}, {
+		"check": true,
 		"name": "Tywin Lannister",
-		"count": 28
+		"count": 5
+	}, {
+		"check": true,
+		"name": "Petyr Baelish",
+		"count": 8
+	}, {
+		"check": true,
+		"name": "Tywin Lannister",
+		"count": 15
 	}, {
 		"name": "Petyr Baelish",
 		"count": 14
@@ -17321,10 +17333,11 @@
 		"count": 20
 	}, {
 		"name": "Daenerys Targaryen",
-		"count": 12
+		"count": 19
 	}, {
+		"check": true,
 		"name": "Spice King",
-		"count": 26
+		"count": 19
 	}, {
 		"name": "Daenerys Targaryen",
 		"count": 17
@@ -17975,7 +17988,10 @@
 		"count": 16
 	}, {
 		"name": "Jon Snow",
-		"count": 14
+		"count": 4
+	}, {
+		"name": "Ygritte",
+		"count": 10
 	}, {
 		"name": "Jon Snow",
 		"count": 13
@@ -18839,10 +18855,11 @@
 		"count": 6
 	}, {
 		"name": "Catelyn Stark",
-		"count": 4
+		"count": 14
 	}, {
+		"check": true,
 		"name": "Rickard Karstark",
-		"count": 26
+		"count": 16
 	}, {
 		"name": "Catelyn Stark",
 		"count": 3
@@ -70068,8 +70085,885 @@
 	"episodeAlt": "S8E5",
 	"seasonNum": 8,
 	"episodeNum": 5,
-	"episodeTitle": "Episode #8.5",
-	"text": []
+	"episodeTitle": "The Bells",
+	"text": [{
+		"name": "Lord Varys",
+		"count": 4
+	}, {
+		"name": "Martha",
+		"count": 3
+	}, {
+		"name": "Lord Varys",
+		"count": 5
+	}, {
+		"name": "Martha",
+		"count": 5
+	}, {
+		"name": "Lord Varys",
+		"count": 1
+	}, {
+		"name": "Martha",
+		"count": 2
+	}, {
+		"name": "Lord Varys",
+		"count": 13
+	}, {
+		"name": "Martha",
+		"count": 8
+	}, {
+		"name": "Lord Varys",
+		"count": 9
+	}, {
+		"name": "Lord Varys",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 18
+	}, {
+		"name": "Lord Varys",
+		"count": 15
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Lord Varys",
+		"count": 8
+	}, {
+		"name": "Jon Snow",
+		"count": 5
+	}, {
+		"name": "Lord Varys",
+		"count": 25
+	}, {
+		"name": "Jon Snow",
+		"count": 8
+	}, {
+		"name": "Lord Varys",
+		"count": 8
+	}, {
+		"name": "Jon Snow",
+		"count": 9
+	}, {
+		"name": "Lord Varys",
+		"count": 11
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Lord Varys",
+		"count": 26
+	}, {
+		"name": "Jon Snow",
+		"count": 7
+	}, {
+		"name": "Lord Varys",
+		"count": 49
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 8
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 1
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 1
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 6
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 2
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 27
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 19
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 9
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 13
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 4
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 15
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 23
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 34
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 5
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 3
+	}, {
+		"name": "Lord Varys",
+		"count": 15
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 22
+	}, {
+		"lang": "High Valyrian",
+		"name": "Daenerys Targaryen",
+		"count": 1
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 16
+	}, {
+		"lang": "High Valyrian",
+		"name": "Daenerys Targaryen",
+		"count": 10
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 11
+	}, {
+		"name": "Jon Snow",
+		"count": 10
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 49
+	}, {
+		"name": "Jon Snow",
+		"count": 10
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 9
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 18
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 17
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 20
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 11
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 17
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 19
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 36
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 41
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 11
+	}, {
+		"name": "Daenerys Targaryen",
+		"count": 33
+	}, {
+		"name": "King's Landing Guard #1",
+		"count": 3
+	}, {
+		"name": "King's Landing Guard #2",
+		"count": 3
+	}, {
+		"name": "King's Landing Guard #3",
+		"count": 2
+	}, {
+		"name": "Davos Seaworth",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "Northern Soldier #1",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #2",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 15
+	}, {
+		"name": "Davos Seaworth",
+		"count": 8
+	}, {
+		"name": "Northern Soldier #3",
+		"count": 10
+	}, {
+		"name": "Northern Soldier #4",
+		"count": 15
+	}, {
+		"name": "Northern Soldier #3",
+		"count": 8
+	}, {
+		"name": "Northern Guard #1",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 9
+	}, {
+		"name": "Sandor Clegane",
+		"count": 20
+	}, {
+		"name": "Northern Guard #1",
+		"count": 8
+	}, {
+		"name": "Sandor Clegane",
+		"count": 5
+	}, {
+		"name": "Northern Soldier #3",
+		"count": 3
+	}, {
+		"lang": "High Valyrian",
+		"name": "Tyrion Lannister",
+		"count": 14
+	}, {
+		"lang": "High Valyrian",
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Unsullied Soldier #1",
+		"count": 5
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 19
+	}, {
+		"name": "Unsullied Soldier #1",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 6
+	}, {
+		"name": "Unsullied Soldier #1",
+		"count": 1
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 20
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 11
+	}, {
+		"name": "Jaime Lannister",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 10
+	}, {
+		"name": "Jaime Lannister",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 15
+	}, {
+		"name": "Jaime Lannister",
+		"count": 16
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 23
+	}, {
+		"name": "Jaime Lannister",
+		"count": 13
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 19
+	}, {
+		"name": "Jaime Lannister",
+		"count": 28
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 2
+	}, {
+		"name": "Jaime Lannister",
+		"count": 23
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 5
+	}, {
+		"name": "Jaime Lannister",
+		"count": 10
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 19
+	}, {
+		"name": "Jaime Lannister",
+		"count": 9
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 74
+	}, {
+		"name": "Jaime Lannister",
+		"count": 21
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 22
+	}, {
+		"name": "Jaime Lannister",
+		"count": 4
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 28
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 17
+	}, {
+		"name": "Jaime Lannister",
+		"count": 7
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 43
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 11
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 17
+	}, {
+		"name": "Lannister Soldier #1",
+		"count": 4
+	}, {
+		"name": "Lannister Soldier #2",
+		"count": 3
+	}, {
+		"name": "Lannister Soldier #3",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #1",
+		"count": 2
+	}, {
+		"name": "Lannister Soldier #4",
+		"count": 4
+	}, {
+		"name": "Lannister Soldier #5",
+		"count": 5
+	}, {
+		"name": "Lannister Soldier #6",
+		"count": 3
+	}, {
+		"name": "King's Landing Woman #1",
+		"count": 4
+	}, {
+		"name": "Lannister Soldier #7",
+		"count": 4
+	}, {
+		"name": "King's Landing Woman #2",
+		"count": 1
+	}, {
+		"name": "King's Landing Man #2",
+		"count": 6
+	}, {
+		"name": "Lannister Soldier #8",
+		"count": 2
+	}, {
+		"name": "King's Landing Man #2",
+		"count": 1
+	}, {
+		"name": "Lannister Soldier #9",
+		"count": 11
+	}, {
+		"name": "King's Landing Man #3",
+		"count": 2
+	}, {
+		"name": "Lannister Soldier #10",
+		"count": 2
+	}, {
+		"name": "King's Landing Man #4",
+		"count": 8
+	}, {
+		"name": "Lannister Soldier #11",
+		"count": 4
+	}, {
+		"name": "King's Landing Woman #3",
+		"count": 2
+	}, {
+		"name": "Lannister Soldier #12",
+		"count": 2
+	}, {
+		"name": "Lannister Soldier #13",
+		"count": 2
+	}, {
+		"name": "Lannister Soldier #12",
+		"count": 2
+	}, {
+		"name": "Lannister Soldier #13",
+		"count": 1
+	}, {
+		"name": "Lannister Soldier #12",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #5",
+		"count": 2
+	}, {
+		"name": "King's Landing Man #6",
+		"count": 2
+	}, {
+		"name": "King's Landing Man #7",
+		"count": 4
+	}, {
+		"name": "Lannister Soldier #14",
+		"count": 9
+	}, {
+		"name": "Tyrion Lannister",
+		"count": 12
+	}, {
+		"name": "Northern Soldier #5",
+		"count": 4
+	}, {
+		"name": "Lannister Soldier #15",
+		"count": 2
+	}, {
+		"name": "Lannister Soldier #16",
+		"count": 16
+	}, {
+		"name": "Lannister Soldier #15",
+		"count": 2
+	}, {
+		"name": "Sandor Clegane",
+		"count": 1
+	}, {
+		"name": "Lannister Soldier #15",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #8",
+		"count": 2
+	}, {
+		"name": "King's Landing Woman #4",
+		"count": 3
+	}, {
+		"name": "Eleanor",
+		"count": 3
+	}, {
+		"name": "Lannister Soldier #16",
+		"count": 6
+	}, {
+		"name": "King's Landing Woman #5",
+		"count": 1
+	}, {
+		"name": "King's Landing Child",
+		"count": 2
+	}, {
+		"name": "King's Landing Woman #6",
+		"count": 2
+	}, {
+		"name": "Eleanor",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #9",
+		"count": 3
+	}, {
+		"name": "Lannister Soldier #17",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #10",
+		"count": 2
+	}, {
+		"name": "King's Landing Man #11",
+		"count": 3
+	}, {
+		"name": "Lannister Soldier #18",
+		"count": 2
+	}, {
+		"name": "Eleanor",
+		"count": 6
+	}, {
+		"name": "Lannister Soldier #19",
+		"count": 5
+	}, {
+		"name": "King's Landing Woman #7",
+		"count": 1
+	}, {
+		"name": "Lannister Soldier #19",
+		"count": 2
+	}, {
+		"name": "King's Landing Woman #7",
+		"count": 3
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "King's Landing Man #12",
+		"count": 4
+	}, {
+		"name": "Lannister Soldier #19",
+		"count": 9
+	}, {
+		"name": "Jaime Lannister",
+		"count": 1
+	}, {
+		"name": "Lannister Soldier #17",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #13",
+		"count": 6
+	}, {
+		"name": "Ironborn Soldier #1",
+		"count": 1
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 3
+	}, {
+		"name": "Ironborn Soldier #2",
+		"count": 3
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 4
+	}, {
+		"name": "Lannister Soldier #18",
+		"count": 6
+	}, {
+		"name": "Lannister Soldier #19",
+		"count": 2
+	}, {
+		"name": "Lannister Soldier #20",
+		"count": 3
+	}, {
+		"name": "Lannister Soldier #21",
+		"count": 1
+	}, {
+		"name": "Golden Company Soldier #1",
+		"count": 1
+	}, {
+		"name": "Golden Company Soldier #2",
+		"count": 1
+	}, {
+		"name": "Qyburn",
+		"count": 2
+	}, {
+		"name": "Cersei Lannister",
+		"count": 7
+	}, {
+		"name": "Qyburn",
+		"count": 8
+	}, {
+		"name": "Cersei Lannister",
+		"count": 16
+	}, {
+		"name": "Qyburn",
+		"count": 15
+	}, {
+		"name": "Cersei Lannister",
+		"count": 18
+	}, {
+		"name": "Qyburn",
+		"count": 3
+	}, {
+		"name": "Cersei Lannister",
+		"count": 10
+	}, {
+		"name": "Lannister Soldier #22",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 2
+	}, {
+		"name": "King's Landing Man #14",
+		"count": 4
+	}, {
+		"name": "Lannister Soldier #23",
+		"count": 3
+	}, {
+		"name": "Lannister Soldier #24",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #15",
+		"count": 2
+	}, {
+		"name": "King's Landing Man #16",
+		"count": 3
+	}, {
+		"name": "King's Landing Woman #8",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #16",
+		"count": 4
+	}, {
+		"name": "King's Landing Man #17",
+		"count": 3
+	}, {
+		"name": "King's Landing Woman #8",
+		"count": 10
+	}, {
+		"name": "King's Landing Man #18",
+		"count": 6
+	}, {
+		"name": "King's Landing Woman #8",
+		"count": 2
+	}, {
+		"name": "Lannister Soldier #25",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #19",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #20",
+		"count": 2
+	}, {
+		"name": "King's Landing Woman #9",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #21",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #22",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #23",
+		"count": 2
+	}, {
+		"name": "King's Landing Man #24",
+		"count": 5
+	}, {
+		"name": "King's Landing Man #25",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #26",
+		"count": 3
+	}, {
+		"name": "King's Landing Man #27",
+		"count": 5
+	}, {
+		"name": "King's Landing Woman #10",
+		"count": 3
+	}, {
+		"name": "Jon Snow",
+		"count": 7
+	}, {
+		"name": "Lannister Soldier #26",
+		"count": 5
+	}, {
+		"name": "Davos Seaworth",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 1
+	}, {
+		"name": "King's Landing Woman #11",
+		"count": 3
+	}, {
+		"name": "Northern Soldier #6",
+		"count": 3
+	}, {
+		"name": "King's Landing Woman #11",
+		"count": 6
+	}, {
+		"name": "Lannister Soldier #27",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 4
+	}, {
+		"name": "King's Landing Man #28",
+		"count": 2
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 2
+	}, {
+		"name": "Jaime Lannister",
+		"count": 10
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 10
+	}, {
+		"name": "Jaime Lannister",
+		"count": 4
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 13
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 26
+	}, {
+		"name": "Qyburn",
+		"count": 8
+	}, {
+		"name": "Cersei Lannister",
+		"count": 10
+	}, {
+		"name": "Qyburn",
+		"count": 22
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 6
+	}, {
+		"name": "Euron Greyjoy",
+		"count": 18
+	}, {
+		"name": "Sandor Clegane",
+		"count": 37
+	}, {
+		"name": "Arya Stark",
+		"count": 5
+	}, {
+		"name": "Sandor Clegane",
+		"count": 39
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Sandor Clegane",
+		"count": 5
+	}, {
+		"name": "Cersei Lannister",
+		"count": 11
+	}, {
+		"name": "Qyburn",
+		"count": 5
+	}, {
+		"name": "Sandor Clegane",
+		"count": 8
+	}, {
+		"name": "Cersei Lannister",
+		"count": 2
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Cersei Lannister",
+		"count": 2
+	}, {
+		"name": "Owen",
+		"count": 12
+	}, {
+		"name": "Arya Stark",
+		"count": 2
+	}, {
+		"name": "Owen",
+		"count": 5
+	}, {
+		"name": "King's Landing Man #29",
+		"count": 4
+	}, {
+		"name": "King's Landing Man #30",
+		"count": 1
+	}, {
+		"name": "Sandor Clegane",
+		"count": 1
+	}, {
+		"name": "Eleanor",
+		"count": 12
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "Sandor Clegane",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 12
+	}, {
+		"name": "Northern Soldier #7",
+		"count": 2
+	}, {
+		"name": "Jon Snow",
+		"count": 11
+	}, {
+		"name": "Northern Soldier #7",
+		"count": 2
+	}, {
+		"name": "Arya Stark",
+		"count": 9
+	}, {
+		"name": "King's Landing Woman #12",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 3
+	}, {
+		"name": "King's Landing Woman #12",
+		"count": 5
+	}, {
+		"name": "Arya Stark",
+		"count": 10
+	}, {
+		"name": "King's Landing Man #31",
+		"count": 6
+	}, {
+		"name": "King's Landing Man #32",
+		"count": 4
+	}, {
+		"name": "King's Landing Man #31",
+		"count": 6
+	}, {
+		"name": "Arya Stark",
+		"count": 2
+	}, {
+		"name": "Eleanor's Daughter",
+		"count": 7
+	}, {
+		"name": "Arya Stark",
+		"count": 9
+	}, {
+		"name": "Eleanor",
+		"count": 6
+	}, {
+		"name": "Arya Stark",
+		"count": 4
+	}, {
+		"name": "Jaime Lannister",
+		"count": 2
+	}, {
+		"name": "Cersei Lannister",
+		"count": 28
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Cersei Lannister",
+		"count": 5
+	}, {
+		"name": "Jaime Lannister",
+		"count": 3
+	}, {
+		"name": "Cersei Lannister",
+		"count": 5
+	}, {
+		"name": "Jaime Lannister",
+		"count": 8
+	}, {
+		"name": "Cersei Lannister",
+		"count": 9
+	}, {
+		"name": "Jaime Lannister",
+		"count": 27
+	}]
 }, {
 	"episodeAlt": "S8E6",
 	"seasonNum": 8,
