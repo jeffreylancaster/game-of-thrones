@@ -19350,7 +19350,7 @@
 		"text": "Jon Snow. We're even now,",
 		"name": "Ygritte"
 	}, {
-		"text": "I I I couldn't couldn't do had her it. just neck, on sword the",
+		"text": "I I I couldn't couldn't... do had her it. just neck, on sword the",
 		"name": "Jon Snow"
 	}, {
 		"text": "I know.",
@@ -20118,7 +20118,7 @@
 		"text": "Forgive I No. You're being have kind. me. no right.",
 		"name": "Robb Stark"
 	}, {
-		"text": "King. You You're a every have right.",
+		"text": "You You're a every have king. right.",
 		"name": "Talisa Maegyr"
 	}, {
 		"text": "I That's be. kind king not of the to want",
@@ -70565,7 +70565,7 @@
 	"episodeAlt": "S8E5",
 	"seasonNum": 8,
 	"episodeNum": 5,
-	"episodeTitle": "Episode #8.5",
+	"episodeTitle": "The Bells",
 	"text": [{
 		"name": "Lord Varys",
 		"text": "And? Come Nothing? in."
@@ -71452,6 +71452,699 @@
 	"episodeAlt": "S8E6",
 	"seasonNum": 8,
 	"episodeNum": 6,
-	"episodeTitle": "Episode #8.6",
-	"text": []
+	"episodeTitle": "The Iron Throne",
+	"text": [{
+		"name": "Tyrion Lannister",
+		"text": "I'll find later. you"
+	}, {
+		"name": "Jon Snow",
+		"text": "It's Let me men not safe. send some with you."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I'm alone. going"
+	}, {
+		"name": "Grey Worm",
+		"text": "Daenerys I In Queen, Targaryen, die. name of one sentence the the to true you"
+	}, {
+		"name": "Jon Snow",
+		"text": "Grey It's These Worm! are men over. prisoners."
+	}, {
+		"name": "Grey Worm",
+		"text": "It Queen's are defeated. enemies is not over the until"
+	}, {
+		"name": "Davos Seaworth",
+		"text": "How They're be? defeated do knees. more much on their them to want you"
+	}, {
+		"name": "Grey Worm",
+		"text": "They are breathing."
+	}, {
+		"name": "Davos Seaworth",
+		"text": "Look We around friend. won. you,"
+	}, {
+		"name": "Grey Worm",
+		"text": "I commands, my not obey queen's yours."
+	}, {
+		"name": "Jon Snow",
+		"text": "And Queen's are commands? the what"
+	}, {
+		"name": "Grey Worm",
+		"text": "\"Kill Cersei Lannister.\" These They all are chose fight follow for free her. men. to who"
+	}, {
+		"name": "Davos Seaworth",
+		"text": "Easy! Easy, Easy. Jon. Queen. We men. should speak the with"
+	}, {
+		"name": "Dothraki Bloodrider #1",
+		"text": "Hyah!"
+	}, {
+		"lang": "Dothraki",
+		"name": "Daenerys Targaryen",
+		"translation": "Blood Kingdoms! Seven You You You You all blood. down enemies gave houses. in iron kept killed me me. my my of promises stone suits. the their their to tore your",
+		"text": ""
+	}, {
+		"lang": "High Valyrian",
+		"name": "Daenerys Targaryen",
+		"translation": "Grey I Master Plaza Pride. Queen's War. Worm. You You all are beside bravest commander forces, have loyal me men, most my name of of of of of since soldiers. the the the the walked you",
+		"text": ""
+	}, {
+		"lang": "High Valyrian",
+		"name": "Daenerys Targaryen",
+		"translation": "All But Dorne, From Isles Jade King's Landing Lannisport Now... Qarth, Sea! Summer Unsullied. We Will Winterfell Women, You a all and and are arms as beneath break children down freed from from from from grip have have have is lay liberated liberators! long me? men mothers' not not of of of of our over. people people raised slaves. spears suffered the the the the the the the the the to to to too torn tyrant! until war we were wheel wheel. will with world! you you you your",
+		"text": ""
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "You You brother. committed freed treason. your"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And I a brother. city. freed my slaughtered you"
+	}, {
+		"lang": "High Valyrian",
+		"name": "Daenerys Targaryen",
+		"translation": "Take him.",
+		"text": ""
+	}, {
+		"name": "Jon Snow",
+		"text": "Hey, What are doing happened? here? what you"
+	}, {
+		"name": "Arya Stark",
+		"text": "Cersei. I Your came first. got kill queen there to"
+	}, {
+		"name": "Jon Snow",
+		"text": "She's everyone's now. queen"
+	}, {
+		"name": "Arya Stark",
+		"text": "Sansa. Try telling"
+	}, {
+		"name": "Jon Snow",
+		"text": "I'll Wait city come find for gates. me outside the you."
+	}, {
+		"name": "Arya Stark",
+		"text": "And I I Jon. She Who You'll a a always are. are. be her. killer know knows one. really see threat to when who you you"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Did any bring wine? you"
+	}, {
+		"name": "Jon Snow",
+		"text": "No."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "\"See, Ah... I I I I'm I'm It Now Our So Varys's Well... a after alive and ashes ashes: betrayed burn. can closest coming crude death? doesn't for for friend going. him is just justice. keep kind knows life long. man me. me. my my occurred of only prisoners queen see suppose talking tell thank the there there's to to to told watched where who you you.\""
+	}, {
+		"name": "Jon Snow",
+		"text": "I've Not seen. that"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I I I I I Oblivion a be best betrayed could crossbow. father for. hope is lover. my my my own queen. shot should strangled thankful. the with"
+	}, {
+		"name": "Jon Snow",
+		"text": "You didn't."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And I I I'd I've I've King's Landing The again, chose did did. do fate. it my not. now of people seen seen. that what"
+	}, {
+		"name": "Jon Snow",
+		"text": "But I I can't happened. is justify now. over the try. war what won't"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And Bay. Is King's Landing. She She Slaver's When all. and are did done fighting? free... go heard her her it? liberated liberated liberating like of of of on people people people rules she she she'll soldiers, someone sound talking the the the the them to until who's world you"
+	}, {
+		"name": "Jon Snow",
+		"text": "And Until been by counseling her her. side, today. you've"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I I It Our Until Varys and blood. could fire guide her. is nature queen's right. think to today. vanity was was was wrong."
+	}, {
+		"name": "Jon Snow",
+		"text": "I'd Lannister. She's Then Tywin You and and are are? be blood, bodies born father, fire her house more no not on our our stamped than that's think too. we we're when who words you're"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "My My Pile a all all an an as as be beautiful bodies day. ever evil evil father half in killed, man. many of our people queen single sister slaughtered still the the there they up was was woman. won't"
+	}, {
+		"name": "Jon Snow",
+		"text": "Cersei choice. her left no"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "The battle fell, gates moment over. the the was"
+	}, {
+		"name": "Jon Snow",
+		"text": "She She beheaded. dragon friend her her of out saw saw shot sky. the"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And a burned city down for it. she"
+	}, {
+		"name": "Jon Snow",
+		"text": "Aye, battlefield. easy far from it's judge standing the to when you're"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Would done have it? you"
+	}, {
+		"name": "Jon Snow",
+		"text": "What?"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Would You've You've a back. been burned city down? dragon's had have on power. that the there, up you"
+	}, {
+		"name": "Jon Snow",
+		"text": "I don't know."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Yes, You because betray but do. don't her... know. say to want won't you you you"
+	}, {
+		"name": "Jon Snow",
+		"text": "I'd What's do? it matter what"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "After And Astapor, Dothraki Everywhere I'm If It Meereenese She The They They When When a alive? all, and and and and anything. argue? believed believed believes better between build burned but cheer complained. could crucified destiny die done everyone. evil evil evil for for goes, good grows have her her her. hundreds if is is it, it. khals kill matters men men. men. more more more murdered no nobles, of of one paradise? powerful right. she she she she she she slavers slavers stood sure sure than that that... the the they to to truly we were were who whoever world worse would wouldn't you you you you"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "But I I I Look Love Not We all all as as at believed brother. heart. her her, her. in is know know love love more my my powerful reason. successfully than that. too. with you you."
+	}, {
+		"name": "Jon Snow",
+		"text": "\"Love death duty.\" is of the"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "You came just that? up with"
+	}, {
+		"name": "Jon Snow",
+		"text": "Aemon Maester a ago. it long said time"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And Do I'm I'm Iron It's It's No Sometimes Throne? Who Who You a also always are asking. cost, dangerous death do duty execute? greatest guards heir is is is last love. man matter men. more now? of of people people. protect realms right right rightful she'll shield terrible than that the the the the the the the the the the the thing thing. thing. think threat to to to to tried tried you you've you've"
+	}, {
+		"name": "Jon Snow",
+		"text": "I'm Queen. She That's came decision. her is it sorry the this. to"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And Do bending knee? see sisters? the them you your"
+	}, {
+		"name": "Jon Snow",
+		"text": "My be loyal sisters the throne. to will"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Because Dany Sansa Why about be do doesn't me queen. she the think to told truth want you you?"
+	}, {
+		"name": "Jon Snow",
+		"text": "She choose. doesn't get to"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And But No. choose do. have now. to you you"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "1,000 1,000 20? Aegon's Aegon's I I So What When a a a brother can't climb. could count do enemies, enemies. fallen fallen feet. from girl girl, high imagined in it like little look made many me mind mountain my of of of only see soles swords swords swords the the to to told too was was who with you"
+	}, {
+		"name": "Jon Snow",
+		"text": "I Lannister They acting executing in on orders. prisoners said saw street. the them they were your"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "It necessary. was"
+	}, {
+		"name": "Jon Snow",
+		"text": "Children, Have Have Necessary? been burned! children, down little seen? there? you you"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "Cersei. I She She a against as cripple innocence it make me. me. peace their thought to tried used weapon with would"
+	}, {
+		"name": "Jon Snow",
+		"text": "And Tyrion?"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "He How back behind broke conspired done enemies. even have heart? it my my people same the to treated when who've with you you, your"
+	}, {
+		"name": "Jon Snow",
+		"text": "Forgive him."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "I can't."
+	}, {
+		"name": "Jon Snow",
+		"text": "Dany. Make Please, You You a all can can. forgive made make mistake. of see them them them, they understand."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "The We be behind built by can't have. hide loyal men mercies. need small the to we we won't world world"
+	}, {
+		"name": "Jon Snow",
+		"text": "It The a be. has is mercy. need of to we world world"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "A And It's be. been before. easy good it never not see something that's to will world."
+	}, {
+		"name": "Jon Snow",
+		"text": "How How be do do good? it'll know know? you you"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "And Because I do good. is know so what you."
+	}, {
+		"name": "Jon Snow",
+		"text": "I don't."
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "You You You've always do. do. known."
+	}, {
+		"name": "Jon Snow",
+		"text": "All What about else? everyone good. know other people the they think what's who"
+	}, {
+		"name": "Daenerys Targaryen",
+		"text": "20. Be Build I It They This We We a a a and bastard's been beginning, boy break choose. couldn't count do don't from get girl has is it little little me. me. name new our reason. since the the the to to together. together. was were wheel who with with with world you"
+	}, {
+		"name": "Jon Snow",
+		"text": "Now, You always. and are my queen."
+	}, {
+		"name": "Sansa Stark",
+		"text": "Jon? Where's"
+	}, {
+		"name": "Grey Worm",
+		"text": "He is our prisoner."
+	}, {
+		"name": "Sansa Stark",
+		"text": "Lord So They Tyrion. be both brought gathering. is this to to were"
+	}, {
+		"name": "Grey Worm",
+		"text": "This We city decide do is now. our our prisoners. we what will with"
+	}, {
+		"name": "Sansa Stark",
+		"text": "If Jon Northmen Snow city, explain find harming in interest. is look not of of outside the thousands to walls who why will you you you'll your your"
+	}, {
+		"name": "Grey Worm",
+		"text": "And Unsullied believe find is. it of that thousands who will you"
+	}, {
+		"name": "Yara Greyjoy",
+		"text": "Daenerys I Ironborn Some Targaryen. The are be follow forgive. may not. of quick swore to to you"
+	}, {
+		"name": "Sansa Stark",
+		"text": "You a follow swore to tyrant."
+	}, {
+		"name": "Yara Greyjoy",
+		"text": "Cersei Jon Let She Snow Unsullied a a and because deserves. freed from give gone he heart. her her, him in is knife of put the tyrant. us what"
+	}, {
+		"name": "Arya Stark",
+		"text": "I'll Say about and another brother cut killing my throat. word your"
+	}, {
+		"name": "Davos Seaworth",
+		"text": "Am Friends, Good House I If Make Nudho. Reach. Start The There This Thousands Torgo Unsullied We We've We've You a a and are as bannermen. been better but can country cutting dead. debt each ends. enough enough. find for gone. had how in is it it it it know land land. let live long lost men, need never of of other's owes own own. people please. properly? repay, saying that that the the the the them. there thousands throats to to try. us used war war. way. we weren't with with would've you you you, your your your your"
+	}, {
+		"name": "Grey Worm",
+		"text": "Jon Snow We We cannot do free. go justice. need need not payment."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "It's decide. for not to you"
+	}, {
+		"name": "Grey Worm",
+		"text": "Everyone You are enough from has heard here not speak! to words you."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "And But His Jon Or You're any better committed crime decide. decide. fate for for for here. his is it's it. king no not one's our our queen. right. to to you"
+	}, {
+		"name": "Yohn Royce",
+		"text": "We a don't have king or queen."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Choose Westeros. You're in most one. people powerful the"
+	}, {
+		"name": "Grey Worm",
+		"text": "Make choice, then. your"
+	}, {
+		"name": "Edmure Tully",
+		"text": "A And I I I My What and and annals as before country. decide experience has history. important in in is ladies... led like lives. lords lords moment most my of of of of one our reverberate senior skill small some stand statecraft suppose the the the the think this through to to today two underst... veteran wars. we will you"
+	}, {
+		"name": "Sansa Stark",
+		"text": "Please Uncle? sit."
+	}, {
+		"name": "Yohn Royce",
+		"text": "Well, choose have someone. to we"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "Houses, Maybe Um, Um... We Why about ahem... all and be best but choose, decision everyone everyone. for great just just ladies. left lords over represent rule should the the they to... us? we well, what's whomever won't"
+	}, {
+		"name": "Edmure Tully",
+		"text": "Maybe a as dogs give should the vote we well."
+	}, {
+		"name": "Yohn Royce",
+		"text": "I'll ask horse. my"
+	}, {
+		"name": "Edmure Tully",
+		"text": "I crown. suppose the want you"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Can't Daenerys, Half Imp? Me? The a betraying choice. for for half hate hate her. me me of other people serving the the think worse"
+	}, {
+		"name": "Davos Seaworth",
+		"text": "Who, then?"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "About About And Armies? Bran Broken? Flags? Gold? He He He I've No Nothing Our Raven. Stories. The The There's Three-Eyed Wall, What Who a a a a again, all and and became better better beyond births, bloody boy boy, but can can crippled crossed defeat defeats, do enemy famines. fell few fly. from future? good had has he he'd high history. in into is it. it. keeper knew lead learned lived. made. massacres, memory, mistakes mm, more never nothing nothing of our our our our our past past. people? powerful so stop stories. story. story... than than the the the the the the the these think to to to tower triumphs, unites us walk wars, we've weddings, weeks. who who world"
+	}, {
+		"name": "Sansa Stark",
+		"text": "Bran and can't children. father has he in interest no ruling"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "But From Good. His I I I Kingdoms Realm. Seven Sons That They Westeros... Will abilities about and and as ask be be be best born. break. by can care choose chosen crown? cruel day day? don't don't from if is it. kings know know know. ladies last lead lords never not now now, of of of on on, our power. queen rulers serve spot stupid, the the the the the the this this to to to torment until us. want wanted we wear well wheel will will will will you you you you you you you... your your"
+	}, {
+		"name": "Bran Stark",
+		"text": "I Why all came do think this way? you"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Brandon House I Stark... To aye. of say"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "Aye."
+	}, {
+		"name": "Edmure Tully",
+		"text": "Aye."
+	}, {
+		"name": "Lord #1",
+		"text": "Aye."
+	}, {
+		"name": "Lord #2",
+		"text": "Aye."
+	}, {
+		"name": "Yohn Royce",
+		"text": "Aye."
+	}, {
+		"name": "Robin Arryn",
+		"text": "Aye."
+	}, {
+		"name": "Dornish Lord",
+		"text": "Aye."
+	}, {
+		"name": "Yara Greyjoy",
+		"text": "Aye."
+	}, {
+		"name": "Lord #3",
+		"text": "Aye."
+	}, {
+		"name": "Lord #4",
+		"text": "Aye."
+	}, {
+		"name": "Gendry",
+		"text": "Aye."
+	}, {
+		"name": "Davos Seaworth",
+		"text": "I I'm a aye. but get not sure vote,"
+	}, {
+		"name": "Brienne of Tarth",
+		"text": "Aye."
+	}, {
+		"name": "Sansa Stark",
+		"text": "And But Great I I North Northmen The War Westeros. You'll a again. all always an and as be brother. defending ever fell for fought good hard have in independent it king. kingdom, kneel little love much of of of of remain seen survived tens the those thousands thousands to too too was who will will. years. you,"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "All Andals Bran Broken, First First His King Kingdoms Lord Men, Name, Protector Realm. Six and and hail of of of of the the the the the"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Edmure Tully",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Lord #1",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Lord #2",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Yohn Royce",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Robin Arryn",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Dornish Lord",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Yara Greyjoy",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Lord #3",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Lord #4",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Gendry",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Davos Seaworth",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Brienne of Tarth",
+		"text": "All Bran Broken! hail the"
+	}, {
+		"name": "Bran Stark",
+		"text": "Hand. Lord Tyrion... be my will you"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Grace, I N... No, Your don't it. want"
+	}, {
+		"name": "Bran Stark",
+		"text": "And I be don't king. to want"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Choose Choose Davos. I I I I I I I Ser anyone but but deserve didn't. don't else. it. knew right, thought thought was was wasn't. what wise,"
+	}, {
+		"name": "Bran Stark",
+		"text": "I choose you."
+	}, {
+		"name": "Grey Worm",
+		"text": "You cannot."
+	}, {
+		"name": "Bran Stark",
+		"text": "I I'm Yes, can. king."
+	}, {
+		"name": "Grey Worm",
+		"text": "He This a criminal. deserves is justice. man"
+	}, {
+		"name": "Bran Stark",
+		"text": "He He's He's fixing going got his it. just life made many mistakes. of rest spend terrible the them. to"
+	}, {
+		"name": "Grey Worm",
+		"text": "It enough. is not"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Giving Letting Night's So Unsullied Watch. a a chosen free has king new our send start start the the to to to walk war. war. would would you you you"
+	}, {
+		"name": "Jon Snow",
+		"text": "Night's There's Watch? a still"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Arya Grey I No Sansa The The Unsullied Which Worm You a a a accepted always and and bastards broken but but children. compromise, course, father for freed, good happy. has head hold home is it's justice king lands, life make means men. need needs new no no no of of one our peace. sentence. shall suppose. take the they to understand very wanted wanted wife, will world you your"
+	}, {
+		"name": "Jon Snow",
+		"text": "I Was What did? it right?"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "What did. we"
+	}, {
+		"name": "Jon Snow",
+		"text": "It doesn't feel right."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "10 Ask again in me years."
+	}, {
+		"name": "Jon Snow",
+		"text": "I again. don't each ever expect other see we'll"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "A Hand I King anyone as be edge few make of of off piss so sure. the the the to want world. would wouldn't years"
+	}, {
+		"lang": "Astapori Valyrian",
+		"name": "Unsullied #1",
+		"translation": "All boarded. have men the",
+		"text": ""
+	}, {
+		"lang": "Astapori Valyrian",
+		"name": "Grey Worm",
+		"translation": "Good. Isle Naath. We for of sail the",
+		"text": ""
+	}, {
+		"name": "Sansa Stark",
+		"text": "Can I another been forgive had me? there way. wish you"
+	}, {
+		"name": "Jon Snow",
+		"text": "North The free, is thanks to you."
+	}, {
+		"name": "Sansa Stark",
+		"text": "But king. lost their they"
+	}, {
+		"name": "Jon Snow",
+		"text": "Ned She's Stark's ask best could daughter for for. speak the them. they will"
+	}, {
+		"name": "Jon Snow",
+		"text": "Black. Castle You at can come know, me, see you"
+	}, {
+		"name": "Arya Stark",
+		"text": "I can't."
+	}, {
+		"name": "Jon Snow",
+		"text": "You allowed? anyone aren't dare tell think will women you"
+	}, {
+		"name": "Arya Stark",
+		"text": "I'm back going north. not"
+	}, {
+		"name": "Sansa Stark",
+		"text": "Where are going? you"
+	}, {
+		"name": "Arya Stark",
+		"text": "Westeros? What's of west"
+	}, {
+		"name": "Jon Snow",
+		"text": "I don't know."
+	}, {
+		"name": "Arya Stark",
+		"text": "I'm It's No That's all going. knows. maps one stop. the where where"
+	}, {
+		"name": "Jon Snow",
+		"text": "Needle? You have your"
+	}, {
+		"name": "Arya Stark",
+		"text": "Right here."
+	}, {
+		"name": "Jon Snow",
+		"text": "Grace. I I'm Your me. needed sorry there wasn't when you"
+	}, {
+		"name": "Bran Stark",
+		"text": "You be. exactly supposed to were were where you"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "That's Uh... What's not... this?"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "\"A Archmaester Ebrose's Fire\". I Ice King Robert. Song and death following helped him history of of of the the the title. wars with"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I I come criticism. for heavy in some suppose"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "I Oh, say that. wouldn't"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "He's Never Oh, guessed. he's kind kind? me. not to would've"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "He..."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "He What about does he me? say what?"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "I ahem. believe don't mentioned, you're"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Grace. Your"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "Grace. Your"
+	}, {
+		"name": "Bronn",
+		"text": "Grace. Your"
+	}, {
+		"name": "Davos Seaworth",
+		"text": "Grace. Your"
+	}, {
+		"name": "Bran Stark",
+		"text": "And And Laws. Master Master Master War. We Whisperers. a a a appear be missing of of of to"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Grace. Suitable Yes, Your an audience be brought coming for in prospects the to weeks. will you"
+	}, {
+		"name": "Bran Stark",
+		"text": "And Any Drogon? word?"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "He east, flying last spotted toward... was"
+	}, {
+		"name": "Bronn",
+		"text": "The away, better. farther the"
+	}, {
+		"name": "Bran Stark",
+		"text": "Do I Perhaps can carry find him. on rest. the with"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "As Grace. Your wish, you"
+	}, {
+		"name": "Brienne of Tarth",
+		"text": "Podrick. Ser"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Bran Broken, King Kingdoms Long Protector Realm. Six We and at he may of of pleasure, reign. ruler serve the the the your"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "Long he may reign."
+	}, {
+		"name": "Davos Seaworth",
+		"text": "Long he may reign."
+	}, {
+		"name": "Brienne of Tarth",
+		"text": "Long he may reign."
+	}, {
+		"name": "Bronn",
+		"text": "Long he may reign."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "That improve. will"
+	}, {
+		"name": "Bran Stark",
+		"text": "I'm it sure will."
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Blackwater, Bronn Coin, Crown's Highgarden, Lord Lord Master Paramount Reach Ser and been debt has of of of of paid? say the the the to would you you"
+	}, {
+		"name": "Bronn",
+		"text": "Hand. In Lord full, my"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Can Good. Time We a assistance expect feed. have hungry in incurring new one. people regard? some start this to to we"
+	}, {
+		"name": "Bronn",
+		"text": "Indeed can. we"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Davos, Lord an and armada have ports rebuild repair. to to we"
+	}, {
+		"name": "Davos Seaworth",
+		"text": "Coin Lofty Lord Master These Titles We and as as begin funding. have. of of projects provides soon the will"
+	}, {
+		"name": "Bronn",
+		"text": "Coin Master Master Ships, The be but coin, coin. ensure first forward has he helping looks more no not of of or soon the there to to wasting we're won't"
+	}, {
+		"name": "Davos Seaworth",
+		"text": "\"Any more.\""
+	}, {
+		"name": "Bronn",
+		"text": "Grammar Master You now, of too?"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Casterly Grandmaester, Rock a ahem, based clean healthier is it leads my my of on on population. sewers, that the theory, to water work years"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "Archmaester The and done has it on out... research some subject this turns"
+	}, {
+		"name": "Bronn",
+		"text": "The and don't. live strong the weak"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "Find and best builders set task. the the them to"
+	}, {
+		"name": "Bronn",
+		"text": "Coin Master Oh, The all best brothels builders, burned down. fund is of of reconstruction. speaking the to willing"
+	}, {
+		"name": "Samwell Tarly",
+		"text": "Archmaester Uh... about brothels. effects enthusiastic is less of salutary than the the"
+	}, {
+		"name": "Bronn",
+		"text": "I Well, he imagine isn't properly. them using"
+	}, {
+		"name": "Brienne of Tarth",
+		"text": "I agree all brothels. can over precedence ships take that think we"
+	}, {
+		"name": "Bronn",
+		"text": "I a presumptuous statement. that's think very"
+	}, {
+		"name": "Tyrion Lannister",
+		"text": "I a a a and brothel. brought honeycomb into jackass once"
+	}, {
+		"name": "Stark Bannerman",
+		"text": "North! Queen The in the"
+	}, {
+		"name": "Stark Bannermen",
+		"text": "North! North! North! North! North! Queen Queen Queen Queen Queen The The The The The in in in in in the the the the the"
+	}]
 }]

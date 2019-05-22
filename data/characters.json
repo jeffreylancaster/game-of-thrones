@@ -427,6 +427,7 @@
          "characterLink":"/character/ch0234897/",
          "actorName":"Isaac Hempstead Wright",
          "actorLink":"/name/nm3652842/",
+         "royal":true,
          "siblings":[
             "Robb Stark",
             "Sansa Stark",
@@ -456,6 +457,7 @@
          "characterLink":"/character/ch0254503/",
          "actorName":"Gwendoline Christie",
          "actorLink":"/name/nm3729225/",
+         "kingsguard":true,
          "killed":[
             "Soldier Tom",
             "Stannis Baratheon",
@@ -463,7 +465,9 @@
          ],
          "serves":[
             "Renly Baratheon",
-            "Catelyn Stark"
+            "Catelyn Stark",
+            "Sansa Stark",
+            "Bran Stark"
          ],
          "servedBy":[
             "Podrick Payne"
@@ -708,7 +712,8 @@
             "Daario Naharis",
             "Grey Worm",
             "Jorah Mormont",
-            "Missandei"
+            "Missandei",
+            "Tyrion Lannister"
          ],
          "parentOf":[
             "Rhaego"
@@ -720,6 +725,9 @@
             "Drogon",
             "Rhaegal",
             "Viserion"
+         ],
+         "killedBy":[
+            "Jon Snow"
          ]
       },
       {
@@ -1080,6 +1088,7 @@
       },
       {
          "characterName":"Gendry",
+         "houseName":"Baratheon",
          "characterImageThumb":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxNzYwMTk4MV5BMl5BanBnXkFtZTcwNDg1ODg4OQ@@._V1._SX100_SY140_.jpg",
          "characterImageFull":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxNzYwMTk4MV5BMl5BanBnXkFtZTcwNDg1ODg4OQ@@._V1_SY1000_CR0,0,846,1000_AL_.jpg",
          "characterLink":"/character/ch0300040/",
@@ -1754,6 +1763,7 @@
          "characterLink":"/character/ch0155777/",
          "actorName":"Kit Harington",
          "actorLink":"/name/nm3229685/",
+         "royal":true,
          "parents":[
             "Rhaegar Targaryen",
             "Lyanna Stark"
@@ -1775,7 +1785,8 @@
             "Othell Yarwyck",
             "Bowen Marsh",
             "Olly",
-            "Lyanna Stark"
+            "Lyanna Stark",
+            "Daenerys Targaryen"
          ],
          "killedBy":[
             "Alliser Thorne",
@@ -2582,6 +2593,7 @@
          "characterLink":"/character/ch0306220/",
          "actorName":"James Doran",
          "actorLink":"/name/nm0243696/",
+         "kingsguard":true,
          "killedBy":[
             "Podrick Payne"
          ]
@@ -3252,13 +3264,15 @@
          "characterLink":"/character/ch0306046/",
          "actorName":"Daniel Portman",
          "actorLink":"/name/nm4535552/",
+         "kingsguard":true,
          "killed":[
             "Mandon Moore",
             "Bolton Soldier"
          ],
          "serves":[
             "Tyrion Lannister",
-            "Brienne of Tarth"
+            "Brienne of Tarth",
+            "Bran Stark"
          ]
       },
       {
@@ -3688,6 +3702,7 @@
          "characterLink":"/character/ch0158596/",
          "actorName":"Richard Madden",
          "actorLink":"/name/nm0534635/",
+         "royal":true,
          "siblings":[
             "Sansa Stark",
             "Arya Stark",
@@ -3933,6 +3948,7 @@
          "characterLink":"/character/ch0158137/",
          "actorName":"Sophie Turner",
          "actorLink":"/name/nm3849842/",
+         "royal":true,
          "siblings":[
             "Robb Stark",
             "Arya Stark",
@@ -4592,6 +4608,9 @@
          "siblings":[
             "Cersei Lannister",
             "Jaime Lannister"
+         ],
+         "serves":[
+            "Daenerys Targaryen"
          ]
       },
       {

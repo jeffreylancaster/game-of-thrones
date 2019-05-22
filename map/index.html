@@ -346,7 +346,7 @@ function ready(error, d, groups, gender, colors, ch) {
 	// var locations = d.locations;
 	var subLocations = d.sublocations;
 	
-	const width = c.x*episodes[episodes.length-1].episodes[episodes[episodes.length-1].episodes.length-1].shift;
+	const width = c.x*episodes[episodes.length-1].episodes[episodes[episodes.length-1].episodes.length-1].shift+c.x*episodes[episodes.length-1].episodes[episodes[episodes.length-1].episodes.length-1].length;
 	const height = c.y*(d.locations[d.locations.length-1].middle + d.locations[d.locations.length-1].max/2);
 
 	const svg = d3.select("#map").append("svg")
