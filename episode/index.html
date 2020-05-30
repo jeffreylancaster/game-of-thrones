@@ -140,57 +140,1004 @@ function toTitleCase(str) {
 }
 
 var config = {
-	"scenescharacter":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 0, "bottom": 0, "left": 125}
-	},
-	"duration":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 50, "bottom": 0, "left": 125}
-	},
-	"sceneslocation":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 0, "bottom": 0, "left": 200}
-	},
-	"durationlocation":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 50, "bottom": 0, "left": 200}
-	},
-	"durationsublocation":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 50, "bottom": 0, "left": 200}
-	},
-	"locationperepisode":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 0, "bottom": 0, "left": 200}
-	},
-	"wordcountcharacter":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 0, "bottom": 0, "left": 200}
-	},
-	"languageepisode":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 0, "bottom": 0, "left": 200}
-	},
-	"durationgenderepisode":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 0, "bottom": 0, "left": 200}
-	},
-	"wordcountgenderepisode":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 0, "bottom": 0, "left": 200},
-		"centerOffset": 600
-	},
-	"durationhouse":{
-		"width":900, "height":700,
-		"margin":{"top": 0, "right": 50, "bottom": 0, "left": 125}
-	},
+  "scenescharacter":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 0, "bottom": 0, "left": 125}
+  },
+  "duration":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 50, "bottom": 0, "left": 125}
+  },
+  "sceneslocation":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 0, "bottom": 0, "left": 200}
+  },
+  "durationlocation":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 50, "bottom": 0, "left": 200}
+  },
+  "durationsublocation":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 50, "bottom": 0, "left": 200}
+  },
+  "locationperepisode":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 0, "bottom": 0, "left": 200}
+  },
+  "wordcountcharacter":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 50, "bottom": 0, "left": 125}
+  },
+  "languageepisode":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 0, "bottom": 0, "left": 200}
+  },
+  "durationgenderepisode":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 0, "bottom": 0, "left": 200}
+  },
+  "wordcountgenderepisode":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 0, "bottom": 0, "left": 200},
+    "centerOffset": 600
+  },
+  "durationhouse":{
+    "width":900, "height":700,
+    "margin":{"top": 0, "right": 50, "bottom": 0, "left": 125}
+  },
   "openingseqmatrix":{
     "width": 700, "height": 600,
     "margin":{"top": 20, "right": 40, "bottom": 30, "left": 40}
   },
-	"barHeight": 15
+  "barHeight": 15
 }
+
+var t = d3.transition()
+          .duration(3000)
+          .ease(d3.easeCubic);
+
+// ============SCENES CHARACTER==============
+function scenesCharacter(data){
+  // build the visualization
+  // var data = filteredCharacters;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("#scenes-character"),
+      scenescharactermargin = config.scenescharacter.margin,
+      scenescharacterwidth = +svg.attr("width") - scenescharactermargin.left - scenescharactermargin.right,
+      scenescharacterheight = barHeight*data.length + scenescharactermargin.top + scenescharactermargin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + scenescharactermargin.left + "," + scenescharactermargin.top + ")");
+  
+  svg.attr("height", scenescharacterheight);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, scenescharacterheight])
+      .paddingInner(0.15)
+      .align(0.1)
+      .domain(data.map(function(d) { return d.name; }));
+
+  var minX = d3.min(data.map(function(d){ return d.scenes.map(function(e){ return e.absStartSec }) }).flat());
+
+  var maxX = d3.max(data.map(function(d){ return d.scenes.map(function(e){ return e.absEndSec }) }).flat());
+
+  var x = d3.scaleLinear()
+      .domain([minX, maxX])
+      .range([0, scenescharacterwidth]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  // z.domain(["1", "2"]);
+
+  var row = g.selectAll(".row")
+    .data(data)
+    .enter()
+    .append("g")
+      .attr("class", "row")
+      .attr("transform", function(d){return "translate(0,"+y(d.name)+")"})
+      
+  var rects = row.selectAll("rect")
+    .data(function(d){
+      return d.scenes;
+    })
+    .enter().append("rect")
+      .attr("x", function(d){return x(d.absStartSec)})
+      .attr("width", function(d){return x(d.absEndSec) - x(d.absStartSec)})
+      .attr("height", y.bandwidth())
+      .attr("fill", function(d){return seasonColors[d.season-1]})
+      .append("svg:title")
+        .text(function(d) {return d.location});
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  d3.select("#scenes-character")
+    .attr("height", scenescharacterheight)
+}
+
+// variables for durationCharacters
+var dCsvg = d3.select("#duration-character"),
+  dCmargin = config.duration.margin,
+  dCwidth = config.duration.width - dCmargin.left - dCmargin.right,
+  dCheight = config.duration.height + dCmargin.top + dCmargin.bottom,
+  dCg = dCsvg.append("g")
+    .attr("transform", `translate(${dCmargin.left},${dCmargin.top})`);
+
+  var dCx = d3.scaleLinear()
+      .rangeRound([0, dCwidth]);
+
+  var dCz = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  var dCyaxis = dCg.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+
+// ============DURATION BY CHARACTER============
+function durationCharacters(data){
+  // build the visualization
+  // var data = durationcharacters;
+  var barHeight = config.barHeight;
+  
+  height = barHeight*data.length + dCmargin.top + dCmargin.bottom;
+  
+  dCsvg.attr("height", height);
+
+  var dCy = d3.scaleBand() 
+    .rangeRound([0, height])
+    .paddingInner(0.15)
+    .align(0.1);
+
+  // var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
+  var keys = d3.keys(data[0]).slice(0, 8);
+
+  for (i=0; i<data.length; i++){
+    var t=0;
+    for(j=0; j<keys.length; j++){
+      t += data[i][keys[j]];
+    }
+    data[i].total = t;
+  } 
+
+  data.sort(function(a, b) { return a.total - b.total; }).reverse();
+  
+  dCz.domain(keys);
+
+  var stack = d3.stack()
+                .keys(keys);
+
+  function update(data){
+    // update the y and x scales
+    dCy.domain(data.map(function(d) { return d.name; }));
+    dCx.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+
+    // update the y-axis
+    dCg.select(".axis")
+      .transition(t)
+        .call(d3.axisLeft(dCy))
+
+    keys.forEach(function(key, ind){
+
+      var times = dCg.select(".axis")
+        .selectAll(".timestamp")
+        .data(data);
+
+      times
+        .transition(t)
+          .attr("y", function(d){ return dCy(d.name); })
+          .attr("dx", function(d){ return dCx(d.total) + 5; })
+          .text(function(d){ return secondsToHMS(d.total); });
+
+      times.enter()
+        .append("text")
+          .attr("class", "timestamp")
+          .attr("y", function(d){ return dCy(d.name); })
+          .attr("dy", "1em")
+          .attr("dx", function(d){ return dCx(d.total) + 5; })
+          .attr("text-anchor", "start")
+          .text(function(d){ return secondsToHMS(d.total); });
+      
+      var bar = dCg.selectAll(".bar-" + key)
+        .data(stack(data)[ind], function(d){ return d.data.name + "-" + key; });
+
+      bar.exit()
+        .transition(t)
+          .attr("width", 0)
+          .remove();
+
+      bar
+        .transition(t)
+          .attr("y", function(d){ return dCy(d.data.name); })
+          .attr("width", function(d){ return dCx(d[1]) - dCx(d[0]); });
+
+      bar.enter().append("rect")
+        .attr("class", function(d){ return "bar bar-" + key; })
+        .attr("x", 0)
+        .attr("height", dCy.bandwidth())
+        .attr("fill", function(d){ return dCz(key); })
+        .transition(t)
+          .attr("y", function(d){ return dCy(d.data.name); })
+          .attr("width", function(d){ return dCx(d[1]) - dCx(d[0]); })
+    })
+  }
+  update(data);  
+}
+// ============LOCATIONS BY SCENE============
+function scenesLocation(data){
+  // build the visualization
+  // var data = filteredLocations;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("#scenes-location"),
+      sceneslocationmargin = config.sceneslocation.margin,
+      sceneslocationwidth = +svg.attr("width") - sceneslocationmargin.left - sceneslocationmargin.right,
+      sceneslocationheight = barHeight*data.length + sceneslocationmargin.top + sceneslocationmargin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + sceneslocationmargin.left + "," + sceneslocationmargin.top + ")");
+  
+  svg.attr("height", sceneslocationheight);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, sceneslocationheight])
+      .paddingInner(0.15)
+      .align(0.1)
+      .domain(data.map(function(d) { return d.name; }));
+
+  var minX = d3.min(data.map(function(d){ return d.scenes.map(function(e){ return e.absStartSec }) }).flat());
+
+  var maxX = d3.max(data.map(function(d){ return d.scenes.map(function(e){ return e.absEndSec }) }).flat());
+
+  var x = d3.scaleLinear()
+      .domain([minX, maxX])
+      .range([0, sceneslocationwidth]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  y
+  // z.domain(["1", "2"]);
+
+  var row = g.selectAll(".row")
+    .data(data)
+    .enter()
+    .append("g")
+      .attr("class", "row")
+      .attr("transform", function(d){return "translate(0,"+y(d.name)+")"})
+      
+  var rects = row.selectAll("rect")
+    .data(function(d){
+      return d.scenes;
+    })
+    .enter().append("rect")
+      .attr("x", function(d){return x(d.absStartSec)})
+      .attr("width", function(d){return x(d.absEndSec) - x(d.absStartSec)})
+      .attr("height", y.bandwidth())
+      .attr("fill", function(d){return seasonColors[d.season-1]})
+      // .append("svg:title")
+      //   .text(function(d) {return d.location});
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  d3.select("#scenes-location")
+    .attr("height", sceneslocationheight)
+}
+// ============DURATION BY LOCATION=============
+function durationLocation(data){
+  // build the visualization
+  // var data = durationRegions;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("#duration-per-location"),
+      margin = config.durationlocation.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  // var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
+  var keys = d3.keys(data[0]).slice(0, 8);
+
+  for (i=0; i<data.length; i++){
+    var t=0;
+    for(j=0; j<keys.length; j++){
+      t += data[i][keys[j]];
+    }
+    data[i].total = t;
+  } 
+
+  data.sort(function(a, b) { return a.total - b.total; }).reverse();
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth());
+
+  // g.selectAll("g")
+  //   .data(d3.stack().keys(keys)(data))
+  //   .append("svg:title")
+  //     .text(function(d,i) {
+  //       // not sure why this shift needs to happen...
+  //       return (i == 0) ? "Season "+keys[keys.length-1] : "Season "+keys[i-1]
+  //     });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  g.selectAll(".axis")
+    .selectAll(".tick")
+    .data(data)
+    .append("text")
+    .attr("class", "timestamp")
+    .attr("dy", "0.35em")
+    .attr("dx", function(d){ return x(d.total) + 5; })
+    .attr("text-anchor", "start")
+    .text(function(d){ return secondsToHMS(d.total); });
+}
+// ============DURATION BY SUBLOCATION=============
+function durationSublocation(data){
+  // build the visualization
+  // var data = durationLocations;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("#duration-per-sublocation"),
+      margin = config.durationsublocation.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  // var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
+  var keys = d3.keys(data[0]).slice(0, 8);
+
+  for (i=0; i<data.length; i++){
+    var t=0;
+    for(j=0; j<keys.length; j++){
+      t += data[i][keys[j]];
+    }
+    data[i].total = t;
+  } 
+
+  data.sort(function(a, b) { return a.total - b.total; }).reverse();
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth());
+
+  // g.selectAll("g")
+  //   .data(d3.stack().keys(keys)(data))
+  //   .append("svg:title")
+  //     .text(function(d,i) {
+  //       // not sure why this shift needs to happen...
+  //       return (i == 0) ? "Season "+keys[keys.length-1] : "Season "+keys[i-1]
+  //     });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  g.selectAll(".axis")
+    .selectAll(".tick")
+    .data(data)
+    .append("text")
+    .attr("class", "timestamp")
+    .attr("dy", "0.35em")
+    .attr("dx", function(d){ return x(d.total) + 5; })
+    .attr("text-anchor", "start")
+    .text(function(d){ return secondsToHMS(d.total); });
+}
+// ================LOCATION PER EPISODE===============
+function locationEpisode(data, keys){
+  // build the visualization
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("#location-per-episode"),
+      margin = config.locationperepisode.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  /* CUSTOM FOR GAME OF THRONES */
+  var z = d3.scaleOrdinal()
+    .range([
+      "#f7fbff", // North of the Wall
+      "#deebf7", // The Wall
+      "#c6dbef", // The North
+      "#9ecae1", // The Shivering Sea
+      "#6baed6", // The Vale
+      "#4292c6", // The Iron Islands
+      "#2171b5", // The Sunset Sea
+      "#084594", // The Westerlands
+      "#00441b", // The Riverlands
+      "#006d2c", // The Narrow Sea
+      "#238b45", // The Crownlands
+      "#41ae76", // The Stormlands
+      "#66c2a4", // The Reach
+      "#99d8c9", // Dorne
+      "#ccece6", // Pentos
+      "#e5f5f9", // Braavos
+      "#f7fcfd", // The Summer Sea
+      "#ffffe5", // Volantis
+      "#fff7bc", // Valyria
+      "#fee391", // The Dothraki Sea
+      "#fec44f", // Meereen
+      "#fe9929", // Yunkai
+      "#ec7014", // Astapor
+      "#cc4c02", // Vaes Dothrak
+      "#993404", // The Red Waste
+      "#662506" // Qarth
+    ]);
+
+  // var keys = keys;
+
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth());
+
+  g.selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .append("svg:title")
+      .text(function(d,i) {
+        // not sure why this shift needs to happen...
+        if(i == 0){
+          return keys[keys.length-1]
+        } else {
+          return keys[i-1]
+        };
+      });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  g.selectAll(".axis")
+    .selectAll(".tick")
+    .data(data)
+    .append("text")
+    .attr("class", "timestamp")
+    .attr("dy", "0.35em")
+    .attr("dx", function(d){ return x(d.total) + 5; })
+    .attr("text-anchor", "start")
+    .text(function(d){
+      var counter = 0;
+      for(var i in keys){
+        if(d[keys[i]] > 0){
+          counter++;
+        }
+      }
+      return `(${counter})`;
+      // return secondsToHMS(d.total);
+    });
+}
+// ==========WORDCOUNT CHARACTER==========
+function wordcountCharacter(data, episode){
+  // build the visualization
+  // var data = wordcountCharacters;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("#wordcount-character"),
+      margin = config.wordcountcharacter.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  // var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
+  var keys = d3.keys(data[0]).slice(0, 8);
+
+  for (i=0; i<data.length; i++){
+    var t=0;
+    for(j=0; j<keys.length; j++){
+      t += data[i][keys[j]];
+    }
+    data[i].total = t;
+  } 
+
+  data.sort(function(a, b) { return a.total - b.total; }).reverse();
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth())
+      .append("svg:title")
+        .text(function(d){
+          var name = d.data.name;
+          var season = d3.select(this.parentNode.parentNode).datum().key;
+          var diff = d[1]-d[0];
+          var word = (diff == 1) ? "word" : "words";
+          return `${name} spoke ${numberWithCommas(diff)} ${word} in Season ${season}, Episode ${episode}`;
+        });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  g.selectAll(".axis")
+    .selectAll(".tick")
+    .data(data)
+    .append("text")
+    .attr("class", "timestamp")
+    .attr("dy", "0.35em")
+    .attr("dx", function(d){ return x(d.total) + 5; })
+    .attr("text-anchor", "start")
+    .text(function(d){ return numberWithCommas(d.total); });
+}
+// ===========LANGUAGE EPISODE==============
+function languageEpisode(data, keys){   
+  // build the visualization
+  // var data = langs;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("#language-episode"),
+      margin = config.languageepisode.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width - 500]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574", "#33a02c"]);
+
+  // var keys = languages;
+
+  // data.sort(function(a, b) { return a.total - b.total; }).reverse();
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth())
+      .append("svg:title")
+        .text(function(d){
+          var name = d.data.name.split("-")[1].trim();
+          var lang = d3.select(this.parentNode.parentNode).datum().key;
+          var diff = d[1]-d[0];
+          var word = (diff == 1) ? "word" : "words";
+          return `In "${name}", characters spoke ${numberWithCommas(diff)} ${word} in ${lang}`;
+        });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  g.selectAll(".axis")
+    .selectAll(".tick")
+    .data(data)
+    .append("text")
+    .attr("class", "timestamp")
+    .attr("dy", "0.35em")
+    .attr("dx", function(d){ return x(d.total) + 5; })
+    .attr("text-anchor", "start")
+    .text(function(d){
+      var langs = keys.filter(function(val, ind){
+        return d[val] > 0 && val !== "Common Tongue"
+      })
+        .map(function(val, ind){
+          var wds = (d[val] > 1) ? "wds" : "wd";
+          return `${val}: ${d[val]} ${wds}`
+        })
+        .join(", ");
+      langs = (langs.length > 0) ? `(${langs})` : langs;
+      var wds = (d.total > 1) ? "wds" : "wd";
+      return `${numberWithCommas(d.total)} ${wds} ${langs}`;
+    });
+}
+// ===========DURATION GENDER EPISODE==============
+function durationGenderEpisode(data, charGenders){
+  // build the visualization
+  // var data = filteredCharGen;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("#duration-gender-episode"),
+      margin = config.durationgenderepisode.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  /* CUSTOM */
+  var z = d3.scaleOrdinal()
+    .range([
+      "#ca0020",
+      "#f4a582",
+      "#ededed",
+      "#92c5de",
+      "#0571b0"
+    ]);
+
+  var keys = charGenders.slice(0,-1); // remove "none"
+  var maxNegOffset = data.map(function(val, ind){
+    return val.negOffset
+  })
+    .reduce(function(a, b) {
+      return Math.max(a, b);
+    })
+  var maxPosOffset = data.map(function(val, ind){
+    return val.posOffset
+  })
+    .reduce(function(a, b) {
+      return Math.max(a, b);
+    })
+  var range = Math.ceil(maxNegOffset + maxPosOffset);
+
+  y.domain(data.map(function(d) { return d.name; }));
+  // x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  x.domain([0, range]);
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth())
+      .attr("transform", function(d){
+        return `translate(${x(maxNegOffset - d.data.negOffset)},0)`;
+      })
+      .append("svg:title")
+        .text(function(d){
+          var label = d3.select(this.parentNode.parentNode).datum().key;
+          return `${toTitleCase(label)}: ${secondsToHMS(d[1]-d[0])}`
+        });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+
+  g.append("line")
+    .attr("class", "line")
+    .style("stroke", "black")
+    .style("fill", "none")
+    .style("shape-rendering", "crispEdges")
+    .attr("x1", x(maxNegOffset))
+    .attr("y1", 0)
+    .attr("x2", x(maxNegOffset))
+    .attr("y2", barHeight*data.length + 10);
+}
+// ===========WORDCOUNT GENDER EPISODE=============
+function wordcountGenderEpisode(data, keys){
+  // build the visualization
+  // var data = filteredWordGen;
+  var barHeight = config.barHeight;
+  var centerOffset = config.wordcountgenderepisode.centerOffset;
+
+  var svg = d3.select("#wordcount-gender-episode"),
+      margin = config.wordcountgenderepisode.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  /* CUSTOM */
+  var z = d3.scaleOrdinal()
+    .range([
+      "#ca0020",
+      // "#f4a582",
+      // "#ededed",
+      // "#92c5de",
+      "#0571b0"
+    ]);
+
+  var keys = keys.slice(0,-1).sort(); // remove "crowd"
+  var maxNegOffset = data.map(function(val, ind){
+    return val.negOffset
+  })
+    .reduce(function(a, b) {
+      return Math.max(a, b);
+    })
+  var maxPosOffset = data.map(function(val, ind){
+    return val.posOffset
+  })
+    .reduce(function(a, b) {
+      return Math.max(a, b);
+    })
+  var range = maxNegOffset + maxPosOffset + 2*centerOffset;
+
+  y.domain(data.map(function(d) { return d.name; }));
+  // x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  // x.domain([0, range]).nice();
+  x.domain([0, range]);
+  z.domain(keys);
+
+  // add bars
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d,i) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1] - d[0]); })
+      .attr("height", y.bandwidth())
+      .attr("transform", function(d){
+        return `translate(${x(centerOffset + maxNegOffset - d.data.negOffset)}, 0)`;
+      })
+      .append("svg:title")
+        .text(function(d){
+          var label = d3.select(this.parentNode.parentNode).datum().key;
+          return `${toTitleCase(label)}: ${numberWithCommas(d[1]-d[0])} words`
+        });
+
+  // add bar labels
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("text")
+    .data(function(d) { return d; })
+    .enter().append("text")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) {
+        return (d3.select(this.parentNode).datum().key == "female") ? x(d[0]) : x(d[1]);
+      })
+      .attr("font-family", "sans-serif")
+      .attr("font-size", "10")
+      .attr("alignment-baseline", "middle")
+      .attr("dy", function(){ return barHeight/2 })
+      .attr("dx", function(d){
+        return (d3.select(this.parentNode).datum().key == "female") ? "-0.5em" : "0.5em";
+      })
+      .attr("text-anchor", function(d){
+        return (d3.select(this.parentNode).datum().key == "female") ? "end" : "start";
+      })
+      .attr("fill", "#000")
+      .text(function(d){
+        return `${numberWithCommas(d[1]-d[0])} wds`
+      })
+      .attr("transform", function(d){
+        return `translate(${x(centerOffset + maxNegOffset - d.data.negOffset)}, 0)`;
+      })
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y));
+}
+// ===========DURATION HOUSE================
+function durationHouse(data){
+  // build the visualization
+  // var data = groupScenes;
+  var barHeight = config.barHeight;
+
+  var svg = d3.select("#duration-house"),
+      margin = config.durationhouse.margin,
+      width = +svg.attr("width") - margin.left - margin.right,
+      height = barHeight*data.length + margin.top + margin.bottom,
+      g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.attr("height", height);
+
+  var y = d3.scaleBand() 
+      .rangeRound([0, height])
+      .paddingInner(0.15)
+      .align(0.1);
+
+  var x = d3.scaleLinear()
+      .rangeRound([0, width]);
+
+  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
+
+  // var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
+  var keys = d3.keys(data[0]).slice(0, 8);
+
+  for (i=0; i<data.length; i++){
+    var t=0;
+    for(j=0; j<keys.length; j++){
+      t += data[i][keys[j]];
+    }
+    data[i].total = t;
+  } 
+
+  data.sort(function(a, b) { return a.total - b.total; }).reverse();
+  y.domain(data.map(function(d) { return d.name; }));
+  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
+  z.domain(keys);
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(keys)(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("rect")
+    .data(function(d) { return d; })
+    .enter().append("rect")
+      .attr("y", function(d) { return y(d.data.name); })
+      .attr("x", function(d) { return x(d[0]); })
+      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+      .attr("height", y.bandwidth());
+
+  // g.selectAll("g")
+  //   .data(d3.stack().keys(keys)(data))
+  //   .append("svg:title")
+  //     .text(function(d,i) {
+  //       // not sure why this shift needs to happen...
+  //       return (i == 0) ? "Season "+keys[keys.length-1] : "Season "+keys[i-1]
+  //     });
+
+  g.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,0)")
+    .call(d3.axisLeft(y)
+      .tickFormat(function(d){
+        var groups = ["Lannister", "Stark", "Baratheon", "Targaryen", "Tyrell", "Greyjoy", "Martell", "Frey", "Tully"];
+        var alt = (groups.indexOf(d) > -1) ? `House ${d}` : `The ${d}`;
+        return alt;
+      })
+    );
+
+  g.selectAll(".axis")
+    .selectAll(".tick")
+    .data(data)
+    .append("text")
+    .attr("class", "timestamp")
+    .attr("dy", "0.35em")
+    .attr("dx", function(d){ return x(d.total) + 5; })
+    .attr("text-anchor", "start")
+    .text(function(d){ return secondsToHMS(d.total); });
+}
+
+
 
 // globe setup
 var globewidth = config.openingseqmatrix.width,
@@ -496,11 +1443,11 @@ function ready(error, world, e, l, w, cga, wg, cg) {
     .filter(onlyUnique);
 
   // then put that array into an object with 0 count
-  	var seasonsObj = seasons.reduce(function(acc, val, ind){
-      var obj = {};
-      obj[val] = 0;
-      return Object.assign(acc, obj);
-    }, {});
+	var seasonsObj = seasons.reduce(function(acc, val, ind){
+    var obj = {};
+    obj[val] = 0;
+    return Object.assign(acc, obj);
+  }, {});
 
   // put all characters in one array, make object to count character scenes
   var characters = scenes.reduce(function(acc, val, ind){
@@ -532,32 +1479,66 @@ function ready(error, world, e, l, w, cga, wg, cg) {
       return {"name": v, "scenes":[], "total":0}
     });
 
+  // get the list of all locations
+  var locImport = l.regions.map(function(val, ind){
+    return val.location
+  })
+
+  // then put that array into an object with 0 count
+  var locationsObj = locImport.reduce(function(acc, val, ind){
+    var obj = {};
+    obj[val] = 0;
+    return Object.assign(acc, obj);
+  }, {});
+
+  // go through episodes; add title, season, episode, sort, and locations
+  var episodesLocations = e.episodes.filter(function(val){
+    return val.scenes.length > 0
+  })
+    .map(function(val, ind){
+      var title = `S${val.seasonNum} E${val.episodeNum} - ${val.episodeTitle}`;
+      var episode = {
+        "name": title,
+        "seasonNum": val.seasonNum,
+        "episodeNum": val.episodeNum,
+        "total": 0
+      }
+      episode = Object.assign({}, episode, locationsObj);
+
+      val.scenes.forEach(function(v, i){
+        var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
+        episode[v.location] += sceneLength;
+        episode.total += sceneLength;
+      })
+      return episode;
+    })
+
   // go through scenes and add sceneLength values to characters', locations', and regions' counts
   scenes.forEach(function(val, ind){
   	var index = regions.findIndex(function(element){
 	    return element.name == val.region;
-	});
-	regions[index].scenes.push({
-	    "absStartSec":val.absStartSec,
-	    "absEndSec":val.absEndSec,
-	    "season":val.seasonNum,
-	    "episode":val.episodeNum,
-	    "location":val.location,
-	    "region":val.region
-	});
-	regions[index].total += (val.absEndSec - val.absStartSec);
+    });
+  	regions[index].scenes.push({
+  	    "absStartSec":val.absStartSec,
+  	    "absEndSec":val.absEndSec,
+  	    "season":val.seasonNum,
+  	    "episode":val.episodeNum,
+  	    "location":val.location,
+  	    "region":val.region
+  	});
+  	regions[index].total += (val.absEndSec - val.absStartSec);
 
-  	var index = loc.findIndex(function(element){
-	    return element.name == val.location;
-	});
-	loc[index].scenes.push({
-	    "absStartSec":val.absStartSec,
-	    "absEndSec":val.absEndSec,
-	    "season":val.seasonNum,
-	    "episode":val.episodeNum,
-	    "location":val.location
-	});
-	loc[index].total += (val.absEndSec - val.absStartSec);
+    var index = loc.findIndex(function(element){
+  	   return element.name == val.location;
+  	});
+  	loc[index].scenes.push({
+  	    "absStartSec":val.absStartSec,
+  	    "absEndSec":val.absEndSec,
+  	    "season":val.seasonNum,
+  	    "episode":val.episodeNum,
+  	    "location":val.location
+  	});
+  	loc[index].total += (val.absEndSec - val.absStartSec);
 
     val.characters.forEach(function(v, i){
       var index = characters.findIndex(function(element){
@@ -574,6 +1555,25 @@ function ready(error, world, e, l, w, cga, wg, cg) {
     })
   })
 
+  // for languages: go through words; add counts to episode/season
+  var langs = w.count.map(function(val, ind){
+    var title = `S${val.seasonNum} E${val.episodeNum} - ${val.episodeTitle}`;
+    var episode = {
+      "name": title,
+      "seasonNum": val.seasonNum,
+      "episodeNum": val.episodeNum,
+      "total": 0
+    }
+    episode = Object.assign({}, episode, languagesObj);
+
+    val.text.forEach(function(v, i){
+      var lang = (v.lang) ? v.lang : "Common Tongue";
+      episode[lang] += v.count;
+      episode.total += v.count;
+    })
+    return episode;
+  })
+
   // filter the scenes for just the episode in the select
   function filterScenes(season, episode){
  	  var filteredCharacters = characters.reduce(function(acc, val, ind){
@@ -587,6 +1587,22 @@ function ready(error, world, e, l, w, cga, wg, cg) {
  	  	return val.scenes.length > 0;
  	  })
 
+    var filteredDurationCharacters = characters.reduce(function(acc, val, ind){
+      var filteredScenes = val.scenes.filter(function(v, i){
+        return v.season == season && v.episode == episode;
+      })
+      var entry = Object.assign({}, {"name":val.name, "scenes":filteredScenes, "total":0}, seasonsObj)
+      return [...acc, entry];
+    }, [])
+    .filter(function(val, ind){
+      return val.scenes.length > 0;
+    })
+    
+    var filteredDurationRegions = regions.reduce(function(acc, val, ind){
+      var dur = Object.assign({}, {"name":val.name, "total":val.total}, seasonsObj)
+      return [...acc, dur]
+    }, []);
+
  	  var filteredLocations = loc.reduce(function(acc, val, ind){
  	  	var filteredScenes = val.scenes.filter(function(v, i){
  	  		return v.season == season && v.episode == episode;
@@ -597,6 +1613,28 @@ function ready(error, world, e, l, w, cga, wg, cg) {
  	  .filter(function(val, ind){
  	  	return val.scenes.length > 0;
  	  })
+
+    var filteredDurationLocations = loc.reduce(function(acc, val, ind){
+      var filteredScenes = val.scenes.filter(function(v, i){
+        return v.season == season && v.episode == episode;
+      })
+      var entry = Object.assign({}, {"name":val.name, "scenes":filteredScenes, "total":0}, seasonsObj)
+      return [...acc, entry];
+    }, [])
+    .filter(function(val, ind){
+      return val.scenes.length > 0;
+    })
+
+    var filteredDurationRegions = regions.reduce(function(acc, val, ind){
+      var filteredScenes = val.scenes.filter(function(v, i){
+        return v.season == season && v.episode == episode;
+      })
+      var entry = Object.assign({}, {"name":val.name, "scenes":filteredScenes, "total":0}, seasonsObj)
+      return [...acc, entry];
+    }, [])
+    .filter(function(val, ind){
+      return val.scenes.length > 0;
+    })
 
  	  var filteredRegions = regions.reduce(function(acc, val, ind){
  	  	var filteredScenes = val.scenes.filter(function(v, i){
@@ -632,6 +1670,16 @@ function ready(error, world, e, l, w, cga, wg, cg) {
 	  	return val.seasonNum == season && val.episodeNum == episode
 	  })
 
+    // for locations per episode
+    var filteredLocationsPerEpisode = episodesLocations.filter(function(val, ind){
+      return val.seasonNum == season && val.episodeNum == episode;
+    });
+
+    // for languages per episode
+    var filteredLangs = langs.filter(function(val, ind){
+      return val.seasonNum == season && val.episodeNum == episode
+    })
+
 	  // for wordcount: go through lines and add word count values to characters' counts
 	  filteredWords.forEach(function(val, ind){
 	    var index = wordcountCharacters.findIndex(function(element){
@@ -642,9 +1690,15 @@ function ready(error, world, e, l, w, cga, wg, cg) {
 
  	  filteredCharacters.forEach(function(val, ind){
  	  	val.scenes.forEach(function(v, i){
- 	  		val.total += (v.absEndSec - v.absStartSec)
+ 	  		val.total += (v.absEndSec - v.absStartSec);
  	  	})
  	  })
+
+    filteredDurationCharacters.forEach(function(val, ind){
+      val.scenes.forEach(function(v, i){
+        val[v.season] += (v.absEndSec - v.absStartSec);
+      })
+    })
 
  	  filteredLocations.forEach(function(val, ind){
  	  	val.scenes.forEach(function(v, i){
@@ -652,11 +1706,35 @@ function ready(error, world, e, l, w, cga, wg, cg) {
  	  	})
  	  })
 
+    filteredDurationLocations.forEach(function(val, ind){
+      val.scenes.forEach(function(v, i){
+        val[v.season] += (v.absEndSec - v.absStartSec)
+      })
+    })
+
+    filteredDurationRegions.forEach(function(val, ind){
+      val.scenes.forEach(function(v, i){
+        val[v.season] += (v.absEndSec - v.absStartSec)
+      })
+    })
+
  	  filteredRegions.forEach(function(val, ind){
  	  	val.scenes.forEach(function(v, i){
  	  		val.total += (v.absEndSec - v.absStartSec)
  	  	})
  	  })
+
+    filteredDurationCharacters.forEach(function(val, ind){
+      val.total = val[season]
+    })
+
+    filteredDurationRegions.forEach(function(val, ind){
+      // val[season] = val.total
+    })
+
+    filteredDurationLocations.forEach(function(val, ind){
+      // val[season] = val.total
+    })
 
   	// sort the characters by total time
 	  filteredCharacters.sort(function(a, b){
@@ -693,1045 +1771,30 @@ function ready(error, world, e, l, w, cga, wg, cg) {
       })  
     })
 
-    // ============SCENES CHARACTER==============
-	  // build the visualization
-	  var data = filteredCharacters;
-	  var barHeight = config.barHeight;
-
-	  var svg = d3.select("#scenes-character"),
-	      scenescharactermargin = config.scenescharacter.margin,
-	      scenescharacterwidth = +svg.attr("width") - scenescharactermargin.left - scenescharactermargin.right,
-	      scenescharacterheight = barHeight*data.length + scenescharactermargin.top + scenescharactermargin.bottom,
-	      g = svg.append("g")
-	        .attr("transform", "translate(" + scenescharactermargin.left + "," + scenescharactermargin.top + ")");
-	  
-	  svg.attr("height", scenescharacterheight);
-
-	  var y = d3.scaleBand() 
-	      .rangeRound([0, scenescharacterheight])
-	      .paddingInner(0.15)
-	      .align(0.1)
-	      .domain(data.map(function(d) { return d.name; }));
-
-	  var minX = d3.min(data.map(function(d){ return d.scenes.map(function(e){ return e.absStartSec }) }).flat());
-
-	  var maxX = d3.max(data.map(function(d){ return d.scenes.map(function(e){ return e.absEndSec }) }).flat());
-
-	  var x = d3.scaleLinear()
-	      .domain([minX, maxX])
-	      .range([0, scenescharacterwidth]);
-
-	  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-	      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
-
-	  // z.domain(["1", "2"]);
-
-	  var row = g.selectAll(".row")
-	    .data(data)
-	    .enter()
-	    .append("g")
-	      .attr("class", "row")
-	      .attr("transform", function(d){return "translate(0,"+y(d.name)+")"})
-	      
-	  var rects = row.selectAll("rect")
-	    .data(function(d){
-	      return d.scenes;
-	    })
-	    .enter().append("rect")
-	      .attr("x", function(d){return x(d.absStartSec)})
-	      .attr("width", function(d){return x(d.absEndSec) - x(d.absStartSec)})
-	      .attr("height", y.bandwidth())
-	      .attr("fill", function(d){return seasonColors[d.season-1]})
-	      .append("svg:title")
-	        .text(function(d) {return d.location});
-
-	  g.append("g")
-	    .attr("class", "axis")
-	    .attr("transform", "translate(0,0)")
-	    .call(d3.axisLeft(y));
-
-	  d3.select("#scenes-character")
-	  	.attr("height", scenescharacterheight)
-
-
-	// ============DURATION BY CHARACTER============
-	var durationCharacters = filteredCharacters.reduce(function(acc, val, ind){
-		var dur = Object.assign({}, {"name":val.name, "total":val.total}, seasonsObj)
-		return [...acc, dur]
-	}, []);
-	
-	durationCharacters.forEach(function(val, ind){
-		val[season] = val.total
-	})
-
-  	// build the visualization
-	  var data = durationCharacters;
-	  var barHeight = config.barHeight;
-
-	  var svg = d3.select("#duration-character"),
-	      margin = config.duration.margin,
-	      width = +svg.attr("width") - margin.left - margin.right,
-	      height = barHeight*data.length + margin.top + margin.bottom,
-	      g = svg.append("g")
-	        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-	  svg.attr("height", height);
-
-	  var y = d3.scaleBand() 
-	      .rangeRound([0, height])
-	      .paddingInner(0.15)
-	      .align(0.1);
-
-	  var x = d3.scaleLinear()
-	      .rangeRound([0, width]);
-
-	  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-	      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
-
-	  var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
-
-	  for (i=0; i<data.length; i++){
-	    var t=0;
-	    for(j=0; j<keys.length; j++){
-	      t += data[i][keys[j]];
-	    }
-	    data[i].total = t;
-	  } 
-
-	  data.sort(function(a, b) { return a.total - b.total; }).reverse();
-	  y.domain(data.map(function(d) { return d.name; }));
-	  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-	  z.domain(keys);
-
-	  g.append("g")
-	    .selectAll("g")
-	    .data(d3.stack().keys(keys)(data))
-	    .enter().append("g")
-	      .attr("fill", function(d) { return z(d.key); })
-	    .selectAll("rect")
-	    .data(function(d) { return d; })
-	    .enter().append("rect")
-	      .attr("y", function(d) { return y(d.data.name); })
-	      .attr("x", function(d) { return x(d[0]); })
-	      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-	      .attr("height", y.bandwidth());
-
-	  // g.selectAll("g")
-	  //   .data(d3.stack().keys(keys)(data))
-	  //   .append("svg:title")
-	  //     .text(function(d,i) {
-	  //       // not sure why this shift needs to happen...
-	  //       return (i == 0) ? "Season "+keys[keys.length-1] : "Season "+keys[i-1]
-	  //     });
-
-	  g.append("g")
-	    .attr("class", "axis")
-	    .attr("transform", "translate(0,0)")
-	    .call(d3.axisLeft(y));
-
-	  g.selectAll(".axis")
-	    .selectAll(".tick")
-	    .data(data)
-	    .append("text")
-	    .attr("class", "timestamp")
-	    .attr("dy", "0.35em")
-	    .attr("dx", function(d){ return x(d.total) + 5; })
-	    .attr("text-anchor", "start")
-	    .text(function(d){ return secondsToHMS(d.total); });
-
-
-	// ============LOCATIONS BY SCENE============
-	// build the visualization
-	  var data = filteredLocations;
-	  var barHeight = config.barHeight;
-
-	  var svg = d3.select("#scenes-location"),
-	      sceneslocationmargin = config.sceneslocation.margin,
-	      sceneslocationwidth = +svg.attr("width") - sceneslocationmargin.left - sceneslocationmargin.right,
-	      sceneslocationheight = barHeight*data.length + sceneslocationmargin.top + sceneslocationmargin.bottom,
-	      g = svg.append("g")
-	        .attr("transform", "translate(" + sceneslocationmargin.left + "," + sceneslocationmargin.top + ")");
-	  
-	  svg.attr("height", sceneslocationheight);
-
-	  var y = d3.scaleBand() 
-	      .rangeRound([0, sceneslocationheight])
-	      .paddingInner(0.15)
-	      .align(0.1)
-	      .domain(data.map(function(d) { return d.name; }));
-
-	  var minX = d3.min(data.map(function(d){ return d.scenes.map(function(e){ return e.absStartSec }) }).flat());
-
-	  var maxX = d3.max(data.map(function(d){ return d.scenes.map(function(e){ return e.absEndSec }) }).flat());
-
-	  var x = d3.scaleLinear()
-	      .domain([minX, maxX])
-	      .range([0, sceneslocationwidth]);
-
-	  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-	      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
-
-	  y
-	  // z.domain(["1", "2"]);
-
-	  var row = g.selectAll(".row")
-	    .data(data)
-	    .enter()
-	    .append("g")
-	      .attr("class", "row")
-	      .attr("transform", function(d){return "translate(0,"+y(d.name)+")"})
-	      
-	  var rects = row.selectAll("rect")
-	    .data(function(d){
-	      return d.scenes;
-	    })
-	    .enter().append("rect")
-	      .attr("x", function(d){return x(d.absStartSec)})
-	      .attr("width", function(d){return x(d.absEndSec) - x(d.absStartSec)})
-	      .attr("height", y.bandwidth())
-	      .attr("fill", function(d){return seasonColors[d.season-1]})
-	      // .append("svg:title")
-	      //   .text(function(d) {return d.location});
-
-	  g.append("g")
-	    .attr("class", "axis")
-	    .attr("transform", "translate(0,0)")
-	    .call(d3.axisLeft(y));
-
-	  d3.select("#scenes-location")
-	  	.attr("height", sceneslocationheight)
-
-
-	  //============DURATION BY LOCATION=============
-	  var durationRegions = filteredRegions.reduce(function(acc, val, ind){
-  		var dur = Object.assign({}, {"name":val.name, "total":val.total}, seasonsObj)
-  		return [...acc, dur]
-  	}, []);
-
-  	durationRegions.forEach(function(val, ind){
-  		val[season] = val.total
-  	})
-
-    	// build the visualization
-  	  var data = durationRegions;
-  	  var barHeight = config.barHeight;
-
-  	  var svg = d3.select("#duration-per-location"),
-  	      margin = config.durationlocation.margin,
-  	      width = +svg.attr("width") - margin.left - margin.right,
-  	      height = barHeight*data.length + margin.top + margin.bottom,
-  	      g = svg.append("g")
-  	        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-  	  svg.attr("height", height);
-
-  	  var y = d3.scaleBand() 
-  	      .rangeRound([0, height])
-  	      .paddingInner(0.15)
-  	      .align(0.1);
-
-  	  var x = d3.scaleLinear()
-  	      .rangeRound([0, width]);
-
-  	  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-  	      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
-
-  	  var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
-
-  	  for (i=0; i<data.length; i++){
-  	    var t=0;
-  	    for(j=0; j<keys.length; j++){
-  	      t += data[i][keys[j]];
-  	    }
-  	    data[i].total = t;
-  	  } 
-
-  	  data.sort(function(a, b) { return a.total - b.total; }).reverse();
-  	  y.domain(data.map(function(d) { return d.name; }));
-  	  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-  	  z.domain(keys);
-
-  	  g.append("g")
-  	    .selectAll("g")
-  	    .data(d3.stack().keys(keys)(data))
-  	    .enter().append("g")
-  	      .attr("fill", function(d) { return z(d.key); })
-  	    .selectAll("rect")
-  	    .data(function(d) { return d; })
-  	    .enter().append("rect")
-  	      .attr("y", function(d) { return y(d.data.name); })
-  	      .attr("x", function(d) { return x(d[0]); })
-  	      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-  	      .attr("height", y.bandwidth());
-
-  	  // g.selectAll("g")
-  	  //   .data(d3.stack().keys(keys)(data))
-  	  //   .append("svg:title")
-  	  //     .text(function(d,i) {
-  	  //       // not sure why this shift needs to happen...
-  	  //       return (i == 0) ? "Season "+keys[keys.length-1] : "Season "+keys[i-1]
-  	  //     });
-
-  	  g.append("g")
-  	    .attr("class", "axis")
-  	    .attr("transform", "translate(0,0)")
-  	    .call(d3.axisLeft(y));
-
-  	  g.selectAll(".axis")
-  	    .selectAll(".tick")
-  	    .data(data)
-  	    .append("text")
-  	    .attr("class", "timestamp")
-  	    .attr("dy", "0.35em")
-  	    .attr("dx", function(d){ return x(d.total) + 5; })
-  	    .attr("text-anchor", "start")
-  	    .text(function(d){ return secondsToHMS(d.total); });
-
-
-
-	  //============DURATION BY SUBLOCATION=============
-	  var durationLocations = filteredLocations.reduce(function(acc, val, ind){
-  		var dur = Object.assign({}, {"name":val.name, "total":val.total}, seasonsObj)
-  		return [...acc, dur]
-  	}, []);
-
-  	durationLocations.forEach(function(val, ind){
-  		val[season] = val.total
-  	})
-
-    	// build the visualization
-  	  var data = durationLocations;
-  	  var barHeight = config.barHeight;
-
-  	  var svg = d3.select("#duration-per-sublocation"),
-  	      margin = config.durationsublocation.margin,
-  	      width = +svg.attr("width") - margin.left - margin.right,
-  	      height = barHeight*data.length + margin.top + margin.bottom,
-  	      g = svg.append("g")
-  	        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-  	  svg.attr("height", height);
-
-  	  var y = d3.scaleBand() 
-  	      .rangeRound([0, height])
-  	      .paddingInner(0.15)
-  	      .align(0.1);
-
-  	  var x = d3.scaleLinear()
-  	      .rangeRound([0, width]);
-
-  	  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-  	      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
-
-  	  var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
-
-  	  for (i=0; i<data.length; i++){
-  	    var t=0;
-  	    for(j=0; j<keys.length; j++){
-  	      t += data[i][keys[j]];
-  	    }
-  	    data[i].total = t;
-  	  } 
-
-  	  data.sort(function(a, b) { return a.total - b.total; }).reverse();
-  	  y.domain(data.map(function(d) { return d.name; }));
-  	  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-  	  z.domain(keys);
-
-  	  g.append("g")
-  	    .selectAll("g")
-  	    .data(d3.stack().keys(keys)(data))
-  	    .enter().append("g")
-  	      .attr("fill", function(d) { return z(d.key); })
-  	    .selectAll("rect")
-  	    .data(function(d) { return d; })
-  	    .enter().append("rect")
-  	      .attr("y", function(d) { return y(d.data.name); })
-  	      .attr("x", function(d) { return x(d[0]); })
-  	      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-  	      .attr("height", y.bandwidth());
-
-  	  // g.selectAll("g")
-  	  //   .data(d3.stack().keys(keys)(data))
-  	  //   .append("svg:title")
-  	  //     .text(function(d,i) {
-  	  //       // not sure why this shift needs to happen...
-  	  //       return (i == 0) ? "Season "+keys[keys.length-1] : "Season "+keys[i-1]
-  	  //     });
-
-  	  g.append("g")
-  	    .attr("class", "axis")
-  	    .attr("transform", "translate(0,0)")
-  	    .call(d3.axisLeft(y));
-
-  	  g.selectAll(".axis")
-  	    .selectAll(".tick")
-  	    .data(data)
-  	    .append("text")
-  	    .attr("class", "timestamp")
-  	    .attr("dy", "0.35em")
-  	    .attr("dx", function(d){ return x(d.total) + 5; })
-  	    .attr("text-anchor", "start")
-  	    .text(function(d){ return secondsToHMS(d.total); });
-
-
-
-	  // ================LOCATION PER EPISODE===============
-	  // get the list of all locations
-    var locImport = l.regions.map(function(val, ind){
-      return val.location
-    })
-
-    // then put that array into an object with 0 count
-    var locationsObj = locImport.reduce(function(acc, val, ind){
-      var obj = {};
-      obj[val] = 0;
-      return Object.assign(acc, obj);
-    }, {});
-
-    // go through episodes; add title, season, episode, sort, and locations
-    var episodesLocations = e.episodes.filter(function(val){
-      return val.scenes.length > 0
-    })
-      .map(function(val, ind){
-        var title = `S${val.seasonNum} E${val.episodeNum} - ${val.episodeTitle}`;
-        var episode = {
-          "name": title,
-          "seasonNum": val.seasonNum,
-          "episodeNum": val.episodeNum,
-          "total": 0
-        }
-        episode = Object.assign({}, episode, locationsObj);
-
-        val.scenes.forEach(function(v, i){
-          var sceneLength = Math.abs(sec(v.sceneEnd) - sec(v.sceneStart));
-          episode[v.location] += sceneLength;
-          episode.total += sceneLength;
-        })
-        return episode;
-      })
-
-    // build the visualization
-    var data = episodesLocations.filter(function(val, ind){
-    	return val.seasonNum == season && val.episodeNum == episode;
-    });
-    var barHeight = config.barHeight;
-
-    var svg = d3.select("#location-per-episode"),
-        margin = config.locationperepisode.margin,
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = barHeight*data.length + margin.top + margin.bottom,
-        g = svg.append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    svg.attr("height", height);
-
-    var y = d3.scaleBand() 
-        .rangeRound([0, height])
-        .paddingInner(0.15)
-        .align(0.1);
-
-    var x = d3.scaleLinear()
-        .rangeRound([0, width]);
-
-    /* CUSTOM FOR GAME OF THRONES */
-    var z = d3.scaleOrdinal()
-      .range([
-        "#f7fbff", // North of the Wall
-        "#deebf7", // The Wall
-        "#c6dbef", // The North
-        "#9ecae1", // The Shivering Sea
-        "#6baed6", // The Vale
-        "#4292c6", // The Iron Islands
-        "#2171b5", // The Sunset Sea
-        "#084594", // The Westerlands
-        "#00441b", // The Riverlands
-        "#006d2c", // The Narrow Sea
-        "#238b45", // The Crownlands
-        "#41ae76", // The Stormlands
-        "#66c2a4", // The Reach
-        "#99d8c9", // Dorne
-        "#ccece6", // Pentos
-        "#e5f5f9", // Braavos
-        "#f7fcfd", // The Summer Sea
-        "#ffffe5", // Volantis
-        "#fff7bc", // Valyria
-        "#fee391", // The Dothraki Sea
-        "#fec44f", // Meereen
-        "#fe9929", // Yunkai
-        "#ec7014", // Astapor
-        "#cc4c02", // Vaes Dothrak
-        "#993404", // The Red Waste
-        "#662506" // Qarth
-      ]);
-
-    var keys = locImport;
-
-    y.domain(data.map(function(d) { return d.name; }));
-    x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-    z.domain(keys);
-
-    g.append("g")
-      .selectAll("g")
-      .data(d3.stack().keys(keys)(data))
-      .enter().append("g")
-        .attr("fill", function(d) { return z(d.key); })
-      .selectAll("rect")
-      .data(function(d) { return d; })
-      .enter().append("rect")
-        .attr("y", function(d) { return y(d.data.name); })
-        .attr("x", function(d) { return x(d[0]); })
-        .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-        .attr("height", y.bandwidth());
-
-    g.selectAll("g")
-      .data(d3.stack().keys(keys)(data))
-      .append("svg:title")
-        .text(function(d,i) {
-          // not sure why this shift needs to happen...
-          if(i == 0){
-            return keys[keys.length-1]
-          } else {
-            return keys[i-1]
-          };
-        });
-
-    g.append("g")
-      .attr("class", "axis")
-      .attr("transform", "translate(0,0)")
-      .call(d3.axisLeft(y));
-
-    g.selectAll(".axis")
-      .selectAll(".tick")
-      .data(data)
-      .append("text")
-      .attr("class", "timestamp")
-      .attr("dy", "0.35em")
-      .attr("dx", function(d){ return x(d.total) + 5; })
-      .attr("text-anchor", "start")
-      .text(function(d){
-        var counter = 0;
-        for(var i in keys){
-          if(d[keys[i]] > 0){
-            counter++;
-          }
-        }
-        return `(${counter})`;
-        // return secondsToHMS(d.total);
-      });
-
-  if(filteredWords.length > 0){
-    // ==========WORDCOUNT CHARACTER==========
-    // build the visualization
-    var data = wordcountCharacters;
-    var barHeight = config.barHeight;
-
-    var svg = d3.select("#wordcount-character"),
-        margin = config.wordcountcharacter.margin,
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = barHeight*data.length + margin.top + margin.bottom,
-        g = svg.append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    svg.attr("height", height);
-
-    var y = d3.scaleBand() 
-        .rangeRound([0, height])
-        .paddingInner(0.15)
-        .align(0.1);
-
-    var x = d3.scaleLinear()
-        .rangeRound([0, width]);
-
-    var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
-
-    var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
-
-    for (i=0; i<data.length; i++){
-      var t=0;
-      for(j=0; j<keys.length; j++){
-        t += data[i][keys[j]];
-      }
-      data[i].total = t;
-    } 
-
-    data.sort(function(a, b) { return a.total - b.total; }).reverse();
-    y.domain(data.map(function(d) { return d.name; }));
-    x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-    z.domain(keys);
-
-    g.append("g")
-      .selectAll("g")
-      .data(d3.stack().keys(keys)(data))
-      .enter().append("g")
-        .attr("fill", function(d) { return z(d.key); })
-      .selectAll("rect")
-      .data(function(d) { return d; })
-      .enter().append("rect")
-        .attr("y", function(d) { return y(d.data.name); })
-        .attr("x", function(d) { return x(d[0]); })
-        .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-        .attr("height", y.bandwidth())
-        .append("svg:title")
-          .text(function(d){
-            var name = d.data.name;
-            var season = d3.select(this.parentNode.parentNode).datum().key;
-            var diff = d[1]-d[0];
-            var word = (diff == 1) ? "word" : "words";
-            return `${name} spoke ${numberWithCommas(diff)} ${word} in Season ${season}, Episode ${episode}`;
-          });
-
-    g.append("g")
-      .attr("class", "axis")
-      .attr("transform", "translate(0,0)")
-      .call(d3.axisLeft(y));
-
-    g.selectAll(".axis")
-      .selectAll(".tick")
-      .data(data)
-      .append("text")
-      .attr("class", "timestamp")
-      .attr("dy", "0.35em")
-      .attr("dx", function(d){ return x(d.total) + 5; })
-      .attr("text-anchor", "start")
-      .text(function(d){ return numberWithCommas(d.total); });
-
-  } // end if(filteredWords.length > 0)
-  else {
-    var svg = d3.select("#wordcount-character")
-      .append("text")
-        .text("Coming soon!")
-        .attr("y", 15)
-        .attr("x", 125)
-        .attr("font-family", "sans-serif")
-        .attr("font-size", "10")
-        .attr("alignment-baseline", "middle");
-
-    d3.select("#wordcount-character")
-      .attr("height", 30);
-  }
-
-
-  if(filteredWords.length > 0){
-  // ===========LANGUAGE EPISODE==============
-  // for languages: go through words; add counts to episode/season
-	  var langs = w.count.map(function(val, ind){
-	    var title = `S${val.seasonNum} E${val.episodeNum} - ${val.episodeTitle}`;
-	    var episode = {
-	      "name": title,
-	      "seasonNum": val.seasonNum,
-	      "episodeNum": val.episodeNum,
-	      "total": 0
-	    }
-	    episode = Object.assign({}, episode, languagesObj);
-
-	    val.text.forEach(function(v, i){
-	      var lang = (v.lang) ? v.lang : "Common Tongue";
-	      episode[lang] += v.count;
-	      episode.total += v.count;
-	    })
-	    return episode;
-	  })
-	  	.filter(function(val, ind){
-	  		return val.seasonNum == season && val.episodeNum == episode
-	  	})
-	 
-	 // build the visualization
-  var data = langs;
-  var barHeight = config.barHeight;
-
-  var svg = d3.select("#language-episode"),
-      margin = config.languageepisode.margin,
-      width = +svg.attr("width") - margin.left - margin.right,
-      height = barHeight*data.length + margin.top + margin.bottom,
-      g = svg.append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-  svg.attr("height", height);
-
-  var y = d3.scaleBand() 
-      .rangeRound([0, height])
-      .paddingInner(0.15)
-      .align(0.1);
-
-  var x = d3.scaleLinear()
-      .rangeRound([0, width - 500]);
-
-  var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574", "#33a02c"]);
-
-  var keys = languages;
-
-  // data.sort(function(a, b) { return a.total - b.total; }).reverse();
-  y.domain(data.map(function(d) { return d.name; }));
-  x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-  z.domain(keys);
-
-  g.append("g")
-    .selectAll("g")
-    .data(d3.stack().keys(keys)(data))
-    .enter().append("g")
-      .attr("fill", function(d) { return z(d.key); })
-    .selectAll("rect")
-    .data(function(d) { return d; })
-    .enter().append("rect")
-      .attr("y", function(d) { return y(d.data.name); })
-      .attr("x", function(d) { return x(d[0]); })
-      .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-      .attr("height", y.bandwidth())
-      .append("svg:title")
-        .text(function(d){
-          var name = d.data.name.split("-")[1].trim();
-          var lang = d3.select(this.parentNode.parentNode).datum().key;
-          var diff = d[1]-d[0];
-          var word = (diff == 1) ? "word" : "words";
-          return `In "${name}", characters spoke ${numberWithCommas(diff)} ${word} in ${lang}`;
-        });
-
-  g.append("g")
-    .attr("class", "axis")
-    .attr("transform", "translate(0,0)")
-    .call(d3.axisLeft(y));
-
-  g.selectAll(".axis")
-    .selectAll(".tick")
-    .data(data)
-    .append("text")
-    .attr("class", "timestamp")
-    .attr("dy", "0.35em")
-    .attr("dx", function(d){ return x(d.total) + 5; })
-    .attr("text-anchor", "start")
-    .text(function(d){
-      var langs = languages.filter(function(val, ind){
-        return d[val] > 0 && val !== "Common Tongue"
-      })
-        .map(function(val, ind){
-          var wds = (d[val] > 1) ? "wds" : "wd";
-          return `${val}: ${d[val]} ${wds}`
-        })
-        .join(", ");
-      langs = (langs.length > 0) ? `(${langs})` : langs;
-      var wds = (d.total > 1) ? "wds" : "wd";
-      return `${numberWithCommas(d.total)} ${wds} ${langs}`;
-    });
-  } // end if(filteredWords.length > 0)
-  else {
-    var svg = d3.select("#language-episode")
-      .append("text")
-        .text("Coming soon!")
-        .attr("y", 15)
-        .attr("x", 125)
-        .attr("font-family", "sans-serif")
-        .attr("font-size", "10")
-        .attr("alignment-baseline", "middle");
-
-    d3.select("#language-episode")
-      .attr("height", 30);
-  }
-
-
-    // ===========DURATION GENDER EPISODE==============
-    // build the visualization
-    var data = filteredCharGen;
-    var barHeight = config.barHeight;
-
-    var svg = d3.select("#duration-gender-episode"),
-        margin = config.durationgenderepisode.margin,
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = barHeight*data.length + margin.top + margin.bottom,
-        g = svg.append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    svg.attr("height", height);
-
-    var y = d3.scaleBand() 
-        .rangeRound([0, height])
-        .paddingInner(0.15)
-        .align(0.1);
-
-    var x = d3.scaleLinear()
-        .rangeRound([0, width]);
-
-    /* CUSTOM */
-    var z = d3.scaleOrdinal()
-      .range([
-        "#ca0020",
-        "#f4a582",
-        "#ededed",
-        "#92c5de",
-        "#0571b0"
-      ]);
-
-    var keys = charGenders.slice(0,-1); // remove "none"
-    var maxNegOffset = data.map(function(val, ind){
-      return val.negOffset
-    })
-      .reduce(function(a, b) {
-        return Math.max(a, b);
-      })
-    var maxPosOffset = data.map(function(val, ind){
-      return val.posOffset
-    })
-      .reduce(function(a, b) {
-        return Math.max(a, b);
-      })
-    var range = Math.ceil(maxNegOffset + maxPosOffset);
-
-    y.domain(data.map(function(d) { return d.name; }));
-    // x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-    x.domain([0, range]);
-    z.domain(keys);
-
-    g.append("g")
-      .selectAll("g")
-      .data(d3.stack().keys(keys)(data))
-      .enter().append("g")
-        .attr("fill", function(d) { return z(d.key); })
-      .selectAll("rect")
-      .data(function(d) { return d; })
-      .enter().append("rect")
-        .attr("y", function(d) { return y(d.data.name); })
-        .attr("x", function(d) { return x(d[0]); })
-        .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-        .attr("height", y.bandwidth())
-        .attr("transform", function(d){
-          return `translate(${x(maxNegOffset - d.data.negOffset)},0)`;
-        })
-        .append("svg:title")
-          .text(function(d){
-            var label = d3.select(this.parentNode.parentNode).datum().key;
-            return `${toTitleCase(label)}: ${secondsToHMS(d[1]-d[0])}`
-          });
-
-    g.append("g")
-      .attr("class", "axis")
-      .attr("transform", "translate(0,0)")
-      .call(d3.axisLeft(y));
-
-    g.append("line")
-      .attr("class", "line")
-      .style("stroke", "black")
-      .style("fill", "none")
-      .style("shape-rendering", "crispEdges")
-      .attr("x1", x(maxNegOffset))
-      .attr("y1", 0)
-      .attr("x2", x(maxNegOffset))
-      .attr("y2", barHeight*data.length + 10);
-
+    // initial visualizations
+    scenesCharacter(filteredCharacters);
+    durationCharacters(filteredDurationCharacters);
+    scenesLocation(filteredLocations);
+    durationLocation(filteredDurationRegions);
+    durationSublocation(filteredDurationLocations);
+    locationEpisode(filteredLocationsPerEpisode, locImport);
+    durationGenderEpisode(filteredCharGen, charGenders);
+    durationHouse(groupScenes);
 
     if(filteredWords.length > 0){
-      // ===========WORDCOUNT GENDER EPISODE=============
-      // build the visualization
-      var data = filteredWordGen;
-      var barHeight = config.barHeight;
-      var centerOffset = config.wordcountgenderepisode.centerOffset;
-
-      var svg = d3.select("#wordcount-gender-episode"),
-          margin = config.wordcountgenderepisode.margin,
-          width = +svg.attr("width") - margin.left - margin.right,
-          height = barHeight*data.length + margin.top + margin.bottom,
-          g = svg.append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-      svg.attr("height", height);
-
-      var y = d3.scaleBand() 
-          .rangeRound([0, height])
-          .paddingInner(0.15)
-          .align(0.1);
-
-      var x = d3.scaleLinear()
-          .rangeRound([0, width]);
-
-      /* CUSTOM */
-      var z = d3.scaleOrdinal()
-        .range([
-          "#ca0020",
-          // "#f4a582",
-          // "#ededed",
-          // "#92c5de",
-          "#0571b0"
-        ]);
-
-      var keys = wordGenders.slice(0,-1).sort(); // remove "crowd"
-      var maxNegOffset = data.map(function(val, ind){
-        return val.negOffset
-      })
-        .reduce(function(a, b) {
-          return Math.max(a, b);
-        })
-      var maxPosOffset = data.map(function(val, ind){
-        return val.posOffset
-      })
-        .reduce(function(a, b) {
-          return Math.max(a, b);
-        })
-      var range = maxNegOffset + maxPosOffset + 2*centerOffset;
-
-      y.domain(data.map(function(d) { return d.name; }));
-      // x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-      // x.domain([0, range]).nice();
-      x.domain([0, range]);
-      z.domain(keys);
-
-      // add bars
-      g.append("g")
-        .selectAll("g")
-        .data(d3.stack().keys(keys)(data))
-        .enter().append("g")
-          .attr("fill", function(d) { return z(d.key); })
-        .selectAll("rect")
-        .data(function(d) { return d; })
-        .enter().append("rect")
-          .attr("y", function(d) { return y(d.data.name); })
-          .attr("x", function(d,i) { return x(d[0]); })
-          .attr("width", function(d) { return x(d[1] - d[0]); })
-          .attr("height", y.bandwidth())
-          .attr("transform", function(d){
-            return `translate(${x(centerOffset + maxNegOffset - d.data.negOffset)}, 0)`;
-          })
-          .append("svg:title")
-            .text(function(d){
-              var label = d3.select(this.parentNode.parentNode).datum().key;
-              return `${toTitleCase(label)}: ${numberWithCommas(d[1]-d[0])} words`
-            });
-
-      // add bar labels
-      g.append("g")
-        .selectAll("g")
-        .data(d3.stack().keys(keys)(data))
-        .enter().append("g")
-          .attr("fill", function(d) { return z(d.key); })
-        .selectAll("text")
-        .data(function(d) { return d; })
-        .enter().append("text")
-          .attr("y", function(d) { return y(d.data.name); })
-          .attr("x", function(d) {
-            return (d3.select(this.parentNode).datum().key == "female") ? x(d[0]) : x(d[1]);
-          })
-          .attr("font-family", "sans-serif")
-          .attr("font-size", "10")
-          .attr("alignment-baseline", "middle")
-          .attr("dy", function(){ return barHeight/2 })
-          .attr("dx", function(d){
-            return (d3.select(this.parentNode).datum().key == "female") ? "-0.5em" : "0.5em";
-          })
-          .attr("text-anchor", function(d){
-            return (d3.select(this.parentNode).datum().key == "female") ? "end" : "start";
-          })
-          .attr("fill", "#000")
-          .text(function(d){
-            return `${numberWithCommas(d[1]-d[0])} wds`
-          })
-          .attr("transform", function(d){
-            return `translate(${x(centerOffset + maxNegOffset - d.data.negOffset)}, 0)`;
-          })
-
-      g.append("g")
-        .attr("class", "axis")
-        .attr("transform", "translate(0,0)")
-        .call(d3.axisLeft(y));
-
-    } // end if(filteredWords.length > 0)
-    else {
-      var svg = d3.select("#wordcount-gender-episode")
-        .append("text")
-          .text("Coming soon!")
-          .attr("y", 15)
-          .attr("x", 125)
-          .attr("font-family", "sans-serif")
-          .attr("font-size", "10")
-          .attr("alignment-baseline", "middle");
-
-      d3.select("#wordcount-gender-episode")
-        .attr("height", 30);
+      wordcountCharacter(wordcountCharacters, episode);
+      languageEpisode(filteredLangs, languages);
+      wordcountGenderEpisode(filteredWordGen, wordGenders);
+    } else {
+      d3.select("#wordcount-character").append("text").text("Coming soon!").attr("y", 15).attr("x", 125).attr("font-family", "sans-serif").attr("font-size", "10").attr("alignment-baseline", "middle");
+      d3.select("#wordcount-character").attr("height", 30);
+      d3.select("#language-episode").append("text").text("Coming soon!").attr("y", 15).attr("x", 125).attr("font-family", "sans-serif").attr("font-size", "10").attr("alignment-baseline", "middle");
+      d3.select("#language-episode").attr("height", 30);
+      d3.select("#wordcount-gender-episode").append("text").text("Coming soon!").attr("y", 15).attr("x", 125).attr("font-family", "sans-serif").attr("font-size", "10").attr("alignment-baseline", "middle");
+      d3.select("#wordcount-gender-episode").attr("height", 30);
     }
-
-
-   	// ===========DURATION HOUSE================
-    // build the visualization
-    var data = groupScenes;
-    var barHeight = config.barHeight;
-
-    var svg = d3.select("#duration-house"),
-        margin = config.durationhouse.margin,
-        width = +svg.attr("width") - margin.left - margin.right,
-        height = barHeight*data.length + margin.top + margin.bottom,
-        g = svg.append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    svg.attr("height", height);
-
-    var y = d3.scaleBand() 
-        .rangeRound([0, height])
-        .paddingInner(0.15)
-        .align(0.1);
-
-    var x = d3.scaleLinear()
-        .rangeRound([0, width]);
-
-    var z = d3.scaleOrdinal() //  or d3.schemeCategory20c between () and no .range
-        .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#FEC574"]);
-
-    var keys = d3.keys(data[0]).slice(0, Math.max(...seasons));
-
-    for (i=0; i<data.length; i++){
-      var t=0;
-      for(j=0; j<keys.length; j++){
-        t += data[i][keys[j]];
-      }
-      data[i].total = t;
-    } 
-
-    data.sort(function(a, b) { return a.total - b.total; }).reverse();
-    y.domain(data.map(function(d) { return d.name; }));
-    x.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-    z.domain(keys);
-
-    g.append("g")
-      .selectAll("g")
-      .data(d3.stack().keys(keys)(data))
-      .enter().append("g")
-        .attr("fill", function(d) { return z(d.key); })
-      .selectAll("rect")
-      .data(function(d) { return d; })
-      .enter().append("rect")
-        .attr("y", function(d) { return y(d.data.name); })
-        .attr("x", function(d) { return x(d[0]); })
-        .attr("width", function(d) { return x(d[1]) - x(d[0]); })
-        .attr("height", y.bandwidth());
-
-    // g.selectAll("g")
-    //   .data(d3.stack().keys(keys)(data))
-    //   .append("svg:title")
-    //     .text(function(d,i) {
-    //       // not sure why this shift needs to happen...
-    //       return (i == 0) ? "Season "+keys[keys.length-1] : "Season "+keys[i-1]
-    //     });
-
-    g.append("g")
-      .attr("class", "axis")
-      .attr("transform", "translate(0,0)")
-      .call(d3.axisLeft(y)
-        .tickFormat(function(d){
-          var groups = ["Lannister", "Stark", "Baratheon", "Targaryen", "Tyrell", "Greyjoy", "Martell", "Frey", "Tully"];
-          var alt = (groups.indexOf(d) > -1) ? `House ${d}` : `The ${d}`;
-          return alt;
-        })
-      );
-
-    g.selectAll(".axis")
-      .selectAll(".tick")
-      .data(data)
-      .append("text")
-      .attr("class", "timestamp")
-      .attr("dy", "0.35em")
-      .attr("dx", function(d){ return x(d.total) + 5; })
-      .attr("text-anchor", "start")
-      .text(function(d){ return secondsToHMS(d.total); });
-
   }
+  
   filterScenes(1, 1);
  
 
@@ -1758,15 +1821,11 @@ function ready(error, world, e, l, w, cga, wg, cg) {
     	drawLine(locationsObject[episodeSelect]);
 
       var episode = episodeSelect.slice(3,);
-      var season = episodeSelect.slice(1,2);
-
-      var t = d3.transition()
-            .duration(2000)
-            .ease(d3.easeCubic);  
+      var season = episodeSelect.slice(1,2);  
 
       // later convert this to a transition?
       d3.select("#scenes-character").html("");
-      d3.select("#duration-character").html("");
+      // d3.select("#duration-character").html("");
       d3.select("#scenes-location").html("");
       d3.select("#duration-per-location").html("");
       d3.select("#duration-per-sublocation").html("");
@@ -2044,21 +2103,6 @@ function focusGlobeOnPoint(point) {
 	projection.rotate(rotation);
 	loftedProjection.rotate(rotation);
 }
-
-// function lineLength(points) {
-// 		var d = 0;
-// 		for (var i = 0; i < points.length - 1; i++) {
-// 				var x0 = points[0][0],
-// 						y0 = points[0][1],
-// 						x1 = points[1][0],
-// 						y1 = points[1][1],
-// 						dx = x1 - x0,
-// 						dy = y1 - y0;
-// 				d += Math.sqrt(dx * dx + dy * dy);
-// 		}
-// 		return d;
-// }
-
 
 
 </script>
